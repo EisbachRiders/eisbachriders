@@ -1,11 +1,22 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
 import Bio from '../components/Bio'
 import Layout from '../components/layout'
-import { rhythm } from '../utils/typography'
+
+import Typography from '@material-ui/core/Typography'
+import { withStyles } from '@material-ui/core/styles'
+import withRoot from '../withRoot'
+
+const styles = theme => ({
+  root: {
+    textAlign: 'center',
+    paddingTop: theme.spacing.unit * 20,
+  },
+})
 
 class BlogIndex extends React.Component {
   render() {
@@ -28,15 +39,12 @@ class BlogIndex extends React.Component {
           const title = get(node, 'frontmatter.title') || node.fields.slug
           return (
             <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
+              <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
+                <Typography variant="display1" gutterBottom color="primary">
                   {title}
-                </Link>
-              </h3>
+                </Typography>
+              </Link>
+
               <small>{node.frontmatter.date}</small>
               <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
             </div>
@@ -47,7 +55,11 @@ class BlogIndex extends React.Component {
   }
 }
 
-export default BlogIndex
+BlogIndex.propTypes = {
+  classes: PropTypes.object.isRequired,
+}
+
+export default withRoot(withStyles(styles)(BlogIndex))
 
 export const pageQuery = graphql`
   query {
