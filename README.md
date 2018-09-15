@@ -1,5 +1,5 @@
 <p align="center">
-    <img alt="EisbachRiders" src="./static/assets/logoBlack.png" width="60" />
+    <img alt="EisbachRiders" src="./static/assets/logos/logoBlack.png" width="60" />
 </p>
 <h1 align="center">
   Eisback Riders

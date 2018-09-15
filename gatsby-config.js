@@ -14,6 +14,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `img`,
+        path: `${__dirname}/src/assets/images`,
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -45,13 +52,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Eisbach Riders`,
+        short_name: `EisbachRiders`,
         start_url: `/`,
         background_color: `#0b0c10`,
         theme_color: `#66fcf1`,
         display: `minimal-ui`,
-        icon: `src/assets/logoBlack.png`,
+        icon: `src/assets/logos/logoBlack.png`,
       },
     },
     `gatsby-plugin-offline`,

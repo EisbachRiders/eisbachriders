@@ -4,8 +4,7 @@ require('typeface-open-sans')
 require('typeface-contrail-one')
 
 const status = {
-  white: '#ffffff',
-  offWhite: '#F7F5F5',
+  white: '#F7F5F5',
   black: '#0b0c10',
   blue: '#1f2833',
   grey: '#c5c6c7',
