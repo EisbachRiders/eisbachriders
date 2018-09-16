@@ -17,7 +17,7 @@ const styles = theme => ({
       height: 300,
     },
     [theme.breakpoints.up('md')]: {
-      height: 500,
+      height: 600,
     },
   },
   img: {
@@ -26,7 +26,7 @@ const styles = theme => ({
       height: 300,
     },
     [theme.breakpoints.up('md')]: {
-      height: 500,
+      height: 600,
     },
   },
   container: {

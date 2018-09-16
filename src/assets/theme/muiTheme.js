@@ -48,6 +48,15 @@ const theme = createMuiTheme({
         color: status.white,
       },
     },
+    MuiButton: {
+      root: {
+        padding: '9px 27px',
+        borderRadius: 0,
+      },
+      contained: {
+        boxShadow: 'none',
+      },
+    },
   },
 })
 

@@ -11,12 +11,9 @@ import Hidden from '@material-ui/core/Hidden'
 import IconButton from '@material-ui/core/IconButton'
 import Button from '@material-ui/core/Button'
 import Drawer from '@material-ui/core/Drawer'
-import Input from '@material-ui/core/Input'
 import MenuIcon from '@material-ui/icons/Menu'
-import SearchIcon from '@material-ui/icons/Search'
 
 import logoWhite from '../assets/logos/logoWhite_small.png'
-import { InstagramIcon, FacebookIcon } from '../assets/icons/icons'
 import MobileHeaderList from './MobileHeaderList'
 import Footer from './Footer'
 
@@ -37,6 +34,7 @@ const styles = theme => ({
     [theme.breakpoints.up('sm')]: {
       paddingLeft: 60,
       paddingRight: 60,
+      justifyContent: 'space-between',
     },
   },
   containerXS: {
@@ -71,50 +69,6 @@ const styles = theme => ({
   primary: {
     backgroundColor: theme.palette.primary.main,
   },
-  search: {
-    position: 'relative',
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: theme.palette.common.white,
-    marginLeft: 0,
-    marginRight: 10,
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-      marginLeft: theme.spacing.unit,
-      width: 'auto',
-    },
-  },
-  searchIcon: {
-    width: theme.spacing.unit * 9,
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  inputRoot: {
-    color: 'inherit',
-    width: '100%',
-  },
-  inputInput: {
-    paddingTop: theme.spacing.unit,
-    paddingRight: theme.spacing.unit,
-    paddingBottom: theme.spacing.unit,
-    paddingLeft: theme.spacing.unit * 10,
-    transition: theme.transitions.create('width'),
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-      width: 120,
-      '&:focus': {
-        width: 200,
-      },
-    },
-  },
-  socialButton: {},
-  socialIcon: {
-    color: theme.palette.primary.main,
-    fontSize: 20,
-  },
 })
 class Template extends Component {
   state = {
@@ -129,8 +83,8 @@ class Template extends Component {
   render() {
     const { children, classes } = this.props
     const { isOpen } = this.state
-    const links = ['/About/', '/Blog/']
-    const linkLabels = ['about', 'blog']
+    const links = ['/Products/', '/About/', '/Blog/']
+    const linkLabels = ['products', 'about', 'blog']
 
     return (
       <div className={classes.root}>
@@ -172,7 +126,7 @@ class Template extends Component {
                   <img alt="" src={logoWhite} className={classes.logo} />
                 </Link>
               </IconButton>
-              <span>
+              <div>
                 {links.map((link, idx) => (
                   // <Link to={link} key={`link_${link}`}>
                   <Button className={classes.button} key={`link_${link}`}>
@@ -180,39 +134,7 @@ class Template extends Component {
                   </Button>
                   // </Link>
                 ))}
-              </span>
-              <div className={classes.grow} />
-              <div className={classes.search}>
-                <div className={classes.searchIcon}>
-                  <SearchIcon color="primary" />
-                </div>
-                <Input
-                  placeholder="Search…"
-                  disableUnderline
-                  classes={{
-                    root: classes.inputRoot,
-                    input: classes.inputInput,
-                  }}
-                />
               </div>
-              <IconButton
-                aria-label="instagram"
-                className={classes.socialButton}
-                href="https://www.instagram.com/eisbachriders/"
-                target="_blank"
-                rel="noopener"
-              >
-                <InstagramIcon className={classes.socialIcon} />
-              </IconButton>
-              <IconButton
-                aria-label="instagram"
-                className={classes.socialButton}
-                href="https://www.facebook.com/EisbachRiders/"
-                target="_blank"
-                rel="noopener"
-              >
-                <FacebookIcon className={classes.socialIcon} />
-              </IconButton>
             </Hidden>
           </Toolbar>
         </AppBar>

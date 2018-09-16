@@ -10,29 +10,42 @@ const styles = theme => ({
   container1: {
     display: 'flex',
     flexWrap: 'wrap',
-    height: 400,
+    height: 500,
     background: theme.status.black,
   },
   container2: {
     display: 'flex',
     flexWrap: 'wrap',
     textAlign: 'center',
-    height: 300,
+    height: 700,
     background: theme.status.white,
   },
   container3: {
     display: 'flex',
     flexWrap: 'wrap',
-    height: 400,
+    height: 600,
     background: theme.status.black,
+  },
+  containerNewsletter: {
+    background: theme.status.grey,
+    padding: 90,
+    textAlign: 'center',
+  },
+  textNewsletter: {
+    textTransform: 'uppercase',
+    paddingBottom: 30,
   },
   img: {
     width: '100%',
-    height: 400,
+    height: 500,
   },
   img2: {
     width: '100%',
-    height: 300,
+    height: 700,
+  },
+  img4: {
+    width: '100%',
+    height: 600,
   },
   imgContainer1: {
     flexBasis: '50%',
@@ -84,6 +97,14 @@ const Homepage = props => {
 
   return (
     <Fragment>
+      <div className={classes.containerNewsletter}>
+        <Typography className={classes.textNewsletter} variant="headline">
+          sign up for our newsletter
+        </Typography>
+        <Button variant="contained" color="primary">
+          Sign Up
+        </Button>
+      </div>
       <div className={classes.container1}>
         <div className={classes.imgContainer1}>
           <Img fluid={img1.node.fluid} alt="" className={classes.img} />
@@ -138,7 +159,7 @@ const Homepage = props => {
           </Typography>
         </div>
         <div className={classes.imgContainer3}>
-          <Img fluid={img4.node.fluid} alt="" className={classes.img} />
+          <Img fluid={img4.node.fluid} alt="" className={classes.img4} />
         </div>
       </div>
     </Fragment>
