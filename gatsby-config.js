@@ -3,6 +3,7 @@ module.exports = {
     title: 'Eisbach Riders',
     author: 'Alyssa Butler',
     description: 'Eisbach Riders - Surf Accessories',
+    siteUrl: 'www.eisbach-riders.com',
   },
   pathPrefix: '/eisbach-riders',
   plugins: [
