@@ -1,4 +1,4 @@
-<p align="center">
+#+html <p align="center">
     <img alt="EisbachRiders" src="./static/assets/logos/logoBlack.png" width="60" />
 </p>
 <h1 align="center">
