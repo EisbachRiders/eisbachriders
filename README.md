@@ -1,4 +1,4 @@
-<p align="center"><img alt="EisbachRiders" src="./src/assets/logos/logoBlack.png" width="60" /></p>
+<p align="center"><img alt="EisbachRiders" src="./src/assets/logos/logoBlackLarge.png" width="60" /></p>
 <h1 align="center">
   Eisback Riders
 </h1>
