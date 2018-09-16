@@ -8,17 +8,6 @@ import Layout from '../components/layout'
 import Hero from '../components/Hero'
 import Homepage from '../components/Homepage'
 
-import Typography from '@material-ui/core/Typography'
-import { withStyles } from '@material-ui/core/styles'
-import withRoot from '../withRoot'
-
-const styles = theme => ({
-  root: {
-    textAlign: 'center',
-    paddingTop: theme.spacing.unit * 20,
-  },
-})
-
 class BlogIndex extends Component {
   render() {
     const { data } = this.props
@@ -77,7 +66,7 @@ BlogIndex.propTypes = {
   classes: PropTypes.object.isRequired,
 }
 
-export default withRoot(withStyles(styles)(BlogIndex))
+export default BlogIndex
 
 export const pageQuery = graphql`
   query {

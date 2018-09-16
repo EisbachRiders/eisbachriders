@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 
 import classnames from 'classnames'
+import withRoot from '../withRoot'
 import { withStyles } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
@@ -226,4 +227,4 @@ Template.propTypes = {
   classes: PropTypes.object.isRequired,
 }
 
-export default withStyles(styles)(Template)
+export default withRoot(withStyles(styles)(Template))
