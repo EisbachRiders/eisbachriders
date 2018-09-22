@@ -62,9 +62,7 @@ class BlogIndex extends Component {
   }
 }
 
-BlogIndex.propTypes = {
-  classes: PropTypes.object.isRequired,
-}
+BlogIndex.propTypes = {}
 
 export default BlogIndex
 
