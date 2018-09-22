@@ -5,6 +5,7 @@ import Img from 'gatsby-image'
 import { withStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
+import Newletter from './Newletter'
 
 const styles = theme => ({
   container1: {
@@ -25,15 +26,6 @@ const styles = theme => ({
     flexWrap: 'wrap',
     height: 600,
     background: theme.status.black,
-  },
-  containerNewsletter: {
-    background: theme.status.grey,
-    padding: 90,
-    textAlign: 'center',
-  },
-  textNewsletter: {
-    textTransform: 'uppercase',
-    paddingBottom: 30,
   },
   img: {
     width: '100%',
@@ -97,14 +89,7 @@ const Homepage = props => {
 
   return (
     <Fragment>
-      <div className={classes.containerNewsletter}>
-        <Typography className={classes.textNewsletter} variant="headline">
-          sign up for our newsletter
-        </Typography>
-        <Button variant="contained" color="primary">
-          Sign Up
-        </Button>
-      </div>
+      <Newletter />
       <div className={classes.container1}>
         <div className={classes.imgContainer1}>
           <Img fluid={img1.node.fluid} alt="" className={classes.img} />
