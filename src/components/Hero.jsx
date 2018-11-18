@@ -61,10 +61,10 @@ const Hero = props => {
       </Hidden>
       <Hidden xsDown>
         <div className={classes.container}>
-          <Typography variant="display4" className={classes.text}>
+          <Typography variant="h1" className={classes.text}>
             Eisbach Riders
           </Typography>
-          <Typography variant="display2" className={classes.text}>
+          <Typography variant="h3" className={classes.text}>
             roam, live, relax.
           </Typography>
         </div>

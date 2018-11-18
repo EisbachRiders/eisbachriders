@@ -65,7 +65,7 @@ class Footer extends Component {
           </IconButton>
         </div>
         <Typography
-          variant="body1"
+          variant="body2"
           align="center"
           className={classes.copyright}
         >

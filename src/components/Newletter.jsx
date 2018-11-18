@@ -10,10 +10,13 @@ import DialogActions from '@material-ui/core/DialogActions'
 import DialogContent from '@material-ui/core/DialogContent'
 import DialogTitle from '@material-ui/core/DialogTitle'
 import TextField from '@material-ui/core/TextField'
+import Snackbar from '@material-ui/core/Snackbar'
+import IconButton from '@material-ui/core/IconButton'
+import CloseIcon from '@material-ui/icons/Close'
 
 const styles = theme => ({
   containerNewsletter: {
-    background: theme.status.grey,
+    background: theme.status.white,
     padding: 90,
     textAlign: 'center',
   },
@@ -28,50 +31,59 @@ const styles = theme => ({
   textField: {
     marginBottom: 15,
   },
+  snackbarError: {
+    background: theme.status.red,
+  },
+  snackbarSuccess: {
+    background: theme.status.green,
+  },
 })
 
 class Newsletter extends Component {
   state = {
     email: 'Email Address',
     name: 'Name',
-    open: false,
+    isDialogOpen: false,
+    isSnackbarOpen: false,
+    snackbarMessage: null,
   }
-  // 1. via `.then`
-  handleSubmit = e => {
+
+  handleSubmit = async e => {
     e.preventDefault
-    addToMailchimp(this.state.email, {
+    const result = await addToMailchimp(this.state.email, {
       FNAME: this.state.name,
-    }) // listFields are optional if you are only capturing the email address.
-      .then(data => {
-        // I recommend setting data to React state
-        // but you can do whatever you want (including ignoring this `then()` altogether)
-        console.log(data)
+    })
+    if (result.result === 'error') {
+      this.setState({
+        isSnackbarOpen: true,
+        snackbarMessage: result.msg.includes('<a')
+          ? result.msg.split('<a')[0]
+          : result.msg,
       })
-      .catch(() => {
-        // unnecessary because Mailchimp only ever
-        // returns a 200 status code
-        // see below for how to handle errors
+    } else {
+      this.setState({
+        isSnackbarOpen: true,
+        snackbarMessage: 'success',
       })
+    }
   }
 
-  //   // 2. via `async/await`
-  //   handleSubmit = async e => {
-  //     e.preventDefault
-  //     const result = await addToMailchimp(this.state.email, {
-  //       FNAME: this.state.name,
-  //     })
-  //     // I recommend setting `result` to React state
-  //     // but you can do whatever you want
-  //   }
+  handleSnackbarClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return
+    }
 
-  handleClickOpen = () => {
+    this.setState({ isSnackbarOpen: false })
+  }
+
+  handleDialogOpen = () => {
     this.setState({
-      open: true,
+      isDialogOpen: true,
     })
   }
 
-  handleClose = () => {
-    this.setState({ open: false })
+  handleDialogClose = () => {
+    this.setState({ isDialogOpen: false })
   }
 
   handleChange = name => event => {
@@ -82,21 +94,61 @@ class Newsletter extends Component {
 
   render() {
     const { classes } = this.props
-    const { email, name, open } = this.state
-    const listFields = []
+    const {
+      email,
+      name,
+      isDialogOpen,
+      isSnackbarOpen,
+      snackbarMessage,
+    } = this.state
     return (
       <div className={classes.containerNewsletter}>
-        <Typography className={classes.textNewsletter} variant="headline">
+        <Snackbar
+          anchorOrigin={{
+            vertical: 'bottom',
+            horizontal: 'left',
+          }}
+          open={isSnackbarOpen}
+          autoHideDuration={6000}
+          className={
+            snackbarMessage === 'success'
+              ? classes.snackbarSuccess
+              : classes.snackbarError
+          }
+          onClose={this.handleSnackbarClose}
+          ContentProps={{
+            'aria-describedby': 'message-id',
+          }}
+          message={
+            snackbarMessage === 'success' ? (
+              <span id="message-id">Success! Thanks for joining.</span>
+            ) : (
+              <span id="message-id">{snackbarMessage}</span>
+            )
+          }
+          action={
+            <IconButton
+              key="close"
+              aria-label="Close"
+              color="inherit"
+              onClick={this.handleSnackbarClose}
+            >
+              <CloseIcon />
+            </IconButton>
+          }
+        />
+        <Typography className={classes.textNewsletter} variant="h5">
           sign up for our newsletter
         </Typography>
         <Button
           variant="contained"
           color="primary"
-          onClick={this.handleClickOpen}
+          size="large"
+          onClick={this.handleDialogOpen}
         >
           Sign Up
         </Button>
-        <Dialog open={open} onClose={this.handleClose}>
+        <Dialog open={isDialogOpen} onClose={this.handleDialogClose}>
           <DialogTitle id="dialog-title">{'Newsletter'}</DialogTitle>
           <DialogContent>
             <form className={classes.form}>
@@ -129,7 +181,7 @@ class Newsletter extends Component {
             <Button
               onClick={() => {
                 this.handleSubmit(email)
-                this.handleClose()
+                this.handleDialogClose()
               }}
               color="primary"
               autoFocus

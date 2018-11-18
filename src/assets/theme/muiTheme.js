@@ -33,6 +33,7 @@ const theme = createMuiTheme({
   },
   status,
   typography: {
+    useNextVariants: true,
     fontFamily: "'Open Sans', sans-serif",
     fontSize: 14,
   },

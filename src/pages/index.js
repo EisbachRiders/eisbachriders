@@ -47,7 +47,7 @@ class BlogIndex extends Component {
           return (
             <div key={node.fields.slug}>
               <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
-                <Typography variant="display1" gutterBottom color="primary">
+                <Typography variant="h1" gutterBottom color="primary">
                   {title}
                 </Typography>
               </Link>

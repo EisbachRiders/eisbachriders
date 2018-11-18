@@ -95,7 +95,7 @@ const Homepage = props => {
           <Img fluid={img1.node.fluid} alt="" className={classes.img} />
         </div>
         <div className={classes.textContainer1}>
-          <Typography className={classes.title} variant="headline">
+          <Typography className={classes.title} variant="h5">
             who we are
           </Typography>
           <Typography className={classes.text}>
@@ -111,10 +111,10 @@ const Homepage = props => {
       </div>
       <div className={classes.container2}>
         <div className={classes.textContainer2}>
-          <Typography className={classes.title2} variant="subheading">
+          <Typography className={classes.title2} variant="subtitle1">
             surf
           </Typography>
-          <Typography className={classes.text2} variant="headline">
+          <Typography className={classes.text2} variant="h5">
             View our winter collection
           </Typography>
           <Button variant="outlined" color="primary" className={classes.button}>
@@ -130,7 +130,7 @@ const Homepage = props => {
       </div>
       <div className={classes.container3}>
         <div className={classes.textContainer3}>
-          <Typography className={classes.title} variant="headline">
+          <Typography className={classes.title} variant="h5">
             who we are
           </Typography>
           <Typography className={classes.text}>
