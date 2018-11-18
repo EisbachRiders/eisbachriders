@@ -11,8 +11,8 @@ const styles = theme => ({
   root: {
     height: 300,
     position: 'relative',
-    marginTop: 0,
-    zIndex: 1,
+    marginTop: -65,
+    zIndex: -1,
     [theme.breakpoints.up('sm')]: {
       height: 300,
     },
@@ -38,14 +38,15 @@ const styles = theme => ({
     bottom: 15,
     [theme.breakpoints.up('md')]: {
       background: 'none',
-      left: 75,
-      bottom: 60,
+      width: '100%',
+      bottom: 150,
     },
   },
   text: {
     textTransform: 'capitalize',
     letterSpacing: 3,
-    fontFamily: "'Contrail One'",
+    fontWeight: 600,
+    textAlign: 'center',
     color: theme.status.black,
   },
 })
@@ -61,11 +62,11 @@ const Hero = props => {
       </Hidden>
       <Hidden xsDown>
         <div className={classes.container}>
-          <Typography variant="h1" className={classes.text}>
+          <Typography variant="h1" gutterBottom className={classes.text}>
             Eisbach Riders
           </Typography>
-          <Typography variant="h3" className={classes.text}>
-            roam, live, relax.
+          <Typography variant="h5" className={classes.text}>
+            Surf equipment accessories from Munich
           </Typography>
         </div>
       </Hidden>

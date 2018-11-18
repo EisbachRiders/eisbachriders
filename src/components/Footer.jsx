@@ -43,7 +43,7 @@ class Footer extends Component {
     const { classes } = this.props
 
     return (
-      <div className={classes.root}>
+      <div className={classes.root} id="contact">
         <div className={classes.iconContainer}>
           <IconButton
             aria-label="instagram"

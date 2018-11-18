@@ -31,6 +31,10 @@ const styles = theme => ({
   textField: {
     marginBottom: 15,
   },
+  button: {
+    padding: '16px 48px',
+    fontSize: '18px',
+  },
   snackbarError: {
     background: theme.status.red,
   },
@@ -101,6 +105,7 @@ class Newsletter extends Component {
       isSnackbarOpen,
       snackbarMessage,
     } = this.state
+
     return (
       <div className={classes.containerNewsletter}>
         <Snackbar
@@ -110,14 +115,13 @@ class Newsletter extends Component {
           }}
           open={isSnackbarOpen}
           autoHideDuration={6000}
-          className={
-            snackbarMessage === 'success'
-              ? classes.snackbarSuccess
-              : classes.snackbarError
-          }
           onClose={this.handleSnackbarClose}
           ContentProps={{
             'aria-describedby': 'message-id',
+            className:
+              snackbarMessage === 'success'
+                ? classes.snackbarSuccess
+                : classes.snackbarError,
           }}
           message={
             snackbarMessage === 'success' ? (
@@ -143,7 +147,7 @@ class Newsletter extends Component {
         <Button
           variant="contained"
           color="primary"
-          size="large"
+          className={classes.button}
           onClick={this.handleDialogOpen}
         >
           Sign Up

@@ -26,7 +26,7 @@ const styles = theme => ({
   },
   appbar: {
     boxShadow: 'none',
-    backgroundColor: theme.status.black,
+    backgroundColor: 'transparent',
   },
   toolbar: {
     paddingLeft: 0,
@@ -83,8 +83,8 @@ class Template extends Component {
   render() {
     const { children, classes } = this.props
     const { isOpen } = this.state
-    const links = ['/Products/', '/About/', '/Blog/']
-    const linkLabels = ['products', 'about', 'blog']
+    const links = ['/About/', '/Products/', 'contact']
+    const linkLabels = ['about', 'products', 'contact']
 
     return (
       <div className={classes.root}>
@@ -96,9 +96,9 @@ class Template extends Component {
                   className={classes.mobileButton}
                   aria-label="Open drawer"
                 >
-                  <Link to="/">
-                    <img alt="" src={logoWhite} className={classes.logo} />
-                  </Link>
+                  {/* <Link to="/"> */}
+                  <img alt="" src={logoWhite} className={classes.logo} />
+                  {/* </Link> */}
                 </Button>
                 <Button
                   aria-label="menu"
@@ -129,7 +129,11 @@ class Template extends Component {
               <div>
                 {links.map((link, idx) => (
                   // <Link to={link} key={`link_${link}`}>
-                  <Button className={classes.button} key={`link_${link}`}>
+                  <Button
+                    className={classes.button}
+                    key={`link_${link}`}
+                    href={`#${linkLabels[idx]}`}
+                  >
                     {linkLabels[idx]}
                   </Button>
                   // </Link>
