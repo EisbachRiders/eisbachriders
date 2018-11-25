@@ -2,10 +2,11 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 
+import classnames from 'classnames'
 import { withStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
-import Button from '@material-ui/core/Button'
-
+import IconButton from '@material-ui/core/IconButton'
+import { AmazonIcon, EbayIcon } from '../assets/icons/icons'
 import ProductDialog from './ProductDialog'
 
 const styles = theme => ({
@@ -26,12 +27,24 @@ const styles = theme => ({
     fontWeight: 600,
     textAlign: 'left',
   },
+  priceContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   price: {
     color: theme.palette.primary.main,
     fontWeight: 600,
-    display: 'flex',
-    justifyContent: 'space-between',
-    paddingBottom: 10,
+    marginRight: 15,
+  },
+  iconContainer: {
+    marginLeft: 15,
+  },
+  icon: {
+    fill: theme.status.black,
+  },
+  ebay: {
+    fontSize: 36,
   },
 })
 
@@ -94,19 +107,32 @@ class Products extends Component {
       <div className={classes.root}>
         {products.map((elem, idx) => (
           <div className={classes.container} key={`product${idx}`}>
-            <Img
+            {/* <Img
               fluid={elem.images[0].node.fluid}
               alt=""
               className={classes.img}
-            />
+            /> */}
+            <img src={elem.images[0]} className={classes.img} />
             <Typography className={classes.name}>{elem.name}</Typography>
-            <Typography variant="h6" className={classes.price}>
-              {`€${elem.price}`}
-              <div>
-                <Button style={{ width: '20%' }}>ebay</Button>
-                <Button style={{ width: '20%' }}>a</Button>
+            <div className={classes.priceContainer}>
+              <Typography variant="h6" className={classes.price}>
+                {`€${elem.price}`}
+              </Typography>
+              <div className={classes.iconContainer}>
+                {elem.amazon && (
+                  <IconButton className={classes.button} aria-label="Amazon">
+                    <AmazonIcon className={classes.icon} />
+                  </IconButton>
+                )}
+                {elem.ebay && (
+                  <IconButton className={classes.button} aria-label="Ebay">
+                    <EbayIcon
+                      className={classnames(classes.icon, classes.ebay)}
+                    />
+                  </IconButton>
+                )}
               </div>
-            </Typography>
+            </div>
             <ProductDialog product={elem} />
           </div>
         ))}

@@ -11,6 +11,7 @@ const status = {
   grey: '#c5c6c7',
   greyDk: '#404040',
   teal: '#66fcf1',
+  ocean: '#006994',
   tealDk: '#45a29e',
   green: '#66fca6',
   yellow: '#fcf166',
@@ -21,8 +22,8 @@ const theme = createMuiTheme({
   palette: {
     type: 'light',
     primary: {
-      light: status.teal,
-      main: status.teal,
+      light: status.ocean,
+      main: status.ocean,
       dark: status.tealDk,
     },
     secondary: {

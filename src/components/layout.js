@@ -28,6 +28,10 @@ const styles = theme => ({
     boxShadow: 'none',
     backgroundColor: 'transparent',
   },
+  appbarDarkTheme: {
+    boxShadow: 'none',
+    backgroundColor: theme.palette.primary.main,
+  },
   toolbar: {
     paddingLeft: 0,
     paddingRight: 0,
@@ -81,14 +85,17 @@ class Template extends Component {
     })
   }
   render() {
-    const { children, classes } = this.props
+    const { children, imprint, classes } = this.props
     const { isOpen } = this.state
     const links = ['/About/', '/Products/', 'contact']
     const linkLabels = ['about', 'products', 'contact']
 
     return (
       <div className={classes.root}>
-        <AppBar position="static" className={classes.appbar}>
+        <AppBar
+          position="static"
+          className={imprint ? classes.appbarDarkTheme : classes.appbar}
+        >
           <Toolbar className={classes.toolbar}>
             <Hidden smUp>
               <div className={classes.containerXS}>
@@ -109,16 +116,22 @@ class Template extends Component {
                   <MenuIcon className={classes.menuIcon} />
                 </Button>
               </div>
-              <Drawer anchor="right" open={isOpen} onClose={this.handleDrawer}>
-                <div
-                  tabIndex={0}
-                  role="button"
-                  onClick={this.handleDrawer}
-                  onKeyDown={this.handleDrawer}
+              {!imprint && (
+                <Drawer
+                  anchor="right"
+                  open={isOpen}
+                  onClose={this.handleDrawer}
                 >
-                  <MobileHeaderList links={links} linkLabels={linkLabels} />
-                </div>
-              </Drawer>
+                  <div
+                    tabIndex={0}
+                    role="button"
+                    onClick={this.handleDrawer}
+                    onKeyDown={this.handleDrawer}
+                  >
+                    <MobileHeaderList links={links} linkLabels={linkLabels} />
+                  </div>
+                </Drawer>
+              )}
             </Hidden>
             <Hidden xsDown>
               <IconButton className={classes.logoButton} aria-label="home">
@@ -126,19 +139,21 @@ class Template extends Component {
                   <img alt="" src={logoWhite} className={classes.logo} />
                 </Link>
               </IconButton>
-              <div>
-                {links.map((link, idx) => (
-                  // <Link to={link} key={`link_${link}`}>
-                  <Button
-                    className={classes.button}
-                    key={`link_${link}`}
-                    href={`#${linkLabels[idx]}`}
-                  >
-                    {linkLabels[idx]}
-                  </Button>
-                  // </Link>
-                ))}
-              </div>
+              {!imprint && (
+                <div>
+                  {links.map((link, idx) => (
+                    // <Link to={link} key={`link_${link}`}>
+                    <Button
+                      className={classes.button}
+                      key={`link_${link}`}
+                      href={`#${linkLabels[idx]}`}
+                    >
+                      {linkLabels[idx]}
+                    </Button>
+                    // </Link>
+                  ))}
+                </div>
+              )}
             </Hidden>
           </Toolbar>
         </AppBar>

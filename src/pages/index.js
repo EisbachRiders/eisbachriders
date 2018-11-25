@@ -7,8 +7,12 @@ import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Hero from '../components/Hero'
 import Homepage from '../components/Homepage'
-
-class BlogIndex extends Component {
+import heroImg from '../assets/images/backsplash.jpg'
+import img1 from '../assets/images/homepage1.png'
+import img2 from '../assets/images/homepage2.jpg'
+import img3 from '../assets/images/homepage3.jpg'
+import img4 from '../assets/images/homepage4.jpg'
+class Index extends Component {
   render() {
     const { data } = this.props
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
@@ -17,21 +21,21 @@ class BlogIndex extends Component {
       'props.data.site.siteMetadata.description'
     )
     // const posts = get(this, 'props.data.allMarkdownRemark.edges')
-    const heroImg = data.allImageSharp.edges.find(x =>
-      x.node.fluid.src.includes('backsplash')
-    )
-    const img1 = data.allImageSharp.edges.find(x =>
-      x.node.fluid.src.includes('homepage1')
-    )
-    const img2 = data.allImageSharp.edges.find(x =>
-      x.node.fluid.src.includes('homepage2')
-    )
-    const img3 = data.allImageSharp.edges.find(x =>
-      x.node.fluid.src.includes('homepage3')
-    )
-    const img4 = data.allImageSharp.edges.find(x =>
-      x.node.fluid.src.includes('homepage4')
-    )
+    // const heroImg = data.allImageSharp.edges.find(x =>
+    //   x.node.fluid.src.includes('backsplash')
+    // )
+    // const img1 = data.allImageSharp.edges.find(x =>
+    //   x.node.fluid.src.includes('homepage1')
+    // )
+    // const img2 = data.allImageSharp.edges.find(x =>
+    //   x.node.fluid.src.includes('homepage2')
+    // )
+    // const img3 = data.allImageSharp.edges.find(x =>
+    //   x.node.fluid.src.includes('homepage3')
+    // )
+    // const img4 = data.allImageSharp.edges.find(x =>
+    //   x.node.fluid.src.includes('homepage4')
+    // )
 
     return (
       <Layout location={this.props.location}>
@@ -62,24 +66,24 @@ class BlogIndex extends Component {
   }
 }
 
-BlogIndex.propTypes = {}
+Index.propTypes = {}
 
-export default BlogIndex
+export default Index
 
-export const pageQuery = graphql`
-  query {
-    allImageSharp {
-      edges {
-        node {
-          id
-          fluid(maxWidth: 2000) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  }
-`
+// export const pageQuery = graphql`
+//   query {
+//     allImageSharp {
+//       edges {
+//         node {
+//           id
+//           fluid(maxWidth: 2000) {
+//             ...GatsbyImageSharpFluid
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
 
 // export const pageQuery = graphql`
 //   query {

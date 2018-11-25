@@ -27,6 +27,7 @@ const styles = theme => ({
     },
     [theme.breakpoints.up('md')]: {
       height: 600,
+      width: '100%', //can remove with new Img back
     },
   },
   container: {
@@ -47,7 +48,7 @@ const styles = theme => ({
     letterSpacing: 3,
     fontWeight: 600,
     textAlign: 'center',
-    color: theme.status.black,
+    color: theme.status.white,
   },
 })
 
@@ -56,7 +57,8 @@ const Hero = props => {
 
   return (
     <div className={classes.root}>
-      <Img fluid={img.node.fluid} alt="" className={classes.img} />
+      {/* <Img fluid={img.node.fluid} alt="" className={classes.img} /> */}
+      <img src={img} className={classes.img} />
       <Hidden smUp>
         <HeroMobile />
       </Hidden>

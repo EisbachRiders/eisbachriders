@@ -179,7 +179,7 @@ class Newsletter extends Component {
             </form>
           </DialogContent>
           <DialogActions>
-            <Button onClick={this.handleClose} color="primary">
+            <Button onClick={this.handleDialogClose} color="primary">
               Cancel
             </Button>
             <Button

@@ -56,7 +56,8 @@ const Homepage = props => {
       <Newletter />
       <div className={classes.container1}>
         <div className={classes.imgContainer1}>
-          <Img fluid={img1.node.fluid} alt="" className={classes.img} />
+          <img src={img1} className={classes.img} />
+          {/* <Img fluid={img1.node.fluid} alt="" className={classes.img} /> */}
         </div>
         <div className={classes.textContainer1} id="about">
           <Typography
@@ -65,7 +66,7 @@ const Homepage = props => {
           >
             who we are
           </Typography>
-          <Typography className={classes.text}>
+          <Typography className={classes.text} variant="subtitle1">
             Eisbach Riders is a young local surf brand from Munich and offers
             equipment for surfing, Whether you are in the sea, in the river or
             on the city wave. We, Michael and Robin, are passionate surfers
