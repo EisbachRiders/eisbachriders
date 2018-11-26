@@ -14,6 +14,8 @@ import Snackbar from '@material-ui/core/Snackbar'
 import IconButton from '@material-ui/core/IconButton'
 import CloseIcon from '@material-ui/icons/Close'
 
+import mailchimpLegal from '../assets/images/mailchimpLegal.png'
+
 const styles = theme => ({
   containerNewsletter: {
     background: theme.status.white,
@@ -40,6 +42,27 @@ const styles = theme => ({
   },
   snackbarSuccess: {
     background: theme.status.green,
+  },
+  dialogContent: {
+    paddingBottom: 0,
+  },
+  legal: {
+    fontSize: 11,
+    flexGrow: 1,
+  },
+  legalContainer: {
+    display: 'flex',
+    marginTop: 15,
+  },
+  img: {
+    marginRight: 15,
+    marginLeft: 15,
+    width: 60,
+    height: 60,
+  },
+  dialogActions: {
+    marginLeft: 30,
+    marginRight: 30,
   },
 })
 
@@ -154,7 +177,7 @@ class Newsletter extends Component {
         </Button>
         <Dialog open={isDialogOpen} onClose={this.handleDialogClose}>
           <DialogTitle id="dialog-title">{'Newsletter'}</DialogTitle>
-          <DialogContent>
+          <DialogContent className={classes.dialogContent}>
             <form className={classes.form}>
               <TextField
                 required
@@ -177,8 +200,21 @@ class Newsletter extends Component {
                 variant="outlined"
               />
             </form>
+            <div className={classes.legalContainer}>
+              <img src={mailchimpLegal} className={classes.img} />
+              <Typography className={classes.legal}>
+                You can unsubscribe at any time by clicking the link in the
+                footer of our emails. We use Mailchimp as our marketing
+                platform. By clicking below to subscribe, you acknowledge that
+                your information will be transferred to Mailchimp for
+                processing.{' '}
+                <a href="https://mailchimp.com/legal/">
+                  Learn more about Mailchimp's privacy practives here.
+                </a>
+              </Typography>
+            </div>
           </DialogContent>
-          <DialogActions>
+          <DialogActions className={classes.dialogActions}>
             <Button onClick={this.handleDialogClose} color="primary">
               Cancel
             </Button>

@@ -11,34 +11,56 @@ const styles = {
     paddingLeft: '15%',
     paddingRight: '15%',
   },
+
+  title: {
+    paddingTop: 45,
+    paddingTop: 30,
+  },
 }
 
 const Legal = props => {
   const { classes } = props
   return (
     <div className={classes.container}>
+      <Typography variant="h6" className={classes.title}>
+        Imprint
+      </Typography>
       <Typography className={classes.text}>
-        --------------------------- Data Protection Declaration
-        --------------------------- 1) Information on the Collection of Personal
-        Data and Contact Details of the Controller 1.1 We are pleased that you
-        are visiting our website and thank you for your interest. In the
-        following pages, we inform you about the handling of your personal data
-        when using our website. Personal data is all data with which you can be
-        personally identified. 1.2 The controller in charge of data processing
-        on this website, within the meaning of the General Data Protection
-        Regulation (GDPR), is Eisbach Riders, Robin Eisenhardt & Michael Schmidt
-        GbR, Lothstr. 72, 80797 München, Deutschland, Tel.: 017669019542,
-        E-Mail: business@eisbach-riders.com. The controller in charge of the
-        processing of personal data is the natural or legal person who alone or
-        jointly with others determines the purposes and means of the processing
-        of personal data. 1.3 This website uses SSL or TLS encryption for
-        security reasons and to protect the transmission of personal data and
-        other confidential content (e.g. orders or inquiries to the controller).
-        You can recognize an encrypted connection by the character string
-        https:// and the lock symbol in your browser line. 2) Data Collection
-        When You Visit Our Website When using our website for information only,
-        i.e. if you do not register or otherwise provide us with information, we
-        only collect data that your browser transmits to our server (so-called
+        -Imprint Robin Eisenhardt & Michael Schmidt GbR Lothstr. 72 80797
+        München Deutschland Tel.: 0176/69019542 E-Mail:
+        business@eisbach-riders.com Vertretungsberechtigte Gesellschafter: Robin
+        Eisenhardt, Michael Schmidt Umsatzsteuer-Identifikationsnummer gemäß §
+        27 a Umsatzsteuergesetz: DE 320071401 Plattform der EU-Kommission zur
+        Online-Streitbeilegung: https://ec.europa.eu/consumers/odr Wir sind zur
+        Teilnahme an einem Streitbeilegungsverfahren vor einer
+        Verbraucherschlichtungsstelle weder verpflichtet noch bereit.
+        Verantwortliche/r i.S.d. § 55 Abs. 2 RStV: Robin Eisenhardt, Michael
+        Schmidt, Lothstr. 72, 80797, München
+      </Typography>
+      <Typography variant="h6" className={classes.title}>
+        Data Protection Declaration
+      </Typography>
+      <Typography className={classes.text}>
+        1) Information on the Collection of Personal Data and Contact Details of
+        the Controller 1.1 We are pleased that you are visiting our website and
+        thank you for your interest. In the following pages, we inform you about
+        the handling of your personal data when using our website. Personal data
+        is all data with which you can be personally identified. 1.2 The
+        controller in charge of data processing on this website, within the
+        meaning of the General Data Protection Regulation (GDPR), is Eisbach
+        Riders, Robin Eisenhardt & Michael Schmidt GbR, Lothstr. 72, 80797
+        München, Deutschland, Tel.: 017669019542, E-Mail:
+        business@eisbach-riders.com. The controller in charge of the processing
+        of personal data is the natural or legal person who alone or jointly
+        with others determines the purposes and means of the processing of
+        personal data. 1.3 This website uses SSL or TLS encryption for security
+        reasons and to protect the transmission of personal data and other
+        confidential content (e.g. orders or inquiries to the controller). You
+        can recognize an encrypted connection by the character string https://
+        and the lock symbol in your browser line. 2) Data Collection When You
+        Visit Our Website When using our website for information only, i.e. if
+        you do not register or otherwise provide us with information, we only
+        collect data that your browser transmits to our server (so-called
         "server log files"). When you visit our website, we collect the
         following data that is technically necessary for us to display the
         website to you: - Our visited website - Date and time at the moment of
@@ -334,87 +356,36 @@ const Legal = props => {
         performance or initiation of the contract and/or there is no longer any
         legitimate interest on our part in further storage.
       </Typography>
-
+      <Typography variant="h6" className={classes.title}>
+        Terms and Conditions
+      </Typography>
       <Typography className={classes.text}>
-        9 of 21 Content Webpage Inbox x Michael Attachments Sun, Nov 18, 3:47 PM
-        (7 days ago) to me View original message Don't automatically translate
-        for: German title Eisbach Riders Surf equipment accessories from Munich
-        About Us: Eisbach Riders is a young local surf brand from Munich and
-        offers equipment for surfing, Whether you are in the sea, in the river
-        or on the city wave. We, Michael and Robin, are passionate surfers
-        ourselves and value quality products at compatible prices. Packed in a
-        sustainable and environmentally friendly packaging, we will ship as fast
-        as possible, so you can jump right back into the water with a smile on
-        your face. Products 1. Surfboard Thruster Fin Set - FCS Double Tab with
-        Fin Key Price: 19.90 eBay: http://www.ebay.de/itm/183498144801 Amazon:
-        https://www.amazon.de/dp/B07K8W2TKK More: -Set of 3 fins with center fin
-        and the two side fins (right and left) with inside profile in standard
-        size G5 / M5. -Fits any surfboard with double tab FCS1 plug system -
-        whether bodyboard, shortboard, funboard or kiteboard, making it ideal
-        for surfing, river surfing, paddle boarding or water sports in general.
-        -High quality materials make the fins durable and flexible. -All our
-        products come in a sustainable and environmentally friendly packaging.
-        Height: 11.63 cm (4.58'') Length: 11.13 cm (4.38'') Thickness: 0.66 cm
-        (0.26'') Angle: 35.5 degree Scope of delivery: 3 fin set with fin key 2.
-        Surfboard RailProtect - Rail Protection Saver Tape Price: 24.90 eBay:
-        http://www.ebay.de/itm/183498197638 Amazon:
-        https://www.amazon.de/dp/B07K8W9TG9 More: The particularly durable
-        diamond structure protects the edges of your board against dings and
-        bumps, thus preventing the ingress of water. Fits any surfboard up to
-        6ft (1.83m) - whether its bodyboard, shortboard, funboard or kiteboard,
-        making it ideal for surfing, river surfing, paddle boarding or SUP
-        (stand up paddling). The two adhesive strips (each 191 x 6.3 cm (6'3 x
-        2.5)) are easy to attach and will last a long time on your board. All
-        our products come in a sustainable and environmentally friendly
-        handcrafted packaging. Scope of delivery: 2 piece set surfboard
-        RailProtect tape 3. Surfboard Thruster Fin Set - Future Single Tab with
-        Fin Key Price: 19.90 eBay: http://www.ebay.de/itm/183498170584 Amazon: -
-        More: -Set of 3 fins with center fin and the two side fins (right and
-        left) with inside profile in standard size G5 / M5. -Fits any surfboard
-        with single tab Future plug system - whether bodyboard, shortboard,
-        funboard or kiteboard, making it ideal for surfing, river surfing,
-        paddle boarding or water sports in general. -High quality materials make
-        the fins durable and flexible. -All our products come in a sustainable
-        and environmentally friendly packaging. Height: 11.63 cm (4.58'')
-        Length: 11.13 cm (4.38'') Thickness: 0.66 cm (0.26'') Angle: 35.5 degree
-        Scope of delivery: 3 fin set with fin key -Imprint Robin Eisenhardt &
-        Michael Schmidt GbR Lothstr. 72 80797 München Deutschland Tel.:
-        0176/69019542 E-Mail: business@eisbach-riders.com Vertretungsberechtigte
-        Gesellschafter: Robin Eisenhardt, Michael Schmidt
-        Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: DE
-        320071401 Plattform der EU-Kommission zur Online-Streitbeilegung:
-        https://ec.europa.eu/consumers/odr Wir sind zur Teilnahme an einem
-        Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle weder
-        verpflichtet noch bereit. Verantwortliche/r i.S.d. § 55 Abs. 2 RStV:
-        Robin Eisenhardt, Michael Schmidt, Lothstr. 72, 80797, München -Terms
-        and Conditions -Data Privacy 5 Attachments Got it, thanks!Got it!Looks
-        good to me! ---------------------------- General Terms and Conditions
-        ---------------------------- Table of Contents ----------------- 1.
-        Scope of Application 2. Conclusion of the Contract 3. Right to Cancel 4.
-        Prices and Payment Conditions 5. Shipment and Delivery Conditions 6.
-        Reservation of Proprietary Rights 7. Warranty 8. Applicable Law 9.
-        Alternative dispute resolution 1) Scope of Application 1.1 These General
-        Terms and Conditions of the company Eisbach Riders, Robin Eisenhardt &
-        Michael Schmidt GbR (hereinafter referred to as "Seller”) shall apply to
-        all contracts concluded between a consumer or a trader (hereinafter
-        referred to as "Client”) and the Seller relating to all goods and/or
-        services presented in the Seller's online shop. The inclusion of the
-        Client’s own conditions is herewith objected to, unless other terms have
-        been stipulated. 1.2 A consumer pursuant to these Terms and Conditions
-        is any natural person concluding a legal transaction for a purpose
-        attributed neither to a mainly commercial nor a self-employed
-        occupational activity. A trader pursuant to these Terms and Conditions
-        is any natural or legal person or partnership with legal capacity acting
-        in the performance of a commercial or self-employed occupational
-        activity when concluding a legal transaction. 1.3 Digital content in the
-        sense of these General Terms and Conditions are all data not on a
-        tangible medium which are produced in digital form and are supplied by
-        the Seller by granting certain usage rights precisely defined in these
-        General Terms and Conditions. 2) Conclusion of the Contract 2.1 The
-        product descriptions in theon Seller’s online shop do not constitute
-        binding offers on the part of the Seller, but merely serve the purpose
-        of submitting a binding offer by the Client. 2.2 The Client may submit
-        the offer via the online order form integrated into the Seller's online
+        Table of Contents ----------------- 1. Scope of Application 2.
+        Conclusion of the Contract 3. Right to Cancel 4. Prices and Payment
+        Conditions 5. Shipment and Delivery Conditions 6. Reservation of
+        Proprietary Rights 7. Warranty 8. Applicable Law 9. Alternative dispute
+        resolution 1) Scope of Application 1.1 These General Terms and
+        Conditions of the company Eisbach Riders, Robin Eisenhardt & Michael
+        Schmidt GbR (hereinafter referred to as "Seller”) shall apply to all
+        contracts concluded between a consumer or a trader (hereinafter referred
+        to as "Client”) and the Seller relating to all goods and/or services
+        presented in the Seller's online shop. The inclusion of the Client’s own
+        conditions is herewith objected to, unless other terms have been
+        stipulated. 1.2 A consumer pursuant to these Terms and Conditions is any
+        natural person concluding a legal transaction for a purpose attributed
+        neither to a mainly commercial nor a self-employed occupational
+        activity. A trader pursuant to these Terms and Conditions is any natural
+        or legal person or partnership with legal capacity acting in the
+        performance of a commercial or self-employed occupational activity when
+        concluding a legal transaction. 1.3 Digital content in the sense of
+        these General Terms and Conditions are all data not on a tangible medium
+        which are produced in digital form and are supplied by the Seller by
+        granting certain usage rights precisely defined in these General Terms
+        and Conditions. 2) Conclusion of the Contract 2.1 The product
+        descriptions in the Seller’s online shop do not constitute binding
+        offers on the part of the Seller, but merely serve the purpose of
+        submitting a binding offer by the Client. 2.2 The Client may submit the
+        offer via the online order form integrated into the Seller's online
         shop. In doing so, after having placed the selected goods and/or
         services in the virtual basket and passed through the ordering process,
         and by clicking the button finalizing the order process, the Client
