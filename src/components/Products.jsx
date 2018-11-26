@@ -120,12 +120,24 @@ class Products extends Component {
               </Typography>
               <div className={classes.iconContainer}>
                 {elem.amazon && (
-                  <IconButton className={classes.button} aria-label="Amazon">
+                  <IconButton
+                    className={classes.button}
+                    aria-label="Amazon"
+                    href={elem.amazon}
+                    target="_blank"
+                    rel="noopener"
+                  >
                     <AmazonIcon className={classes.icon} />
                   </IconButton>
                 )}
                 {elem.ebay && (
-                  <IconButton className={classes.button} aria-label="Ebay">
+                  <IconButton
+                    className={classes.button}
+                    aria-label="Ebay"
+                    href={elem.ebay}
+                    target="_blank"
+                    rel="noopener"
+                  >
                     <EbayIcon
                       className={classnames(classes.icon, classes.ebay)}
                     />

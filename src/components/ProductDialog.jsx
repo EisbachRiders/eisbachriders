@@ -224,12 +224,21 @@ class ProductDialog extends Component {
                       <IconButton
                         className={classes.button}
                         aria-label="Amazon"
+                        href={product.amazon}
+                        target="_blank"
+                        rel="noopener"
                       >
                         <AmazonIcon className={classes.icon} />
                       </IconButton>
                     )}
                     {product.ebay && (
-                      <IconButton className={classes.button} aria-label="Ebay">
+                      <IconButton
+                        className={classes.button}
+                        aria-label="Ebay"
+                        href={product.ebay}
+                        target="_blank"
+                        rel="noopener"
+                      >
                         <EbayIcon className={classes.icon} />
                       </IconButton>
                     )}
