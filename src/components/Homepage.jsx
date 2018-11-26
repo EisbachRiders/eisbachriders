@@ -70,9 +70,9 @@ const Homepage = props => {
             Eisbach Riders is a young local surf brand from Munich and offers
             equipment for surfing. Whether you are in the sea, in the river or
             on the city wave. We, Michael and Robin, are passionate surfers
-            ourselves and value quality products at compatible prices. Packed in
-            a sustainable and environmentally friendly packaging, we will ship
-            as fast as possible, so you can jump right back into the water with
+            ourselves and value quality products at comparable prices. Packed in
+            sustainable and environmentally friendly packaging, we will ship as
+            fast as possible so that you can jump right back into the water with
             a smile on your face.
           </Typography>
         </div>
