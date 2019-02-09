@@ -47,7 +47,7 @@ jobs:
           at: ./
       - add_ssh_keys:
           fingerprints:
-            - 'b7:35:a6:4e:9b:0d:6d:d4:78:1e:9a:97:2a:66:6b:be'
+            - '99:d3:10:1a:1e:9d:2c:df:84:21:58:5f:46:71:f4:45'
       - run:
           name: remove existing files
           command: ssh "$SITE_SSH_USER@$SITE_SSH_HOST" "rm -rf /eisbach-riders/$PROD_URL/*"
