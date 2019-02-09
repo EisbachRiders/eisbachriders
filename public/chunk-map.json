@@ -1,1 +1,19 @@
-{"app":["/app-ec2aea2f91f44c5ae31f.js"],"component---node-modules-gatsby-plugin-offline-app-shell-js":["/component---node-modules-gatsby-plugin-offline-app-shell-js-48f550d22f5602c97279.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-2fb4ee03271f52572776.js"],"component---src-pages-404-js":["/component---src-pages-404-js-0b6dd44b7aaaf0c91bfb.js"],"component---src-pages-imprint-js":["/component---src-pages-imprint-js-dc1d5dda7e0d0fe57478.js"],"component---src-pages-index-js":["/component---src-pages-index-js-02c9c84ceef68b4fe2a8.js"]}
+{
+  "app": ["/app-8a20a81aedd539b9f871.js"],
+  "component---node-modules-gatsby-plugin-offline-app-shell-js": [
+    "/component---node-modules-gatsby-plugin-offline-app-shell-js-caa6f560410bfe9ffa16.js"
+  ],
+  "component---src-pages-404-js": [
+    "/component---src-pages-404-js-46af67f8554285a12726.js"
+  ],
+  "component---src-pages-index-js": [
+    "/component---src-pages-index-js-b70a94e6d8606f01ef9b.js"
+  ],
+  "component---src-pages-legal-js": [
+    "/component---src-pages-legal-js-5f3d6a05e67a8b61c629.js"
+  ],
+  "component---src-pages-privacy-js": [
+    "/component---src-pages-privacy-js-8a39f70aa42975da15aa.js"
+  ],
+  "pages-manifest": ["/pages-manifest-5460443c9fe16cad5fbb.js"]
+}

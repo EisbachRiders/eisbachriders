@@ -49,7 +49,7 @@ module.exports = {
         //trackingId: `ADD YOUR TRACKING ID HERE`,
       },
     },
-    `gatsby-plugin-feed`,
+    //`gatsby-plugin-feed`,
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
@@ -69,7 +69,7 @@ module.exports = {
         icon: `src/assets/logos/logoBlack.png`,
       },
     },
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
   ],
 }
