@@ -63,7 +63,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Eisbach Riders`,
-        short_name: `EisbachRiders`,
+        short_name: `ER`,
         start_url: `/`,
         background_color: `#0b0c10`,
         theme_color: `#66fcf1`,

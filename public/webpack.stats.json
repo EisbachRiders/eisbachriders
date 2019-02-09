@@ -1,17 +1,14 @@
 {
-  "errors": [
-    "./src/components/About.jsx\nModule not found: Error: Can't resolve '../assets/images/homepage1.jpg' in '/Users/alyssabutler/Documents/ab/website_EisbachRidersGatsby/src/components'",
-    "./src/components/Header.jsx\nModule not found: Error: Can't resolve '../assets/logos/logoWhite_small.png' in '/Users/alyssabutler/Documents/ab/website_EisbachRidersGatsby/src/components'"
-  ],
+  "errors": [],
   "warnings": [],
   "namedChunkGroups": {
     "app": {
-      "chunks": [9, 2],
+      "chunks": [11, 2],
       "assets": [
-        "webpack-runtime-51872ac961cb1a664e25.js",
-        "webpack-runtime-51872ac961cb1a664e25.js.map",
-        "app-30b66918bd37c1463073.js",
-        "app-30b66918bd37c1463073.js.map"
+        "webpack-runtime-60adbe9bcd4b6c25200c.js",
+        "webpack-runtime-60adbe9bcd4b6c25200c.js.map",
+        "app-5f2e2b8b64628bf227ae.js",
+        "app-5f2e2b8b64628bf227ae.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -29,69 +26,99 @@
       "chunks": [0, 1, 4],
       "assets": [
         "0.8b1cc9920e75fff049f7.css",
-        "0-d88672cb1833a6de3089.js",
-        "0-d88672cb1833a6de3089.js.map",
+        "0-4d65d90e6cb208279c50.js",
+        "0-4d65d90e6cb208279c50.js.map",
         "1.d63ab66a23fcbd4f1fb2.css",
-        "1-fe3f166b91a56320bfc4.js",
-        "1-fe3f166b91a56320bfc4.js.map",
-        "component---src-pages-404-js-a98fe96e26df6de7f54e.js",
-        "component---src-pages-404-js-a98fe96e26df6de7f54e.js.map"
+        "1-573ff420674b3af6ab8c.js",
+        "1-573ff420674b3af6ab8c.js.map",
+        "component---src-pages-404-js-df7d822cc246990c6a9b.js",
+        "component---src-pages-404-js-df7d822cc246990c6a9b.js.map"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "component---src-pages-contact-js": {
+      "chunks": [0, 1, 5],
+      "assets": [
+        "0.8b1cc9920e75fff049f7.css",
+        "0-4d65d90e6cb208279c50.js",
+        "0-4d65d90e6cb208279c50.js.map",
+        "1.d63ab66a23fcbd4f1fb2.css",
+        "1-573ff420674b3af6ab8c.js",
+        "1-573ff420674b3af6ab8c.js.map",
+        "component---src-pages-contact-js-f457fa16788045ef5f0c.js",
+        "component---src-pages-contact-js-f457fa16788045ef5f0c.js.map"
       ],
       "children": {},
       "childAssets": {}
     },
     "component---src-pages-index-js": {
-      "chunks": [0, 10, 1, 5],
+      "chunks": [0, 12, 1, 6],
       "assets": [
         "0.8b1cc9920e75fff049f7.css",
-        "0-d88672cb1833a6de3089.js",
-        "0-d88672cb1833a6de3089.js.map",
-        "10-229f52f411ea1803ac34.js",
-        "10-229f52f411ea1803ac34.js.map",
+        "0-4d65d90e6cb208279c50.js",
+        "0-4d65d90e6cb208279c50.js.map",
+        "12-8ceee34a56a483b63e25.js",
+        "12-8ceee34a56a483b63e25.js.map",
         "1.d63ab66a23fcbd4f1fb2.css",
-        "1-fe3f166b91a56320bfc4.js",
-        "1-fe3f166b91a56320bfc4.js.map",
-        "component---src-pages-index-js-e50681bb4591712802f9.js",
-        "component---src-pages-index-js-e50681bb4591712802f9.js.map"
+        "1-573ff420674b3af6ab8c.js",
+        "1-573ff420674b3af6ab8c.js.map",
+        "component---src-pages-index-js-43ba81a3482d792bbb5a.js",
+        "component---src-pages-index-js-43ba81a3482d792bbb5a.js.map"
       ],
       "children": {},
       "childAssets": {}
     },
     "component---src-pages-legal-js": {
-      "chunks": [0, 1, 6],
+      "chunks": [0, 1, 7],
       "assets": [
         "0.8b1cc9920e75fff049f7.css",
-        "0-d88672cb1833a6de3089.js",
-        "0-d88672cb1833a6de3089.js.map",
+        "0-4d65d90e6cb208279c50.js",
+        "0-4d65d90e6cb208279c50.js.map",
         "1.d63ab66a23fcbd4f1fb2.css",
-        "1-fe3f166b91a56320bfc4.js",
-        "1-fe3f166b91a56320bfc4.js.map",
-        "component---src-pages-legal-js-a2d3ed2af7aea693cca1.js",
-        "component---src-pages-legal-js-a2d3ed2af7aea693cca1.js.map"
+        "1-573ff420674b3af6ab8c.js",
+        "1-573ff420674b3af6ab8c.js.map",
+        "component---src-pages-legal-js-ac5a1ca6026235ad7013.js",
+        "component---src-pages-legal-js-ac5a1ca6026235ad7013.js.map"
       ],
       "children": {},
       "childAssets": {}
     },
     "component---src-pages-privacy-js": {
-      "chunks": [0, 1, 7],
+      "chunks": [0, 1, 8],
       "assets": [
         "0.8b1cc9920e75fff049f7.css",
-        "0-d88672cb1833a6de3089.js",
-        "0-d88672cb1833a6de3089.js.map",
+        "0-4d65d90e6cb208279c50.js",
+        "0-4d65d90e6cb208279c50.js.map",
         "1.d63ab66a23fcbd4f1fb2.css",
-        "1-fe3f166b91a56320bfc4.js",
-        "1-fe3f166b91a56320bfc4.js.map",
-        "component---src-pages-privacy-js-c5897af1db5c04fed510.js",
-        "component---src-pages-privacy-js-c5897af1db5c04fed510.js.map"
+        "1-573ff420674b3af6ab8c.js",
+        "1-573ff420674b3af6ab8c.js.map",
+        "component---src-pages-privacy-js-454c418de38567da1eac.js",
+        "component---src-pages-privacy-js-454c418de38567da1eac.js.map"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "component---src-pages-shop-js": {
+      "chunks": [0, 1, 9],
+      "assets": [
+        "0.8b1cc9920e75fff049f7.css",
+        "0-4d65d90e6cb208279c50.js",
+        "0-4d65d90e6cb208279c50.js.map",
+        "1.d63ab66a23fcbd4f1fb2.css",
+        "1-573ff420674b3af6ab8c.js",
+        "1-573ff420674b3af6ab8c.js.map",
+        "component---src-pages-shop-js-afebf39d52176cffb365.js",
+        "component---src-pages-shop-js-afebf39d52176cffb365.js.map"
       ],
       "children": {},
       "childAssets": {}
     },
     "pages-manifest": {
-      "chunks": [8],
+      "chunks": [10],
       "assets": [
-        "pages-manifest-d9ea43a864b66c14a8fb.js",
-        "pages-manifest-d9ea43a864b66c14a8fb.js.map"
+        "pages-manifest-3fbafff0de7d24c51ffe.js",
+        "pages-manifest-3fbafff0de7d24c51ffe.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -99,41 +126,55 @@
   },
   "assetsByChunkName": {
     "app": [
-      "webpack-runtime-51872ac961cb1a664e25.js",
-      "app-30b66918bd37c1463073.js"
+      "webpack-runtime-60adbe9bcd4b6c25200c.js",
+      "app-5f2e2b8b64628bf227ae.js"
     ],
     "component---node-modules-gatsby-plugin-offline-app-shell-js": [
       "component---node-modules-gatsby-plugin-offline-app-shell-js-caa6f560410bfe9ffa16.js"
     ],
     "component---src-pages-404-js": [
       "0.8b1cc9920e75fff049f7.css",
-      "0-d88672cb1833a6de3089.js",
+      "0-4d65d90e6cb208279c50.js",
       "1.d63ab66a23fcbd4f1fb2.css",
-      "1-fe3f166b91a56320bfc4.js",
-      "component---src-pages-404-js-a98fe96e26df6de7f54e.js"
+      "1-573ff420674b3af6ab8c.js",
+      "component---src-pages-404-js-df7d822cc246990c6a9b.js"
+    ],
+    "component---src-pages-contact-js": [
+      "0.8b1cc9920e75fff049f7.css",
+      "0-4d65d90e6cb208279c50.js",
+      "1.d63ab66a23fcbd4f1fb2.css",
+      "1-573ff420674b3af6ab8c.js",
+      "component---src-pages-contact-js-f457fa16788045ef5f0c.js"
     ],
     "component---src-pages-index-js": [
       "0.8b1cc9920e75fff049f7.css",
-      "0-d88672cb1833a6de3089.js",
-      "10-229f52f411ea1803ac34.js",
+      "0-4d65d90e6cb208279c50.js",
+      "12-8ceee34a56a483b63e25.js",
       "1.d63ab66a23fcbd4f1fb2.css",
-      "1-fe3f166b91a56320bfc4.js",
-      "component---src-pages-index-js-e50681bb4591712802f9.js"
+      "1-573ff420674b3af6ab8c.js",
+      "component---src-pages-index-js-43ba81a3482d792bbb5a.js"
     ],
     "component---src-pages-legal-js": [
       "0.8b1cc9920e75fff049f7.css",
-      "0-d88672cb1833a6de3089.js",
+      "0-4d65d90e6cb208279c50.js",
       "1.d63ab66a23fcbd4f1fb2.css",
-      "1-fe3f166b91a56320bfc4.js",
-      "component---src-pages-legal-js-a2d3ed2af7aea693cca1.js"
+      "1-573ff420674b3af6ab8c.js",
+      "component---src-pages-legal-js-ac5a1ca6026235ad7013.js"
     ],
     "component---src-pages-privacy-js": [
       "0.8b1cc9920e75fff049f7.css",
-      "0-d88672cb1833a6de3089.js",
+      "0-4d65d90e6cb208279c50.js",
       "1.d63ab66a23fcbd4f1fb2.css",
-      "1-fe3f166b91a56320bfc4.js",
-      "component---src-pages-privacy-js-c5897af1db5c04fed510.js"
+      "1-573ff420674b3af6ab8c.js",
+      "component---src-pages-privacy-js-454c418de38567da1eac.js"
     ],
-    "pages-manifest": ["pages-manifest-d9ea43a864b66c14a8fb.js"]
+    "component---src-pages-shop-js": [
+      "0.8b1cc9920e75fff049f7.css",
+      "0-4d65d90e6cb208279c50.js",
+      "1.d63ab66a23fcbd4f1fb2.css",
+      "1-573ff420674b3af6ab8c.js",
+      "component---src-pages-shop-js-afebf39d52176cffb365.js"
+    ],
+    "pages-manifest": ["pages-manifest-3fbafff0de7d24c51ffe.js"]
   }
 }
