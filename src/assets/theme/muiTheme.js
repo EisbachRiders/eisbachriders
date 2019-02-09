@@ -1,5 +1,5 @@
 import { createMuiTheme } from '@material-ui/core/styles'
-import './App.css'
+import './app.css'
 require('typeface-open-sans')
 require('typeface-contrail-one')
 
