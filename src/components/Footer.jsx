@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import { withNamespaces } from 'react-i18next'
+import { withTranslation } from 'react-i18next'
 import withRoot from '../withRoot'
 import { withStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
@@ -274,8 +274,8 @@ class Footer extends Component {
               notification === 'success'
                 ? 'Your email has been sent successfully'
                 : notification === 'warning'
-                  ? 'Please check the form has been filled out correctly'
-                  : 'An error has occured.'
+                ? 'Please check the form has been filled out correctly'
+                : 'An error has occured.'
             }
           />
         </Snackbar>
@@ -425,4 +425,4 @@ Footer.propTypes = {
   classes: PropTypes.object.isRequired,
 }
 
-export default withNamespaces()(withRoot(withStyles(styles)(Footer)))
+export default withTranslation()(withRoot(withStyles(styles)(Footer)))

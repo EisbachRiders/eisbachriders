@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { withNamespaces } from 'react-i18next'
+import { withTranslation } from 'react-i18next'
 import Img from 'gatsby-image'
 import classnames from 'classnames'
 import withRoot from '../withRoot'
@@ -105,4 +105,4 @@ Hero.propTypes = {
   classes: PropTypes.object.isRequired,
 }
 
-export default withNamespaces()(withRoot(withStyles(styles)(Hero)))
+export default withTranslation()(withRoot(withStyles(styles)(Hero)))

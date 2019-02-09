@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
-
 import classnames from 'classnames'
 import withRoot from '../withRoot'
-import { withNamespaces } from 'react-i18next'
+import { withTranslation } from 'react-i18next'
 import SwipeableViews from 'react-swipeable-views'
 import { withStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
@@ -296,4 +295,4 @@ Products.propTypes = {
   classes: PropTypes.object.isRequired,
 }
 
-export default withNamespaces()(withRoot(withStyles(styles)(Products)))
+export default withTranslation()(withRoot(withStyles(styles)(Products)))

@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
-import { withNamespaces } from 'react-i18next'
+import { withTranslation } from 'react-i18next'
 import SwipeableViews from 'react-swipeable-views'
 import { withStyles } from '@material-ui/core/styles'
 import withRoot from '../withRoot'
@@ -300,4 +300,4 @@ ProductDialog.propTypes = {
   classes: PropTypes.object.isRequired,
 }
 
-export default withNamespaces()(withRoot(withStyles(styles)(ProductDialog)))
+export default withTranslation()(withRoot(withStyles(styles)(ProductDialog)))

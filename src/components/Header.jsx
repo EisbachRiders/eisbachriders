@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import { withNamespaces } from 'react-i18next'
+import { withTranslation } from 'react-i18next'
 import withRoot from '../withRoot'
 import { withStyles } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
@@ -139,4 +139,4 @@ Header.propTypes = {
   classes: PropTypes.object.isRequired,
 }
 
-export default withNamespaces()(withRoot(withStyles(styles)(Header)))
+export default withTranslation()(withRoot(withStyles(styles)(Header)))

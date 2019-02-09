@@ -69,7 +69,7 @@ module.exports = {
         icon: `src/assets/logos/logoBlack.png`,
       },
     },
-    //`gatsby-plugin-offline`,
+    // `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
   ],
 }

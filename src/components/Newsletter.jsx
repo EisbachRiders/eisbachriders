@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
-import { withNamespaces } from 'react-i18next'
+import { withTranslation } from 'react-i18next'
 import withRoot from '../withRoot'
 import { withStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
@@ -369,4 +369,4 @@ Newsletter.propTypes = {
   classes: PropTypes.object.isRequired,
 }
 
-export default withNamespaces()(withRoot(withStyles(styles)(Newsletter)))
+export default withTranslation()(withRoot(withStyles(styles)(Newsletter)))
