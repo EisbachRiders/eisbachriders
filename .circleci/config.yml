@@ -45,10 +45,6 @@ jobs:
     steps:
       - attach_workspace:
           at: ./
-      - add_ssh_keys
-      - run:
-          name: known_hosts sadness
-          command: ssh-keyscan -H $SITE_SSH_HOST >> ~/.ssh/known_hosts
       - run:
           name: remove existing files
           command: ssh "$SITE_SSH_USER@$SITE_SSH_HOST" "rm -rf /eisbach-riders/$PROD_URL/*"
