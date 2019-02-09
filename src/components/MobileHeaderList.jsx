@@ -54,20 +54,22 @@ const MobileHeaderList = props => {
           </ListItem>
         </Link>
         {links.map((link, idx) => (
-          <ListItem
-            button
-            divider
-            dense
-            href={`#${linkLabels[idx]}`}
-            key={`menuItem_${link}`}
-          >
-            <ListItemText
-              disableTypography
-              className={classes.text}
-              primary={linkLabels[idx]}
-            />
-            <ArrowIcon className={classes.icon} />
-          </ListItem>
+          <Link to={link}>
+            <ListItem
+              button
+              divider
+              dense
+              href={`#${linkLabels[idx]}`}
+              key={`menuItem_${link}`}
+            >
+              <ListItemText
+                disableTypography
+                className={classes.text}
+                primary={linkLabels[idx]}
+              />
+              <ArrowIcon className={classes.icon} />
+            </ListItem>
+          </Link>
         ))}
         <Button
           aria-label="facebook"
@@ -103,7 +105,6 @@ const MobileHeaderList = props => {
               className={classes.text}
               primary={<InstagramIcon className={classes.iconSocial} />}
             />
-
             <ArrowIcon className={classes.icon} />
           </ListItem>
         </Button>

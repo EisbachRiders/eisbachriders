@@ -1,71 +1,45 @@
 import React, { Component } from 'react'
 import { graphql } from 'gatsby'
-import get from 'lodash/get'
-import Helmet from 'react-helmet'
-import i18n from '../i18n/i18n'
 
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
+import Feature from '../components/Feature'
+import NewProduct from '../components/NewProduct'
 import Products from '../components/Products'
-import Newsletter from '../components/Newsletter'
 import About from '../components/About'
 import Hero from '../components/Hero'
 
 class Index extends Component {
-  state = {
-    activePage: '/',
-    language: 'en',
-  }
-
-  handlePageChange = activePage => {
-    this.setState({
-      activePage,
-    })
-  }
-
-  handleLanguageChange = () => {
-    const lng = this.state.language === 'en' ? 'de' : 'en'
-    i18n.changeLanguage(lng)
-    this.setState({
-      language: lng,
-    })
-  }
-
   render() {
     const { data } = this.props
-    const { activePage, language } = this.state
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const siteDescription = get(
-      this,
-      'props.data.site.siteMetadata.description'
-    )
     const heroImg = data.allImageSharp.edges.find(x =>
       x.node.fluid.src.includes('backsplash')
     )
-    const logo = data.allImageSharp.edges.find(x =>
-      x.node.fluid.src.includes('logo')
+    const featureImg = data.allImageSharp.edges.find(x =>
+      x.node.fluid.src.includes('featuredProduct')
+    )
+    const newImg = data.allImageSharp.edges.find(x =>
+      x.node.fluid.src.includes('newProduct')
+    )
+    const detailImg = data.allImageSharp.edges.find(x =>
+      x.node.fluid.src.includes('newDetail')
+    )
+    const waveImg = data.allImageSharp.edges.find(x =>
+      x.node.fluid.src.includes('wave')
     )
     const aboutImg = data.allImageSharp.edges.find(x =>
-      x.node.fluid.src.includes('homepage1')
+      x.node.fluid.src.includes('about')
     )
 
     return (
-      <Layout
-        location={this.props.location}
-        handleLanguageChange={this.handleLanguageChange}
-        handlePageChange={this.handlePageChange}
-        activePage={activePage}
-        language={language}
-      >
-        <Helmet
-          htmlAttributes={{ lang: 'en' }}
-          meta={[{ name: 'description', content: siteDescription }]}
-          title={siteTitle}
-        />
-        <Hero img={heroImg} logo={logo} />
-        <Newsletter />
-        <About img={aboutImg} />
-        <Products />
-      </Layout>
+      <div id="body">
+        <Layout isHomepage>
+          <Hero img={heroImg} />
+          <Feature img={featureImg} />
+          <NewProduct img={newImg} detailImg={detailImg} />
+          <Products />
+          <About img={aboutImg} waveImg={waveImg} />
+        </Layout>
+      </div>
     )
   }
 }

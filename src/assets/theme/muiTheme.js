@@ -1,7 +1,6 @@
 import { createMuiTheme } from '@material-ui/core/styles'
 import './app.css'
 require('typeface-open-sans')
-require('typeface-contrail-one')
 
 const status = {
   white: '#ffffff',
@@ -16,10 +15,12 @@ const status = {
   green: '#00942b',
   yellow: '#fcf166',
   red: '#FF0012',
+  greyBlue: '#f3f8fc',
 }
 
 const theme = createMuiTheme({
   palette: {
+    type: 'light',
     primary: {
       light: status.ocean,
       main: status.ocean,

@@ -4,6 +4,8 @@ module.exports = {
     author: 'Alyssa Butler',
     description: 'Eisbach Riders - Surf Accessories',
     siteUrl: 'www.eisbach-riders.com',
+    url: 'https://www.eisbach-riders.com', // No trailing slash allowed!
+    image: 'src/assets/logos/icon-192.png',
   },
   pathPrefix: '/eisbach-riders',
   plugins: [
@@ -66,7 +68,7 @@ module.exports = {
         background_color: `#0b0c10`,
         theme_color: `#66fcf1`,
         display: `minimal-ui`,
-        icon: `src/assets/logos/logoBlack.png`,
+        icon: `src/assets/logos/icon-192.png`,
       },
     },
     `gatsby-plugin-offline`,

@@ -1,15 +1,16 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
+import i18n from '../i18n/i18n'
 import { withTranslation } from 'react-i18next'
 import withRoot from '../withRoot'
 import { withStyles } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Hidden from '@material-ui/core/Hidden'
-import IconButton from '@material-ui/core/IconButton'
 import Button from '@material-ui/core/Button'
-import logoWhite from '../assets/logos/logoWhite_small.png'
+import MobileHeaderList from '../components/MobileHeaderList'
+import ERIcon from '../assets/icons/ER'
 
 const styles = theme => ({
   grow: {
@@ -24,8 +25,8 @@ const styles = theme => ({
     backgroundColor: theme.palette.primary.main,
   },
   toolbar: {
-    paddingLeft: 0,
-    paddingRight: 0,
+    paddingLeft: 15,
+    paddingRight: 15,
     [theme.breakpoints.up('sm')]: {
       paddingLeft: 60,
       paddingRight: 60,
@@ -39,12 +40,13 @@ const styles = theme => ({
   },
   logo: {
     marginTop: 5,
-    width: 40,
+    fontSize: 48,
+    color: theme.status.black,
   },
   button: {
-    color: theme.palette.common.white,
+    color: theme.palette.common.black,
     fontSize: 18,
-    textShadow: '1px 1px 1px black',
+    fontWeight: 700,
     letterSpacing: 1.5,
     '&:hover': {
       color: theme.palette.secondary.main,
@@ -68,65 +70,53 @@ const styles = theme => ({
   },
 })
 class Header extends Component {
+  state = {
+    language: 'en',
+  }
+
+  handleLanguageChange = () => {
+    const lng = this.state.language === 'en' ? 'de' : 'en'
+    i18n.changeLanguage(lng)
+    this.setState({
+      language: lng,
+    })
+  }
+
   render() {
-    const {
-      language,
-      activePage,
-      handlePageChange,
-      handleLanguageChange,
-      classes,
-      t,
-    } = this.props
-    const links = ['/About/', '/Products/', 'contact']
-    const linkLabels = [
-      t('header.about'),
-      t('header.products'),
-      t('header.contact'),
-    ]
+    const { isHomepage, classes, t } = this.props
+    const { language } = this.state
+    const links = ['/shop/', 'contact']
+    const linkLabels = [t('header.shop'), t('header.contact')]
 
     return (
       <div className={classes.root}>
         <AppBar
           position="static"
-          className={
-            activePage === '/legal' || activePage === '/privacy'
-              ? classes.appbarDarkTheme
-              : classes.appbar
-          }
+          className={isHomepage ? classes.appbar : classes.appbarDarkTheme}
         >
           <Toolbar className={classes.toolbar}>
+            <Link to="/" className={classes.logoButton}>
+              <ERIcon className={classes.logo} />
+            </Link>
             <Hidden xsDown>
-              <Link to={`/`}>
-                <IconButton
-                  className={classes.logoButton}
-                  aria-label="home"
-                  onClick={() => handlePageChange('/')}
-                >
-                  <img alt="" src={logoWhite} className={classes.logo} />
-                </IconButton>
-              </Link>
               <div>
-                {activePage !== '/legal' &&
-                  (activePage !== '/privacy' && (
-                    <Fragment>
-                      {links.map((link, idx) => (
-                        <Button
-                          className={classes.button}
-                          key={`link_${link}`}
-                          href={`#${linkLabels[idx]}`}
-                        >
-                          {linkLabels[idx]}
-                        </Button>
-                      ))}
-                    </Fragment>
-                  ))}
+                {links.map((link, idx) => (
+                  <Link key={`link_${link}`} to={link}>
+                    <Button className={classes.button}>
+                      {linkLabels[idx]}
+                    </Button>
+                  </Link>
+                ))}
                 <Button
                   className={classes.button}
-                  onClick={handleLanguageChange}
+                  onClick={this.handleLanguageChange}
                 >
-                  {language}
+                  {language === 'en' ? 'de' : 'en'}
                 </Button>
               </div>
+            </Hidden>
+            <Hidden xsUp>
+              <MobileHeaderList />
             </Hidden>
           </Toolbar>
         </AppBar>
@@ -137,6 +127,7 @@ class Header extends Component {
 
 Header.propTypes = {
   classes: PropTypes.object.isRequired,
+  isHomepage: PropTypes.bool,
 }
 
 export default withTranslation()(withRoot(withStyles(styles)(Header)))

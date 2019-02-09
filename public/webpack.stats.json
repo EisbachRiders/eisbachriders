@@ -1,14 +1,17 @@
 {
-  "errors": [],
+  "errors": [
+    "./src/components/About.jsx\nModule not found: Error: Can't resolve '../assets/images/homepage1.jpg' in '/Users/alyssabutler/Documents/ab/website_EisbachRidersGatsby/src/components'",
+    "./src/components/Header.jsx\nModule not found: Error: Can't resolve '../assets/logos/logoWhite_small.png' in '/Users/alyssabutler/Documents/ab/website_EisbachRidersGatsby/src/components'"
+  ],
   "warnings": [],
   "namedChunkGroups": {
     "app": {
       "chunks": [9, 2],
       "assets": [
-        "webpack-runtime-a0707030d4a9a0026b41.js",
-        "webpack-runtime-a0707030d4a9a0026b41.js.map",
-        "app-8a20a81aedd539b9f871.js",
-        "app-8a20a81aedd539b9f871.js.map"
+        "webpack-runtime-51872ac961cb1a664e25.js",
+        "webpack-runtime-51872ac961cb1a664e25.js.map",
+        "app-30b66918bd37c1463073.js",
+        "app-30b66918bd37c1463073.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -23,10 +26,16 @@
       "childAssets": {}
     },
     "component---src-pages-404-js": {
-      "chunks": [4],
+      "chunks": [0, 1, 4],
       "assets": [
-        "component---src-pages-404-js-46af67f8554285a12726.js",
-        "component---src-pages-404-js-46af67f8554285a12726.js.map"
+        "0.8b1cc9920e75fff049f7.css",
+        "0-d88672cb1833a6de3089.js",
+        "0-d88672cb1833a6de3089.js.map",
+        "1.d63ab66a23fcbd4f1fb2.css",
+        "1-fe3f166b91a56320bfc4.js",
+        "1-fe3f166b91a56320bfc4.js.map",
+        "component---src-pages-404-js-a98fe96e26df6de7f54e.js",
+        "component---src-pages-404-js-a98fe96e26df6de7f54e.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -34,16 +43,16 @@
     "component---src-pages-index-js": {
       "chunks": [0, 10, 1, 5],
       "assets": [
-        "0.48b47acdf44d6d496da9.css",
-        "0-939e12f3810613c03681.js",
-        "0-939e12f3810613c03681.js.map",
-        "10-e851927f03f79d806e43.js",
-        "10-e851927f03f79d806e43.js.map",
+        "0.8b1cc9920e75fff049f7.css",
+        "0-d88672cb1833a6de3089.js",
+        "0-d88672cb1833a6de3089.js.map",
+        "10-229f52f411ea1803ac34.js",
+        "10-229f52f411ea1803ac34.js.map",
         "1.d63ab66a23fcbd4f1fb2.css",
-        "1-492292e8c0089ec02970.js",
-        "1-492292e8c0089ec02970.js.map",
-        "component---src-pages-index-js-b70a94e6d8606f01ef9b.js",
-        "component---src-pages-index-js-b70a94e6d8606f01ef9b.js.map"
+        "1-fe3f166b91a56320bfc4.js",
+        "1-fe3f166b91a56320bfc4.js.map",
+        "component---src-pages-index-js-e50681bb4591712802f9.js",
+        "component---src-pages-index-js-e50681bb4591712802f9.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -51,14 +60,14 @@
     "component---src-pages-legal-js": {
       "chunks": [0, 1, 6],
       "assets": [
-        "0.48b47acdf44d6d496da9.css",
-        "0-939e12f3810613c03681.js",
-        "0-939e12f3810613c03681.js.map",
+        "0.8b1cc9920e75fff049f7.css",
+        "0-d88672cb1833a6de3089.js",
+        "0-d88672cb1833a6de3089.js.map",
         "1.d63ab66a23fcbd4f1fb2.css",
-        "1-492292e8c0089ec02970.js",
-        "1-492292e8c0089ec02970.js.map",
-        "component---src-pages-legal-js-5f3d6a05e67a8b61c629.js",
-        "component---src-pages-legal-js-5f3d6a05e67a8b61c629.js.map"
+        "1-fe3f166b91a56320bfc4.js",
+        "1-fe3f166b91a56320bfc4.js.map",
+        "component---src-pages-legal-js-a2d3ed2af7aea693cca1.js",
+        "component---src-pages-legal-js-a2d3ed2af7aea693cca1.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -66,14 +75,14 @@
     "component---src-pages-privacy-js": {
       "chunks": [0, 1, 7],
       "assets": [
-        "0.48b47acdf44d6d496da9.css",
-        "0-939e12f3810613c03681.js",
-        "0-939e12f3810613c03681.js.map",
+        "0.8b1cc9920e75fff049f7.css",
+        "0-d88672cb1833a6de3089.js",
+        "0-d88672cb1833a6de3089.js.map",
         "1.d63ab66a23fcbd4f1fb2.css",
-        "1-492292e8c0089ec02970.js",
-        "1-492292e8c0089ec02970.js.map",
-        "component---src-pages-privacy-js-8a39f70aa42975da15aa.js",
-        "component---src-pages-privacy-js-8a39f70aa42975da15aa.js.map"
+        "1-fe3f166b91a56320bfc4.js",
+        "1-fe3f166b91a56320bfc4.js.map",
+        "component---src-pages-privacy-js-c5897af1db5c04fed510.js",
+        "component---src-pages-privacy-js-c5897af1db5c04fed510.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -81,8 +90,8 @@
     "pages-manifest": {
       "chunks": [8],
       "assets": [
-        "pages-manifest-5460443c9fe16cad5fbb.js",
-        "pages-manifest-5460443c9fe16cad5fbb.js.map"
+        "pages-manifest-d9ea43a864b66c14a8fb.js",
+        "pages-manifest-d9ea43a864b66c14a8fb.js.map"
       ],
       "children": {},
       "childAssets": {}
@@ -90,37 +99,41 @@
   },
   "assetsByChunkName": {
     "app": [
-      "webpack-runtime-a0707030d4a9a0026b41.js",
-      "app-8a20a81aedd539b9f871.js"
+      "webpack-runtime-51872ac961cb1a664e25.js",
+      "app-30b66918bd37c1463073.js"
     ],
     "component---node-modules-gatsby-plugin-offline-app-shell-js": [
       "component---node-modules-gatsby-plugin-offline-app-shell-js-caa6f560410bfe9ffa16.js"
     ],
     "component---src-pages-404-js": [
-      "component---src-pages-404-js-46af67f8554285a12726.js"
+      "0.8b1cc9920e75fff049f7.css",
+      "0-d88672cb1833a6de3089.js",
+      "1.d63ab66a23fcbd4f1fb2.css",
+      "1-fe3f166b91a56320bfc4.js",
+      "component---src-pages-404-js-a98fe96e26df6de7f54e.js"
     ],
     "component---src-pages-index-js": [
-      "0.48b47acdf44d6d496da9.css",
-      "0-939e12f3810613c03681.js",
-      "10-e851927f03f79d806e43.js",
+      "0.8b1cc9920e75fff049f7.css",
+      "0-d88672cb1833a6de3089.js",
+      "10-229f52f411ea1803ac34.js",
       "1.d63ab66a23fcbd4f1fb2.css",
-      "1-492292e8c0089ec02970.js",
-      "component---src-pages-index-js-b70a94e6d8606f01ef9b.js"
+      "1-fe3f166b91a56320bfc4.js",
+      "component---src-pages-index-js-e50681bb4591712802f9.js"
     ],
     "component---src-pages-legal-js": [
-      "0.48b47acdf44d6d496da9.css",
-      "0-939e12f3810613c03681.js",
+      "0.8b1cc9920e75fff049f7.css",
+      "0-d88672cb1833a6de3089.js",
       "1.d63ab66a23fcbd4f1fb2.css",
-      "1-492292e8c0089ec02970.js",
-      "component---src-pages-legal-js-5f3d6a05e67a8b61c629.js"
+      "1-fe3f166b91a56320bfc4.js",
+      "component---src-pages-legal-js-a2d3ed2af7aea693cca1.js"
     ],
     "component---src-pages-privacy-js": [
-      "0.48b47acdf44d6d496da9.css",
-      "0-939e12f3810613c03681.js",
+      "0.8b1cc9920e75fff049f7.css",
+      "0-d88672cb1833a6de3089.js",
       "1.d63ab66a23fcbd4f1fb2.css",
-      "1-492292e8c0089ec02970.js",
-      "component---src-pages-privacy-js-8a39f70aa42975da15aa.js"
+      "1-fe3f166b91a56320bfc4.js",
+      "component---src-pages-privacy-js-c5897af1db5c04fed510.js"
     ],
-    "pages-manifest": ["pages-manifest-5460443c9fe16cad5fbb.js"]
+    "pages-manifest": ["pages-manifest-d9ea43a864b66c14a8fb.js"]
   }
 }

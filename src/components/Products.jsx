@@ -28,8 +28,8 @@ const styles = theme => ({
       paddingRight: 60,
     },
     [theme.breakpoints.up('md')]: {
-      paddingTop: 45,
-      paddingBottom: 45,
+      paddingTop: 90,
+      paddingBottom: 90,
       paddingLeft: 170,
       paddingRight: 170,
     },
@@ -122,6 +122,19 @@ const styles = theme => ({
 class Products extends Component {
   state = {
     activeStep: 0,
+    isDialogOpen: [false, false, false],
+  }
+
+  handleDialogOpen = idx => {
+    let open = [false, false, false]
+    open[idx] = true
+    this.setState({
+      isDialogOpen: open,
+    })
+  }
+
+  handleDialogClose = () => {
+    this.setState({ isDialogOpen: [false, false, false] })
   }
 
   handleIndexChange = activeStep => {
@@ -144,7 +157,7 @@ class Products extends Component {
 
   render() {
     const { classes, t } = this.props
-    const { activeStep } = this.state
+    const { activeStep, isDialogOpen } = this.state
 
     return (
       <div className={classes.root} id="products">
@@ -159,6 +172,7 @@ class Products extends Component {
                   src={elem.images[0]}
                   className={classes.img}
                   alt={`product ${idx}`}
+                  onClick={() => this.handleDialogOpen(idx)}
                 />
                 <div className={classes.descriptionContainer}>
                   <Typography className={classes.name}>{elem.name}</Typography>
@@ -194,7 +208,15 @@ class Products extends Component {
                         )}
                       </div>
                     </div>
-                    <ProductDialog product={elem} />
+                    <ProductDialog
+                      product={elem}
+                      buttonText={t('products.features')}
+                      buttonFull
+                      idx={idx}
+                      handleDialogOpen={this.handleDialogOpen}
+                      handleDialogClose={this.handleDialogClose}
+                      isDialogOpen={isDialogOpen[idx]}
+                    />
                   </div>
                 </div>
               </div>
@@ -252,7 +274,15 @@ class Products extends Component {
                           )}
                         </div>
                       </div>
-                      <ProductDialog product={elem} />
+                      <ProductDialog
+                        product={elem}
+                        buttonText={t('products.features')}
+                        buttonFull
+                        idx={idx}
+                        handleDialogOpen={this.handleDialogOpen}
+                        handleDialogClose={this.handleDialogClose}
+                        isDialogOpen={isDialogOpen[idx]}
+                      />
                     </div>
                   </div>
                 </div>

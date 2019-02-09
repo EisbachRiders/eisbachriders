@@ -13,11 +13,11 @@ import { InstagramIcon, FacebookIcon } from '../assets/icons/icons'
 
 const styles = theme => ({
   root: {
-    backgroundColor: theme.status.grey,
+    backgroundColor: theme.status.black,
     width: '100%',
   },
   legal: {
-    backgroundColor: theme.palette.common.black,
+    backgroundColor: theme.status.black,
   },
   copyright: {
     fontSize: 12,
@@ -53,6 +53,7 @@ const styles = theme => ({
     },
   },
   text: {
+    color: theme.palette.common.white,
     fontSize: 12,
     lineHeight: 1.5,
     [theme.breakpoints.up('sm')]: {
@@ -63,6 +64,7 @@ const styles = theme => ({
     borderTop: `1px solid ${theme.status.greyDk}`,
   },
   textHeading: {
+    color: theme.palette.common.white,
     letterSpacing: 3,
     fontSize: 12,
     textTransform: 'uppercase',
@@ -80,6 +82,7 @@ const styles = theme => ({
   },
   input: {
     fontSize: 12,
+    color: theme.palette.common.white,
     border: '1px solid',
   },
   inputError: {
@@ -87,7 +90,7 @@ const styles = theme => ({
     border: `1px solid ${theme.palette.error.main}`,
   },
   button: {
-    borderColor: theme.status.black,
+    borderColor: theme.status.white,
     borderRadius: 0,
     minWidth: 0,
     padding: 8,
@@ -99,7 +102,7 @@ const styles = theme => ({
   icon: {
     width: 18,
     height: 18,
-    fill: theme.status.black,
+    fill: theme.palette.common.white,
   },
   iconContainer: {
     display: 'flex',
@@ -122,10 +125,18 @@ const styles = theme => ({
     color: theme.palette.common.white,
     border: 'none',
     background: 'transparent',
+    textDecoration: 'none',
     cursor: 'pointer',
+    paddingLeft: 5,
+    paddingRight: 5,
   },
   textArea: {
     paddingLeft: 20,
+  },
+  inputLabel: {
+    fontSize: 12,
+    paddingLeft: 20,
+    color: theme.palette.common.white,
   },
 })
 
@@ -245,7 +256,7 @@ class Footer extends Component {
     }
   }
   render() {
-    const { handlePageChange, classes, t } = this.props
+    const { classes, t } = this.props
     const {
       emailAddress,
       name,
@@ -365,9 +376,9 @@ class Footer extends Component {
             <div className={classes.iconContainer}>
               <Button
                 variant="outlined"
-                aria-label="linkedin"
+                aria-label="facebook"
                 className={classes.button}
-                href="https://www.facebook.com/EisbachRiders/"
+                href="hhttps://www.facebook.com/EisbachRiders-262685337908914/"
                 target="_blank"
                 rel="noopener"
                 disableFocusRipple
@@ -398,21 +409,11 @@ class Footer extends Component {
           >
             &copy; Eisbach Riders |{' '}
             <Link to="/legal/" className={classes.link}>
-              <button
-                className={classes.link}
-                onClick={() => handlePageChange('/legal')}
-              >
-                {t('footer.imprint')}
-              </button>
+              {t('footer.imprint')}
             </Link>
             |{' '}
             <Link to="/privacy/" className={classes.link}>
-              <button
-                className={classes.link}
-                onClick={() => handlePageChange('/privacy')}
-              >
-                {t('footer.privacy')}
-              </button>
+              {t('footer.privacy')}
             </Link>
           </Typography>
         </div>

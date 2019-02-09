@@ -1,7 +1,9 @@
 import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
+import i18n from '../i18n/i18n'
 import { withTranslation } from 'react-i18next'
 import SwipeableViews from 'react-swipeable-views'
+import classnames from 'classnames'
 import { withStyles } from '@material-ui/core/styles'
 import withRoot from '../withRoot'
 import Typography from '@material-ui/core/Typography'
@@ -22,10 +24,16 @@ import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight'
 import { AmazonIcon, EbayIcon } from '../assets/icons/icons'
 
 const styles = theme => ({
-  more: {
+  buttonFull: {
     width: '100%',
     [theme.breakpoints.up('md')]: {
       width: '50%',
+    },
+  },
+  button: {
+    color: theme.palette.common.black,
+    [theme.breakpoints.up('sm')]: {
+      marginTop: 30,
     },
   },
   paper: {
@@ -93,6 +101,10 @@ const styles = theme => ({
   icon: {
     fontSize: 18,
   },
+  iconButton: {
+    color: theme.status.black,
+    fontSize: 36,
+  },
   priceContainer: {
     display: 'flex',
     justifyContent: 'space-between',
@@ -133,18 +145,7 @@ const styles = theme => ({
 
 class ProductDialog extends Component {
   state = {
-    isDialogOpen: false,
     activeStep: 0,
-  }
-
-  handleDialogOpen = idx => {
-    this.setState({
-      isDialogOpen: true,
-    })
-  }
-
-  handleDialogClose = () => {
-    this.setState({ isDialogOpen: false })
   }
 
   handleIndexChange = activeStep => {
@@ -164,22 +165,37 @@ class ProductDialog extends Component {
       activeStep: prevState.activeStep - 1,
     }))
   }
+
   render() {
-    const { product, classes, t } = this.props
-    const { isDialogOpen, activeStep } = this.state
+    const {
+      handleDialogOpen,
+      handleDialogClose,
+      isDialogOpen,
+      idx,
+      product,
+      buttonText,
+      buttonFull,
+      classes,
+      t,
+    } = this.props
+    const { activeStep } = this.state
+    const lng = i18n.language
 
     return (
       <Fragment>
         <Button
+          color="secondary"
           variant="outlined"
-          className={classes.more}
-          onClick={this.handleDialogOpen}
+          className={classnames(classes.button, {
+            [classes.buttonFull]: buttonFull,
+          })}
+          onClick={() => handleDialogOpen(idx)}
         >
-          {t('products.more')}
+          {buttonText}
         </Button>
         <Dialog
           open={isDialogOpen}
-          onClose={this.handleDialogClose}
+          onClose={handleDialogClose}
           maxWidth="md"
           classes={{ paper: classes.paper }}
         >
@@ -188,7 +204,7 @@ class ProductDialog extends Component {
             <IconButton
               aria-label={t('common.close')}
               color="inherit"
-              onClick={this.handleDialogClose}
+              onClick={handleDialogClose}
               className={classes.closeButton}
             >
               <CloseIcon />
@@ -246,30 +262,28 @@ class ProductDialog extends Component {
                   <div className={classes.iconContainer}>
                     {product.amazon && (
                       <IconButton
-                        className={classes.button}
                         aria-label="Amazon"
                         href={product.amazon}
                         target="_blank"
                         rel="noopener"
                       >
-                        <AmazonIcon className={classes.icon} />
+                        <AmazonIcon className={classes.iconButton} />
                       </IconButton>
                     )}
                     {product.ebay && (
                       <IconButton
-                        className={classes.button}
                         aria-label="Ebay"
                         href={product.ebay}
                         target="_blank"
                         rel="noopener"
                       >
-                        <EbayIcon className={classes.icon} />
+                        <EbayIcon className={classes.iconButton} />
                       </IconButton>
                     )}
                   </div>
                 </div>
                 <List disablePadding className={classes.scroll}>
-                  {product.more.map((item, idx) => (
+                  {product.more[lng].map((item, idx) => (
                     <ListItem
                       key={`listItem${idx}`}
                       className={classes.listItem}
@@ -298,6 +312,13 @@ class ProductDialog extends Component {
 
 ProductDialog.propTypes = {
   classes: PropTypes.object.isRequired,
+  handleDialogOpen: PropTypes.func.isRequired,
+  handleDialogClose: PropTypes.func.isRequired,
+  isDialogOpen: PropTypes.bool.isRequired,
+  idx: PropTypes.number,
+  product: PropTypes.object.isRequired,
+  buttonText: PropTypes.string.isRequired,
+  buttonFull: PropTypes.bool,
 }
 
 export default withTranslation()(withRoot(withStyles(styles)(ProductDialog)))

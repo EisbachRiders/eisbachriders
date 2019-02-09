@@ -1,29 +1,15 @@
 import React, { Component } from 'react'
-import get from 'lodash/get'
-import Helmet from 'react-helmet'
+import Layout from '../components/Layout'
+import Privacy from '../components/Privacy'
 
-import Layout from '../components/layout'
-import Legal from '../components/Legal'
-
-class Imprint extends Component {
+class PrivacyPage extends Component {
   render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const siteDescription = get(
-      this,
-      'props.data.site.siteMetadata.description'
-    )
-
     return (
-      <Layout location={this.props.location} imprint>
-        <Helmet
-          htmlAttributes={{ lang: 'en' }}
-          meta={[{ name: 'description', content: siteDescription }]}
-          title={siteTitle}
-        />
-        <Legal />
+      <Layout>
+        <Privacy />
       </Layout>
     )
   }
 }
 
-export default Imprint
+export default PrivacyPage
