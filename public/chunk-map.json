@@ -1,25 +1,25 @@
 {
-  "app": ["/app-5f2e2b8b64628bf227ae.js"],
+  "app": ["/app-6b12ae1d4e4d8ca52bb1.js"],
   "component---node-modules-gatsby-plugin-offline-app-shell-js": [
-    "/component---node-modules-gatsby-plugin-offline-app-shell-js-caa6f560410bfe9ffa16.js"
+    "/component---node-modules-gatsby-plugin-offline-app-shell-js-df82c28080ef4d57958e.js"
   ],
   "component---src-pages-404-js": [
-    "/component---src-pages-404-js-df7d822cc246990c6a9b.js"
+    "/component---src-pages-404-js-8a41511ff8c0c428b93b.js"
   ],
   "component---src-pages-contact-js": [
-    "/component---src-pages-contact-js-f457fa16788045ef5f0c.js"
+    "/component---src-pages-contact-js-bbc0294b2b1715ead9c6.js"
   ],
   "component---src-pages-index-js": [
-    "/component---src-pages-index-js-43ba81a3482d792bbb5a.js"
+    "/component---src-pages-index-js-c5de81d07964c9631f76.js"
   ],
   "component---src-pages-legal-js": [
-    "/component---src-pages-legal-js-ac5a1ca6026235ad7013.js"
+    "/component---src-pages-legal-js-2ff69b87bc122ea727ac.js"
   ],
   "component---src-pages-privacy-js": [
-    "/component---src-pages-privacy-js-454c418de38567da1eac.js"
+    "/component---src-pages-privacy-js-fe554b9ad81bb579a2d3.js"
   ],
   "component---src-pages-shop-js": [
-    "/component---src-pages-shop-js-afebf39d52176cffb365.js"
+    "/component---src-pages-shop-js-1fc9ea3b516ac8758c8a.js"
   ],
-  "pages-manifest": ["/pages-manifest-3fbafff0de7d24c51ffe.js"]
+  "pages-manifest": ["/pages-manifest-4fe8d670dd555ab4f098.js"]
 }

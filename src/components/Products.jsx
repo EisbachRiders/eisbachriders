@@ -14,7 +14,7 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft'
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight'
 import { AmazonIcon, EbayIcon } from '../assets/icons/icons'
 import ProductDialog from './ProductDialog'
-import { products } from '../data/ProductData'
+import { productsFins } from '../data/ProductData'
 
 const styles = theme => ({
   root: {
@@ -166,7 +166,7 @@ class Products extends Component {
         </Typography>
         <div className={classes.container}>
           <Hidden xsDown>
-            {products.map((elem, idx) => (
+            {productsFins.map((elem, idx) => (
               <div className={classes.itemContainer} key={`product${idx}`}>
                 <img
                   src={elem.images[0]}
@@ -228,7 +228,7 @@ class Products extends Component {
               index={activeStep}
               onChangeIndex={this.handleIndexChange}
             >
-              {products.map((elem, idx) => (
+              {productsFins.map((elem, idx) => (
                 <div className={classes.itemContainer} key={`product${idx}`}>
                   <img
                     src={elem.images[0]}

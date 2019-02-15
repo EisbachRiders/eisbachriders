@@ -22,6 +22,11 @@
   "hero": {
     "subtitle": "Surf Equipment from Munich"
   },
+  "shop": {
+    "fins": "fins",
+    "leashes": "leashes",
+    "other": "other"
+  },
   "feature": {
     "featuredProduct": "featured product",
     "surfConditions": "response",

@@ -22,6 +22,11 @@
   "hero": {
     "subtitle": "Surf Equipment und Zubehör aus München"
   },
+  "shop": {
+    "fins": "fins",
+    "leashes": "leashes",
+    "other": "other"
+  },
   "feature": {
     "featuredProduct": "vorgestelltes Produkt",
     "surfConditions": "Surfbedingungen",

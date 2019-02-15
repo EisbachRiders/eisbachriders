@@ -28,7 +28,8 @@ import product5 from '../assets/images/Feature/main.png'
 import product5_img1 from '../assets/images/Feature/img1.jpg'
 import product5_img2 from '../assets/images/Feature/img2.jpg'
 import product5_img3 from '../assets/images/Feature/img3.jpg'
-export const products = [
+
+export const productsFins = [
   {
     name: 'FCS Double Tab Thruster Fin Set with Fin Key',
     images: [
@@ -199,6 +200,80 @@ export const featureProduct = [
         "Dicke: 0.66 cm (0.26'')",
         'Winkel: 35.5 Grad',
         'Lieferumfang: 3er Set Surfboard Finnen mit Fin Key',
+      ],
+    },
+  },
+]
+
+export const productsOther = [
+  {
+    name: 'Bee Swell Wax',
+    images: [
+      product4,
+      product4_img1,
+      product4_img2,
+      product4_img3,
+      product4_img4,
+      product4_img5,
+    ],
+    price: '6.95',
+    ebay:
+      'https://rover.ebay.com/rover/1/707-53477-19255-0/1?icep_id=114&ipn=icep&toolid=20004&campid=5338456795&mpre=https%3A%2F%2Fwww.ebay.de%2Fitm%2F183636677740',
+    more: {
+      en: [
+        'Help bees! - Part of the profits will be active in the rescue of honey bees',
+        'Size of bar is 2.25” x 2.25” x 0.875”',
+        'Grip-Bee is the extra grippy cold water wax (58°F / 14°C and below). This wax is perfect for cold-water river and wake surfing.',
+        'Hana Hou is the tropical wax (70°F / 21°C and warmer). This wax can also be used as a base coat in cooler temp water.',
+        'Not only is it gentle on the environment but also on your skin and it smells damn good',
+        'Handcrafted at Bee Swell in the USA',
+        'All our products come in a sustainable and environmentally friendly packaging.',
+      ],
+      de: [
+        'Helfe mit! - Ein Teil des Umsatzes wird aktiv zur Rettung von Honigbienen',
+        'Größe: 5.7 x 5.7 x 2.2 cm',
+        'Grip-Bee ist das extra griffige Wachs für kaltes Wasser (58°F / 14°C und kälter). es ist ideal für kühle Europäische Herbsttage oder für das Flussurfen, z.B. auf dem Münchner Eisbach.',
+        'Hana Hou ist ideal für tropische Temperaturen (70°F / 21°C und wärmer) oder auch als Grundiereung für kühler Temperaturen.',
+        'Ist nicht nur schonend zur Umwelt und sondern auch zu deiner Haut und duftet verdammt gut',
+        'Handgefertig bei Bee Swell in den USA',
+        'Surfwachs aus 100% ökologischer Herstellung',
+      ],
+    },
+  },
+]
+
+export const productsLeashes = [
+  {
+    name: 'Bee Swell Wax',
+    images: [
+      product4,
+      product4_img1,
+      product4_img2,
+      product4_img3,
+      product4_img4,
+      product4_img5,
+    ],
+    price: '6.95',
+    ebay:
+      'https://rover.ebay.com/rover/1/707-53477-19255-0/1?icep_id=114&ipn=icep&toolid=20004&campid=5338456795&mpre=https%3A%2F%2Fwww.ebay.de%2Fitm%2F183636677740',
+    more: {
+      en: [
+        'Help bees! - Part of the profits will be active in the rescue of honey bees',
+        'Size of bar is 2.25” x 2.25” x 0.875”',
+        'Grip-Bee is the extra grippy cold water wax (58°F / 14°C and below). This wax is perfect for cold-water river and wake surfing.',
+        'Hana Hou is the tropical wax (70°F / 21°C and warmer). This wax can also be used as a base coat in cooler temp water.',
+        'Not only is it gentle on the environment but also on your skin and it smells damn good',
+        'Handcrafted at Bee Swell in the USA',
+        'All our products come in a sustainable and environmentally friendly packaging.',
+      ],
+      de: [
+        'Helfe mit! - Ein Teil des Umsatzes wird aktiv zur Rettung von Honigbienen',
+        'Größe: 5.7 x 5.7 x 2.2 cm',
+        'Grip-Bee ist das extra griffige Wachs für kaltes Wasser (58°F / 14°C und kälter). es ist ideal für kühle Europäische Herbsttage oder für das Flussurfen, z.B. auf dem Münchner Eisbach.',
+        'Hana Hou ist ideal für tropische Temperaturen (70°F / 21°C und wärmer) oder auch als Grundiereung für kühler Temperaturen.',
+        'Ist nicht nur schonend zur Umwelt und sondern auch zu deiner Haut und duftet verdammt gut',
+        'Handgefertig bei Bee Swell in den USA',
+        'Surfwachs aus 100% ökologischer Herstellung',
       ],
     },
   },

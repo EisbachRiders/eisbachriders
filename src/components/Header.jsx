@@ -22,7 +22,7 @@ const styles = theme => ({
   },
   appbarDarkTheme: {
     boxShadow: 'none',
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: theme.status.greyBlue,
   },
   toolbar: {
     paddingLeft: 15,
