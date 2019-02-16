@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 import { withTranslation } from 'react-i18next'
@@ -68,53 +68,36 @@ const styles = theme => ({
   },
 })
 
-class NewProduct extends Component {
-  state = {
-    isDialogOpen: false,
-  }
+function NewProduct({ img, detailImg, classes, t }) {
+  const [isDialogOpen, setDialog] = useState(false)
 
-  handleDialogOpen = () => {
-    this.setState({
-      isDialogOpen: true,
-    })
-  }
-
-  handleDialogClose = () => {
-    this.setState({ isDialogOpen: false })
-  }
-
-  render() {
-    const { img, detailImg, classes, t } = this.props
-    const { isDialogOpen } = this.state
-
-    return (
-      <div className={classes.root} id="products">
-        <Hidden xsDown>
-          <Img
-            fluid={img.node.fluid}
-            alt={t('newProduct.imgAlt')}
-            className={classes.img}
-          />
-        </Hidden>
-        <Paper className={classes.paper} elevation={10}>
-          <Img
-            fluid={detailImg.node.fluid}
-            alt={t('newProduct.logo')}
-            className={classes.logo}
-          />
-          <Typography className={classes.title}>Bee Swell Surf Wax</Typography>
-          <Typography>{t('newProduct.text')}</Typography>
-          <ProductDialog
-            product={newProduct[0]}
-            buttonText={t('newProduct.more')}
-            handleDialogOpen={this.handleDialogOpen}
-            handleDialogClose={this.handleDialogClose}
-            isDialogOpen={isDialogOpen}
-          />
-        </Paper>
-      </div>
-    )
-  }
+  return (
+    <div className={classes.root} id="products">
+      <Hidden xsDown>
+        <Img
+          fluid={img.node.fluid}
+          alt={t('newProduct.imgAlt')}
+          className={classes.img}
+        />
+      </Hidden>
+      <Paper className={classes.paper} elevation={10}>
+        <Img
+          fluid={detailImg.node.fluid}
+          alt={t('newProduct.logo')}
+          className={classes.logo}
+        />
+        <Typography className={classes.title}>Bee Swell Surf Wax</Typography>
+        <Typography>{t('newProduct.text')}</Typography>
+        <ProductDialog
+          product={newProduct[0]}
+          buttonText={t('newProduct.more')}
+          handleDialogOpen={() => setDialog(true)}
+          handleDialogClose={() => setDialog(false)}
+          isDialogOpen={isDialogOpen}
+        />
+      </Paper>
+    </div>
+  )
 }
 
 NewProduct.propTypes = {

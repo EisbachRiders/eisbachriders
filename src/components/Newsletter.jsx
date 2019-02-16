@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 import { withTranslation } from 'react-i18next'
@@ -16,6 +16,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel'
 import Checkbox from '@material-ui/core/Checkbox'
 import IconButton from '@material-ui/core/IconButton'
 import CloseIcon from '@material-ui/icons/Close'
+import { set } from 'idb-keyval'
 
 const styles = theme => ({
   containerNewsletter: {
@@ -102,267 +103,207 @@ const styles = theme => ({
   },
 })
 
-class Newsletter extends Component {
-  state = {
-    email: '',
-    name: '',
-    isEmailValid: null,
-    isNameValid: null,
-    isCheckboxOpen: false,
-    isDialogOpen: false,
-    isSnackbarOpen: false,
-    snackbarMessage: null,
-    error: false,
-  }
+function Newsletter({ classes, t }) {
+  const [email, setEmail] = useState('')
+  const [name, setName] = useState('')
+  const [isEmailValid, setEmailValid] = useState(null)
+  const [isNameValid, setNameValid] = useState(null)
+  const [isCheckboxOpen, setCheckbox] = useState(false)
+  const [isDialogOpen, setDialog] = useState(false)
+  const [isSnackbarOpen, setSnackbar] = useState(false)
+  const [snackbarMessage, setSnackbarMessage] = useState(false)
+  const [error, setError] = useState(false)
 
-  handleSubmit = async e => {
-    if (
-      this.state.isCheckboxOpen &&
-      this.state.isEmailValid &&
-      this.state.isNameValid
-    ) {
-      const result = await addToMailchimp(this.state.email, {
-        FNAME: this.state.name,
+  const handleSubmit = async e => {
+    if (isCheckboxOpen && isEmailValid && isNameValid) {
+      const result = await addToMailchimp(email, {
+        FNAME: name,
         gdpr_26529: true,
       })
-      this.handleDialogClose()
+      handleDialogClose
       if (result.result === 'error') {
-        this.setState({
-          isSnackbarOpen: true,
-          snackbarMessage: result.msg.includes('<a')
-            ? result.msg.split('<a')[0]
-            : result.msg,
-        })
+        setSnackbar(true)
+        setSnackbarMessage(
+          result.msg.includes('<a') ? result.msg.split('<a')[0] : result.msg
+        )
       } else {
-        this.setState({
-          isSnackbarOpen: true,
-          error: false,
-          isEmailValid: true,
-          isNameValid: true,
-          snackbarMessage: 'success',
-        })
+        setSnackbar(true)
+        setError(false)
+        setEmailValid(true)
+        setNameValid(true)
+        setSnackbarMessage('success')
       }
     }
-    if (!this.state.isCheckboxOpen) {
-      this.setState({
-        error: true,
-      })
+    if (!isCheckboxOpen) {
+      setError(true)
     }
-    if (!pattern.test(this.state.email)) {
-      this.setState({
-        isEmailValid: false,
-      })
+    if (!pattern.test(email)) {
+      setEmailValid(false)
     }
-    if (this.state.name.length <= 500) {
-      this.setState({
-        isNameValid: false,
-      })
+    if (name.length <= 500) {
+      setNameValid(false)
     }
   }
 
-  handleSnackbarClose = (event, reason) => {
+  const handleSnackbarClose = (event, reason) => {
     if (reason === 'clickaway') {
       return
     }
-
-    this.setState({ isSnackbarOpen: false })
+    setSnackbar(false)
   }
 
-  handleDialogOpen = () => {
-    this.setState({
-      isDialogOpen: true,
-    })
-  }
-
-  handleDialogClose = () => {
-    this.setState({ isDialogOpen: false })
-  }
-
-  handleChange = name => event => {
+  const handleChange = name => event => {
     if (name === 'email') {
+      setEmail(event.target.value)
       if (!pattern.test(event.target.value)) {
-        this.setState({
-          isEmailValid: false,
-          email: event.target.value,
-        })
+        setEmailValid(false)
       } else {
-        this.setState({
-          isEmailValid: true,
-          email: event.target.value,
-        })
+        setEmailValid(true)
       }
     }
     if (name === 'name') {
       if (event.target.value.length > 500) {
-        this.setState({
-          isNameValid: false,
-        })
+        setNameValid(false)
       } else {
-        this.setState({
-          isNameValid: true,
-          name: event.target.value,
-        })
+        setNameValid(true)
+        setName(event.target.value)
       }
     }
   }
 
-  handleCheckbox = event => {
-    this.setState({
-      isCheckboxOpen: event.target.checked,
-    })
-  }
-
-  render() {
-    const { classes, t } = this.props
-    const {
-      email,
-      name,
-      isDialogOpen,
-      isSnackbarOpen,
-      isCheckboxOpen,
-      error,
-      isEmailValid,
-      isNameValid,
-      snackbarMessage,
-    } = this.state
-    return (
-      <div className={classes.containerNewsletter}>
-        <Snackbar
-          anchorOrigin={{
-            vertical: 'bottom',
-            horizontal: 'left',
-          }}
-          open={isSnackbarOpen}
-          autoHideDuration={5000}
-          onClose={this.handleSnackbarClose}
-          ContentProps={{
-            'aria-describedby': 'message-id',
-            className:
-              snackbarMessage === 'success'
-                ? classes.snackbarSuccess
-                : classes.snackbarError,
-          }}
-          message={
-            snackbarMessage === 'success' ? (
-              <span id="message-id">{t('newsletter.success')}</span>
-            ) : (
-              <span id="message-id">{snackbarMessage}</span>
-            )
-          }
-          action={
-            <IconButton
-              key="closeNewsletter"
-              aria-label={t('common.close')}
-              color="inherit"
-              onClick={this.handleSnackbarClose}
-            >
-              <CloseIcon />
-            </IconButton>
-          }
-        />
-        <Typography className={classes.textNewsletter} variant="h5">
-          {t('newsletter.sectionTitle')}
-        </Typography>
-        <Typography className={classes.subtitleNewsletter}>
-          {t('newsletter.message')}
-        </Typography>
-        <Button
-          variant="contained"
-          color="primary"
-          className={classes.button}
-          onClick={this.handleDialogOpen}
-        >
-          {t('newsletter.signUp')}
-        </Button>
-        <Dialog open={isDialogOpen} onClose={this.handleDialogClose}>
-          <DialogTitle id="dialog-title">
-            {t('newsletter.newsletter')}
-            <IconButton
-              aria-label={t('common.close')}
-              className={classes.close}
-              color="inherit"
-              onClick={this.handleDialogClose}
-            >
-              <CloseIcon />
-            </IconButton>
-          </DialogTitle>
-          <DialogContent className={classes.dialogContent}>
-            <form className={classes.form}>
-              <TextField
-                required
-                id="email"
-                type="text"
-                label="Email"
-                error={isEmailValid === null ? null : !isEmailValid}
-                placeholder={t('common.email')}
-                value={email}
-                onChange={this.handleChange('email')}
-                className={classes.textField}
-                margin="normal"
-                variant="outlined"
-              />
-              <TextField
-                required
-                id="name"
-                type="text"
-                label="Name"
-                error={isNameValid === null ? null : !isNameValid}
-                placeholder={t('common.name')}
-                value={name}
-                onChange={this.handleChange('name')}
-                className={classes.textField}
-                margin="normal"
-                variant="outlined"
-              />
-            </form>
-            <div className={classes.legalContainer}>
-              <FormControlLabel
-                classes={{
-                  label: error && !isCheckboxOpen ? classes.error : null,
-                }}
-                control={
-                  <Checkbox
-                    checked={isCheckboxOpen}
-                    onChange={this.handleCheckbox}
-                    className={error ? classes.error : null}
-                    value="consent"
-                    color="primary"
-                  />
-                }
-                label="Yes, I would like to recieve emails from Eisbach Riders."
-              />
-            </div>
-            <Typography className={classes.legal}>
-              {t('newsletter.legal1')}
-              <a href="https://mailchimp.com/legal/">
-                {t('newsletter.legal2')}
-              </a>
-            </Typography>
-          </DialogContent>
-          <DialogActions className={classes.dialogActions}>
-            <Button
-              onClick={this.handleDialogClose}
-              color="primary"
-              className={classes.actionButton}
-            >
-              {t('common.cancel')}
-            </Button>
-            <Button
-              onClick={() => {
-                this.handleSubmit()
+  return (
+    <div className={classes.containerNewsletter}>
+      <Snackbar
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'left',
+        }}
+        open={isSnackbarOpen}
+        autoHideDuration={5000}
+        onClose={handleSnackbarClose}
+        ContentProps={{
+          'aria-describedby': 'message-id',
+          className:
+            snackbarMessage === 'success'
+              ? classes.snackbarSuccess
+              : classes.snackbarError,
+        }}
+        message={
+          snackbarMessage === 'success' ? (
+            <span id="message-id">{t('newsletter.success')}</span>
+          ) : (
+            <span id="message-id">{snackbarMessage}</span>
+          )
+        }
+        action={
+          <IconButton
+            key="closeNewsletter"
+            aria-label={t('common.close')}
+            color="inherit"
+            onClick={handleSnackbarClose}
+          >
+            <CloseIcon />
+          </IconButton>
+        }
+      />
+      <Typography className={classes.textNewsletter} variant="h5">
+        {t('newsletter.sectionTitle')}
+      </Typography>
+      <Typography className={classes.subtitleNewsletter}>
+        {t('newsletter.message')}
+      </Typography>
+      <Button
+        variant="contained"
+        color="primary"
+        className={classes.button}
+        onClick={() => setDialog(true)}
+      >
+        {t('newsletter.signUp')}
+      </Button>
+      <Dialog open={isDialogOpen} onClose={() => setDialog(false)}>
+        <DialogTitle id="dialog-title">
+          {t('newsletter.newsletter')}
+          <IconButton
+            aria-label={t('common.close')}
+            className={classes.close}
+            color="inherit"
+            onClick={() => setDialog(false)}
+          >
+            <CloseIcon />
+          </IconButton>
+        </DialogTitle>
+        <DialogContent className={classes.dialogContent}>
+          <form className={classes.form}>
+            <TextField
+              required
+              id="email"
+              type="text"
+              label="Email"
+              error={isEmailValid === null ? null : !isEmailValid}
+              placeholder={t('common.email')}
+              value={email}
+              onChange={() => handleChange('email')}
+              className={classes.textField}
+              margin="normal"
+              variant="outlined"
+            />
+            <TextField
+              required
+              id="name"
+              type="text"
+              label="Name"
+              error={isNameValid === null ? null : !isNameValid}
+              placeholder={t('common.name')}
+              value={name}
+              onChange={() => handleChange('name')}
+              className={classes.textField}
+              margin="normal"
+              variant="outlined"
+            />
+          </form>
+          <div className={classes.legalContainer}>
+            <FormControlLabel
+              classes={{
+                label: error && !isCheckboxOpen ? classes.error : null,
               }}
-              className={classes.actionButton}
-              color="primary"
-              autoFocus
-              type="submit"
-            >
-              {t('newsletter.subscribe')}
-            </Button>
-          </DialogActions>
-        </Dialog>
-      </div>
-    )
-  }
+              control={
+                <Checkbox
+                  checked={isCheckboxOpen}
+                  onChange={e => setCheckbox(e)}
+                  className={error ? classes.error : null}
+                  value="consent"
+                  color="primary"
+                />
+              }
+              label="Yes, I would like to recieve emails from Eisbach Riders."
+            />
+          </div>
+          <Typography className={classes.legal}>
+            {t('newsletter.legal1')}
+            <a href="https://mailchimp.com/legal/">{t('newsletter.legal2')}</a>
+          </Typography>
+        </DialogContent>
+        <DialogActions className={classes.dialogActions}>
+          <Button
+            onClick={() => setDialog(false)}
+            color="primary"
+            className={classes.actionButton}
+          >
+            {t('common.cancel')}
+          </Button>
+          <Button
+            onClick={() => handleSubmit}
+            className={classes.actionButton}
+            color="primary"
+            autoFocus
+            type="submit"
+          >
+            {t('newsletter.subscribe')}
+          </Button>
+        </DialogActions>
+      </Dialog>
+    </div>
+  )
 }
 
 Newsletter.propTypes = {

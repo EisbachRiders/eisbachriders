@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import i18n from '../i18n/i18n'
@@ -69,60 +69,49 @@ const styles = theme => ({
     backgroundColor: theme.palette.primary.main,
   },
 })
-class Header extends Component {
-  state = {
-    language: 'en',
-  }
 
-  handleLanguageChange = () => {
+function Header({ isHomepage, classes, t }) {
+  const [language, setLanguage] = useState('en')
+
+  const handleLanguageChange = () => {
     const lng = this.state.language === 'en' ? 'de' : 'en'
     i18n.changeLanguage(lng)
-    this.setState({
-      language: lng,
-    })
+    setLanguage(lng)
   }
 
-  render() {
-    const { isHomepage, classes, t } = this.props
-    const { language } = this.state
-    const links = ['/shop/', 'contact']
-    const linkLabels = [t('header.shop'), t('header.contact')]
+  const links = ['/shop/', 'contact']
 
-    return (
-      <div className={classes.root}>
-        <AppBar
-          position="static"
-          className={isHomepage ? classes.appbar : classes.appbarDarkTheme}
-        >
-          <Toolbar className={classes.toolbar}>
-            <Link to="/" className={classes.logoButton}>
-              <ERIcon className={classes.logo} />
-            </Link>
-            <Hidden xsDown>
-              <div>
-                {links.map((link, idx) => (
-                  <Link key={`link_${link}`} to={link}>
-                    <Button className={classes.button}>
-                      {linkLabels[idx]}
-                    </Button>
-                  </Link>
-                ))}
-                <Button
-                  className={classes.button}
-                  onClick={this.handleLanguageChange}
-                >
-                  {language === 'en' ? 'de' : 'en'}
-                </Button>
-              </div>
-            </Hidden>
-            <Hidden xsUp>
-              <MobileHeaderList />
-            </Hidden>
-          </Toolbar>
-        </AppBar>
-      </div>
-    )
-  }
+  const linkLabels = [t('header.shop'), t('header.contact')]
+
+  return (
+    <div className={classes.root}>
+      <AppBar
+        position="static"
+        className={isHomepage ? classes.appbar : classes.appbarDarkTheme}
+      >
+        <Toolbar className={classes.toolbar}>
+          <Link to="/" className={classes.logoButton}>
+            <ERIcon className={classes.logo} />
+          </Link>
+          <Hidden xsDown>
+            <div>
+              {links.map((link, idx) => (
+                <Link key={`link_${link}`} to={link}>
+                  <Button className={classes.button}>{linkLabels[idx]}</Button>
+                </Link>
+              ))}
+              <Button className={classes.button} onClick={handleLanguageChange}>
+                {language === 'en' ? 'de' : 'en'}
+              </Button>
+            </div>
+          </Hidden>
+          <Hidden xsUp>
+            <MobileHeaderList />
+          </Hidden>
+        </Toolbar>
+      </AppBar>
+    </div>
+  )
 }
 
 Header.propTypes = {

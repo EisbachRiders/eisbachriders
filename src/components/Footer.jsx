@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import { withTranslation } from 'react-i18next'
@@ -140,83 +140,58 @@ const styles = theme => ({
   },
 })
 
-class Footer extends Component {
-  state = {
-    emailAddress: '',
-    name: '',
-    message: '',
-    isEmailValid: true,
-    isNameValid: true,
-    isMessageValid: true,
-    isTouched: false,
-    isSnackbarOpen: false,
-    notification: 'success',
-  }
+function Footer({ classes, t }) {
+  const [email, setEmail] = useState('')
+  const [name, setName] = useState('')
+  const [message, setMessage] = useState('')
+  const [isEmailValid, setEmailValid] = useState(true)
+  const [isNameValid, setNameValid] = useState(true)
+  const [isMessageValid, setMessageValid] = useState(true)
+  const [isTouched, setTouched] = useState(false)
+  const [isSnackbarOpen, setSnackbar] = useState(false)
+  const [notification, setNotification] = useState('success')
 
-  handleChange = name => event => {
-    if (this.state.isTouched === false) {
-      this.setState({
-        isTouched: true,
-      })
+  const handleChange = name => event => {
+    if (isTouched === false) {
+      setTouched(true)
     }
-    if (name === 'emailAddress') {
+    if (name === 'email') {
       const pattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
       if (!pattern.test(event.target.value)) {
-        this.setState({
-          isEmailValid: false,
-          emailAddress: event.target.value,
-        })
+        setEmailValid(false)
+        setEmail(event.target.value)
       } else {
-        this.setState({
-          isEmailValid: true,
-          emailAddress: event.target.value,
-        })
+        setEmailValid(true)
+        setEmail(event.target.value)
       }
     }
     if (name === 'name') {
       if (event.target.value.length > 500) {
-        this.setState({
-          isNameValid: false,
-        })
+        setNameValid(false)
       } else {
-        this.setState({
-          isNameValid: true,
-          name: event.target.value,
-        })
+        setNameValid(true)
+        setName(event.target.value)
       }
     }
     if (name === 'message') {
       if (event.target.value.length > 1000) {
-        this.setState({
-          isMessageValid: false,
-        })
+        setMessageValid(false)
       } else {
-        this.setState({
-          isMessageValid: true,
-          message: event.target.value,
-        })
+        setMessageValid(true)
+        setMessage(event.target.value)
       }
     }
   }
 
-  handleClick = () => {
-    this.setState({ isSnackbarOpen: true })
-  }
-
-  handleClose = (event, reason) => {
+  const handleClose = (event, reason) => {
     if (reason === 'clickaway') {
       return
     }
-    this.setState({ isSnackbarOpen: false })
+    setSnackbar(false)
   }
 
-  handleSubmit = () => {
-    if (
-      this.state.isEmailValid &&
-      this.state.isMessageValid &&
-      this.state.isNameValid &&
-      this.state.isTouched
-    ) {
+  const handleSubmit = () => {
+    if (isEmailValid && isMessageValid && isNameValid && isTouched) {
       fetch('https://eisbach-riders.prod.with-datafire.io/contact', {
         method: 'POST',
         headers: {
@@ -224,202 +199,178 @@ class Footer extends Component {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          message: this.state.message,
-          emailAddress: this.state.emailAddress,
-          name: this.state.name,
+          message: message,
+          email: email,
+          name: name,
         }),
       })
         .then(response => {
           if (response.status === 200) {
-            this.setState({
-              isSnackbarOpen: true,
-              notification: 'success',
-            })
+            setSnackbar(true)
+            setNotification('success')
           } else {
-            this.setState({
-              isSnackbarOpen: true,
-              notification: 'error',
-            })
+            setSnackbar(true)
+            setNotification('error')
           }
         })
         .catch(err => {
-          this.setState({
-            isSnackbarOpen: true,
-            notification: 'error',
-          })
+          setSnackbar(true)
+          setNotification('error')
         })
     } else {
-      this.setState({
-        isSnackbarOpen: true,
-        notification: 'warning',
-      })
+      setSnackbar(true)
+      setNotification('warning')
     }
   }
-  render() {
-    const { classes, t } = this.props
-    const {
-      emailAddress,
-      name,
-      message,
-      isNameValid,
-      isEmailValid,
-      isMessageValid,
-      isSnackbarOpen,
-      notification,
-    } = this.state
-    return (
-      <div className={classes.root} id="contact">
-        <Snackbar
-          anchorOrigin={{
-            vertical: 'bottom',
-            horizontal: 'left',
-          }}
-          open={isSnackbarOpen}
-          autoHideDuration={6000}
-          onClose={this.handleClose}
-        >
-          <Notification
-            onClose={this.handleClose}
-            variant={notification}
-            message={
-              notification === 'success'
-                ? 'Your email has been sent successfully'
-                : notification === 'warning'
-                ? 'Please check the form has been filled out correctly'
-                : 'An error has occured.'
-            }
-          />
-        </Snackbar>
-        <div className={classes.container}>
-          <div className={classes.flexItem}>
-            <form noValidate autoComplete="off">
-              <Typography className={classes.textHeading}>
-                {t('footer.message')}
-              </Typography>
-              <div className={classes.inputContainer}>
-                <TextField
-                  id="name"
-                  name="name"
-                  type="text"
-                  className={classes.textField}
-                  InputProps={{
-                    className: isNameValid ? classes.input : classes.inputError,
-                    disableUnderline: true,
-                    classes: { input: classes.textArea },
-                  }}
-                  value={name}
-                  placeholder={t('common.name')}
-                  onChange={this.handleChange('name')}
-                  margin="normal"
-                  required
-                />
-                <TextField
-                  id="emailAddress"
-                  name="emailAddress"
-                  type="email"
-                  className={classes.textField}
-                  InputProps={{
-                    className: isEmailValid
-                      ? classes.input
-                      : classes.inputError,
-                    disableUnderline: true,
-                    classes: { input: classes.textArea },
-                  }}
-                  value={emailAddress}
-                  placeholder={t('common.email')}
-                  onChange={this.handleChange('emailAddress')}
-                  margin="normal"
-                  required
-                />
-              </div>
+
+  return (
+    <div className={classes.root} id="contact">
+      <Snackbar
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'left',
+        }}
+        open={isSnackbarOpen}
+        autoHideDuration={6000}
+        onClose={() => setSnackbar(false)}
+      >
+        <Notification
+          onClose={() => setSnackbar(false)}
+          variant={notification}
+          message={
+            notification === 'success'
+              ? 'Your email has been sent successfully'
+              : notification === 'warning'
+              ? 'Please check the form has been filled out correctly'
+              : 'An error has occurred.'
+          }
+        />
+      </Snackbar>
+      <div className={classes.container}>
+        <div className={classes.flexItem}>
+          <form noValidate autoComplete="off">
+            <Typography className={classes.textHeading}>
+              {t('footer.message')}
+            </Typography>
+            <div className={classes.inputContainer}>
               <TextField
-                id="message"
-                name="message"
+                id="name"
+                name="name"
                 type="text"
+                className={classes.textField}
                 InputProps={{
-                  className: isMessageValid
-                    ? classes.input
-                    : classes.inputError,
+                  className: isNameValid ? classes.input : classes.inputError,
                   disableUnderline: true,
                   classes: { input: classes.textArea },
                 }}
-                value={message}
-                placeholder={t('footer.message')}
-                onChange={this.handleChange('message')}
+                value={name}
+                placeholder={t('common.name')}
+                onChange={() => handleChange('name')}
                 margin="normal"
-                fullWidth
-                multiline
-                rows="4"
                 required
               />
-              <Button
-                variant="contained"
-                className={classes.buttonSend}
-                fullWidth
-                onClick={this.handleSubmit}
-              >
-                {t('footer.send')}
-              </Button>
-            </form>
-          </div>
-
-          <div className={classes.flexItem}>
-            <Typography className={classes.textHeading}>
-              {`${t('footer.questions')}?`}
-            </Typography>
-            <Typography className={classes.text}>
-              {t('footer.questionsMessage')}
-            </Typography>
-            <Typography className={classes.text}>
-              {t('footer.getInTouch')}
-            </Typography>
-            <div className={classes.iconContainer}>
-              <Button
-                variant="outlined"
-                aria-label="facebook"
-                className={classes.button}
-                href="hhttps://www.facebook.com/EisbachRiders-262685337908914/"
-                target="_blank"
-                rel="noopener"
-                disableFocusRipple
-                disableRipple
-              >
-                <FacebookIcon className={classes.icon} />
-              </Button>
-              <Button
-                variant="outlined"
-                aria-label="instagram"
-                className={classes.button}
-                href="https://www.instagram.com/eisbachriders/"
-                target="_blank"
-                rel="noopener"
-                disableFocusRipple
-                disableRipple
-              >
-                <InstagramIcon className={classes.icon} />
-              </Button>
+              <TextField
+                id="email"
+                name="email"
+                type="email"
+                className={classes.textField}
+                InputProps={{
+                  className: isEmailValid ? classes.input : classes.inputError,
+                  disableUnderline: true,
+                  classes: { input: classes.textArea },
+                }}
+                value={email}
+                placeholder={t('common.email')}
+                onChange={() => handleChange('email')}
+                margin="normal"
+                required
+              />
             </div>
-          </div>
+            <TextField
+              id="message"
+              name="message"
+              type="text"
+              InputProps={{
+                className: isMessageValid ? classes.input : classes.inputError,
+                disableUnderline: true,
+                classes: { input: classes.textArea },
+              }}
+              value={message}
+              placeholder={t('footer.message')}
+              onChange={() => handleChange('message')}
+              margin="normal"
+              fullWidth
+              multiline
+              rows="4"
+              required
+            />
+            <Button
+              variant="contained"
+              className={classes.buttonSend}
+              fullWidth
+              onClick={handleSubmit}
+            >
+              {t('footer.send')}
+            </Button>
+          </form>
         </div>
-        <div className={classes.legal}>
-          <Typography
-            variant="body2"
-            align="center"
-            className={classes.copyright}
-          >
-            &copy; Eisbach Riders |{' '}
-            <Link to="/legal/" className={classes.link}>
-              {t('footer.imprint')}
-            </Link>
-            |{' '}
-            <Link to="/privacy/" className={classes.link}>
-              {t('footer.privacy')}
-            </Link>
+
+        <div className={classes.flexItem}>
+          <Typography className={classes.textHeading}>
+            {`${t('footer.questions')}?`}
           </Typography>
+          <Typography className={classes.text}>
+            {t('footer.questionsMessage')}
+          </Typography>
+          <Typography className={classes.text}>
+            {t('footer.getInTouch')}
+          </Typography>
+          <div className={classes.iconContainer}>
+            <Button
+              variant="outlined"
+              aria-label="facebook"
+              className={classes.button}
+              href="hhttps://www.facebook.com/EisbachRiders-262685337908914/"
+              target="_blank"
+              rel="noopener"
+              disableFocusRipple
+              disableRipple
+            >
+              <FacebookIcon className={classes.icon} />
+            </Button>
+            <Button
+              variant="outlined"
+              aria-label="instagram"
+              className={classes.button}
+              href="https://www.instagram.com/eisbachriders/"
+              target="_blank"
+              rel="noopener"
+              disableFocusRipple
+              disableRipple
+            >
+              <InstagramIcon className={classes.icon} />
+            </Button>
+          </div>
         </div>
       </div>
-    )
-  }
+      <div className={classes.legal}>
+        <Typography
+          variant="body2"
+          align="center"
+          className={classes.copyright}
+        >
+          &copy; Eisbach Riders |{' '}
+          <Link to="/legal/" className={classes.link}>
+            {t('footer.imprint')}
+          </Link>
+          |{' '}
+          <Link to="/privacy/" className={classes.link}>
+            {t('footer.privacy')}
+          </Link>
+        </Typography>
+      </div>
+    </div>
+  )
 }
 
 Footer.propTypes = {

@@ -57,79 +57,63 @@ const styles = theme => ({
   },
 })
 
-class ShopItem extends Component {
-  state = {
-    isDialogOpen: false,
-  }
+function ShopItem({ product, classes, t }) {
+  const [isDialogOpen, setDialog] = useState(false)
 
-  handleDialogOpen = idx => {
-    this.setState({
-      isDialogOpen: true,
-    })
-  }
-
-  handleDialogClose = () => {
-    this.setState({ isDialogOpen: false })
-  }
-
-  render() {
-    const { product, classes, t } = this.props
-    const { isDialogOpen } = this.state
-    return (
-      <div className={classes.root}>
-        <img
-          src={product.images[0]}
-          className={classes.img}
-          alt={`product test`}
-          onClick={this.handleDialogOpen}
-        />
-        <div className={classes.descriptionContainer}>
-          <Typography className={classes.name}>{product.name}</Typography>
-          <div className={classes.fullWidth}>
-            <div className={classes.priceContainer}>
-              <Typography variant="h6" className={classes.price}>
-                {`€${product.price}`}
-              </Typography>
-              <div className={classes.iconContainer}>
-                {product.amazon && (
-                  <IconButton
-                    className={classes.button}
-                    aria-label="Amazon"
-                    href={product.amazon}
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <AmazonIcon className={classes.icon} />
-                  </IconButton>
-                )}
-                {product.ebay && (
-                  <IconButton
-                    className={classes.button}
-                    aria-label="Ebay"
-                    href={product.ebay}
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <EbayIcon
-                      className={classnames(classes.icon, classes.ebay)}
-                    />
-                  </IconButton>
-                )}
-              </div>
+  return (
+    <div className={classes.root}>
+      <img
+        src={product.images[0]}
+        className={classes.img}
+        alt={`product test`}
+        onClick={() => setDialog(true)}
+      />
+      <div className={classes.descriptionContainer}>
+        <Typography className={classes.name}>{product.name}</Typography>
+        <div className={classes.fullWidth}>
+          <div className={classes.priceContainer}>
+            <Typography variant="h6" className={classes.price}>
+              {`€${product.price}`}
+            </Typography>
+            <div className={classes.iconContainer}>
+              {product.amazon && (
+                <IconButton
+                  className={classes.button}
+                  aria-label="Amazon"
+                  href={product.amazon}
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <AmazonIcon className={classes.icon} />
+                </IconButton>
+              )}
+              {product.ebay && (
+                <IconButton
+                  className={classes.button}
+                  aria-label="Ebay"
+                  href={product.ebay}
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <EbayIcon
+                    className={classnames(classes.icon, classes.ebay)}
+                  />
+                </IconButton>
+              )}
             </div>
           </div>
-          <ProductDialog
-            product={product}
-            buttonText={t('products.features')}
-            buttonFull
-            handleDialogOpen={this.handleDialogOpen}
-            handleDialogClose={this.handleDialogClose}
-            isDialogOpen={isDialogOpen}
-          />
         </div>
+        <ProductDialog
+          product={product}
+          buttonText={t('products.features')}
+          buttonFull
+          handleDialogOpen={() => setDialog(true)}
+          handleDialogClose={() => setDialog(false)}
+          isDialogOpen={isDialogOpen}
+        />
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 ShopItem.propTypes = {

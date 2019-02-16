@@ -87,9 +87,7 @@ const styles = theme => ({
   },
 })
 
-const Hero = props => {
-  const { img, classes, t } = props
-
+function Hero({ img, classes, t }) {
   return (
     <div className={classes.root}>
       <Img

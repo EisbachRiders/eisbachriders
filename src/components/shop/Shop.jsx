@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { withTranslation } from 'react-i18next'
 import withRoot from '../../withRoot'
@@ -41,9 +41,7 @@ const styles = theme => ({
   },
 })
 
-const Shop = props => {
-  const { classes, t } = props
-
+function Shop({ classes, t }) {
   return (
     <div className={classes.root}>
       <Typography className={classes.header} variant="h5">

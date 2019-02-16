@@ -105,8 +105,7 @@ const styles = theme => ({
   },
 })
 
-const About = props => {
-  const { img, waveImg, classes, t } = props
+function About({ img, waveImg, classes, t }) {
   return (
     <div className={classes.root} id="about">
       <div className={classes.textContainer}>

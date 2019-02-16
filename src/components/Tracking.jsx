@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import { withTranslation } from 'react-i18next'
@@ -63,74 +63,63 @@ const styles = theme => ({
   },
 })
 
-class Tracking extends Component {
-  state = {
-    isSnackbarOpen: true,
+function Tracking({ classes, t }) {
+  const [isSnackbarOpen, setSnackbar] = useState(true)
+
+  const handleSnackbarAccept = () => {
+    setSnackbar(false)
   }
 
-  handleSnackbarClose = () => {
-    this.setState({ isSnackbarOpen: true })
-  }
-
-  handleSnackbarAccept = () => {
-    this.setState({ isSnackbarOpen: false })
-  }
-
-  handleSnackbarDecline = () => {
+  const handleSnackbarDecline = () => {
     window['ga-disable-UA-130658859-1'] = true
-    this.setState({ isSnackbarOpen: false })
+    setSnackbar(false)
   }
 
-  render() {
-    const { classes, t } = this.props
-    const { isSnackbarOpen } = this.state
-    console.log(isSnackbarOpen)
-    return (
-      <Snackbar
-        anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'center',
-        }}
-        open={isSnackbarOpen}
-        onClose={this.handleClose}
-        className={classes.snackbar}
-      >
-        <SnackbarContent
-          className={classes.snackbarContent}
-          classes={{ message: classes.message, action: classes.action }}
-          aria-describedby="client-snackbar"
-          onClose={this.handleClose}
-          message={
-            <span id="client-snackbar">
-              {t('tracking.message')}
-              <Link to="/privacy/" className={classes.link}>
-                {t('tracking.privacyLink')}
-              </Link>
-            </span>
-          }
-          action={[
-            <Fragment key="button">
-              <Button
-                className={classes.buttonDecline} //eslint-disable-next-line
-                href="javascript:gaOptout();"
-                onClick={this.handleDecline}
-              >
-                {t('tracking.decline')}
-              </Button>
-              <Button
-                color="secondary"
-                variant="contained"
-                className={classes.button}
-                onClick={this.handleAccept}
-              >
-                {t('tracking.accept')}
-              </Button>
-            </Fragment>,
-          ]}
-        />
-      </Snackbar>
-    )
-  }
+  return (
+    <Snackbar
+      anchorOrigin={{
+        vertical: 'bottom',
+        horizontal: 'center',
+      }}
+      open={isSnackbarOpen}
+      onClose={handleSnackbarAccept}
+      className={classes.snackbar}
+    >
+      <SnackbarContent
+        className={classes.snackbarContent}
+        classes={{ message: classes.message, action: classes.action }}
+        aria-describedby="client-snackbar"
+        onClose={handleSnackbarAccept}
+        message={
+          <span id="client-snackbar">
+            {t('tracking.message')}
+            <Link to="/privacy/" className={classes.link}>
+              {t('tracking.privacyLink')}
+            </Link>
+          </span>
+        }
+        action={[
+          <>
+            <Button
+              className={classes.buttonDecline} //eslint-disable-next-line
+              href="javascript:gaOptout();"
+              onClick={handleSnackbarDecline}
+            >
+              {t('tracking.decline')}
+            </Button>
+            <Button
+              color="secondary"
+              variant="contained"
+              className={classes.button}
+              onClick={handleSnackbarAccept}
+            >
+              {t('tracking.accept')}
+            </Button>
+          </>,
+        ]}
+      />
+    </Snackbar>
+  )
 }
 
 Tracking.propTypes = {

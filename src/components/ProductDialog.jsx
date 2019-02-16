@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import i18n from '../i18n/i18n'
 import { withTranslation } from 'react-i18next'
@@ -143,171 +143,156 @@ const styles = theme => ({
   },
 })
 
-class ProductDialog extends Component {
-  state = {
-    activeStep: 0,
+function ProductDialog({
+  handleDialogOpen,
+  handleDialogClose,
+  isDialogOpen,
+  idx,
+  product,
+  buttonText,
+  buttonFull,
+  classes,
+  t,
+}) {
+  const [activeStep, setActiveStep] = useState(0)
+
+  const handleIndexChange = activeStep => {
+    setActiveStep(activeStep)
   }
 
-  handleIndexChange = activeStep => {
-    this.setState({
-      activeStep,
-    })
+  const handleNext = () => {
+    setActiveStep(activeStep + 1)
   }
 
-  handleNext = () => {
-    this.setState(prevState => ({
-      activeStep: prevState.activeStep + 1,
-    }))
+  const handleBack = () => {
+    setActiveStep(activeStep - 1)
   }
 
-  handleBack = () => {
-    this.setState(prevState => ({
-      activeStep: prevState.activeStep - 1,
-    }))
-  }
+  const lng = i18n.language
 
-  render() {
-    const {
-      handleDialogOpen,
-      handleDialogClose,
-      isDialogOpen,
-      idx,
-      product,
-      buttonText,
-      buttonFull,
-      classes,
-      t,
-    } = this.props
-    const { activeStep } = this.state
-    const lng = i18n.language
-
-    return (
-      <Fragment>
-        <Button
-          color="secondary"
-          variant="outlined"
-          className={classnames(classes.button, {
-            [classes.buttonFull]: buttonFull,
-          })}
-          onClick={() => handleDialogOpen(idx)}
-        >
-          {buttonText}
-        </Button>
-        <Dialog
-          open={isDialogOpen}
-          onClose={handleDialogClose}
-          maxWidth="md"
-          classes={{ paper: classes.paper }}
-        >
-          <DialogTitle id="dialog-title" className={classes.dialogTitle}>
-            {product.name}
-            <IconButton
-              aria-label={t('common.close')}
-              color="inherit"
-              onClick={handleDialogClose}
-              className={classes.closeButton}
-            >
-              <CloseIcon />
-            </IconButton>
-          </DialogTitle>
-          <DialogContent classes={{ root: classes.dialogRoot }}>
-            <div className={classes.dialogContainer}>
-              <div className={classes.dialogImg}>
-                <SwipeableViews
-                  enableMouseEvents
-                  index={activeStep}
-                  onChangeIndex={this.handleChangeIndex}
-                >
-                  {product.images.map((img, idx) => (
-                    <img
-                      src={img}
-                      key={`img${idx}`}
-                      className={classes.img}
-                      alt={`product${idx}`}
-                    />
-                  ))}
-                </SwipeableViews>
-                <MobileStepper
-                  steps={product.images.length}
-                  position="static"
-                  activeStep={activeStep}
-                  className={classes.mobileStepper}
-                  nextButton={
-                    <IconButton
-                      size="small"
-                      aria-label={t('common.scrollLeft')}
-                      onClick={this.handleNext}
-                      disabled={activeStep === product.images.length - 1}
-                    >
-                      <KeyboardArrowRight />
-                    </IconButton>
-                  }
-                  backButton={
-                    <IconButton
-                      size="small"
-                      aria-label={t('common.scrollRight')}
-                      onClick={this.handleBack}
-                      disabled={activeStep === 0}
-                    >
-                      <KeyboardArrowLeft />
-                    </IconButton>
-                  }
-                />
-              </div>
-              <div className={classes.dialogContent}>
-                <div className={classes.priceContainer}>
-                  <Typography variant="h6" className={classes.price}>
-                    {`€${product.price}`}
-                  </Typography>
-                  <div className={classes.iconContainer}>
-                    {product.amazon && (
-                      <IconButton
-                        aria-label="Amazon"
-                        href={product.amazon}
-                        target="_blank"
-                        rel="noopener"
-                      >
-                        <AmazonIcon className={classes.iconButton} />
-                      </IconButton>
-                    )}
-                    {product.ebay && (
-                      <IconButton
-                        aria-label="Ebay"
-                        href={product.ebay}
-                        target="_blank"
-                        rel="noopener"
-                      >
-                        <EbayIcon className={classes.iconButton} />
-                      </IconButton>
-                    )}
-                  </div>
-                </div>
-                <List disablePadding className={classes.scroll}>
-                  {product.more[lng].map((item, idx) => (
-                    <ListItem
-                      key={`listItem${idx}`}
-                      className={classes.listItem}
-                    >
-                      <ListItemIcon>
-                        <StopIcon className={classes.icon} />
-                      </ListItemIcon>
-                      <ListItemText
-                        primary={item}
-                        classes={{
-                          root: classes.listItemTextRoot,
-                          primary: classes.listItemText,
-                        }}
-                      />
-                    </ListItem>
-                  ))}
-                </List>
-              </div>
+  return (
+    <>
+      <Button
+        color="secondary"
+        variant="outlined"
+        className={classnames(classes.button, {
+          [classes.buttonFull]: buttonFull,
+        })}
+        onClick={() => handleDialogOpen(idx)}
+      >
+        {buttonText}
+      </Button>
+      <Dialog
+        open={isDialogOpen}
+        onClose={handleDialogClose}
+        maxWidth="md"
+        classes={{ paper: classes.paper }}
+      >
+        <DialogTitle id="dialog-title" className={classes.dialogTitle}>
+          {product.name}
+          <IconButton
+            aria-label={t('common.close')}
+            color="inherit"
+            onClick={handleDialogClose}
+            className={classes.closeButton}
+          >
+            <CloseIcon />
+          </IconButton>
+        </DialogTitle>
+        <DialogContent classes={{ root: classes.dialogRoot }}>
+          <div className={classes.dialogContainer}>
+            <div className={classes.dialogImg}>
+              <SwipeableViews
+                enableMouseEvents
+                index={activeStep}
+                onChangeIndex={handleIndexChange}
+              >
+                {product.images.map((img, idx) => (
+                  <img
+                    src={img}
+                    key={`img${idx}`}
+                    className={classes.img}
+                    alt={`product${idx}`}
+                  />
+                ))}
+              </SwipeableViews>
+              <MobileStepper
+                steps={product.images.length}
+                position="static"
+                activeStep={activeStep}
+                className={classes.mobileStepper}
+                nextButton={
+                  <IconButton
+                    size="small"
+                    aria-label={t('common.scrollLeft')}
+                    onClick={handleNext}
+                    disabled={activeStep === product.images.length - 1}
+                  >
+                    <KeyboardArrowRight />
+                  </IconButton>
+                }
+                backButton={
+                  <IconButton
+                    size="small"
+                    aria-label={t('common.scrollRight')}
+                    onClick={handleBack}
+                    disabled={activeStep === 0}
+                  >
+                    <KeyboardArrowLeft />
+                  </IconButton>
+                }
+              />
             </div>
-          </DialogContent>
-        </Dialog>
-      </Fragment>
-    )
-  }
+            <div className={classes.dialogContent}>
+              <div className={classes.priceContainer}>
+                <Typography variant="h6" className={classes.price}>
+                  {`€${product.price}`}
+                </Typography>
+                <div className={classes.iconContainer}>
+                  {product.amazon && (
+                    <IconButton
+                      aria-label="Amazon"
+                      href={product.amazon}
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <AmazonIcon className={classes.iconButton} />
+                    </IconButton>
+                  )}
+                  {product.ebay && (
+                    <IconButton
+                      aria-label="Ebay"
+                      href={product.ebay}
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <EbayIcon className={classes.iconButton} />
+                    </IconButton>
+                  )}
+                </div>
+              </div>
+              <List disablePadding className={classes.scroll}>
+                {product.more[lng].map((item, idx) => (
+                  <ListItem key={`listItem${idx}`} className={classes.listItem}>
+                    <ListItemIcon>
+                      <StopIcon className={classes.icon} />
+                    </ListItemIcon>
+                    <ListItemText
+                      primary={item}
+                      classes={{
+                        root: classes.listItemTextRoot,
+                        primary: classes.listItemText,
+                      }}
+                    />
+                  </ListItem>
+                ))}
+              </List>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
+    </>
+  )
 }
 
 ProductDialog.propTypes = {
