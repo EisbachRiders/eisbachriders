@@ -1,0 +1,12 @@
+{
+  "data": {
+    "site": {
+      "siteMetadata": {
+        "defaultTitle": "Eisbach Riders",
+        "defaultDescription": "Eisbach Riders - Surf Accessories",
+        "siteUrl": "https://www.eisbach-riders.com",
+        "defaultImage": "src/assets/logos/icon-192.png"
+      }
+    }
+  }
+}

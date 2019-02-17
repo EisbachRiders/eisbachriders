@@ -5,5 +5,6 @@ node_modules/
 .cache/
 .public/
 .vscode
+coverage/
 yarn.lock
 .env
