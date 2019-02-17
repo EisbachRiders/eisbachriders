@@ -5,6 +5,7 @@
 
 <div align="center">
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/51910244b8bb4a7e8766de66db748292)](https://app.codacy.com/app/cabutler10/website_EisbachRidersGatsby?utm_source=github.com&utm_medium=referral&utm_content=cabutler10/website_EisbachRidersGatsby&utm_campaign=Badge_Grade_Dashboard)
 [![Coverage Status](https://coveralls.io/repos/github/cabutler10/website_EisbachRidersGatsby/badge.svg?branch=master)](https://coveralls.io/github/cabutler10/website_EisbachRidersGatsby?branch=master)
 ![](https://img.shields.io/github/languages/code-size/cabutler10/website_EisbachRidersGatsby.svg?style=flat)
 ![](https://img.shields.io/github/license/cabutler10/website_EisbachRidersGatsby.svg?style=flat)
