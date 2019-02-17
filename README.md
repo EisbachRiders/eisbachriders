@@ -13,16 +13,26 @@
 ![Code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
 
 </div>
-This website was build with Gastby and Material UI
 
-**To start this website in development run the following code and navigate to `http://localhost:8000`**
+This website is an e-commerce shop for the branch **Eisbach Riders**
 
-```
-    gatsby develop
-```
+# Deployment
 
-## Deploy
+To run this site in development run the following code and navigate to `http://localhost:8000`
 
 ```
-    gatsby build
+    yarn develop
 ```
+
+To build this site for final development run the following code
+
+```
+    yarn format
+    yarn lint
+    yarn test
+    yarn build
+```
+
+# Project
+
+This website was build using Gatsby, Material-UI, and Redux
