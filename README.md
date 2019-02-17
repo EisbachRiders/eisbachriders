@@ -3,7 +3,7 @@
   Eisbach Riders
 </h1>
 
-https://img.shields.io/codecov/c/cabutler10/cabutler10/website_eisbachRidersGatsby.svg?style=for-the-badge
+[https://img.shields.io/codecov/c/cabutler10/cabutler10/website_eisbachRidersGatsby.svg?style=for-the-badge]
 
 This website was build with Gastby and Material UI
 
