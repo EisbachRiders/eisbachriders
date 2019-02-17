@@ -14,9 +14,9 @@
 
 </div>
 
-This website is an e-commerce shop for the branch **Eisbach Riders**
+This website is an e-commerce shop for the brand **Eisbach Riders**.
 
-# Deployment
+## Deployment
 
 To run this site in development run the following code and navigate to `http://localhost:8000`
 
@@ -33,6 +33,12 @@ To build this site for final development run the following code
     yarn build
 ```
 
-# Project
+## Project
 
 This website was build using Gatsby, Material-UI, and Redux
+
+Testing:
+Code coverage provided by Codacy
+jest,
+cypress,
+react-testing-library
