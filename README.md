@@ -38,7 +38,4 @@ To build this site for final development run the following code
 This website was build using Gatsby, Material-UI, and Redux
 
 Testing:
-Code coverage provided by Codacy,
-jest,
-cypress,
-react-testing-library
+Code coverage provided by jest, cypress, and react-testing-library

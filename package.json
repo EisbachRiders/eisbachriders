@@ -14,7 +14,7 @@
   },
   "scripts": {
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "jest --coverage -u && cat ./coverage/lcov.info | codacy-coverage --accountToken 29ebed3b89d24f06a40c871a048ccc6a --username cabutler10 --projectName website_EisbachRidersGatsby",
+    "test": "jest --coverage -u && 4. CODACY_PROJECT_TOKEN='29ebed3b89d24f06a40c871a048ccc6a'|cat ./coverage/lcov.info | ./node_modules/.bin/codacy-coverage",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
     "develop": "gatsby develop",
     "build": "gatsby build",
