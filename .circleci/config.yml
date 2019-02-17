@@ -37,9 +37,14 @@ jobs:
           command: yarn lint
 
       # test
-      - run:
-          name: run tests
-          command: yarn test
+      # - run:
+          # name: run tests
+          # command: yarn test
+
+      #test coverage
+      -run:
+          name: run coverage
+          command: cat ./coverage/lcov.info | codacy-coverage --accountToken "$CODACY" --username cabutler10 --projectName website_EisbachRidersGatsby
 
       # build
       - run:
