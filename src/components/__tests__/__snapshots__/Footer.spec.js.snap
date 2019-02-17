@@ -1,0 +1,472 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="Hook-root-zebne7"
+        id="contact"
+      >
+        <div
+          class="Hook-container-1mgi3sm"
+        >
+          <div
+            class="Hook-flexItem-1qc58af"
+          >
+            <form
+              autocomplete="off"
+              novalidate=""
+            >
+              <p
+                class="MuiTypography-root-8 MuiTypography-body1-17 Hook-textHeading-e3atp8"
+              >
+                footer.message
+              </p>
+              <div
+                class="Hook-inputContainer-1qy08xk"
+              >
+                <div
+                  class="MuiFormControl-root-45 MuiFormControl-marginNormal-46 MuiTextField-root-44 Hook-textField-9p350t"
+                >
+                  <div
+                    class="MuiInputBase-root-62 MuiInput-root-49 MuiInputBase-formControl-63 MuiInput-formControl-50 Hook-input-1qk2qz8"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="MuiInputBase-input-72 MuiInput-input-57 Hook-textArea-52t2aq"
+                      id="name"
+                      name="name"
+                      placeholder="common.name"
+                      required=""
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div
+                  class="MuiFormControl-root-45 MuiFormControl-marginNormal-46 MuiTextField-root-44 Hook-textField-9p350t"
+                >
+                  <div
+                    class="MuiInputBase-root-62 MuiInput-root-49 MuiInputBase-formControl-63 MuiInput-formControl-50 Hook-input-1qk2qz8"
+                  >
+                    <input
+                      aria-invalid="false"
+                      class="MuiInputBase-input-72 MuiInput-input-57 Hook-textArea-52t2aq MuiInputBase-inputType-75 MuiInput-inputType-60"
+                      id="email"
+                      name="email"
+                      placeholder="common.email"
+                      required=""
+                      type="email"
+                      value=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="MuiFormControl-root-45 MuiFormControl-marginNormal-46 MuiFormControl-fullWidth-48 MuiTextField-root-44"
+              >
+                <div
+                  class="MuiInputBase-root-62 MuiInput-root-49 MuiInputBase-fullWidth-71 MuiInput-fullWidth-56 MuiInputBase-formControl-63 MuiInput-formControl-50 MuiInputBase-multiline-70 MuiInput-multiline-55 Hook-input-1qk2qz8"
+                >
+                  <textarea
+                    aria-invalid="false"
+                    class="MuiInputBase-input-72 MuiInput-input-57 Hook-textArea-52t2aq MuiInputBase-inputMultiline-74 MuiInput-inputMultiline-59"
+                    id="message"
+                    name="message"
+                    placeholder="footer.message"
+                    required=""
+                    rows="4"
+                  />
+                </div>
+              </div>
+              <button
+                class="MuiButtonBase-root-96 MuiButton-root-79 MuiButton-contained-87 MuiButton-fullWidth-95 Hook-buttonSend-15lalzo"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label-80"
+                >
+                  footer.send
+                </span>
+                <span
+                  class="MuiTouchRipple-root-108"
+                />
+              </button>
+            </form>
+          </div>
+          <div
+            class="Hook-flexItem-1qc58af"
+          >
+            <p
+              class="MuiTypography-root-8 MuiTypography-body1-17 Hook-textHeading-e3atp8"
+            >
+              footer.questions?
+            </p>
+            <p
+              class="MuiTypography-root-8 MuiTypography-body1-17 Hook-text-1qi9x4g"
+            >
+              footer.questionsMessage
+            </p>
+            <p
+              class="MuiTypography-root-8 MuiTypography-body1-17 Hook-text-1qi9x4g"
+            >
+              footer.getInTouch
+            </p>
+            <div
+              class="Hook-iconContainer-1cqraa0"
+            >
+              <a
+                aria-label="facebook"
+                class="MuiButtonBase-root-96 MuiButton-root-79 MuiButton-outlined-84 Hook-button-y86jn8"
+                href="hhttps://www.facebook.com/EisbachRiders-262685337908914/"
+                rel="noopener"
+                role="button"
+                tabindex="0"
+                target="_blank"
+              >
+                <span
+                  class="MuiButton-label-80"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root-99 Hook-icon-9x3jd1"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 96.124 96.123"
+                  >
+                    <g>
+                      <path
+                        d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803 c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654 c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246 c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"
+                      />
+                    </g>
+                    <g />
+                    <g />
+                    <g />
+                    <g />
+                    <g />
+                    <g />
+                    <g />
+                    <g />
+                    <g />
+                    <g />
+                    <g />
+                    <g />
+                    <g />
+                    <g />
+                    <g />
+                  </svg>
+                </span>
+              </a>
+              <a
+                aria-label="instagram"
+                class="MuiButtonBase-root-96 MuiButton-root-79 MuiButton-outlined-84 Hook-button-y86jn8"
+                href="https://www.instagram.com/eisbachriders/"
+                rel="noopener"
+                role="button"
+                tabindex="0"
+                target="_blank"
+              >
+                <span
+                  class="MuiButton-label-80"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root-99 Hook-icon-9x3jd1"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 448 512"
+                  >
+                    <path
+                      d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="Hook-legal-uy6v4"
+        >
+          <p
+            class="MuiTypography-root-8 MuiTypography-body2-16 MuiTypography-alignCenter-31 Hook-copyright-79fekv"
+          >
+            © Eisbach Riders |
+             
+            <a
+              class="Hook-link-nl3adn"
+              href="/legal/"
+            >
+              footer.imprint
+            </a>
+            |
+             
+            <a
+              class="Hook-link-nl3adn"
+              href="/privacy/"
+            >
+              footer.privacy
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="Hook-root-zebne7"
+      id="contact"
+    >
+      <div
+        class="Hook-container-1mgi3sm"
+      >
+        <div
+          class="Hook-flexItem-1qc58af"
+        >
+          <form
+            autocomplete="off"
+            novalidate=""
+          >
+            <p
+              class="MuiTypography-root-8 MuiTypography-body1-17 Hook-textHeading-e3atp8"
+            >
+              footer.message
+            </p>
+            <div
+              class="Hook-inputContainer-1qy08xk"
+            >
+              <div
+                class="MuiFormControl-root-45 MuiFormControl-marginNormal-46 MuiTextField-root-44 Hook-textField-9p350t"
+              >
+                <div
+                  class="MuiInputBase-root-62 MuiInput-root-49 MuiInputBase-formControl-63 MuiInput-formControl-50 Hook-input-1qk2qz8"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="MuiInputBase-input-72 MuiInput-input-57 Hook-textArea-52t2aq"
+                    id="name"
+                    name="name"
+                    placeholder="common.name"
+                    required=""
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                class="MuiFormControl-root-45 MuiFormControl-marginNormal-46 MuiTextField-root-44 Hook-textField-9p350t"
+              >
+                <div
+                  class="MuiInputBase-root-62 MuiInput-root-49 MuiInputBase-formControl-63 MuiInput-formControl-50 Hook-input-1qk2qz8"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="MuiInputBase-input-72 MuiInput-input-57 Hook-textArea-52t2aq MuiInputBase-inputType-75 MuiInput-inputType-60"
+                    id="email"
+                    name="email"
+                    placeholder="common.email"
+                    required=""
+                    type="email"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiFormControl-root-45 MuiFormControl-marginNormal-46 MuiFormControl-fullWidth-48 MuiTextField-root-44"
+            >
+              <div
+                class="MuiInputBase-root-62 MuiInput-root-49 MuiInputBase-fullWidth-71 MuiInput-fullWidth-56 MuiInputBase-formControl-63 MuiInput-formControl-50 MuiInputBase-multiline-70 MuiInput-multiline-55 Hook-input-1qk2qz8"
+              >
+                <textarea
+                  aria-invalid="false"
+                  class="MuiInputBase-input-72 MuiInput-input-57 Hook-textArea-52t2aq MuiInputBase-inputMultiline-74 MuiInput-inputMultiline-59"
+                  id="message"
+                  name="message"
+                  placeholder="footer.message"
+                  required=""
+                  rows="4"
+                />
+              </div>
+            </div>
+            <button
+              class="MuiButtonBase-root-96 MuiButton-root-79 MuiButton-contained-87 MuiButton-fullWidth-95 Hook-buttonSend-15lalzo"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiButton-label-80"
+              >
+                footer.send
+              </span>
+              <span
+                class="MuiTouchRipple-root-108"
+              />
+            </button>
+          </form>
+        </div>
+        <div
+          class="Hook-flexItem-1qc58af"
+        >
+          <p
+            class="MuiTypography-root-8 MuiTypography-body1-17 Hook-textHeading-e3atp8"
+          >
+            footer.questions?
+          </p>
+          <p
+            class="MuiTypography-root-8 MuiTypography-body1-17 Hook-text-1qi9x4g"
+          >
+            footer.questionsMessage
+          </p>
+          <p
+            class="MuiTypography-root-8 MuiTypography-body1-17 Hook-text-1qi9x4g"
+          >
+            footer.getInTouch
+          </p>
+          <div
+            class="Hook-iconContainer-1cqraa0"
+          >
+            <a
+              aria-label="facebook"
+              class="MuiButtonBase-root-96 MuiButton-root-79 MuiButton-outlined-84 Hook-button-y86jn8"
+              href="hhttps://www.facebook.com/EisbachRiders-262685337908914/"
+              rel="noopener"
+              role="button"
+              tabindex="0"
+              target="_blank"
+            >
+              <span
+                class="MuiButton-label-80"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root-99 Hook-icon-9x3jd1"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 96.124 96.123"
+                >
+                  <g>
+                    <path
+                      d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803 c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654 c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246 c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"
+                    />
+                  </g>
+                  <g />
+                  <g />
+                  <g />
+                  <g />
+                  <g />
+                  <g />
+                  <g />
+                  <g />
+                  <g />
+                  <g />
+                  <g />
+                  <g />
+                  <g />
+                  <g />
+                  <g />
+                </svg>
+              </span>
+            </a>
+            <a
+              aria-label="instagram"
+              class="MuiButtonBase-root-96 MuiButton-root-79 MuiButton-outlined-84 Hook-button-y86jn8"
+              href="https://www.instagram.com/eisbachriders/"
+              rel="noopener"
+              role="button"
+              tabindex="0"
+              target="_blank"
+            >
+              <span
+                class="MuiButton-label-80"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root-99 Hook-icon-9x3jd1"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="Hook-legal-uy6v4"
+      >
+        <p
+          class="MuiTypography-root-8 MuiTypography-body2-16 MuiTypography-alignCenter-31 Hook-copyright-79fekv"
+        >
+          © Eisbach Riders |
+           
+          <a
+            class="Hook-link-nl3adn"
+            href="/legal/"
+          >
+            footer.imprint
+          </a>
+          |
+           
+          <a
+            class="Hook-link-nl3adn"
+            href="/privacy/"
+          >
+            footer.privacy
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

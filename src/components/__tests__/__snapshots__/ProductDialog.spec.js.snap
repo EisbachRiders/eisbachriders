@@ -1,0 +1,249 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductDialog renders correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body
+    style="overflow: hidden; padding-right: 0px;"
+  >
+    <div
+      aria-hidden="true"
+    >
+      <button
+        class="MuiButtonBase-root-18 MuiButton-root-1 MuiButton-outlined-6 MuiButton-outlinedSecondary-8 Hook-button-1ihz2ti"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiButton-label-2"
+        >
+          mockButtonText
+        </span>
+        <span
+          class="MuiTouchRipple-root-38"
+        />
+      </button>
+    </div>
+    <div
+      class="MuiModal-root-36 MuiDialog-root-21"
+      role="dialog"
+    >
+      <div
+        aria-hidden="true"
+        class="MuiBackdrop-root-45"
+        style="opacity: 1; -webkit-transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
+      />
+      <div
+        class="MuiDialog-container-24 MuiDialog-scrollPaper-22"
+        role="document"
+        style="opacity: 1; -webkit-transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
+        tabindex="-1"
+      >
+        <div
+          class="MuiPaper-root-47 MuiPaper-elevation24-73 MuiPaper-rounded-48 MuiDialog-paper-25 Hook-paper-tlie7g MuiDialog-paperScrollPaper-26 MuiDialog-paperWidthMd-31"
+        >
+          <div
+            class="MuiDialogTitle-root-74 Hook-dialogTitle-13tse11"
+            id="dialog-title"
+          >
+            <h2
+              class="MuiTypography-root-75 MuiTypography-title-81"
+            >
+              <button
+                aria-label="close"
+                class="MuiButtonBase-root-18 MuiIconButton-root-111 MuiIconButton-colorInherit-112 Hook-closeButton-75g8pe"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiIconButton-label-116"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root-117"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                    />
+                    <path
+                      d="M0 0h24v24H0z"
+                      fill="none"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiTouchRipple-root-38"
+                />
+              </button>
+            </h2>
+          </div>
+          <div
+            class="MuiDialogContent-root-126 Hook-dialogRoot-4fytn1"
+          >
+            <div
+              class="Hook-dialogContainer-etyy7m"
+            >
+              <div
+                class="Hook-dialogImg-1wxrg70"
+              >
+                <div
+                  style="overflow-x: hidden;"
+                >
+                  <div
+                    class="react-swipeable-view-container"
+                    style="flex-direction: row; direction: ltr; display: flex;"
+                  />
+                </div>
+                <div
+                  class="MuiPaper-root-47 MuiPaper-elevation0-49 MuiMobileStepper-root-127 MuiMobileStepper-positionStatic-130 Hook-mobileStepper-1n5rvrh"
+                >
+                  <button
+                    aria-label="scroll right"
+                    class="MuiButtonBase-root-18 MuiButtonBase-disabled-19 MuiIconButton-root-111 MuiIconButton-disabled-115"
+                    disabled=""
+                    tabindex="-1"
+                    type="button"
+                  >
+                    <span
+                      class="MuiIconButton-label-116"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root-117"
+                        focusable="false"
+                        role="presentation"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
+                        />
+                        <path
+                          d="M0 0h24v24H0V0z"
+                          fill="none"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                  <div
+                    class="MuiMobileStepper-dots-131"
+                  />
+                  <button
+                    aria-label="scroll left"
+                    class="MuiButtonBase-root-18 MuiIconButton-root-111"
+                    tabindex="0"
+                    type="button"
+                  >
+                    <span
+                      class="MuiIconButton-label-116"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        class="MuiSvgIcon-root-117"
+                        focusable="false"
+                        role="presentation"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
+                        />
+                        <path
+                          d="M0 0h24v24H0V0z"
+                          fill="none"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root-38"
+                    />
+                  </button>
+                </div>
+              </div>
+              <div
+                class="Hook-dialogContent-1uql9j6"
+              >
+                <div
+                  class="Hook-priceContainer-1xgs5he"
+                >
+                  <h6
+                    class="MuiTypography-root-75 MuiTypography-h6-92 Hook-price-3fwks1"
+                  >
+                    €undefined
+                  </h6>
+                  <div />
+                </div>
+                <ul
+                  class="MuiList-root-135 Hook-scroll-u3pasc"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div
+    aria-hidden="true"
+  >
+    <button
+      class="MuiButtonBase-root-18 MuiButton-root-1 MuiButton-outlined-6 MuiButton-outlinedSecondary-8 Hook-button-1ihz2ti"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        class="MuiButton-label-2"
+      >
+        mockButtonText
+      </span>
+      <span
+        class="MuiTouchRipple-root-38"
+      />
+    </button>
+  </div>,
+  "debug": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

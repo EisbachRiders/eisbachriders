@@ -1,0 +1,918 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Legal renders correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="Hook-container-1oc7a24"
+        id="legal"
+      >
+        <h5
+          class="MuiTypography-root-1 MuiTypography-h5-17 Hook-title-901hqm"
+        >
+          imprint.imprint
+        </h5>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          Eisbach Riders 
+          <br />
+          Robin Eisenhardt & Michael Schmidt GbR 
+          <br />
+          Lothstr. 72 
+          <br />
+          80797 München 
+          <br />
+          Deutschland 
+          <br />
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          Tel.: 0176/69019542 
+          <br />
+          E-Mail: business@eisbach-riders.com
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          Vertretungsberechtigte Gesellschafter: Robin Eisenhardt, Michael Schmidt
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz: DE 320071401 Plattform der EU-Kommission zur 
+          <br />
+          Online-Streitbeilegung:
+           
+          <a
+            href="https://ec.europa.eu/consumers/odr"
+          >
+            https://ec.europa.eu/consumers/odr
+          </a>
+          Wir sind zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle weder verpflichtet noch bereit.
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          Verantwortliche/r i.S.d. § 55 Abs. 2 RStV: Robin Eisenhardt, Michael Schmidt, Lothstr. 72, 80797, München
+        </p>
+        <h6
+          class="MuiTypography-root-1 MuiTypography-h6-18 Hook-title-901hqm"
+        >
+          imprint.terms
+        </h6>
+        <h6
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+        >
+          imprint.title1
+        </h6>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms1_1
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms1_2
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms1_3
+        </p>
+        <h6
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+        >
+          imprint.title2
+        </h6>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms2_1
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms2_2
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms2_3
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms2_4
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms2_5
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms2_6
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms2_7
+        </p>
+        <h6
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+        >
+          imprint.title3
+        </h6>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms3_1
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms3_2
+        </p>
+        <h6
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+        >
+          imprint.title4
+        </h6>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms4_1
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms4_2
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms4_3
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms4_4
+        </p>
+        <h6
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+        >
+          imprint.title5
+        </h6>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms5_1
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms5_2
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms5_3
+        </p>
+        <h6
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+        >
+          imprint.title6
+        </h6>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms6_1
+        </p>
+        <h6
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+        >
+          imprint.title7
+        </h6>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms7_1
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms7_2
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms7_3
+        </p>
+        <h6
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+        >
+          imprint.title8
+        </h6>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms8_1
+        </p>
+        <h6
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+        >
+          imprint.title9
+        </h6>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms9_1
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms9_2
+        </p>
+        <h6
+          class="MuiTypography-root-1 MuiTypography-h6-18 Hook-title-901hqm"
+        >
+          imprint.title10
+        </h6>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms10_1
+        </p>
+        <h6
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+        >
+          imprint.title11
+        </h6>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms11_1
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms11_2
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms11_3
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms11_4
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms11_5
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms11_6
+        </p>
+        <h6
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+        >
+          imprint.title12
+        </h6>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms12_1
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          Eisbach Riders 
+          <br />
+          Robin Eisenhardt & Michael Schmidt GbR 
+          <br />
+          Lothstr. 72 
+          <br />
+          80797 München 
+          <br />
+          Deutschland 
+          <br />
+          E-Mail: business@eisbach-riders.com
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+        >
+          imprint.terms12_2
+        </p>
+        <h5
+          class="MuiTypography-root-1 MuiTypography-h5-17 Hook-title-901hqm"
+        >
+          imprint.credits
+        </h5>
+        <a
+          href="https://unsplash.com/@thefoxicon?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge"
+          rel="noopener noreferrer"
+          style="background-color: black; color: white; text-decoration: none; padding: 4px 6px; font-family: -apple-system, BlinkMacSystemFont, \\"San Francisco\\", \\"Helvetica Neue\\", Helvetica, Ubuntu, Roboto, Noto, \\"Segoe UI\\", Arial, sans-serif; font-size: 12px; font-weight: bold; line-height: 1.2; display: inline-block; border-radius: 3px;"
+          target="_blank"
+          title="Download free do whatever you want high-resolution photos from Mike Fox"
+        >
+          <span
+            style="display: inline-block; padding: 2px 3px;"
+          >
+            <svg
+              style="height: 12px; width: auto; position: relative; vertical-align: middle; top: -2px; fill: white;"
+              viewBox="0 0 32 32"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                unsplash-logo
+              </title>
+              <path
+                d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"
+              />
+            </svg>
+          </span>
+          <span
+            style="display: inline-block; padding: 2px 3px;"
+          >
+            Mike Fox
+          </span>
+        </a>
+        <a
+          href="https://unsplash.com/@jeremybishop?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge"
+          rel="noopener noreferrer"
+          style="background-color: black; color: white; text-decoration: none; padding: 4px 6px; font-family: -apple-system, BlinkMacSystemFont, \\"San Francisco\\", \\"Helvetica Neue\\", Helvetica, Ubuntu, Roboto, Noto, \\"Segoe UI\\", Arial, sans-serif; font-size: 12px; font-weight: bold; line-height: 1.2; display: inline-block; border-radius: 3px;"
+          target="_blank"
+          title="Download free do whatever you want high-resolution photos from Jeremy Bishop"
+        >
+          <span
+            style="display: inline-block; padding: 2px 3px;"
+          >
+            <svg
+              style="height: 12px; width: auto; position: relative; vertical-align: middle; top: -2px; fill: white;"
+              viewBox="0 0 32 32"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                unsplash-logo
+              </title>
+              <path
+                d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"
+              />
+            </svg>
+          </span>
+          <span
+            style="display: inline-block; padding: 2px 3px;"
+          >
+            Jeremy Bishop
+          </span>
+        </a>
+        <a
+          href="https://unsplash.com/@timmarshall?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge"
+          rel="noopener noreferrer"
+          style="background-color: black; color: white; text-decoration: none; padding: 4px 6px; font-family: -apple-system, BlinkMacSystemFont, \\"San Francisco\\", \\"Helvetica Neue\\", Helvetica, Ubuntu, Roboto, Noto, \\"Segoe UI\\", Arial, sans-serif; font-size: 12px; font-weight: bold; line-height: 1.2; display: inline-block; border-radius: 3px;"
+          target="_blank"
+          title="Download free do whatever you want high-resolution photos from Tim Marshall"
+        >
+          <span
+            style="display: inline-block; padding: 2px 3px;"
+          >
+            <svg
+              style="height: 12px; width: auto; position: relative; vertical-align: middle; top: -2px; fill: white;"
+              viewBox="0 0 32 32"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>
+                unsplash-logo
+              </title>
+              <path
+                d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"
+              />
+            </svg>
+          </span>
+          <span
+            style="display: inline-block; padding: 2px 3px;"
+          >
+            Tim Marshall
+          </span>
+        </a>
+        <div>
+          Icons made by
+           
+          <a
+            href="https://www.freepik.com/"
+            title="Freepik"
+          >
+            Freepik
+          </a>
+           
+          from
+           
+          <a
+            href="https://www.flaticon.com/"
+            title="Flaticon"
+          >
+            www.flaticon.com
+          </a>
+           
+          is licensed by
+           
+          <a
+            href="http://creativecommons.org/licenses/by/3.0/"
+            target="_blank"
+            title="Creative Commons BY 3.0"
+          >
+            CC 3.0 BY
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="Hook-container-1oc7a24"
+      id="legal"
+    >
+      <h5
+        class="MuiTypography-root-1 MuiTypography-h5-17 Hook-title-901hqm"
+      >
+        imprint.imprint
+      </h5>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        Eisbach Riders 
+        <br />
+        Robin Eisenhardt & Michael Schmidt GbR 
+        <br />
+        Lothstr. 72 
+        <br />
+        80797 München 
+        <br />
+        Deutschland 
+        <br />
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        Tel.: 0176/69019542 
+        <br />
+        E-Mail: business@eisbach-riders.com
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        Vertretungsberechtigte Gesellschafter: Robin Eisenhardt, Michael Schmidt
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz: DE 320071401 Plattform der EU-Kommission zur 
+        <br />
+        Online-Streitbeilegung:
+         
+        <a
+          href="https://ec.europa.eu/consumers/odr"
+        >
+          https://ec.europa.eu/consumers/odr
+        </a>
+        Wir sind zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle weder verpflichtet noch bereit.
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        Verantwortliche/r i.S.d. § 55 Abs. 2 RStV: Robin Eisenhardt, Michael Schmidt, Lothstr. 72, 80797, München
+      </p>
+      <h6
+        class="MuiTypography-root-1 MuiTypography-h6-18 Hook-title-901hqm"
+      >
+        imprint.terms
+      </h6>
+      <h6
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+      >
+        imprint.title1
+      </h6>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms1_1
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms1_2
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms1_3
+      </p>
+      <h6
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+      >
+        imprint.title2
+      </h6>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms2_1
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms2_2
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms2_3
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms2_4
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms2_5
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms2_6
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms2_7
+      </p>
+      <h6
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+      >
+        imprint.title3
+      </h6>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms3_1
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms3_2
+      </p>
+      <h6
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+      >
+        imprint.title4
+      </h6>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms4_1
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms4_2
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms4_3
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms4_4
+      </p>
+      <h6
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+      >
+        imprint.title5
+      </h6>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms5_1
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms5_2
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms5_3
+      </p>
+      <h6
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+      >
+        imprint.title6
+      </h6>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms6_1
+      </p>
+      <h6
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+      >
+        imprint.title7
+      </h6>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms7_1
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms7_2
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms7_3
+      </p>
+      <h6
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+      >
+        imprint.title8
+      </h6>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms8_1
+      </p>
+      <h6
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+      >
+        imprint.title9
+      </h6>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms9_1
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms9_2
+      </p>
+      <h6
+        class="MuiTypography-root-1 MuiTypography-h6-18 Hook-title-901hqm"
+      >
+        imprint.title10
+      </h6>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms10_1
+      </p>
+      <h6
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+      >
+        imprint.title11
+      </h6>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms11_1
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms11_2
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms11_3
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms11_4
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms11_5
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms11_6
+      </p>
+      <h6
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+      >
+        imprint.title12
+      </h6>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms12_1
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        Eisbach Riders 
+        <br />
+        Robin Eisenhardt & Michael Schmidt GbR 
+        <br />
+        Lothstr. 72 
+        <br />
+        80797 München 
+        <br />
+        Deutschland 
+        <br />
+        E-Mail: business@eisbach-riders.com
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1t5oltf"
+      >
+        imprint.terms12_2
+      </p>
+      <h5
+        class="MuiTypography-root-1 MuiTypography-h5-17 Hook-title-901hqm"
+      >
+        imprint.credits
+      </h5>
+      <a
+        href="https://unsplash.com/@thefoxicon?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge"
+        rel="noopener noreferrer"
+        style="background-color: black; color: white; text-decoration: none; padding: 4px 6px; font-family: -apple-system, BlinkMacSystemFont, \\"San Francisco\\", \\"Helvetica Neue\\", Helvetica, Ubuntu, Roboto, Noto, \\"Segoe UI\\", Arial, sans-serif; font-size: 12px; font-weight: bold; line-height: 1.2; display: inline-block; border-radius: 3px;"
+        target="_blank"
+        title="Download free do whatever you want high-resolution photos from Mike Fox"
+      >
+        <span
+          style="display: inline-block; padding: 2px 3px;"
+        >
+          <svg
+            style="height: 12px; width: auto; position: relative; vertical-align: middle; top: -2px; fill: white;"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              unsplash-logo
+            </title>
+            <path
+              d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"
+            />
+          </svg>
+        </span>
+        <span
+          style="display: inline-block; padding: 2px 3px;"
+        >
+          Mike Fox
+        </span>
+      </a>
+      <a
+        href="https://unsplash.com/@jeremybishop?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge"
+        rel="noopener noreferrer"
+        style="background-color: black; color: white; text-decoration: none; padding: 4px 6px; font-family: -apple-system, BlinkMacSystemFont, \\"San Francisco\\", \\"Helvetica Neue\\", Helvetica, Ubuntu, Roboto, Noto, \\"Segoe UI\\", Arial, sans-serif; font-size: 12px; font-weight: bold; line-height: 1.2; display: inline-block; border-radius: 3px;"
+        target="_blank"
+        title="Download free do whatever you want high-resolution photos from Jeremy Bishop"
+      >
+        <span
+          style="display: inline-block; padding: 2px 3px;"
+        >
+          <svg
+            style="height: 12px; width: auto; position: relative; vertical-align: middle; top: -2px; fill: white;"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              unsplash-logo
+            </title>
+            <path
+              d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"
+            />
+          </svg>
+        </span>
+        <span
+          style="display: inline-block; padding: 2px 3px;"
+        >
+          Jeremy Bishop
+        </span>
+      </a>
+      <a
+        href="https://unsplash.com/@timmarshall?utm_medium=referral&utm_campaign=photographer-credit&utm_content=creditBadge"
+        rel="noopener noreferrer"
+        style="background-color: black; color: white; text-decoration: none; padding: 4px 6px; font-family: -apple-system, BlinkMacSystemFont, \\"San Francisco\\", \\"Helvetica Neue\\", Helvetica, Ubuntu, Roboto, Noto, \\"Segoe UI\\", Arial, sans-serif; font-size: 12px; font-weight: bold; line-height: 1.2; display: inline-block; border-radius: 3px;"
+        target="_blank"
+        title="Download free do whatever you want high-resolution photos from Tim Marshall"
+      >
+        <span
+          style="display: inline-block; padding: 2px 3px;"
+        >
+          <svg
+            style="height: 12px; width: auto; position: relative; vertical-align: middle; top: -2px; fill: white;"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>
+              unsplash-logo
+            </title>
+            <path
+              d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"
+            />
+          </svg>
+        </span>
+        <span
+          style="display: inline-block; padding: 2px 3px;"
+        >
+          Tim Marshall
+        </span>
+      </a>
+      <div>
+        Icons made by
+         
+        <a
+          href="https://www.freepik.com/"
+          title="Freepik"
+        >
+          Freepik
+        </a>
+         
+        from
+         
+        <a
+          href="https://www.flaticon.com/"
+          title="Flaticon"
+        >
+          www.flaticon.com
+        </a>
+         
+        is licensed by
+         
+        <a
+          href="http://creativecommons.org/licenses/by/3.0/"
+          target="_blank"
+          title="Creative Commons BY 3.0"
+        >
+          CC 3.0 BY
+        </a>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

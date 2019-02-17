@@ -1,0 +1,112 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Newsletter renders correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="Hook-containerNewsletter-122zkk4"
+      >
+        <h5
+          class="MuiTypography-root-8 MuiTypography-h5-24 Hook-textNewsletter-kn9p3n"
+        >
+          newsletter.sectionTitle
+        </h5>
+        <p
+          class="MuiTypography-root-8 MuiTypography-body1-17 Hook-subtitleNewsletter-f88uxn"
+        >
+          newsletter.message
+        </p>
+        <button
+          class="MuiButtonBase-root-61 MuiButton-root-44 MuiButton-contained-52 MuiButton-containedPrimary-53 Hook-button-66oo39"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label-45"
+          >
+            newsletter.signUp
+          </span>
+          <span
+            class="MuiTouchRipple-root-81"
+          />
+        </button>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="Hook-containerNewsletter-122zkk4"
+    >
+      <h5
+        class="MuiTypography-root-8 MuiTypography-h5-24 Hook-textNewsletter-kn9p3n"
+      >
+        newsletter.sectionTitle
+      </h5>
+      <p
+        class="MuiTypography-root-8 MuiTypography-body1-17 Hook-subtitleNewsletter-f88uxn"
+      >
+        newsletter.message
+      </p>
+      <button
+        class="MuiButtonBase-root-61 MuiButton-root-44 MuiButton-contained-52 MuiButton-containedPrimary-53 Hook-button-66oo39"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiButton-label-45"
+        >
+          newsletter.signUp
+        </span>
+        <span
+          class="MuiTouchRipple-root-81"
+        />
+      </button>
+    </div>
+  </div>,
+  "debug": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

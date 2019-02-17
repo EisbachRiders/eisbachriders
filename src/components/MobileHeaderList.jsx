@@ -1,10 +1,13 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import { makeStyles } from '@material-ui/styles'
+import Button from '@material-ui/core/Button'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 import ArrowIcon from '@material-ui/icons/KeyboardArrowRight'
+import { FacebookIcon, InstagramIcon } from '../assets/icons/icons'
 
 const useStyles = makeStyles(theme => ({
   list: {
@@ -108,6 +111,11 @@ function MobileHeaderList({ links, linkLabels }) {
       </List>
     </div>
   )
+}
+
+MobileHeaderList.propTypes = {
+  links: PropTypes.array.isRequired,
+  linkLabels: PropTypes.array.isRequired,
 }
 
 export default MobileHeaderList

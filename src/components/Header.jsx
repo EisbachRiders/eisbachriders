@@ -74,7 +74,7 @@ function Header({ isHomepage }) {
   const [language, setLanguage] = useState('en')
 
   const handleLanguageChange = () => {
-    const lng = this.state.language === 'en' ? 'de' : 'en'
+    const lng = language === 'en' ? 'de' : 'en'
     i18n.changeLanguage(lng)
     setLanguage(lng)
   }

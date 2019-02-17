@@ -1,0 +1,996 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Privacy renders correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="Hook-container-1oc7a24"
+        id="privacy"
+      >
+        <h6
+          class="MuiTypography-root-1 MuiTypography-h6-18 Hook-title-10005cx"
+        >
+          privacy.privacy
+        </h6>
+        <h6
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+        >
+          privacy.title1
+        </h6>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+        >
+          privacy.terms1_1
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+        >
+          privacy.terms1_2
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+        >
+          privacy.terms1_3
+        </p>
+        <h6
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+        >
+          privacy.title2
+        </h6>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+        >
+          privacy.terms2_1
+        </p>
+        <ul
+          class="MuiList-root-37 MuiList-padding-38"
+        >
+          <li
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+          >
+            <div
+              class="MuiListItemText-root-53"
+            >
+              <span
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+              >
+                privacy.terms2_list1
+              </span>
+            </div>
+          </li>
+          <li
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+          >
+            <div
+              class="MuiListItemText-root-53"
+            >
+              <span
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+              >
+                privacy.terms2_list2
+              </span>
+            </div>
+          </li>
+          <li
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+          >
+            <div
+              class="MuiListItemText-root-53"
+            >
+              <span
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+              >
+                privacy.terms2_list3
+              </span>
+            </div>
+          </li>
+          <li
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+          >
+            <div
+              class="MuiListItemText-root-53"
+            >
+              <span
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+              >
+                privacy.terms2_list4
+              </span>
+            </div>
+          </li>
+          <li
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+          >
+            <div
+              class="MuiListItemText-root-53"
+            >
+              <span
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+              >
+                privacy.terms2_list5
+              </span>
+            </div>
+          </li>
+          <li
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+          >
+            <div
+              class="MuiListItemText-root-53"
+            >
+              <span
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+              >
+                privacy.terms2_list6
+              </span>
+            </div>
+          </li>
+          <li
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+          >
+            <div
+              class="MuiListItemText-root-53"
+            >
+              <span
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+              >
+                privacy.terms2_list7
+              </span>
+            </div>
+          </li>
+        </ul>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+        >
+          privacy.terms2_2
+        </p>
+        <h6
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+        >
+          privacy.title3
+        </h6>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+        >
+          privacy.terms3_1
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+        >
+          privacy.terms3_2
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+        >
+          privacy.terms3_3
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+        >
+          privacy.terms3_4
+        </p>
+        <ul
+          class="MuiList-root-37 MuiList-padding-38"
+        >
+          <li
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+          >
+            <div
+              class="MuiListItemText-root-53"
+            >
+              <span
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+              >
+                - Internet Explorer: https://support.microsoft.com/en-us/help/17442/windows-internet-explorer-delete-manage-cookies 
+              </span>
+            </div>
+          </li>
+          <li
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+          >
+            <div
+              class="MuiListItemText-root-53"
+            >
+              <span
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+              >
+                - Firefox: https://www.mozilla.org/en-US/privacy/websites/#cookies 
+              </span>
+            </div>
+          </li>
+          <li
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+          >
+            <div
+              class="MuiListItemText-root-53"
+            >
+              <span
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+              >
+                - Chrome: https://support.google.com/accounts/answer/61416?co=GENIE.Platform%3DDesktop&hl=en 
+              </span>
+            </div>
+          </li>
+          <li
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+          >
+            <div
+              class="MuiListItemText-root-53"
+            >
+              <span
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+              >
+                - Safari: https://support.apple.com/en-gb/guide/safari/manage-cookies-and-website-data-sfri11471/mac 
+              </span>
+            </div>
+          </li>
+          <li
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+          >
+            <div
+              class="MuiListItemText-root-53"
+            >
+              <span
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+              >
+                - Opera: https://help.opera.com/en/latest/web-preferences/#cookies 
+              </span>
+            </div>
+          </li>
+        </ul>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+        >
+          privacy.terms3_5
+        </p>
+        <h6
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+        >
+          privacy.title4
+        </h6>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+        >
+          privacy.terms4_1
+        </p>
+        <h6
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+        >
+          privacy.title5
+        </h6>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+        >
+          privacy.terms5_1
+        </p>
+        <h6
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+        >
+          privacy.title6
+        </h6>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+        >
+          privacy.terms6_1
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+        >
+          privacy.terms6_2
+        </p>
+        <h6
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+        >
+          privacy.title7
+        </h6>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+        >
+          privacy.terms7_1
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+        >
+          privacy.terms7_2
+        </p>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+        >
+          privacy.terms7_3
+        </p>
+        <h6
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+        >
+          privacy.title8
+        </h6>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+        >
+          privacy.terms8_1
+        </p>
+        <a
+          class="Hook-link-1x0sqxw"
+          href="javascript:gaOptout()"
+        >
+          privacy.terms8_3
+        </a>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+        >
+          privacy.terms8_4
+        </p>
+        <h6
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+        >
+          privacy.title9
+        </h6>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+        >
+          privacy.terms9_1
+        </p>
+        <h6
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+        >
+          privacy.title10
+        </h6>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+        >
+          privacy.terms10_1
+        </p>
+        <ul
+          class="MuiList-root-37 MuiList-padding-38"
+        >
+          <li
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+          >
+            <div
+              class="MuiListItemText-root-53"
+            >
+              <span
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+              >
+                privacy.terms10_list1
+              </span>
+            </div>
+          </li>
+          <li
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+          >
+            <div
+              class="MuiListItemText-root-53"
+            >
+              <span
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+              >
+                privacy.terms10_list2
+              </span>
+            </div>
+             
+          </li>
+          <li
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+          >
+            <div
+              class="MuiListItemText-root-53"
+            >
+              <span
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+              >
+                privacy.terms10_list3
+              </span>
+            </div>
+             
+          </li>
+          <li
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+          >
+            <div
+              class="MuiListItemText-root-53"
+            >
+              <span
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+              >
+                privacy.terms10_list4
+              </span>
+            </div>
+             
+          </li>
+          <li
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+          >
+            <div
+              class="MuiListItemText-root-53"
+            >
+              <span
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+              >
+                privacy.terms10_list5
+              </span>
+            </div>
+             
+          </li>
+          <li
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+          >
+            <div
+              class="MuiListItemText-root-53"
+            >
+              <span
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+              >
+                privacy.terms10_list6
+              </span>
+            </div>
+             
+          </li>
+          <li
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+          >
+            <div
+              class="MuiListItemText-root-53"
+            >
+              <span
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+              >
+                privacy.terms10_list7
+              </span>
+            </div>
+             
+          </li>
+          <li
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+          >
+            <div
+              class="MuiListItemText-root-53"
+            >
+              <span
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+              >
+                privacy.terms10_list8
+              </span>
+            </div>
+             
+          </li>
+        </ul>
+        <h6
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+        >
+          privacy.title10_2
+        </h6>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+        >
+          privacy.terms10_2
+        </p>
+        <h6
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+        >
+          privacy.title11
+        </h6>
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+        >
+          privacy.terms11_1
+        </p>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="Hook-container-1oc7a24"
+      id="privacy"
+    >
+      <h6
+        class="MuiTypography-root-1 MuiTypography-h6-18 Hook-title-10005cx"
+      >
+        privacy.privacy
+      </h6>
+      <h6
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+      >
+        privacy.title1
+      </h6>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+      >
+        privacy.terms1_1
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+      >
+        privacy.terms1_2
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+      >
+        privacy.terms1_3
+      </p>
+      <h6
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+      >
+        privacy.title2
+      </h6>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+      >
+        privacy.terms2_1
+      </p>
+      <ul
+        class="MuiList-root-37 MuiList-padding-38"
+      >
+        <li
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+        >
+          <div
+            class="MuiListItemText-root-53"
+          >
+            <span
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+            >
+              privacy.terms2_list1
+            </span>
+          </div>
+        </li>
+        <li
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+        >
+          <div
+            class="MuiListItemText-root-53"
+          >
+            <span
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+            >
+              privacy.terms2_list2
+            </span>
+          </div>
+        </li>
+        <li
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+        >
+          <div
+            class="MuiListItemText-root-53"
+          >
+            <span
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+            >
+              privacy.terms2_list3
+            </span>
+          </div>
+        </li>
+        <li
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+        >
+          <div
+            class="MuiListItemText-root-53"
+          >
+            <span
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+            >
+              privacy.terms2_list4
+            </span>
+          </div>
+        </li>
+        <li
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+        >
+          <div
+            class="MuiListItemText-root-53"
+          >
+            <span
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+            >
+              privacy.terms2_list5
+            </span>
+          </div>
+        </li>
+        <li
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+        >
+          <div
+            class="MuiListItemText-root-53"
+          >
+            <span
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+            >
+              privacy.terms2_list6
+            </span>
+          </div>
+        </li>
+        <li
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+        >
+          <div
+            class="MuiListItemText-root-53"
+          >
+            <span
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+            >
+              privacy.terms2_list7
+            </span>
+          </div>
+        </li>
+      </ul>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+      >
+        privacy.terms2_2
+      </p>
+      <h6
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+      >
+        privacy.title3
+      </h6>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+      >
+        privacy.terms3_1
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+      >
+        privacy.terms3_2
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+      >
+        privacy.terms3_3
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+      >
+        privacy.terms3_4
+      </p>
+      <ul
+        class="MuiList-root-37 MuiList-padding-38"
+      >
+        <li
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+        >
+          <div
+            class="MuiListItemText-root-53"
+          >
+            <span
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+            >
+              - Internet Explorer: https://support.microsoft.com/en-us/help/17442/windows-internet-explorer-delete-manage-cookies 
+            </span>
+          </div>
+        </li>
+        <li
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+        >
+          <div
+            class="MuiListItemText-root-53"
+          >
+            <span
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+            >
+              - Firefox: https://www.mozilla.org/en-US/privacy/websites/#cookies 
+            </span>
+          </div>
+        </li>
+        <li
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+        >
+          <div
+            class="MuiListItemText-root-53"
+          >
+            <span
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+            >
+              - Chrome: https://support.google.com/accounts/answer/61416?co=GENIE.Platform%3DDesktop&hl=en 
+            </span>
+          </div>
+        </li>
+        <li
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+        >
+          <div
+            class="MuiListItemText-root-53"
+          >
+            <span
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+            >
+              - Safari: https://support.apple.com/en-gb/guide/safari/manage-cookies-and-website-data-sfri11471/mac 
+            </span>
+          </div>
+        </li>
+        <li
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+        >
+          <div
+            class="MuiListItemText-root-53"
+          >
+            <span
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+            >
+              - Opera: https://help.opera.com/en/latest/web-preferences/#cookies 
+            </span>
+          </div>
+        </li>
+      </ul>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+      >
+        privacy.terms3_5
+      </p>
+      <h6
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+      >
+        privacy.title4
+      </h6>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+      >
+        privacy.terms4_1
+      </p>
+      <h6
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+      >
+        privacy.title5
+      </h6>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+      >
+        privacy.terms5_1
+      </p>
+      <h6
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+      >
+        privacy.title6
+      </h6>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+      >
+        privacy.terms6_1
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+      >
+        privacy.terms6_2
+      </p>
+      <h6
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+      >
+        privacy.title7
+      </h6>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+      >
+        privacy.terms7_1
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+      >
+        privacy.terms7_2
+      </p>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+      >
+        privacy.terms7_3
+      </p>
+      <h6
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+      >
+        privacy.title8
+      </h6>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+      >
+        privacy.terms8_1
+      </p>
+      <a
+        class="Hook-link-1x0sqxw"
+        href="javascript:gaOptout()"
+      >
+        privacy.terms8_3
+      </a>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+      >
+        privacy.terms8_4
+      </p>
+      <h6
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+      >
+        privacy.title9
+      </h6>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+      >
+        privacy.terms9_1
+      </p>
+      <h6
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+      >
+        privacy.title10
+      </h6>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+      >
+        privacy.terms10_1
+      </p>
+      <ul
+        class="MuiList-root-37 MuiList-padding-38"
+      >
+        <li
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+        >
+          <div
+            class="MuiListItemText-root-53"
+          >
+            <span
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+            >
+              privacy.terms10_list1
+            </span>
+          </div>
+        </li>
+        <li
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+        >
+          <div
+            class="MuiListItemText-root-53"
+          >
+            <span
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+            >
+              privacy.terms10_list2
+            </span>
+          </div>
+           
+        </li>
+        <li
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+        >
+          <div
+            class="MuiListItemText-root-53"
+          >
+            <span
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+            >
+              privacy.terms10_list3
+            </span>
+          </div>
+           
+        </li>
+        <li
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+        >
+          <div
+            class="MuiListItemText-root-53"
+          >
+            <span
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+            >
+              privacy.terms10_list4
+            </span>
+          </div>
+           
+        </li>
+        <li
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+        >
+          <div
+            class="MuiListItemText-root-53"
+          >
+            <span
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+            >
+              privacy.terms10_list5
+            </span>
+          </div>
+           
+        </li>
+        <li
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+        >
+          <div
+            class="MuiListItemText-root-53"
+          >
+            <span
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+            >
+              privacy.terms10_list6
+            </span>
+          </div>
+           
+        </li>
+        <li
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+        >
+          <div
+            class="MuiListItemText-root-53"
+          >
+            <span
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+            >
+              privacy.terms10_list7
+            </span>
+          </div>
+           
+        </li>
+        <li
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-11vmogn"
+        >
+          <div
+            class="MuiListItemText-root-53"
+          >
+            <span
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-stt2vw"
+            >
+              privacy.terms10_list8
+            </span>
+          </div>
+           
+        </li>
+      </ul>
+      <h6
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+      >
+        privacy.title10_2
+      </h6>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+      >
+        privacy.terms10_2
+      </p>
+      <h6
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
+      >
+        privacy.title11
+      </h6>
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-stt2vw"
+      >
+        privacy.terms11_1
+      </p>
+    </div>
+  </div>,
+  "debug": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

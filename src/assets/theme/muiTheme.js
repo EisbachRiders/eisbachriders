@@ -1,6 +1,5 @@
 import { createMuiTheme } from '@material-ui/core/styles'
 import './app.css'
-require('typeface-open-sans')
 
 const status = {
   white: '#ffffff',

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, Fragment } from 'react'
 import { Link } from 'gatsby'
 import { useTranslation } from 'react-i18next'
 import { makeStyles } from '@material-ui/styles'
@@ -99,7 +99,7 @@ function Tracking() {
           </span>
         }
         action={[
-          <>
+          <Fragment key={`snackbar`}>
             <Button
               className={classes.buttonDecline} //eslint-disable-next-line
               href="javascript:gaOptout();"
@@ -115,7 +115,7 @@ function Tracking() {
             >
               {t('tracking.accept')}
             </Button>
-          </>,
+          </Fragment>,
         ]}
       />
     </Snackbar>

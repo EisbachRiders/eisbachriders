@@ -1,0 +1,194 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewProduct renders correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="Hook-root-25f6vz"
+        id="products"
+      >
+        <div
+          class="Hook-img-2qqtdd gatsby-image-wrapper"
+          style="position: relative; overflow: hidden;"
+        >
+          <div
+            style="width: 100%;"
+          />
+          <picture>
+            <source />
+            <img
+              alt="newProduct.imgAlt"
+              style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; opacity: 0;"
+            />
+          </picture>
+          <noscript>
+            &lt;picture&gt;&lt;img src="" alt="newProduct.imgAlt" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+          </noscript>
+        </div>
+        <div
+          class="MuiPaper-root-1 MuiPaper-elevation10-13 MuiPaper-rounded-2 Hook-paper-njyc45"
+        >
+          <div
+            class="Hook-logo-9m77sf gatsby-image-wrapper"
+            style="position: relative; overflow: hidden;"
+          >
+            <div
+              style="width: 100%;"
+            />
+            <picture>
+              <source />
+              <img
+                alt="newProduct.logo"
+                style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; opacity: 0;"
+              />
+            </picture>
+            <noscript>
+              &lt;picture&gt;&lt;img src="" alt="newProduct.logo" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+            </noscript>
+          </div>
+          <p
+            class="MuiTypography-root-28 MuiTypography-body1-37 Hook-title-el340b"
+          >
+            Bee Swell Surf Wax
+          </p>
+          <p
+            class="MuiTypography-root-28 MuiTypography-body1-37"
+          >
+            newProduct.text
+          </p>
+          <button
+            class="MuiButtonBase-root-81 MuiButton-root-64 MuiButton-outlined-69 MuiButton-outlinedSecondary-71 Hook-button-1ihz2ti"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-label-65"
+            >
+              newProduct.more
+            </span>
+            <span
+              class="MuiTouchRipple-root-101"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="Hook-root-25f6vz"
+      id="products"
+    >
+      <div
+        class="Hook-img-2qqtdd gatsby-image-wrapper"
+        style="position: relative; overflow: hidden;"
+      >
+        <div
+          style="width: 100%;"
+        />
+        <picture>
+          <source />
+          <img
+            alt="newProduct.imgAlt"
+            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; opacity: 0;"
+          />
+        </picture>
+        <noscript>
+          &lt;picture&gt;&lt;img src="" alt="newProduct.imgAlt" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+        </noscript>
+      </div>
+      <div
+        class="MuiPaper-root-1 MuiPaper-elevation10-13 MuiPaper-rounded-2 Hook-paper-njyc45"
+      >
+        <div
+          class="Hook-logo-9m77sf gatsby-image-wrapper"
+          style="position: relative; overflow: hidden;"
+        >
+          <div
+            style="width: 100%;"
+          />
+          <picture>
+            <source />
+            <img
+              alt="newProduct.logo"
+              style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; opacity: 0;"
+            />
+          </picture>
+          <noscript>
+            &lt;picture&gt;&lt;img src="" alt="newProduct.logo" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+          </noscript>
+        </div>
+        <p
+          class="MuiTypography-root-28 MuiTypography-body1-37 Hook-title-el340b"
+        >
+          Bee Swell Surf Wax
+        </p>
+        <p
+          class="MuiTypography-root-28 MuiTypography-body1-37"
+        >
+          newProduct.text
+        </p>
+        <button
+          class="MuiButtonBase-root-81 MuiButton-root-64 MuiButton-outlined-69 MuiButton-outlinedSecondary-71 Hook-button-1ihz2ti"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label-65"
+          >
+            newProduct.more
+          </span>
+          <span
+            class="MuiTouchRipple-root-101"
+          />
+        </button>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

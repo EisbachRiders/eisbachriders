@@ -21,22 +21,20 @@ const SEO = ({ pathname, article, language }) => (
       }
 
       return (
-        <>
-          <Helmet
-            title={defaultTitle}
-            htmlAttributes={{ lang: language ? language : 'en' }}
-          >
-            <meta name="description" content={defaultDescription} />
-            <meta name="image" content={defaultImage} />
-            {seo.url && <meta property="og:url" content={seo.url} />}
-            {(article ? true : null) && (
-              <meta property="og:type" content="article" />
-            )}
-            <meta property="og:title" content={defaultTitle} />
-            <meta property="og:description" content={defaultDescription} />
-            <meta property="og:image" content={defaultImage} />
-          </Helmet>
-        </>
+        <Helmet
+          title={defaultTitle}
+          htmlAttributes={{ lang: language ? language : 'en' }}
+        >
+          <meta name="description" content={defaultDescription} />
+          <meta name="image" content={defaultImage} />
+          {seo.url && <meta property="og:url" content={seo.url} />}
+          {(article ? true : null) && (
+            <meta property="og:type" content="article" />
+          )}
+          <meta property="og:title" content={defaultTitle} />
+          <meta property="og:description" content={defaultDescription} />
+          <meta property="og:image" content={defaultImage} />
+        </Helmet>
       )
     }}
   />

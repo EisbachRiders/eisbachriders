@@ -1,5 +1,3 @@
-import theme from './src/assets/theme/muiTheme'
-
 module.exports = {
   siteMetadata: {
     title: 'Eisbach Riders',
@@ -45,10 +43,7 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: 'jss',
-      options: { theme },
-    }`gatsby-transformer-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -58,6 +53,12 @@ module.exports = {
       },
     },
     //`gatsby-plugin-feed`,
+    {
+      resolve: 'gatsby-plugin-material-ui',
+      options: {
+        pathToTheme: `${__dirname}/src/assets/theme/muiTheme`,
+      },
+    },
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {

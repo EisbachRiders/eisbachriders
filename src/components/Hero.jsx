@@ -121,7 +121,7 @@ function Hero({ img }) {
 }
 
 Hero.propTypes = {
-  img: PropTypes.object,
+  img: PropTypes.object.isRequired,
 }
 
 export default Hero

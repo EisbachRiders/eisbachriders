@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShopItem renders correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="Hook-root-1ctwg1a"
+      >
+        <img
+          alt="product test"
+          class="Hook-img-xjlo1k"
+        />
+        <div
+          class="Hook-descriptionContainer-1jku3ep"
+        >
+          <p
+            class="MuiTypography-root-1 MuiTypography-body1-10"
+          />
+          <div
+            class="Hook-fullWidth-9gqf2j"
+          >
+            <div
+              class="Hook-priceContainer-p5muo6"
+            >
+              <h6
+                class="MuiTypography-root-1 MuiTypography-h6-18 Hook-price-2c3ew8"
+              >
+                €undefined
+              </h6>
+              <div />
+            </div>
+          </div>
+          <button
+            class="MuiButtonBase-root-54 MuiButton-root-37 MuiButton-outlined-42 MuiButton-outlinedSecondary-44 Hook-button-1ihz2ti Hook-buttonFull-79ekce"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-label-38"
+            >
+              features
+            </span>
+            <span
+              class="MuiTouchRipple-root-74"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="Hook-root-1ctwg1a"
+    >
+      <img
+        alt="product test"
+        class="Hook-img-xjlo1k"
+      />
+      <div
+        class="Hook-descriptionContainer-1jku3ep"
+      >
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10"
+        />
+        <div
+          class="Hook-fullWidth-9gqf2j"
+        >
+          <div
+            class="Hook-priceContainer-p5muo6"
+          >
+            <h6
+              class="MuiTypography-root-1 MuiTypography-h6-18 Hook-price-2c3ew8"
+            >
+              €undefined
+            </h6>
+            <div />
+          </div>
+        </div>
+        <button
+          class="MuiButtonBase-root-54 MuiButton-root-37 MuiButton-outlined-42 MuiButton-outlinedSecondary-44 Hook-button-1ihz2ti Hook-buttonFull-79ekce"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label-38"
+          >
+            features
+          </span>
+          <span
+            class="MuiTouchRipple-root-74"
+          />
+        </button>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
