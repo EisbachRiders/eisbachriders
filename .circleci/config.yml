@@ -36,11 +36,6 @@ jobs:
           name: run linter
           command: yarn lint
 
-      # test
-      # - run:
-          # name: run tests
-          # command: yarn test
-
       #test coverage
       -run:
           name: run coverage
