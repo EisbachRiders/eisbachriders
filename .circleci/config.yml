@@ -1,40 +1,55 @@
 # # Javascript Node CircleCI 2.0 configuration file
 # #
-# # Check https://circleci.com/docs/2.0/language-javascript/ for more details
-# #
-# version: 2
-# jobs:
-#   build-job:
-#     docker:
-#       - image: circleci/node:11.9.0
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+jobs:
+  build-job:
+    docker:
+      - image: circleci/node:11.9.0
 
-#     working_directory: ~/repo
+    working_directory: ~/repo
 
-#     steps:
-#       - checkout
+    steps:
+      - checkout
 
-#       # Download and cache dependencies
-#       - restore_cache:
-#           keys:
-#             - v1-dependencies-{{ checksum "yarn.lock" }}
-#             - v1-dependencies-
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "yarn.lock" }}
+            - v1-dependencies-
 
-#       - run: yarn install
+      - run: yarn install
 
-#       - save_cache:
-#           paths:
-#             - node_modules
-#           key: v1-dependencies-{{ checksum "yarn.lock" }}
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "yarn.lock" }}
 
-#       # build
-#       - run:
-#           name: Compile gatsbyjs site
-#           command: yarn build
+      # format
+      - run:
+          name: run prettier
+          command: yarn format
 
-#       - persist_to_workspace:
-#           root: ./
-#           paths:
-#             - public
+      # lint
+      - run:
+          name: run linter
+          command: yarn lint
+
+      # test
+      - run:
+          name: run tests
+          command: yarn test
+
+      # build
+      - run:
+          name: Compile gatsbyjs site
+          command: yarn build
+
+      - persist_to_workspace:
+          root: ./
+          paths:
+            - public
 
 #   deploy-prod-job:
 #     docker:
@@ -55,19 +70,19 @@
 #           name: scp files
 #           command: scp -r public "$SITE_SSH_USER@$SITE_SSH_HOST:/eisbach-riders/$PROD_URL/"
 
-# workflows:
-#   version: 2
-#   build_and_deploy:
-#     jobs:
-#       - build-job:
-#           filters:
-#             branches:
-#               only:
-#                 - master
-#       - deploy-prod-job:
-#           filters:
-#             branches:
-#               only:
-#                 - master
-#           requires:
-#             - build-job
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build-job:
+          filters:
+            branches:
+              only:
+                - master
+      # - deploy-prod-job:
+      #     filters:
+      #       branches:
+      #         only:
+      #           - master
+      # requires:
+      #   - build-job

@@ -13,7 +13,7 @@
 
 ![](https://img.shields.io/github/license/cabutler10/website_EisbachRidersGatsby.svg?style=flat)
 
-![](https://img.shields.io/github/package-json/v/cabutler10/website_EisbachRidersGatsby.svg?style=flat)
+![](https://img.shields.io/github/package-json/version/cabutler10/website_EisbachRidersGatsby.svg?style=flat)
 
 ![Code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
 
