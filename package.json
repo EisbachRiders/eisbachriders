@@ -14,7 +14,7 @@
   },
   "scripts": {
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "jest --coverage -u",
+    "test": "jest --coverage -u && cat ./coverage/lcov.info | codacy-coverage",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
     "develop": "gatsby develop",
     "build": "gatsby build",
@@ -69,6 +69,7 @@
   "devDependencies": {
     "babel-jest": "^24.1.0",
     "babel-preset-gatsby": "^0.1.7",
+    "codacy-coverage": "^3.4.0",
     "eslint": "^5.13.0",
     "eslint-plugin-react": "^7.12.4",
     "gh-pages": "^2.0.1",
