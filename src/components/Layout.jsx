@@ -17,7 +17,7 @@ function Layout({ isHomepage, children }) {
   )
 }
 
-NewProduct.propTypes = {
+NewProduct2.propTypes = {
   isHomepage: PropTypes.bool,
   children: PropTypes.object.isRequired,
 }

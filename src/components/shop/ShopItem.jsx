@@ -1,15 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-import { withTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 import classnames from 'classnames'
-import withRoot from '../../withRoot'
-import { withStyles } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/styles'
 import IconButton from '@material-ui/core/IconButton'
 import Typography from '@material-ui/core/Typography'
 import { AmazonIcon, EbayIcon } from '../../assets/icons/icons'
 import ProductDialog from '../ProductDialog'
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   root: {
     flexBasis: '30%',
     textAlign: 'center',
@@ -55,9 +54,11 @@ const styles = theme => ({
   fullWidth: {
     width: '100%',
   },
-})
+}))
 
-function ShopItem({ product, classes, t }) {
+function ShopItem({ product }) {
+  const classes = useStyles()
+  const { t } = useTranslation()
   const [isDialogOpen, setDialog] = useState(false)
 
   return (
@@ -117,8 +118,7 @@ function ShopItem({ product, classes, t }) {
 }
 
 ShopItem.propTypes = {
-  classes: PropTypes.object.isRequired,
   product: PropTypes.object.isRequired,
 }
 
-export default withTranslation()(withRoot(withStyles(styles)(ShopItem)))
+export default ShopItem

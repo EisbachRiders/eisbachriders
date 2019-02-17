@@ -1,13 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
-import { withTranslation } from 'react-i18next'
-import withRoot from '../withRoot'
-import { withStyles } from '@material-ui/core/styles'
+import { useTranslation } from 'react-i18next'
+import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
 import Hidden from '@material-ui/core/Hidden'
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   root: {
     position: 'relative',
     paddingTop: 30,
@@ -103,9 +102,11 @@ const styles = theme => ({
       fontSize: 14,
     },
   },
-})
+}))
 
-function About({ img, waveImg, classes, t }) {
+function About({ img, waveImg }) {
+  const classes = useStyles()
+  const { t } = useTranslation()
   return (
     <div className={classes.root} id="about">
       <div className={classes.textContainer}>
@@ -142,9 +143,8 @@ function About({ img, waveImg, classes, t }) {
 }
 
 About.propTypes = {
-  classes: PropTypes.object.isRequired,
   img: PropTypes.object.isRequired,
   waveImg: PropTypes.object.isRequired,
 }
 
-export default withTranslation()(withRoot(withStyles(styles)(About)))
+export default About

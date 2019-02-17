@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
-import { withTranslation } from 'react-i18next'
-import withRoot from '../withRoot'
-import { withStyles } from '@material-ui/core/styles'
+import { useTranslation } from 'react-i18next'
+import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import Dialog from '@material-ui/core/Dialog'
@@ -16,9 +14,8 @@ import FormControlLabel from '@material-ui/core/FormControlLabel'
 import Checkbox from '@material-ui/core/Checkbox'
 import IconButton from '@material-ui/core/IconButton'
 import CloseIcon from '@material-ui/icons/Close'
-import { set } from 'idb-keyval'
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   containerNewsletter: {
     background: theme.status.white,
     paddingLeft: 15,
@@ -101,9 +98,11 @@ const styles = theme => ({
   error: {
     color: theme.palette.error.main,
   },
-})
+}))
 
-function Newsletter({ classes, t }) {
+function Newsletter() {
+  const classes = useStyles()
+  const { t } = useTranslation()
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
   const [isEmailValid, setEmailValid] = useState(null)
@@ -306,8 +305,4 @@ function Newsletter({ classes, t }) {
   )
 }
 
-Newsletter.propTypes = {
-  classes: PropTypes.object.isRequired,
-}
-
-export default withTranslation()(withRoot(withStyles(styles)(Newsletter)))
+export default Newsletter

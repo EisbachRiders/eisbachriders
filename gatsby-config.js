@@ -1,3 +1,5 @@
+import theme from './src/assets/theme/muiTheme'
+
 module.exports = {
   siteMetadata: {
     title: 'Eisbach Riders',
@@ -43,7 +45,10 @@ module.exports = {
         ],
       },
     },
-    `gatsby-transformer-sharp`,
+    {
+      resolve: 'jss',
+      options: { theme },
+    }`gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,

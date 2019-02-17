@@ -1,13 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
-import { withTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 import classnames from 'classnames'
-import withRoot from '../withRoot'
-import { withStyles } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   root: {
     height: 250,
     marginTop: -74,
@@ -85,9 +84,11 @@ const styles = theme => ({
       fontSize: 24,
     },
   },
-})
+}))
 
-function Hero({ img, classes, t }) {
+function Hero({ img }) {
+  const classes = useStyles()
+  const { t } = useTranslation()
   return (
     <div className={classes.root}>
       <Img
@@ -120,8 +121,7 @@ function Hero({ img, classes, t }) {
 }
 
 Hero.propTypes = {
-  classes: PropTypes.object.isRequired,
   img: PropTypes.object,
 }
 
-export default withTranslation()(withRoot(withStyles(styles)(Hero)))
+export default Hero

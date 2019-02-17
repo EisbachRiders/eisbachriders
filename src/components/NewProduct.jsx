@@ -1,16 +1,15 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
-import { withTranslation } from 'react-i18next'
-import withRoot from '../withRoot'
-import { withStyles } from '@material-ui/core/styles'
+import { useTranslation } from 'react-i18next'
+import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
 import Paper from '@material-ui/core/Paper'
 import Hidden from '@material-ui/core/Hidden'
 import ProductDialog from './ProductDialog'
 import { newProduct } from '../data/ProductData'
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   root: {
     paddingTop: 30,
     paddingBottom: 30,
@@ -66,9 +65,11 @@ const styles = theme => ({
     paddingBottom: 5,
     fontSize: 16,
   },
-})
+}))
 
-function NewProduct({ img, detailImg, classes, t }) {
+function NewProduct({ img, detailImg }) {
+  const classes = useStyles()
+  const { t } = useTranslation()
   const [isDialogOpen, setDialog] = useState(false)
 
   return (
@@ -101,9 +102,8 @@ function NewProduct({ img, detailImg, classes, t }) {
 }
 
 NewProduct.propTypes = {
-  classes: PropTypes.object.isRequired,
   img: PropTypes.object.isRequired,
   detailImg: PropTypes.object.isRequired,
 }
 
-export default withTranslation()(withRoot(withStyles(styles)(NewProduct)))
+export default NewProduct

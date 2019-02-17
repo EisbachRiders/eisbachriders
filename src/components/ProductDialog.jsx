@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import i18n from '../i18n/i18n'
-import { withTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 import SwipeableViews from 'react-swipeable-views'
 import classnames from 'classnames'
-import { withStyles } from '@material-ui/core/styles'
-import withRoot from '../withRoot'
+import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import Dialog from '@material-ui/core/Dialog'
@@ -23,7 +22,7 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft'
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight'
 import { AmazonIcon, EbayIcon } from '../assets/icons/icons'
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   buttonFull: {
     width: '100%',
     [theme.breakpoints.up('md')]: {
@@ -141,7 +140,7 @@ const styles = theme => ({
       overflowY: 'hidden',
     },
   },
-})
+}))
 
 function ProductDialog({
   handleDialogOpen,
@@ -151,9 +150,9 @@ function ProductDialog({
   product,
   buttonText,
   buttonFull,
-  classes,
-  t,
 }) {
+  const classes = useStyles()
+  const { t } = useTranslation()
   const [activeStep, setActiveStep] = useState(0)
 
   const handleIndexChange = activeStep => {
@@ -296,7 +295,6 @@ function ProductDialog({
 }
 
 ProductDialog.propTypes = {
-  classes: PropTypes.object.isRequired,
   handleDialogOpen: PropTypes.func.isRequired,
   handleDialogClose: PropTypes.func.isRequired,
   isDialogOpen: PropTypes.bool.isRequired,
@@ -306,4 +304,4 @@ ProductDialog.propTypes = {
   buttonFull: PropTypes.bool,
 }
 
-export default withTranslation()(withRoot(withStyles(styles)(ProductDialog)))
+export default ProductDialog

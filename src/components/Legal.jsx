@@ -1,11 +1,9 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { withTranslation } from 'react-i18next'
-import withRoot from '../withRoot'
-import { withStyles } from '@material-ui/core/styles'
+import { useTranslation } from 'react-i18next'
+import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   container: {
     background: theme.status.white,
     paddingLeft: 15,
@@ -40,10 +38,11 @@ const styles = theme => ({
       paddingLeft: 30,
     },
   },
-})
+}))
 
-const Legal = props => {
-  const { classes, t } = props
+function Legal() {
+  const classes = useStyles()
+  const { t } = useTranslation()
   return (
     <div className={classes.container} id="legal">
       <Typography variant="h5" className={classes.title}>
@@ -302,8 +301,4 @@ const Legal = props => {
   )
 }
 
-Legal.propTypes = {
-  classes: PropTypes.object.isRequired,
-}
-
-export default withTranslation()(withRoot(withStyles(styles)(Legal)))
+export default Legal

@@ -1,14 +1,12 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { withTranslation } from 'react-i18next'
-import withRoot from '../withRoot'
-import { withStyles } from '@material-ui/core/styles'
+import { useTranslation } from 'react-i18next'
+import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   container: {
     background: theme.status.white,
     paddingLeft: 15,
@@ -50,10 +48,11 @@ const styles = theme => ({
     paddingLeft: 60,
     fontSize: 12,
   },
-})
+}))
 
-const Privacy = props => {
-  const { classes, t } = props
+function Privacy() {
+  const classes = useStyles()
+  const { t } = useTranslation()
   return (
     <div className={classes.container} id="privacy">
       <Typography variant="h6" className={classes.title}>
@@ -238,8 +237,4 @@ const Privacy = props => {
   )
 }
 
-Privacy.propTypes = {
-  classes: PropTypes.object.isRequired,
-}
-
-export default withTranslation()(withRoot(withStyles(styles)(Privacy)))
+export default Privacy

@@ -1,17 +1,16 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
-import { withTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 import classnames from 'classnames'
-import withRoot from '../withRoot'
-import { withStyles } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/styles'
 import Hidden from '@material-ui/core/Hidden'
 import Typography from '@material-ui/core/Typography'
 import ProductDialog from './ProductDialog'
 import { featureProduct } from '../data/ProductData'
 import { SurfIcon, FeatherIcon } from '../assets/icons/icons'
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   root: {
     paddingTop: 30,
     paddingBottom: 30,
@@ -120,9 +119,11 @@ const styles = theme => ({
   padding: {
     marginTop: 30,
   },
-})
+}))
 
-function Feature({ img, classes, t }) {
+function Feature({ img }) {
+  const classes = useStyles()
+  const { t } = useTranslation()
   const [isDialogOpen, setDialog] = useState(false)
 
   return (
@@ -201,7 +202,7 @@ function Feature({ img, classes, t }) {
         </Typography>
         <ProductDialog
           product={featureProduct[0]}
-          buttonText={t('newProduct.more')}
+          buttonText={t('NewProduct2.more')}
           handleDialogOpen={() => setDialog(true)}
           handleDialogClose={() => setDialog(false)}
           isDialogOpen={isDialogOpen}
@@ -212,8 +213,7 @@ function Feature({ img, classes, t }) {
 }
 
 Feature.propTypes = {
-  classes: PropTypes.object.isRequired,
   img: PropTypes.object.isRequired,
 }
 
-export default withTranslation()(withRoot(withStyles(styles)(Feature)))
+export default Feature

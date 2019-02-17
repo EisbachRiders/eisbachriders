@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import { withTranslation } from 'react-i18next'
-import withRoot from '../withRoot'
-import { withStyles } from '@material-ui/core/styles'
+import { useTranslation } from 'react-i18next'
+import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField'
@@ -11,7 +9,7 @@ import Snackbar from '@material-ui/core/Snackbar'
 import Notification from './Snackbar'
 import { InstagramIcon, FacebookIcon } from '../assets/icons/icons'
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.status.black,
     width: '100%',
@@ -138,9 +136,11 @@ const styles = theme => ({
     paddingLeft: 20,
     color: theme.palette.common.white,
   },
-})
+}))
 
-function Footer({ classes, t }) {
+function Footer() {
+  const classes = useStyles()
+  const { t } = useTranslation()
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
   const [message, setMessage] = useState('')
@@ -373,8 +373,4 @@ function Footer({ classes, t }) {
   )
 }
 
-Footer.propTypes = {
-  classes: PropTypes.object.isRequired,
-}
-
-export default withTranslation()(withRoot(withStyles(styles)(Footer)))
+export default Footer

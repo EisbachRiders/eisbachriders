@@ -1,14 +1,12 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import { withTranslation } from 'react-i18next'
-import withRoot from '../withRoot'
-import { withStyles } from '@material-ui/core/styles'
+import { useTranslation } from 'react-i18next'
+import { makeStyles } from '@material-ui/styles'
 import Button from '@material-ui/core/Button'
 import Snackbar from '@material-ui/core/Snackbar'
 import SnackbarContent from '@material-ui/core/SnackbarContent'
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   snackbar: {
     left: 0,
     right: 0,
@@ -61,9 +59,11 @@ const styles = theme => ({
       paddingLeft: 8,
     },
   },
-})
+}))
 
-function Tracking({ classes, t }) {
+function Tracking() {
+  const classes = useStyles()
+  const { t } = useTranslation()
   const [isSnackbarOpen, setSnackbar] = useState(true)
 
   const handleSnackbarAccept = () => {
@@ -122,8 +122,4 @@ function Tracking({ classes, t }) {
   )
 }
 
-Tracking.propTypes = {
-  classes: PropTypes.object.isRequired,
-}
-
-export default withTranslation()(withRoot(withStyles(styles)(Tracking)))
+export default Tracking

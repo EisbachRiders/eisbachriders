@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import i18n from '../i18n/i18n'
-import { withTranslation } from 'react-i18next'
-import withRoot from '../withRoot'
-import { withStyles } from '@material-ui/core/styles'
+import { useTranslation } from 'react-i18next'
+import { makeStyles } from '@material-ui/styles'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Hidden from '@material-ui/core/Hidden'
@@ -12,7 +10,7 @@ import Button from '@material-ui/core/Button'
 import MobileHeaderList from '../components/MobileHeaderList'
 import ERIcon from '../assets/icons/ER'
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   grow: {
     flexGrow: 1,
   },
@@ -68,9 +66,11 @@ const styles = theme => ({
   primary: {
     backgroundColor: theme.palette.primary.main,
   },
-})
+}))
 
-function Header({ isHomepage, classes, t }) {
+function Header({ isHomepage }) {
+  const classes = useStyles()
+  const { t, i18n } = useTranslation()
   const [language, setLanguage] = useState('en')
 
   const handleLanguageChange = () => {
@@ -115,8 +115,7 @@ function Header({ isHomepage, classes, t }) {
 }
 
 Header.propTypes = {
-  classes: PropTypes.object.isRequired,
   isHomepage: PropTypes.bool,
 }
 
-export default withTranslation()(withRoot(withStyles(styles)(Header)))
+export default Header

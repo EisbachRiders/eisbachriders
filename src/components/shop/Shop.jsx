@@ -1,8 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { withTranslation } from 'react-i18next'
-import withRoot from '../../withRoot'
-import { withStyles } from '@material-ui/core/styles'
+import { useTranslation } from 'react-i18next'
+import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
 import ShopItem from './ShopItem'
 import {
@@ -11,7 +9,7 @@ import {
   productsOther,
 } from '../../data/ProductData'
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   root: {
     paddingTop: 30,
     paddingBottom: 30,
@@ -39,9 +37,11 @@ const styles = theme => ({
     marginBottom: 30,
     textTransform: 'uppercase',
   },
-})
+}))
 
-function Shop({ classes, t }) {
+function Shop() {
+  const classes = useStyles()
+  const { t } = useTranslation()
   return (
     <div className={classes.root}>
       <Typography className={classes.header} variant="h5">
@@ -72,8 +72,4 @@ function Shop({ classes, t }) {
   )
 }
 
-Shop.propTypes = {
-  classes: PropTypes.object.isRequired,
-}
-
-export default withTranslation()(withRoot(withStyles(styles)(Shop)))
+export default Shop

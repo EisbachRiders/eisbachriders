@@ -1,15 +1,3 @@
-/* eslint-disable react/prop-types, import/prefer-default-export */
-
-// It's not ready yet: https://github.com/gatsbyjs/gatsby/issues/8237.
-//
-// import React from 'react';
-// import withRoot from './src/withRoot';
-
-// const WithRoot = withRoot(props => props.children);
-
-// export const wrapRootElement = ({ element }) => {
-//   return <WithRoot key={Math.random()}>{element}</WithRoot>;
-// };
 import ReactDOM from 'react-dom'
 
 export const replaceHydrateFunction = () => (element, container, callback) =>

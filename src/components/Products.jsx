@@ -1,11 +1,8 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
-import Img from 'gatsby-image'
-import classnames from 'classnames'
-import withRoot from '../withRoot'
-import { withTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 import SwipeableViews from 'react-swipeable-views'
-import { withStyles } from '@material-ui/core/styles'
+import classnames from 'classnames'
+import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
 import IconButton from '@material-ui/core/IconButton'
 import Hidden from '@material-ui/core/Hidden'
@@ -16,7 +13,7 @@ import { AmazonIcon, EbayIcon } from '../assets/icons/icons'
 import ProductDialog from './ProductDialog'
 import { productsFins } from '../data/ProductData'
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   root: {
     paddingTop: 30,
     paddingBottom: 30,
@@ -117,9 +114,11 @@ const styles = theme => ({
   mobileStepper: {
     background: theme.status.white,
   },
-})
+}))
 
-function Products({ classes, t }) {
+function Products() {
+  const classes = useStyles()
+  const { t } = useTranslation()
   const [activeStep, setActiveStep] = useState(0)
   const [isDialogOpen, setDialog] = useState([false, false, false])
 
@@ -301,8 +300,4 @@ function Products({ classes, t }) {
   )
 }
 
-Products.propTypes = {
-  classes: PropTypes.object.isRequired,
-}
-
-export default withTranslation()(withRoot(withStyles(styles)(Products)))
+export default Products

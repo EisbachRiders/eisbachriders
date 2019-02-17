@@ -1,14 +1,12 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import withRoot from '../withRoot'
-import { withStyles } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/styles'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 import ArrowIcon from '@material-ui/icons/KeyboardArrowRight'
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   list: {
     width: 200,
   },
@@ -35,11 +33,10 @@ const styles = theme => ({
     height: 18,
     fill: theme.status.black,
   },
-})
+}))
 
-const MobileHeaderList = props => {
-  const { links, linkLabels, classes } = props
-
+function MobileHeaderList({ links, linkLabels }) {
+  const classes = useStyles()
   return (
     <div className={classes.list}>
       <List component="nav">
@@ -113,8 +110,4 @@ const MobileHeaderList = props => {
   )
 }
 
-MobileHeaderList.propTypes = {
-  classes: PropTypes.object.isRequired,
-}
-
-export default withRoot(withStyles(styles)(MobileHeaderList))
+export default MobileHeaderList
