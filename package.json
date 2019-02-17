@@ -14,8 +14,7 @@
   },
   "scripts": {
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "jest --coverage -u",
-    "test-with-coverage": "jest --coverage  && cat ./coverage/lcov.info | codacy-coverage --accountToken '29ebed3b89d24f06a40c871a048ccc6a' --username cabutler10 --projectName website_EisbachRidersGatsby",
+    "test": "jest --coverage -u && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
     "develop": "gatsby develop",
     "build": "gatsby build",
@@ -70,7 +69,7 @@
   "devDependencies": {
     "babel-jest": "^24.1.0",
     "babel-preset-gatsby": "^0.1.7",
-    "codacy-coverage": "^3.4.0",
+    "coveralls": "^3.0.2",
     "eslint": "^5.13.0",
     "eslint-plugin-react": "^7.12.4",
     "gh-pages": "^2.0.1",
