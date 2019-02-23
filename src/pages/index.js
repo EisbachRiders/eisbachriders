@@ -32,8 +32,8 @@ function Index({ data }) {
       <Layout isHomepage>
         <Hero img={heroImg} />
         <Feature img={featureImg} />
-        <Products />
         <NewProduct img={newImg} detailImg={detailImg} />
+        <Products />
         <About img={aboutImg} waveImg={waveImg} />
       </Layout>
     </div>

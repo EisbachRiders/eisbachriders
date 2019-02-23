@@ -5,6 +5,15 @@ import { makeStyles } from '@material-ui/styles'
 import Button from '@material-ui/core/Button'
 import Snackbar from '@material-ui/core/Snackbar'
 import SnackbarContent from '@material-ui/core/SnackbarContent'
+import { connect } from 'react-redux'
+
+const mapStateToProps = ({ isGAopen }) => {
+  return { isGAopen }
+}
+
+const mapDispatchToProps = dispatch => {
+  return { changeGA: () => dispatch({ type: `GOOGLEANALYTICS` }) }
+}
 
 const useStyles = makeStyles(theme => ({
   snackbar: {
@@ -61,18 +70,13 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-function Tracking() {
+function Tracking({ isGAopen, changeGA }) {
   const classes = useStyles()
   const { t } = useTranslation()
-  const [isSnackbarOpen, setSnackbar] = useState(true)
-
-  const handleSnackbarAccept = () => {
-    setSnackbar(false)
-  }
 
   const handleSnackbarDecline = () => {
     window['ga-disable-UA-130658859-1'] = true
-    setSnackbar(false)
+    changeGA()
   }
 
   return (
@@ -81,15 +85,15 @@ function Tracking() {
         vertical: 'bottom',
         horizontal: 'center',
       }}
-      open={isSnackbarOpen}
-      onClose={handleSnackbarAccept}
+      open={isGAopen}
+      onClose={changeGA}
       className={classes.snackbar}
     >
       <SnackbarContent
         className={classes.snackbarContent}
         classes={{ message: classes.message, action: classes.action }}
         aria-describedby="client-snackbar"
-        onClose={handleSnackbarAccept}
+        onClose={changeGA}
         message={
           <span id="client-snackbar">
             {t('tracking.message')}
@@ -111,7 +115,7 @@ function Tracking() {
               color="secondary"
               variant="contained"
               className={classes.button}
-              onClick={handleSnackbarAccept}
+              onClick={changeGA}
             >
               {t('tracking.accept')}
             </Button>
@@ -122,4 +126,7 @@ function Tracking() {
   )
 }
 
-export default Tracking
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Tracking)

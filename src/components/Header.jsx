@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
 import Link from './Link'
 import { useTranslation } from 'react-i18next'
 import { makeStyles } from '@material-ui/styles'
@@ -10,6 +9,15 @@ import Hidden from '@material-ui/core/Hidden'
 import Button from '@material-ui/core/Button'
 import MobileHeaderList from '../components/MobileHeaderList'
 import ERIcon from '../assets/icons/ER'
+import { connect } from 'react-redux'
+
+const mapStateToProps = ({ lng }) => {
+  return { lng }
+}
+
+const mapDispatchToProps = dispatch => {
+  return { changeLng: () => dispatch({ type: `LANGUAGE` }) }
+}
 
 const useStyles = makeStyles(theme => ({
   grow: {
@@ -69,19 +77,11 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-function Header({ isHomepage }) {
+function Header({ isHomepage, lng, changeLng }) {
   const classes = useStyles()
-  const { t, i18n } = useTranslation()
-  const [language, setLanguage] = useState('en')
-
-  const handleLanguageChange = () => {
-    const lng = language === 'en' ? 'de' : 'en'
-    i18n.changeLanguage(lng)
-    setLanguage(lng)
-  }
+  const { t } = useTranslation()
 
   const links = ['/shop/', 'contact']
-
   const linkLabels = [t('header.shop'), t('header.contact')]
 
   return (
@@ -101,13 +101,13 @@ function Header({ isHomepage }) {
                   <Button className={classes.button}>{linkLabels[idx]}</Button>
                 </Link>
               ))}
-              <Button className={classes.button} onClick={handleLanguageChange}>
-                {language === 'en' ? 'de' : 'en'}
+              <Button className={classes.button} onClick={changeLng}>
+                {lng === 'en' ? 'de' : 'en'}
               </Button>
             </div>
           </Hidden>
           <Hidden xsUp>
-            <MobileHeaderList />
+            <MobileHeaderList links={links} linkLabels={linkLabels} />
           </Hidden>
         </Toolbar>
       </AppBar>
@@ -117,6 +117,10 @@ function Header({ isHomepage }) {
 
 Header.propTypes = {
   isHomepage: PropTypes.bool,
+  lng: PropTypes.string.isRequired,
 }
 
-export default Header
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Header)

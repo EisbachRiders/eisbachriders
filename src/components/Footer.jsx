@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'gatsby'
+import Link from './Link'
 import { useTranslation } from 'react-i18next'
 import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
