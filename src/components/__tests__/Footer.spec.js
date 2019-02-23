@@ -5,10 +5,10 @@ import { ThemeProvider } from '@material-ui/styles'
 import theme from '../../assets/theme/muiTheme'
 
 describe('Footer', () => {
+  const mockProps = {
+    t: () => '',
+  }
   it('renders correctly', () => {
-    const mockProps = {
-      t: () => '',
-    }
     const component = render(
       <ThemeProvider theme={theme}>
         <Footer {...mockProps} />

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
+import Link from './Link'
 import { useTranslation } from 'react-i18next'
 import { makeStyles } from '@material-ui/styles'
 import AppBar from '@material-ui/core/AppBar'

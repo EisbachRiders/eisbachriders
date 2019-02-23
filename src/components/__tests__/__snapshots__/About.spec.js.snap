@@ -39,14 +39,18 @@ Object {
               style="width: 100%;"
             />
             <picture>
-              <source />
+              <source
+                sizes="mockString"
+                srcset="mockString"
+              />
               <img
                 alt="two surfers in ocean"
+                src="mockString"
                 style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; opacity: 0;"
               />
             </picture>
             <noscript>
-              &lt;picture&gt;&lt;img src="" alt="two surfers in ocean" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+              &lt;picture&gt;&lt;source srcSet="mockString" sizes="mockString" /&gt;&lt;img src="mockString" alt="two surfers in ocean" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
             </noscript>
           </div>
           <p
@@ -63,14 +67,18 @@ Object {
             style="width: 100%;"
           />
           <picture>
-            <source />
+            <source
+              sizes="mockString"
+              srcset="mockString"
+            />
             <img
               alt="wave background"
+              src="mockString"
               style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; opacity: 0;"
             />
           </picture>
           <noscript>
-            &lt;picture&gt;&lt;img src="" alt="wave background" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+            &lt;picture&gt;&lt;source srcSet="mockString" sizes="mockString" /&gt;&lt;img src="mockString" alt="wave background" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
           </noscript>
         </div>
       </div>
@@ -111,14 +119,18 @@ Object {
             style="width: 100%;"
           />
           <picture>
-            <source />
+            <source
+              sizes="mockString"
+              srcset="mockString"
+            />
             <img
               alt="two surfers in ocean"
+              src="mockString"
               style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; opacity: 0;"
             />
           </picture>
           <noscript>
-            &lt;picture&gt;&lt;img src="" alt="two surfers in ocean" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+            &lt;picture&gt;&lt;source srcSet="mockString" sizes="mockString" /&gt;&lt;img src="mockString" alt="two surfers in ocean" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
           </noscript>
         </div>
         <p
@@ -135,14 +147,18 @@ Object {
           style="width: 100%;"
         />
         <picture>
-          <source />
+          <source
+            sizes="mockString"
+            srcset="mockString"
+          />
           <img
             alt="wave background"
+            src="mockString"
             style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; opacity: 0;"
           />
         </picture>
         <noscript>
-          &lt;picture&gt;&lt;img src="" alt="wave background" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+          &lt;picture&gt;&lt;source srcSet="mockString" sizes="mockString" /&gt;&lt;img src="mockString" alt="wave background" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
         </noscript>
       </div>
     </div>

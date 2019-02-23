@@ -202,7 +202,7 @@ function Feature({ img }) {
         </Typography>
         <ProductDialog
           product={featureProduct[0]}
-          buttonText={t('NewProduct2.more')}
+          buttonText={t('newProduct.more')}
           handleDialogOpen={() => setDialog(true)}
           handleDialogClose={() => setDialog(false)}
           isDialogOpen={isDialogOpen}

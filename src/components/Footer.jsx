@@ -183,13 +183,6 @@ function Footer() {
     }
   }
 
-  const handleClose = (event, reason) => {
-    if (reason === 'clickaway') {
-      return
-    }
-    setSnackbar(false)
-  }
-
   const handleSubmit = () => {
     if (isEmailValid && isMessageValid && isNameValid && isTouched) {
       fetch('https://eisbach-riders.prod.with-datafire.io/contact', {
@@ -255,6 +248,7 @@ function Footer() {
             <div className={classes.inputContainer}>
               <TextField
                 id="name"
+                label="name"
                 name="name"
                 type="text"
                 className={classes.textField}
@@ -271,6 +265,7 @@ function Footer() {
               />
               <TextField
                 id="email"
+                label="email"
                 name="email"
                 type="email"
                 className={classes.textField}
@@ -287,6 +282,7 @@ function Footer() {
               />
             </div>
             <TextField
+              label="message"
               id="message"
               name="message"
               type="text"
@@ -305,6 +301,8 @@ function Footer() {
               required
             />
             <Button
+              data-testid="submit"
+              type="submit"
               variant="contained"
               className={classes.buttonSend}
               fullWidth

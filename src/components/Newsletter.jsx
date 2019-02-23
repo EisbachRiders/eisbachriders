@@ -237,7 +237,7 @@ function Newsletter() {
               required
               id="email"
               type="text"
-              label="Email"
+              label="email"
               error={isEmailValid === null ? null : !isEmailValid}
               placeholder={t('common.email')}
               value={email}
@@ -250,7 +250,7 @@ function Newsletter() {
               required
               id="name"
               type="text"
-              label="Name"
+              label="name"
               error={isNameValid === null ? null : !isNameValid}
               placeholder={t('common.name')}
               value={name}
@@ -291,6 +291,7 @@ function Newsletter() {
             {t('common.cancel')}
           </Button>
           <Button
+            data-testid="submit"
             onClick={() => handleSubmit}
             className={classes.actionButton}
             color="primary"

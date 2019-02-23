@@ -7,7 +7,16 @@ import theme from '../../assets/theme/muiTheme'
 describe('Feature', () => {
   it('renders correctly', () => {
     const mockProps = {
-      img: { node: { fluid: {} } },
+      img: {
+        node: {
+          fluid: {
+            aspectRatio: 0,
+            src: 'mockString',
+            srcSet: 'mockString',
+            sizes: 'mockString',
+          },
+        },
+      },
       t: () => '',
     }
     const component = render(

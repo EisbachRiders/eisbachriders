@@ -1,4 +1,8 @@
-import ReactDOM from 'react-dom'
+// import ReactDOM from 'react-dom'
+import wrapWithProvider from './wrap-with-provider'
 
-export const replaceHydrateFunction = () => (element, container, callback) =>
-  ReactDOM.render(element, container, callback)
+// export const replaceHydrateFunction = () => (element, container, callback) =>
+//   ReactDOM.render(element, container, callback)
+
+//For Redux
+export const wrapRootElement = wrapWithProvider

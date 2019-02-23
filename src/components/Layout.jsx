@@ -16,8 +16,10 @@ function Layout({ isHomepage, children }) {
     </>
   )
 }
-NewProduct.propTypes = {
+
+Layout.propTypes = {
   isHomepage: PropTypes.bool,
   children: PropTypes.object.isRequired,
 }
+
 export default Layout
