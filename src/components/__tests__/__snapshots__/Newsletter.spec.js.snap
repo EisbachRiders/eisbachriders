@@ -6,30 +6,30 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="Hook-containerNewsletter-122zkk4"
+        class="Hook-containerNewsletter-t257y2"
       >
         <h5
-          class="MuiTypography-root-8 MuiTypography-h5-24 Hook-textNewsletter-kn9p3n"
+          class="MuiTypography-root-8 MuiTypography-h5-17 Hook-textNewsletter-1hu5wjs"
         >
           newsletter.sectionTitle
         </h5>
         <p
-          class="MuiTypography-root-8 MuiTypography-body1-17 Hook-subtitleNewsletter-f88uxn"
+          class="MuiTypography-root-8 MuiTypography-body2-9 Hook-subtitleNewsletter-psw097"
         >
           newsletter.message
         </p>
         <button
-          class="MuiButtonBase-root-61 MuiButton-root-44 MuiButton-contained-52 MuiButton-containedPrimary-53 Hook-button-66oo39"
+          class="MuiButtonBase-root-55 MuiButton-root-38 MuiButton-contained-46 MuiButton-containedPrimary-47 Hook-button-1rqc8ai"
           tabindex="0"
           type="button"
         >
           <span
-            class="MuiButton-label-45"
+            class="MuiButton-label-39"
           >
             newsletter.signUp
           </span>
           <span
-            class="MuiTouchRipple-root-81"
+            class="MuiTouchRipple-root-75"
           />
         </button>
       </div>
@@ -37,30 +37,30 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="Hook-containerNewsletter-122zkk4"
+      class="Hook-containerNewsletter-t257y2"
     >
       <h5
-        class="MuiTypography-root-8 MuiTypography-h5-24 Hook-textNewsletter-kn9p3n"
+        class="MuiTypography-root-8 MuiTypography-h5-17 Hook-textNewsletter-1hu5wjs"
       >
         newsletter.sectionTitle
       </h5>
       <p
-        class="MuiTypography-root-8 MuiTypography-body1-17 Hook-subtitleNewsletter-f88uxn"
+        class="MuiTypography-root-8 MuiTypography-body2-9 Hook-subtitleNewsletter-psw097"
       >
         newsletter.message
       </p>
       <button
-        class="MuiButtonBase-root-61 MuiButton-root-44 MuiButton-contained-52 MuiButton-containedPrimary-53 Hook-button-66oo39"
+        class="MuiButtonBase-root-55 MuiButton-root-38 MuiButton-contained-46 MuiButton-containedPrimary-47 Hook-button-1rqc8ai"
         tabindex="0"
         type="button"
       >
         <span
-          class="MuiButton-label-45"
+          class="MuiButton-label-39"
         >
           newsletter.signUp
         </span>
         <span
-          class="MuiTouchRipple-root-81"
+          class="MuiTouchRipple-root-75"
         />
       </button>
     </div>

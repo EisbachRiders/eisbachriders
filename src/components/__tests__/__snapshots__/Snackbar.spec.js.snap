@@ -7,19 +7,19 @@ Object {
     <div>
       <div
         aria-describedby="client-snackbar"
-        class="MuiTypography-root-31 MuiTypography-body1-40 MuiPaper-root-4 MuiPaper-elevation6-12 MuiSnackbarContent-root-1 Hook-success-1slyaw"
+        class="MuiTypography-root-31 MuiTypography-body2-32 MuiPaper-root-4 MuiPaper-elevation6-12 MuiSnackbarContent-root-1 Hook-success-4k6cus"
         role="alertdialog"
       >
         <div
           class="MuiSnackbarContent-message-2"
         >
           <span
-            class="Hook-message-uwh5bs"
+            class="Hook-message-1au839e"
             id="client-snackbar"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root-67 Hook-icon-5ieqi9 Hook-iconVariant-orjs8e"
+              class="MuiSvgIcon-root-61 Hook-icon-lq5pk7 Hook-iconVariant-3xngzi"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -39,16 +39,16 @@ Object {
         >
           <button
             aria-label="Close"
-            class="MuiButtonBase-root-82 MuiIconButton-root-76 MuiIconButton-colorInherit-77"
+            class="MuiButtonBase-root-76 MuiIconButton-root-70 MuiIconButton-colorInherit-71"
             tabindex="0"
             type="button"
           >
             <span
-              class="MuiIconButton-label-81"
+              class="MuiIconButton-label-75"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root-67 Hook-icon-5ieqi9"
+                class="MuiSvgIcon-root-61 Hook-icon-lq5pk7"
                 focusable="false"
                 role="presentation"
                 viewBox="0 0 24 24"
@@ -63,7 +63,7 @@ Object {
               </svg>
             </span>
             <span
-              class="MuiTouchRipple-root-85"
+              class="MuiTouchRipple-root-79"
             />
           </button>
         </div>
@@ -73,19 +73,19 @@ Object {
   "container": <div>
     <div
       aria-describedby="client-snackbar"
-      class="MuiTypography-root-31 MuiTypography-body1-40 MuiPaper-root-4 MuiPaper-elevation6-12 MuiSnackbarContent-root-1 Hook-success-1slyaw"
+      class="MuiTypography-root-31 MuiTypography-body2-32 MuiPaper-root-4 MuiPaper-elevation6-12 MuiSnackbarContent-root-1 Hook-success-4k6cus"
       role="alertdialog"
     >
       <div
         class="MuiSnackbarContent-message-2"
       >
         <span
-          class="Hook-message-uwh5bs"
+          class="Hook-message-1au839e"
           id="client-snackbar"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root-67 Hook-icon-5ieqi9 Hook-iconVariant-orjs8e"
+            class="MuiSvgIcon-root-61 Hook-icon-lq5pk7 Hook-iconVariant-3xngzi"
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"
@@ -105,16 +105,16 @@ Object {
       >
         <button
           aria-label="Close"
-          class="MuiButtonBase-root-82 MuiIconButton-root-76 MuiIconButton-colorInherit-77"
+          class="MuiButtonBase-root-76 MuiIconButton-root-70 MuiIconButton-colorInherit-71"
           tabindex="0"
           type="button"
         >
           <span
-            class="MuiIconButton-label-81"
+            class="MuiIconButton-label-75"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root-67 Hook-icon-5ieqi9"
+              class="MuiSvgIcon-root-61 Hook-icon-lq5pk7"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -129,7 +129,7 @@ Object {
             </svg>
           </span>
           <span
-            class="MuiTouchRipple-root-85"
+            class="MuiTouchRipple-root-79"
           />
         </button>
       </div>

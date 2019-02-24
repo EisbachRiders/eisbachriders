@@ -6,33 +6,33 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="Hook-root-2v6cfj"
+        class="Hook-root-16r39lv"
         id="about"
       >
         <div
-          class="Hook-textContainer-17qwi1r"
+          class="Hook-textContainer-150o2ij"
         >
           <h5
-            class="MuiTypography-root-1 MuiTypography-h5-17 Hook-title-u0uo6s"
+            class="MuiTypography-root-1 MuiTypography-h5-10 Hook-title-1kqdeq9"
           >
             about.sectionTitle1
           </h5>
           <h5
-            class="MuiTypography-root-1 MuiTypography-h5-17 Hook-title-u0uo6s"
+            class="MuiTypography-root-1 MuiTypography-h5-10 Hook-title-1kqdeq9"
           >
             about.sectionTitle2
           </h5>
           <p
-            class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1fyv5yu"
+            class="MuiTypography-root-1 MuiTypography-body1-3 Hook-text-i6dtyb"
           >
             about.message
           </p>
         </div>
         <div
-          class="Hook-imgContainer-5tx6ux"
+          class="Hook-imgContainer-19quyfj"
         >
           <div
-            class="Hook-img-ldoh2k gatsby-image-wrapper"
+            class="Hook-img-1s8awyi gatsby-image-wrapper"
             style="position: relative; overflow: hidden;"
           >
             <div
@@ -54,13 +54,13 @@ Object {
             </noscript>
           </div>
           <p
-            class="MuiTypography-root-1 MuiTypography-body1-10 Hook-sideText-esk9qf"
+            class="MuiTypography-root-1 MuiTypography-body2-2 Hook-sideText-1lxgzlj"
           >
             Surf Accessories from Munich
           </p>
         </div>
         <div
-          class="Hook-backgroundImg-3em4y gatsby-image-wrapper"
+          class="Hook-backgroundImg-au67d9 gatsby-image-wrapper"
           style="position: absolute; overflow: hidden;"
         >
           <div
@@ -86,33 +86,33 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="Hook-root-2v6cfj"
+      class="Hook-root-16r39lv"
       id="about"
     >
       <div
-        class="Hook-textContainer-17qwi1r"
+        class="Hook-textContainer-150o2ij"
       >
         <h5
-          class="MuiTypography-root-1 MuiTypography-h5-17 Hook-title-u0uo6s"
+          class="MuiTypography-root-1 MuiTypography-h5-10 Hook-title-1kqdeq9"
         >
           about.sectionTitle1
         </h5>
         <h5
-          class="MuiTypography-root-1 MuiTypography-h5-17 Hook-title-u0uo6s"
+          class="MuiTypography-root-1 MuiTypography-h5-10 Hook-title-1kqdeq9"
         >
           about.sectionTitle2
         </h5>
         <p
-          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-1fyv5yu"
+          class="MuiTypography-root-1 MuiTypography-body1-3 Hook-text-i6dtyb"
         >
           about.message
         </p>
       </div>
       <div
-        class="Hook-imgContainer-5tx6ux"
+        class="Hook-imgContainer-19quyfj"
       >
         <div
-          class="Hook-img-ldoh2k gatsby-image-wrapper"
+          class="Hook-img-1s8awyi gatsby-image-wrapper"
           style="position: relative; overflow: hidden;"
         >
           <div
@@ -134,13 +134,13 @@ Object {
           </noscript>
         </div>
         <p
-          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-sideText-esk9qf"
+          class="MuiTypography-root-1 MuiTypography-body2-2 Hook-sideText-1lxgzlj"
         >
           Surf Accessories from Munich
         </p>
       </div>
       <div
-        class="Hook-backgroundImg-3em4y gatsby-image-wrapper"
+        class="Hook-backgroundImg-au67d9 gatsby-image-wrapper"
         style="position: absolute; overflow: hidden;"
       >
         <div

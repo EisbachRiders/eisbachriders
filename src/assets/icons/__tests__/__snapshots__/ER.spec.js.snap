@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ERIcon renders correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root-1"
+        focusable="false"
+        role="presentation"
+        viewBox="0 0 256.000000 256.000000"
+      >
+        <g
+          fill="currentColor"
+          stroke="none"
+          transform="translate(0.000000,256.000000) scale(0.100000,-0.100000)"
+        >
+          <path
+            d="M120 1336 c0 -617 2 -745 14 -755 10 -8 99 -9 330 -5 l316 7 0 26 c0
+14 -7 51 -15 81 -8 30 -20 82 -25 115 -19 103 -8 95 -129 95 l-108 0 -6 98
+c-4 53 -7 118 -7 145 l0 47 260 0 260 0 0 155 0 156 -260 -3 -260 -3 0 131 0
+131 188 6 c103 4 240 7 305 7 l117 0 0 155 0 155 -490 0 -490 0 0 -744z"
+          />
+          <path
+            d="M1370 2072 c0 -5 20 -52 44 -105 24 -52 52 -120 62 -151 l18 -57 165
+3 c190 3 235 -6 281 -58 27 -31 50 -88 50 -125 0 -9 -8 -40 -17 -69 -13 -41
+-25 -58 -57 -79 -38 -25 -47 -26 -194 -30 l-154 -3 6 -37 c3 -20 6 -91 6 -159
+l0 -123 90 3 91 3 129 -250 128 -250 190 0 c105 0 194 3 197 7 4 4 -29 71 -73
+150 -111 201 -129 233 -175 318 -22 41 -44 79 -48 84 -5 6 12 21 40 37 103 59
+186 188 202 314 36 270 -77 462 -326 556 -56 22 -77 23 -357 27 -183 2 -298 0
+-298 -6z"
+          />
+          <path
+            d="M1268 1978 c-95 -189 -151 -398 -167 -626 -17 -241 18 -510 88 -679
+35 -83 72 -153 82 -153 4 0 19 13 32 30 l26 30 21 -30 c12 -17 25 -30 30 -30
+25 0 103 179 138 315 24 94 26 115 26 355 1 284 -7 339 -83 580 -35 114 -117
+291 -136 297 -6 2 -32 -38 -57 -89z"
+          />
+          <path
+            d="M783 902 c-9 -5 -10 -18 -4 -42 4 -19 21 -90 37 -157 l28 -123 52 0
+c29 0 55 4 58 8 3 5 -12 78 -33 163 l-38 154 -44 3 c-24 1 -50 -1 -56 -6z"
+          />
+          <path
+            d="M945 900 c-3 -5 1 -35 8 -67 8 -32 25 -102 38 -155 l23 -98 53 0 c28
+0 54 4 57 9 3 4 1 23 -5 42 -5 19 -16 65 -25 103 -8 38 -21 93 -30 123 l-15
+53 -49 0 c-27 0 -52 -4 -55 -10z"
+          />
+        </g>
+      </svg>
+    </div>
+  </body>,
+  "container": <div>
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root-1"
+      focusable="false"
+      role="presentation"
+      viewBox="0 0 256.000000 256.000000"
+    >
+      <g
+        fill="currentColor"
+        stroke="none"
+        transform="translate(0.000000,256.000000) scale(0.100000,-0.100000)"
+      >
+        <path
+          d="M120 1336 c0 -617 2 -745 14 -755 10 -8 99 -9 330 -5 l316 7 0 26 c0
+14 -7 51 -15 81 -8 30 -20 82 -25 115 -19 103 -8 95 -129 95 l-108 0 -6 98
+c-4 53 -7 118 -7 145 l0 47 260 0 260 0 0 155 0 156 -260 -3 -260 -3 0 131 0
+131 188 6 c103 4 240 7 305 7 l117 0 0 155 0 155 -490 0 -490 0 0 -744z"
+        />
+        <path
+          d="M1370 2072 c0 -5 20 -52 44 -105 24 -52 52 -120 62 -151 l18 -57 165
+3 c190 3 235 -6 281 -58 27 -31 50 -88 50 -125 0 -9 -8 -40 -17 -69 -13 -41
+-25 -58 -57 -79 -38 -25 -47 -26 -194 -30 l-154 -3 6 -37 c3 -20 6 -91 6 -159
+l0 -123 90 3 91 3 129 -250 128 -250 190 0 c105 0 194 3 197 7 4 4 -29 71 -73
+150 -111 201 -129 233 -175 318 -22 41 -44 79 -48 84 -5 6 12 21 40 37 103 59
+186 188 202 314 36 270 -77 462 -326 556 -56 22 -77 23 -357 27 -183 2 -298 0
+-298 -6z"
+        />
+        <path
+          d="M1268 1978 c-95 -189 -151 -398 -167 -626 -17 -241 18 -510 88 -679
+35 -83 72 -153 82 -153 4 0 19 13 32 30 l26 30 21 -30 c12 -17 25 -30 30 -30
+25 0 103 179 138 315 24 94 26 115 26 355 1 284 -7 339 -83 580 -35 114 -117
+291 -136 297 -6 2 -32 -38 -57 -89z"
+        />
+        <path
+          d="M783 902 c-9 -5 -10 -18 -4 -42 4 -19 21 -90 37 -157 l28 -123 52 0
+c29 0 55 4 58 8 3 5 -12 78 -33 163 l-38 154 -44 3 c-24 1 -50 -1 -56 -6z"
+        />
+        <path
+          d="M945 900 c-3 -5 1 -35 8 -67 8 -32 25 -102 38 -155 l23 -98 53 0 c28
+0 54 4 57 9 3 4 1 23 -5 42 -5 19 -16 65 -25 103 -8 38 -21 93 -30 123 l-15
+53 -49 0 c-27 0 -52 -4 -55 -10z"
+        />
+      </g>
+    </svg>
+  </div>,
+  "debug": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllBySelectText": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getAllByValue": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getBySelectText": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "getByValue": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllBySelectText": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryAllByValue": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryBySelectText": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "queryByValue": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

@@ -6,26 +6,26 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="Hook-root-1ctwg1a"
+        class="Hook-root-o7yfbk"
       >
         <img
           alt="product test"
-          class="Hook-img-xjlo1k"
+          class="Hook-img-16x9eyn"
         />
         <div
-          class="Hook-descriptionContainer-1jku3ep"
+          class="Hook-descriptionContainer-12gz4p"
         >
           <p
-            class="MuiTypography-root-1 MuiTypography-body1-10"
+            class="MuiTypography-root-1 MuiTypography-body2-2"
           />
           <div
-            class="Hook-fullWidth-9gqf2j"
+            class="Hook-fullWidth-115baqa"
           >
             <div
-              class="Hook-priceContainer-p5muo6"
+              class="Hook-priceContainer-10ca940"
             >
               <h6
-                class="MuiTypography-root-1 MuiTypography-h6-18 Hook-price-2c3ew8"
+                class="MuiTypography-root-1 MuiTypography-h6-11 Hook-price-169xtyo"
               >
                 €undefined
               </h6>
@@ -33,17 +33,17 @@ Object {
             </div>
           </div>
           <button
-            class="MuiButtonBase-root-54 MuiButton-root-37 MuiButton-outlined-42 MuiButton-outlinedSecondary-44 Hook-button-1ihz2ti Hook-buttonFull-79ekce"
+            class="MuiButtonBase-root-48 MuiButton-root-31 MuiButton-outlined-36 MuiButton-outlinedSecondary-38 Hook-button-1ecjfgm Hook-buttonFull-twp37v"
             tabindex="0"
             type="button"
           >
             <span
-              class="MuiButton-label-38"
+              class="MuiButton-label-32"
             >
               features
             </span>
             <span
-              class="MuiTouchRipple-root-74"
+              class="MuiTouchRipple-root-68"
             />
           </button>
         </div>
@@ -52,26 +52,26 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="Hook-root-1ctwg1a"
+      class="Hook-root-o7yfbk"
     >
       <img
         alt="product test"
-        class="Hook-img-xjlo1k"
+        class="Hook-img-16x9eyn"
       />
       <div
-        class="Hook-descriptionContainer-1jku3ep"
+        class="Hook-descriptionContainer-12gz4p"
       >
         <p
-          class="MuiTypography-root-1 MuiTypography-body1-10"
+          class="MuiTypography-root-1 MuiTypography-body2-2"
         />
         <div
-          class="Hook-fullWidth-9gqf2j"
+          class="Hook-fullWidth-115baqa"
         >
           <div
-            class="Hook-priceContainer-p5muo6"
+            class="Hook-priceContainer-10ca940"
           >
             <h6
-              class="MuiTypography-root-1 MuiTypography-h6-18 Hook-price-2c3ew8"
+              class="MuiTypography-root-1 MuiTypography-h6-11 Hook-price-169xtyo"
             >
               €undefined
             </h6>
@@ -79,17 +79,17 @@ Object {
           </div>
         </div>
         <button
-          class="MuiButtonBase-root-54 MuiButton-root-37 MuiButton-outlined-42 MuiButton-outlinedSecondary-44 Hook-button-1ihz2ti Hook-buttonFull-79ekce"
+          class="MuiButtonBase-root-48 MuiButton-root-31 MuiButton-outlined-36 MuiButton-outlinedSecondary-38 Hook-button-1ecjfgm Hook-buttonFull-twp37v"
           tabindex="0"
           type="button"
         >
           <span
-            class="MuiButton-label-38"
+            class="MuiButton-label-32"
           >
             features
           </span>
           <span
-            class="MuiTouchRipple-root-74"
+            class="MuiTouchRipple-root-68"
           />
         </button>
       </div>

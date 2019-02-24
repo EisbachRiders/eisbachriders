@@ -6,47 +6,47 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="Hook-root-1knxder"
+        class="Hook-root-nh30nu"
       >
         <h5
-          class="MuiTypography-root-1 MuiTypography-h5-17 Hook-header-1w8rfj2"
+          class="MuiTypography-root-1 MuiTypography-h5-10 Hook-header-lmmypp"
         >
           fins
         </h5>
         <div
-          class="Hook-container-1b6f21j"
+          class="Hook-container-kln0ax"
         >
           <div
-            class="Hook-root-1ctwg1a"
+            class="Hook-root-o7yfbk"
           >
             <img
               alt="product test"
-              class="Hook-img-xjlo1k"
+              class="Hook-img-16x9eyn"
               src="test-file-stub"
             />
             <div
-              class="Hook-descriptionContainer-1jku3ep"
+              class="Hook-descriptionContainer-12gz4p"
             >
               <p
-                class="MuiTypography-root-1 MuiTypography-body1-10"
+                class="MuiTypography-root-1 MuiTypography-body2-2"
               >
                 FCS Double Tab Thruster Fin Set with Fin Key
               </p>
               <div
-                class="Hook-fullWidth-9gqf2j"
+                class="Hook-fullWidth-115baqa"
               >
                 <div
-                  class="Hook-priceContainer-p5muo6"
+                  class="Hook-priceContainer-10ca940"
                 >
                   <h6
-                    class="MuiTypography-root-1 MuiTypography-h6-18 Hook-price-2c3ew8"
+                    class="MuiTypography-root-1 MuiTypography-h6-11 Hook-price-169xtyo"
                   >
                     €19.90
                   </h6>
                   <div>
                     <a
                       aria-label="Amazon"
-                      class="MuiButtonBase-root-43 MuiIconButton-root-37"
+                      class="MuiButtonBase-root-37 MuiIconButton-root-31"
                       href="https://amzn.to/2Vr6Gt7"
                       rel="noopener"
                       role="button"
@@ -54,11 +54,11 @@ Object {
                       target="_blank"
                     >
                       <span
-                        class="MuiIconButton-label-42"
+                        class="MuiIconButton-label-36"
                       >
                         <svg
                           aria-hidden="true"
-                          class="MuiSvgIcon-root-46"
+                          class="MuiSvgIcon-root-40"
                           focusable="false"
                           role="presentation"
                           viewBox="-352.037 -291.281 800.073 678.559"
@@ -117,12 +117,12 @@ Object {
                         </svg>
                       </span>
                       <span
-                        class="MuiTouchRipple-root-89"
+                        class="MuiTouchRipple-root-83"
                       />
                     </a>
                     <a
                       aria-label="Ebay"
-                      class="MuiButtonBase-root-43 MuiIconButton-root-37"
+                      class="MuiButtonBase-root-37 MuiIconButton-root-31"
                       href="https://rover.ebay.com/rover/1/707-53477-19255-0/1?icep_id=114&ipn=icep&toolid=20004&campid=5338456795&mpre=https%3A%2F%2Fwww.ebay.de%2Fitm%2F183534256900"
                       rel="noopener"
                       role="button"
@@ -130,11 +130,11 @@ Object {
                       target="_blank"
                     >
                       <span
-                        class="MuiIconButton-label-42"
+                        class="MuiIconButton-label-36"
                       >
                         <svg
                           aria-hidden="true"
-                          class="MuiSvgIcon-root-46"
+                          class="MuiSvgIcon-root-40"
                           focusable="false"
                           role="presentation"
                           viewBox="0 0 302.8 120.1"
@@ -158,59 +158,59 @@ Object {
                         </svg>
                       </span>
                       <span
-                        class="MuiTouchRipple-root-89"
+                        class="MuiTouchRipple-root-83"
                       />
                     </a>
                   </div>
                 </div>
               </div>
               <button
-                class="MuiButtonBase-root-43 MuiButton-root-55 MuiButton-outlined-60 MuiButton-outlinedSecondary-62 Hook-button-1ihz2ti Hook-buttonFull-79ekce"
+                class="MuiButtonBase-root-37 MuiButton-root-49 MuiButton-outlined-54 MuiButton-outlinedSecondary-56 Hook-button-1ecjfgm Hook-buttonFull-twp37v"
                 tabindex="0"
                 type="button"
               >
                 <span
-                  class="MuiButton-label-56"
+                  class="MuiButton-label-50"
                 >
                   features
                 </span>
                 <span
-                  class="MuiTouchRipple-root-89"
+                  class="MuiTouchRipple-root-83"
                 />
               </button>
             </div>
           </div>
           <div
-            class="Hook-root-1ctwg1a"
+            class="Hook-root-o7yfbk"
           >
             <img
               alt="product test"
-              class="Hook-img-xjlo1k"
+              class="Hook-img-16x9eyn"
               src="test-file-stub"
             />
             <div
-              class="Hook-descriptionContainer-1jku3ep"
+              class="Hook-descriptionContainer-12gz4p"
             >
               <p
-                class="MuiTypography-root-1 MuiTypography-body1-10"
+                class="MuiTypography-root-1 MuiTypography-body2-2"
               >
                 RailProtect Tape
               </p>
               <div
-                class="Hook-fullWidth-9gqf2j"
+                class="Hook-fullWidth-115baqa"
               >
                 <div
-                  class="Hook-priceContainer-p5muo6"
+                  class="Hook-priceContainer-10ca940"
                 >
                   <h6
-                    class="MuiTypography-root-1 MuiTypography-h6-18 Hook-price-2c3ew8"
+                    class="MuiTypography-root-1 MuiTypography-h6-11 Hook-price-169xtyo"
                   >
                     €24.90
                   </h6>
                   <div>
                     <a
                       aria-label="Amazon"
-                      class="MuiButtonBase-root-43 MuiIconButton-root-37"
+                      class="MuiButtonBase-root-37 MuiIconButton-root-31"
                       href="https://amzn.to/2GTx3Vh"
                       rel="noopener"
                       role="button"
@@ -218,11 +218,11 @@ Object {
                       target="_blank"
                     >
                       <span
-                        class="MuiIconButton-label-42"
+                        class="MuiIconButton-label-36"
                       >
                         <svg
                           aria-hidden="true"
-                          class="MuiSvgIcon-root-46"
+                          class="MuiSvgIcon-root-40"
                           focusable="false"
                           role="presentation"
                           viewBox="-352.037 -291.281 800.073 678.559"
@@ -281,12 +281,12 @@ Object {
                         </svg>
                       </span>
                       <span
-                        class="MuiTouchRipple-root-89"
+                        class="MuiTouchRipple-root-83"
                       />
                     </a>
                     <a
                       aria-label="Ebay"
-                      class="MuiButtonBase-root-43 MuiIconButton-root-37"
+                      class="MuiButtonBase-root-37 MuiIconButton-root-31"
                       href="https://rover.ebay.com/rover/1/707-53477-19255-0/1?icep_id=114&ipn=icep&toolid=20004&campid=5338456795&mpre=https%3A%2F%2Fwww.ebay.de%2Fitm%2F183498197638"
                       rel="noopener"
                       role="button"
@@ -294,11 +294,11 @@ Object {
                       target="_blank"
                     >
                       <span
-                        class="MuiIconButton-label-42"
+                        class="MuiIconButton-label-36"
                       >
                         <svg
                           aria-hidden="true"
-                          class="MuiSvgIcon-root-46"
+                          class="MuiSvgIcon-root-40"
                           focusable="false"
                           role="presentation"
                           viewBox="0 0 302.8 120.1"
@@ -322,59 +322,59 @@ Object {
                         </svg>
                       </span>
                       <span
-                        class="MuiTouchRipple-root-89"
+                        class="MuiTouchRipple-root-83"
                       />
                     </a>
                   </div>
                 </div>
               </div>
               <button
-                class="MuiButtonBase-root-43 MuiButton-root-55 MuiButton-outlined-60 MuiButton-outlinedSecondary-62 Hook-button-1ihz2ti Hook-buttonFull-79ekce"
+                class="MuiButtonBase-root-37 MuiButton-root-49 MuiButton-outlined-54 MuiButton-outlinedSecondary-56 Hook-button-1ecjfgm Hook-buttonFull-twp37v"
                 tabindex="0"
                 type="button"
               >
                 <span
-                  class="MuiButton-label-56"
+                  class="MuiButton-label-50"
                 >
                   features
                 </span>
                 <span
-                  class="MuiTouchRipple-root-89"
+                  class="MuiTouchRipple-root-83"
                 />
               </button>
             </div>
           </div>
           <div
-            class="Hook-root-1ctwg1a"
+            class="Hook-root-o7yfbk"
           >
             <img
               alt="product test"
-              class="Hook-img-xjlo1k"
+              class="Hook-img-16x9eyn"
               src="test-file-stub"
             />
             <div
-              class="Hook-descriptionContainer-1jku3ep"
+              class="Hook-descriptionContainer-12gz4p"
             >
               <p
-                class="MuiTypography-root-1 MuiTypography-body1-10"
+                class="MuiTypography-root-1 MuiTypography-body2-2"
               >
                 Future Single Tab Thruster Fin Set with Fin Key
               </p>
               <div
-                class="Hook-fullWidth-9gqf2j"
+                class="Hook-fullWidth-115baqa"
               >
                 <div
-                  class="Hook-priceContainer-p5muo6"
+                  class="Hook-priceContainer-10ca940"
                 >
                   <h6
-                    class="MuiTypography-root-1 MuiTypography-h6-18 Hook-price-2c3ew8"
+                    class="MuiTypography-root-1 MuiTypography-h6-11 Hook-price-169xtyo"
                   >
                     €19.90
                   </h6>
                   <div>
                     <a
                       aria-label="Ebay"
-                      class="MuiButtonBase-root-43 MuiIconButton-root-37"
+                      class="MuiButtonBase-root-37 MuiIconButton-root-31"
                       href="http://www.ebay.de/itm/183498170584"
                       rel="noopener"
                       role="button"
@@ -382,11 +382,11 @@ Object {
                       target="_blank"
                     >
                       <span
-                        class="MuiIconButton-label-42"
+                        class="MuiIconButton-label-36"
                       >
                         <svg
                           aria-hidden="true"
-                          class="MuiSvgIcon-root-46"
+                          class="MuiSvgIcon-root-40"
                           focusable="false"
                           role="presentation"
                           viewBox="0 0 302.8 120.1"
@@ -410,68 +410,68 @@ Object {
                         </svg>
                       </span>
                       <span
-                        class="MuiTouchRipple-root-89"
+                        class="MuiTouchRipple-root-83"
                       />
                     </a>
                   </div>
                 </div>
               </div>
               <button
-                class="MuiButtonBase-root-43 MuiButton-root-55 MuiButton-outlined-60 MuiButton-outlinedSecondary-62 Hook-button-1ihz2ti Hook-buttonFull-79ekce"
+                class="MuiButtonBase-root-37 MuiButton-root-49 MuiButton-outlined-54 MuiButton-outlinedSecondary-56 Hook-button-1ecjfgm Hook-buttonFull-twp37v"
                 tabindex="0"
                 type="button"
               >
                 <span
-                  class="MuiButton-label-56"
+                  class="MuiButton-label-50"
                 >
                   features
                 </span>
                 <span
-                  class="MuiTouchRipple-root-89"
+                  class="MuiTouchRipple-root-83"
                 />
               </button>
             </div>
           </div>
         </div>
         <h5
-          class="MuiTypography-root-1 MuiTypography-h5-17 Hook-header-1w8rfj2"
+          class="MuiTypography-root-1 MuiTypography-h5-10 Hook-header-lmmypp"
         >
           leashes
         </h5>
         <div
-          class="Hook-container-1b6f21j"
+          class="Hook-container-kln0ax"
         >
           <div
-            class="Hook-root-1ctwg1a"
+            class="Hook-root-o7yfbk"
           >
             <img
               alt="product test"
-              class="Hook-img-xjlo1k"
+              class="Hook-img-16x9eyn"
               src="test-file-stub"
             />
             <div
-              class="Hook-descriptionContainer-1jku3ep"
+              class="Hook-descriptionContainer-12gz4p"
             >
               <p
-                class="MuiTypography-root-1 MuiTypography-body1-10"
+                class="MuiTypography-root-1 MuiTypography-body2-2"
               >
                 Bee Swell Wax
               </p>
               <div
-                class="Hook-fullWidth-9gqf2j"
+                class="Hook-fullWidth-115baqa"
               >
                 <div
-                  class="Hook-priceContainer-p5muo6"
+                  class="Hook-priceContainer-10ca940"
                 >
                   <h6
-                    class="MuiTypography-root-1 MuiTypography-h6-18 Hook-price-2c3ew8"
+                    class="MuiTypography-root-1 MuiTypography-h6-11 Hook-price-169xtyo"
                   >
                     €6.95
                   </h6>
                   <div>
                     <a
                       aria-label="Ebay"
-                      class="MuiButtonBase-root-43 MuiIconButton-root-37"
+                      class="MuiButtonBase-root-37 MuiIconButton-root-31"
                       href="https://rover.ebay.com/rover/1/707-53477-19255-0/1?icep_id=114&ipn=icep&toolid=20004&campid=5338456795&mpre=https%3A%2F%2Fwww.ebay.de%2Fitm%2F183636677740"
                       rel="noopener"
                       role="button"
@@ -479,11 +479,11 @@ Object {
                       target="_blank"
                     >
                       <span
-                        class="MuiIconButton-label-42"
+                        class="MuiIconButton-label-36"
                       >
                         <svg
                           aria-hidden="true"
-                          class="MuiSvgIcon-root-46"
+                          class="MuiSvgIcon-root-40"
                           focusable="false"
                           role="presentation"
                           viewBox="0 0 302.8 120.1"
@@ -507,68 +507,68 @@ Object {
                         </svg>
                       </span>
                       <span
-                        class="MuiTouchRipple-root-89"
+                        class="MuiTouchRipple-root-83"
                       />
                     </a>
                   </div>
                 </div>
               </div>
               <button
-                class="MuiButtonBase-root-43 MuiButton-root-55 MuiButton-outlined-60 MuiButton-outlinedSecondary-62 Hook-button-1ihz2ti Hook-buttonFull-79ekce"
+                class="MuiButtonBase-root-37 MuiButton-root-49 MuiButton-outlined-54 MuiButton-outlinedSecondary-56 Hook-button-1ecjfgm Hook-buttonFull-twp37v"
                 tabindex="0"
                 type="button"
               >
                 <span
-                  class="MuiButton-label-56"
+                  class="MuiButton-label-50"
                 >
                   features
                 </span>
                 <span
-                  class="MuiTouchRipple-root-89"
+                  class="MuiTouchRipple-root-83"
                 />
               </button>
             </div>
           </div>
         </div>
         <h5
-          class="MuiTypography-root-1 MuiTypography-h5-17 Hook-header-1w8rfj2"
+          class="MuiTypography-root-1 MuiTypography-h5-10 Hook-header-lmmypp"
         >
           other
         </h5>
         <div
-          class="Hook-container-1b6f21j"
+          class="Hook-container-kln0ax"
         >
           <div
-            class="Hook-root-1ctwg1a"
+            class="Hook-root-o7yfbk"
           >
             <img
               alt="product test"
-              class="Hook-img-xjlo1k"
+              class="Hook-img-16x9eyn"
               src="test-file-stub"
             />
             <div
-              class="Hook-descriptionContainer-1jku3ep"
+              class="Hook-descriptionContainer-12gz4p"
             >
               <p
-                class="MuiTypography-root-1 MuiTypography-body1-10"
+                class="MuiTypography-root-1 MuiTypography-body2-2"
               >
                 Bee Swell Wax
               </p>
               <div
-                class="Hook-fullWidth-9gqf2j"
+                class="Hook-fullWidth-115baqa"
               >
                 <div
-                  class="Hook-priceContainer-p5muo6"
+                  class="Hook-priceContainer-10ca940"
                 >
                   <h6
-                    class="MuiTypography-root-1 MuiTypography-h6-18 Hook-price-2c3ew8"
+                    class="MuiTypography-root-1 MuiTypography-h6-11 Hook-price-169xtyo"
                   >
                     €6.95
                   </h6>
                   <div>
                     <a
                       aria-label="Ebay"
-                      class="MuiButtonBase-root-43 MuiIconButton-root-37"
+                      class="MuiButtonBase-root-37 MuiIconButton-root-31"
                       href="https://rover.ebay.com/rover/1/707-53477-19255-0/1?icep_id=114&ipn=icep&toolid=20004&campid=5338456795&mpre=https%3A%2F%2Fwww.ebay.de%2Fitm%2F183636677740"
                       rel="noopener"
                       role="button"
@@ -576,11 +576,11 @@ Object {
                       target="_blank"
                     >
                       <span
-                        class="MuiIconButton-label-42"
+                        class="MuiIconButton-label-36"
                       >
                         <svg
                           aria-hidden="true"
-                          class="MuiSvgIcon-root-46"
+                          class="MuiSvgIcon-root-40"
                           focusable="false"
                           role="presentation"
                           viewBox="0 0 302.8 120.1"
@@ -604,24 +604,24 @@ Object {
                         </svg>
                       </span>
                       <span
-                        class="MuiTouchRipple-root-89"
+                        class="MuiTouchRipple-root-83"
                       />
                     </a>
                   </div>
                 </div>
               </div>
               <button
-                class="MuiButtonBase-root-43 MuiButton-root-55 MuiButton-outlined-60 MuiButton-outlinedSecondary-62 Hook-button-1ihz2ti Hook-buttonFull-79ekce"
+                class="MuiButtonBase-root-37 MuiButton-root-49 MuiButton-outlined-54 MuiButton-outlinedSecondary-56 Hook-button-1ecjfgm Hook-buttonFull-twp37v"
                 tabindex="0"
                 type="button"
               >
                 <span
-                  class="MuiButton-label-56"
+                  class="MuiButton-label-50"
                 >
                   features
                 </span>
                 <span
-                  class="MuiTouchRipple-root-89"
+                  class="MuiTouchRipple-root-83"
                 />
               </button>
             </div>
@@ -632,47 +632,47 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="Hook-root-1knxder"
+      class="Hook-root-nh30nu"
     >
       <h5
-        class="MuiTypography-root-1 MuiTypography-h5-17 Hook-header-1w8rfj2"
+        class="MuiTypography-root-1 MuiTypography-h5-10 Hook-header-lmmypp"
       >
         fins
       </h5>
       <div
-        class="Hook-container-1b6f21j"
+        class="Hook-container-kln0ax"
       >
         <div
-          class="Hook-root-1ctwg1a"
+          class="Hook-root-o7yfbk"
         >
           <img
             alt="product test"
-            class="Hook-img-xjlo1k"
+            class="Hook-img-16x9eyn"
             src="test-file-stub"
           />
           <div
-            class="Hook-descriptionContainer-1jku3ep"
+            class="Hook-descriptionContainer-12gz4p"
           >
             <p
-              class="MuiTypography-root-1 MuiTypography-body1-10"
+              class="MuiTypography-root-1 MuiTypography-body2-2"
             >
               FCS Double Tab Thruster Fin Set with Fin Key
             </p>
             <div
-              class="Hook-fullWidth-9gqf2j"
+              class="Hook-fullWidth-115baqa"
             >
               <div
-                class="Hook-priceContainer-p5muo6"
+                class="Hook-priceContainer-10ca940"
               >
                 <h6
-                  class="MuiTypography-root-1 MuiTypography-h6-18 Hook-price-2c3ew8"
+                  class="MuiTypography-root-1 MuiTypography-h6-11 Hook-price-169xtyo"
                 >
                   €19.90
                 </h6>
                 <div>
                   <a
                     aria-label="Amazon"
-                    class="MuiButtonBase-root-43 MuiIconButton-root-37"
+                    class="MuiButtonBase-root-37 MuiIconButton-root-31"
                     href="https://amzn.to/2Vr6Gt7"
                     rel="noopener"
                     role="button"
@@ -680,11 +680,11 @@ Object {
                     target="_blank"
                   >
                     <span
-                      class="MuiIconButton-label-42"
+                      class="MuiIconButton-label-36"
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-46"
+                        class="MuiSvgIcon-root-40"
                         focusable="false"
                         role="presentation"
                         viewBox="-352.037 -291.281 800.073 678.559"
@@ -743,12 +743,12 @@ Object {
                       </svg>
                     </span>
                     <span
-                      class="MuiTouchRipple-root-89"
+                      class="MuiTouchRipple-root-83"
                     />
                   </a>
                   <a
                     aria-label="Ebay"
-                    class="MuiButtonBase-root-43 MuiIconButton-root-37"
+                    class="MuiButtonBase-root-37 MuiIconButton-root-31"
                     href="https://rover.ebay.com/rover/1/707-53477-19255-0/1?icep_id=114&ipn=icep&toolid=20004&campid=5338456795&mpre=https%3A%2F%2Fwww.ebay.de%2Fitm%2F183534256900"
                     rel="noopener"
                     role="button"
@@ -756,11 +756,11 @@ Object {
                     target="_blank"
                   >
                     <span
-                      class="MuiIconButton-label-42"
+                      class="MuiIconButton-label-36"
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-46"
+                        class="MuiSvgIcon-root-40"
                         focusable="false"
                         role="presentation"
                         viewBox="0 0 302.8 120.1"
@@ -784,59 +784,59 @@ Object {
                       </svg>
                     </span>
                     <span
-                      class="MuiTouchRipple-root-89"
+                      class="MuiTouchRipple-root-83"
                     />
                   </a>
                 </div>
               </div>
             </div>
             <button
-              class="MuiButtonBase-root-43 MuiButton-root-55 MuiButton-outlined-60 MuiButton-outlinedSecondary-62 Hook-button-1ihz2ti Hook-buttonFull-79ekce"
+              class="MuiButtonBase-root-37 MuiButton-root-49 MuiButton-outlined-54 MuiButton-outlinedSecondary-56 Hook-button-1ecjfgm Hook-buttonFull-twp37v"
               tabindex="0"
               type="button"
             >
               <span
-                class="MuiButton-label-56"
+                class="MuiButton-label-50"
               >
                 features
               </span>
               <span
-                class="MuiTouchRipple-root-89"
+                class="MuiTouchRipple-root-83"
               />
             </button>
           </div>
         </div>
         <div
-          class="Hook-root-1ctwg1a"
+          class="Hook-root-o7yfbk"
         >
           <img
             alt="product test"
-            class="Hook-img-xjlo1k"
+            class="Hook-img-16x9eyn"
             src="test-file-stub"
           />
           <div
-            class="Hook-descriptionContainer-1jku3ep"
+            class="Hook-descriptionContainer-12gz4p"
           >
             <p
-              class="MuiTypography-root-1 MuiTypography-body1-10"
+              class="MuiTypography-root-1 MuiTypography-body2-2"
             >
               RailProtect Tape
             </p>
             <div
-              class="Hook-fullWidth-9gqf2j"
+              class="Hook-fullWidth-115baqa"
             >
               <div
-                class="Hook-priceContainer-p5muo6"
+                class="Hook-priceContainer-10ca940"
               >
                 <h6
-                  class="MuiTypography-root-1 MuiTypography-h6-18 Hook-price-2c3ew8"
+                  class="MuiTypography-root-1 MuiTypography-h6-11 Hook-price-169xtyo"
                 >
                   €24.90
                 </h6>
                 <div>
                   <a
                     aria-label="Amazon"
-                    class="MuiButtonBase-root-43 MuiIconButton-root-37"
+                    class="MuiButtonBase-root-37 MuiIconButton-root-31"
                     href="https://amzn.to/2GTx3Vh"
                     rel="noopener"
                     role="button"
@@ -844,11 +844,11 @@ Object {
                     target="_blank"
                   >
                     <span
-                      class="MuiIconButton-label-42"
+                      class="MuiIconButton-label-36"
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-46"
+                        class="MuiSvgIcon-root-40"
                         focusable="false"
                         role="presentation"
                         viewBox="-352.037 -291.281 800.073 678.559"
@@ -907,12 +907,12 @@ Object {
                       </svg>
                     </span>
                     <span
-                      class="MuiTouchRipple-root-89"
+                      class="MuiTouchRipple-root-83"
                     />
                   </a>
                   <a
                     aria-label="Ebay"
-                    class="MuiButtonBase-root-43 MuiIconButton-root-37"
+                    class="MuiButtonBase-root-37 MuiIconButton-root-31"
                     href="https://rover.ebay.com/rover/1/707-53477-19255-0/1?icep_id=114&ipn=icep&toolid=20004&campid=5338456795&mpre=https%3A%2F%2Fwww.ebay.de%2Fitm%2F183498197638"
                     rel="noopener"
                     role="button"
@@ -920,11 +920,11 @@ Object {
                     target="_blank"
                   >
                     <span
-                      class="MuiIconButton-label-42"
+                      class="MuiIconButton-label-36"
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-46"
+                        class="MuiSvgIcon-root-40"
                         focusable="false"
                         role="presentation"
                         viewBox="0 0 302.8 120.1"
@@ -948,59 +948,59 @@ Object {
                       </svg>
                     </span>
                     <span
-                      class="MuiTouchRipple-root-89"
+                      class="MuiTouchRipple-root-83"
                     />
                   </a>
                 </div>
               </div>
             </div>
             <button
-              class="MuiButtonBase-root-43 MuiButton-root-55 MuiButton-outlined-60 MuiButton-outlinedSecondary-62 Hook-button-1ihz2ti Hook-buttonFull-79ekce"
+              class="MuiButtonBase-root-37 MuiButton-root-49 MuiButton-outlined-54 MuiButton-outlinedSecondary-56 Hook-button-1ecjfgm Hook-buttonFull-twp37v"
               tabindex="0"
               type="button"
             >
               <span
-                class="MuiButton-label-56"
+                class="MuiButton-label-50"
               >
                 features
               </span>
               <span
-                class="MuiTouchRipple-root-89"
+                class="MuiTouchRipple-root-83"
               />
             </button>
           </div>
         </div>
         <div
-          class="Hook-root-1ctwg1a"
+          class="Hook-root-o7yfbk"
         >
           <img
             alt="product test"
-            class="Hook-img-xjlo1k"
+            class="Hook-img-16x9eyn"
             src="test-file-stub"
           />
           <div
-            class="Hook-descriptionContainer-1jku3ep"
+            class="Hook-descriptionContainer-12gz4p"
           >
             <p
-              class="MuiTypography-root-1 MuiTypography-body1-10"
+              class="MuiTypography-root-1 MuiTypography-body2-2"
             >
               Future Single Tab Thruster Fin Set with Fin Key
             </p>
             <div
-              class="Hook-fullWidth-9gqf2j"
+              class="Hook-fullWidth-115baqa"
             >
               <div
-                class="Hook-priceContainer-p5muo6"
+                class="Hook-priceContainer-10ca940"
               >
                 <h6
-                  class="MuiTypography-root-1 MuiTypography-h6-18 Hook-price-2c3ew8"
+                  class="MuiTypography-root-1 MuiTypography-h6-11 Hook-price-169xtyo"
                 >
                   €19.90
                 </h6>
                 <div>
                   <a
                     aria-label="Ebay"
-                    class="MuiButtonBase-root-43 MuiIconButton-root-37"
+                    class="MuiButtonBase-root-37 MuiIconButton-root-31"
                     href="http://www.ebay.de/itm/183498170584"
                     rel="noopener"
                     role="button"
@@ -1008,11 +1008,11 @@ Object {
                     target="_blank"
                   >
                     <span
-                      class="MuiIconButton-label-42"
+                      class="MuiIconButton-label-36"
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-46"
+                        class="MuiSvgIcon-root-40"
                         focusable="false"
                         role="presentation"
                         viewBox="0 0 302.8 120.1"
@@ -1036,68 +1036,68 @@ Object {
                       </svg>
                     </span>
                     <span
-                      class="MuiTouchRipple-root-89"
+                      class="MuiTouchRipple-root-83"
                     />
                   </a>
                 </div>
               </div>
             </div>
             <button
-              class="MuiButtonBase-root-43 MuiButton-root-55 MuiButton-outlined-60 MuiButton-outlinedSecondary-62 Hook-button-1ihz2ti Hook-buttonFull-79ekce"
+              class="MuiButtonBase-root-37 MuiButton-root-49 MuiButton-outlined-54 MuiButton-outlinedSecondary-56 Hook-button-1ecjfgm Hook-buttonFull-twp37v"
               tabindex="0"
               type="button"
             >
               <span
-                class="MuiButton-label-56"
+                class="MuiButton-label-50"
               >
                 features
               </span>
               <span
-                class="MuiTouchRipple-root-89"
+                class="MuiTouchRipple-root-83"
               />
             </button>
           </div>
         </div>
       </div>
       <h5
-        class="MuiTypography-root-1 MuiTypography-h5-17 Hook-header-1w8rfj2"
+        class="MuiTypography-root-1 MuiTypography-h5-10 Hook-header-lmmypp"
       >
         leashes
       </h5>
       <div
-        class="Hook-container-1b6f21j"
+        class="Hook-container-kln0ax"
       >
         <div
-          class="Hook-root-1ctwg1a"
+          class="Hook-root-o7yfbk"
         >
           <img
             alt="product test"
-            class="Hook-img-xjlo1k"
+            class="Hook-img-16x9eyn"
             src="test-file-stub"
           />
           <div
-            class="Hook-descriptionContainer-1jku3ep"
+            class="Hook-descriptionContainer-12gz4p"
           >
             <p
-              class="MuiTypography-root-1 MuiTypography-body1-10"
+              class="MuiTypography-root-1 MuiTypography-body2-2"
             >
               Bee Swell Wax
             </p>
             <div
-              class="Hook-fullWidth-9gqf2j"
+              class="Hook-fullWidth-115baqa"
             >
               <div
-                class="Hook-priceContainer-p5muo6"
+                class="Hook-priceContainer-10ca940"
               >
                 <h6
-                  class="MuiTypography-root-1 MuiTypography-h6-18 Hook-price-2c3ew8"
+                  class="MuiTypography-root-1 MuiTypography-h6-11 Hook-price-169xtyo"
                 >
                   €6.95
                 </h6>
                 <div>
                   <a
                     aria-label="Ebay"
-                    class="MuiButtonBase-root-43 MuiIconButton-root-37"
+                    class="MuiButtonBase-root-37 MuiIconButton-root-31"
                     href="https://rover.ebay.com/rover/1/707-53477-19255-0/1?icep_id=114&ipn=icep&toolid=20004&campid=5338456795&mpre=https%3A%2F%2Fwww.ebay.de%2Fitm%2F183636677740"
                     rel="noopener"
                     role="button"
@@ -1105,11 +1105,11 @@ Object {
                     target="_blank"
                   >
                     <span
-                      class="MuiIconButton-label-42"
+                      class="MuiIconButton-label-36"
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-46"
+                        class="MuiSvgIcon-root-40"
                         focusable="false"
                         role="presentation"
                         viewBox="0 0 302.8 120.1"
@@ -1133,68 +1133,68 @@ Object {
                       </svg>
                     </span>
                     <span
-                      class="MuiTouchRipple-root-89"
+                      class="MuiTouchRipple-root-83"
                     />
                   </a>
                 </div>
               </div>
             </div>
             <button
-              class="MuiButtonBase-root-43 MuiButton-root-55 MuiButton-outlined-60 MuiButton-outlinedSecondary-62 Hook-button-1ihz2ti Hook-buttonFull-79ekce"
+              class="MuiButtonBase-root-37 MuiButton-root-49 MuiButton-outlined-54 MuiButton-outlinedSecondary-56 Hook-button-1ecjfgm Hook-buttonFull-twp37v"
               tabindex="0"
               type="button"
             >
               <span
-                class="MuiButton-label-56"
+                class="MuiButton-label-50"
               >
                 features
               </span>
               <span
-                class="MuiTouchRipple-root-89"
+                class="MuiTouchRipple-root-83"
               />
             </button>
           </div>
         </div>
       </div>
       <h5
-        class="MuiTypography-root-1 MuiTypography-h5-17 Hook-header-1w8rfj2"
+        class="MuiTypography-root-1 MuiTypography-h5-10 Hook-header-lmmypp"
       >
         other
       </h5>
       <div
-        class="Hook-container-1b6f21j"
+        class="Hook-container-kln0ax"
       >
         <div
-          class="Hook-root-1ctwg1a"
+          class="Hook-root-o7yfbk"
         >
           <img
             alt="product test"
-            class="Hook-img-xjlo1k"
+            class="Hook-img-16x9eyn"
             src="test-file-stub"
           />
           <div
-            class="Hook-descriptionContainer-1jku3ep"
+            class="Hook-descriptionContainer-12gz4p"
           >
             <p
-              class="MuiTypography-root-1 MuiTypography-body1-10"
+              class="MuiTypography-root-1 MuiTypography-body2-2"
             >
               Bee Swell Wax
             </p>
             <div
-              class="Hook-fullWidth-9gqf2j"
+              class="Hook-fullWidth-115baqa"
             >
               <div
-                class="Hook-priceContainer-p5muo6"
+                class="Hook-priceContainer-10ca940"
               >
                 <h6
-                  class="MuiTypography-root-1 MuiTypography-h6-18 Hook-price-2c3ew8"
+                  class="MuiTypography-root-1 MuiTypography-h6-11 Hook-price-169xtyo"
                 >
                   €6.95
                 </h6>
                 <div>
                   <a
                     aria-label="Ebay"
-                    class="MuiButtonBase-root-43 MuiIconButton-root-37"
+                    class="MuiButtonBase-root-37 MuiIconButton-root-31"
                     href="https://rover.ebay.com/rover/1/707-53477-19255-0/1?icep_id=114&ipn=icep&toolid=20004&campid=5338456795&mpre=https%3A%2F%2Fwww.ebay.de%2Fitm%2F183636677740"
                     rel="noopener"
                     role="button"
@@ -1202,11 +1202,11 @@ Object {
                     target="_blank"
                   >
                     <span
-                      class="MuiIconButton-label-42"
+                      class="MuiIconButton-label-36"
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-46"
+                        class="MuiSvgIcon-root-40"
                         focusable="false"
                         role="presentation"
                         viewBox="0 0 302.8 120.1"
@@ -1230,24 +1230,24 @@ Object {
                       </svg>
                     </span>
                     <span
-                      class="MuiTouchRipple-root-89"
+                      class="MuiTouchRipple-root-83"
                     />
                   </a>
                 </div>
               </div>
             </div>
             <button
-              class="MuiButtonBase-root-43 MuiButton-root-55 MuiButton-outlined-60 MuiButton-outlinedSecondary-62 Hook-button-1ihz2ti Hook-buttonFull-79ekce"
+              class="MuiButtonBase-root-37 MuiButton-root-49 MuiButton-outlined-54 MuiButton-outlinedSecondary-56 Hook-button-1ecjfgm Hook-buttonFull-twp37v"
               tabindex="0"
               type="button"
             >
               <span
-                class="MuiButton-label-56"
+                class="MuiButton-label-50"
               >
                 features
               </span>
               <span
-                class="MuiTouchRipple-root-89"
+                class="MuiTouchRipple-root-83"
               />
             </button>
           </div>

@@ -1,11 +1,11 @@
-import React, { useState, Fragment } from 'react'
+import React, { Fragment } from 'react'
+import { connect } from 'react-redux'
 import { Link } from 'gatsby'
 import { useTranslation } from 'react-i18next'
 import { makeStyles } from '@material-ui/styles'
 import Button from '@material-ui/core/Button'
 import Snackbar from '@material-ui/core/Snackbar'
 import SnackbarContent from '@material-ui/core/SnackbarContent'
-import { connect } from 'react-redux'
 
 const mapStateToProps = ({ isGAopen }) => {
   return { isGAopen }
@@ -86,14 +86,12 @@ function Tracking({ isGAopen, changeGA }) {
         horizontal: 'center',
       }}
       open={isGAopen}
-      onClose={changeGA}
       className={classes.snackbar}
     >
       <SnackbarContent
         className={classes.snackbarContent}
         classes={{ message: classes.message, action: classes.action }}
         aria-describedby="client-snackbar"
-        onClose={changeGA}
         message={
           <span id="client-snackbar">
             {t('tracking.message')}

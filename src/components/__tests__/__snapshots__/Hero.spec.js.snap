@@ -6,10 +6,10 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="Hook-root-9c0bjk"
+        class="Hook-root-1m8vd1u"
       >
         <div
-          class="Hook-img-19v1749 gatsby-image-wrapper"
+          class="Hook-img-1fs7u0x gatsby-image-wrapper"
           style="position: absolute; overflow: hidden;"
         >
           <div
@@ -31,30 +31,30 @@ Object {
           </noscript>
         </div>
         <div
-          class="Hook-container-6r6fzm"
+          class="Hook-container-d5nmbp"
         >
           <h2
-            class="MuiTypography-root-1 MuiTypography-h2-14 MuiTypography-gutterBottom-28 Hook-text-18oh14 Hook-title-1ggofrl"
+            class="MuiTypography-root-1 MuiTypography-h2-7 MuiTypography-gutterBottom-21 Hook-text-1gfu49g Hook-title-1h1ncjr"
           >
             E
             <span
-              class="Hook-small-9gj7ee"
+              class="Hook-small-3fuxk0"
             >
               ISBACH
             </span>
           </h2>
           <h2
-            class="MuiTypography-root-1 MuiTypography-h2-14 MuiTypography-gutterBottom-28 Hook-text-18oh14 Hook-title-1ggofrl Hook-title2-124dlw2"
+            class="MuiTypography-root-1 MuiTypography-h2-7 MuiTypography-gutterBottom-21 Hook-text-1gfu49g Hook-title-1h1ncjr Hook-title2-h96k24"
           >
             R
             <span
-              class="Hook-small-9gj7ee"
+              class="Hook-small-3fuxk0"
             >
               IDERS
             </span>
           </h2>
           <p
-            class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-18oh14 Hook-subtitle-e6d4i8"
+            class="MuiTypography-root-1 MuiTypography-body2-2 Hook-text-1gfu49g Hook-subtitle-qyees7"
           >
             hero.subtitle
           </p>
@@ -64,10 +64,10 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="Hook-root-9c0bjk"
+      class="Hook-root-1m8vd1u"
     >
       <div
-        class="Hook-img-19v1749 gatsby-image-wrapper"
+        class="Hook-img-1fs7u0x gatsby-image-wrapper"
         style="position: absolute; overflow: hidden;"
       >
         <div
@@ -89,30 +89,30 @@ Object {
         </noscript>
       </div>
       <div
-        class="Hook-container-6r6fzm"
+        class="Hook-container-d5nmbp"
       >
         <h2
-          class="MuiTypography-root-1 MuiTypography-h2-14 MuiTypography-gutterBottom-28 Hook-text-18oh14 Hook-title-1ggofrl"
+          class="MuiTypography-root-1 MuiTypography-h2-7 MuiTypography-gutterBottom-21 Hook-text-1gfu49g Hook-title-1h1ncjr"
         >
           E
           <span
-            class="Hook-small-9gj7ee"
+            class="Hook-small-3fuxk0"
           >
             ISBACH
           </span>
         </h2>
         <h2
-          class="MuiTypography-root-1 MuiTypography-h2-14 MuiTypography-gutterBottom-28 Hook-text-18oh14 Hook-title-1ggofrl Hook-title2-124dlw2"
+          class="MuiTypography-root-1 MuiTypography-h2-7 MuiTypography-gutterBottom-21 Hook-text-1gfu49g Hook-title-1h1ncjr Hook-title2-h96k24"
         >
           R
           <span
-            class="Hook-small-9gj7ee"
+            class="Hook-small-3fuxk0"
           >
             IDERS
           </span>
         </h2>
         <p
-          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-18oh14 Hook-subtitle-e6d4i8"
+          class="MuiTypography-root-1 MuiTypography-body2-2 Hook-text-1gfu49g Hook-subtitle-qyees7"
         >
           hero.subtitle
         </p>

@@ -6,28 +6,28 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="Hook-root-1x1vud8"
+        class="Hook-root-2vwdl0"
         id="products"
       >
         <div
-          class="Hook-containerDetails-1rsu11x"
+          class="Hook-containerDetails-1cbfjn5"
         >
           <p
-            class="MuiTypography-root-1 MuiTypography-body1-10 Hook-detailTitle-6poiap"
+            class="MuiTypography-root-1 MuiTypography-body2-2 Hook-detailTitle-ez9818"
           >
             response
           </p>
           <div
-            class="Hook-containerIcon2-1ysr5c5"
+            class="Hook-containerIcon2-1q2t2mn"
           >
             <p
-              class="MuiTypography-root-1 MuiTypography-body1-10 Hook-detailText-17vk5r1"
+              class="MuiTypography-root-1 MuiTypography-body2-2 Hook-detailText-1l8p3hc"
             >
               weight
             </p>
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root-74 Hook-icon-q2g395"
+              class="MuiSvgIcon-root-68 Hook-icon-1w4gcm9"
               focusable="false"
               role="presentation"
               viewBox="0 0 484.42 484.4"
@@ -38,7 +38,7 @@ Object {
             </svg>
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root-74 Hook-icon-q2g395"
+              class="MuiSvgIcon-root-68 Hook-icon-1w4gcm9"
               focusable="false"
               role="presentation"
               viewBox="0 0 484.42 484.4"
@@ -49,7 +49,7 @@ Object {
             </svg>
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root-74 Hook-icon-q2g395"
+              class="MuiSvgIcon-root-68 Hook-icon-1w4gcm9"
               focusable="false"
               role="presentation"
               viewBox="0 0 484.42 484.4"
@@ -60,7 +60,7 @@ Object {
             </svg>
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root-74 Hook-off-fweocg Hook-icon-q2g395"
+              class="MuiSvgIcon-root-68 Hook-off-ol7h5l Hook-icon-1w4gcm9"
               focusable="false"
               role="presentation"
               viewBox="0 0 484.42 484.4"
@@ -71,17 +71,17 @@ Object {
             </svg>
           </div>
           <div
-            class="Hook-containerIcon2-1ysr5c5"
+            class="Hook-containerIcon2-1q2t2mn"
             style="padding-top: 5px;"
           >
             <p
-              class="MuiTypography-root-1 MuiTypography-body1-10 Hook-detailText-17vk5r1"
+              class="MuiTypography-root-1 MuiTypography-body2-2 Hook-detailText-1l8p3hc"
             >
               stiffness
             </p>
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root-74 Hook-icon-q2g395"
+              class="MuiSvgIcon-root-68 Hook-icon-1w4gcm9"
               focusable="false"
               role="presentation"
               viewBox="0 0 512 512"
@@ -92,7 +92,7 @@ Object {
             </svg>
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root-74 Hook-icon-q2g395"
+              class="MuiSvgIcon-root-68 Hook-icon-1w4gcm9"
               focusable="false"
               role="presentation"
               viewBox="0 0 512 512"
@@ -103,7 +103,7 @@ Object {
             </svg>
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root-74 Hook-icon-q2g395"
+              class="MuiSvgIcon-root-68 Hook-icon-1w4gcm9"
               focusable="false"
               role="presentation"
               viewBox="0 0 512 512"
@@ -114,7 +114,7 @@ Object {
             </svg>
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root-74 Hook-icon-q2g395"
+              class="MuiSvgIcon-root-68 Hook-icon-1w4gcm9"
               focusable="false"
               role="presentation"
               viewBox="0 0 512 512"
@@ -125,79 +125,79 @@ Object {
             </svg>
           </div>
           <p
-            class="MuiTypography-root-1 MuiTypography-body1-10 Hook-detailTitle-6poiap Hook-padding-1s61cio"
+            class="MuiTypography-root-1 MuiTypography-body2-2 Hook-detailTitle-ez9818 Hook-padding-1ize0xw"
           >
             experience
           </p>
           <div
-            class="Hook-containerIcon2-1ysr5c5"
+            class="Hook-containerIcon2-1q2t2mn"
           >
             <p
-              class="MuiTypography-root-1 MuiTypography-body1-10 Hook-detailText-17vk5r1"
+              class="MuiTypography-root-1 MuiTypography-body2-2 Hook-detailText-1l8p3hc"
             >
               beginner
             </p>
             <div
-              class="Hook-barOff-v5hxi0"
+              class="Hook-barOff-15fmgz0"
             />
             <div
-              class="Hook-barOff-v5hxi0"
+              class="Hook-barOff-15fmgz0"
             />
             <div
-              class="Hook-barOff-v5hxi0"
+              class="Hook-barOff-15fmgz0"
             />
             <div
-              class="Hook-barOff-v5hxi0"
+              class="Hook-barOff-15fmgz0"
             />
           </div>
           <div
-            class="Hook-containerIcon2-1ysr5c5"
+            class="Hook-containerIcon2-1q2t2mn"
           >
             <p
-              class="MuiTypography-root-1 MuiTypography-body1-10 Hook-detailText-17vk5r1"
+              class="MuiTypography-root-1 MuiTypography-body2-2 Hook-detailText-1l8p3hc"
             >
               intermediate
             </p>
             <div
-              class="Hook-barOn-11kvrhv"
+              class="Hook-barOn-r2zmy4"
             />
             <div
-              class="Hook-barOn-11kvrhv"
+              class="Hook-barOn-r2zmy4"
             />
             <div
-              class="Hook-barOn-11kvrhv"
+              class="Hook-barOn-r2zmy4"
             />
             <div
-              class="Hook-barOff-v5hxi0"
+              class="Hook-barOff-15fmgz0"
             />
           </div>
           <div
-            class="Hook-containerIcon2-1ysr5c5"
+            class="Hook-containerIcon2-1q2t2mn"
           >
             <p
-              class="MuiTypography-root-1 MuiTypography-body1-10 Hook-detailText-17vk5r1"
+              class="MuiTypography-root-1 MuiTypography-body2-2 Hook-detailText-1l8p3hc"
             >
               pro
             </p>
             <div
-              class="Hook-barOn-11kvrhv"
+              class="Hook-barOn-r2zmy4"
             />
             <div
-              class="Hook-barOn-11kvrhv"
+              class="Hook-barOn-r2zmy4"
             />
             <div
-              class="Hook-barOn-11kvrhv"
+              class="Hook-barOn-r2zmy4"
             />
             <div
-              class="Hook-barOn-11kvrhv"
+              class="Hook-barOn-r2zmy4"
             />
           </div>
         </div>
         <div
-          class="Hook-containerImg-sg89ir"
+          class="Hook-containerImg-1ecef5x"
         >
           <div
-            class="Hook-img-u23mf gatsby-image-wrapper"
+            class="Hook-img-m3smt gatsby-image-wrapper"
             style="position: relative; overflow: hidden;"
           >
             <div
@@ -220,30 +220,30 @@ Object {
           </div>
         </div>
         <div
-          class="Hook-containerInfo-1f0qq9j"
+          class="Hook-containerInfo-1wmq112"
         >
           <p
-            class="MuiTypography-root-1 MuiTypography-body1-10 Hook-detailTitle2-1857rom"
+            class="MuiTypography-root-1 MuiTypography-body2-2 Hook-detailTitle2-pzqndg"
           >
             Honeycomb Fin
           </p>
           <p
-            class="MuiTypography-root-1 MuiTypography-body1-10 Hook-detailText-17vk5r1"
+            class="MuiTypography-root-1 MuiTypography-body2-2 Hook-detailText-1l8p3hc"
           >
             The New Eisbach Riders Double Tab FCS 1 Fiberglass Fin With A Honeycomb Core Is Extra Lightweight And Provides An Immediate Response During The Turns. With a moderate flex it is ideal for making fast changes of direction. The Fin Design Is Suited For Any Waves As Well As For River Surfing.
           </p>
           <button
-            class="MuiButtonBase-root-54 MuiButton-root-37 MuiButton-outlined-42 MuiButton-outlinedSecondary-44 Hook-button-1ihz2ti"
+            class="MuiButtonBase-root-48 MuiButton-root-31 MuiButton-outlined-36 MuiButton-outlinedSecondary-38 Hook-button-1ecjfgm"
             tabindex="0"
             type="button"
           >
             <span
-              class="MuiButton-label-38"
+              class="MuiButton-label-32"
             >
               more info
             </span>
             <span
-              class="MuiTouchRipple-root-83"
+              class="MuiTouchRipple-root-77"
             />
           </button>
         </div>
@@ -252,28 +252,28 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="Hook-root-1x1vud8"
+      class="Hook-root-2vwdl0"
       id="products"
     >
       <div
-        class="Hook-containerDetails-1rsu11x"
+        class="Hook-containerDetails-1cbfjn5"
       >
         <p
-          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-detailTitle-6poiap"
+          class="MuiTypography-root-1 MuiTypography-body2-2 Hook-detailTitle-ez9818"
         >
           response
         </p>
         <div
-          class="Hook-containerIcon2-1ysr5c5"
+          class="Hook-containerIcon2-1q2t2mn"
         >
           <p
-            class="MuiTypography-root-1 MuiTypography-body1-10 Hook-detailText-17vk5r1"
+            class="MuiTypography-root-1 MuiTypography-body2-2 Hook-detailText-1l8p3hc"
           >
             weight
           </p>
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root-74 Hook-icon-q2g395"
+            class="MuiSvgIcon-root-68 Hook-icon-1w4gcm9"
             focusable="false"
             role="presentation"
             viewBox="0 0 484.42 484.4"
@@ -284,7 +284,7 @@ Object {
           </svg>
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root-74 Hook-icon-q2g395"
+            class="MuiSvgIcon-root-68 Hook-icon-1w4gcm9"
             focusable="false"
             role="presentation"
             viewBox="0 0 484.42 484.4"
@@ -295,7 +295,7 @@ Object {
           </svg>
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root-74 Hook-icon-q2g395"
+            class="MuiSvgIcon-root-68 Hook-icon-1w4gcm9"
             focusable="false"
             role="presentation"
             viewBox="0 0 484.42 484.4"
@@ -306,7 +306,7 @@ Object {
           </svg>
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root-74 Hook-off-fweocg Hook-icon-q2g395"
+            class="MuiSvgIcon-root-68 Hook-off-ol7h5l Hook-icon-1w4gcm9"
             focusable="false"
             role="presentation"
             viewBox="0 0 484.42 484.4"
@@ -317,17 +317,17 @@ Object {
           </svg>
         </div>
         <div
-          class="Hook-containerIcon2-1ysr5c5"
+          class="Hook-containerIcon2-1q2t2mn"
           style="padding-top: 5px;"
         >
           <p
-            class="MuiTypography-root-1 MuiTypography-body1-10 Hook-detailText-17vk5r1"
+            class="MuiTypography-root-1 MuiTypography-body2-2 Hook-detailText-1l8p3hc"
           >
             stiffness
           </p>
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root-74 Hook-icon-q2g395"
+            class="MuiSvgIcon-root-68 Hook-icon-1w4gcm9"
             focusable="false"
             role="presentation"
             viewBox="0 0 512 512"
@@ -338,7 +338,7 @@ Object {
           </svg>
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root-74 Hook-icon-q2g395"
+            class="MuiSvgIcon-root-68 Hook-icon-1w4gcm9"
             focusable="false"
             role="presentation"
             viewBox="0 0 512 512"
@@ -349,7 +349,7 @@ Object {
           </svg>
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root-74 Hook-icon-q2g395"
+            class="MuiSvgIcon-root-68 Hook-icon-1w4gcm9"
             focusable="false"
             role="presentation"
             viewBox="0 0 512 512"
@@ -360,7 +360,7 @@ Object {
           </svg>
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root-74 Hook-icon-q2g395"
+            class="MuiSvgIcon-root-68 Hook-icon-1w4gcm9"
             focusable="false"
             role="presentation"
             viewBox="0 0 512 512"
@@ -371,79 +371,79 @@ Object {
           </svg>
         </div>
         <p
-          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-detailTitle-6poiap Hook-padding-1s61cio"
+          class="MuiTypography-root-1 MuiTypography-body2-2 Hook-detailTitle-ez9818 Hook-padding-1ize0xw"
         >
           experience
         </p>
         <div
-          class="Hook-containerIcon2-1ysr5c5"
+          class="Hook-containerIcon2-1q2t2mn"
         >
           <p
-            class="MuiTypography-root-1 MuiTypography-body1-10 Hook-detailText-17vk5r1"
+            class="MuiTypography-root-1 MuiTypography-body2-2 Hook-detailText-1l8p3hc"
           >
             beginner
           </p>
           <div
-            class="Hook-barOff-v5hxi0"
+            class="Hook-barOff-15fmgz0"
           />
           <div
-            class="Hook-barOff-v5hxi0"
+            class="Hook-barOff-15fmgz0"
           />
           <div
-            class="Hook-barOff-v5hxi0"
+            class="Hook-barOff-15fmgz0"
           />
           <div
-            class="Hook-barOff-v5hxi0"
+            class="Hook-barOff-15fmgz0"
           />
         </div>
         <div
-          class="Hook-containerIcon2-1ysr5c5"
+          class="Hook-containerIcon2-1q2t2mn"
         >
           <p
-            class="MuiTypography-root-1 MuiTypography-body1-10 Hook-detailText-17vk5r1"
+            class="MuiTypography-root-1 MuiTypography-body2-2 Hook-detailText-1l8p3hc"
           >
             intermediate
           </p>
           <div
-            class="Hook-barOn-11kvrhv"
+            class="Hook-barOn-r2zmy4"
           />
           <div
-            class="Hook-barOn-11kvrhv"
+            class="Hook-barOn-r2zmy4"
           />
           <div
-            class="Hook-barOn-11kvrhv"
+            class="Hook-barOn-r2zmy4"
           />
           <div
-            class="Hook-barOff-v5hxi0"
+            class="Hook-barOff-15fmgz0"
           />
         </div>
         <div
-          class="Hook-containerIcon2-1ysr5c5"
+          class="Hook-containerIcon2-1q2t2mn"
         >
           <p
-            class="MuiTypography-root-1 MuiTypography-body1-10 Hook-detailText-17vk5r1"
+            class="MuiTypography-root-1 MuiTypography-body2-2 Hook-detailText-1l8p3hc"
           >
             pro
           </p>
           <div
-            class="Hook-barOn-11kvrhv"
+            class="Hook-barOn-r2zmy4"
           />
           <div
-            class="Hook-barOn-11kvrhv"
+            class="Hook-barOn-r2zmy4"
           />
           <div
-            class="Hook-barOn-11kvrhv"
+            class="Hook-barOn-r2zmy4"
           />
           <div
-            class="Hook-barOn-11kvrhv"
+            class="Hook-barOn-r2zmy4"
           />
         </div>
       </div>
       <div
-        class="Hook-containerImg-sg89ir"
+        class="Hook-containerImg-1ecef5x"
       >
         <div
-          class="Hook-img-u23mf gatsby-image-wrapper"
+          class="Hook-img-m3smt gatsby-image-wrapper"
           style="position: relative; overflow: hidden;"
         >
           <div
@@ -466,30 +466,30 @@ Object {
         </div>
       </div>
       <div
-        class="Hook-containerInfo-1f0qq9j"
+        class="Hook-containerInfo-1wmq112"
       >
         <p
-          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-detailTitle2-1857rom"
+          class="MuiTypography-root-1 MuiTypography-body2-2 Hook-detailTitle2-pzqndg"
         >
           Honeycomb Fin
         </p>
         <p
-          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-detailText-17vk5r1"
+          class="MuiTypography-root-1 MuiTypography-body2-2 Hook-detailText-1l8p3hc"
         >
           The New Eisbach Riders Double Tab FCS 1 Fiberglass Fin With A Honeycomb Core Is Extra Lightweight And Provides An Immediate Response During The Turns. With a moderate flex it is ideal for making fast changes of direction. The Fin Design Is Suited For Any Waves As Well As For River Surfing.
         </p>
         <button
-          class="MuiButtonBase-root-54 MuiButton-root-37 MuiButton-outlined-42 MuiButton-outlinedSecondary-44 Hook-button-1ihz2ti"
+          class="MuiButtonBase-root-48 MuiButton-root-31 MuiButton-outlined-36 MuiButton-outlinedSecondary-38 Hook-button-1ecjfgm"
           tabindex="0"
           type="button"
         >
           <span
-            class="MuiButton-label-38"
+            class="MuiButton-label-32"
           >
             more info
           </span>
           <span
-            class="MuiTouchRipple-root-83"
+            class="MuiTouchRipple-root-77"
           />
         </button>
       </div>

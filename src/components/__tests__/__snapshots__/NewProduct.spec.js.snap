@@ -6,11 +6,11 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="Hook-root-25f6vz"
+        class="Hook-root-sys8ob"
         id="products"
       >
         <div
-          class="Hook-img-2qqtdd gatsby-image-wrapper"
+          class="Hook-img-nct9c5 gatsby-image-wrapper"
           style="position: relative; overflow: hidden;"
         >
           <div
@@ -32,10 +32,10 @@ Object {
           </noscript>
         </div>
         <div
-          class="MuiPaper-root-1 MuiPaper-elevation10-13 MuiPaper-rounded-2 Hook-paper-njyc45"
+          class="MuiPaper-root-1 MuiPaper-elevation10-13 MuiPaper-rounded-2 Hook-paper-a0lhrn"
         >
           <div
-            class="Hook-logo-9m77sf gatsby-image-wrapper"
+            class="Hook-logo-1raec60 gatsby-image-wrapper"
             style="position: relative; overflow: hidden;"
           >
             <div
@@ -57,27 +57,27 @@ Object {
             </noscript>
           </div>
           <p
-            class="MuiTypography-root-28 MuiTypography-body1-37 Hook-title-el340b"
+            class="MuiTypography-root-28 MuiTypography-body2-29 Hook-title-kfv5ry"
           >
             Bee Swell Surf Wax
           </p>
           <p
-            class="MuiTypography-root-28 MuiTypography-body1-37"
+            class="MuiTypography-root-28 MuiTypography-body2-29"
           >
             We are so excited to be able to bring you this premium, eco-friendly surf wax! Ride waves with confidence and a clear conscience! Bee Swell Eco-Friendly surf wax is made with 100% pure beeswax that has been ethically sourced by natural beekeepers. Proceeds help to provide pollinator habitat and resources for honeybee rescues.
           </p>
           <button
-            class="MuiButtonBase-root-81 MuiButton-root-64 MuiButton-outlined-69 MuiButton-outlinedSecondary-71 Hook-button-1ihz2ti"
+            class="MuiButtonBase-root-75 MuiButton-root-58 MuiButton-outlined-63 MuiButton-outlinedSecondary-65 Hook-button-1ecjfgm"
             tabindex="0"
             type="button"
           >
             <span
-              class="MuiButton-label-65"
+              class="MuiButton-label-59"
             >
               more info
             </span>
             <span
-              class="MuiTouchRipple-root-101"
+              class="MuiTouchRipple-root-95"
             />
           </button>
         </div>
@@ -86,11 +86,11 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="Hook-root-25f6vz"
+      class="Hook-root-sys8ob"
       id="products"
     >
       <div
-        class="Hook-img-2qqtdd gatsby-image-wrapper"
+        class="Hook-img-nct9c5 gatsby-image-wrapper"
         style="position: relative; overflow: hidden;"
       >
         <div
@@ -112,10 +112,10 @@ Object {
         </noscript>
       </div>
       <div
-        class="MuiPaper-root-1 MuiPaper-elevation10-13 MuiPaper-rounded-2 Hook-paper-njyc45"
+        class="MuiPaper-root-1 MuiPaper-elevation10-13 MuiPaper-rounded-2 Hook-paper-a0lhrn"
       >
         <div
-          class="Hook-logo-9m77sf gatsby-image-wrapper"
+          class="Hook-logo-1raec60 gatsby-image-wrapper"
           style="position: relative; overflow: hidden;"
         >
           <div
@@ -137,27 +137,27 @@ Object {
           </noscript>
         </div>
         <p
-          class="MuiTypography-root-28 MuiTypography-body1-37 Hook-title-el340b"
+          class="MuiTypography-root-28 MuiTypography-body2-29 Hook-title-kfv5ry"
         >
           Bee Swell Surf Wax
         </p>
         <p
-          class="MuiTypography-root-28 MuiTypography-body1-37"
+          class="MuiTypography-root-28 MuiTypography-body2-29"
         >
           We are so excited to be able to bring you this premium, eco-friendly surf wax! Ride waves with confidence and a clear conscience! Bee Swell Eco-Friendly surf wax is made with 100% pure beeswax that has been ethically sourced by natural beekeepers. Proceeds help to provide pollinator habitat and resources for honeybee rescues.
         </p>
         <button
-          class="MuiButtonBase-root-81 MuiButton-root-64 MuiButton-outlined-69 MuiButton-outlinedSecondary-71 Hook-button-1ihz2ti"
+          class="MuiButtonBase-root-75 MuiButton-root-58 MuiButton-outlined-63 MuiButton-outlinedSecondary-65 Hook-button-1ecjfgm"
           tabindex="0"
           type="button"
         >
           <span
-            class="MuiButton-label-65"
+            class="MuiButton-label-59"
           >
             more info
           </span>
           <span
-            class="MuiTouchRipple-root-101"
+            class="MuiTouchRipple-root-95"
           />
         </button>
       </div>

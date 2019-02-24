@@ -6,7 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="Hook-list-x9p02g"
+        class="Hook-list-2wcdla"
       >
         <nav
           class="MuiList-root-1 MuiList-padding-2"
@@ -20,13 +20,13 @@ Object {
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root-20 MuiListItemText-dense-22 Hook-text-122czao"
+                class="MuiListItemText-root-20 MuiListItemText-dense-22 Hook-text-18qvgx3"
               >
                 home
               </div>
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root-26 Hook-icon-10cdwrc"
+                class="MuiSvgIcon-root-26 Hook-icon-jb7x58"
                 focusable="false"
                 role="presentation"
                 viewBox="0 0 24 24"
@@ -46,7 +46,7 @@ Object {
           </a>
           <a
             aria-label="facebook"
-            class="MuiButtonBase-root-17 MuiButton-root-35 MuiButton-text-37 Hook-button-1xnu36s"
+            class="MuiButtonBase-root-17 MuiButton-root-35 MuiButton-text-37 Hook-button-1ctuqjk"
             href="https://www.facebook.com/EisbachRiders/"
             rel="noopener"
             role="button"
@@ -62,11 +62,11 @@ Object {
                 tabindex="0"
               >
                 <div
-                  class="MuiListItemText-root-20 MuiListItemText-dense-22 Hook-text-122czao"
+                  class="MuiListItemText-root-20 MuiListItemText-dense-22 Hook-text-18qvgx3"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root-26 Hook-iconSocial-9791bl"
+                    class="MuiSvgIcon-root-26 Hook-iconSocial-t7x1qu"
                     focusable="false"
                     role="presentation"
                     viewBox="0 0 96.124 96.123"
@@ -95,7 +95,7 @@ Object {
                 </div>
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root-26 Hook-icon-10cdwrc"
+                  class="MuiSvgIcon-root-26 Hook-icon-jb7x58"
                   focusable="false"
                   role="presentation"
                   viewBox="0 0 24 24"
@@ -116,7 +116,7 @@ Object {
           </a>
           <a
             aria-label="instagram"
-            class="MuiButtonBase-root-17 MuiButton-root-35 MuiButton-text-37 Hook-button-1xnu36s"
+            class="MuiButtonBase-root-17 MuiButton-root-35 MuiButton-text-37 Hook-button-1ctuqjk"
             href="https://www.instagram.com/eisbachriders/"
             rel="noopener"
             role="button"
@@ -132,11 +132,11 @@ Object {
                 tabindex="0"
               >
                 <div
-                  class="MuiListItemText-root-20 MuiListItemText-dense-22 Hook-text-122czao"
+                  class="MuiListItemText-root-20 MuiListItemText-dense-22 Hook-text-18qvgx3"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root-26 Hook-iconSocial-9791bl"
+                    class="MuiSvgIcon-root-26 Hook-iconSocial-t7x1qu"
                     focusable="false"
                     role="presentation"
                     viewBox="0 0 448 512"
@@ -148,7 +148,7 @@ Object {
                 </div>
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root-26 Hook-icon-10cdwrc"
+                  class="MuiSvgIcon-root-26 Hook-icon-jb7x58"
                   focusable="false"
                   role="presentation"
                   viewBox="0 0 24 24"
@@ -173,7 +173,7 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="Hook-list-x9p02g"
+      class="Hook-list-2wcdla"
     >
       <nav
         class="MuiList-root-1 MuiList-padding-2"
@@ -187,13 +187,13 @@ Object {
             tabindex="0"
           >
             <div
-              class="MuiListItemText-root-20 MuiListItemText-dense-22 Hook-text-122czao"
+              class="MuiListItemText-root-20 MuiListItemText-dense-22 Hook-text-18qvgx3"
             >
               home
             </div>
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root-26 Hook-icon-10cdwrc"
+              class="MuiSvgIcon-root-26 Hook-icon-jb7x58"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -213,7 +213,7 @@ Object {
         </a>
         <a
           aria-label="facebook"
-          class="MuiButtonBase-root-17 MuiButton-root-35 MuiButton-text-37 Hook-button-1xnu36s"
+          class="MuiButtonBase-root-17 MuiButton-root-35 MuiButton-text-37 Hook-button-1ctuqjk"
           href="https://www.facebook.com/EisbachRiders/"
           rel="noopener"
           role="button"
@@ -229,11 +229,11 @@ Object {
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root-20 MuiListItemText-dense-22 Hook-text-122czao"
+                class="MuiListItemText-root-20 MuiListItemText-dense-22 Hook-text-18qvgx3"
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root-26 Hook-iconSocial-9791bl"
+                  class="MuiSvgIcon-root-26 Hook-iconSocial-t7x1qu"
                   focusable="false"
                   role="presentation"
                   viewBox="0 0 96.124 96.123"
@@ -262,7 +262,7 @@ Object {
               </div>
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root-26 Hook-icon-10cdwrc"
+                class="MuiSvgIcon-root-26 Hook-icon-jb7x58"
                 focusable="false"
                 role="presentation"
                 viewBox="0 0 24 24"
@@ -283,7 +283,7 @@ Object {
         </a>
         <a
           aria-label="instagram"
-          class="MuiButtonBase-root-17 MuiButton-root-35 MuiButton-text-37 Hook-button-1xnu36s"
+          class="MuiButtonBase-root-17 MuiButton-root-35 MuiButton-text-37 Hook-button-1ctuqjk"
           href="https://www.instagram.com/eisbachriders/"
           rel="noopener"
           role="button"
@@ -299,11 +299,11 @@ Object {
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root-20 MuiListItemText-dense-22 Hook-text-122czao"
+                class="MuiListItemText-root-20 MuiListItemText-dense-22 Hook-text-18qvgx3"
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root-26 Hook-iconSocial-9791bl"
+                  class="MuiSvgIcon-root-26 Hook-iconSocial-t7x1qu"
                   focusable="false"
                   role="presentation"
                   viewBox="0 0 448 512"
@@ -315,7 +315,7 @@ Object {
               </div>
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root-26 Hook-icon-10cdwrc"
+                class="MuiSvgIcon-root-26 Hook-icon-jb7x58"
                 focusable="false"
                 role="presentation"
                 viewBox="0 0 24 24"
