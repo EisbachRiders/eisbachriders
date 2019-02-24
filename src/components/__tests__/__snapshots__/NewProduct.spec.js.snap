@@ -6,11 +6,11 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="Hook-root-sys8ob"
+        class="Hook-root-1p1euq"
         id="products"
       >
         <div
-          class="Hook-img-nct9c5 gatsby-image-wrapper"
+          class="Hook-img-1lt6qxv gatsby-image-wrapper"
           style="position: relative; overflow: hidden;"
         >
           <div
@@ -32,10 +32,10 @@ Object {
           </noscript>
         </div>
         <div
-          class="MuiPaper-root-1 MuiPaper-elevation10-13 MuiPaper-rounded-2 Hook-paper-a0lhrn"
+          class="MuiPaper-root-1 MuiPaper-elevation10-13 MuiPaper-rounded-2 Hook-paper-1t7pdun"
         >
           <div
-            class="Hook-logo-1raec60 gatsby-image-wrapper"
+            class="Hook-logo-2r0ggu gatsby-image-wrapper"
             style="position: relative; overflow: hidden;"
           >
             <div
@@ -57,7 +57,7 @@ Object {
             </noscript>
           </div>
           <p
-            class="MuiTypography-root-28 MuiTypography-body2-29 Hook-title-kfv5ry"
+            class="MuiTypography-root-28 MuiTypography-body2-29 Hook-title-1b5xj2l"
           >
             Bee Swell Surf Wax
           </p>
@@ -67,7 +67,7 @@ Object {
             We are so excited to be able to bring you this premium, eco-friendly surf wax! Ride waves with confidence and a clear conscience! Bee Swell Eco-Friendly surf wax is made with 100% pure beeswax that has been ethically sourced by natural beekeepers. Proceeds help to provide pollinator habitat and resources for honeybee rescues.
           </p>
           <button
-            class="MuiButtonBase-root-75 MuiButton-root-58 MuiButton-outlined-63 MuiButton-outlinedSecondary-65 Hook-button-1ecjfgm"
+            class="MuiButtonBase-root-75 MuiButton-root-58 MuiButton-outlined-63 MuiButton-outlinedSecondary-65 Hook-button-17bk4pg"
             tabindex="0"
             type="button"
           >
@@ -86,11 +86,11 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="Hook-root-sys8ob"
+      class="Hook-root-1p1euq"
       id="products"
     >
       <div
-        class="Hook-img-nct9c5 gatsby-image-wrapper"
+        class="Hook-img-1lt6qxv gatsby-image-wrapper"
         style="position: relative; overflow: hidden;"
       >
         <div
@@ -112,10 +112,10 @@ Object {
         </noscript>
       </div>
       <div
-        class="MuiPaper-root-1 MuiPaper-elevation10-13 MuiPaper-rounded-2 Hook-paper-a0lhrn"
+        class="MuiPaper-root-1 MuiPaper-elevation10-13 MuiPaper-rounded-2 Hook-paper-1t7pdun"
       >
         <div
-          class="Hook-logo-1raec60 gatsby-image-wrapper"
+          class="Hook-logo-2r0ggu gatsby-image-wrapper"
           style="position: relative; overflow: hidden;"
         >
           <div
@@ -137,7 +137,7 @@ Object {
           </noscript>
         </div>
         <p
-          class="MuiTypography-root-28 MuiTypography-body2-29 Hook-title-kfv5ry"
+          class="MuiTypography-root-28 MuiTypography-body2-29 Hook-title-1b5xj2l"
         >
           Bee Swell Surf Wax
         </p>
@@ -147,7 +147,7 @@ Object {
           We are so excited to be able to bring you this premium, eco-friendly surf wax! Ride waves with confidence and a clear conscience! Bee Swell Eco-Friendly surf wax is made with 100% pure beeswax that has been ethically sourced by natural beekeepers. Proceeds help to provide pollinator habitat and resources for honeybee rescues.
         </p>
         <button
-          class="MuiButtonBase-root-75 MuiButton-root-58 MuiButton-outlined-63 MuiButton-outlinedSecondary-65 Hook-button-1ecjfgm"
+          class="MuiButtonBase-root-75 MuiButton-root-58 MuiButton-outlined-63 MuiButton-outlinedSecondary-65 Hook-button-17bk4pg"
           tabindex="0"
           type="button"
         >

@@ -19,19 +19,20 @@ const variantIcon = {
 
 const useStyles = makeStyles(theme => ({
   success: {
-    backgroundColor: theme.status.green,
+    backgroundColor: theme.status.teal,
   },
   error: {
-    backgroundColor: theme.palette.error.dark,
+    backgroundColor: theme.status.redLt,
   },
   info: {
-    backgroundColor: theme.palette.primary.dark,
+    backgroundColor: theme.status.tealDk,
   },
   warning: {
     backgroundColor: theme.status.yellow,
   },
   icon: {
     fontSize: 20,
+    color: theme.palette.common.black,
   },
   iconVariant: {
     opacity: 0.9,
@@ -40,6 +41,7 @@ const useStyles = makeStyles(theme => ({
   message: {
     display: 'flex',
     alignItems: 'center',
+    color: theme.palette.common.black,
   },
 }))
 

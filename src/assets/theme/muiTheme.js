@@ -12,8 +12,9 @@ const status = {
   ocean: '#233d54',
   tealDk: '#45a29e',
   green: '#00942b',
-  yellow: '#fcf166',
+  yellow: '#fce566',
   red: '#FF0012',
+  redLt: '#ff4e5b',
   greyBlue: '#f3f8fc',
 }
 

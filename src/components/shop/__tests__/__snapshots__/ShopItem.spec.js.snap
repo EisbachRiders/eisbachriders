@@ -6,26 +6,26 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="Hook-root-o7yfbk"
+        class="Hook-root-1o01gd4"
       >
         <img
           alt="product test"
-          class="Hook-img-16x9eyn"
+          class="Hook-img-ss7bwf"
         />
         <div
-          class="Hook-descriptionContainer-12gz4p"
+          class="Hook-descriptionContainer-8ji99v"
         >
           <p
             class="MuiTypography-root-1 MuiTypography-body2-2"
           />
           <div
-            class="Hook-fullWidth-115baqa"
+            class="Hook-fullWidth-1wx18uu"
           >
             <div
-              class="Hook-priceContainer-10ca940"
+              class="Hook-priceContainer-74opj8"
             >
               <h6
-                class="MuiTypography-root-1 MuiTypography-h6-11 Hook-price-169xtyo"
+                class="MuiTypography-root-1 MuiTypography-h6-11 Hook-price-z7yc1o"
               >
                 €undefined
               </h6>
@@ -33,7 +33,7 @@ Object {
             </div>
           </div>
           <button
-            class="MuiButtonBase-root-48 MuiButton-root-31 MuiButton-outlined-36 MuiButton-outlinedSecondary-38 Hook-button-1ecjfgm Hook-buttonFull-twp37v"
+            class="MuiButtonBase-root-48 MuiButton-root-31 MuiButton-outlined-36 MuiButton-outlinedSecondary-38 Hook-button-17bk4pg Hook-buttonFull-1nmcltq"
             tabindex="0"
             type="button"
           >
@@ -52,26 +52,26 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="Hook-root-o7yfbk"
+      class="Hook-root-1o01gd4"
     >
       <img
         alt="product test"
-        class="Hook-img-16x9eyn"
+        class="Hook-img-ss7bwf"
       />
       <div
-        class="Hook-descriptionContainer-12gz4p"
+        class="Hook-descriptionContainer-8ji99v"
       >
         <p
           class="MuiTypography-root-1 MuiTypography-body2-2"
         />
         <div
-          class="Hook-fullWidth-115baqa"
+          class="Hook-fullWidth-1wx18uu"
         >
           <div
-            class="Hook-priceContainer-10ca940"
+            class="Hook-priceContainer-74opj8"
           >
             <h6
-              class="MuiTypography-root-1 MuiTypography-h6-11 Hook-price-169xtyo"
+              class="MuiTypography-root-1 MuiTypography-h6-11 Hook-price-z7yc1o"
             >
               €undefined
             </h6>
@@ -79,7 +79,7 @@ Object {
           </div>
         </div>
         <button
-          class="MuiButtonBase-root-48 MuiButton-root-31 MuiButton-outlined-36 MuiButton-outlinedSecondary-38 Hook-button-1ecjfgm Hook-buttonFull-twp37v"
+          class="MuiButtonBase-root-48 MuiButton-root-31 MuiButton-outlined-36 MuiButton-outlinedSecondary-38 Hook-button-17bk4pg Hook-buttonFull-1nmcltq"
           tabindex="0"
           type="button"
         >

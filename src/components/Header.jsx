@@ -81,7 +81,7 @@ function Header({ isHomepage, lng, changeLng }) {
   const classes = useStyles()
   const { t } = useTranslation()
 
-  const links = ['/shop/', 'contact']
+  const links = ['/shop/', '/contact/']
   const linkLabels = [t('header.shop'), t('header.contact')]
 
   return (

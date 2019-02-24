@@ -6,20 +6,20 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="Hook-containerNewsletter-t257y2"
+        class="Hook-containerNewsletter-13xw8og"
       >
         <h5
-          class="MuiTypography-root-8 MuiTypography-h5-17 Hook-textNewsletter-1hu5wjs"
+          class="MuiTypography-root-8 MuiTypography-h5-17 Hook-textNewsletter-oh7u9x"
         >
           newsletter.sectionTitle
         </h5>
         <p
-          class="MuiTypography-root-8 MuiTypography-body2-9 Hook-subtitleNewsletter-psw097"
+          class="MuiTypography-root-8 MuiTypography-body2-9 Hook-subtitleNewsletter-38370b"
         >
           newsletter.message
         </p>
         <button
-          class="MuiButtonBase-root-55 MuiButton-root-38 MuiButton-contained-46 MuiButton-containedPrimary-47 Hook-button-1rqc8ai"
+          class="MuiButtonBase-root-55 MuiButton-root-38 MuiButton-contained-46 MuiButton-containedPrimary-47 Hook-button-nvs5r3"
           tabindex="0"
           type="button"
         >
@@ -37,20 +37,20 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="Hook-containerNewsletter-t257y2"
+      class="Hook-containerNewsletter-13xw8og"
     >
       <h5
-        class="MuiTypography-root-8 MuiTypography-h5-17 Hook-textNewsletter-1hu5wjs"
+        class="MuiTypography-root-8 MuiTypography-h5-17 Hook-textNewsletter-oh7u9x"
       >
         newsletter.sectionTitle
       </h5>
       <p
-        class="MuiTypography-root-8 MuiTypography-body2-9 Hook-subtitleNewsletter-psw097"
+        class="MuiTypography-root-8 MuiTypography-body2-9 Hook-subtitleNewsletter-38370b"
       >
         newsletter.message
       </p>
       <button
-        class="MuiButtonBase-root-55 MuiButton-root-38 MuiButton-contained-46 MuiButton-containedPrimary-47 Hook-button-1rqc8ai"
+        class="MuiButtonBase-root-55 MuiButton-root-38 MuiButton-contained-46 MuiButton-containedPrimary-47 Hook-button-nvs5r3"
         tabindex="0"
         type="button"
       >

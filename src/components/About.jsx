@@ -127,9 +127,9 @@ function About({ img, waveImg }) {
             alt="two surfers in ocean"
             className={classes.img}
           />
-          <Typography className={classes.sideText}>
+          {/* <Typography className={classes.sideText}>
             Surf Accessories from Munich
-          </Typography>
+          </Typography> */}
         </div>
       </Hidden>
       <Img

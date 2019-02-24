@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField'
 import Snackbar from '@material-ui/core/Snackbar'
+import CircularProgress from '@material-ui/core/CircularProgress'
 import Notification from './Snackbar'
 import { InstagramIcon, FacebookIcon } from '../assets/icons/icons'
 
@@ -93,6 +94,12 @@ const useStyles = makeStyles(theme => ({
     minWidth: 0,
     padding: 8,
     marginRight: 30,
+    '&:hover, &$focusVisible': {
+      borderColor: theme.palette.secondary.main,
+      '& $icon': {
+        fill: theme.palette.secondary.main,
+      },
+    },
     [theme.breakpoints.up('sm')]: {
       marginRight: 15,
     },
@@ -130,11 +137,15 @@ const useStyles = makeStyles(theme => ({
   },
   textArea: {
     paddingLeft: 20,
+    color: theme.palette.common.white,
   },
   inputLabel: {
     fontSize: 12,
     paddingLeft: 20,
     color: theme.palette.common.white,
+  },
+  progress: {
+    width: 15,
   },
 }))
 
@@ -150,6 +161,7 @@ function Footer() {
   const [isTouched, setTouched] = useState(false)
   const [isSnackbarOpen, setSnackbar] = useState(false)
   const [notification, setNotification] = useState('success')
+  const [isLoading, setLoading] = useState(false)
 
   const handleChange = name => event => {
     if (isTouched === false) {
@@ -184,7 +196,14 @@ function Footer() {
   }
 
   const handleSubmit = () => {
-    if (isEmailValid && isMessageValid && isNameValid && isTouched) {
+    setLoading(true)
+    if (
+      isEmailValid &&
+      isMessageValid &&
+      message.length > 0 &&
+      isNameValid &&
+      isTouched
+    ) {
       fetch('https://eisbach-riders.prod.with-datafire.io/contact', {
         method: 'POST',
         headers: {
@@ -193,7 +212,7 @@ function Footer() {
         },
         body: JSON.stringify({
           message: message,
-          email: email,
+          emailAddress: email,
           name: name,
         }),
       })
@@ -201,27 +220,31 @@ function Footer() {
           if (response.status === 200) {
             setSnackbar(true)
             setNotification('success')
+            setLoading(false)
           } else {
             setSnackbar(true)
             setNotification('error')
+            setLoading(false)
           }
         })
         .catch(err => {
           setSnackbar(true)
           setNotification('error')
+          setLoading(false)
         })
     } else {
       setSnackbar(true)
       setNotification('warning')
+      setLoading(false)
     }
   }
 
   return (
-    <div className={classes.root} id="contact">
+    <div className={classes.root}>
       <Snackbar
         anchorOrigin={{
-          vertical: 'bottom',
-          horizontal: 'left',
+          vertical: 'top',
+          horizontal: 'right',
         }}
         open={isSnackbarOpen}
         autoHideDuration={6000}
@@ -247,9 +270,8 @@ function Footer() {
             </Typography>
             <div className={classes.inputContainer}>
               <TextField
-                id="name"
-                label="name"
-                name="name"
+                id="footer_name"
+                label={t('common.name')}
                 type="text"
                 className={classes.textField}
                 InputProps={{
@@ -257,16 +279,18 @@ function Footer() {
                   disableUnderline: true,
                   classes: { input: classes.textArea },
                 }}
+                InputLabelProps={{
+                  className: classes.inputLabel,
+                }}
                 value={name}
                 placeholder={t('common.name')}
-                onChange={() => handleChange('name')}
+                onChange={handleChange('name')}
                 margin="normal"
                 required
               />
               <TextField
-                id="email"
-                label="email"
-                name="email"
+                id="footer_email"
+                label={t('common.email')}
                 type="email"
                 className={classes.textField}
                 InputProps={{
@@ -274,26 +298,31 @@ function Footer() {
                   disableUnderline: true,
                   classes: { input: classes.textArea },
                 }}
+                InputLabelProps={{
+                  className: classes.inputLabel,
+                }}
                 value={email}
                 placeholder={t('common.email')}
-                onChange={() => handleChange('email')}
+                onChange={handleChange('email')}
                 margin="normal"
                 required
               />
             </div>
             <TextField
-              label="message"
-              id="message"
-              name="message"
+              label={t('footer.message')}
+              id="footer_message"
               type="text"
               InputProps={{
                 className: isMessageValid ? classes.input : classes.inputError,
                 disableUnderline: true,
                 classes: { input: classes.textArea },
               }}
+              InputLabelProps={{
+                className: classes.inputLabel,
+              }}
               value={message}
               placeholder={t('footer.message')}
-              onChange={() => handleChange('message')}
+              onChange={handleChange('message')}
               margin="normal"
               fullWidth
               multiline
@@ -301,14 +330,17 @@ function Footer() {
               required
             />
             <Button
-              data-testid="submit"
-              type="submit"
+              data-testid="footer_submit"
               variant="contained"
               className={classes.buttonSend}
               fullWidth
               onClick={handleSubmit}
             >
-              {t('footer.send')}
+              {isLoading ? (
+                <CircularProgress size={24} color="primary" />
+              ) : (
+                t('footer.send')
+              )}
             </Button>
           </form>
         </div>

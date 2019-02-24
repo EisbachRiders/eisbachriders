@@ -10,7 +10,7 @@ Object {
       aria-hidden="true"
     >
       <button
-        class="MuiButtonBase-root-18 MuiButton-root-1 MuiButton-outlined-6 MuiButton-outlinedSecondary-8 Hook-button-1ecjfgm"
+        class="MuiButtonBase-root-18 MuiButton-root-1 MuiButton-outlined-6 MuiButton-outlinedSecondary-8 Hook-button-17bk4pg"
         tabindex="0"
         type="button"
       >
@@ -44,10 +44,10 @@ Object {
         tabindex="-1"
       >
         <div
-          class="MuiPaper-root-47 MuiPaper-elevation24-73 MuiPaper-rounded-48 MuiDialog-paper-25 Hook-paper-itjtj3 MuiDialog-paperScrollPaper-26 MuiDialog-paperWidthMd-31"
+          class="MuiPaper-root-47 MuiPaper-elevation24-73 MuiPaper-rounded-48 MuiDialog-paper-25 Hook-paper-nbendo MuiDialog-paperScrollPaper-26 MuiDialog-paperWidthMd-31"
         >
           <div
-            class="MuiDialogTitle-root-74 Hook-dialogTitle-1yaitwv"
+            class="MuiDialogTitle-root-74 Hook-dialogTitle-189a3jr"
             id="dialog-title"
           >
             <h6
@@ -55,7 +55,7 @@ Object {
             >
               <button
                 aria-label="close"
-                class="MuiButtonBase-root-18 MuiIconButton-root-105 MuiIconButton-colorInherit-106 Hook-closeButton-op4cyh"
+                class="MuiButtonBase-root-18 MuiIconButton-root-105 MuiIconButton-colorInherit-106 Hook-closeButton-1f4wr0d"
                 tabindex="0"
                 type="button"
               >
@@ -85,13 +85,13 @@ Object {
             </h6>
           </div>
           <div
-            class="MuiDialogContent-root-120 Hook-dialogRoot-lfeyyx"
+            class="MuiDialogContent-root-120 Hook-dialogRoot-4zmvxt"
           >
             <div
-              class="Hook-dialogContainer-1iekob2"
+              class="Hook-dialogContainer-115g6z4"
             >
               <div
-                class="Hook-dialogImg-1sccabg"
+                class="Hook-dialogImg-4pilt3"
               >
                 <div
                   style="overflow-x: hidden;"
@@ -102,7 +102,7 @@ Object {
                   />
                 </div>
                 <div
-                  class="MuiPaper-root-47 MuiPaper-elevation0-49 MuiMobileStepper-root-121 MuiMobileStepper-positionStatic-124 Hook-mobileStepper-1emojig"
+                  class="MuiPaper-root-47 MuiPaper-elevation0-49 MuiMobileStepper-root-121 MuiMobileStepper-positionStatic-124 Hook-mobileStepper-1jx0geo"
                 >
                   <button
                     aria-label="scroll right"
@@ -166,20 +166,20 @@ Object {
                 </div>
               </div>
               <div
-                class="Hook-dialogContent-3d7b3e"
+                class="Hook-dialogContent-1g0cymz"
               >
                 <div
-                  class="Hook-priceContainer-vyf8vb"
+                  class="Hook-priceContainer-14jj9yz"
                 >
                   <h6
-                    class="MuiTypography-root-75 MuiTypography-h6-85 Hook-price-1yarhbx"
+                    class="MuiTypography-root-75 MuiTypography-h6-85 Hook-price-h4xwoi"
                   >
                     €undefined
                   </h6>
                   <div />
                 </div>
                 <ul
-                  class="MuiList-root-129 Hook-scroll-vhpypq"
+                  class="MuiList-root-129 Hook-scroll-13gwzuv"
                 />
               </div>
             </div>
@@ -196,7 +196,7 @@ Object {
     aria-hidden="true"
   >
     <button
-      class="MuiButtonBase-root-18 MuiButton-root-1 MuiButton-outlined-6 MuiButton-outlinedSecondary-8 Hook-button-1ecjfgm"
+      class="MuiButtonBase-root-18 MuiButton-root-1 MuiButton-outlined-6 MuiButton-outlinedSecondary-8 Hook-button-17bk4pg"
       tabindex="0"
       type="button"
     >

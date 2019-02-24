@@ -6,33 +6,33 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="Hook-root-16r39lv"
+        class="Hook-root-vig9dz"
         id="about"
       >
         <div
-          class="Hook-textContainer-150o2ij"
+          class="Hook-textContainer-1ie3xng"
         >
           <h5
-            class="MuiTypography-root-1 MuiTypography-h5-10 Hook-title-1kqdeq9"
+            class="MuiTypography-root-1 MuiTypography-h5-10 Hook-title-rp2l0f"
           >
             about.sectionTitle1
           </h5>
           <h5
-            class="MuiTypography-root-1 MuiTypography-h5-10 Hook-title-1kqdeq9"
+            class="MuiTypography-root-1 MuiTypography-h5-10 Hook-title-rp2l0f"
           >
             about.sectionTitle2
           </h5>
           <p
-            class="MuiTypography-root-1 MuiTypography-body1-3 Hook-text-i6dtyb"
+            class="MuiTypography-root-1 MuiTypography-body1-3 Hook-text-p6zqnu"
           >
             about.message
           </p>
         </div>
         <div
-          class="Hook-imgContainer-19quyfj"
+          class="Hook-imgContainer-1s5hbov"
         >
           <div
-            class="Hook-img-1s8awyi gatsby-image-wrapper"
+            class="Hook-img-sjwcmm gatsby-image-wrapper"
             style="position: relative; overflow: hidden;"
           >
             <div
@@ -53,14 +53,9 @@ Object {
               &lt;picture&gt;&lt;source srcSet="mockString" sizes="mockString" /&gt;&lt;img src="mockString" alt="two surfers in ocean" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
             </noscript>
           </div>
-          <p
-            class="MuiTypography-root-1 MuiTypography-body2-2 Hook-sideText-1lxgzlj"
-          >
-            Surf Accessories from Munich
-          </p>
         </div>
         <div
-          class="Hook-backgroundImg-au67d9 gatsby-image-wrapper"
+          class="Hook-backgroundImg-shfvpy gatsby-image-wrapper"
           style="position: absolute; overflow: hidden;"
         >
           <div
@@ -86,33 +81,33 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="Hook-root-16r39lv"
+      class="Hook-root-vig9dz"
       id="about"
     >
       <div
-        class="Hook-textContainer-150o2ij"
+        class="Hook-textContainer-1ie3xng"
       >
         <h5
-          class="MuiTypography-root-1 MuiTypography-h5-10 Hook-title-1kqdeq9"
+          class="MuiTypography-root-1 MuiTypography-h5-10 Hook-title-rp2l0f"
         >
           about.sectionTitle1
         </h5>
         <h5
-          class="MuiTypography-root-1 MuiTypography-h5-10 Hook-title-1kqdeq9"
+          class="MuiTypography-root-1 MuiTypography-h5-10 Hook-title-rp2l0f"
         >
           about.sectionTitle2
         </h5>
         <p
-          class="MuiTypography-root-1 MuiTypography-body1-3 Hook-text-i6dtyb"
+          class="MuiTypography-root-1 MuiTypography-body1-3 Hook-text-p6zqnu"
         >
           about.message
         </p>
       </div>
       <div
-        class="Hook-imgContainer-19quyfj"
+        class="Hook-imgContainer-1s5hbov"
       >
         <div
-          class="Hook-img-1s8awyi gatsby-image-wrapper"
+          class="Hook-img-sjwcmm gatsby-image-wrapper"
           style="position: relative; overflow: hidden;"
         >
           <div
@@ -133,14 +128,9 @@ Object {
             &lt;picture&gt;&lt;source srcSet="mockString" sizes="mockString" /&gt;&lt;img src="mockString" alt="two surfers in ocean" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
           </noscript>
         </div>
-        <p
-          class="MuiTypography-root-1 MuiTypography-body2-2 Hook-sideText-1lxgzlj"
-        >
-          Surf Accessories from Munich
-        </p>
       </div>
       <div
-        class="Hook-backgroundImg-au67d9 gatsby-image-wrapper"
+        class="Hook-backgroundImg-shfvpy gatsby-image-wrapper"
         style="position: absolute; overflow: hidden;"
       >
         <div

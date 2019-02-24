@@ -6,23 +6,23 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="MuiSnackbar-root-1 MuiSnackbar-anchorOriginBottomCenter-3 Hook-snackbar-1o19kbz"
+        class="MuiSnackbar-root-1 MuiSnackbar-anchorOriginBottomCenter-3 Hook-snackbar-qt6bs2"
       >
         <div
           aria-describedby="client-snackbar"
-          class="MuiTypography-root-38 MuiTypography-body2-39 MuiPaper-root-11 MuiPaper-elevation6-19 MuiSnackbarContent-root-8 Hook-snackbarContent-1xoobo1"
+          class="MuiTypography-root-38 MuiTypography-body2-39 MuiPaper-root-11 MuiPaper-elevation6-19 MuiSnackbarContent-root-8 Hook-snackbarContent-e8yt44"
           role="alertdialog"
           style="-webkit-transform: translate(0, 0); transform: translate(0, 0); -webkit-transition: -webkit-transform 225ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;"
         >
           <div
-            class="MuiSnackbarContent-message-9 Hook-message-1dq2bje"
+            class="MuiSnackbarContent-message-9 Hook-message-1x5shg7"
           >
             <span
               id="client-snackbar"
             >
               tracking.message
               <a
-                class="Hook-link-15a5j2r"
+                class="Hook-link-1zvxje"
                 href="/privacy/"
               >
                 tracking.privacyLink
@@ -30,10 +30,10 @@ Object {
             </span>
           </div>
           <div
-            class="MuiSnackbarContent-action-10 Hook-action-17qmw59"
+            class="MuiSnackbarContent-action-10 Hook-action-1bak2fe"
           >
             <a
-              class="MuiButtonBase-root-85 MuiButton-root-68 MuiButton-text-70 Hook-buttonDecline-xcsokg"
+              class="MuiButtonBase-root-85 MuiButton-root-68 MuiButton-text-70 Hook-buttonDecline-cll7ju"
               href="javascript:gaOptout();"
               role="button"
               tabindex="0"
@@ -48,7 +48,7 @@ Object {
               />
             </a>
             <button
-              class="MuiButtonBase-root-85 MuiButton-root-68 MuiButton-contained-76 MuiButton-containedSecondary-78 Hook-button-12rvs9h"
+              class="MuiButtonBase-root-85 MuiButton-root-68 MuiButton-contained-76 MuiButton-containedSecondary-78 Hook-button-16t00fl"
               tabindex="0"
               type="button"
             >
@@ -68,23 +68,23 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="MuiSnackbar-root-1 MuiSnackbar-anchorOriginBottomCenter-3 Hook-snackbar-1o19kbz"
+      class="MuiSnackbar-root-1 MuiSnackbar-anchorOriginBottomCenter-3 Hook-snackbar-qt6bs2"
     >
       <div
         aria-describedby="client-snackbar"
-        class="MuiTypography-root-38 MuiTypography-body2-39 MuiPaper-root-11 MuiPaper-elevation6-19 MuiSnackbarContent-root-8 Hook-snackbarContent-1xoobo1"
+        class="MuiTypography-root-38 MuiTypography-body2-39 MuiPaper-root-11 MuiPaper-elevation6-19 MuiSnackbarContent-root-8 Hook-snackbarContent-e8yt44"
         role="alertdialog"
         style="-webkit-transform: translate(0, 0); transform: translate(0, 0); -webkit-transition: -webkit-transform 225ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;"
       >
         <div
-          class="MuiSnackbarContent-message-9 Hook-message-1dq2bje"
+          class="MuiSnackbarContent-message-9 Hook-message-1x5shg7"
         >
           <span
             id="client-snackbar"
           >
             tracking.message
             <a
-              class="Hook-link-15a5j2r"
+              class="Hook-link-1zvxje"
               href="/privacy/"
             >
               tracking.privacyLink
@@ -92,10 +92,10 @@ Object {
           </span>
         </div>
         <div
-          class="MuiSnackbarContent-action-10 Hook-action-17qmw59"
+          class="MuiSnackbarContent-action-10 Hook-action-1bak2fe"
         >
           <a
-            class="MuiButtonBase-root-85 MuiButton-root-68 MuiButton-text-70 Hook-buttonDecline-xcsokg"
+            class="MuiButtonBase-root-85 MuiButton-root-68 MuiButton-text-70 Hook-buttonDecline-cll7ju"
             href="javascript:gaOptout();"
             role="button"
             tabindex="0"
@@ -110,7 +110,7 @@ Object {
             />
           </a>
           <button
-            class="MuiButtonBase-root-85 MuiButton-root-68 MuiButton-contained-76 MuiButton-containedSecondary-78 Hook-button-12rvs9h"
+            class="MuiButtonBase-root-85 MuiButton-root-68 MuiButton-contained-76 MuiButton-containedSecondary-78 Hook-button-16t00fl"
             tabindex="0"
             type="button"
           >

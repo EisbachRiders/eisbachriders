@@ -7,19 +7,19 @@ Object {
     <div>
       <div
         aria-describedby="client-snackbar"
-        class="MuiTypography-root-31 MuiTypography-body2-32 MuiPaper-root-4 MuiPaper-elevation6-12 MuiSnackbarContent-root-1 Hook-success-4k6cus"
+        class="MuiTypography-root-31 MuiTypography-body2-32 MuiPaper-root-4 MuiPaper-elevation6-12 MuiSnackbarContent-root-1 Hook-success-1qq6i0b"
         role="alertdialog"
       >
         <div
           class="MuiSnackbarContent-message-2"
         >
           <span
-            class="Hook-message-1au839e"
+            class="Hook-message-1jk71r8"
             id="client-snackbar"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root-61 Hook-icon-lq5pk7 Hook-iconVariant-3xngzi"
+              class="MuiSvgIcon-root-61 Hook-icon-lpkfx9 Hook-iconVariant-cuj1lj"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -48,7 +48,7 @@ Object {
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root-61 Hook-icon-lq5pk7"
+                class="MuiSvgIcon-root-61 Hook-icon-lpkfx9"
                 focusable="false"
                 role="presentation"
                 viewBox="0 0 24 24"
@@ -73,19 +73,19 @@ Object {
   "container": <div>
     <div
       aria-describedby="client-snackbar"
-      class="MuiTypography-root-31 MuiTypography-body2-32 MuiPaper-root-4 MuiPaper-elevation6-12 MuiSnackbarContent-root-1 Hook-success-4k6cus"
+      class="MuiTypography-root-31 MuiTypography-body2-32 MuiPaper-root-4 MuiPaper-elevation6-12 MuiSnackbarContent-root-1 Hook-success-1qq6i0b"
       role="alertdialog"
     >
       <div
         class="MuiSnackbarContent-message-2"
       >
         <span
-          class="Hook-message-1au839e"
+          class="Hook-message-1jk71r8"
           id="client-snackbar"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root-61 Hook-icon-lq5pk7 Hook-iconVariant-3xngzi"
+            class="MuiSvgIcon-root-61 Hook-icon-lpkfx9 Hook-iconVariant-cuj1lj"
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"
@@ -114,7 +114,7 @@ Object {
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root-61 Hook-icon-lq5pk7"
+              class="MuiSvgIcon-root-61 Hook-icon-lpkfx9"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"

@@ -6,46 +6,46 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="Hook-root-nh30nu"
+        class="Hook-root-j0afcq"
         id="products"
       >
         <h5
-          class="MuiTypography-root-1 MuiTypography-h5-10 Hook-title-17q92o9"
+          class="MuiTypography-root-1 MuiTypography-h5-10 Hook-title-pu5m0x"
         >
           essential surf equipment
         </h5>
         <div
-          class="Hook-container-sr71w0"
+          class="Hook-container-1nqkfml"
         >
           <div
-            class="Hook-itemContainer-4423rp"
+            class="Hook-itemContainer-7wikcj"
           >
             <img
               alt="product 0"
-              class="Hook-img-16x9eyn"
+              class="Hook-img-ss7bwf"
               src="test-file-stub"
             />
             <div
-              class="Hook-descriptionContainer-12gz4p"
+              class="Hook-descriptionContainer-8ji99v"
             >
               <p
-                class="MuiTypography-root-1 MuiTypography-body2-2 Hook-name-1820afv"
+                class="MuiTypography-root-1 MuiTypography-body2-2 Hook-name-1wehtp"
               >
                 FCS Double Tab Thruster Fin Set with Fin Key
               </p>
               <div
-                class="Hook-fullWidth-115baqa"
+                class="Hook-fullWidth-1wx18uu"
               >
                 <div
-                  class="Hook-priceContainer-10ca940"
+                  class="Hook-priceContainer-74opj8"
                 >
                   <h6
-                    class="MuiTypography-root-1 MuiTypography-h6-11 Hook-price-169xtyo"
+                    class="MuiTypography-root-1 MuiTypography-h6-11 Hook-price-z7yc1o"
                   >
                     €19.90
                   </h6>
                   <div
-                    class="Hook-iconContainer-gmclgm"
+                    class="Hook-iconContainer-qazvg2"
                   >
                     <a
                       aria-label="Amazon"
@@ -61,7 +61,7 @@ Object {
                       >
                         <svg
                           aria-hidden="true"
-                          class="MuiSvgIcon-root-40 Hook-icon-ghc097"
+                          class="MuiSvgIcon-root-40 Hook-icon-tibjek"
                           focusable="false"
                           role="presentation"
                           viewBox="-352.037 -291.281 800.073 678.559"
@@ -137,7 +137,7 @@ Object {
                       >
                         <svg
                           aria-hidden="true"
-                          class="MuiSvgIcon-root-40 Hook-icon-ghc097 Hook-ebay-1jr85g2"
+                          class="MuiSvgIcon-root-40 Hook-icon-tibjek Hook-ebay-nuy1kr"
                           focusable="false"
                           role="presentation"
                           viewBox="0 0 302.8 120.1"
@@ -167,7 +167,7 @@ Object {
                   </div>
                 </div>
                 <button
-                  class="MuiButtonBase-root-37 MuiButton-root-49 MuiButton-outlined-54 MuiButton-outlinedSecondary-56 Hook-button-1ecjfgm Hook-buttonFull-twp37v"
+                  class="MuiButtonBase-root-37 MuiButton-root-49 MuiButton-outlined-54 MuiButton-outlinedSecondary-56 Hook-button-17bk4pg Hook-buttonFull-1nmcltq"
                   tabindex="0"
                   type="button"
                 >
@@ -184,34 +184,34 @@ Object {
             </div>
           </div>
           <div
-            class="Hook-itemContainer-4423rp"
+            class="Hook-itemContainer-7wikcj"
           >
             <img
               alt="product 1"
-              class="Hook-img-16x9eyn"
+              class="Hook-img-ss7bwf"
               src="test-file-stub"
             />
             <div
-              class="Hook-descriptionContainer-12gz4p"
+              class="Hook-descriptionContainer-8ji99v"
             >
               <p
-                class="MuiTypography-root-1 MuiTypography-body2-2 Hook-name-1820afv"
+                class="MuiTypography-root-1 MuiTypography-body2-2 Hook-name-1wehtp"
               >
                 RailProtect Tape
               </p>
               <div
-                class="Hook-fullWidth-115baqa"
+                class="Hook-fullWidth-1wx18uu"
               >
                 <div
-                  class="Hook-priceContainer-10ca940"
+                  class="Hook-priceContainer-74opj8"
                 >
                   <h6
-                    class="MuiTypography-root-1 MuiTypography-h6-11 Hook-price-169xtyo"
+                    class="MuiTypography-root-1 MuiTypography-h6-11 Hook-price-z7yc1o"
                   >
                     €24.90
                   </h6>
                   <div
-                    class="Hook-iconContainer-gmclgm"
+                    class="Hook-iconContainer-qazvg2"
                   >
                     <a
                       aria-label="Amazon"
@@ -227,7 +227,7 @@ Object {
                       >
                         <svg
                           aria-hidden="true"
-                          class="MuiSvgIcon-root-40 Hook-icon-ghc097"
+                          class="MuiSvgIcon-root-40 Hook-icon-tibjek"
                           focusable="false"
                           role="presentation"
                           viewBox="-352.037 -291.281 800.073 678.559"
@@ -303,7 +303,7 @@ Object {
                       >
                         <svg
                           aria-hidden="true"
-                          class="MuiSvgIcon-root-40 Hook-icon-ghc097 Hook-ebay-1jr85g2"
+                          class="MuiSvgIcon-root-40 Hook-icon-tibjek Hook-ebay-nuy1kr"
                           focusable="false"
                           role="presentation"
                           viewBox="0 0 302.8 120.1"
@@ -333,7 +333,7 @@ Object {
                   </div>
                 </div>
                 <button
-                  class="MuiButtonBase-root-37 MuiButton-root-49 MuiButton-outlined-54 MuiButton-outlinedSecondary-56 Hook-button-1ecjfgm Hook-buttonFull-twp37v"
+                  class="MuiButtonBase-root-37 MuiButton-root-49 MuiButton-outlined-54 MuiButton-outlinedSecondary-56 Hook-button-17bk4pg Hook-buttonFull-1nmcltq"
                   tabindex="0"
                   type="button"
                 >
@@ -350,34 +350,34 @@ Object {
             </div>
           </div>
           <div
-            class="Hook-itemContainer-4423rp"
+            class="Hook-itemContainer-7wikcj"
           >
             <img
               alt="product 2"
-              class="Hook-img-16x9eyn"
+              class="Hook-img-ss7bwf"
               src="test-file-stub"
             />
             <div
-              class="Hook-descriptionContainer-12gz4p"
+              class="Hook-descriptionContainer-8ji99v"
             >
               <p
-                class="MuiTypography-root-1 MuiTypography-body2-2 Hook-name-1820afv"
+                class="MuiTypography-root-1 MuiTypography-body2-2 Hook-name-1wehtp"
               >
                 Future Single Tab Thruster Fin Set with Fin Key
               </p>
               <div
-                class="Hook-fullWidth-115baqa"
+                class="Hook-fullWidth-1wx18uu"
               >
                 <div
-                  class="Hook-priceContainer-10ca940"
+                  class="Hook-priceContainer-74opj8"
                 >
                   <h6
-                    class="MuiTypography-root-1 MuiTypography-h6-11 Hook-price-169xtyo"
+                    class="MuiTypography-root-1 MuiTypography-h6-11 Hook-price-z7yc1o"
                   >
                     €19.90
                   </h6>
                   <div
-                    class="Hook-iconContainer-gmclgm"
+                    class="Hook-iconContainer-qazvg2"
                   >
                     <a
                       aria-label="Ebay"
@@ -393,7 +393,7 @@ Object {
                       >
                         <svg
                           aria-hidden="true"
-                          class="MuiSvgIcon-root-40 Hook-icon-ghc097 Hook-ebay-1jr85g2"
+                          class="MuiSvgIcon-root-40 Hook-icon-tibjek Hook-ebay-nuy1kr"
                           focusable="false"
                           role="presentation"
                           viewBox="0 0 302.8 120.1"
@@ -423,7 +423,7 @@ Object {
                   </div>
                 </div>
                 <button
-                  class="MuiButtonBase-root-37 MuiButton-root-49 MuiButton-outlined-54 MuiButton-outlinedSecondary-56 Hook-button-1ecjfgm Hook-buttonFull-twp37v"
+                  class="MuiButtonBase-root-37 MuiButton-root-49 MuiButton-outlined-54 MuiButton-outlinedSecondary-56 Hook-button-17bk4pg Hook-buttonFull-1nmcltq"
                   tabindex="0"
                   type="button"
                 >
@@ -445,46 +445,46 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="Hook-root-nh30nu"
+      class="Hook-root-j0afcq"
       id="products"
     >
       <h5
-        class="MuiTypography-root-1 MuiTypography-h5-10 Hook-title-17q92o9"
+        class="MuiTypography-root-1 MuiTypography-h5-10 Hook-title-pu5m0x"
       >
         essential surf equipment
       </h5>
       <div
-        class="Hook-container-sr71w0"
+        class="Hook-container-1nqkfml"
       >
         <div
-          class="Hook-itemContainer-4423rp"
+          class="Hook-itemContainer-7wikcj"
         >
           <img
             alt="product 0"
-            class="Hook-img-16x9eyn"
+            class="Hook-img-ss7bwf"
             src="test-file-stub"
           />
           <div
-            class="Hook-descriptionContainer-12gz4p"
+            class="Hook-descriptionContainer-8ji99v"
           >
             <p
-              class="MuiTypography-root-1 MuiTypography-body2-2 Hook-name-1820afv"
+              class="MuiTypography-root-1 MuiTypography-body2-2 Hook-name-1wehtp"
             >
               FCS Double Tab Thruster Fin Set with Fin Key
             </p>
             <div
-              class="Hook-fullWidth-115baqa"
+              class="Hook-fullWidth-1wx18uu"
             >
               <div
-                class="Hook-priceContainer-10ca940"
+                class="Hook-priceContainer-74opj8"
               >
                 <h6
-                  class="MuiTypography-root-1 MuiTypography-h6-11 Hook-price-169xtyo"
+                  class="MuiTypography-root-1 MuiTypography-h6-11 Hook-price-z7yc1o"
                 >
                   €19.90
                 </h6>
                 <div
-                  class="Hook-iconContainer-gmclgm"
+                  class="Hook-iconContainer-qazvg2"
                 >
                   <a
                     aria-label="Amazon"
@@ -500,7 +500,7 @@ Object {
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-40 Hook-icon-ghc097"
+                        class="MuiSvgIcon-root-40 Hook-icon-tibjek"
                         focusable="false"
                         role="presentation"
                         viewBox="-352.037 -291.281 800.073 678.559"
@@ -576,7 +576,7 @@ Object {
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-40 Hook-icon-ghc097 Hook-ebay-1jr85g2"
+                        class="MuiSvgIcon-root-40 Hook-icon-tibjek Hook-ebay-nuy1kr"
                         focusable="false"
                         role="presentation"
                         viewBox="0 0 302.8 120.1"
@@ -606,7 +606,7 @@ Object {
                 </div>
               </div>
               <button
-                class="MuiButtonBase-root-37 MuiButton-root-49 MuiButton-outlined-54 MuiButton-outlinedSecondary-56 Hook-button-1ecjfgm Hook-buttonFull-twp37v"
+                class="MuiButtonBase-root-37 MuiButton-root-49 MuiButton-outlined-54 MuiButton-outlinedSecondary-56 Hook-button-17bk4pg Hook-buttonFull-1nmcltq"
                 tabindex="0"
                 type="button"
               >
@@ -623,34 +623,34 @@ Object {
           </div>
         </div>
         <div
-          class="Hook-itemContainer-4423rp"
+          class="Hook-itemContainer-7wikcj"
         >
           <img
             alt="product 1"
-            class="Hook-img-16x9eyn"
+            class="Hook-img-ss7bwf"
             src="test-file-stub"
           />
           <div
-            class="Hook-descriptionContainer-12gz4p"
+            class="Hook-descriptionContainer-8ji99v"
           >
             <p
-              class="MuiTypography-root-1 MuiTypography-body2-2 Hook-name-1820afv"
+              class="MuiTypography-root-1 MuiTypography-body2-2 Hook-name-1wehtp"
             >
               RailProtect Tape
             </p>
             <div
-              class="Hook-fullWidth-115baqa"
+              class="Hook-fullWidth-1wx18uu"
             >
               <div
-                class="Hook-priceContainer-10ca940"
+                class="Hook-priceContainer-74opj8"
               >
                 <h6
-                  class="MuiTypography-root-1 MuiTypography-h6-11 Hook-price-169xtyo"
+                  class="MuiTypography-root-1 MuiTypography-h6-11 Hook-price-z7yc1o"
                 >
                   €24.90
                 </h6>
                 <div
-                  class="Hook-iconContainer-gmclgm"
+                  class="Hook-iconContainer-qazvg2"
                 >
                   <a
                     aria-label="Amazon"
@@ -666,7 +666,7 @@ Object {
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-40 Hook-icon-ghc097"
+                        class="MuiSvgIcon-root-40 Hook-icon-tibjek"
                         focusable="false"
                         role="presentation"
                         viewBox="-352.037 -291.281 800.073 678.559"
@@ -742,7 +742,7 @@ Object {
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-40 Hook-icon-ghc097 Hook-ebay-1jr85g2"
+                        class="MuiSvgIcon-root-40 Hook-icon-tibjek Hook-ebay-nuy1kr"
                         focusable="false"
                         role="presentation"
                         viewBox="0 0 302.8 120.1"
@@ -772,7 +772,7 @@ Object {
                 </div>
               </div>
               <button
-                class="MuiButtonBase-root-37 MuiButton-root-49 MuiButton-outlined-54 MuiButton-outlinedSecondary-56 Hook-button-1ecjfgm Hook-buttonFull-twp37v"
+                class="MuiButtonBase-root-37 MuiButton-root-49 MuiButton-outlined-54 MuiButton-outlinedSecondary-56 Hook-button-17bk4pg Hook-buttonFull-1nmcltq"
                 tabindex="0"
                 type="button"
               >
@@ -789,34 +789,34 @@ Object {
           </div>
         </div>
         <div
-          class="Hook-itemContainer-4423rp"
+          class="Hook-itemContainer-7wikcj"
         >
           <img
             alt="product 2"
-            class="Hook-img-16x9eyn"
+            class="Hook-img-ss7bwf"
             src="test-file-stub"
           />
           <div
-            class="Hook-descriptionContainer-12gz4p"
+            class="Hook-descriptionContainer-8ji99v"
           >
             <p
-              class="MuiTypography-root-1 MuiTypography-body2-2 Hook-name-1820afv"
+              class="MuiTypography-root-1 MuiTypography-body2-2 Hook-name-1wehtp"
             >
               Future Single Tab Thruster Fin Set with Fin Key
             </p>
             <div
-              class="Hook-fullWidth-115baqa"
+              class="Hook-fullWidth-1wx18uu"
             >
               <div
-                class="Hook-priceContainer-10ca940"
+                class="Hook-priceContainer-74opj8"
               >
                 <h6
-                  class="MuiTypography-root-1 MuiTypography-h6-11 Hook-price-169xtyo"
+                  class="MuiTypography-root-1 MuiTypography-h6-11 Hook-price-z7yc1o"
                 >
                   €19.90
                 </h6>
                 <div
-                  class="Hook-iconContainer-gmclgm"
+                  class="Hook-iconContainer-qazvg2"
                 >
                   <a
                     aria-label="Ebay"
@@ -832,7 +832,7 @@ Object {
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-40 Hook-icon-ghc097 Hook-ebay-1jr85g2"
+                        class="MuiSvgIcon-root-40 Hook-icon-tibjek Hook-ebay-nuy1kr"
                         focusable="false"
                         role="presentation"
                         viewBox="0 0 302.8 120.1"
@@ -862,7 +862,7 @@ Object {
                 </div>
               </div>
               <button
-                class="MuiButtonBase-root-37 MuiButton-root-49 MuiButton-outlined-54 MuiButton-outlinedSecondary-56 Hook-button-1ecjfgm Hook-buttonFull-twp37v"
+                class="MuiButtonBase-root-37 MuiButton-root-49 MuiButton-outlined-54 MuiButton-outlinedSecondary-56 Hook-button-17bk4pg Hook-buttonFull-1nmcltq"
                 tabindex="0"
                 type="button"
               >
