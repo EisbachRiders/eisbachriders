@@ -6,9 +6,11 @@ import { makeStyles } from '@material-ui/styles'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Hidden from '@material-ui/core/Hidden'
+import IconButton from '@material-ui/core/IconButton'
 import Button from '@material-ui/core/Button'
 import MobileHeaderList from '../components/MobileHeaderList'
 import ERIcon from '../assets/icons/ER'
+import CartIcon from '@material-ui/icons/ShoppingCart'
 import { connect } from 'react-redux'
 
 const mapStateToProps = ({ lng }) => {
@@ -81,8 +83,8 @@ function Header({ isHomepage, lng, changeLng }) {
   const classes = useStyles()
   const { t } = useTranslation()
 
-  const links = ['/shop/', '/contact/']
-  const linkLabels = [t('header.shop'), t('header.contact')]
+  const links = ['/shop/']
+  const linkLabels = [t('header.shop')]
 
   return (
     <div className={classes.root}>
@@ -100,7 +102,12 @@ function Header({ isHomepage, lng, changeLng }) {
                 <Link key={`link_${link}`} to={link}>
                   <Button className={classes.button}>{linkLabels[idx]}</Button>
                 </Link>
-              ))}
+              ))}{' '}
+              <Link to={'/checkout/'}>
+                <IconButton className={classes.button} aria-label="Checkout">
+                  <CartIcon />
+                </IconButton>
+              </Link>
               <Button className={classes.button} onClick={changeLng}>
                 {lng === 'en' ? 'de' : 'en'}
               </Button>

@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 import Layout from '../components/Layout'
+import Checkout from '../components/checkout/Checkout'
 
-class ContactPage extends Component {
+class CheckoutPage extends Component {
   render() {
     return (
       <Layout>
-        <p>contact</p>
+        <Checkout />
       </Layout>
     )
   }
 }
 
-export default ContactPage
+export default CheckoutPage

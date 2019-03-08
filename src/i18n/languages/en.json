@@ -46,6 +46,13 @@
     "more": "more info",
     "text": "We are so excited to be able to bring you this premium, eco-friendly surf wax! Ride waves with confidence and a clear conscience! Bee Swell Eco-Friendly surf wax is made with 100% pure beeswax that has been ethically sourced by natural beekeepers. Proceeds help to provide pollinator habitat and resources for honeybee rescues."
   },
+  "checkout": {
+    "myBag": "my bag",
+    "total": "total",
+    "subtotal": "subtotal",
+    "shipping": "shipping & handling",
+    "pay": "pay now"
+  },
   "about": {
     "sectionTitle1": "about",
     "sectionTitle2": " Eisbach Riders",

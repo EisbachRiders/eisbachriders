@@ -1,9 +1,13 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: 'Eisbach Riders',
     author: 'Alyssa Butler',
     description: 'Eisbach Riders - Surf Accessories',
-    siteUrl: 'www.eisbach-riders.com',
+    siteUrl: 'https://www.eisbach-riders.com',
     url: 'https://www.eisbach-riders.com', // No trailing slash allowed!
     image: 'src/assets/logos/icon-192.png',
   },
@@ -21,6 +25,31 @@ module.exports = {
       options: {
         name: `img`,
         path: `${__dirname}/src/assets/images`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-graphql',
+      options: {
+        typeName: 'RICKANDMORTY_API',
+        fieldName: 'test',
+        url: process.env.TEST,
+      },
+    },
+    // {
+    //   resolve: 'gatsby-source-graphql',
+    //   options: {
+    //     typeName: 'BILLBEE_API',
+    //     fieldName: 'billbee',
+    //     headers: {
+    //       'X-Billbee-Api-Key': process.env.BILLBEE_KEY,
+    //     },
+    //     url: process.env.BILLBEE,
+    //   },
+    // },
+    {
+      resolve: 'gatsby-mdx',
+      options: {
+        extensions: ['.mdx', '.md'],
       },
     },
     {
@@ -48,7 +77,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: `UA-130658859-1`,
+        trackingId: process.env.GA_KEY,
         anonymize: true,
       },
     },
@@ -62,8 +91,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
-        endpoint:
-          'https://eisbach-riders.us19.list-manage.com/subscribe/post?u=37a2f35f3b8bc53ace7af50eb&amp;id=7bdc6b47ed',
+        endpoint: process.env.MAILCHIMP,
       },
     },
     {
@@ -78,6 +106,7 @@ module.exports = {
         icon: `src/assets/logos/icon-192.png`,
       },
     },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
   ],

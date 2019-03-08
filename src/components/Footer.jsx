@@ -204,7 +204,7 @@ function Footer() {
       isNameValid &&
       isTouched
     ) {
-      fetch('https://eisbach-riders.prod.with-datafire.io/contact', {
+      fetch(process.env.DATAFIRE, {
         method: 'POST',
         headers: {
           Accept: 'application/json',

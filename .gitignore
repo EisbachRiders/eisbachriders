@@ -7,4 +7,5 @@ public/
 .vscode
 coverage/
 yarn.lock
-.env
+.env.development
+.env.production

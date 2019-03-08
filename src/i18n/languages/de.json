@@ -63,6 +63,12 @@
     "scrollRight": "Scroll rechts",
     "scrollLeft": "Scroll links"
   },
+  "checkout": {
+    "myBag": "my bag",
+    "total": "total",
+    "subtotal": "subtotal",
+    "shipping": "shipping & handling"
+  },
   "newsletter": {
     "sectionTitle": "Bleib auf dem Laufenden!",
     "message": "Trag Dich in unseren monatlichen Newsletter ein und erfahre als Erster über Neuigkeiten von Eisbach Riders.",
