@@ -94,7 +94,7 @@ const useStyles = makeStyles(theme => ({
     minWidth: 0,
     padding: 8,
     marginRight: 30,
-    '&:hover, &$focusVisible': {
+    '&:hover, &:focus': {
       borderColor: theme.palette.secondary.main,
       '& $icon': {
         fill: theme.palette.secondary.main,

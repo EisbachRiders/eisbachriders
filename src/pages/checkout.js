@@ -1,15 +1,13 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Layout from '../components/Layout'
 import Checkout from '../components/checkout/Checkout'
 
-class CheckoutPage extends Component {
-  render() {
-    return (
-      <Layout>
-        <Checkout />
-      </Layout>
-    )
-  }
+function CheckoutPage() {
+  return (
+    <Layout>
+      <Checkout />
+    </Layout>
+  )
 }
 
 export default CheckoutPage

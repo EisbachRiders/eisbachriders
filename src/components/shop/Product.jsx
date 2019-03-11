@@ -1,13 +1,11 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { useTranslation } from 'react-i18next'
-import Link from '../Link'
 import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
 import { connect } from 'react-redux'
 
-const mapDispatchToProps = dispatch => {
-  return { changeProduct: () => dispatch({ type: `Product` }) }
+const mapStateToProps = ({ product }) => {
+  return { product }
 }
 
 const useStyles = makeStyles(theme => ({
@@ -58,19 +56,18 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-function ShopItem({ product }) {
+function Product({ product }) {
   const classes = useStyles()
   const { t } = useTranslation()
 
   return (
     <div className={classes.root}>
-      <Link to={'/product/'}>
-        <img
-          src={product.images[0].src}
-          className={classes.img}
-          alt={product.name}
-        />
-      </Link>
+      <img
+        src={product.images[0].src}
+        className={classes.img}
+        alt={product.name}
+      />
+
       <div className={classes.descriptionContainer}>
         <Typography className={classes.name}>{product.name}</Typography>
         <div className={classes.fullWidth}>
@@ -85,8 +82,4 @@ function ShopItem({ product }) {
   )
 }
 
-ShopItem.propTypes = {
-  product: PropTypes.object.isRequired,
-}
-
-export default connect(mapDispatchToProps)(ShopItem)
+export default connect(mapStateToProps)(Product)

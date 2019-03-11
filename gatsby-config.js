@@ -28,25 +28,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-graphql',
-      options: {
-        typeName: 'RICKANDMORTY_API',
-        fieldName: 'test',
-        url: process.env.TEST,
-      },
-    },
-    // {
-    //   resolve: 'gatsby-source-graphql',
-    //   options: {
-    //     typeName: 'BILLBEE_API',
-    //     fieldName: 'billbee',
-    //     headers: {
-    //       'X-Billbee-Api-Key': process.env.BILLBEE_KEY,
-    //     },
-    //     url: process.env.BILLBEE,
-    //   },
-    // },
-    {
       resolve: 'gatsby-mdx',
       options: {
         extensions: ['.mdx', '.md'],

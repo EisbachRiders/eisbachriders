@@ -14,12 +14,18 @@ export const reducer = (state, action) => {
         isGAopen: false,
         lng: state.lng,
       }
+    case 'PRODUCT':
+      return {
+        product: {},
+        isGAopen: state.isGAopen,
+        lng: state.lng,
+      }
     default:
       return state
   }
 }
 
-const initialState = { lng: 'en', isGAopen: true }
+const initialState = { lng: 'en', isGAopen: true, product: null }
 
 const createStore = () => reduxCreateStore(reducer, initialState)
 
