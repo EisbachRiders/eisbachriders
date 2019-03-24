@@ -169,7 +169,7 @@ function NewProduct() {
               <Typography className={classes.title}>{elem.title}</Typography>
               <Typography>{t(`newProduct.text_${elem.product}`)}</Typography>
               <Button
-                color="secondary"
+                color="primary"
                 variant="outlined"
                 className={classnames(classes.button)}
                 href={elem.amazon}
