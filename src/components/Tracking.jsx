@@ -110,7 +110,7 @@ function Tracking({ isGAopen, changeGA }) {
               {t('tracking.decline')}
             </Button>
             <Button
-              color="secondary"
+              color="primary"
               variant="contained"
               className={classes.button}
               onClick={changeGA}

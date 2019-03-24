@@ -42,7 +42,7 @@ function Total() {
       <Button
         className={classes.button}
         variant="contained"
-        color="secondary"
+        color="primary"
         fullWidth
       >
         {t('checkout.pay')}

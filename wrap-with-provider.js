@@ -1,6 +1,6 @@
 import React from 'react'
 import { Provider } from 'react-redux'
-
+import './src/i18n/i18n'
 import createStore from './src/state/createStore'
 
 // eslint-disable-next-line react/display-name,react/prop-types

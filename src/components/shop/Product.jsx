@@ -59,7 +59,7 @@ const useStyles = makeStyles(theme => ({
 function Product({ product }) {
   const classes = useStyles()
   const { t } = useTranslation()
-
+  console.log(product)
   return (
     <div className={classes.root}>
       <img

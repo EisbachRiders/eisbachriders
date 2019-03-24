@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import Link from './Link'
 import { useTranslation } from 'react-i18next'
@@ -8,10 +8,12 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Hidden from '@material-ui/core/Hidden'
 import IconButton from '@material-ui/core/IconButton'
 import Button from '@material-ui/core/Button'
+import Drawer from '@material-ui/core/Drawer'
 import MobileHeaderList from '../components/MobileHeaderList'
 import ERIcon from '../assets/icons/ER'
 import CartIcon from '@material-ui/icons/ShoppingCart'
 import { connect } from 'react-redux'
+import MenuIcon from '@material-ui/icons/Menu'
 
 const mapStateToProps = ({ lng }) => {
   return { lng }
@@ -36,10 +38,10 @@ const useStyles = makeStyles(theme => ({
   toolbar: {
     paddingLeft: 15,
     paddingRight: 15,
+    justifyContent: 'space-between',
     [theme.breakpoints.up('sm')]: {
       paddingLeft: 60,
       paddingRight: 60,
-      justifyContent: 'space-between',
     },
   },
   containerXS: {
@@ -56,9 +58,8 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.common.black,
     fontSize: 18,
     fontWeight: 700,
-    letterSpacing: 1.5,
     '&:hover': {
-      color: theme.palette.secondary.main,
+      color: theme.palette.primary.main,
     },
   },
   logoButton: {
@@ -82,9 +83,10 @@ const useStyles = makeStyles(theme => ({
 function Header({ isHomepage, lng, changeLng }) {
   const classes = useStyles()
   const { t } = useTranslation()
+  const [isDrawerOpen, setDrawer] = useState(false)
 
-  const links = ['/shop/']
-  const linkLabels = [t('header.shop')]
+  const links = [] ///shop/'
+  const linkLabels = [] //t('header.shop')
 
   return (
     <div className={classes.root}>
@@ -98,7 +100,7 @@ function Header({ isHomepage, lng, changeLng }) {
           </Link>
           <Hidden xsDown>
             <div>
-              {links.map((link, idx) => (
+              {/* {links.map((link, idx) => (
                 <Link key={`link_${link}`} to={link}>
                   <Button className={classes.button}>{linkLabels[idx]}</Button>
                 </Link>
@@ -107,14 +109,40 @@ function Header({ isHomepage, lng, changeLng }) {
                 <IconButton className={classes.button} aria-label="Checkout">
                   <CartIcon />
                 </IconButton>
-              </Link>
+              </Link>   */}
               <Button className={classes.button} onClick={changeLng}>
                 {lng === 'en' ? 'de' : 'en'}
               </Button>
             </div>
           </Hidden>
-          <Hidden xsUp>
-            <MobileHeaderList links={links} linkLabels={linkLabels} />
+          <Hidden smUp>
+            <IconButton
+              onClick={() => setDrawer(true)}
+              className={classes.menuButton}
+              color="inherit"
+              aria-label="Menu"
+            >
+              <MenuIcon color="primary" />
+            </IconButton>
+            <Drawer
+              anchor="right"
+              open={isDrawerOpen}
+              onClose={() => setDrawer(false)}
+            >
+              <div
+                tabIndex={0}
+                role="button"
+                onClick={() => setDrawer(false)}
+                onKeyDown={() => setDrawer(false)}
+              >
+                <MobileHeaderList
+                  links={links}
+                  linkLabels={linkLabels}
+                  lng={lng}
+                  changeLng={changeLng}
+                />
+              </div>
+            </Drawer>
           </Hidden>
         </Toolbar>
       </AppBar>
@@ -125,6 +153,7 @@ function Header({ isHomepage, lng, changeLng }) {
 Header.propTypes = {
   isHomepage: PropTypes.bool,
   lng: PropTypes.string.isRequired,
+  changeLng: PropTypes.func.isRequired,
 }
 
 export default connect(

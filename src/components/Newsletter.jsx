@@ -17,35 +17,7 @@ import CloseIcon from '@material-ui/icons/Close'
 
 const useStyles = makeStyles(theme => ({
   containerNewsletter: {
-    background: theme.status.white,
-    paddingLeft: 15,
-    paddingRight: 15,
-    paddingBottom: 30,
-    paddingTop: 30,
-    textAlign: 'center',
-    [theme.breakpoints.up('sm')]: {
-      paddingLeft: 60,
-      paddingRight: 60,
-      paddingBottom: 30,
-      paddingTop: 30,
-    },
-    [theme.breakpoints.up('md')]: {
-      paddingLeft: 90,
-      paddingRight: 90,
-      paddingBottom: 90,
-      paddingTop: 90,
-    },
-  },
-  textNewsletter: {
-    textTransform: 'uppercase',
-    paddingBottom: 5,
-    fontSize: 18,
-    [theme.breakpoints.up('md')]: {
-      fontSize: 24,
-    },
-  },
-  subtitleNewsletter: {
-    paddingBottom: 30,
+    marginTop: 15,
   },
   form: {
     display: 'flex',
@@ -168,6 +140,9 @@ function Newsletter() {
         setName(event.target.value)
       }
     }
+    if ((name = 'checkbox')) {
+      setCheckbox(event.target.checked)
+    }
   }
 
   return (
@@ -205,16 +180,12 @@ function Newsletter() {
           </IconButton>
         }
       />
-      <Typography className={classes.textNewsletter} variant="h5">
-        {t('newsletter.sectionTitle')}
-      </Typography>
-      <Typography className={classes.subtitleNewsletter}>
-        {t('newsletter.message')}
-      </Typography>
+
       <Button
         variant="contained"
         color="primary"
         className={classes.button}
+        fullWidth
         onClick={() => setDialog(true)}
       >
         {t('newsletter.signUp')}
@@ -268,13 +239,13 @@ function Newsletter() {
               control={
                 <Checkbox
                   checked={isCheckboxOpen}
-                  onChange={e => setCheckbox(e)}
+                  onChange={() => handleChange('checkbox')}
                   className={error ? classes.error : null}
                   value="consent"
                   color="primary"
                 />
               }
-              label="Yes, I would like to recieve emails from Eisbach Riders."
+              label="Yes, I would like to receive emails from Eisbach Riders."
             />
           </div>
           <Typography className={classes.legal}>

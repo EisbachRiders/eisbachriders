@@ -1,16 +1,14 @@
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import SwipeableViews from 'react-swipeable-views'
-import classnames from 'classnames'
 import { makeStyles } from '@material-ui/styles'
+import SwipeableViews from 'react-swipeable-views'
 import Typography from '@material-ui/core/Typography'
 import IconButton from '@material-ui/core/IconButton'
 import Hidden from '@material-ui/core/Hidden'
+import Button from '@material-ui/core/Button'
 import MobileStepper from '@material-ui/core/MobileStepper'
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft'
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight'
-import { AmazonIcon, EbayIcon } from '../assets/icons/icons'
-import ProductDialog from './ProductDialog'
 import { productsFins } from '../data/ProductData'
 
 const useStyles = makeStyles(theme => ({
@@ -25,6 +23,12 @@ const useStyles = makeStyles(theme => ({
       paddingRight: 60,
     },
     [theme.breakpoints.up('md')]: {
+      paddingTop: 60,
+      paddingBottom: 60,
+      paddingLeft: 90,
+      paddingRight: 90,
+    },
+    [theme.breakpoints.up('lg')]: {
       paddingTop: 90,
       paddingBottom: 90,
       paddingLeft: 170,
@@ -58,9 +62,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   name: {
-    paddingTop: 15,
-    paddingBottom: 10,
-    fontWeight: 600,
+    paddingBottom: 15,
     textAlign: 'center',
   },
   descriptionContainer: {
@@ -71,48 +73,11 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'space-between',
     alignItems: 'center',
   },
-  priceContainer: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingRight: 15,
-    paddingLeft: 15,
-    [theme.breakpoints.up('sm')]: {
-      justifyContent: 'center',
-      paddingRight: 0,
-      paddingLeft: 0,
-    },
-  },
-  price: {
-    color: theme.palette.primary.main,
-    fontWeight: 600,
-    marginRight: 15,
-    fontSize: 16,
-    [theme.breakpoints.up('md')]: {
-      fontSize: 20,
-    },
-  },
-  fullWidth: {
-    width: '100%',
-  },
-  iconContainer: {
-    marginLeft: 15,
-  },
-  icon: {
-    fill: theme.status.black,
-    fontSize: 18,
-    [theme.breakpoints.up('md')]: {
-      fontSize: 36,
-    },
-  },
-  ebay: {
-    fontSize: 24,
-    [theme.breakpoints.up('md')]: {
-      fontSize: 36,
-    },
-  },
   mobileStepper: {
     background: theme.status.white,
+  },
+  button: {
+    color: theme.palette.common.black,
   },
 }))
 
@@ -120,17 +85,6 @@ function Products() {
   const classes = useStyles()
   const { t } = useTranslation()
   const [activeStep, setActiveStep] = useState(0)
-  const [isDialogOpen, setDialog] = useState([false, false, false])
-
-  const handleDialogOpen = idx => {
-    let open = [false, false, false]
-    open[idx] = true
-    setDialog(open)
-  }
-
-  const handleDialogClose = () => {
-    setDialog([false, false, false])
-  }
 
   const handleIndexChange = activeStep => {
     setActiveStep(activeStep)
@@ -161,48 +115,16 @@ function Products() {
               />
               <div className={classes.descriptionContainer}>
                 <Typography className={classes.name}>{elem.name}</Typography>
-                <div className={classes.fullWidth}>
-                  <div className={classes.priceContainer}>
-                    <Typography variant="h6" className={classes.price}>
-                      {`€${elem.price}`}
-                    </Typography>
-                    <div className={classes.iconContainer}>
-                      {elem.amazon && (
-                        <IconButton
-                          className={classes.button}
-                          aria-label="Amazon"
-                          href={elem.amazon}
-                          target="_blank"
-                          rel="noopener"
-                        >
-                          <AmazonIcon className={classes.icon} />
-                        </IconButton>
-                      )}
-                      {elem.ebay && (
-                        <IconButton
-                          className={classes.button}
-                          aria-label="Ebay"
-                          href={elem.ebay}
-                          target="_blank"
-                          rel="noopener"
-                        >
-                          <EbayIcon
-                            className={classnames(classes.icon, classes.ebay)}
-                          />
-                        </IconButton>
-                      )}
-                    </div>
-                  </div>
-                  <ProductDialog
-                    product={elem}
-                    buttonText={t('products.features')}
-                    buttonFull
-                    idx={idx}
-                    handleDialogOpen={handleDialogOpen}
-                    handleDialogClose={handleDialogClose}
-                    isDialogOpen={isDialogOpen[idx]}
-                  />
-                </div>
+                <Button
+                  color="primary"
+                  variant="outlined"
+                  className={classes.button}
+                  href={elem.amazon}
+                  target="_blank"
+                  rel="noopener"
+                >
+                  {t('common.more')}
+                </Button>
               </div>
             </div>
           ))}
@@ -222,48 +144,16 @@ function Products() {
                 />
                 <div className={classes.descriptionContainer}>
                   <Typography className={classes.name}>{elem.name}</Typography>
-                  <div className={classes.fullWidth}>
-                    <div className={classes.priceContainer}>
-                      <Typography variant="h6" className={classes.price}>
-                        {`€${elem.price}`}
-                      </Typography>
-                      <div className={classes.iconContainer}>
-                        {elem.amazon && (
-                          <IconButton
-                            className={classes.button}
-                            aria-label="Amazon"
-                            href={elem.amazon}
-                            target="_blank"
-                            rel="noopener"
-                          >
-                            <AmazonIcon className={classes.icon} />
-                          </IconButton>
-                        )}
-                        {elem.ebay && (
-                          <IconButton
-                            className={classes.button}
-                            aria-label="Ebay"
-                            href={elem.ebay}
-                            target="_blank"
-                            rel="noopener"
-                          >
-                            <EbayIcon
-                              className={classnames(classes.icon, classes.ebay)}
-                            />
-                          </IconButton>
-                        )}
-                      </div>
-                    </div>
-                    <ProductDialog
-                      product={elem}
-                      buttonText={t('products.features')}
-                      buttonFull
-                      idx={idx}
-                      handleDialogOpen={handleDialogOpen}
-                      handleDialogClose={handleDialogClose}
-                      isDialogOpen={isDialogOpen[idx]}
-                    />
-                  </div>
+                  <Button
+                    color="primary"
+                    variant="outlined"
+                    className={classes.button}
+                    href={elem.amazon}
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    {t('common.more')}
+                  </Button>
                 </div>
               </div>
             ))}

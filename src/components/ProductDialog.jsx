@@ -20,7 +20,8 @@ import MobileStepper from '@material-ui/core/MobileStepper'
 import StopIcon from '@material-ui/icons/Stop'
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft'
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight'
-import { AmazonIcon, EbayIcon } from '../assets/icons/icons'
+import AmazonIcon from '../assets/icons/Amazon'
+import EbayIcon from '../assets/icons/Ebay'
 
 const useStyles = makeStyles(theme => ({
   buttonFull: {
@@ -172,7 +173,7 @@ function ProductDialog({
   return (
     <>
       <Button
-        color="secondary"
+        color="primary"
         variant="outlined"
         className={classnames(classes.button, {
           [classes.buttonFull]: buttonFull,

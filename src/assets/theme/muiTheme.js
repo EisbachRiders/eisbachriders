@@ -6,11 +6,13 @@ const status = {
   black: '#0b0c10',
   blue: '#1f2833',
   greyLt: '#F7F5F5',
+  greyMed: '#656565',
   grey: '#c5c6c7',
   greyDk: '#404040',
+  tealLt: '#4deda3',
   teal: '#16d57d',
+  tealDk: '#10a05e',
   ocean: '#233d54',
-  tealDk: '#45a29e',
   green: '#00942b',
   yellow: '#fce566',
   red: '#FF0012',
@@ -22,22 +24,35 @@ const theme = createMuiTheme({
   palette: {
     type: 'light',
     primary: {
-      light: status.ocean,
-      main: status.ocean,
-      dark: status.teal,
+      light: status.tealLt,
+      main: status.teal,
+      dark: status.tealDk,
     },
     secondary: {
-      light: status.teal,
-      main: status.teal,
-      dark: status.teal,
+      light: status.ocean,
+      main: status.ocean,
+      dark: status.ocean,
     },
     error: { main: status.red },
   },
   status,
   typography: {
     useNextVariants: true,
-    fontFamily: "'Open Sans', sans-serif",
+    fontFamily: "'Raleway', sans-serif",
     fontSize: 14,
+    h5: {
+      letterSpacing: 3,
+    },
+    body1: {
+      letterSpacing: 1,
+      lineHeight: 1.8,
+    },
+    body2: {
+      letterSpacing: 1,
+    },
+    button: {
+      letterSpacing: 3,
+    },
   },
   overrides: {
     MuiTypography: {

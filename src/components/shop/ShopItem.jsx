@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { useTranslation } from 'react-i18next'
 import Link from '../Link'
 import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
@@ -12,11 +11,17 @@ const mapDispatchToProps = dispatch => {
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexBasis: '30%',
+    flexBasis: '100%',
     textAlign: 'center',
     alignItems: 'center',
     display: 'flex',
     flexDirection: 'column',
+    [theme.breakpoints.up('sm')]: {
+      flexBasis: '30%',
+    },
+  },
+  link: {
+    height: 375,
   },
   img: {
     width: '80%',
@@ -26,45 +31,35 @@ const useStyles = makeStyles(theme => ({
   },
   descriptionContainer: {
     height: '100%',
-    width: '100%',
+    height: 60,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
-    alignItems: 'center',
+    padding: 30,
+    marginBottom: 60,
   },
-  priceContainer: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingRight: 15,
-    paddingLeft: 15,
-    [theme.breakpoints.up('sm')]: {
-      justifyContent: 'center',
-      paddingRight: 0,
-      paddingLeft: 0,
-    },
+  name: {
+    marginBottom: 5,
+    fontSize: 18,
+    textTransform: 'uppercase',
+    fontWeight: 300,
+    width: '100%',
+    textOverflow: 'ellipsis',
+    overflow: 'hidden',
   },
   price: {
-    color: theme.palette.primary.main,
-    fontWeight: 600,
-    marginRight: 15,
-    fontSize: 16,
-    [theme.breakpoints.up('md')]: {
-      fontSize: 20,
-    },
-  },
-  fullWidth: {
-    width: '100%',
+    color: theme.status.greyMed,
+    fontSize: 18,
+    fontWeight: 300,
   },
 }))
 
 function ShopItem({ product }) {
   const classes = useStyles()
-  const { t } = useTranslation()
 
   return (
     <div className={classes.root}>
-      <Link to={'/product/'}>
+      <Link to={'/product/'} className={classes.link}>
         <img
           src={product.images[0].src}
           className={classes.img}
@@ -73,13 +68,7 @@ function ShopItem({ product }) {
       </Link>
       <div className={classes.descriptionContainer}>
         <Typography className={classes.name}>{product.name}</Typography>
-        <div className={classes.fullWidth}>
-          <div className={classes.priceContainer}>
-            <Typography variant="h6" className={classes.price}>
-              {`€${product.price}`}
-            </Typography>
-          </div>
-        </div>
+        <Typography className={classes.price}>{`€${product.price}`}</Typography>
       </div>
     </div>
   )

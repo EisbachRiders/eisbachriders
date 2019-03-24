@@ -5,6 +5,8 @@ import { useTranslation } from 'react-i18next'
 import classnames from 'classnames'
 import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
+import Hidden from '@material-ui/core/Hidden'
+import Newsletter from './Newsletter'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -18,17 +20,22 @@ const useStyles = makeStyles(theme => ({
     },
   },
   container: {
-    position: 'absolute',
     paddingTop: 100,
-    paddingLeft: 30,
-    paddingRight: 15,
+    margin: '0 auto',
+    width: '90%',
     [theme.breakpoints.up('sm')]: {
+      position: 'absolute',
+      width: 'auto',
       paddingLeft: 120,
-      paddingTop: 110,
+      paddingTop: 100,
     },
     [theme.breakpoints.up('md')]: {
-      paddingLeft: 200,
-      paddingTop: 250,
+      paddingLeft: 150,
+      paddingTop: 150,
+    },
+    [theme.breakpoints.up('lg')]: {
+      paddingLeft: 250,
+      paddingTop: 200,
     },
   },
   img: {
@@ -46,23 +53,32 @@ const useStyles = makeStyles(theme => ({
   },
   text: {
     letterSpacing: 3,
-    fontWeight: 600,
     color: theme.status.black,
     textShadow: '2px 2px 4px #ccc',
   },
   title: {
     textTransform: 'capitalize',
+    textAlign: 'center',
     fontSize: 35,
+    fontWeight: 600,
     margin: 0,
     [theme.breakpoints.up('sm')]: {
+      textAlign: 'left',
       fontSize: 48,
     },
     [theme.breakpoints.up('md')]: {
+      fontSize: 96,
+    },
+    [theme.breakpoints.up('lg')]: {
       fontSize: 122,
     },
   },
   title2: {
-    marginLeft: 60,
+    marginLeft: 40,
+    [theme.breakpoints.up('sm')]: {
+      textAlign: 'right',
+      margin: 0,
+    },
   },
   small: {
     fontSize: 35,
@@ -70,15 +86,20 @@ const useStyles = makeStyles(theme => ({
       fontSize: 48,
     },
     [theme.breakpoints.up('md')]: {
+      fontSize: 72,
+    },
+    [theme.breakpoints.up('lg')]: {
       fontSize: 96,
     },
   },
   subtitle: {
     textTransform: 'uppercase',
+    textAlign: 'center',
     fontSize: 14,
-    paddingTop: 30,
+    paddingTop: 15,
     [theme.breakpoints.up('sm')]: {
-      fontSize: 18,
+      fontSize: 12,
+      paddingTop: 10,
     },
     [theme.breakpoints.up('md')]: {
       fontSize: 24,
@@ -95,26 +116,41 @@ function Hero({ img }) {
         fluid={img.node.fluid}
         alt="wave"
         className={classes.img}
+        imgStyle={{ objectPosition: 'center top' }}
         style={{ position: 'absolute' }}
       />
       <div className={classes.container}>
-        <Typography
-          variant="h2"
-          gutterBottom
-          className={classnames(classes.text, classes.title)}
-        >
-          E<span className={classes.small}>ISBACH</span>
-        </Typography>
-        <Typography
-          variant="h2"
-          gutterBottom
-          className={classnames(classes.text, classes.title, classes.title2)}
-        >
-          R<span className={classes.small}>IDERS</span>
-        </Typography>
+        <Hidden xsDown>
+          <Typography
+            variant="h2"
+            gutterBottom
+            className={classnames(classes.text, classes.title)}
+          >
+            E<span className={classes.small}>ISBACH</span>
+          </Typography>
+          <Typography
+            variant="h2"
+            gutterBottom
+            className={classnames(classes.text, classes.title, classes.title2)}
+          >
+            R<span className={classes.small}>IDERS</span>
+          </Typography>
+        </Hidden>
+        <Hidden smUp>
+          <Typography
+            variant="h2"
+            gutterBottom
+            className={classnames(classes.text, classes.title)}
+          >
+            E<span className={classes.small}>ISBACH</span> R
+            <span className={classes.small}>IDERS</span>
+          </Typography>
+        </Hidden>
+
         <Typography className={classnames(classes.text, classes.subtitle)}>
           {t('hero.subtitle')}
         </Typography>
+        <Newsletter />
       </div>
     </div>
   )

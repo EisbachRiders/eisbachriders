@@ -28,22 +28,20 @@
     "other": "other"
   },
   "feature": {
-    "featuredProduct": "vorgestelltes Produkt",
-    "surfConditions": "Surfbedingungen",
+    "featuredProduct": "vorgestelltes",
+    "response": "Surfbedingungen",
     "surfDetail1": "kniehoch",
     "surfDetail2": "Hüftkopf hoch",
     "experience": "Erfahrung",
     "beginner": "Anfänger",
     "intermediate": "mittlere",
     "pro": "Profi",
-    "more": "Mehr Info",
     "highlight": "Hochleistung",
     "text": "The New Eisbach Riders Double Tab FCS 1 Fiberglass Fin With A Honeycomb Core Is Extra Lightweight And Provides An Immediate Response During The Turns. With a moderate flex it is ideal for making fast changes of direction. The Fin Design Is Suited For Any Waves As Well As For River Surfing."
   },
   "newProduct": {
     "imgAlt": "surfer",
     "logo": "logo",
-    "more": "Mehr Info",
     "text": "We are so excited to be able to bring you this premium, eco-friendly surf wax! Ride waves with confidence and a clear conscience! Bee Swell Eco-Friendly surf wax is made with 100% pure beeswax that has been ethically sourced by natural beekeepers. Proceeds help to provide pollinator habitat and resources for honeybee rescues."
   },
   "about": {
@@ -61,7 +59,8 @@
     "close": "Schließen",
     "cancel": "Abbrechen",
     "scrollRight": "Scroll rechts",
-    "scrollLeft": "Scroll links"
+    "scrollLeft": "Scroll links",
+    "more": "Mehr Info"
   },
   "checkout": {
     "myBag": "my bag",
@@ -73,7 +72,7 @@
     "sectionTitle": "Bleib auf dem Laufenden!",
     "message": "Trag Dich in unseren monatlichen Newsletter ein und erfahre als Erster über Neuigkeiten von Eisbach Riders.",
     "success": "Es hat geklappt! Vielen Dank.",
-    "signUp": "Trag dich ein",
+    "signUp": "Join our mailing list",
     "subscribe": "Trag dich ein",
     "legal1": "Du kannst Dich jederzeit wieder austragen indem Du den Link am Ende der eMails klickst. Wir nutzen Mailchimp als Marketing Plattform. Mit dem Klick auf Eintragen, akzeptierst Du, dass Deine Daten an Mailchimp weitergeleitet werden.",
     "legal2": "Mehr Infos über den Mailchimp Datenschutz.",

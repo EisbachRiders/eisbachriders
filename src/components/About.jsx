@@ -21,6 +21,12 @@ const useStyles = makeStyles(theme => ({
       paddingRight: 60,
     },
     [theme.breakpoints.up('md')]: {
+      paddingTop: 60,
+      paddingBottom: 60,
+      paddingLeft: 90,
+      paddingRight: 90,
+    },
+    [theme.breakpoints.up('lg')]: {
       paddingTop: 45,
       paddingBottom: 90,
       paddingLeft: 170,
@@ -28,26 +34,30 @@ const useStyles = makeStyles(theme => ({
     },
   },
   textContainer: {
+    zIndex: 2,
     flexBasis: '100%',
-    paddingTop: 30,
     paddingBottom: 30,
     paddingRight: 15,
     paddingLeft: 15,
     [theme.breakpoints.up('sm')]: {
-      flexBasis: '50%',
-      paddingRight: 60,
-      paddingLeft: 60,
+      flexBasis: '60%',
     },
     [theme.breakpoints.up('md')]: {
-      paddingTop: 45,
-      paddingRight: 60,
+      marginBottom: 60,
       display: 'flex',
       flexDirection: 'column',
-      justifyContent: 'center',
+      justifyContent: 'space-between',
+    },
+    [theme.breakpoints.up('lg')]: {
+      paddingTop: 45,
+      paddingRight: 60,
+      marginBottom: 90,
     },
   },
   imgContainer: {
-    flexBasis: '50%',
+    flexBasis: '40%',
+    marginBottom: 45,
+    zIndex: 2,
   },
   sideText: {
     position: 'relative',
@@ -72,26 +82,26 @@ const useStyles = makeStyles(theme => ({
   img: {
     width: 200,
     height: 150,
+    margin: '0 auto',
     [theme.breakpoints.up('md')]: {
-      width: 400,
-      height: 300,
+      width: '80%',
+      height: '80%',
     },
   },
   backgroundImg: {
-    zIndex: -5,
+    zIndex: 1,
     left: 0,
     bottom: 0,
     width: '100%',
-    height: 80,
-    zIndex: 2,
+    objectFit: 'fill',
+    height: 150,
   },
   title: {
     textTransform: 'uppercase',
     fontWeight: 700,
-    letterSpacing: 3,
     fontSize: 16,
     [theme.breakpoints.up('md')]: {
-      fontSize: 42,
+      fontSize: 36,
     },
   },
   text: {
@@ -136,6 +146,7 @@ function About({ img, waveImg }) {
         fluid={waveImg.node.fluid}
         alt="wave background"
         className={classes.backgroundImg}
+        imgStyle={{ objectFit: 'fill' }}
         style={{ position: 'absolute' }}
       />
     </div>

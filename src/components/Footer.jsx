@@ -8,7 +8,8 @@ import TextField from '@material-ui/core/TextField'
 import Snackbar from '@material-ui/core/Snackbar'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import Notification from './Snackbar'
-import { InstagramIcon, FacebookIcon } from '../assets/icons/icons'
+import InstagramIcon from '../assets/icons/Instagram'
+import FacebookIcon from '../assets/icons/Facebook'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -64,7 +65,6 @@ const useStyles = makeStyles(theme => ({
   },
   textHeading: {
     color: theme.palette.common.white,
-    letterSpacing: 3,
     fontSize: 12,
     textTransform: 'uppercase',
     paddingBottom: 15,
@@ -95,9 +95,9 @@ const useStyles = makeStyles(theme => ({
     padding: 8,
     marginRight: 30,
     '&:hover, &:focus': {
-      borderColor: theme.palette.secondary.main,
+      borderColor: theme.palette.primary.main,
       '& $icon': {
-        fill: theme.palette.secondary.main,
+        color: theme.palette.primary.main,
       },
     },
     [theme.breakpoints.up('sm')]: {
@@ -107,7 +107,7 @@ const useStyles = makeStyles(theme => ({
   icon: {
     width: 18,
     height: 18,
-    fill: theme.palette.common.white,
+    color: theme.palette.common.white,
   },
   iconContainer: {
     display: 'flex',
@@ -115,12 +115,8 @@ const useStyles = makeStyles(theme => ({
     paddingTop: 15,
   },
   buttonSend: {
-    borderRadius: 0,
-    boxShadow: 'none',
     marginTop: 15,
-    backgroundColor: theme.palette.secondary.main,
     color: theme.palette.common.black,
-    opacity: 0.8,
   },
   inputContainer: {
     display: 'flex',
@@ -164,7 +160,7 @@ function Footer() {
   const [isLoading, setLoading] = useState(false)
 
   const handleChange = name => event => {
-    if (isTouched === false) {
+    if (!isTouched) {
       setTouched(true)
     }
     if (name === 'email') {
@@ -265,7 +261,7 @@ function Footer() {
       <div className={classes.container}>
         <div className={classes.flexItem}>
           <form noValidate autoComplete="off">
-            <Typography className={classes.textHeading}>
+            <Typography className={classes.textHeading} variant="h5">
               {t('footer.message')}
             </Typography>
             <div className={classes.inputContainer}>
@@ -332,6 +328,7 @@ function Footer() {
             <Button
               data-testid="footer_submit"
               variant="contained"
+              color="primary"
               className={classes.buttonSend}
               fullWidth
               onClick={handleSubmit}
@@ -344,7 +341,6 @@ function Footer() {
             </Button>
           </form>
         </div>
-
         <div className={classes.flexItem}>
           <Typography className={classes.textHeading}>
             {`${t('footer.questions')}?`}
@@ -363,8 +359,6 @@ function Footer() {
               href="hhttps://www.facebook.com/EisbachRiders-262685337908914/"
               target="_blank"
               rel="noopener"
-              disableFocusRipple
-              disableRipple
             >
               <FacebookIcon className={classes.icon} />
             </Button>
@@ -375,8 +369,6 @@ function Footer() {
               href="https://www.instagram.com/eisbachriders/"
               target="_blank"
               rel="noopener"
-              disableFocusRipple
-              disableRipple
             >
               <InstagramIcon className={classes.icon} />
             </Button>
