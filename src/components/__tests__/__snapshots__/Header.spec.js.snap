@@ -7,19 +7,19 @@ Object {
     <div>
       <div>
         <header
-          class="MuiPaper-root-10 MuiPaper-elevation4-16 MuiAppBar-root-1 MuiAppBar-positionStatic-5 MuiAppBar-colorPrimary-8 Hook-appbarDarkTheme-idu5c4"
+          class="MuiPaper-root MuiPaper-elevation4 MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary Hook-appbarDarkTheme-k7fka"
         >
           <div
-            class="MuiToolbar-root-37 MuiToolbar-regular-39 MuiToolbar-gutters-38 Hook-toolbar-1dc13ka"
+            class="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters Hook-toolbar-ahitbj"
           >
             <a
-              class="MuiTypography-root-46 MuiTypography-colorPrimary-69 MuiLink-root-41 MuiLink-underlineHover-43 Hook-logoButton-rpgrgz"
+              class="MuiTypography-root MuiTypography-colorPrimary MuiLink-root MuiLink-underlineHover Hook-logoButton-8o2e7j"
               href="/"
               style="text-decoration: none;"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root-76 Hook-logo-16ynzby"
+                class="MuiSvgIcon-root Hook-logo-zzqin1"
                 focusable="false"
                 role="presentation"
                 viewBox="0 0 256.000000 256.000000"
@@ -63,58 +63,18 @@ c29 0 55 4 58 8 3 5 -12 78 -33 163 l-38 154 -44 3 c-24 1 -50 -1 -56 -6z"
               </svg>
             </a>
             <div>
-              <a
-                class="MuiTypography-root-46 MuiTypography-colorPrimary-69 MuiLink-root-41 MuiLink-underlineHover-43"
-                href="/shop/"
-                style="text-decoration: none;"
-              >
-                <button
-                  class="MuiButtonBase-root-102 MuiButton-root-85 MuiButton-text-87 Hook-button-1nb17lv"
-                  tabindex="0"
-                  type="button"
-                >
-                  <span
-                    class="MuiButton-label-86"
-                  >
-                    header.shop
-                  </span>
-                  <span
-                    class="MuiTouchRipple-root-105"
-                  />
-                </button>
-              </a>
-              <a
-                class="MuiTypography-root-46 MuiTypography-colorPrimary-69 MuiLink-root-41 MuiLink-underlineHover-43"
-                href="/contact/"
-                style="text-decoration: none;"
-              >
-                <button
-                  class="MuiButtonBase-root-102 MuiButton-root-85 MuiButton-text-87 Hook-button-1nb17lv"
-                  tabindex="0"
-                  type="button"
-                >
-                  <span
-                    class="MuiButton-label-86"
-                  >
-                    header.contact
-                  </span>
-                  <span
-                    class="MuiTouchRipple-root-105"
-                  />
-                </button>
-              </a>
               <button
-                class="MuiButtonBase-root-102 MuiButton-root-85 MuiButton-text-87 Hook-button-1nb17lv"
+                class="MuiButtonBase-root MuiButton-root MuiButton-text Hook-button-ouidvq"
                 tabindex="0"
                 type="button"
               >
                 <span
-                  class="MuiButton-label-86"
+                  class="MuiButton-label"
                 >
                   de
                 </span>
                 <span
-                  class="MuiTouchRipple-root-105"
+                  class="MuiTouchRipple-root"
                 />
               </button>
             </div>
@@ -126,19 +86,19 @@ c29 0 55 4 58 8 3 5 -12 78 -33 163 l-38 154 -44 3 c-24 1 -50 -1 -56 -6z"
   "container": <div>
     <div>
       <header
-        class="MuiPaper-root-10 MuiPaper-elevation4-16 MuiAppBar-root-1 MuiAppBar-positionStatic-5 MuiAppBar-colorPrimary-8 Hook-appbarDarkTheme-idu5c4"
+        class="MuiPaper-root MuiPaper-elevation4 MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary Hook-appbarDarkTheme-k7fka"
       >
         <div
-          class="MuiToolbar-root-37 MuiToolbar-regular-39 MuiToolbar-gutters-38 Hook-toolbar-1dc13ka"
+          class="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters Hook-toolbar-ahitbj"
         >
           <a
-            class="MuiTypography-root-46 MuiTypography-colorPrimary-69 MuiLink-root-41 MuiLink-underlineHover-43 Hook-logoButton-rpgrgz"
+            class="MuiTypography-root MuiTypography-colorPrimary MuiLink-root MuiLink-underlineHover Hook-logoButton-8o2e7j"
             href="/"
             style="text-decoration: none;"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root-76 Hook-logo-16ynzby"
+              class="MuiSvgIcon-root Hook-logo-zzqin1"
               focusable="false"
               role="presentation"
               viewBox="0 0 256.000000 256.000000"
@@ -182,58 +142,18 @@ c29 0 55 4 58 8 3 5 -12 78 -33 163 l-38 154 -44 3 c-24 1 -50 -1 -56 -6z"
             </svg>
           </a>
           <div>
-            <a
-              class="MuiTypography-root-46 MuiTypography-colorPrimary-69 MuiLink-root-41 MuiLink-underlineHover-43"
-              href="/shop/"
-              style="text-decoration: none;"
-            >
-              <button
-                class="MuiButtonBase-root-102 MuiButton-root-85 MuiButton-text-87 Hook-button-1nb17lv"
-                tabindex="0"
-                type="button"
-              >
-                <span
-                  class="MuiButton-label-86"
-                >
-                  header.shop
-                </span>
-                <span
-                  class="MuiTouchRipple-root-105"
-                />
-              </button>
-            </a>
-            <a
-              class="MuiTypography-root-46 MuiTypography-colorPrimary-69 MuiLink-root-41 MuiLink-underlineHover-43"
-              href="/contact/"
-              style="text-decoration: none;"
-            >
-              <button
-                class="MuiButtonBase-root-102 MuiButton-root-85 MuiButton-text-87 Hook-button-1nb17lv"
-                tabindex="0"
-                type="button"
-              >
-                <span
-                  class="MuiButton-label-86"
-                >
-                  header.contact
-                </span>
-                <span
-                  class="MuiTouchRipple-root-105"
-                />
-              </button>
-            </a>
             <button
-              class="MuiButtonBase-root-102 MuiButton-root-85 MuiButton-text-87 Hook-button-1nb17lv"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text Hook-button-ouidvq"
               tabindex="0"
               type="button"
             >
               <span
-                class="MuiButton-label-86"
+                class="MuiButton-label"
               >
                 de
               </span>
               <span
-                class="MuiTouchRipple-root-105"
+                class="MuiTouchRipple-root"
               />
             </button>
           </div>

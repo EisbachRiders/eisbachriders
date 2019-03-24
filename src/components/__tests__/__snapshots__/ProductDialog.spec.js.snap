@@ -10,27 +10,27 @@ Object {
       aria-hidden="true"
     >
       <button
-        class="MuiButtonBase-root-18 MuiButton-root-1 MuiButton-outlined-6 MuiButton-outlinedSecondary-8 Hook-button-17bk4pg"
+        class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary Hook-button-e5zg5r"
         tabindex="0"
         type="button"
       >
         <span
-          class="MuiButton-label-2"
+          class="MuiButton-label"
         >
           mockButtonText
         </span>
         <span
-          class="MuiTouchRipple-root-38"
+          class="MuiTouchRipple-root"
         />
       </button>
     </div>
     <div
-      class="MuiModal-root-36 MuiDialog-root-21"
+      class="MuiModal-root MuiDialog-root"
       role="dialog"
     >
       <div
         aria-hidden="true"
-        class="MuiBackdrop-root-45"
+        class="MuiBackdrop-root"
         style="opacity: 1; -webkit-transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
       />
       <div
@@ -38,33 +38,33 @@ Object {
         tabindex="0"
       />
       <div
-        class="MuiDialog-container-24 MuiDialog-scrollPaper-22"
+        class="MuiDialog-container MuiDialog-scrollPaper"
         role="document"
         style="opacity: 1; -webkit-transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
         tabindex="-1"
       >
         <div
-          class="MuiPaper-root-47 MuiPaper-elevation24-73 MuiPaper-rounded-48 MuiDialog-paper-25 Hook-paper-nbendo MuiDialog-paperScrollPaper-26 MuiDialog-paperWidthMd-31"
+          class="MuiPaper-root MuiPaper-elevation24 MuiPaper-rounded MuiDialog-paper Hook-paper-kuo70k MuiDialog-paperScrollPaper MuiDialog-paperWidthMd"
         >
           <div
-            class="MuiDialogTitle-root-74 Hook-dialogTitle-189a3jr"
+            class="MuiDialogTitle-root Hook-dialogTitle-329pue"
             id="dialog-title"
           >
             <h6
-              class="MuiTypography-root-75 MuiTypography-h6-85"
+              class="MuiTypography-root MuiTypography-h6"
             >
               <button
                 aria-label="close"
-                class="MuiButtonBase-root-18 MuiIconButton-root-105 MuiIconButton-colorInherit-106 Hook-closeButton-1f4wr0d"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit Hook-closeButton-aedpdf"
                 tabindex="0"
                 type="button"
               >
                 <span
-                  class="MuiIconButton-label-110"
+                  class="MuiIconButton-label"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root-111"
+                    class="MuiSvgIcon-root"
                     focusable="false"
                     role="presentation"
                     viewBox="0 0 24 24"
@@ -79,19 +79,19 @@ Object {
                   </svg>
                 </span>
                 <span
-                  class="MuiTouchRipple-root-38"
+                  class="MuiTouchRipple-root"
                 />
               </button>
             </h6>
           </div>
           <div
-            class="MuiDialogContent-root-120 Hook-dialogRoot-4zmvxt"
+            class="MuiDialogContent-root Hook-dialogRoot-26so4e"
           >
             <div
-              class="Hook-dialogContainer-115g6z4"
+              class="Hook-dialogContainer-pynrap"
             >
               <div
-                class="Hook-dialogImg-4pilt3"
+                class="Hook-dialogImg-1j8tvtb"
               >
                 <div
                   style="overflow-x: hidden;"
@@ -102,21 +102,21 @@ Object {
                   />
                 </div>
                 <div
-                  class="MuiPaper-root-47 MuiPaper-elevation0-49 MuiMobileStepper-root-121 MuiMobileStepper-positionStatic-124 Hook-mobileStepper-1jx0geo"
+                  class="MuiPaper-root MuiPaper-elevation0 MuiMobileStepper-root MuiMobileStepper-positionStatic Hook-mobileStepper-1fso5ns"
                 >
                   <button
                     aria-label="scroll right"
-                    class="MuiButtonBase-root-18 MuiButtonBase-disabled-19 MuiIconButton-root-105 MuiIconButton-disabled-109"
+                    class="MuiButtonBase-root MuiButtonBase-disabled MuiIconButton-root MuiIconButton-disabled MuiIconButton-sizeSmall"
                     disabled=""
                     tabindex="-1"
                     type="button"
                   >
                     <span
-                      class="MuiIconButton-label-110"
+                      class="MuiIconButton-label"
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-111"
+                        class="MuiSvgIcon-root"
                         focusable="false"
                         role="presentation"
                         viewBox="0 0 24 24"
@@ -132,20 +132,20 @@ Object {
                     </span>
                   </button>
                   <div
-                    class="MuiMobileStepper-dots-125"
+                    class="MuiMobileStepper-dots"
                   />
                   <button
                     aria-label="scroll left"
-                    class="MuiButtonBase-root-18 MuiIconButton-root-105"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
                     tabindex="0"
                     type="button"
                   >
                     <span
-                      class="MuiIconButton-label-110"
+                      class="MuiIconButton-label"
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-111"
+                        class="MuiSvgIcon-root"
                         focusable="false"
                         role="presentation"
                         viewBox="0 0 24 24"
@@ -160,26 +160,26 @@ Object {
                       </svg>
                     </span>
                     <span
-                      class="MuiTouchRipple-root-38"
+                      class="MuiTouchRipple-root"
                     />
                   </button>
                 </div>
               </div>
               <div
-                class="Hook-dialogContent-1g0cymz"
+                class="Hook-dialogContent-uldqxp"
               >
                 <div
-                  class="Hook-priceContainer-14jj9yz"
+                  class="Hook-priceContainer-byenfd"
                 >
                   <h6
-                    class="MuiTypography-root-75 MuiTypography-h6-85 Hook-price-h4xwoi"
+                    class="MuiTypography-root MuiTypography-h6 Hook-price-188qc3q"
                   >
                     €undefined
                   </h6>
                   <div />
                 </div>
                 <ul
-                  class="MuiList-root-129 Hook-scroll-13gwzuv"
+                  class="MuiList-root Hook-scroll-tzar03"
                 />
               </div>
             </div>
@@ -196,17 +196,17 @@ Object {
     aria-hidden="true"
   >
     <button
-      class="MuiButtonBase-root-18 MuiButton-root-1 MuiButton-outlined-6 MuiButton-outlinedSecondary-8 Hook-button-17bk4pg"
+      class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary Hook-button-e5zg5r"
       tabindex="0"
       type="button"
     >
       <span
-        class="MuiButton-label-2"
+        class="MuiButton-label"
       >
         mockButtonText
       </span>
       <span
-        class="MuiTouchRipple-root-38"
+        class="MuiTouchRipple-root"
       />
     </button>
   </div>,

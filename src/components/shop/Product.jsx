@@ -1,5 +1,4 @@
 import React from 'react'
-import { useTranslation } from 'react-i18next'
 import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
 import { connect } from 'react-redux'
@@ -58,8 +57,7 @@ const useStyles = makeStyles(theme => ({
 
 function Product({ product }) {
   const classes = useStyles()
-  const { t } = useTranslation()
-  console.log(product)
+
   return (
     <div className={classes.root}>
       <img

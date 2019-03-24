@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from 'react-testing-library'
 import Feature from '../Feature'
 import { ThemeProvider } from '@material-ui/styles'
-import theme from '../../assets/theme/muiTheme'
+import theme from '../../../assets/theme/muiTheme'
 
 describe('Feature', () => {
   it('renders correctly', () => {

@@ -6,78 +6,138 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="Hook-root-1p1euq"
+        class="Hook-root-o6ux9v"
         id="products"
       >
         <div
-          class="Hook-img-1lt6qxv gatsby-image-wrapper"
-          style="position: relative; overflow: hidden;"
+          class="Hook-swipeable-1dl19ug"
+          style="overflow-x: hidden;"
         >
           <div
-            style="width: 100%;"
-          />
-          <picture>
-            <source
-              sizes="mockString"
-              srcset="mockString"
-            />
-            <img
-              alt="surfer"
-              src="mockString"
-              style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; opacity: 0;"
-            />
-          </picture>
-          <noscript>
-            &lt;picture&gt;&lt;source srcSet="mockString" sizes="mockString" /&gt;&lt;img src="mockString" alt="surfer" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
-          </noscript>
-        </div>
-        <div
-          class="MuiPaper-root-1 MuiPaper-elevation10-13 MuiPaper-rounded-2 Hook-paper-1t7pdun"
-        >
-          <div
-            class="Hook-logo-2r0ggu gatsby-image-wrapper"
-            style="position: relative; overflow: hidden;"
+            class="react-swipeable-view-container"
+            style="flex-direction: row; direction: ltr; display: flex;"
           >
             <div
-              style="width: 100%;"
-            />
-            <picture>
-              <source
-                sizes="mockString"
-                srcset="mockString"
-              />
-              <img
-                alt="logo"
-                src="mockString"
-                style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; opacity: 0;"
-              />
-            </picture>
-            <noscript>
-              &lt;picture&gt;&lt;source srcSet="mockString" sizes="mockString" /&gt;&lt;img src="mockString" alt="logo" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
-            </noscript>
+              aria-hidden="false"
+              data-swipeable="true"
+              style="width: 100%; overflow: auto;"
+            >
+              <div
+                class="Hook-container-hjghnz"
+              >
+                <img
+                  alt="newProduct.imgAlt"
+                  class="Hook-img-pb1ux8"
+                  src="test-file-stub"
+                />
+                <div
+                  class="MuiPaper-root MuiPaper-elevation10 MuiPaper-rounded Hook-paper-hm1bzp"
+                >
+                  <img
+                    alt="hangers"
+                    class="Hook-logo-qndciu"
+                    src="test-file-stub"
+                  />
+                  <p
+                    class="MuiTypography-root MuiTypography-body2 Hook-title-pj3ctz"
+                  >
+                    Hidden Surfboard Wall Rack
+                  </p>
+                  <p
+                    class="MuiTypography-root MuiTypography-body2"
+                  >
+                    newProduct.text_hangers
+                  </p>
+                  <a
+                    aria-disabled="false"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary Hook-button-daa18a"
+                    href="https://amzn.to/2BHjz9U"
+                    rel="noopener"
+                    role="button"
+                    tabindex="0"
+                    target="_blank"
+                  >
+                    <span
+                      class="MuiButton-label"
+                    >
+                      common.more
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
-          <p
-            class="MuiTypography-root-28 MuiTypography-body2-29 Hook-title-1b5xj2l"
-          >
-            Bee Swell Surf Wax
-          </p>
-          <p
-            class="MuiTypography-root-28 MuiTypography-body2-29"
-          >
-            We are so excited to be able to bring you this premium, eco-friendly surf wax! Ride waves with confidence and a clear conscience! Bee Swell Eco-Friendly surf wax is made with 100% pure beeswax that has been ethically sourced by natural beekeepers. Proceeds help to provide pollinator habitat and resources for honeybee rescues.
-          </p>
+        </div>
+        <div
+          class="MuiPaper-root MuiPaper-elevation0 MuiMobileStepper-root MuiMobileStepper-positionStatic Hook-mobileStepper-1fso5ns"
+        >
           <button
-            class="MuiButtonBase-root-75 MuiButton-root-58 MuiButton-outlined-63 MuiButton-outlinedSecondary-65 Hook-button-17bk4pg"
+            aria-label="common.scrollRight"
+            class="MuiButtonBase-root MuiButtonBase-disabled MuiIconButton-root MuiIconButton-disabled MuiIconButton-sizeSmall Hook-backButton-v13497"
+            disabled=""
+            tabindex="-1"
+            type="button"
+          >
+            <span
+              class="MuiIconButton-label"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
+                />
+                <path
+                  d="M0 0h24v24H0V0z"
+                  fill="none"
+                />
+              </svg>
+            </span>
+          </button>
+          <div
+            class="MuiMobileStepper-dots"
+          >
+            <div
+              class="MuiMobileStepper-dot MuiMobileStepper-dotActive"
+            />
+            <div
+              class="MuiMobileStepper-dot"
+            />
+          </div>
+          <button
+            aria-label="common.scrollLeft"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall Hook-nextButton-swpbdf"
             tabindex="0"
             type="button"
           >
             <span
-              class="MuiButton-label-59"
+              class="MuiIconButton-label"
             >
-              more info
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
+                />
+                <path
+                  d="M0 0h24v24H0V0z"
+                  fill="none"
+                />
+              </svg>
             </span>
             <span
-              class="MuiTouchRipple-root-95"
+              class="MuiTouchRipple-root"
             />
           </button>
         </div>
@@ -86,78 +146,138 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="Hook-root-1p1euq"
+      class="Hook-root-o6ux9v"
       id="products"
     >
       <div
-        class="Hook-img-1lt6qxv gatsby-image-wrapper"
-        style="position: relative; overflow: hidden;"
+        class="Hook-swipeable-1dl19ug"
+        style="overflow-x: hidden;"
       >
         <div
-          style="width: 100%;"
-        />
-        <picture>
-          <source
-            sizes="mockString"
-            srcset="mockString"
-          />
-          <img
-            alt="surfer"
-            src="mockString"
-            style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; opacity: 0;"
-          />
-        </picture>
-        <noscript>
-          &lt;picture&gt;&lt;source srcSet="mockString" sizes="mockString" /&gt;&lt;img src="mockString" alt="surfer" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
-        </noscript>
-      </div>
-      <div
-        class="MuiPaper-root-1 MuiPaper-elevation10-13 MuiPaper-rounded-2 Hook-paper-1t7pdun"
-      >
-        <div
-          class="Hook-logo-2r0ggu gatsby-image-wrapper"
-          style="position: relative; overflow: hidden;"
+          class="react-swipeable-view-container"
+          style="flex-direction: row; direction: ltr; display: flex;"
         >
           <div
-            style="width: 100%;"
-          />
-          <picture>
-            <source
-              sizes="mockString"
-              srcset="mockString"
-            />
-            <img
-              alt="logo"
-              src="mockString"
-              style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; opacity: 0;"
-            />
-          </picture>
-          <noscript>
-            &lt;picture&gt;&lt;source srcSet="mockString" sizes="mockString" /&gt;&lt;img src="mockString" alt="logo" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
-          </noscript>
+            aria-hidden="false"
+            data-swipeable="true"
+            style="width: 100%; overflow: auto;"
+          >
+            <div
+              class="Hook-container-hjghnz"
+            >
+              <img
+                alt="newProduct.imgAlt"
+                class="Hook-img-pb1ux8"
+                src="test-file-stub"
+              />
+              <div
+                class="MuiPaper-root MuiPaper-elevation10 MuiPaper-rounded Hook-paper-hm1bzp"
+              >
+                <img
+                  alt="hangers"
+                  class="Hook-logo-qndciu"
+                  src="test-file-stub"
+                />
+                <p
+                  class="MuiTypography-root MuiTypography-body2 Hook-title-pj3ctz"
+                >
+                  Hidden Surfboard Wall Rack
+                </p>
+                <p
+                  class="MuiTypography-root MuiTypography-body2"
+                >
+                  newProduct.text_hangers
+                </p>
+                <a
+                  aria-disabled="false"
+                  class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary Hook-button-daa18a"
+                  href="https://amzn.to/2BHjz9U"
+                  rel="noopener"
+                  role="button"
+                  tabindex="0"
+                  target="_blank"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    common.more
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-        <p
-          class="MuiTypography-root-28 MuiTypography-body2-29 Hook-title-1b5xj2l"
-        >
-          Bee Swell Surf Wax
-        </p>
-        <p
-          class="MuiTypography-root-28 MuiTypography-body2-29"
-        >
-          We are so excited to be able to bring you this premium, eco-friendly surf wax! Ride waves with confidence and a clear conscience! Bee Swell Eco-Friendly surf wax is made with 100% pure beeswax that has been ethically sourced by natural beekeepers. Proceeds help to provide pollinator habitat and resources for honeybee rescues.
-        </p>
+      </div>
+      <div
+        class="MuiPaper-root MuiPaper-elevation0 MuiMobileStepper-root MuiMobileStepper-positionStatic Hook-mobileStepper-1fso5ns"
+      >
         <button
-          class="MuiButtonBase-root-75 MuiButton-root-58 MuiButton-outlined-63 MuiButton-outlinedSecondary-65 Hook-button-17bk4pg"
+          aria-label="common.scrollRight"
+          class="MuiButtonBase-root MuiButtonBase-disabled MuiIconButton-root MuiIconButton-disabled MuiIconButton-sizeSmall Hook-backButton-v13497"
+          disabled=""
+          tabindex="-1"
+          type="button"
+        >
+          <span
+            class="MuiIconButton-label"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
+              />
+              <path
+                d="M0 0h24v24H0V0z"
+                fill="none"
+              />
+            </svg>
+          </span>
+        </button>
+        <div
+          class="MuiMobileStepper-dots"
+        >
+          <div
+            class="MuiMobileStepper-dot MuiMobileStepper-dotActive"
+          />
+          <div
+            class="MuiMobileStepper-dot"
+          />
+        </div>
+        <button
+          aria-label="common.scrollLeft"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall Hook-nextButton-swpbdf"
           tabindex="0"
           type="button"
         >
           <span
-            class="MuiButton-label-59"
+            class="MuiIconButton-label"
           >
-            more info
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
+              />
+              <path
+                d="M0 0h24v24H0V0z"
+                fill="none"
+              />
+            </svg>
           </span>
           <span
-            class="MuiTouchRipple-root-95"
+            class="MuiTouchRipple-root"
           />
         </button>
       </div>

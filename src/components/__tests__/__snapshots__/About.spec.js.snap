@@ -6,74 +6,70 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="Hook-root-vig9dz"
+        class="Hook-root-cukdc7"
         id="about"
       >
         <div
-          class="Hook-textContainer-1ie3xng"
+          class="Hook-textContainer-1o2vx3o"
         >
           <h5
-            class="MuiTypography-root-1 MuiTypography-h5-10 Hook-title-rp2l0f"
+            class="MuiTypography-root MuiTypography-h5 Hook-title-ojg9h6"
           >
             about.sectionTitle1
           </h5>
           <h5
-            class="MuiTypography-root-1 MuiTypography-h5-10 Hook-title-rp2l0f"
+            class="MuiTypography-root MuiTypography-h5 Hook-title-ojg9h6"
           >
             about.sectionTitle2
           </h5>
           <p
-            class="MuiTypography-root-1 MuiTypography-body1-3 Hook-text-p6zqnu"
+            class="MuiTypography-root MuiTypography-body1 Hook-text-x7olra"
           >
             about.message
           </p>
         </div>
         <div
-          class="Hook-imgContainer-1s5hbov"
+          class="Hook-imgContainer-1jmcx22"
         >
           <div
-            class="Hook-img-sjwcmm gatsby-image-wrapper"
+            class="Hook-img-103fnw8 gatsby-image-wrapper"
             style="position: relative; overflow: hidden;"
           >
             <div
               style="width: 100%;"
             />
             <picture>
-              <source
-                sizes="mockString"
-                srcset="mockString"
-              />
               <img
                 alt="two surfers in ocean"
+                sizes="mockString"
                 src="mockString"
+                srcset="mockString"
                 style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; opacity: 0;"
               />
             </picture>
             <noscript>
-              &lt;picture&gt;&lt;source srcSet="mockString" sizes="mockString" /&gt;&lt;img src="mockString" alt="two surfers in ocean" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+              &lt;picture&gt;&lt;img sizes="mockString" srcset="mockString" src="mockString" alt="two surfers in ocean" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
             </noscript>
           </div>
         </div>
         <div
-          class="Hook-backgroundImg-shfvpy gatsby-image-wrapper"
+          class="Hook-backgroundImg-coeeiw gatsby-image-wrapper"
           style="position: absolute; overflow: hidden;"
         >
           <div
             style="width: 100%;"
           />
           <picture>
-            <source
-              sizes="mockString"
-              srcset="mockString"
-            />
             <img
               alt="wave background"
+              sizes="mockString"
               src="mockString"
+              srcset="mockString"
               style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; opacity: 0;"
             />
           </picture>
           <noscript>
-            &lt;picture&gt;&lt;source srcSet="mockString" sizes="mockString" /&gt;&lt;img src="mockString" alt="wave background" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+            &lt;picture&gt;&lt;img sizes="mockString" srcset="mockString" src="mockString" alt="wave background" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
           </noscript>
         </div>
       </div>
@@ -81,74 +77,70 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="Hook-root-vig9dz"
+      class="Hook-root-cukdc7"
       id="about"
     >
       <div
-        class="Hook-textContainer-1ie3xng"
+        class="Hook-textContainer-1o2vx3o"
       >
         <h5
-          class="MuiTypography-root-1 MuiTypography-h5-10 Hook-title-rp2l0f"
+          class="MuiTypography-root MuiTypography-h5 Hook-title-ojg9h6"
         >
           about.sectionTitle1
         </h5>
         <h5
-          class="MuiTypography-root-1 MuiTypography-h5-10 Hook-title-rp2l0f"
+          class="MuiTypography-root MuiTypography-h5 Hook-title-ojg9h6"
         >
           about.sectionTitle2
         </h5>
         <p
-          class="MuiTypography-root-1 MuiTypography-body1-3 Hook-text-p6zqnu"
+          class="MuiTypography-root MuiTypography-body1 Hook-text-x7olra"
         >
           about.message
         </p>
       </div>
       <div
-        class="Hook-imgContainer-1s5hbov"
+        class="Hook-imgContainer-1jmcx22"
       >
         <div
-          class="Hook-img-sjwcmm gatsby-image-wrapper"
+          class="Hook-img-103fnw8 gatsby-image-wrapper"
           style="position: relative; overflow: hidden;"
         >
           <div
             style="width: 100%;"
           />
           <picture>
-            <source
-              sizes="mockString"
-              srcset="mockString"
-            />
             <img
               alt="two surfers in ocean"
+              sizes="mockString"
               src="mockString"
+              srcset="mockString"
               style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; opacity: 0;"
             />
           </picture>
           <noscript>
-            &lt;picture&gt;&lt;source srcSet="mockString" sizes="mockString" /&gt;&lt;img src="mockString" alt="two surfers in ocean" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+            &lt;picture&gt;&lt;img sizes="mockString" srcset="mockString" src="mockString" alt="two surfers in ocean" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
           </noscript>
         </div>
       </div>
       <div
-        class="Hook-backgroundImg-shfvpy gatsby-image-wrapper"
+        class="Hook-backgroundImg-coeeiw gatsby-image-wrapper"
         style="position: absolute; overflow: hidden;"
       >
         <div
           style="width: 100%;"
         />
         <picture>
-          <source
-            sizes="mockString"
-            srcset="mockString"
-          />
           <img
             alt="wave background"
+            sizes="mockString"
             src="mockString"
+            srcset="mockString"
             style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; opacity: 0;"
           />
         </picture>
         <noscript>
-          &lt;picture&gt;&lt;source srcSet="mockString" sizes="mockString" /&gt;&lt;img src="mockString" alt="wave background" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+          &lt;picture&gt;&lt;img sizes="mockString" srcset="mockString" src="mockString" alt="wave background" style="position:absolute;top:0;left:0;transition:opacity 0.5s;transition-delay:0.5s;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
         </noscript>
       </div>
     </div>

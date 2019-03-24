@@ -6,30 +6,20 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="Hook-containerNewsletter-13xw8og"
+        class="Hook-containerNewsletter-hfs42l"
       >
-        <h5
-          class="MuiTypography-root-8 MuiTypography-h5-17 Hook-textNewsletter-oh7u9x"
-        >
-          newsletter.sectionTitle
-        </h5>
-        <p
-          class="MuiTypography-root-8 MuiTypography-body2-9 Hook-subtitleNewsletter-38370b"
-        >
-          newsletter.message
-        </p>
         <button
-          class="MuiButtonBase-root-55 MuiButton-root-38 MuiButton-contained-46 MuiButton-containedPrimary-47 Hook-button-nvs5r3"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth Hook-button-mqnrj"
           tabindex="0"
           type="button"
         >
           <span
-            class="MuiButton-label-39"
+            class="MuiButton-label"
           >
             newsletter.signUp
           </span>
           <span
-            class="MuiTouchRipple-root-75"
+            class="MuiTouchRipple-root"
           />
         </button>
       </div>
@@ -37,30 +27,20 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="Hook-containerNewsletter-13xw8og"
+      class="Hook-containerNewsletter-hfs42l"
     >
-      <h5
-        class="MuiTypography-root-8 MuiTypography-h5-17 Hook-textNewsletter-oh7u9x"
-      >
-        newsletter.sectionTitle
-      </h5>
-      <p
-        class="MuiTypography-root-8 MuiTypography-body2-9 Hook-subtitleNewsletter-38370b"
-      >
-        newsletter.message
-      </p>
       <button
-        class="MuiButtonBase-root-55 MuiButton-root-38 MuiButton-contained-46 MuiButton-containedPrimary-47 Hook-button-nvs5r3"
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth Hook-button-mqnrj"
         tabindex="0"
         type="button"
       >
         <span
-          class="MuiButton-label-39"
+          class="MuiButton-label"
         >
           newsletter.signUp
         </span>
         <span
-          class="MuiTouchRipple-root-75"
+          class="MuiTouchRipple-root"
         />
       </button>
     </div>

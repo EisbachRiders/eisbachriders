@@ -7,7 +7,7 @@ Object {
     <div>
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root-1"
+        class="MuiSvgIcon-root"
         focusable="false"
         role="presentation"
         viewBox="0 0 256.000000 256.000000"
@@ -54,7 +54,7 @@ c29 0 55 4 58 8 3 5 -12 78 -33 163 l-38 154 -44 3 c-24 1 -50 -1 -56 -6z"
   "container": <div>
     <svg
       aria-hidden="true"
-      class="MuiSvgIcon-root-1"
+      class="MuiSvgIcon-root"
       focusable="false"
       role="presentation"
       viewBox="0 0 256.000000 256.000000"

@@ -6,23 +6,23 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="MuiSnackbar-root-1 MuiSnackbar-anchorOriginBottomCenter-3 Hook-snackbar-qt6bs2"
+        class="MuiSnackbar-root MuiSnackbar-anchorOriginBottomCenter Hook-snackbar-7zxr7b"
       >
         <div
           aria-describedby="client-snackbar"
-          class="MuiTypography-root-38 MuiTypography-body2-39 MuiPaper-root-11 MuiPaper-elevation6-19 MuiSnackbarContent-root-8 Hook-snackbarContent-e8yt44"
+          class="MuiTypography-root MuiTypography-body2 MuiPaper-root MuiPaper-elevation6 MuiSnackbarContent-root Hook-snackbarContent-14dzmmb"
           role="alertdialog"
           style="-webkit-transform: translate(0, 0); transform: translate(0, 0); -webkit-transition: -webkit-transform 225ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;"
         >
           <div
-            class="MuiSnackbarContent-message-9 Hook-message-1x5shg7"
+            class="MuiSnackbarContent-message Hook-message-1y0x6n2"
           >
             <span
               id="client-snackbar"
             >
               tracking.message
               <a
-                class="Hook-link-1zvxje"
+                class="Hook-link-8zk6dp"
                 href="/privacy/"
               >
                 tracking.privacyLink
@@ -30,35 +30,36 @@ Object {
             </span>
           </div>
           <div
-            class="MuiSnackbarContent-action-10 Hook-action-1bak2fe"
+            class="MuiSnackbarContent-action Hook-action-2bx5ou"
           >
             <a
-              class="MuiButtonBase-root-85 MuiButton-root-68 MuiButton-text-70 Hook-buttonDecline-cll7ju"
+              aria-disabled="false"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text Hook-buttonDecline-atipch"
               href="javascript:gaOptout();"
               role="button"
               tabindex="0"
             >
               <span
-                class="MuiButton-label-69"
+                class="MuiButton-label"
               >
                 tracking.decline
               </span>
               <span
-                class="MuiTouchRipple-root-88"
+                class="MuiTouchRipple-root"
               />
             </a>
             <button
-              class="MuiButtonBase-root-85 MuiButton-root-68 MuiButton-contained-76 MuiButton-containedSecondary-78 Hook-button-16t00fl"
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary Hook-button-1pknrnf"
               tabindex="0"
               type="button"
             >
               <span
-                class="MuiButton-label-69"
+                class="MuiButton-label"
               >
                 tracking.accept
               </span>
               <span
-                class="MuiTouchRipple-root-88"
+                class="MuiTouchRipple-root"
               />
             </button>
           </div>
@@ -68,23 +69,23 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="MuiSnackbar-root-1 MuiSnackbar-anchorOriginBottomCenter-3 Hook-snackbar-qt6bs2"
+      class="MuiSnackbar-root MuiSnackbar-anchorOriginBottomCenter Hook-snackbar-7zxr7b"
     >
       <div
         aria-describedby="client-snackbar"
-        class="MuiTypography-root-38 MuiTypography-body2-39 MuiPaper-root-11 MuiPaper-elevation6-19 MuiSnackbarContent-root-8 Hook-snackbarContent-e8yt44"
+        class="MuiTypography-root MuiTypography-body2 MuiPaper-root MuiPaper-elevation6 MuiSnackbarContent-root Hook-snackbarContent-14dzmmb"
         role="alertdialog"
         style="-webkit-transform: translate(0, 0); transform: translate(0, 0); -webkit-transition: -webkit-transform 225ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;"
       >
         <div
-          class="MuiSnackbarContent-message-9 Hook-message-1x5shg7"
+          class="MuiSnackbarContent-message Hook-message-1y0x6n2"
         >
           <span
             id="client-snackbar"
           >
             tracking.message
             <a
-              class="Hook-link-1zvxje"
+              class="Hook-link-8zk6dp"
               href="/privacy/"
             >
               tracking.privacyLink
@@ -92,35 +93,36 @@ Object {
           </span>
         </div>
         <div
-          class="MuiSnackbarContent-action-10 Hook-action-1bak2fe"
+          class="MuiSnackbarContent-action Hook-action-2bx5ou"
         >
           <a
-            class="MuiButtonBase-root-85 MuiButton-root-68 MuiButton-text-70 Hook-buttonDecline-cll7ju"
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiButton-root MuiButton-text Hook-buttonDecline-atipch"
             href="javascript:gaOptout();"
             role="button"
             tabindex="0"
           >
             <span
-              class="MuiButton-label-69"
+              class="MuiButton-label"
             >
               tracking.decline
             </span>
             <span
-              class="MuiTouchRipple-root-88"
+              class="MuiTouchRipple-root"
             />
           </a>
           <button
-            class="MuiButtonBase-root-85 MuiButton-root-68 MuiButton-contained-76 MuiButton-containedSecondary-78 Hook-button-16t00fl"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary Hook-button-1pknrnf"
             tabindex="0"
             type="button"
           >
             <span
-              class="MuiButton-label-69"
+              class="MuiButton-label"
             >
               tracking.accept
             </span>
             <span
-              class="MuiTouchRipple-root-88"
+              class="MuiTouchRipple-root"
             />
           </button>
         </div>

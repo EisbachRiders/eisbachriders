@@ -59,7 +59,8 @@ function ShopItem({ product }) {
 
   return (
     <div className={classes.root}>
-      <Link to={'/product/'} className={classes.link}>
+      test
+      {/* <Link to={'/product/'} className={classes.link}>
         <img
           src={product.images[0].src}
           className={classes.img}
@@ -69,7 +70,7 @@ function ShopItem({ product }) {
       <div className={classes.descriptionContainer}>
         <Typography className={classes.name}>{product.name}</Typography>
         <Typography className={classes.price}>{`€${product.price}`}</Typography>
-      </div>
+      </div> */}
     </div>
   )
 }

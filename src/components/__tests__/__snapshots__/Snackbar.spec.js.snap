@@ -7,19 +7,19 @@ Object {
     <div>
       <div
         aria-describedby="client-snackbar"
-        class="MuiTypography-root-31 MuiTypography-body2-32 MuiPaper-root-4 MuiPaper-elevation6-12 MuiSnackbarContent-root-1 Hook-success-1qq6i0b"
+        class="MuiTypography-root MuiTypography-body2 MuiPaper-root MuiPaper-elevation6 MuiSnackbarContent-root Hook-success-1o79v0v"
         role="alertdialog"
       >
         <div
-          class="MuiSnackbarContent-message-2"
+          class="MuiSnackbarContent-message"
         >
           <span
-            class="Hook-message-1jk71r8"
+            class="Hook-message-109ohgv"
             id="client-snackbar"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root-61 Hook-icon-lpkfx9 Hook-iconVariant-cuj1lj"
+              class="MuiSvgIcon-root Hook-icon-12d0k9r Hook-iconVariant-1lq9g6t"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -35,20 +35,20 @@ Object {
           </span>
         </div>
         <div
-          class="MuiSnackbarContent-action-3"
+          class="MuiSnackbarContent-action"
         >
           <button
             aria-label="Close"
-            class="MuiButtonBase-root-76 MuiIconButton-root-70 MuiIconButton-colorInherit-71"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit"
             tabindex="0"
             type="button"
           >
             <span
-              class="MuiIconButton-label-75"
+              class="MuiIconButton-label"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root-61 Hook-icon-lpkfx9"
+                class="MuiSvgIcon-root Hook-icon-12d0k9r"
                 focusable="false"
                 role="presentation"
                 viewBox="0 0 24 24"
@@ -63,7 +63,7 @@ Object {
               </svg>
             </span>
             <span
-              class="MuiTouchRipple-root-79"
+              class="MuiTouchRipple-root"
             />
           </button>
         </div>
@@ -73,19 +73,19 @@ Object {
   "container": <div>
     <div
       aria-describedby="client-snackbar"
-      class="MuiTypography-root-31 MuiTypography-body2-32 MuiPaper-root-4 MuiPaper-elevation6-12 MuiSnackbarContent-root-1 Hook-success-1qq6i0b"
+      class="MuiTypography-root MuiTypography-body2 MuiPaper-root MuiPaper-elevation6 MuiSnackbarContent-root Hook-success-1o79v0v"
       role="alertdialog"
     >
       <div
-        class="MuiSnackbarContent-message-2"
+        class="MuiSnackbarContent-message"
       >
         <span
-          class="Hook-message-1jk71r8"
+          class="Hook-message-109ohgv"
           id="client-snackbar"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root-61 Hook-icon-lpkfx9 Hook-iconVariant-cuj1lj"
+            class="MuiSvgIcon-root Hook-icon-12d0k9r Hook-iconVariant-1lq9g6t"
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"
@@ -101,20 +101,20 @@ Object {
         </span>
       </div>
       <div
-        class="MuiSnackbarContent-action-3"
+        class="MuiSnackbarContent-action"
       >
         <button
           aria-label="Close"
-          class="MuiButtonBase-root-76 MuiIconButton-root-70 MuiIconButton-colorInherit-71"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit"
           tabindex="0"
           type="button"
         >
           <span
-            class="MuiIconButton-label-75"
+            class="MuiIconButton-label"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root-61 Hook-icon-lpkfx9"
+              class="MuiSvgIcon-root Hook-icon-12d0k9r"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -129,7 +129,7 @@ Object {
             </svg>
           </span>
           <span
-            class="MuiTouchRipple-root-79"
+            class="MuiTouchRipple-root"
           />
         </button>
       </div>
