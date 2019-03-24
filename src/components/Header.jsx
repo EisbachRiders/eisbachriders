@@ -56,10 +56,13 @@ const useStyles = makeStyles(theme => ({
   },
   button: {
     color: theme.palette.common.black,
-    fontSize: 18,
+    fontSize: 24,
     fontWeight: 700,
     '&:hover': {
       color: theme.palette.primary.main,
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: 30,
     },
   },
   logoButton: {

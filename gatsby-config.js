@@ -60,6 +60,8 @@ module.exports = {
       options: {
         trackingId: process.env.GA_KEY,
         anonymize: true,
+        cookie_expires: 0,
+        cookieDomain: 'https://eisbach-riders.com',
       },
     },
     //`gatsby-plugin-feed`,

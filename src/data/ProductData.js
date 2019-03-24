@@ -16,18 +16,6 @@ import product3_img1 from '../assets/images/Future/img1.jpg'
 import product3_img2 from '../assets/images/Future/img2.jpg'
 import product3_img3 from '../assets/images/Future/img3.jpg'
 import product3_img4 from '../assets/images/Future/img4.jpg'
-//New
-import product4 from '../assets/images/New/main.jpg'
-import product4_img1 from '../assets/images/New/img1.jpg'
-import product4_img2 from '../assets/images/New/img2.jpg'
-import product4_img3 from '../assets/images/New/img3.jpg'
-import product4_img4 from '../assets/images/New/img4.jpg'
-import product4_img5 from '../assets/images/New/img5.jpg'
-//Feature
-import product5 from '../assets/images/Feature/main.png'
-import product5_img1 from '../assets/images/Feature/img1.jpg'
-import product5_img2 from '../assets/images/Feature/img2.jpg'
-import product5_img3 from '../assets/images/Feature/img3.jpg'
 
 export const productsFins = [
   {
@@ -135,14 +123,7 @@ export const productsFins = [
 export const newProduct = [
   {
     name: 'Bee Swell Wax',
-    images: [
-      product4,
-      product4_img1,
-      product4_img2,
-      product4_img3,
-      product4_img4,
-      product4_img5,
-    ],
+    images: [],
     price: '6.95',
     ebay:
       'https://rover.ebay.com/rover/1/707-53477-19255-0/1?icep_id=114&ipn=icep&toolid=20004&campid=5338456795&mpre=https%3A%2F%2Fwww.ebay.de%2Fitm%2F183636677740',
@@ -172,7 +153,7 @@ export const newProduct = [
 export const featureProduct = [
   {
     name: 'Fiberglass Honeycomb FCS 1',
-    images: [product5, product5_img1, product5_img2, product5_img3],
+    images: [],
     price: '39.90',
     ebay:
       'https://rover.ebay.com/rover/1/707-53477-19255-0/1?icep_id=114&ipn=icep&toolid=20004&campid=5338456795&mpre=https%3A%2F%2Fwww.ebay.de%2Fitm%2F183646902812',
