@@ -105,7 +105,7 @@ function Feature({ img }) {
   const { t } = useTranslation()
 
   return (
-    <div className={classes.root} id="products">
+    <div className={classes.root}>
       <Typography className={classes.title} variant="h5">
         {t('feature.featuredProduct')}
       </Typography>
@@ -133,7 +133,7 @@ function Feature({ img }) {
             color="primary"
             variant="outlined"
             className={classes.button}
-            href={featureProduct.amazon}
+            href="https://amzn.to/2Wf7yQP"
             target="_blank"
             rel="noopener"
           >

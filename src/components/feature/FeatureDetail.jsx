@@ -55,6 +55,9 @@ const useStyles = makeStyles(theme => ({
     height: 18,
     marginLeft: 5,
   },
+  off: {
+    color: theme.status.grey,
+  },
   barOn: {
     width: 18,
     height: 5,
@@ -106,7 +109,6 @@ function FeatureDetail({ img }) {
                 <div>
                   <FeatherIcon className={classes.icon} />
                   <FeatherIcon className={classes.icon} />
-                  <FeatherIcon className={classes.icon} />
                   <FeatherIcon
                     className={classnames(classes.off, classes.icon)}
                   />
@@ -117,7 +119,6 @@ function FeatureDetail({ img }) {
                   {t('feature.surfDetail1')}
                 </Typography>
                 <div>
-                  <SurfIcon className={classes.icon} />
                   <SurfIcon className={classes.icon} />
                   <SurfIcon className={classes.icon} />
                   <SurfIcon className={classes.icon} />
@@ -137,10 +138,10 @@ function FeatureDetail({ img }) {
                   {t('feature.beginner')}
                 </Typography>
                 <div className={classes.flex}>
-                  <div className={classes.barOff} />
-                  <div className={classes.barOff} />
-                  <div className={classes.barOff} />
-                  <div className={classes.barOff} />
+                  <div className={classes.barOn} />
+                  <div className={classes.barOn} />
+                  <div className={classes.barOn} />
+                  <div className={classes.barOn} />
                 </div>
               </div>
               <div className={classes.containerIcon}>
@@ -148,10 +149,10 @@ function FeatureDetail({ img }) {
                   {t('feature.intermediate')}
                 </Typography>
                 <div className={classes.flex}>
-                  <div className={classes.barOn} />
-                  <div className={classes.barOn} />
-                  <div className={classes.barOn} />
                   <div className={classes.barOff} />
+                  <div className={classes.barOff} />
+                  <div className={classes.barOff} />
+                  <div className={classes.barOn} />
                 </div>
               </div>
               <div className={classes.containerIcon}>
@@ -159,10 +160,10 @@ function FeatureDetail({ img }) {
                   {t('feature.pro')}
                 </Typography>
                 <div className={classes.flex}>
-                  <div className={classes.barOn} />
-                  <div className={classes.barOn} />
-                  <div className={classes.barOn} />
-                  <div className={classes.barOn} />
+                  <div className={classes.barOff} />
+                  <div className={classes.barOff} />
+                  <div className={classes.barOff} />
+                  <div className={classes.barOff} />
                 </div>
               </div>
             </div>

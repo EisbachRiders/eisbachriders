@@ -98,7 +98,7 @@ function Header({ isHomepage, lng, changeLng }) {
         className={isHomepage ? classes.appbar : classes.appbarDarkTheme}
       >
         <Toolbar className={classes.toolbar}>
-          <Link to="/" className={classes.logoButton}>
+          <Link to="/" className={classes.logoButton} aria-label="home">
             <ERIcon className={classes.logo} />
           </Link>
           <Hidden xsDown>

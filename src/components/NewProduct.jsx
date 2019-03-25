@@ -138,13 +138,13 @@ function NewProduct() {
       product: 'wax',
       title: 'Bee Swell Surf Wax',
       amazon:
-        'https://rover.ebay.com/rover/1/707-53477-19255-0/1?icep_id=114&ipn=icep&toolid=20004&campid=5338456795&mpre=https%3A%2F%2Fwww.ebay.de%2Fitm%2F183636677740',
+        'https://www.ebay.de/itm/2x-Handmade-Surf-Wax-Set-base-cold-Okologisch-Surfwachs-aus-Bienenwachs-/183732325309',
       img: img_wax,
       logo: logo_wax,
     },
   ]
   return (
-    <div className={classes.root} id="products">
+    <div className={classes.root}>
       <SwipeableViews
         enableMouseEvents
         index={activeStep}

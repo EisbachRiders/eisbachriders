@@ -354,7 +354,6 @@ function Footer() {
           <div className={classes.iconContainer}>
             <Button
               variant="outlined"
-              aria-label="facebook"
               className={classes.button}
               href="hhttps://www.facebook.com/EisbachRiders-262685337908914/"
               target="_blank"
@@ -364,7 +363,6 @@ function Footer() {
             </Button>
             <Button
               variant="outlined"
-              aria-label="instagram"
               className={classes.button}
               href="https://www.instagram.com/eisbachriders/"
               target="_blank"

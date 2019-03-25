@@ -99,7 +99,7 @@ function Products() {
   }
 
   return (
-    <div className={classes.root} id="products">
+    <div className={classes.root}>
       <Typography className={classes.title} variant="h5">
         {t('products.sectionTitle')}
       </Typography>
