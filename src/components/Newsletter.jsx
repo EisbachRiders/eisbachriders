@@ -84,6 +84,7 @@ function Newsletter() {
   const [isSnackbarOpen, setSnackbar] = useState(false)
   const [snackbarMessage, setSnackbarMessage] = useState(false)
   const [error, setError] = useState(false)
+  const pattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
 
   const handleSubmit = async e => {
     if (isCheckboxOpen && isEmailValid && isNameValid) {
@@ -91,7 +92,7 @@ function Newsletter() {
         FNAME: name,
         gdpr_26529: true,
       })
-      handleDialogClose
+      setDialog(false)
       if (result.result === 'error') {
         setSnackbar(true)
         setSnackbarMessage(
@@ -116,7 +117,7 @@ function Newsletter() {
     }
   }
 
-  const handleSnackbarClose = (event, reason) => {
+  const handleSnackbarClose = (e, reason) => {
     if (reason === 'clickaway') {
       return
     }
@@ -131,16 +132,14 @@ function Newsletter() {
       } else {
         setEmailValid(true)
       }
-    }
-    if (name === 'name') {
+    } else if (name === 'name') {
       if (event.target.value.length > 500) {
         setNameValid(false)
       } else {
         setNameValid(true)
         setName(event.target.value)
       }
-    }
-    if ((name = 'checkbox')) {
+    } else if ((name = 'checkbox')) {
       setCheckbox(event.target.checked)
     }
   }
@@ -212,7 +211,7 @@ function Newsletter() {
               error={isEmailValid === null ? null : !isEmailValid}
               placeholder={t('common.email')}
               value={email}
-              onChange={() => handleChange('email')}
+              onChange={handleChange('email')}
               className={classes.textField}
               margin="normal"
               variant="outlined"
@@ -225,7 +224,7 @@ function Newsletter() {
               error={isNameValid === null ? null : !isNameValid}
               placeholder={t('common.name')}
               value={name}
-              onChange={() => handleChange('name')}
+              onChange={handleChange('name')}
               className={classes.textField}
               margin="normal"
               variant="outlined"
@@ -239,7 +238,7 @@ function Newsletter() {
               control={
                 <Checkbox
                   checked={isCheckboxOpen}
-                  onChange={() => handleChange('checkbox')}
+                  onChange={handleChange('checkbox')}
                   className={error ? classes.error : null}
                   value="consent"
                   color="primary"
@@ -263,7 +262,7 @@ function Newsletter() {
           </Button>
           <Button
             data-testid="submit"
-            onClick={() => handleSubmit}
+            onClick={handleSubmit}
             className={classes.actionButton}
             color="primary"
             autoFocus
