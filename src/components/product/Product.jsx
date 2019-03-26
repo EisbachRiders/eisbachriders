@@ -1,7 +1,8 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
-import { connect } from 'react-redux'
+import ProductImg from './ProductImg'
 
 const mapStateToProps = ({ product }) => {
   return { product }
@@ -60,12 +61,7 @@ function Product({ product }) {
 
   return (
     <div className={classes.root}>
-      <img
-        src={product.images[0].src}
-        className={classes.img}
-        alt={product.name}
-      />
-
+      <ProductImg images={[]} />
       <div className={classes.descriptionContainer}>
         <Typography className={classes.name}>{product.name}</Typography>
         <div className={classes.fullWidth}>

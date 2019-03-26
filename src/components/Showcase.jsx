@@ -81,7 +81,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-function Products() {
+function Showcase() {
   const classes = useStyles()
   const { t } = useTranslation()
   const [activeStep, setActiveStep] = useState(0)
@@ -190,4 +190,4 @@ function Products() {
   )
 }
 
-export default Products
+export default Showcase

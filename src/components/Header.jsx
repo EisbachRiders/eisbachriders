@@ -61,9 +61,6 @@ const useStyles = makeStyles(theme => ({
     '&:hover': {
       color: theme.palette.primary.main,
     },
-    [theme.breakpoints.up('md')]: {
-      fontSize: 30,
-    },
   },
   logoButton: {
     marginRight: 15,
@@ -88,8 +85,8 @@ function Header({ isHomepage, lng, changeLng }) {
   const { t } = useTranslation()
   const [isDrawerOpen, setDrawer] = useState(false)
 
-  const links = [] ///shop/'
-  const linkLabels = [] //t('header.shop')
+  const links = [/shop/]
+  const linkLabels = [t('header.shop')]
 
   return (
     <div className={classes.root}>
@@ -103,7 +100,7 @@ function Header({ isHomepage, lng, changeLng }) {
           </Link>
           <Hidden xsDown>
             <div>
-              {/* {links.map((link, idx) => (
+              {links.map((link, idx) => (
                 <Link key={`link_${link}`} to={link}>
                   <Button className={classes.button}>{linkLabels[idx]}</Button>
                 </Link>
@@ -112,7 +109,7 @@ function Header({ isHomepage, lng, changeLng }) {
                 <IconButton className={classes.button} aria-label="Checkout">
                   <CartIcon />
                 </IconButton>
-              </Link>   */}
+              </Link>
               <Button className={classes.button} onClick={changeLng}>
                 {lng === 'en' ? 'de' : 'en'}
               </Button>

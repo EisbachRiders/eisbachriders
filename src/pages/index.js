@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Feature from '../components/feature/Feature'
 import NewProduct from '../components/NewProduct'
-import Products from '../components/Products'
+import Showcase from '../components/Showcase'
 import About from '../components/About'
 import Hero from '../components/Hero'
 
@@ -33,7 +33,7 @@ function Index({ data }) {
         <Hero img={heroImg} />
         <Feature img={featureImg} />
         <NewProduct img={newImg} detailImg={detailImg} />
-        <Products />
+        <Showcase />
         <About img={aboutImg} waveImg={waveImg} />
       </Layout>
     </div>
