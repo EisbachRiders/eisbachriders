@@ -12,6 +12,7 @@ function Layout({ isHomepage, children }) {
       <Header isHomepage={isHomepage} />
       {children}
       <Footer />
+      <Tracking />
       {process.env.NODE_ENV !== 'development' && <Tracking />}
     </>
   )

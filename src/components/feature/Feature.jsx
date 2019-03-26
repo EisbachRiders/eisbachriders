@@ -33,6 +33,12 @@ const useStyles = makeStyles(theme => ({
       paddingLeft: 170,
       paddingRight: 170,
     },
+    [theme.breakpoints.up('xl')]: {
+      paddingTop: 90,
+      paddingBottom: 90,
+      paddingLeft: 400,
+      paddingRight: 400,
+    },
   },
   container: {
     display: 'flex',
