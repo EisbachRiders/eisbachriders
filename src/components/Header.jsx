@@ -88,9 +88,6 @@ function Header({ isHomepage, lng, changeLng }) {
   const { t } = useTranslation()
   const [isDrawerOpen, setDrawer] = useState(false)
 
-  const links = [] ///shop/'
-  const linkLabels = [] //t('header.shop')
-
   return (
     <div className={classes.root}>
       <AppBar
@@ -103,16 +100,19 @@ function Header({ isHomepage, lng, changeLng }) {
           </Link>
           <Hidden xsDown>
             <div>
-              {/* {links.map((link, idx) => (
-                <Link key={`link_${link}`} to={link}>
-                  <Button className={classes.button}>{linkLabels[idx]}</Button>
-                </Link>
-              ))}{' '}
-              <Link to={'/checkout/'}>
-                <IconButton className={classes.button} aria-label="Checkout">
-                  <CartIcon />
-                </IconButton>
-              </Link>   */}
+              <Button
+                className={classes.button}
+                href="https://shop.eisbach-riders.com/shop/"
+              >
+                {t('header.shop')}
+              </Button>
+              <IconButton
+                className={classes.button}
+                aria-label="Checkout"
+                href="https://shop.eisbach-riders.com/cart/"
+              >
+                <CartIcon />
+              </IconButton>
               <Button className={classes.button} onClick={changeLng}>
                 {lng === 'en' ? 'de' : 'en'}
               </Button>
@@ -139,8 +139,7 @@ function Header({ isHomepage, lng, changeLng }) {
                 onKeyDown={() => setDrawer(false)}
               >
                 <MobileHeaderList
-                  links={links}
-                  linkLabels={linkLabels}
+                  linkLabels={[t('header.shop')]}
                   lng={lng}
                   changeLng={changeLng}
                 />

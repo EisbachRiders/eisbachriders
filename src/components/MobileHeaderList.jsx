@@ -54,24 +54,22 @@ function MobileHeaderList({ links, linkLabels, lng, changeLng }) {
             <ArrowIcon className={classes.icon} />
           </ListItem>
         </Link>
-        {/* {links.map((link, idx) => (
-          <Link to={link}>
-            <ListItem
-              button
-              divider
-              dense
-              href={`#${linkLabels[idx]}`}
-              key={`menuItem_${link}`}
-            >
-              <ListItemText
-                disableTypography
-                className={classes.text}
-                primary={linkLabels[idx]}
-              />
-              <ArrowIcon className={classes.icon} />
-            </ListItem>
-          </Link>
-        ))} */}
+        <Button
+          aria-label="shop"
+          className={classes.button}
+          href="https://shop.eisbach-riders.com/shop/"
+          disableFocusRipple
+          disableRipple
+        >
+          <ListItem button divider dense>
+            <ListItemText
+              disableTypography
+              className={classes.text}
+              primary={linkLabels[0]}
+            />
+            <ArrowIcon className={classes.icon} />
+          </ListItem>
+        </Button>
         <Button
           aria-label="facebook"
           className={classes.button}
@@ -109,7 +107,6 @@ function MobileHeaderList({ links, linkLabels, lng, changeLng }) {
             <ArrowIcon className={classes.icon} />
           </ListItem>
         </Button>
-
         <Button
           aria-label="change language"
           className={classes.button}
