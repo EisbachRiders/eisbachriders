@@ -20,9 +20,11 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.status.black,
   },
   copyright: {
-    fontSize: 12,
+    fontSize: 14,
     textTransform: 'capitalize',
     color: theme.palette.common.white,
+    letterSpacing: 3,
+    textTransform: 'uppercase',
     paddingTop: 15,
     paddingBottom: 15,
   },
@@ -135,7 +137,7 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'space-between',
   },
   link: {
-    color: theme.palette.common.white,
+    color: theme.status.grey,
     border: 'none',
     background: 'transparent',
     textDecoration: 'none',

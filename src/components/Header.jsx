@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
   },
   appbarDarkTheme: {
     boxShadow: 'none',
-    backgroundColor: theme.status.greyBlue,
+    backgroundColor: theme.status.black,
   },
   toolbar: {
     paddingLeft: 15,
@@ -42,6 +42,18 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('sm')]: {
       paddingLeft: 60,
       paddingRight: 60,
+    },
+    [theme.breakpoints.up('md')]: {
+      paddingLeft: 90,
+      paddingRight: 90,
+    },
+    [theme.breakpoints.up('lg')]: {
+      paddingLeft: 170,
+      paddingRight: 170,
+    },
+    [theme.breakpoints.up('xl')]: {
+      paddingLeft: 400,
+      paddingRight: 400,
     },
   },
   containerXS: {
@@ -54,8 +66,24 @@ const useStyles = makeStyles(theme => ({
     fontSize: 48,
     color: theme.status.black,
   },
+  logoDarkTheme: {
+    marginTop: 5,
+    fontSize: 48,
+    color: theme.status.white,
+  },
   button: {
     color: theme.palette.common.black,
+    fontSize: 24,
+    fontWeight: 700,
+    '&:hover': {
+      color: theme.palette.primary.main,
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: 30,
+    },
+  },
+  buttonDarkTheme: {
+    color: theme.palette.common.white,
     fontSize: 24,
     fontWeight: 700,
     '&:hover': {
@@ -96,12 +124,16 @@ function Header({ isHomepage, lng, changeLng }) {
       >
         <Toolbar className={classes.toolbar}>
           <Link to="/" className={classes.logoButton} aria-label="home">
-            <ERIcon className={classes.logo} />
+            <ERIcon
+              className={isHomepage ? classes.logo : classes.logoDarkTheme}
+            />
           </Link>
           <Hidden xsDown>
             <div>
               <Button
-                className={classes.button}
+                className={
+                  isHomepage ? classes.button : classes.buttonDarkTheme
+                }
                 href="https://shop.eisbach-riders.com/shop/"
               >
                 {t('header.shop')}
@@ -113,7 +145,12 @@ function Header({ isHomepage, lng, changeLng }) {
               >
                 <CartIcon />
               </IconButton>
-              <Button className={classes.button} onClick={changeLng}>
+              <Button
+                className={
+                  isHomepage ? classes.button : classes.buttonDarkTheme
+                }
+                onClick={changeLng}
+              >
                 {lng === 'en' ? 'de' : 'en'}
               </Button>
             </div>
