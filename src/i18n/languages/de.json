@@ -27,6 +27,9 @@
     "leashes": "leashes",
     "other": "other"
   },
+  "membership": {
+    "title": "Proud Members of"
+  },
   "feature": {
     "featuredProduct": "vorgestelltes",
     "response": "Surfbedingungen",
