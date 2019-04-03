@@ -366,12 +366,6 @@ function Footer() {
             </form>
           </div>
           <div className={classes.flexItem}>
-            <Typography className={classes.textHeading}>
-              {`${t('footer.questions')}?`}
-            </Typography>
-            <Typography className={classes.text}>
-              {t('footer.questionsMessage')}
-            </Typography>
             <Typography className={classes.text}>
               {t('footer.getInTouch')}
             </Typography>
@@ -379,7 +373,7 @@ function Footer() {
               <Button
                 variant="outlined"
                 className={classes.button}
-                href="hhttps://www.facebook.com/EisbachRiders-262685337908914/"
+                href="https://www.facebook.com/EisbachRiders/"
                 target="_blank"
                 rel="noopener"
               >

@@ -43,7 +43,7 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('sm')]: {
       flexBasis: '60%',
     },
-    [theme.breakpoints.up('lg')]: {
+    [theme.breakpoints.up('xl')]: {
       flexBasis: '80%',
     },
   },
