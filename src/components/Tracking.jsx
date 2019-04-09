@@ -43,9 +43,6 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('sm')]: {
       flexBasis: '60%',
     },
-    [theme.breakpoints.up('xl')]: {
-      flexBasis: '80%',
-    },
   },
   action: {
     marginLeft: 'none',
