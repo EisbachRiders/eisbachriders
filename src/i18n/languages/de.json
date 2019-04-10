@@ -7,7 +7,8 @@
   },
   "header": {
     "shop": "shop",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "cart": "cart"
   },
   "footer": {
     "message": "Schreib uns",

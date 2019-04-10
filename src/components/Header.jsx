@@ -63,34 +63,40 @@ const useStyles = makeStyles(theme => ({
   },
   logo: {
     marginTop: 5,
-    fontSize: 48,
+    width: 'auto',
+    height: 60,
     color: theme.status.black,
   },
   logoDarkTheme: {
     marginTop: 5,
-    fontSize: 48,
+    width: 'auto',
+    height: 60,
     color: theme.status.white,
   },
   button: {
     color: theme.palette.common.black,
-    fontSize: 24,
-    fontWeight: 700,
+    fontSize: 14,
+    fontWeight: 400,
+    paddingRight: 30,
+    paddingLeft: 0,
     '&:hover': {
       color: theme.palette.primary.main,
     },
     [theme.breakpoints.up('md')]: {
-      fontSize: 30,
+      fontSize: 16,
     },
   },
   buttonDarkTheme: {
     color: theme.palette.common.white,
-    fontSize: 24,
-    fontWeight: 700,
+    fontSize: 14,
+    fontWeight: 400,
+    paddingLeft: 0,
+    paddingRight: 30,
     '&:hover': {
       color: theme.palette.primary.main,
     },
     [theme.breakpoints.up('md')]: {
-      fontSize: 30,
+      fontSize: 16,
     },
   },
   logoButton: {
@@ -98,6 +104,13 @@ const useStyles = makeStyles(theme => ({
   },
   menuIcon: {
     color: theme.palette.common.black,
+  },
+  icon: {
+    color: theme.palette.common.white,
+    fontSize: 22,
+    '&:hover': {
+      color: theme.palette.primary.main,
+    },
   },
   mobileButton: {
     flexBasis: '50%',
@@ -138,13 +151,21 @@ function Header({ isHomepage, lng, changeLng }) {
               >
                 {t('header.shop')}
               </Button>
-              <IconButton
+              <Button
+                className={
+                  isHomepage ? classes.button : classes.buttonDarkTheme
+                }
+                href="https://shop.eisbach-riders.com/shop/"
+              >
+                {t('header.cart')}
+              </Button>
+              {/* <IconButton
                 className={classes.button}
                 aria-label="Checkout"
                 href="https://shop.eisbach-riders.com/cart/"
               >
-                <CartIcon />
-              </IconButton>
+                <CartIcon className={classes.icon} />
+              </IconButton> */}
               <Button
                 className={
                   isHomepage ? classes.button : classes.buttonDarkTheme
