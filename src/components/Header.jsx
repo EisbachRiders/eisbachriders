@@ -76,11 +76,12 @@ const useStyles = makeStyles(theme => ({
   button: {
     color: theme.palette.common.black,
     fontSize: 14,
-    fontWeight: 400,
+    fontWeight: 700,
     paddingRight: 30,
     paddingLeft: 0,
     '&:hover': {
       color: theme.palette.primary.main,
+      background: 'transparent',
     },
     [theme.breakpoints.up('md')]: {
       fontSize: 16,
@@ -166,14 +167,14 @@ function Header({ isHomepage, lng, changeLng }) {
               >
                 <CartIcon className={classes.icon} />
               </IconButton> */}
-              <Button
+              {/* <Button
                 className={
                   isHomepage ? classes.button : classes.buttonDarkTheme
                 }
                 onClick={changeLng}
               >
                 {lng === 'en' ? 'de' : 'en'}
-              </Button>
+              </Button> */}
             </div>
           </Hidden>
           <Hidden smUp>

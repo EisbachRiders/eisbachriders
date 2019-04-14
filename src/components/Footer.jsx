@@ -1,32 +1,19 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Link from './Link'
 import { useTranslation } from 'react-i18next'
 import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
-import TextField from '@material-ui/core/TextField'
-import Snackbar from '@material-ui/core/Snackbar'
-import CircularProgress from '@material-ui/core/CircularProgress'
-import Notification from './Snackbar'
 import Membership from './Membership'
 import InstagramIcon from '../assets/icons/Instagram'
 import FacebookIcon from '../assets/icons/Facebook'
+import Contact from './Contact'
+import Newsletter from './Newsletter'
 
 const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.status.black,
     width: '100%',
-  },
-  legal: {
-    backgroundColor: theme.status.black,
-  },
-  copyright: {
-    fontSize: 12,
-    textTransform: 'capitalize',
-    color: theme.palette.common.white,
-    letterSpacing: 3,
-    paddingTop: 15,
-    paddingBottom: 15,
   },
   container: {
     display: 'flex',
@@ -58,6 +45,10 @@ const useStyles = makeStyles(theme => ({
       paddingRight: 400,
     },
   },
+  containerInner: {
+    display: 'flex',
+    height: '100%',
+  },
   flexItem: {
     flexBasis: '100%',
     paddingTop: 15,
@@ -66,16 +57,20 @@ const useStyles = makeStyles(theme => ({
       paddingTop: 0,
     },
   },
+  flexItemInner: {
+    flexBasis: '50%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+  },
   text: {
     color: theme.palette.common.white,
     fontSize: 12,
-    lineHeight: 1.5,
+    textTransform: 'capitalize',
+    paddingBottom: 10,
     [theme.breakpoints.up('sm')]: {
       lineHeight: 2,
     },
-  },
-  divider: {
-    borderTop: `1px solid ${theme.status.greyDk}`,
   },
   textHeading: {
     color: theme.palette.common.white,
@@ -88,19 +83,6 @@ const useStyles = makeStyles(theme => ({
       textAlign: 'left',
       paddingTop: 0,
     },
-  },
-  textField: {
-    margin: 0,
-    width: '48%',
-  },
-  input: {
-    fontSize: 12,
-    color: theme.palette.common.white,
-    border: '1px solid',
-  },
-  inputError: {
-    fontSize: 12,
-    border: `1px solid ${theme.palette.error.main}`,
   },
   button: {
     borderColor: theme.status.white,
@@ -126,15 +108,6 @@ const useStyles = makeStyles(theme => ({
   iconContainer: {
     display: 'flex',
     justifyContent: 'flex-end',
-    paddingTop: 15,
-  },
-  buttonSend: {
-    marginTop: 15,
-    color: theme.palette.common.black,
-  },
-  inputContainer: {
-    display: 'flex',
-    justifyContent: 'space-between',
   },
   link: {
     color: theme.palette.common.white,
@@ -145,248 +118,106 @@ const useStyles = makeStyles(theme => ({
     paddingLeft: 5,
     paddingRight: 5,
   },
-  textArea: {
-    paddingLeft: 20,
-    color: theme.palette.common.white,
+  legal: {
+    backgroundColor: theme.status.black,
   },
-  inputLabel: {
+  copyright: {
     fontSize: 12,
-    paddingLeft: 20,
+    textTransform: 'capitalize',
     color: theme.palette.common.white,
-  },
-  progress: {
-    width: 15,
+    letterSpacing: 3,
+    paddingTop: 15,
+    paddingBottom: 15,
   },
 }))
 
 function Footer() {
   const classes = useStyles()
   const { t } = useTranslation()
-  const [email, setEmail] = useState('')
-  const [name, setName] = useState('')
-  const [message, setMessage] = useState('')
-  const [isEmailValid, setEmailValid] = useState(true)
-  const [isNameValid, setNameValid] = useState(true)
-  const [isMessageValid, setMessageValid] = useState(true)
-  const [isTouched, setTouched] = useState(false)
-  const [isSnackbarOpen, setSnackbar] = useState(false)
-  const [notification, setNotification] = useState('success')
-  const [isLoading, setLoading] = useState(false)
-
-  const handleChange = name => event => {
-    if (!isTouched) {
-      setTouched(true)
-    }
-    if (name === 'email') {
-      const pattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
-      if (!pattern.test(event.target.value)) {
-        setEmailValid(false)
-        setEmail(event.target.value)
-      } else {
-        setEmailValid(true)
-        setEmail(event.target.value)
-      }
-    }
-    if (name === 'name') {
-      if (event.target.value.length > 500) {
-        setNameValid(false)
-      } else {
-        setNameValid(true)
-        setName(event.target.value)
-      }
-    }
-    if (name === 'message') {
-      if (event.target.value.length > 1000) {
-        setMessageValid(false)
-      } else {
-        setMessageValid(true)
-        setMessage(event.target.value)
-      }
-    }
-  }
-
-  const handleSubmit = () => {
-    setLoading(true)
-    if (
-      isEmailValid &&
-      isMessageValid &&
-      message.length > 0 &&
-      isNameValid &&
-      isTouched
-    ) {
-      fetch(process.env.DATAFIRE, {
-        method: 'POST',
-        headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          message: message,
-          emailAddress: email,
-          name: name,
-        }),
-      })
-        .then(response => {
-          if (response.status === 200) {
-            setSnackbar(true)
-            setNotification('success')
-            setLoading(false)
-          } else {
-            setSnackbar(true)
-            setNotification('error')
-            setLoading(false)
-          }
-        })
-        .catch(err => {
-          setSnackbar(true)
-          setNotification('error')
-          setLoading(false)
-        })
-    } else {
-      setSnackbar(true)
-      setNotification('warning')
-      setLoading(false)
-    }
-  }
 
   return (
     <>
       <Membership />
       <div className={classes.root}>
-        <Snackbar
-          anchorOrigin={{
-            vertical: 'top',
-            horizontal: 'right',
-          }}
-          open={isSnackbarOpen}
-          autoHideDuration={6000}
-          onClose={() => setSnackbar(false)}
-        >
-          <Notification
-            onClose={() => setSnackbar(false)}
-            variant={notification}
-            message={
-              notification === 'success'
-                ? 'Your email has been sent successfully'
-                : notification === 'warning'
-                ? 'Please check the form has been filled out correctly'
-                : 'An error has occurred.'
-            }
-          />
-        </Snackbar>
         <div className={classes.container}>
           <div className={classes.flexItem}>
-            <form noValidate autoComplete="off">
-              <Typography className={classes.textHeading} variant="h5">
-                {t('footer.message')}
-              </Typography>
-              <Typography className={classes.text}>
-                {t('footer.questionsMessage')}
-              </Typography>
-              <div className={classes.inputContainer}>
-                <TextField
-                  id="footer_name"
-                  label={t('common.name')}
-                  type="text"
-                  className={classes.textField}
-                  InputProps={{
-                    className: isNameValid ? classes.input : classes.inputError,
-                    disableUnderline: true,
-                    classes: { input: classes.textArea },
-                  }}
-                  InputLabelProps={{
-                    className: classes.inputLabel,
-                  }}
-                  value={name}
-                  placeholder={t('common.name')}
-                  onChange={handleChange('name')}
-                  margin="normal"
-                  required
-                />
-                <TextField
-                  id="footer_email"
-                  label={t('common.email')}
-                  type="email"
-                  className={classes.textField}
-                  InputProps={{
-                    className: isEmailValid
-                      ? classes.input
-                      : classes.inputError,
-                    disableUnderline: true,
-                    classes: { input: classes.textArea },
-                  }}
-                  InputLabelProps={{
-                    className: classes.inputLabel,
-                  }}
-                  value={email}
-                  placeholder={t('common.email')}
-                  onChange={handleChange('email')}
-                  margin="normal"
-                  required
-                />
-              </div>
-              <TextField
-                label={t('footer.message')}
-                id="footer_message"
-                type="text"
-                InputProps={{
-                  className: isMessageValid
-                    ? classes.input
-                    : classes.inputError,
-                  disableUnderline: true,
-                  classes: { input: classes.textArea },
-                }}
-                InputLabelProps={{
-                  className: classes.inputLabel,
-                }}
-                value={message}
-                placeholder={t('footer.message')}
-                onChange={handleChange('message')}
-                margin="normal"
-                fullWidth
-                multiline
-                rows="4"
-                required
-              />
-              <Button
-                data-testid="footer_submit"
-                variant="contained"
-                color="primary"
-                className={classes.buttonSend}
-                fullWidth
-                onClick={handleSubmit}
-              >
-                {isLoading ? (
-                  <CircularProgress size={24} color="primary" />
-                ) : (
-                  t('footer.send')
-                )}
-              </Button>
-            </form>
+            <Contact />
           </div>
           <div className={classes.flexItem}>
-            <Typography className={classes.text}>
-              {t('footer.getInTouch')}
-            </Typography>
-            <div className={classes.iconContainer}>
-              <Button
-                variant="outlined"
-                className={classes.button}
-                href="https://www.facebook.com/EisbachRiders/"
-                target="_blank"
-                rel="noopener"
-              >
-                <FacebookIcon className={classes.icon} />
-              </Button>
-              <Button
-                variant="outlined"
-                className={classes.button}
-                href="https://www.instagram.com/eisbachriders/"
-                target="_blank"
-                rel="noopener"
-              >
-                <InstagramIcon className={classes.icon} />
-              </Button>
+            <div className={classes.containerInner}>
+              <div className={classes.flexItemInner}>
+                <div>
+                  <Typography className={classes.textHeading}>
+                    {t('footer.customerService')}
+                  </Typography>
+                  {/* <Link to="/payment/">
+                    <Typography className={classes.text}>
+                      {t('footer.payment')}
+                    </Typography>
+                  </Link>
+                  <Link to="/shipping/">
+                    <Typography className={classes.text}>
+                      {t('footer.shipping')}
+                    </Typography>
+                  </Link>
+                  <Link to="/returns/">
+                    <Typography className={classes.text}>
+                      {t('footer.returns')}
+                    </Typography>
+                  </Link> */}
+                  <a href="https://shop.eisbach-riders.com/payment/">
+                    <Typography className={classes.text}>
+                      {t('footer.payment')}
+                    </Typography>
+                  </a>
+                  <a href="https://shop.eisbach-riders.com/shipping/">
+                    <Typography className={classes.text}>
+                      {t('footer.shipping')}
+                    </Typography>
+                  </a>
+                  <a href="https://shop.eisbach-riders.com/returns/">
+                    <Typography className={classes.text}>
+                      {t('footer.returns')}
+                    </Typography>
+                  </a>
+                  <a href="https://shop.eisbach-riders.com/terms-and-conditions/">
+                    <Typography className={classes.text}>
+                      {t('footer.terms')}
+                    </Typography>
+                  </a>
+                </div>
+              </div>
+              <div className={classes.flexItemInner}>
+                <div>
+                  <Typography className={classes.textHeading}>
+                    {t('footer.subscribe')}
+                  </Typography>
+                  <Typography className={classes.text}>
+                    {t('footer.subscribeText')}
+                  </Typography>
+                  <Newsletter variant="small" />
+                </div>
+                <div className={classes.iconContainer}>
+                  <Button
+                    variant="outlined"
+                    className={classes.button}
+                    href="https://www.facebook.com/EisbachRiders/"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <FacebookIcon className={classes.icon} />
+                  </Button>
+                  <Button
+                    variant="outlined"
+                    className={classes.button}
+                    href="https://www.instagram.com/eisbachriders/"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <InstagramIcon className={classes.icon} />
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -397,13 +228,26 @@ function Footer() {
             className={classes.copyright}
           >
             &copy; Eisbach Riders |{' '}
-            <Link to="/legal/" className={classes.link}>
+            {/* <Link to="/legal/" className={classes.link}>
               {t('footer.imprint')}
             </Link>
             |{' '}
             <Link to="/privacy/" className={classes.link}>
               {t('footer.privacy')}
-            </Link>
+            </Link> */}
+            <a
+              href="https://shop.eisbach-riders.com/imprint/"
+              className={classes.link}
+            >
+              {t('footer.imprint')}
+            </a>
+            |{' '}
+            <a
+              href="https://shop.eisbach-riders.com/privacy/"
+              className={classes.link}
+            >
+              {t('footer.privacy')}
+            </a>
           </Typography>
         </div>
       </div>

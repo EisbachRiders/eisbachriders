@@ -34,6 +34,9 @@ const useStyles = makeStyles(theme => ({
       fontSize: 18,
     },
   },
+  buttonSm: {
+    fontSize: 12,
+  },
   snackbarError: {
     background: theme.status.red,
   },
@@ -72,7 +75,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-function Newsletter() {
+function Newsletter({ variant }) {
   const classes = useStyles()
   const { t } = useTranslation()
   const [email, setEmail] = useState('')
@@ -183,11 +186,11 @@ function Newsletter() {
       <Button
         variant="contained"
         color="primary"
-        className={classes.button}
-        fullWidth
+        className={variant === 'small' ? classes.buttonSm : classes.button}
+        fullWidth={variant === 'small' ? null : true}
         onClick={() => setDialog(true)}
       >
-        {t('newsletter.signUp')}
+        {t(variant === 'small' ? 'newsletter.newsletter' : 'newsletter.signUp')}
       </Button>
       <Dialog open={isDialogOpen} onClose={() => setDialog(false)}>
         <DialogTitle id="dialog-title">

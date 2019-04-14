@@ -65,6 +65,7 @@ module.exports = {
       },
     },
     //`gatsby-plugin-feed`,
+    'gatsby-plugin-top-layout',
     {
       resolve: 'gatsby-plugin-material-ui',
       options: {

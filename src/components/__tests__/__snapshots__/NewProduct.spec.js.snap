@@ -6,11 +6,10 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="Hook-root-o6ux9v"
-        id="products"
+        class="Hook-root-4tpnh3"
       >
         <div
-          class="Hook-swipeable-1dl19ug"
+          class="Hook-swipeable-dm2c3l"
           style="overflow-x: hidden;"
         >
           <div
@@ -23,34 +22,33 @@ Object {
               style="width: 100%; overflow: auto;"
             >
               <div
-                class="Hook-container-hjghnz"
+                class="Hook-container-tyi15w"
               >
                 <img
                   alt="newProduct.imgAlt"
-                  class="Hook-img-pb1ux8"
+                  class="Hook-img-s72kmn"
                   src="test-file-stub"
                 />
                 <div
-                  class="MuiPaper-root MuiPaper-elevation10 MuiPaper-rounded Hook-paper-hm1bzp"
+                  class="MuiPaper-root-1 MuiPaper-elevation10-13 MuiPaper-rounded-2 Hook-paper-1mqrwu0"
                 >
                   <img
                     alt="hangers"
-                    class="Hook-logo-qndciu"
+                    class="Hook-logo-o73udg"
                     src="test-file-stub"
                   />
                   <p
-                    class="MuiTypography-root MuiTypography-body2 Hook-title-pj3ctz"
+                    class="MuiTypography-root-28 MuiTypography-body1-37 Hook-title-x9r4ot"
                   >
                     Hidden Surfboard Wall Rack
                   </p>
                   <p
-                    class="MuiTypography-root MuiTypography-body2"
+                    class="MuiTypography-root-28 MuiTypography-body1-37"
                   >
                     newProduct.text_hangers
                   </p>
                   <a
-                    aria-disabled="false"
-                    class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary Hook-button-daa18a"
+                    class="MuiButtonBase-root-90 MuiButton-root-64 MuiButton-outlined-72 MuiButton-outlinedPrimary-73 Hook-button-nc4rca"
                     href="https://amzn.to/2BHjz9U"
                     rel="noopener"
                     role="button"
@@ -58,12 +56,12 @@ Object {
                     target="_blank"
                   >
                     <span
-                      class="MuiButton-label"
+                      class="MuiButton-label-65"
                     >
                       common.more
                     </span>
                     <span
-                      class="MuiTouchRipple-root"
+                      class="MuiTouchRipple-root-116"
                     />
                   </a>
                 </div>
@@ -72,21 +70,21 @@ Object {
           </div>
         </div>
         <div
-          class="MuiPaper-root MuiPaper-elevation0 MuiMobileStepper-root MuiMobileStepper-positionStatic Hook-mobileStepper-1fso5ns"
+          class="MuiPaper-root-1 MuiPaper-elevation0-3 MuiMobileStepper-root-93 MuiMobileStepper-positionStatic-96 Hook-mobileStepper-1equy9r"
         >
           <button
             aria-label="common.scrollRight"
-            class="MuiButtonBase-root MuiButtonBase-disabled MuiIconButton-root MuiIconButton-disabled MuiIconButton-sizeSmall Hook-backButton-v13497"
+            class="MuiButtonBase-root-90 MuiButtonBase-disabled-91 MuiIconButton-root-101 MuiIconButton-disabled-105 Hook-backButton-bt65j5"
             disabled=""
             tabindex="-1"
             type="button"
           >
             <span
-              class="MuiIconButton-label"
+              class="MuiIconButton-label-106"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root"
+                class="MuiSvgIcon-root-107"
                 focusable="false"
                 role="presentation"
                 viewBox="0 0 24 24"
@@ -102,27 +100,27 @@ Object {
             </span>
           </button>
           <div
-            class="MuiMobileStepper-dots"
+            class="MuiMobileStepper-dots-97"
           >
             <div
-              class="MuiMobileStepper-dot MuiMobileStepper-dotActive"
+              class="MuiMobileStepper-dot-98 MuiMobileStepper-dotActive-99"
             />
             <div
-              class="MuiMobileStepper-dot"
+              class="MuiMobileStepper-dot-98"
             />
           </div>
           <button
             aria-label="common.scrollLeft"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall Hook-nextButton-swpbdf"
+            class="MuiButtonBase-root-90 MuiIconButton-root-101 Hook-nextButton-16c57dm"
             tabindex="0"
             type="button"
           >
             <span
-              class="MuiIconButton-label"
+              class="MuiIconButton-label-106"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root"
+                class="MuiSvgIcon-root-107"
                 focusable="false"
                 role="presentation"
                 viewBox="0 0 24 24"
@@ -137,7 +135,7 @@ Object {
               </svg>
             </span>
             <span
-              class="MuiTouchRipple-root"
+              class="MuiTouchRipple-root-116"
             />
           </button>
         </div>
@@ -146,11 +144,10 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="Hook-root-o6ux9v"
-      id="products"
+      class="Hook-root-4tpnh3"
     >
       <div
-        class="Hook-swipeable-1dl19ug"
+        class="Hook-swipeable-dm2c3l"
         style="overflow-x: hidden;"
       >
         <div
@@ -163,34 +160,33 @@ Object {
             style="width: 100%; overflow: auto;"
           >
             <div
-              class="Hook-container-hjghnz"
+              class="Hook-container-tyi15w"
             >
               <img
                 alt="newProduct.imgAlt"
-                class="Hook-img-pb1ux8"
+                class="Hook-img-s72kmn"
                 src="test-file-stub"
               />
               <div
-                class="MuiPaper-root MuiPaper-elevation10 MuiPaper-rounded Hook-paper-hm1bzp"
+                class="MuiPaper-root-1 MuiPaper-elevation10-13 MuiPaper-rounded-2 Hook-paper-1mqrwu0"
               >
                 <img
                   alt="hangers"
-                  class="Hook-logo-qndciu"
+                  class="Hook-logo-o73udg"
                   src="test-file-stub"
                 />
                 <p
-                  class="MuiTypography-root MuiTypography-body2 Hook-title-pj3ctz"
+                  class="MuiTypography-root-28 MuiTypography-body1-37 Hook-title-x9r4ot"
                 >
                   Hidden Surfboard Wall Rack
                 </p>
                 <p
-                  class="MuiTypography-root MuiTypography-body2"
+                  class="MuiTypography-root-28 MuiTypography-body1-37"
                 >
                   newProduct.text_hangers
                 </p>
                 <a
-                  aria-disabled="false"
-                  class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedSecondary Hook-button-daa18a"
+                  class="MuiButtonBase-root-90 MuiButton-root-64 MuiButton-outlined-72 MuiButton-outlinedPrimary-73 Hook-button-nc4rca"
                   href="https://amzn.to/2BHjz9U"
                   rel="noopener"
                   role="button"
@@ -198,12 +194,12 @@ Object {
                   target="_blank"
                 >
                   <span
-                    class="MuiButton-label"
+                    class="MuiButton-label-65"
                   >
                     common.more
                   </span>
                   <span
-                    class="MuiTouchRipple-root"
+                    class="MuiTouchRipple-root-116"
                   />
                 </a>
               </div>
@@ -212,21 +208,21 @@ Object {
         </div>
       </div>
       <div
-        class="MuiPaper-root MuiPaper-elevation0 MuiMobileStepper-root MuiMobileStepper-positionStatic Hook-mobileStepper-1fso5ns"
+        class="MuiPaper-root-1 MuiPaper-elevation0-3 MuiMobileStepper-root-93 MuiMobileStepper-positionStatic-96 Hook-mobileStepper-1equy9r"
       >
         <button
           aria-label="common.scrollRight"
-          class="MuiButtonBase-root MuiButtonBase-disabled MuiIconButton-root MuiIconButton-disabled MuiIconButton-sizeSmall Hook-backButton-v13497"
+          class="MuiButtonBase-root-90 MuiButtonBase-disabled-91 MuiIconButton-root-101 MuiIconButton-disabled-105 Hook-backButton-bt65j5"
           disabled=""
           tabindex="-1"
           type="button"
         >
           <span
-            class="MuiIconButton-label"
+            class="MuiIconButton-label-106"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root"
+              class="MuiSvgIcon-root-107"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -242,27 +238,27 @@ Object {
           </span>
         </button>
         <div
-          class="MuiMobileStepper-dots"
+          class="MuiMobileStepper-dots-97"
         >
           <div
-            class="MuiMobileStepper-dot MuiMobileStepper-dotActive"
+            class="MuiMobileStepper-dot-98 MuiMobileStepper-dotActive-99"
           />
           <div
-            class="MuiMobileStepper-dot"
+            class="MuiMobileStepper-dot-98"
           />
         </div>
         <button
           aria-label="common.scrollLeft"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall Hook-nextButton-swpbdf"
+          class="MuiButtonBase-root-90 MuiIconButton-root-101 Hook-nextButton-16c57dm"
           tabindex="0"
           type="button"
         >
           <span
-            class="MuiIconButton-label"
+            class="MuiIconButton-label-106"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root"
+              class="MuiSvgIcon-root-107"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -277,13 +273,29 @@ Object {
             </svg>
           </span>
           <span
-            class="MuiTouchRipple-root"
+            class="MuiTouchRipple-root-116"
           />
         </button>
       </div>
     </div>
   </div>,
   "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
   "getAllByAltText": [Function],
   "getAllByDisplayValue": [Function],
   "getAllByLabelText": [Function],

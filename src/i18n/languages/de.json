@@ -18,7 +18,16 @@
     "questionsMessage": "Wenn Du Fragen zu unseren Produkten, Versand oder einfach wissen möchtest, wann und wo Du in München surfen gehen solltest, schreib uns einfach.  Wir freuen uns von Dir zu hören!",
     "getInTouch": "Du kannst uns auch auf Facebook oder Instagram folgen.",
     "imprint": "Impressum",
-    "privacy": "Datenschutz"
+    "privacy": "Datenschutz",
+    "customerService": "customer service",
+    "payment": "payment",
+    "shipping": "shipping",
+    "returns": "returns",
+    "social": "social",
+    "subscribe": "subscribe",
+    "subscribeText": "Join to get hear about our latest products and deals!",
+    "terms": "terms & conditions",
+    "conditions": "Free shipping for orders over 15 Euro within Germany 1 month unconditional exchange or refund"
   },
   "hero": {
     "subtitle": "Surf Equipment und Zubehör aus München"
@@ -87,6 +96,30 @@
   },
   "stores": {
     "sectionTitle": "More Stores"
+  },
+  "payment": {
+    "payment": "payment",
+    "paypal": "paypal",
+    "paypalText": "The easiest way to pay your order is via PayPal. During the ordering process, sign into your PayPal account and verify the payment. Your order will be processed immediately, as soon as we have received your payment, usually within 5 minutes.",
+    "wire": "wire transfer",
+    "wireText": "For payments in advance, please transfer the total amount to our bank account. As soon as the payment is received which usually takes 2-3 business days, the goods will be shipped to you. The transfer should take place within 10 days - otherwise we will have to cancel your order.",
+    "bank1": "Bankverbindung:",
+    "bank2": "Eisenhardt & Schmidt GbR",
+    "bank3": "IBAN: DE05 2013 0400 0060 0033 08",
+    "bank4": "BIC: GREBDEH1"
+  },
+  "shipping": {
+    "shipping": "shipping",
+    "conditions": "conditions",
+    "text1": "All orders above 15 Euro are free of charge within Germany. For smaller orders we charge a flat rate of 3 Euro shipping costs (including VAT). Usually we ship the orders within 24h with the Deutsche Post or Hermes. Orders above 50 Euro are shipped insured.",
+    "text2": "Outside of German and within Europe we charge an additional flat fee of 4 Euro. For other countries, please contact us. Please remember: for shipping outside the European Union, you have to take care of import tax and duty.",
+    "text3": "Please make sure that the delivery address is correct. We are not responsible for errors or misdeliveries if the delivery address is incorrect.",
+    "text4": "If you have the option to come to Munich, you can pick up your order directly from our warehouse after prior arrangement."
+  },
+  "returns": {
+    "returns": "returns",
+    "conditions": "conditions",
+    "text1": "You can return the goods within one month of receipt. The costs for the return have to payed by you."
   },
   "imprint": {
     "credits": "photo credits",
