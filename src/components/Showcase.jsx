@@ -34,6 +34,12 @@ const useStyles = makeStyles(theme => ({
       paddingLeft: 170,
       paddingRight: 170,
     },
+    [theme.breakpoints.up('xl')]: {
+      paddingTop: 90,
+      paddingBottom: 90,
+      paddingLeft: 400,
+      paddingRight: 400,
+    },
   },
   container: {
     display: 'flex',
@@ -120,8 +126,6 @@ function Showcase() {
                   variant="outlined"
                   className={classes.button}
                   href={elem.amazon}
-                  target="_blank"
-                  rel="noopener"
                 >
                   {t('common.more')}
                 </Button>

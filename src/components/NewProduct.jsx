@@ -43,6 +43,12 @@ const useStyles = makeStyles(theme => ({
       paddingLeft: 170,
       paddingRight: 170,
     },
+    [theme.breakpoints.up('xl')]: {
+      paddingTop: 90,
+      paddingBottom: 90,
+      paddingLeft: 400,
+      paddingRight: 400,
+    },
   },
   swipeable: {
     flexShrink: 'none',
@@ -130,15 +136,14 @@ function NewProduct() {
     {
       product: 'hangers',
       title: 'Hidden Surfboard Wall Rack',
-      amazon: 'https://amzn.to/2BHjz9U',
+      amazon: 'https://shop.eisbach-riders.com/product/surfboard-wall-rack/',
       img: img_hangers,
       logo: logo_hangers,
     },
     {
       product: 'wax',
       title: 'Bee Swell Surf Wax',
-      amazon:
-        'https://www.ebay.de/itm/2x-Handmade-Surf-Wax-Set-base-cold-Okologisch-Surfwachs-aus-Bienenwachs-/183732325309',
+      amazon: 'https://shop.eisbach-riders.com/product/handmade-surf-wax/',
       img: img_wax,
       logo: logo_wax,
     },
@@ -173,8 +178,6 @@ function NewProduct() {
                 variant="outlined"
                 className={classnames(classes.button)}
                 href={elem.amazon}
-                target="_blank"
-                rel="noopener"
               >
                 {t('common.more')}
               </Button>

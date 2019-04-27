@@ -66,12 +66,6 @@ module.exports = {
     },
     //`gatsby-plugin-feed`,
     {
-      resolve: 'gatsby-plugin-material-ui',
-      options: {
-        pathToTheme: `${__dirname}/src/assets/theme/muiTheme`,
-      },
-    },
-    {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
         endpoint: process.env.MAILCHIMP,
@@ -88,6 +82,10 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/assets/logos/icon-192.png`,
       },
+    },
+    'gatsby-plugin-top-layout',
+    {
+      resolve: 'gatsby-plugin-material-ui',
     },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,

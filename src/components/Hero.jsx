@@ -18,6 +18,9 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('md')]: {
       height: 700,
     },
+    [theme.breakpoints.up('xl')]: {
+      height: 1000,
+    },
   },
   container: {
     paddingTop: 100,
@@ -37,6 +40,10 @@ const useStyles = makeStyles(theme => ({
       paddingLeft: 250,
       paddingTop: 200,
     },
+    [theme.breakpoints.up('xl')]: {
+      paddingLeft: 500,
+      paddingTop: 350,
+    },
   },
   img: {
     zIndex: -5,
@@ -49,6 +56,9 @@ const useStyles = makeStyles(theme => ({
     },
     [theme.breakpoints.up('md')]: {
       height: 700,
+    },
+    [theme.breakpoints.up('xl')]: {
+      height: 1000,
     },
   },
   text: {

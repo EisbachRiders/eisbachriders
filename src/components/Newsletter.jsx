@@ -34,6 +34,9 @@ const useStyles = makeStyles(theme => ({
       fontSize: 18,
     },
   },
+  buttonSm: {
+    fontSize: 12,
+  },
   snackbarError: {
     background: theme.status.red,
   },
@@ -72,7 +75,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-function Newsletter() {
+function Newsletter({ variant }) {
   const classes = useStyles()
   const { t } = useTranslation()
   const [email, setEmail] = useState('')
@@ -84,6 +87,7 @@ function Newsletter() {
   const [isSnackbarOpen, setSnackbar] = useState(false)
   const [snackbarMessage, setSnackbarMessage] = useState(false)
   const [error, setError] = useState(false)
+  const pattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
 
   const handleSubmit = async e => {
     if (isCheckboxOpen && isEmailValid && isNameValid) {
@@ -91,7 +95,7 @@ function Newsletter() {
         FNAME: name,
         gdpr_26529: true,
       })
-      handleDialogClose
+      setDialog(false)
       if (result.result === 'error') {
         setSnackbar(true)
         setSnackbarMessage(
@@ -116,7 +120,7 @@ function Newsletter() {
     }
   }
 
-  const handleSnackbarClose = (event, reason) => {
+  const handleSnackbarClose = (e, reason) => {
     if (reason === 'clickaway') {
       return
     }
@@ -131,16 +135,14 @@ function Newsletter() {
       } else {
         setEmailValid(true)
       }
-    }
-    if (name === 'name') {
+    } else if (name === 'name') {
       if (event.target.value.length > 500) {
         setNameValid(false)
       } else {
         setNameValid(true)
         setName(event.target.value)
       }
-    }
-    if ((name = 'checkbox')) {
+    } else if ((name = 'checkbox')) {
       setCheckbox(event.target.checked)
     }
   }
@@ -184,11 +186,11 @@ function Newsletter() {
       <Button
         variant="contained"
         color="primary"
-        className={classes.button}
-        fullWidth
+        className={variant === 'small' ? classes.buttonSm : classes.button}
+        fullWidth={variant === 'small' ? null : true}
         onClick={() => setDialog(true)}
       >
-        {t('newsletter.signUp')}
+        {t(variant === 'small' ? 'newsletter.newsletter' : 'newsletter.signUp')}
       </Button>
       <Dialog open={isDialogOpen} onClose={() => setDialog(false)}>
         <DialogTitle id="dialog-title">
@@ -212,7 +214,7 @@ function Newsletter() {
               error={isEmailValid === null ? null : !isEmailValid}
               placeholder={t('common.email')}
               value={email}
-              onChange={() => handleChange('email')}
+              onChange={handleChange('email')}
               className={classes.textField}
               margin="normal"
               variant="outlined"
@@ -225,7 +227,7 @@ function Newsletter() {
               error={isNameValid === null ? null : !isNameValid}
               placeholder={t('common.name')}
               value={name}
-              onChange={() => handleChange('name')}
+              onChange={handleChange('name')}
               className={classes.textField}
               margin="normal"
               variant="outlined"
@@ -239,7 +241,7 @@ function Newsletter() {
               control={
                 <Checkbox
                   checked={isCheckboxOpen}
-                  onChange={() => handleChange('checkbox')}
+                  onChange={handleChange('checkbox')}
                   className={error ? classes.error : null}
                   value="consent"
                   color="primary"
@@ -256,16 +258,16 @@ function Newsletter() {
         <DialogActions className={classes.dialogActions}>
           <Button
             onClick={() => setDialog(false)}
-            color="primary"
             className={classes.actionButton}
           >
             {t('common.cancel')}
           </Button>
           <Button
             data-testid="submit"
-            onClick={() => handleSubmit}
+            onClick={handleSubmit}
             className={classes.actionButton}
             color="primary"
+            variant="contained"
             autoFocus
             type="submit"
           >

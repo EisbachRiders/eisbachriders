@@ -8,17 +8,16 @@ import { ThemeProvider } from '@material-ui/styles'
 import theme from '../../../assets/theme/muiTheme'
 
 describe('Product', () => {
-  const mockProps = {
-    product: {
-      images: [{ src: '' }],
-    },
-  }
   it('renders correctly', () => {
-    const store = createStore(reducer, { product: null })
+    const store = createStore(reducer, {
+      product: {
+        images: [{ src: '' }],
+      },
+    })
     const component = render(
       <Provider store={store}>
         <ThemeProvider theme={theme}>
-          <Product {...mockProps} />
+          <Product />
         </ThemeProvider>
       </Provider>
     )

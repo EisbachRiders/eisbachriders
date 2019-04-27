@@ -6,16 +6,16 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="Hook-container-6t7not"
+        class="Hook-container-uo3ybq"
         id="legal"
       >
         <h5
-          class="MuiTypography-root MuiTypography-h5 Hook-title-j4ku9t"
+          class="MuiTypography-root-1 MuiTypography-h5-17 Hook-title-1j3kb4i"
         >
           imprint.imprint
         </h5>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           Eisbach Riders 
           <br />
@@ -29,19 +29,19 @@ Object {
           <br />
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           Tel.: 0176/69019542 
           <br />
           E-Mail: business@eisbach-riders.com
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           Vertretungsberechtigte Gesellschafter: Robin Eisenhardt, Michael Schmidt
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz: DE 320071401 Plattform der EU-Kommission zur 
           <br />
@@ -55,247 +55,247 @@ Object {
           Wir sind zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle weder verpflichtet noch bereit.
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           Verantwortliche/r i.S.d. § 55 Abs. 2 RStV: Robin Eisenhardt, Michael Schmidt, Lothstr. 72, 80797, München
         </p>
         <h6
-          class="MuiTypography-root MuiTypography-h6 Hook-title-j4ku9t"
+          class="MuiTypography-root-1 MuiTypography-h6-18 Hook-title-1j3kb4i"
         >
           imprint.terms
         </h6>
         <h6
-          class="MuiTypography-root MuiTypography-subtitle1"
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
         >
           imprint.title1
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms1_1
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms1_2
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms1_3
         </p>
         <h6
-          class="MuiTypography-root MuiTypography-subtitle1"
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
         >
           imprint.title2
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms2_1
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms2_2
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms2_3
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms2_4
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms2_5
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms2_6
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms2_7
         </p>
         <h6
-          class="MuiTypography-root MuiTypography-subtitle1"
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
         >
           imprint.title3
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms3_1
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms3_2
         </p>
         <h6
-          class="MuiTypography-root MuiTypography-subtitle1"
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
         >
           imprint.title4
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms4_1
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms4_2
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms4_3
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms4_4
         </p>
         <h6
-          class="MuiTypography-root MuiTypography-subtitle1"
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
         >
           imprint.title5
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms5_1
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms5_2
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms5_3
         </p>
         <h6
-          class="MuiTypography-root MuiTypography-subtitle1"
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
         >
           imprint.title6
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms6_1
         </p>
         <h6
-          class="MuiTypography-root MuiTypography-subtitle1"
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
         >
           imprint.title7
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms7_1
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms7_2
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms7_3
         </p>
         <h6
-          class="MuiTypography-root MuiTypography-subtitle1"
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
         >
           imprint.title8
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms8_1
         </p>
         <h6
-          class="MuiTypography-root MuiTypography-subtitle1"
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
         >
           imprint.title9
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms9_1
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms9_2
         </p>
         <h6
-          class="MuiTypography-root MuiTypography-h6 Hook-title-j4ku9t"
+          class="MuiTypography-root-1 MuiTypography-h6-18 Hook-title-1j3kb4i"
         >
           imprint.title10
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms10_1
         </p>
         <h6
-          class="MuiTypography-root MuiTypography-subtitle1"
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
         >
           imprint.title11
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms11_1
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms11_2
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms11_3
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms11_4
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms11_5
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms11_6
         </p>
         <h6
-          class="MuiTypography-root MuiTypography-subtitle1"
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
         >
           imprint.title12
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms12_1
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           Eisbach Riders 
           <br />
@@ -310,12 +310,12 @@ Object {
           E-Mail: business@eisbach-riders.com
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
         >
           imprint.terms12_2
         </p>
         <h5
-          class="MuiTypography-root MuiTypography-h5 Hook-title-j4ku9t"
+          class="MuiTypography-root-1 MuiTypography-h5-17 Hook-title-1j3kb4i"
         >
           imprint.credits
         </h5>
@@ -440,16 +440,16 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="Hook-container-6t7not"
+      class="Hook-container-uo3ybq"
       id="legal"
     >
       <h5
-        class="MuiTypography-root MuiTypography-h5 Hook-title-j4ku9t"
+        class="MuiTypography-root-1 MuiTypography-h5-17 Hook-title-1j3kb4i"
       >
         imprint.imprint
       </h5>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         Eisbach Riders 
         <br />
@@ -463,19 +463,19 @@ Object {
         <br />
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         Tel.: 0176/69019542 
         <br />
         E-Mail: business@eisbach-riders.com
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         Vertretungsberechtigte Gesellschafter: Robin Eisenhardt, Michael Schmidt
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz: DE 320071401 Plattform der EU-Kommission zur 
         <br />
@@ -489,247 +489,247 @@ Object {
         Wir sind zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle weder verpflichtet noch bereit.
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         Verantwortliche/r i.S.d. § 55 Abs. 2 RStV: Robin Eisenhardt, Michael Schmidt, Lothstr. 72, 80797, München
       </p>
       <h6
-        class="MuiTypography-root MuiTypography-h6 Hook-title-j4ku9t"
+        class="MuiTypography-root-1 MuiTypography-h6-18 Hook-title-1j3kb4i"
       >
         imprint.terms
       </h6>
       <h6
-        class="MuiTypography-root MuiTypography-subtitle1"
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
       >
         imprint.title1
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms1_1
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms1_2
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms1_3
       </p>
       <h6
-        class="MuiTypography-root MuiTypography-subtitle1"
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
       >
         imprint.title2
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms2_1
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms2_2
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms2_3
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms2_4
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms2_5
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms2_6
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms2_7
       </p>
       <h6
-        class="MuiTypography-root MuiTypography-subtitle1"
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
       >
         imprint.title3
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms3_1
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms3_2
       </p>
       <h6
-        class="MuiTypography-root MuiTypography-subtitle1"
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
       >
         imprint.title4
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms4_1
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms4_2
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms4_3
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms4_4
       </p>
       <h6
-        class="MuiTypography-root MuiTypography-subtitle1"
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
       >
         imprint.title5
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms5_1
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms5_2
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms5_3
       </p>
       <h6
-        class="MuiTypography-root MuiTypography-subtitle1"
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
       >
         imprint.title6
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms6_1
       </p>
       <h6
-        class="MuiTypography-root MuiTypography-subtitle1"
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
       >
         imprint.title7
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms7_1
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms7_2
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms7_3
       </p>
       <h6
-        class="MuiTypography-root MuiTypography-subtitle1"
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
       >
         imprint.title8
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms8_1
       </p>
       <h6
-        class="MuiTypography-root MuiTypography-subtitle1"
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
       >
         imprint.title9
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms9_1
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms9_2
       </p>
       <h6
-        class="MuiTypography-root MuiTypography-h6 Hook-title-j4ku9t"
+        class="MuiTypography-root-1 MuiTypography-h6-18 Hook-title-1j3kb4i"
       >
         imprint.title10
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms10_1
       </p>
       <h6
-        class="MuiTypography-root MuiTypography-subtitle1"
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
       >
         imprint.title11
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms11_1
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms11_2
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms11_3
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms11_4
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms11_5
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms11_6
       </p>
       <h6
-        class="MuiTypography-root MuiTypography-subtitle1"
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
       >
         imprint.title12
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms12_1
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         Eisbach Riders 
         <br />
@@ -744,12 +744,12 @@ Object {
         E-Mail: business@eisbach-riders.com
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-qkvoh6"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-rljeht"
       >
         imprint.terms12_2
       </p>
       <h5
-        class="MuiTypography-root MuiTypography-h5 Hook-title-j4ku9t"
+        class="MuiTypography-root-1 MuiTypography-h5-17 Hook-title-1j3kb4i"
       >
         imprint.credits
       </h5>
@@ -872,6 +872,22 @@ Object {
     </div>
   </div>,
   "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
   "getAllByAltText": [Function],
   "getAllByDisplayValue": [Function],
   "getAllByLabelText": [Function],

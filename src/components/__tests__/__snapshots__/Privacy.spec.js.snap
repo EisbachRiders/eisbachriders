@@ -6,133 +6,133 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="Hook-container-6t7not"
+        class="Hook-container-uo3ybq"
         id="privacy"
       >
         <h6
-          class="MuiTypography-root MuiTypography-h6 Hook-title-bg1qsl"
+          class="MuiTypography-root-1 MuiTypography-h6-18 Hook-title-28my3u"
         >
           privacy.privacy
         </h6>
         <h6
-          class="MuiTypography-root MuiTypography-subtitle1"
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
         >
           privacy.title1
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
         >
           privacy.terms1_1
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
         >
           privacy.terms1_2
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
         >
           privacy.terms1_3
         </p>
         <h6
-          class="MuiTypography-root MuiTypography-subtitle1"
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
         >
           privacy.title2
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
         >
           privacy.terms2_1
         </p>
         <ul
-          class="MuiList-root MuiList-padding"
+          class="MuiList-root-37 MuiList-padding-38"
         >
           <li
-            class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
           >
             <div
-              class="MuiListItemText-root"
+              class="MuiListItemText-root-53"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
               >
                 privacy.terms2_list1
               </span>
             </div>
           </li>
           <li
-            class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
           >
             <div
-              class="MuiListItemText-root"
+              class="MuiListItemText-root-53"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
               >
                 privacy.terms2_list2
               </span>
             </div>
           </li>
           <li
-            class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
           >
             <div
-              class="MuiListItemText-root"
+              class="MuiListItemText-root-53"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
               >
                 privacy.terms2_list3
               </span>
             </div>
           </li>
           <li
-            class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
           >
             <div
-              class="MuiListItemText-root"
+              class="MuiListItemText-root-53"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
               >
                 privacy.terms2_list4
               </span>
             </div>
           </li>
           <li
-            class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
           >
             <div
-              class="MuiListItemText-root"
+              class="MuiListItemText-root-53"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
               >
                 privacy.terms2_list5
               </span>
             </div>
           </li>
           <li
-            class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
           >
             <div
-              class="MuiListItemText-root"
+              class="MuiListItemText-root-53"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
               >
                 privacy.terms2_list6
               </span>
             </div>
           </li>
           <li
-            class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
           >
             <div
-              class="MuiListItemText-root"
+              class="MuiListItemText-root-53"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
               >
                 privacy.terms2_list7
               </span>
@@ -140,98 +140,98 @@ Object {
           </li>
         </ul>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
         >
           privacy.terms2_2
         </p>
         <h6
-          class="MuiTypography-root MuiTypography-subtitle1"
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
         >
           privacy.title3
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
         >
           privacy.terms3_1
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
         >
           privacy.terms3_2
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
         >
           privacy.terms3_3
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
         >
           privacy.terms3_4
         </p>
         <ul
-          class="MuiList-root MuiList-padding"
+          class="MuiList-root-37 MuiList-padding-38"
         >
           <li
-            class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
           >
             <div
-              class="MuiListItemText-root"
+              class="MuiListItemText-root-53"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
               >
                 - Internet Explorer: https://support.microsoft.com/en-us/help/17442/windows-internet-explorer-delete-manage-cookies 
               </span>
             </div>
           </li>
           <li
-            class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
           >
             <div
-              class="MuiListItemText-root"
+              class="MuiListItemText-root-53"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
               >
                 - Firefox: https://www.mozilla.org/en-US/privacy/websites/#cookies 
               </span>
             </div>
           </li>
           <li
-            class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
           >
             <div
-              class="MuiListItemText-root"
+              class="MuiListItemText-root-53"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
               >
                 - Chrome: https://support.google.com/accounts/answer/61416?co=GENIE.Platform%3DDesktop&hl=en 
               </span>
             </div>
           </li>
           <li
-            class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
           >
             <div
-              class="MuiListItemText-root"
+              class="MuiListItemText-root-53"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
               >
                 - Safari: https://support.apple.com/en-gb/guide/safari/manage-cookies-and-website-data-sfri11471/mac 
               </span>
             </div>
           </li>
           <li
-            class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
           >
             <div
-              class="MuiListItemText-root"
+              class="MuiListItemText-root-53"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
               >
                 - Opera: https://help.opera.com/en/latest/web-preferences/#cookies 
               </span>
@@ -239,130 +239,130 @@ Object {
           </li>
         </ul>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
         >
           privacy.terms3_5
         </p>
         <h6
-          class="MuiTypography-root MuiTypography-subtitle1"
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
         >
           privacy.title4
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
         >
           privacy.terms4_1
         </p>
         <h6
-          class="MuiTypography-root MuiTypography-subtitle1"
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
         >
           privacy.title5
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
         >
           privacy.terms5_1
         </p>
         <h6
-          class="MuiTypography-root MuiTypography-subtitle1"
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
         >
           privacy.title6
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
         >
           privacy.terms6_1
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
         >
           privacy.terms6_2
         </p>
         <h6
-          class="MuiTypography-root MuiTypography-subtitle1"
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
         >
           privacy.title7
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
         >
           privacy.terms7_1
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
         >
           privacy.terms7_2
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
         >
           privacy.terms7_3
         </p>
         <h6
-          class="MuiTypography-root MuiTypography-subtitle1"
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
         >
           privacy.title8
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
         >
           privacy.terms8_1
         </p>
         <a
-          class="Hook-link-18x7wnv"
+          class="Hook-link-15pf6ti"
           href="javascript:gaOptout()"
         >
           privacy.terms8_3
         </a>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
         >
           privacy.terms8_4
         </p>
         <h6
-          class="MuiTypography-root MuiTypography-subtitle1"
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
         >
           privacy.title9
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
         >
           privacy.terms9_1
         </p>
         <h6
-          class="MuiTypography-root MuiTypography-subtitle1"
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
         >
           privacy.title10
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
         >
           privacy.terms10_1
         </p>
         <ul
-          class="MuiList-root MuiList-padding"
+          class="MuiList-root-37 MuiList-padding-38"
         >
           <li
-            class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
           >
             <div
-              class="MuiListItemText-root"
+              class="MuiListItemText-root-53"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
               >
                 privacy.terms10_list1
               </span>
             </div>
           </li>
           <li
-            class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
           >
             <div
-              class="MuiListItemText-root"
+              class="MuiListItemText-root-53"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
               >
                 privacy.terms10_list2
               </span>
@@ -370,13 +370,13 @@ Object {
              
           </li>
           <li
-            class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
           >
             <div
-              class="MuiListItemText-root"
+              class="MuiListItemText-root-53"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
               >
                 privacy.terms10_list3
               </span>
@@ -384,13 +384,13 @@ Object {
              
           </li>
           <li
-            class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
           >
             <div
-              class="MuiListItemText-root"
+              class="MuiListItemText-root-53"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
               >
                 privacy.terms10_list4
               </span>
@@ -398,13 +398,13 @@ Object {
              
           </li>
           <li
-            class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
           >
             <div
-              class="MuiListItemText-root"
+              class="MuiListItemText-root-53"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
               >
                 privacy.terms10_list5
               </span>
@@ -412,13 +412,13 @@ Object {
              
           </li>
           <li
-            class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
           >
             <div
-              class="MuiListItemText-root"
+              class="MuiListItemText-root-53"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
               >
                 privacy.terms10_list6
               </span>
@@ -426,13 +426,13 @@ Object {
              
           </li>
           <li
-            class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
           >
             <div
-              class="MuiListItemText-root"
+              class="MuiListItemText-root-53"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
               >
                 privacy.terms10_list7
               </span>
@@ -440,13 +440,13 @@ Object {
              
           </li>
           <li
-            class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+            class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
           >
             <div
-              class="MuiListItemText-root"
+              class="MuiListItemText-root-53"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+                class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
               >
                 privacy.terms10_list8
               </span>
@@ -455,22 +455,22 @@ Object {
           </li>
         </ul>
         <h6
-          class="MuiTypography-root MuiTypography-subtitle1"
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
         >
           privacy.title10_2
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
         >
           privacy.terms10_2
         </p>
         <h6
-          class="MuiTypography-root MuiTypography-subtitle1"
+          class="MuiTypography-root-1 MuiTypography-subtitle1-19"
         >
           privacy.title11
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
         >
           privacy.terms11_1
         </p>
@@ -479,133 +479,133 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="Hook-container-6t7not"
+      class="Hook-container-uo3ybq"
       id="privacy"
     >
       <h6
-        class="MuiTypography-root MuiTypography-h6 Hook-title-bg1qsl"
+        class="MuiTypography-root-1 MuiTypography-h6-18 Hook-title-28my3u"
       >
         privacy.privacy
       </h6>
       <h6
-        class="MuiTypography-root MuiTypography-subtitle1"
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
       >
         privacy.title1
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
       >
         privacy.terms1_1
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
       >
         privacy.terms1_2
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
       >
         privacy.terms1_3
       </p>
       <h6
-        class="MuiTypography-root MuiTypography-subtitle1"
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
       >
         privacy.title2
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
       >
         privacy.terms2_1
       </p>
       <ul
-        class="MuiList-root MuiList-padding"
+        class="MuiList-root-37 MuiList-padding-38"
       >
         <li
-          class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
         >
           <div
-            class="MuiListItemText-root"
+            class="MuiListItemText-root-53"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
             >
               privacy.terms2_list1
             </span>
           </div>
         </li>
         <li
-          class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
         >
           <div
-            class="MuiListItemText-root"
+            class="MuiListItemText-root-53"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
             >
               privacy.terms2_list2
             </span>
           </div>
         </li>
         <li
-          class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
         >
           <div
-            class="MuiListItemText-root"
+            class="MuiListItemText-root-53"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
             >
               privacy.terms2_list3
             </span>
           </div>
         </li>
         <li
-          class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
         >
           <div
-            class="MuiListItemText-root"
+            class="MuiListItemText-root-53"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
             >
               privacy.terms2_list4
             </span>
           </div>
         </li>
         <li
-          class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
         >
           <div
-            class="MuiListItemText-root"
+            class="MuiListItemText-root-53"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
             >
               privacy.terms2_list5
             </span>
           </div>
         </li>
         <li
-          class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
         >
           <div
-            class="MuiListItemText-root"
+            class="MuiListItemText-root-53"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
             >
               privacy.terms2_list6
             </span>
           </div>
         </li>
         <li
-          class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
         >
           <div
-            class="MuiListItemText-root"
+            class="MuiListItemText-root-53"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
             >
               privacy.terms2_list7
             </span>
@@ -613,98 +613,98 @@ Object {
         </li>
       </ul>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
       >
         privacy.terms2_2
       </p>
       <h6
-        class="MuiTypography-root MuiTypography-subtitle1"
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
       >
         privacy.title3
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
       >
         privacy.terms3_1
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
       >
         privacy.terms3_2
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
       >
         privacy.terms3_3
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
       >
         privacy.terms3_4
       </p>
       <ul
-        class="MuiList-root MuiList-padding"
+        class="MuiList-root-37 MuiList-padding-38"
       >
         <li
-          class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
         >
           <div
-            class="MuiListItemText-root"
+            class="MuiListItemText-root-53"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
             >
               - Internet Explorer: https://support.microsoft.com/en-us/help/17442/windows-internet-explorer-delete-manage-cookies 
             </span>
           </div>
         </li>
         <li
-          class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
         >
           <div
-            class="MuiListItemText-root"
+            class="MuiListItemText-root-53"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
             >
               - Firefox: https://www.mozilla.org/en-US/privacy/websites/#cookies 
             </span>
           </div>
         </li>
         <li
-          class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
         >
           <div
-            class="MuiListItemText-root"
+            class="MuiListItemText-root-53"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
             >
               - Chrome: https://support.google.com/accounts/answer/61416?co=GENIE.Platform%3DDesktop&hl=en 
             </span>
           </div>
         </li>
         <li
-          class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
         >
           <div
-            class="MuiListItemText-root"
+            class="MuiListItemText-root-53"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
             >
               - Safari: https://support.apple.com/en-gb/guide/safari/manage-cookies-and-website-data-sfri11471/mac 
             </span>
           </div>
         </li>
         <li
-          class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
         >
           <div
-            class="MuiListItemText-root"
+            class="MuiListItemText-root-53"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
             >
               - Opera: https://help.opera.com/en/latest/web-preferences/#cookies 
             </span>
@@ -712,130 +712,130 @@ Object {
         </li>
       </ul>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
       >
         privacy.terms3_5
       </p>
       <h6
-        class="MuiTypography-root MuiTypography-subtitle1"
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
       >
         privacy.title4
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
       >
         privacy.terms4_1
       </p>
       <h6
-        class="MuiTypography-root MuiTypography-subtitle1"
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
       >
         privacy.title5
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
       >
         privacy.terms5_1
       </p>
       <h6
-        class="MuiTypography-root MuiTypography-subtitle1"
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
       >
         privacy.title6
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
       >
         privacy.terms6_1
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
       >
         privacy.terms6_2
       </p>
       <h6
-        class="MuiTypography-root MuiTypography-subtitle1"
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
       >
         privacy.title7
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
       >
         privacy.terms7_1
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
       >
         privacy.terms7_2
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
       >
         privacy.terms7_3
       </p>
       <h6
-        class="MuiTypography-root MuiTypography-subtitle1"
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
       >
         privacy.title8
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
       >
         privacy.terms8_1
       </p>
       <a
-        class="Hook-link-18x7wnv"
+        class="Hook-link-15pf6ti"
         href="javascript:gaOptout()"
       >
         privacy.terms8_3
       </a>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
       >
         privacy.terms8_4
       </p>
       <h6
-        class="MuiTypography-root MuiTypography-subtitle1"
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
       >
         privacy.title9
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
       >
         privacy.terms9_1
       </p>
       <h6
-        class="MuiTypography-root MuiTypography-subtitle1"
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
       >
         privacy.title10
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
       >
         privacy.terms10_1
       </p>
       <ul
-        class="MuiList-root MuiList-padding"
+        class="MuiList-root-37 MuiList-padding-38"
       >
         <li
-          class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
         >
           <div
-            class="MuiListItemText-root"
+            class="MuiListItemText-root-53"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
             >
               privacy.terms10_list1
             </span>
           </div>
         </li>
         <li
-          class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
         >
           <div
-            class="MuiListItemText-root"
+            class="MuiListItemText-root-53"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
             >
               privacy.terms10_list2
             </span>
@@ -843,13 +843,13 @@ Object {
            
         </li>
         <li
-          class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
         >
           <div
-            class="MuiListItemText-root"
+            class="MuiListItemText-root-53"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
             >
               privacy.terms10_list3
             </span>
@@ -857,13 +857,13 @@ Object {
            
         </li>
         <li
-          class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
         >
           <div
-            class="MuiListItemText-root"
+            class="MuiListItemText-root-53"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
             >
               privacy.terms10_list4
             </span>
@@ -871,13 +871,13 @@ Object {
            
         </li>
         <li
-          class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
         >
           <div
-            class="MuiListItemText-root"
+            class="MuiListItemText-root-53"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
             >
               privacy.terms10_list5
             </span>
@@ -885,13 +885,13 @@ Object {
            
         </li>
         <li
-          class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
         >
           <div
-            class="MuiListItemText-root"
+            class="MuiListItemText-root-53"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
             >
               privacy.terms10_list6
             </span>
@@ -899,13 +899,13 @@ Object {
            
         </li>
         <li
-          class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
         >
           <div
-            class="MuiListItemText-root"
+            class="MuiListItemText-root-53"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
             >
               privacy.terms10_list7
             </span>
@@ -913,13 +913,13 @@ Object {
            
         </li>
         <li
-          class="MuiListItem-root MuiListItem-default MuiListItem-gutters Hook-listItem-1x3y02u"
+          class="MuiListItem-root-41 MuiListItem-default-44 MuiListItem-gutters-49 Hook-listItem-rsrmds"
         >
           <div
-            class="MuiListItemText-root"
+            class="MuiListItemText-root-53"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary Hook-text-1nwld9l"
+              class="MuiTypography-root-1 MuiTypography-subheading-8 MuiListItemText-primary-56 Hook-text-jdjt5f"
             >
               privacy.terms10_list8
             </span>
@@ -928,28 +928,44 @@ Object {
         </li>
       </ul>
       <h6
-        class="MuiTypography-root MuiTypography-subtitle1"
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
       >
         privacy.title10_2
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
       >
         privacy.terms10_2
       </p>
       <h6
-        class="MuiTypography-root MuiTypography-subtitle1"
+        class="MuiTypography-root-1 MuiTypography-subtitle1-19"
       >
         privacy.title11
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body2 Hook-text-1nwld9l"
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-jdjt5f"
       >
         privacy.terms11_1
       </p>
     </div>
   </div>,
   "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
   "getAllByAltText": [Function],
   "getAllByDisplayValue": [Function],
   "getAllByLabelText": [Function],

@@ -7,19 +7,19 @@ Object {
     <div>
       <div
         aria-describedby="client-snackbar"
-        class="MuiTypography-root MuiTypography-body2 MuiPaper-root MuiPaper-elevation6 MuiSnackbarContent-root Hook-success-1o79v0v"
+        class="MuiTypography-root-31 MuiTypography-body1-40 MuiPaper-root-4 MuiPaper-elevation6-12 MuiSnackbarContent-root-1 Hook-success-g4r5jr"
         role="alertdialog"
       >
         <div
-          class="MuiSnackbarContent-message"
+          class="MuiSnackbarContent-message-2"
         >
           <span
-            class="Hook-message-109ohgv"
+            class="Hook-message-1v13ai5"
             id="client-snackbar"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root Hook-icon-12d0k9r Hook-iconVariant-1lq9g6t"
+              class="MuiSvgIcon-root-67 Hook-icon-m363rg Hook-iconVariant-1rwfjsj"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -35,20 +35,20 @@ Object {
           </span>
         </div>
         <div
-          class="MuiSnackbarContent-action"
+          class="MuiSnackbarContent-action-3"
         >
           <button
             aria-label="Close"
-            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit"
+            class="MuiButtonBase-root-82 MuiIconButton-root-76 MuiIconButton-colorInherit-77"
             tabindex="0"
             type="button"
           >
             <span
-              class="MuiIconButton-label"
+              class="MuiIconButton-label-81"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root Hook-icon-12d0k9r"
+                class="MuiSvgIcon-root-67 Hook-icon-m363rg"
                 focusable="false"
                 role="presentation"
                 viewBox="0 0 24 24"
@@ -63,7 +63,7 @@ Object {
               </svg>
             </span>
             <span
-              class="MuiTouchRipple-root"
+              class="MuiTouchRipple-root-85"
             />
           </button>
         </div>
@@ -73,19 +73,19 @@ Object {
   "container": <div>
     <div
       aria-describedby="client-snackbar"
-      class="MuiTypography-root MuiTypography-body2 MuiPaper-root MuiPaper-elevation6 MuiSnackbarContent-root Hook-success-1o79v0v"
+      class="MuiTypography-root-31 MuiTypography-body1-40 MuiPaper-root-4 MuiPaper-elevation6-12 MuiSnackbarContent-root-1 Hook-success-g4r5jr"
       role="alertdialog"
     >
       <div
-        class="MuiSnackbarContent-message"
+        class="MuiSnackbarContent-message-2"
       >
         <span
-          class="Hook-message-109ohgv"
+          class="Hook-message-1v13ai5"
           id="client-snackbar"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root Hook-icon-12d0k9r Hook-iconVariant-1lq9g6t"
+            class="MuiSvgIcon-root-67 Hook-icon-m363rg Hook-iconVariant-1rwfjsj"
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"
@@ -101,20 +101,20 @@ Object {
         </span>
       </div>
       <div
-        class="MuiSnackbarContent-action"
+        class="MuiSnackbarContent-action-3"
       >
         <button
           aria-label="Close"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit"
+          class="MuiButtonBase-root-82 MuiIconButton-root-76 MuiIconButton-colorInherit-77"
           tabindex="0"
           type="button"
         >
           <span
-            class="MuiIconButton-label"
+            class="MuiIconButton-label-81"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root Hook-icon-12d0k9r"
+              class="MuiSvgIcon-root-67 Hook-icon-m363rg"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -129,13 +129,29 @@ Object {
             </svg>
           </span>
           <span
-            class="MuiTouchRipple-root"
+            class="MuiTouchRipple-root-85"
           />
         </button>
       </div>
     </div>
   </div>,
   "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
   "getAllByAltText": [Function],
   "getAllByDisplayValue": [Function],
   "getAllByLabelText": [Function],

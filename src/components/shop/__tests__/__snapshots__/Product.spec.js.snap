@@ -1,48 +1,68 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Newsletter renders correctly 1`] = `
+exports[`Product renders correctly 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
-        class="Hook-containerNewsletter-1aq479i"
+        class="Hook-root-go6127"
       >
-        <button
-          class="MuiButtonBase-root-34 MuiButton-root-8 MuiButton-contained-19 MuiButton-containedPrimary-20 MuiButton-raised-22 MuiButton-raisedPrimary-23 MuiButton-fullWidth-33 Hook-button-1j9lk2z"
-          tabindex="0"
-          type="button"
+        <img
+          class="Hook-img-cai670"
+          src=""
+        />
+        <div
+          class="Hook-descriptionContainer-1tsden"
         >
-          <span
-            class="MuiButton-label-9"
-          >
-            newsletter.signUp
-          </span>
-          <span
-            class="MuiTouchRipple-root-53"
+          <p
+            class="MuiTypography-root-1 MuiTypography-body1-10"
           />
-        </button>
+          <div
+            class="Hook-fullWidth-t3yivt"
+          >
+            <div
+              class="Hook-priceContainer-11bofz3"
+            >
+              <h6
+                class="MuiTypography-root-1 MuiTypography-h6-18 Hook-price-6knxjf"
+              >
+                €undefined
+              </h6>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="Hook-containerNewsletter-1aq479i"
+      class="Hook-root-go6127"
     >
-      <button
-        class="MuiButtonBase-root-34 MuiButton-root-8 MuiButton-contained-19 MuiButton-containedPrimary-20 MuiButton-raised-22 MuiButton-raisedPrimary-23 MuiButton-fullWidth-33 Hook-button-1j9lk2z"
-        tabindex="0"
-        type="button"
+      <img
+        class="Hook-img-cai670"
+        src=""
+      />
+      <div
+        class="Hook-descriptionContainer-1tsden"
       >
-        <span
-          class="MuiButton-label-9"
-        >
-          newsletter.signUp
-        </span>
-        <span
-          class="MuiTouchRipple-root-53"
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10"
         />
-      </button>
+        <div
+          class="Hook-fullWidth-t3yivt"
+        >
+          <div
+            class="Hook-priceContainer-11bofz3"
+          >
+            <h6
+              class="MuiTypography-root-1 MuiTypography-h6-18 Hook-price-6knxjf"
+            >
+              €undefined
+            </h6>
+          </div>
+        </div>
+      </div>
     </div>
   </div>,
   "debug": [Function],

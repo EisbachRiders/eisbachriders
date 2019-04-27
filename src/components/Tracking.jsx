@@ -23,12 +23,15 @@ const useStyles = makeStyles(theme => ({
   },
   snackbarContent: {
     borderRadius: 0,
-    width: '100%',
     minWidth: '0',
     maxWidth: 'none',
-    paddingLeft: 30,
-    paddingRight: 30,
-    backgroundColor: theme.palette.common.black,
+    color: theme.palette.common.black,
+    backgroundColor: theme.status.greyBlue,
+    [theme.breakpoints.up('sm')]: {
+      width: '100%',
+      paddingLeft: 30,
+      paddingRight: 30,
+    },
     [theme.breakpoints.up('md')]: {
       paddingLeft: 60,
       paddingRight: 60,
@@ -36,11 +39,9 @@ const useStyles = makeStyles(theme => ({
   },
   message: {
     flexBasis: '100%',
+    color: theme.palette.common.black,
     [theme.breakpoints.up('sm')]: {
       flexBasis: '60%',
-    },
-    [theme.breakpoints.up('lg')]: {
-      flexBasis: '80%',
     },
   },
   action: {
@@ -49,15 +50,20 @@ const useStyles = makeStyles(theme => ({
     paddingLeft: 0,
   },
   button: {
-    marginLeft: 35,
-    paddingLeft: 50,
-    paddingRight: 50,
+    marginLeft: 30,
+    paddingLeft: 30,
+    paddingRight: 30,
+    [theme.breakpoints.up('sm')]: {
+      marginLeft: 35,
+      paddingLeft: 50,
+      paddingRight: 50,
+    },
   },
   buttonDecline: {
-    color: theme.palette.common.white,
+    color: theme.palette.common.black,
   },
   link: {
-    color: theme.palette.common.white,
+    color: theme.palette.common.black,
     paddingLeft: 8,
     textTransform: 'capitalize',
     textDecoration: 'underline',

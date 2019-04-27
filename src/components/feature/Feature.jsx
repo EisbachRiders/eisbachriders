@@ -33,6 +33,12 @@ const useStyles = makeStyles(theme => ({
       paddingLeft: 170,
       paddingRight: 170,
     },
+    [theme.breakpoints.up('xl')]: {
+      paddingTop: 90,
+      paddingBottom: 90,
+      paddingLeft: 400,
+      paddingRight: 400,
+    },
   },
   container: {
     display: 'flex',
@@ -133,9 +139,7 @@ function Feature({ img }) {
             color="primary"
             variant="outlined"
             className={classes.button}
-            href="https://amzn.to/2Wf7yQP"
-            target="_blank"
-            rel="noopener"
+            href="https://shop.eisbach-riders.com/product/double-tab-honeycomb-fins/"
           >
             {t('common.more')}
           </Button>

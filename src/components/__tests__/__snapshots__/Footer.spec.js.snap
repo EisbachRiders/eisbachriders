@@ -6,47 +6,71 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="Hook-root-pmpe1t"
+        class="Hook-root-19a211f"
+      >
+        <p
+          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-title-dyy0mi"
+        >
+          membership.title
+        </p>
+        <div>
+          <img
+            class="Hook-logo-10wch87"
+            src="test-file-stub"
+          />
+          <img
+            class="Hook-logo-10wch87"
+            src="test-file-stub"
+          />
+        </div>
+      </div>
+      <div
+        class="Hook-root-cahx9v"
       >
         <div
-          class="Hook-container-10g2g95"
+          class="Hook-container-j2j92c"
         >
           <div
-            class="Hook-flexItem-1upuu7"
+            class="Hook-flexItem-iwwodh"
           >
             <form
               autocomplete="off"
               novalidate=""
             >
               <h5
-                class="MuiTypography-root MuiTypography-h5 Hook-textHeading-8gonu2"
+                class="MuiTypography-root-1 MuiTypography-h5-17 Hook-textHeading-1o0r3x1"
               >
                 footer.message
               </h5>
+              <p
+                class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-19jqmhw"
+              >
+                footer.questionsMessage
+              </p>
               <div
-                class="Hook-inputContainer-12u341v"
+                class="Hook-inputContainer-1xgvdyh"
               >
                 <div
-                  class="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root Hook-textField-1xhnnbt"
+                  class="MuiFormControl-root-44 MuiFormControl-marginNormal-45 Hook-textField-135bycc"
                 >
                   <label
-                    class="MuiFormLabel-root MuiFormLabel-required MuiInputLabel-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Hook-inputLabel-d5ue2w"
+                    class="MuiFormLabel-root-59 MuiFormLabel-required-64 MuiInputLabel-required-52 MuiInputLabel-root-48 MuiInputLabel-formControl-53 MuiInputLabel-animated-56 Hook-inputLabel-1x2xnjg"
                     data-shrink="false"
                     for="footer_name"
                   >
                     common.name
                     <span
-                      class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+                      class="MuiFormLabel-asterisk-65"
                     >
                        *
                     </span>
                   </label>
                   <div
-                    class="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl Hook-input-13pezoj"
+                    class="MuiInputBase-root-79 MuiInput-root-66 MuiInputBase-formControl-80 MuiInput-formControl-67 Hook-input-h0iya9"
                   >
                     <input
                       aria-invalid="false"
-                      class="MuiInputBase-input MuiInput-input Hook-textArea-1si1f1z"
+                      class="MuiInputBase-input-89 MuiInput-input-74 Hook-textArea-e6ffmt"
                       id="footer_name"
                       placeholder="common.name"
                       required=""
@@ -56,26 +80,26 @@ Object {
                   </div>
                 </div>
                 <div
-                  class="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root Hook-textField-1xhnnbt"
+                  class="MuiFormControl-root-44 MuiFormControl-marginNormal-45 Hook-textField-135bycc"
                 >
                   <label
-                    class="MuiFormLabel-root MuiFormLabel-required MuiInputLabel-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Hook-inputLabel-d5ue2w"
+                    class="MuiFormLabel-root-59 MuiFormLabel-required-64 MuiInputLabel-required-52 MuiInputLabel-root-48 MuiInputLabel-formControl-53 MuiInputLabel-animated-56 Hook-inputLabel-1x2xnjg"
                     data-shrink="false"
                     for="footer_email"
                   >
                     common.email
                     <span
-                      class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+                      class="MuiFormLabel-asterisk-65"
                     >
                        *
                     </span>
                   </label>
                   <div
-                    class="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl Hook-input-13pezoj"
+                    class="MuiInputBase-root-79 MuiInput-root-66 MuiInputBase-formControl-80 MuiInput-formControl-67 Hook-input-h0iya9"
                   >
                     <input
                       aria-invalid="false"
-                      class="MuiInputBase-input MuiInput-input Hook-textArea-1si1f1z MuiInputBase-inputType MuiInput-inputType"
+                      class="MuiInputBase-input-89 MuiInput-input-74 Hook-textArea-e6ffmt MuiInputBase-inputType-92 MuiInput-inputType-77"
                       id="footer_email"
                       placeholder="common.email"
                       required=""
@@ -86,26 +110,26 @@ Object {
                 </div>
               </div>
               <div
-                class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root"
+                class="MuiFormControl-root-44 MuiFormControl-marginNormal-45 MuiFormControl-fullWidth-47"
               >
                 <label
-                  class="MuiFormLabel-root MuiFormLabel-required MuiInputLabel-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Hook-inputLabel-d5ue2w"
+                  class="MuiFormLabel-root-59 MuiFormLabel-required-64 MuiInputLabel-required-52 MuiInputLabel-root-48 MuiInputLabel-formControl-53 MuiInputLabel-animated-56 Hook-inputLabel-1x2xnjg"
                   data-shrink="false"
                   for="footer_message"
                 >
                   footer.message
                   <span
-                    class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+                    class="MuiFormLabel-asterisk-65"
                   >
                      *
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl MuiInputBase-multiline MuiInput-multiline Hook-input-13pezoj"
+                  class="MuiInputBase-root-79 MuiInput-root-66 MuiInputBase-fullWidth-88 MuiInput-fullWidth-73 MuiInputBase-formControl-80 MuiInput-formControl-67 MuiInputBase-multiline-87 MuiInput-multiline-72 Hook-input-h0iya9"
                 >
                   <textarea
                     aria-invalid="false"
-                    class="MuiInputBase-input MuiInput-input Hook-textArea-1si1f1z MuiInputBase-inputMultiline MuiInput-inputMultiline"
+                    class="MuiInputBase-input-89 MuiInput-input-74 Hook-textArea-e6ffmt MuiInputBase-inputMultiline-91 MuiInput-inputMultiline-76"
                     id="footer_message"
                     placeholder="footer.message"
                     required=""
@@ -114,59 +138,47 @@ Object {
                 </div>
               </div>
               <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth Hook-buttonSend-146wqj9"
+                class="MuiButtonBase-root-122 MuiButton-root-96 MuiButton-contained-107 MuiButton-containedPrimary-108 MuiButton-raised-110 MuiButton-raisedPrimary-111 MuiButton-fullWidth-121 Hook-buttonSend-4w8aol"
                 data-testid="footer_submit"
                 tabindex="0"
                 type="button"
               >
                 <span
-                  class="MuiButton-label"
+                  class="MuiButton-label-97"
                 >
                   footer.send
                 </span>
                 <span
-                  class="MuiTouchRipple-root"
+                  class="MuiTouchRipple-root-130"
                 />
               </button>
             </form>
           </div>
           <div
-            class="Hook-flexItem-1upuu7"
+            class="Hook-flexItem-iwwodh"
           >
             <p
-              class="MuiTypography-root MuiTypography-body2 Hook-textHeading-8gonu2"
-            >
-              footer.questions?
-            </p>
-            <p
-              class="MuiTypography-root MuiTypography-body2 Hook-text-k62xgb"
-            >
-              footer.questionsMessage
-            </p>
-            <p
-              class="MuiTypography-root MuiTypography-body2 Hook-text-k62xgb"
+              class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-19jqmhw"
             >
               footer.getInTouch
             </p>
             <div
-              class="Hook-iconContainer-1xu4fy1"
+              class="Hook-iconContainer-181m6ap"
             >
               <a
-                aria-disabled="false"
-                aria-label="facebook"
-                class="MuiButtonBase-root MuiButton-root MuiButton-outlined Hook-button-1vpbjj5"
-                href="hhttps://www.facebook.com/EisbachRiders-262685337908914/"
+                class="MuiButtonBase-root-122 MuiButton-root-96 MuiButton-outlined-104 Hook-button-mpjf9e"
+                href="https://www.facebook.com/EisbachRiders/"
                 rel="noopener"
                 role="button"
                 tabindex="0"
                 target="_blank"
               >
                 <span
-                  class="MuiButton-label"
+                  class="MuiButton-label-97"
                 >
                   <svg
                     aria-labelledby="title"
-                    class="Hook-icon-iuy3t4"
+                    class="Hook-icon-11lzqnu"
                     height="32"
                     viewBox="0 0 96.124 96.123"
                     width="32"
@@ -184,13 +196,11 @@ Object {
                   </svg>
                 </span>
                 <span
-                  class="MuiTouchRipple-root"
+                  class="MuiTouchRipple-root-130"
                 />
               </a>
               <a
-                aria-disabled="false"
-                aria-label="instagram"
-                class="MuiButtonBase-root MuiButton-root MuiButton-outlined Hook-button-1vpbjj5"
+                class="MuiButtonBase-root-122 MuiButton-root-96 MuiButton-outlined-104 Hook-button-mpjf9e"
                 href="https://www.instagram.com/eisbachriders/"
                 rel="noopener"
                 role="button"
@@ -198,11 +208,11 @@ Object {
                 target="_blank"
               >
                 <span
-                  class="MuiButton-label"
+                  class="MuiButton-label-97"
                 >
                   <svg
                     aria-labelledby="title"
-                    class="Hook-icon-iuy3t4"
+                    class="Hook-icon-11lzqnu"
                     height="32"
                     viewBox="0 0 448 512"
                     width="32"
@@ -220,22 +230,22 @@ Object {
                   </svg>
                 </span>
                 <span
-                  class="MuiTouchRipple-root"
+                  class="MuiTouchRipple-root-130"
                 />
               </a>
             </div>
           </div>
         </div>
         <div
-          class="Hook-legal-8d5f7p"
+          class="Hook-legal-rhdqod"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter Hook-copyright-9qemm3"
+            class="MuiTypography-root-1 MuiTypography-body2-9 MuiTypography-alignCenter-24 Hook-copyright-1oi7zrg"
           >
             © Eisbach Riders |
              
             <a
-              class="MuiTypography-root MuiTypography-colorPrimary MuiLink-root MuiLink-underlineHover Hook-link-1lrlfaw"
+              class="MuiTypography-root-1 MuiTypography-colorPrimary-31 MuiTypography-inline-36 MuiLink-root-125 MuiLink-underlineHover-127 Hook-link-u4zgvg"
               href="/legal/"
               style="text-decoration: none;"
             >
@@ -244,7 +254,7 @@ Object {
             |
              
             <a
-              class="MuiTypography-root MuiTypography-colorPrimary MuiLink-root MuiLink-underlineHover Hook-link-1lrlfaw"
+              class="MuiTypography-root-1 MuiTypography-colorPrimary-31 MuiTypography-inline-36 MuiLink-root-125 MuiLink-underlineHover-127 Hook-link-u4zgvg"
               href="/privacy/"
               style="text-decoration: none;"
             >
@@ -257,47 +267,71 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="Hook-root-pmpe1t"
+      class="Hook-root-19a211f"
+    >
+      <p
+        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-title-dyy0mi"
+      >
+        membership.title
+      </p>
+      <div>
+        <img
+          class="Hook-logo-10wch87"
+          src="test-file-stub"
+        />
+        <img
+          class="Hook-logo-10wch87"
+          src="test-file-stub"
+        />
+      </div>
+    </div>
+    <div
+      class="Hook-root-cahx9v"
     >
       <div
-        class="Hook-container-10g2g95"
+        class="Hook-container-j2j92c"
       >
         <div
-          class="Hook-flexItem-1upuu7"
+          class="Hook-flexItem-iwwodh"
         >
           <form
             autocomplete="off"
             novalidate=""
           >
             <h5
-              class="MuiTypography-root MuiTypography-h5 Hook-textHeading-8gonu2"
+              class="MuiTypography-root-1 MuiTypography-h5-17 Hook-textHeading-1o0r3x1"
             >
               footer.message
             </h5>
+            <p
+              class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-19jqmhw"
+            >
+              footer.questionsMessage
+            </p>
             <div
-              class="Hook-inputContainer-12u341v"
+              class="Hook-inputContainer-1xgvdyh"
             >
               <div
-                class="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root Hook-textField-1xhnnbt"
+                class="MuiFormControl-root-44 MuiFormControl-marginNormal-45 Hook-textField-135bycc"
               >
                 <label
-                  class="MuiFormLabel-root MuiFormLabel-required MuiInputLabel-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Hook-inputLabel-d5ue2w"
+                  class="MuiFormLabel-root-59 MuiFormLabel-required-64 MuiInputLabel-required-52 MuiInputLabel-root-48 MuiInputLabel-formControl-53 MuiInputLabel-animated-56 Hook-inputLabel-1x2xnjg"
                   data-shrink="false"
                   for="footer_name"
                 >
                   common.name
                   <span
-                    class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+                    class="MuiFormLabel-asterisk-65"
                   >
                      *
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl Hook-input-13pezoj"
+                  class="MuiInputBase-root-79 MuiInput-root-66 MuiInputBase-formControl-80 MuiInput-formControl-67 Hook-input-h0iya9"
                 >
                   <input
                     aria-invalid="false"
-                    class="MuiInputBase-input MuiInput-input Hook-textArea-1si1f1z"
+                    class="MuiInputBase-input-89 MuiInput-input-74 Hook-textArea-e6ffmt"
                     id="footer_name"
                     placeholder="common.name"
                     required=""
@@ -307,26 +341,26 @@ Object {
                 </div>
               </div>
               <div
-                class="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root Hook-textField-1xhnnbt"
+                class="MuiFormControl-root-44 MuiFormControl-marginNormal-45 Hook-textField-135bycc"
               >
                 <label
-                  class="MuiFormLabel-root MuiFormLabel-required MuiInputLabel-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Hook-inputLabel-d5ue2w"
+                  class="MuiFormLabel-root-59 MuiFormLabel-required-64 MuiInputLabel-required-52 MuiInputLabel-root-48 MuiInputLabel-formControl-53 MuiInputLabel-animated-56 Hook-inputLabel-1x2xnjg"
                   data-shrink="false"
                   for="footer_email"
                 >
                   common.email
                   <span
-                    class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+                    class="MuiFormLabel-asterisk-65"
                   >
                      *
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl Hook-input-13pezoj"
+                  class="MuiInputBase-root-79 MuiInput-root-66 MuiInputBase-formControl-80 MuiInput-formControl-67 Hook-input-h0iya9"
                 >
                   <input
                     aria-invalid="false"
-                    class="MuiInputBase-input MuiInput-input Hook-textArea-1si1f1z MuiInputBase-inputType MuiInput-inputType"
+                    class="MuiInputBase-input-89 MuiInput-input-74 Hook-textArea-e6ffmt MuiInputBase-inputType-92 MuiInput-inputType-77"
                     id="footer_email"
                     placeholder="common.email"
                     required=""
@@ -337,26 +371,26 @@ Object {
               </div>
             </div>
             <div
-              class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root"
+              class="MuiFormControl-root-44 MuiFormControl-marginNormal-45 MuiFormControl-fullWidth-47"
             >
               <label
-                class="MuiFormLabel-root MuiFormLabel-required MuiInputLabel-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Hook-inputLabel-d5ue2w"
+                class="MuiFormLabel-root-59 MuiFormLabel-required-64 MuiInputLabel-required-52 MuiInputLabel-root-48 MuiInputLabel-formControl-53 MuiInputLabel-animated-56 Hook-inputLabel-1x2xnjg"
                 data-shrink="false"
                 for="footer_message"
               >
                 footer.message
                 <span
-                  class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
+                  class="MuiFormLabel-asterisk-65"
                 >
                    *
                 </span>
               </label>
               <div
-                class="MuiInputBase-root MuiInput-root MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl MuiInputBase-multiline MuiInput-multiline Hook-input-13pezoj"
+                class="MuiInputBase-root-79 MuiInput-root-66 MuiInputBase-fullWidth-88 MuiInput-fullWidth-73 MuiInputBase-formControl-80 MuiInput-formControl-67 MuiInputBase-multiline-87 MuiInput-multiline-72 Hook-input-h0iya9"
               >
                 <textarea
                   aria-invalid="false"
-                  class="MuiInputBase-input MuiInput-input Hook-textArea-1si1f1z MuiInputBase-inputMultiline MuiInput-inputMultiline"
+                  class="MuiInputBase-input-89 MuiInput-input-74 Hook-textArea-e6ffmt MuiInputBase-inputMultiline-91 MuiInput-inputMultiline-76"
                   id="footer_message"
                   placeholder="footer.message"
                   required=""
@@ -365,59 +399,47 @@ Object {
               </div>
             </div>
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-fullWidth Hook-buttonSend-146wqj9"
+              class="MuiButtonBase-root-122 MuiButton-root-96 MuiButton-contained-107 MuiButton-containedPrimary-108 MuiButton-raised-110 MuiButton-raisedPrimary-111 MuiButton-fullWidth-121 Hook-buttonSend-4w8aol"
               data-testid="footer_submit"
               tabindex="0"
               type="button"
             >
               <span
-                class="MuiButton-label"
+                class="MuiButton-label-97"
               >
                 footer.send
               </span>
               <span
-                class="MuiTouchRipple-root"
+                class="MuiTouchRipple-root-130"
               />
             </button>
           </form>
         </div>
         <div
-          class="Hook-flexItem-1upuu7"
+          class="Hook-flexItem-iwwodh"
         >
           <p
-            class="MuiTypography-root MuiTypography-body2 Hook-textHeading-8gonu2"
-          >
-            footer.questions?
-          </p>
-          <p
-            class="MuiTypography-root MuiTypography-body2 Hook-text-k62xgb"
-          >
-            footer.questionsMessage
-          </p>
-          <p
-            class="MuiTypography-root MuiTypography-body2 Hook-text-k62xgb"
+            class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-19jqmhw"
           >
             footer.getInTouch
           </p>
           <div
-            class="Hook-iconContainer-1xu4fy1"
+            class="Hook-iconContainer-181m6ap"
           >
             <a
-              aria-disabled="false"
-              aria-label="facebook"
-              class="MuiButtonBase-root MuiButton-root MuiButton-outlined Hook-button-1vpbjj5"
-              href="hhttps://www.facebook.com/EisbachRiders-262685337908914/"
+              class="MuiButtonBase-root-122 MuiButton-root-96 MuiButton-outlined-104 Hook-button-mpjf9e"
+              href="https://www.facebook.com/EisbachRiders/"
               rel="noopener"
               role="button"
               tabindex="0"
               target="_blank"
             >
               <span
-                class="MuiButton-label"
+                class="MuiButton-label-97"
               >
                 <svg
                   aria-labelledby="title"
-                  class="Hook-icon-iuy3t4"
+                  class="Hook-icon-11lzqnu"
                   height="32"
                   viewBox="0 0 96.124 96.123"
                   width="32"
@@ -435,13 +457,11 @@ Object {
                 </svg>
               </span>
               <span
-                class="MuiTouchRipple-root"
+                class="MuiTouchRipple-root-130"
               />
             </a>
             <a
-              aria-disabled="false"
-              aria-label="instagram"
-              class="MuiButtonBase-root MuiButton-root MuiButton-outlined Hook-button-1vpbjj5"
+              class="MuiButtonBase-root-122 MuiButton-root-96 MuiButton-outlined-104 Hook-button-mpjf9e"
               href="https://www.instagram.com/eisbachriders/"
               rel="noopener"
               role="button"
@@ -449,11 +469,11 @@ Object {
               target="_blank"
             >
               <span
-                class="MuiButton-label"
+                class="MuiButton-label-97"
               >
                 <svg
                   aria-labelledby="title"
-                  class="Hook-icon-iuy3t4"
+                  class="Hook-icon-11lzqnu"
                   height="32"
                   viewBox="0 0 448 512"
                   width="32"
@@ -471,22 +491,22 @@ Object {
                 </svg>
               </span>
               <span
-                class="MuiTouchRipple-root"
+                class="MuiTouchRipple-root-130"
               />
             </a>
           </div>
         </div>
       </div>
       <div
-        class="Hook-legal-8d5f7p"
+        class="Hook-legal-rhdqod"
       >
         <p
-          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter Hook-copyright-9qemm3"
+          class="MuiTypography-root-1 MuiTypography-body2-9 MuiTypography-alignCenter-24 Hook-copyright-1oi7zrg"
         >
           © Eisbach Riders |
            
           <a
-            class="MuiTypography-root MuiTypography-colorPrimary MuiLink-root MuiLink-underlineHover Hook-link-1lrlfaw"
+            class="MuiTypography-root-1 MuiTypography-colorPrimary-31 MuiTypography-inline-36 MuiLink-root-125 MuiLink-underlineHover-127 Hook-link-u4zgvg"
             href="/legal/"
             style="text-decoration: none;"
           >
@@ -495,7 +515,7 @@ Object {
           |
            
           <a
-            class="MuiTypography-root MuiTypography-colorPrimary MuiLink-root MuiLink-underlineHover Hook-link-1lrlfaw"
+            class="MuiTypography-root-1 MuiTypography-colorPrimary-31 MuiTypography-inline-36 MuiLink-root-125 MuiLink-underlineHover-127 Hook-link-u4zgvg"
             href="/privacy/"
             style="text-decoration: none;"
           >
@@ -506,6 +526,22 @@ Object {
     </div>
   </div>,
   "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
   "getAllByAltText": [Function],
   "getAllByDisplayValue": [Function],
   "getAllByLabelText": [Function],
