@@ -9,18 +9,16 @@ import theme from '../../../assets/theme/muiTheme'
 
 describe('ShopItem', () => {
   it('renders correctly', () => {
-    const mockProps = {
+    const store = createStore(reducer, {
       product: {
         images: [],
         more: { en: [] },
       },
-      t: () => '',
-    }
-    const store = createStore(reducer, { product: null })
+    })
     const component = render(
       <Provider store={store}>
         <ThemeProvider theme={theme}>
-          <ShopItem {...mockProps} />
+          <ShopItem />
         </ThemeProvider>
       </Provider>
     )

@@ -139,9 +139,7 @@ function Feature({ img }) {
             color="primary"
             variant="outlined"
             className={classes.button}
-            href="https://amzn.to/2Wf7yQP"
-            target="_blank"
-            rel="noopener"
+            href="https://shop.eisbach-riders.com/product/double-tab-honeycomb-fins/"
           >
             {t('common.more')}
           </Button>

@@ -126,8 +126,6 @@ function Products() {
                   variant="outlined"
                   className={classes.button}
                   href={elem.amazon}
-                  target="_blank"
-                  rel="noopener"
                 >
                   {t('common.more')}
                 </Button>

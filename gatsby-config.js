@@ -13,6 +13,8 @@ module.exports = {
   },
   pathPrefix: '/eisbach-riders',
   plugins: [
+    'gatsby-plugin-top-layout',
+    'gatsby-plugin-material-ui',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -65,12 +67,6 @@ module.exports = {
       },
     },
     //`gatsby-plugin-feed`,
-    {
-      resolve: 'gatsby-plugin-material-ui',
-      options: {
-        pathToTheme: `${__dirname}/src/assets/theme/muiTheme`,
-      },
-    },
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {

@@ -39,16 +39,18 @@ const theme = createMuiTheme({
   typography: {
     useNextVariants: true,
     fontFamily: "'Raleway', sans-serif",
-    fontSize: 14,
     h5: {
       letterSpacing: 3,
     },
     body1: {
       letterSpacing: 1,
       lineHeight: 1.8,
+      //TODO is this an error in MUI? not sure why its default is 16 when MUI default is 14
+      fontSize: 14,
     },
     body2: {
       letterSpacing: 1,
+      fontSize: 14,
     },
     button: {
       letterSpacing: 3,

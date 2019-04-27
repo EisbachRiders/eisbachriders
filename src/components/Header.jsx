@@ -33,7 +33,7 @@ const useStyles = makeStyles(theme => ({
   },
   appbarDarkTheme: {
     boxShadow: 'none',
-    backgroundColor: theme.status.greyBlue,
+    backgroundColor: theme.status.black,
   },
   toolbar: {
     paddingLeft: 15,
@@ -43,6 +43,18 @@ const useStyles = makeStyles(theme => ({
       paddingLeft: 60,
       paddingRight: 60,
     },
+    [theme.breakpoints.up('md')]: {
+      paddingLeft: 90,
+      paddingRight: 90,
+    },
+    [theme.breakpoints.up('lg')]: {
+      paddingLeft: 170,
+      paddingRight: 170,
+    },
+    [theme.breakpoints.up('xl')]: {
+      paddingLeft: 400,
+      paddingRight: 400,
+    },
   },
   containerXS: {
     display: 'flex',
@@ -51,18 +63,41 @@ const useStyles = makeStyles(theme => ({
   },
   logo: {
     marginTop: 5,
-    fontSize: 48,
+    width: 'auto',
+    height: 60,
     color: theme.status.black,
+  },
+  logoDarkTheme: {
+    marginTop: 5,
+    width: 'auto',
+    height: 60,
+    color: theme.status.white,
   },
   button: {
     color: theme.palette.common.black,
-    fontSize: 24,
+    fontSize: 14,
     fontWeight: 700,
+    paddingRight: 30,
+    paddingLeft: 0,
+    '&:hover': {
+      color: theme.palette.primary.main,
+      background: 'transparent',
+    },
+    [theme.breakpoints.up('md')]: {
+      fontSize: 16,
+    },
+  },
+  buttonDarkTheme: {
+    color: theme.palette.common.white,
+    fontSize: 14,
+    fontWeight: 400,
+    paddingLeft: 0,
+    paddingRight: 30,
     '&:hover': {
       color: theme.palette.primary.main,
     },
     [theme.breakpoints.up('md')]: {
-      fontSize: 30,
+      fontSize: 16,
     },
   },
   logoButton: {
@@ -70,6 +105,13 @@ const useStyles = makeStyles(theme => ({
   },
   menuIcon: {
     color: theme.palette.common.black,
+  },
+  icon: {
+    color: theme.palette.common.white,
+    fontSize: 22,
+    '&:hover': {
+      color: theme.palette.primary.main,
+    },
   },
   mobileButton: {
     flexBasis: '50%',
@@ -88,9 +130,6 @@ function Header({ isHomepage, lng, changeLng }) {
   const { t } = useTranslation()
   const [isDrawerOpen, setDrawer] = useState(false)
 
-  const links = [] ///shop/'
-  const linkLabels = [] //t('header.shop')
-
   return (
     <div className={classes.root}>
       <AppBar
@@ -99,23 +138,43 @@ function Header({ isHomepage, lng, changeLng }) {
       >
         <Toolbar className={classes.toolbar}>
           <Link to="/" className={classes.logoButton} aria-label="home">
-            <ERIcon className={classes.logo} />
+            <ERIcon
+              className={isHomepage ? classes.logo : classes.logoDarkTheme}
+            />
           </Link>
           <Hidden xsDown>
             <div>
-              {/* {links.map((link, idx) => (
-                <Link key={`link_${link}`} to={link}>
-                  <Button className={classes.button}>{linkLabels[idx]}</Button>
-                </Link>
-              ))}{' '}
-              <Link to={'/checkout/'}>
-                <IconButton className={classes.button} aria-label="Checkout">
-                  <CartIcon />
-                </IconButton>
-              </Link>   */}
-              <Button className={classes.button} onClick={changeLng}>
-                {lng === 'en' ? 'de' : 'en'}
+              <Button
+                className={
+                  isHomepage ? classes.button : classes.buttonDarkTheme
+                }
+                href="https://shop.eisbach-riders.com/shop/"
+              >
+                {t('header.shop')}
               </Button>
+              <Button
+                className={
+                  isHomepage ? classes.button : classes.buttonDarkTheme
+                }
+                href="https://shop.eisbach-riders.com/shop/"
+              >
+                {t('header.cart')}
+              </Button>
+              {/* <IconButton
+                className={classes.button}
+                aria-label="Checkout"
+                href="https://shop.eisbach-riders.com/cart/"
+              >
+                <CartIcon className={classes.icon} />
+              </IconButton> */}
+              {/* <Button
+                className={
+                  isHomepage ? classes.button : classes.buttonDarkTheme
+                }
+                onClick={changeLng}
+              >
+                {lng === 'en' ? 'de' : 'en'}
+              </Button> */}
             </div>
           </Hidden>
           <Hidden smUp>
@@ -139,8 +198,7 @@ function Header({ isHomepage, lng, changeLng }) {
                 onKeyDown={() => setDrawer(false)}
               >
                 <MobileHeaderList
-                  links={links}
-                  linkLabels={linkLabels}
+                  linkLabels={[t('header.shop')]}
                   lng={lng}
                   changeLng={changeLng}
                 />

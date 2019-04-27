@@ -1,13 +1,13 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import Shop from '../components/shop/Shop'
+import Returns from '../components/Returns'
 
-function ShopPage() {
+function ReturnsPage() {
   return (
     <Layout>
-      <Shop />
+      <Returns />
     </Layout>
   )
 }
 
-export default ShopPage
+export default ReturnsPage

@@ -6,10 +6,9 @@ import product1_img3 from '../assets/images/FCS/img3.jpg'
 import product1_img4 from '../assets/images/FCS/img4.jpg'
 import product1_img5 from '../assets/images/FCS/img5.jpg'
 //RailProtect
-import product2 from '../assets/images/RailProtect/main.jpg'
-import product2_img1 from '../assets/images/RailProtect/img1.jpg'
-import product2_img2 from '../assets/images/RailProtect/img2.jpg'
-import product2_img3 from '../assets/images/RailProtect/img3.jpg'
+import product2 from '../assets/images/SUP/main.png'
+import product2_img1 from '../assets/images/SUP/img1.jpg'
+import product2_img2 from '../assets/images/SUP/img2.jpg'
 //Future
 import product3 from '../assets/images/Future/main.jpg'
 import product3_img1 from '../assets/images/Future/img1.jpg'
@@ -29,9 +28,8 @@ export const productsFins = [
       product1_img5,
     ],
     price: '19.90',
-    ebay:
-      'https://rover.ebay.com/rover/1/707-53477-19255-0/1?icep_id=114&ipn=icep&toolid=20004&campid=5338456795&mpre=https%3A%2F%2Fwww.ebay.de%2Fitm%2F183534256900',
-    amazon: 'https://amzn.to/2OfsJjc',
+    ebay: '',
+    amazon: 'https://shop.eisbach-riders.com/product/double-tab-nylon-black/',
     more: {
       en: [
         'Set of 3 fins with center fin and the two side fins (right and left) with inside profile in standard size G5 / M5.',
@@ -58,27 +56,14 @@ export const productsFins = [
     },
   },
   {
-    name: 'RailProtect Tape',
-    images: [product2, product2_img1, product2_img2, product2_img3],
-    price: '24.90',
-    ebay:
-      'https://rover.ebay.com/rover/1/707-53477-19255-0/1?icep_id=114&ipn=icep&toolid=20004&campid=5338456795&mpre=https%3A%2F%2Fwww.ebay.de%2Fitm%2F183498197638',
-    amazon: 'https://amzn.to/2Y7BDDQ',
+    name: 'SUP Single Fin US-Box',
+    images: [product2, product2_img1, product2_img2],
+    price: '25,90',
+    ebay: '',
+    amazon: 'https://shop.eisbach-riders.com/product/sup-us-box-fin/',
     more: {
-      en: [
-        'The particularly durable diamond structure protects the edges of your board against dings and bumps, thus preventing the ingress of water.',
-        'Fits any surfboard up to 6ft (1.83m) - whether its bodyboard, shortboard, funboard or kiteboard, making it ideal for surfing, river surfing, paddle boarding or SUP (stand up paddling).',
-        "The two adhesive strips (each 191 x 6.3 cm (6'3 x 2.5)) are easy to attach and will last a long time on your board.",
-        'All our products come in a sustainable and environmentally friendly handcrafted packaging.',
-        'Scope of delivery: 2 piece set surfboard RailProtect tape',
-      ],
-      de: [
-        'The particularly durable diamond structure protects the edges of your board against dings and bumps, thus preventing the ingress of water.',
-        'Fits any surfboard up to 6ft (1.83m) - whether its bodyboard, shortboard, funboard or kiteboard, making it ideal for surfing, river surfing, paddle boarding or SUP (stand up paddling).',
-        "The two adhesive strips (each 191 x 6.3 cm (6'3 x 2.5)) are easy to attach and will last a long time on your board.",
-        'All our products come in a sustainable and environmentally friendly handcrafted packaging.',
-        'Scope of delivery: 2 piece set surfboard RailProtect tape',
-      ],
+      en: [],
+      de: [],
     },
   },
   {
@@ -91,8 +76,8 @@ export const productsFins = [
       product3_img4,
     ],
     price: '19.90',
-    ebay: 'http://www.ebay.de/itm/183498170584',
-    amazon: 'https://amzn.to/2OkhqGA',
+    ebay: '',
+    amazon: 'https://shop.eisbach-riders.com/product/single-tab-nylon-fins/',
     more: {
       en: [
         'Set of 3 fins with center fin and the two side fins (right and left) with inside profile in standard size G5 / M5.',
