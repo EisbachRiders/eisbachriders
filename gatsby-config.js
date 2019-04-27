@@ -13,8 +13,6 @@ module.exports = {
   },
   pathPrefix: '/eisbach-riders',
   plugins: [
-    'gatsby-plugin-top-layout',
-    'gatsby-plugin-material-ui',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -84,6 +82,10 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/assets/logos/icon-192.png`,
       },
+    },
+    'gatsby-plugin-top-layout',
+    {
+      resolve: 'gatsby-plugin-material-ui',
     },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,
