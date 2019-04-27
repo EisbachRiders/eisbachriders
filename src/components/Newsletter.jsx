@@ -258,7 +258,6 @@ function Newsletter({ variant }) {
         <DialogActions className={classes.dialogActions}>
           <Button
             onClick={() => setDialog(false)}
-            color="primary"
             className={classes.actionButton}
           >
             {t('common.cancel')}
@@ -268,6 +267,7 @@ function Newsletter({ variant }) {
             onClick={handleSubmit}
             className={classes.actionButton}
             color="primary"
+            variant="contained"
             autoFocus
             type="submit"
           >

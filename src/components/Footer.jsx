@@ -228,14 +228,14 @@ function Footer() {
             className={classes.copyright}
           >
             &copy; Eisbach Riders |{' '}
-            {/* <Link to="/legal/" className={classes.link}>
+            <Link to="/legal/" className={classes.link}>
               {t('footer.imprint')}
             </Link>
             |{' '}
             <Link to="/privacy/" className={classes.link}>
               {t('footer.privacy')}
-            </Link> */}
-            <a
+            </Link>
+            {/* <a
               href="https://shop.eisbach-riders.com/imprint/"
               className={classes.link}
             >
@@ -247,7 +247,7 @@ function Footer() {
               className={classes.link}
             >
               {t('footer.privacy')}
-            </a>
+            </a> */}
           </Typography>
         </div>
       </div>
