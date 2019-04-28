@@ -1,16 +1,13 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/styles'
 
-
-const useStyles = makeStyles(theme => ({
-
-}))
+const useStyles = makeStyles(theme => ({}))
 
 function Product({ product }) {
   const classes = useStyles()
 
   return (
- 
+    <>
       <SwipeableViews
         enableMouseEvents
         index={activeStep}
@@ -51,7 +48,7 @@ function Product({ product }) {
           </IconButton>
         }
       />
-
+    </>
   )
 }
 

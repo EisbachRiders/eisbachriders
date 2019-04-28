@@ -75,6 +75,7 @@ const useStyles = makeStyles(theme => ({
   },
   button: {
     color: theme.palette.common.black,
+    textTransform: 'uppercase',
     fontSize: 14,
     fontWeight: 700,
     paddingRight: 30,
@@ -144,14 +145,15 @@ function Header({ isHomepage, lng, changeLng }) {
           </Link>
           <Hidden xsDown>
             <div>
-              <Button
-                className={
-                  isHomepage ? classes.button : classes.buttonDarkTheme
-                }
-                href="https://shop.eisbach-riders.com/shop/"
-              >
-                {t('header.shop')}
-              </Button>
+              <Link to="/shop/">
+                <Button
+                  className={
+                    isHomepage ? classes.button : classes.buttonDarkTheme
+                  }
+                >
+                  {t('header.shop')}
+                </Button>
+              </Link>
               <Button
                 className={
                   isHomepage ? classes.button : classes.buttonDarkTheme

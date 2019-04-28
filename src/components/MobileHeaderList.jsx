@@ -127,10 +127,10 @@ function MobileHeaderList({ links, linkLabels, lng, changeLng }) {
 }
 
 MobileHeaderList.propTypes = {
-  links: PropTypes.array.isRequired,
-  linkLabels: PropTypes.array.isRequired,
-  lng: PropTypes.string.isRequired,
-  changeLng: PropTypes.func.isRequired,
+  links: PropTypes.array,
+  linkLabels: PropTypes.array,
+  lng: PropTypes.string,
+  changeLng: PropTypes.func,
 }
 
 export default MobileHeaderList
