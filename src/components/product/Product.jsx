@@ -61,7 +61,8 @@ function Product({ product }) {
 
   return (
     <div className={classes.root}>
-      <ProductImg images={[]} />
+      test
+      {/* <ProductImg images={[]} />
       <div className={classes.descriptionContainer}>
         <Typography className={classes.name}>{product.name}</Typography>
         <div className={classes.fullWidth}>
@@ -71,7 +72,7 @@ function Product({ product }) {
             </Typography>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

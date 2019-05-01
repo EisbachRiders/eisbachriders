@@ -64,7 +64,8 @@
   },
   "products": {
     "sectionTitle": "essential surf equipment",
-    "features": "features"
+    "features": "features",
+    "outOfStock": "Out of Stock!"
   },
   "common": {
     "name": "Name",

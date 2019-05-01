@@ -4,7 +4,7 @@ import './app.css'
 const status = {
   white: '#ffffff',
   black: '#0b0c10',
-  blue: '#1f2833',
+  blue: '#0080ff',
   greyLt: '#F7F5F5',
   greyMed: '#656565',
   grey: '#c5c6c7',
@@ -15,6 +15,8 @@ const status = {
   ocean: '#233d54',
   green: '#00942b',
   yellow: '#fce566',
+  orange: '#ff8000',
+  pink: '#ff0080',
   red: '#FF0012',
   redLt: '#ff4e5b',
   greyBlue: '#f3f8fc',

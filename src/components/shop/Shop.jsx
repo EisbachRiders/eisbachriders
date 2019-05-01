@@ -140,6 +140,7 @@ function Shop() {
       <ShopItem product={elem} key={`fins${idx}`} />
     ))
   }
+  console.log(products)
 
   return (
     <div className={classes.root}>
