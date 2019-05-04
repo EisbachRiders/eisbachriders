@@ -61,8 +61,7 @@ function Product({ product }) {
 
   return (
     <div className={classes.root}>
-      test
-      {/* <ProductImg images={[]} />
+      <ProductImg images={product.images} />
       <div className={classes.descriptionContainer}>
         <Typography className={classes.name}>{product.name}</Typography>
         <div className={classes.fullWidth}>
@@ -72,9 +71,12 @@ function Product({ product }) {
             </Typography>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   )
 }
 
-export default connect(mapStateToProps)(Product)
+export default connect(
+  mapStateToProps,
+  null
+)(Product)

@@ -6,26 +6,30 @@ export const reducer = (state, action) => {
     case 'LANGUAGE':
       i18n.changeLanguage(state.lng === 'en' ? 'de' : 'en')
       return {
+        ...state,
         lng: state.lng === 'en' ? 'de' : 'en',
-        isGAopen: state.isGAopen,
       }
     case 'GOOGLEANALYTICS':
       return {
+        ...state,
         isGAopen: false,
-        lng: state.lng,
       }
     case 'PRODUCT':
       return {
-        product: {},
-        isGAopen: state.isGAopen,
-        lng: state.lng,
+        ...state,
+        product: action.product,
+      }
+    case 'CART':
+      return {
+        ...state,
+        cart: action.cart,
       }
     default:
       return state
   }
 }
 
-const initialState = { lng: 'en', isGAopen: true, product: null }
+const initialState = { lng: 'en', isGAopen: true, product: {}, cart: {} }
 
 const createStore = () => reduxCreateStore(reducer, initialState)
 

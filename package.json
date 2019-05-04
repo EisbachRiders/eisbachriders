@@ -71,7 +71,7 @@
     "react-helmet": "^5.2.0",
     "react-i18next": "^10.9.0",
     "react-jss": "^8.6.1",
-    "react-redux": "^7.0.2",
+    "react-redux": "^7.1.0-alpha.4",
     "react-swipeable-views": "^0.13.1",
     "redux": "^4.0.1",
     "typeface-open-sans": "^0.0.54",
