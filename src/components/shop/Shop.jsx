@@ -47,6 +47,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 const multipleOfFour = array => {
+  array.sort((a, b) => a.menu_order - b.menu_order)
   const len = array.length
   const remainder = len % 4
   if (remainder === 1) {
@@ -140,7 +141,6 @@ function Shop() {
       <ShopItem product={elem} key={`fins${idx}`} />
     ))
   }
-  console.log(products)
 
   return (
     <div className={classes.root}>

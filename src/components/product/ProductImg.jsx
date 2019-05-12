@@ -18,7 +18,6 @@ function ProductImg({ images }) {
   const classes = useStyles()
   const { t } = useTranslation()
   const [activeStep, setActiveStep] = useState(0)
-  console.log(images)
   const handleIndexChange = activeStep => {
     setActiveStep(activeStep)
   }
