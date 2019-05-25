@@ -158,7 +158,7 @@ function Header({ isHomepage, lng, changeLng }) {
                 className={
                   isHomepage ? classes.button : classes.buttonDarkTheme
                 }
-                href="https://shop.eisbach-riders.com/shop/"
+                href="https://shop.eisbach-riders.com/"
               >
                 {t('header.cart')}
               </Button>

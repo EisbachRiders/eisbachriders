@@ -6,39 +6,39 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="Hook-root-1ntpn8u"
+        class="makeStyles-root-1"
       >
         <h5
-          class="MuiTypography-root-1 MuiTypography-h5-17 Hook-title-1put04c"
+          class="MuiTypography-root MuiTypography-h5 makeStyles-title-3"
         >
           feature.featuredProduct
         </h5>
         <div
-          class="Hook-container-2msnzs"
+          class="makeStyles-container-2"
         >
           <div
-            class="Hook-root-6xvm0h"
+            class="makeStyles-root-63"
           >
             <div
-              class="Hook-containerDetail-m0cq98 Hook-bottom1-165n0gy"
+              class="makeStyles-containerDetail-65 makeStyles-bottom1-66"
             >
               <h5
-                class="MuiTypography-root-1 MuiTypography-h5-17 Hook-title-1hbnaak"
+                class="MuiTypography-root MuiTypography-h5 makeStyles-title-68"
               >
                 feature.response
               </h5>
               <div
-                class="Hook-containerIcon-xg3bx8 Hook-bottom2-18gfftw"
+                class="makeStyles-containerIcon-69 makeStyles-bottom2-67"
               >
                 <p
-                  class="MuiTypography-root-1 MuiTypography-body1-10"
+                  class="MuiTypography-root MuiTypography-body1"
                 >
                   feature.surfDetail2
                 </p>
                 <div>
                   <svg
                     aria-labelledby="title"
-                    class="Hook-icon-j4610q"
+                    class="makeStyles-icon-70"
                     height="32"
                     viewBox="0 0 484.42 484.4"
                     width="32"
@@ -56,7 +56,7 @@ Object {
                   </svg>
                   <svg
                     aria-labelledby="title"
-                    class="Hook-icon-j4610q"
+                    class="makeStyles-icon-70"
                     height="32"
                     viewBox="0 0 484.42 484.4"
                     width="32"
@@ -74,7 +74,7 @@ Object {
                   </svg>
                   <svg
                     aria-labelledby="title"
-                    class="Hook-off-1qq0eyk Hook-icon-j4610q"
+                    class="makeStyles-off-71 makeStyles-icon-70"
                     height="32"
                     viewBox="0 0 484.42 484.4"
                     width="32"
@@ -93,17 +93,17 @@ Object {
                 </div>
               </div>
               <div
-                class="Hook-containerIcon-xg3bx8"
+                class="makeStyles-containerIcon-69"
               >
                 <p
-                  class="MuiTypography-root-1 MuiTypography-body1-10"
+                  class="MuiTypography-root MuiTypography-body1"
                 >
                   feature.surfDetail1
                 </p>
                 <div>
                   <svg
                     aria-labelledby="title"
-                    class="Hook-icon-j4610q"
+                    class="makeStyles-icon-70"
                     height="32"
                     viewBox="0 0 512 512"
                     width="32"
@@ -121,7 +121,7 @@ Object {
                   </svg>
                   <svg
                     aria-labelledby="title"
-                    class="Hook-icon-j4610q"
+                    class="makeStyles-icon-70"
                     height="32"
                     viewBox="0 0 512 512"
                     width="32"
@@ -139,7 +139,7 @@ Object {
                   </svg>
                   <svg
                     aria-labelledby="title"
-                    class="Hook-icon-j4610q"
+                    class="makeStyles-icon-70"
                     height="32"
                     viewBox="0 0 512 512"
                     width="32"
@@ -159,95 +159,95 @@ Object {
               </div>
             </div>
             <div
-              class="Hook-containerDetail-m0cq98"
+              class="makeStyles-containerDetail-65"
             >
               <h5
-                class="MuiTypography-root-1 MuiTypography-h5-17 Hook-title-1hbnaak"
+                class="MuiTypography-root MuiTypography-h5 makeStyles-title-68"
               >
                 feature.experience
               </h5>
               <div
-                class="Hook-containerIcon-xg3bx8"
+                class="makeStyles-containerIcon-69"
               >
                 <p
-                  class="MuiTypography-root-1 MuiTypography-body1-10"
+                  class="MuiTypography-root MuiTypography-body1"
                 >
                   feature.beginner
                 </p>
                 <div
-                  class="Hook-flex-cycaef"
+                  class="makeStyles-flex-64"
                 >
                   <div
-                    class="Hook-barOn-1y2g9bf"
+                    class="makeStyles-barOn-72"
                   />
                   <div
-                    class="Hook-barOn-1y2g9bf"
+                    class="makeStyles-barOn-72"
                   />
                   <div
-                    class="Hook-barOn-1y2g9bf"
+                    class="makeStyles-barOn-72"
                   />
                   <div
-                    class="Hook-barOn-1y2g9bf"
+                    class="makeStyles-barOn-72"
                   />
                 </div>
               </div>
               <div
-                class="Hook-containerIcon-xg3bx8"
+                class="makeStyles-containerIcon-69"
               >
                 <p
-                  class="MuiTypography-root-1 MuiTypography-body1-10"
+                  class="MuiTypography-root MuiTypography-body1"
                 >
                   feature.intermediate
                 </p>
                 <div
-                  class="Hook-flex-cycaef"
+                  class="makeStyles-flex-64"
                 >
                   <div
-                    class="Hook-barOff-2p9pu0"
+                    class="makeStyles-barOff-73"
                   />
                   <div
-                    class="Hook-barOff-2p9pu0"
+                    class="makeStyles-barOff-73"
                   />
                   <div
-                    class="Hook-barOff-2p9pu0"
+                    class="makeStyles-barOff-73"
                   />
                   <div
-                    class="Hook-barOn-1y2g9bf"
+                    class="makeStyles-barOn-72"
                   />
                 </div>
               </div>
               <div
-                class="Hook-containerIcon-xg3bx8"
+                class="makeStyles-containerIcon-69"
               >
                 <p
-                  class="MuiTypography-root-1 MuiTypography-body1-10"
+                  class="MuiTypography-root MuiTypography-body1"
                 >
                   feature.pro
                 </p>
                 <div
-                  class="Hook-flex-cycaef"
+                  class="makeStyles-flex-64"
                 >
                   <div
-                    class="Hook-barOff-2p9pu0"
+                    class="makeStyles-barOff-73"
                   />
                   <div
-                    class="Hook-barOff-2p9pu0"
+                    class="makeStyles-barOff-73"
                   />
                   <div
-                    class="Hook-barOff-2p9pu0"
+                    class="makeStyles-barOff-73"
                   />
                   <div
-                    class="Hook-barOff-2p9pu0"
+                    class="makeStyles-barOff-73"
                   />
                 </div>
               </div>
             </div>
           </div>
           <div
-            class="Hook-containerImg-n9qlhs"
+            class="makeStyles-containerImg-5"
           >
             <div
-              class="Hook-img-1qe9hyw gatsby-image-wrapper"
+              class="makeStyles-img-7 gatsby-image-wrapper"
               style="position: relative; overflow: hidden;"
             >
               <div
@@ -263,51 +263,50 @@ Object {
                 />
               </picture>
               <noscript>
-                &lt;picture&gt;&lt;img sizes="mockString" srcset="mockString" src="mockString" alt="feature.featureProduct" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+                &lt;picture&gt;&lt;img loading="lazy" sizes="mockString" srcset="mockString" src="mockString" alt="feature.featureProduct" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
               </noscript>
             </div>
           </div>
           <div
-            class="Hook-containerInfo-1v9jn3e"
+            class="makeStyles-containerInfo-4"
           >
             <div
-              class="Hook-margin-197bgnx"
+              class="makeStyles-margin-9"
             >
               <div
-                class="Hook-root-hajsic"
+                class="makeStyles-root-40"
               >
                 <img
                   alt="brush stroke"
-                  class="Hook-img-11nnipq"
+                  class="makeStyles-img-42"
                   src="test-file-stub"
                 />
                 <h5
-                  class="MuiTypography-root-1 MuiTypography-h5-17 Hook-title-1hpke0c"
+                  class="MuiTypography-root MuiTypography-h5 makeStyles-title-41"
                 >
                   Honeycomb Fin
                 </h5>
               </div>
             </div>
             <p
-              class="MuiTypography-root-1 MuiTypography-body1-10 Hook-detailText-1rzosfq"
+              class="MuiTypography-root MuiTypography-body1 makeStyles-detailText-6"
             >
               feature.text
             </p>
             <a
-              class="MuiButtonBase-root-63 MuiButton-root-37 MuiButton-outlined-45 MuiButton-outlinedPrimary-46 Hook-button-r154cw"
-              href="https://amzn.to/2Wf7yQP"
-              rel="noopener"
+              aria-disabled="false"
+              class="MuiButtonBase-root MuiButton-root makeStyles-button-8 MuiButton-outlined MuiButton-outlinedPrimary"
+              href="https://shop.eisbach-riders.com/product/double-tab-honeycomb-fins/"
               role="button"
               tabindex="0"
-              target="_blank"
             >
               <span
-                class="MuiButton-label-38"
+                class="MuiButton-label"
               >
                 common.more
               </span>
               <span
-                class="MuiTouchRipple-root-66"
+                class="MuiTouchRipple-root"
               />
             </a>
           </div>
@@ -317,39 +316,39 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="Hook-root-1ntpn8u"
+      class="makeStyles-root-1"
     >
       <h5
-        class="MuiTypography-root-1 MuiTypography-h5-17 Hook-title-1put04c"
+        class="MuiTypography-root MuiTypography-h5 makeStyles-title-3"
       >
         feature.featuredProduct
       </h5>
       <div
-        class="Hook-container-2msnzs"
+        class="makeStyles-container-2"
       >
         <div
-          class="Hook-root-6xvm0h"
+          class="makeStyles-root-63"
         >
           <div
-            class="Hook-containerDetail-m0cq98 Hook-bottom1-165n0gy"
+            class="makeStyles-containerDetail-65 makeStyles-bottom1-66"
           >
             <h5
-              class="MuiTypography-root-1 MuiTypography-h5-17 Hook-title-1hbnaak"
+              class="MuiTypography-root MuiTypography-h5 makeStyles-title-68"
             >
               feature.response
             </h5>
             <div
-              class="Hook-containerIcon-xg3bx8 Hook-bottom2-18gfftw"
+              class="makeStyles-containerIcon-69 makeStyles-bottom2-67"
             >
               <p
-                class="MuiTypography-root-1 MuiTypography-body1-10"
+                class="MuiTypography-root MuiTypography-body1"
               >
                 feature.surfDetail2
               </p>
               <div>
                 <svg
                   aria-labelledby="title"
-                  class="Hook-icon-j4610q"
+                  class="makeStyles-icon-70"
                   height="32"
                   viewBox="0 0 484.42 484.4"
                   width="32"
@@ -367,7 +366,7 @@ Object {
                 </svg>
                 <svg
                   aria-labelledby="title"
-                  class="Hook-icon-j4610q"
+                  class="makeStyles-icon-70"
                   height="32"
                   viewBox="0 0 484.42 484.4"
                   width="32"
@@ -385,7 +384,7 @@ Object {
                 </svg>
                 <svg
                   aria-labelledby="title"
-                  class="Hook-off-1qq0eyk Hook-icon-j4610q"
+                  class="makeStyles-off-71 makeStyles-icon-70"
                   height="32"
                   viewBox="0 0 484.42 484.4"
                   width="32"
@@ -404,17 +403,17 @@ Object {
               </div>
             </div>
             <div
-              class="Hook-containerIcon-xg3bx8"
+              class="makeStyles-containerIcon-69"
             >
               <p
-                class="MuiTypography-root-1 MuiTypography-body1-10"
+                class="MuiTypography-root MuiTypography-body1"
               >
                 feature.surfDetail1
               </p>
               <div>
                 <svg
                   aria-labelledby="title"
-                  class="Hook-icon-j4610q"
+                  class="makeStyles-icon-70"
                   height="32"
                   viewBox="0 0 512 512"
                   width="32"
@@ -432,7 +431,7 @@ Object {
                 </svg>
                 <svg
                   aria-labelledby="title"
-                  class="Hook-icon-j4610q"
+                  class="makeStyles-icon-70"
                   height="32"
                   viewBox="0 0 512 512"
                   width="32"
@@ -450,7 +449,7 @@ Object {
                 </svg>
                 <svg
                   aria-labelledby="title"
-                  class="Hook-icon-j4610q"
+                  class="makeStyles-icon-70"
                   height="32"
                   viewBox="0 0 512 512"
                   width="32"
@@ -470,95 +469,95 @@ Object {
             </div>
           </div>
           <div
-            class="Hook-containerDetail-m0cq98"
+            class="makeStyles-containerDetail-65"
           >
             <h5
-              class="MuiTypography-root-1 MuiTypography-h5-17 Hook-title-1hbnaak"
+              class="MuiTypography-root MuiTypography-h5 makeStyles-title-68"
             >
               feature.experience
             </h5>
             <div
-              class="Hook-containerIcon-xg3bx8"
+              class="makeStyles-containerIcon-69"
             >
               <p
-                class="MuiTypography-root-1 MuiTypography-body1-10"
+                class="MuiTypography-root MuiTypography-body1"
               >
                 feature.beginner
               </p>
               <div
-                class="Hook-flex-cycaef"
+                class="makeStyles-flex-64"
               >
                 <div
-                  class="Hook-barOn-1y2g9bf"
+                  class="makeStyles-barOn-72"
                 />
                 <div
-                  class="Hook-barOn-1y2g9bf"
+                  class="makeStyles-barOn-72"
                 />
                 <div
-                  class="Hook-barOn-1y2g9bf"
+                  class="makeStyles-barOn-72"
                 />
                 <div
-                  class="Hook-barOn-1y2g9bf"
+                  class="makeStyles-barOn-72"
                 />
               </div>
             </div>
             <div
-              class="Hook-containerIcon-xg3bx8"
+              class="makeStyles-containerIcon-69"
             >
               <p
-                class="MuiTypography-root-1 MuiTypography-body1-10"
+                class="MuiTypography-root MuiTypography-body1"
               >
                 feature.intermediate
               </p>
               <div
-                class="Hook-flex-cycaef"
+                class="makeStyles-flex-64"
               >
                 <div
-                  class="Hook-barOff-2p9pu0"
+                  class="makeStyles-barOff-73"
                 />
                 <div
-                  class="Hook-barOff-2p9pu0"
+                  class="makeStyles-barOff-73"
                 />
                 <div
-                  class="Hook-barOff-2p9pu0"
+                  class="makeStyles-barOff-73"
                 />
                 <div
-                  class="Hook-barOn-1y2g9bf"
+                  class="makeStyles-barOn-72"
                 />
               </div>
             </div>
             <div
-              class="Hook-containerIcon-xg3bx8"
+              class="makeStyles-containerIcon-69"
             >
               <p
-                class="MuiTypography-root-1 MuiTypography-body1-10"
+                class="MuiTypography-root MuiTypography-body1"
               >
                 feature.pro
               </p>
               <div
-                class="Hook-flex-cycaef"
+                class="makeStyles-flex-64"
               >
                 <div
-                  class="Hook-barOff-2p9pu0"
+                  class="makeStyles-barOff-73"
                 />
                 <div
-                  class="Hook-barOff-2p9pu0"
+                  class="makeStyles-barOff-73"
                 />
                 <div
-                  class="Hook-barOff-2p9pu0"
+                  class="makeStyles-barOff-73"
                 />
                 <div
-                  class="Hook-barOff-2p9pu0"
+                  class="makeStyles-barOff-73"
                 />
               </div>
             </div>
           </div>
         </div>
         <div
-          class="Hook-containerImg-n9qlhs"
+          class="makeStyles-containerImg-5"
         >
           <div
-            class="Hook-img-1qe9hyw gatsby-image-wrapper"
+            class="makeStyles-img-7 gatsby-image-wrapper"
             style="position: relative; overflow: hidden;"
           >
             <div
@@ -574,51 +573,50 @@ Object {
               />
             </picture>
             <noscript>
-              &lt;picture&gt;&lt;img sizes="mockString" srcset="mockString" src="mockString" alt="feature.featureProduct" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+              &lt;picture&gt;&lt;img loading="lazy" sizes="mockString" srcset="mockString" src="mockString" alt="feature.featureProduct" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
             </noscript>
           </div>
         </div>
         <div
-          class="Hook-containerInfo-1v9jn3e"
+          class="makeStyles-containerInfo-4"
         >
           <div
-            class="Hook-margin-197bgnx"
+            class="makeStyles-margin-9"
           >
             <div
-              class="Hook-root-hajsic"
+              class="makeStyles-root-40"
             >
               <img
                 alt="brush stroke"
-                class="Hook-img-11nnipq"
+                class="makeStyles-img-42"
                 src="test-file-stub"
               />
               <h5
-                class="MuiTypography-root-1 MuiTypography-h5-17 Hook-title-1hpke0c"
+                class="MuiTypography-root MuiTypography-h5 makeStyles-title-41"
               >
                 Honeycomb Fin
               </h5>
             </div>
           </div>
           <p
-            class="MuiTypography-root-1 MuiTypography-body1-10 Hook-detailText-1rzosfq"
+            class="MuiTypography-root MuiTypography-body1 makeStyles-detailText-6"
           >
             feature.text
           </p>
           <a
-            class="MuiButtonBase-root-63 MuiButton-root-37 MuiButton-outlined-45 MuiButton-outlinedPrimary-46 Hook-button-r154cw"
-            href="https://amzn.to/2Wf7yQP"
-            rel="noopener"
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiButton-root makeStyles-button-8 MuiButton-outlined MuiButton-outlinedPrimary"
+            href="https://shop.eisbach-riders.com/product/double-tab-honeycomb-fins/"
             role="button"
             tabindex="0"
-            target="_blank"
           >
             <span
-              class="MuiButton-label-38"
+              class="MuiButton-label"
             >
               common.more
             </span>
             <span
-              class="MuiTouchRipple-root-66"
+              class="MuiTouchRipple-root"
             />
           </a>
         </div>
@@ -647,41 +645,33 @@ Object {
   "getAllByLabelText": [Function],
   "getAllByPlaceholderText": [Function],
   "getAllByRole": [Function],
-  "getAllBySelectText": [Function],
   "getAllByTestId": [Function],
   "getAllByText": [Function],
   "getAllByTitle": [Function],
-  "getAllByValue": [Function],
   "getByAltText": [Function],
   "getByDisplayValue": [Function],
   "getByLabelText": [Function],
   "getByPlaceholderText": [Function],
   "getByRole": [Function],
-  "getBySelectText": [Function],
   "getByTestId": [Function],
   "getByText": [Function],
   "getByTitle": [Function],
-  "getByValue": [Function],
   "queryAllByAltText": [Function],
   "queryAllByDisplayValue": [Function],
   "queryAllByLabelText": [Function],
   "queryAllByPlaceholderText": [Function],
   "queryAllByRole": [Function],
-  "queryAllBySelectText": [Function],
   "queryAllByTestId": [Function],
   "queryAllByText": [Function],
   "queryAllByTitle": [Function],
-  "queryAllByValue": [Function],
   "queryByAltText": [Function],
   "queryByDisplayValue": [Function],
   "queryByLabelText": [Function],
   "queryByPlaceholderText": [Function],
   "queryByRole": [Function],
-  "queryBySelectText": [Function],
   "queryByTestId": [Function],
   "queryByText": [Function],
   "queryByTitle": [Function],
-  "queryByValue": [Function],
   "rerender": [Function],
   "unmount": [Function],
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import { render, fireEvent } from 'react-testing-library'
 import Footer from '../Footer'
 import { ThemeProvider } from '@material-ui/styles'
-import theme from '../../assets/theme/muiTheme'
+import theme from '../../theme'
 import CircularProgress from '@material-ui/core/CircularProgress'
 // import { handleSubmit as mockSavePost } from '../Footer'
 

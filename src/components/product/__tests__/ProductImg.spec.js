@@ -3,9 +3,9 @@ import { render } from 'react-testing-library'
 import ProductImg from '../ProductImg'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-import { reducer } from '../../../state/createStore'
+import { reducer } from '../../../redux/createStore'
 import { ThemeProvider } from '@material-ui/styles'
-import theme from '../../../assets/theme/muiTheme'
+import theme from '../../../theme'
 
 describe('ProductImg', () => {
   const mockProps = {

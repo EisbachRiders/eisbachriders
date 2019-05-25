@@ -6,33 +6,33 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="Hook-root-3rw14z"
+        class="makeStyles-root-1"
         id="about"
       >
         <div
-          class="Hook-textContainer-1eodug1"
+          class="makeStyles-textContainer-2"
         >
           <h5
-            class="MuiTypography-root-1 MuiTypography-h5-17 Hook-title-62s0fu"
+            class="MuiTypography-root MuiTypography-h5 makeStyles-title-7"
           >
             about.sectionTitle1
           </h5>
           <h5
-            class="MuiTypography-root-1 MuiTypography-h5-17 Hook-title-62s0fu"
+            class="MuiTypography-root MuiTypography-h5 makeStyles-title-7"
           >
             about.sectionTitle2
           </h5>
           <p
-            class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-mjxm1l"
+            class="MuiTypography-root MuiTypography-body1 makeStyles-text-8"
           >
             about.message
           </p>
         </div>
         <div
-          class="Hook-imgContainer-z1deon"
+          class="makeStyles-imgContainer-3"
         >
           <div
-            class="Hook-img-1vffzme gatsby-image-wrapper"
+            class="makeStyles-img-5 gatsby-image-wrapper"
             style="position: relative; overflow: hidden;"
           >
             <div
@@ -48,12 +48,12 @@ Object {
               />
             </picture>
             <noscript>
-              &lt;picture&gt;&lt;img sizes="mockString" srcset="mockString" src="mockString" alt="two surfers in ocean" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+              &lt;picture&gt;&lt;img loading="lazy" sizes="mockString" srcset="mockString" src="mockString" alt="two surfers in ocean" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
             </noscript>
           </div>
         </div>
         <div
-          class="Hook-backgroundImg-1kaykh3 gatsby-image-wrapper"
+          class="makeStyles-backgroundImg-6 gatsby-image-wrapper"
           style="position: absolute; overflow: hidden;"
         >
           <div
@@ -69,7 +69,7 @@ Object {
             />
           </picture>
           <noscript>
-            &lt;picture&gt;&lt;img sizes="mockString" srcset="mockString" src="mockString" alt="wave background" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+            &lt;picture&gt;&lt;img loading="lazy" sizes="mockString" srcset="mockString" src="mockString" alt="wave background" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
           </noscript>
         </div>
       </div>
@@ -77,33 +77,33 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="Hook-root-3rw14z"
+      class="makeStyles-root-1"
       id="about"
     >
       <div
-        class="Hook-textContainer-1eodug1"
+        class="makeStyles-textContainer-2"
       >
         <h5
-          class="MuiTypography-root-1 MuiTypography-h5-17 Hook-title-62s0fu"
+          class="MuiTypography-root MuiTypography-h5 makeStyles-title-7"
         >
           about.sectionTitle1
         </h5>
         <h5
-          class="MuiTypography-root-1 MuiTypography-h5-17 Hook-title-62s0fu"
+          class="MuiTypography-root MuiTypography-h5 makeStyles-title-7"
         >
           about.sectionTitle2
         </h5>
         <p
-          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-mjxm1l"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-8"
         >
           about.message
         </p>
       </div>
       <div
-        class="Hook-imgContainer-z1deon"
+        class="makeStyles-imgContainer-3"
       >
         <div
-          class="Hook-img-1vffzme gatsby-image-wrapper"
+          class="makeStyles-img-5 gatsby-image-wrapper"
           style="position: relative; overflow: hidden;"
         >
           <div
@@ -119,12 +119,12 @@ Object {
             />
           </picture>
           <noscript>
-            &lt;picture&gt;&lt;img sizes="mockString" srcset="mockString" src="mockString" alt="two surfers in ocean" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+            &lt;picture&gt;&lt;img loading="lazy" sizes="mockString" srcset="mockString" src="mockString" alt="two surfers in ocean" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
           </noscript>
         </div>
       </div>
       <div
-        class="Hook-backgroundImg-1kaykh3 gatsby-image-wrapper"
+        class="makeStyles-backgroundImg-6 gatsby-image-wrapper"
         style="position: absolute; overflow: hidden;"
       >
         <div
@@ -140,7 +140,7 @@ Object {
           />
         </picture>
         <noscript>
-          &lt;picture&gt;&lt;img sizes="mockString" srcset="mockString" src="mockString" alt="wave background" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+          &lt;picture&gt;&lt;img loading="lazy" sizes="mockString" srcset="mockString" src="mockString" alt="wave background" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
         </noscript>
       </div>
     </div>
@@ -167,41 +167,33 @@ Object {
   "getAllByLabelText": [Function],
   "getAllByPlaceholderText": [Function],
   "getAllByRole": [Function],
-  "getAllBySelectText": [Function],
   "getAllByTestId": [Function],
   "getAllByText": [Function],
   "getAllByTitle": [Function],
-  "getAllByValue": [Function],
   "getByAltText": [Function],
   "getByDisplayValue": [Function],
   "getByLabelText": [Function],
   "getByPlaceholderText": [Function],
   "getByRole": [Function],
-  "getBySelectText": [Function],
   "getByTestId": [Function],
   "getByText": [Function],
   "getByTitle": [Function],
-  "getByValue": [Function],
   "queryAllByAltText": [Function],
   "queryAllByDisplayValue": [Function],
   "queryAllByLabelText": [Function],
   "queryAllByPlaceholderText": [Function],
   "queryAllByRole": [Function],
-  "queryAllBySelectText": [Function],
   "queryAllByTestId": [Function],
   "queryAllByText": [Function],
   "queryAllByTitle": [Function],
-  "queryAllByValue": [Function],
   "queryByAltText": [Function],
   "queryByDisplayValue": [Function],
   "queryByLabelText": [Function],
   "queryByPlaceholderText": [Function],
   "queryByRole": [Function],
-  "queryBySelectText": [Function],
   "queryByTestId": [Function],
   "queryByText": [Function],
   "queryByTitle": [Function],
-  "queryByValue": [Function],
   "rerender": [Function],
   "unmount": [Function],
 }
