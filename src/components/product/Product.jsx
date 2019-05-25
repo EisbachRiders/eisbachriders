@@ -3,16 +3,10 @@ import { connect } from 'react-redux'
 import { useTranslation } from 'react-i18next'
 import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
-import SwipeableViews from 'react-swipeable-views'
 import classnames from 'classnames'
-import IconButton from '@material-ui/core/IconButton'
-import List from '@material-ui/core/List'
-import ListItem from '@material-ui/core/ListItem'
-import ListItemText from '@material-ui/core/ListItemText'
-import ListItemIcon from '@material-ui/core/ListItemIcon'
-import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft'
-import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight'
-import MobileStepper from '@material-ui/core/MobileStepper'
+import Button from '@material-ui/core/Button'
+import ProductAttribute from './ProductAttribute'
+import ProductImg from './ProductImg'
 
 const mapStateToProps = ({ product }) => {
   return { product }
@@ -20,56 +14,53 @@ const mapStateToProps = ({ product }) => {
 
 const useStyles = makeStyles(theme => ({
   root: {
+    paddingTop: 30,
+    paddingBottom: 30,
     paddingLeft: 15,
     paddingRight: 15,
+    display: 'flex',
+    justifyContent: 'space-between',
     [theme.breakpoints.up('sm')]: {
       paddingLeft: 60,
       paddingRight: 60,
     },
     [theme.breakpoints.up('md')]: {
+      paddingTop: 60,
+      paddingBottom: 60,
       paddingLeft: 90,
       paddingRight: 90,
     },
     [theme.breakpoints.up('lg')]: {
+      paddingTop: 45,
+      paddingBottom: 45,
       paddingLeft: 170,
       paddingRight: 170,
     },
     [theme.breakpoints.up('xl')]: {
+      paddingTop: 90,
+      paddingBottom: 90,
       paddingLeft: 400,
       paddingRight: 400,
     },
   },
-  container: {
-    display: 'flex',
-    justifyContent: 'space-between',
-  },
   imgContainer: {
-    // paddingRight: 0,
-    // paddingLeft: 0,
-    flexBasis: '40%',
-    // [theme.breakpoints.up('md')]: {
-    //   paddingRight: 60,
-    //   paddingLeft: 60,
-    // },
+    flexBasis: '60%',
   },
   name: {
-    paddingTop: 15,
     paddingBottom: 10,
-    fontWeight: 600,
+    fontWeight: 300,
     textAlign: 'left',
   },
   contentContainer: {
-    flexBasis: '50%',
+    flexBasis: '30%',
   },
   price: {
-    color: theme.palette.primary.main,
-    fontWeight: 600,
     display: 'flex',
     justifyContent: 'space-between',
     paddingBottom: 10,
   },
-  img: {
-    width: 300,
+  red: {
+    color: theme.status.red,
   },
   listItem: {
     alignItems: 'flex-start',
@@ -95,122 +86,46 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-  },
-  mobileStepper: {
-    background: theme.status.white,
-  },
-  scroll: {
-    paddingBottom: 30,
-    overflowY: 'hidden',
-    [theme.breakpoints.up('sm')]: {
-      height: '55vh',
-      overflowY: 'auto',
-    },
-    '&::-webkit-scrollbar-track': {
-      WebkitBoxShadow: 'inset 0 0 6px rgba(0, 0, 0, 0.1)',
-      borderRadius: 4,
-      backgroundColor: theme.status.grey.greyBG,
-    },
-    '&::-webkit-scrollbar': {
-      width: 4,
-      backgroundColor: theme.status.grey.greyBG,
-    },
-    '&::-webkit-scrollbar-thumb': {
-      WebkitBoxShadow: 'inset 0 0 6px rgba(0, 0, 0, 0.1)',
-      borderRadius: 4,
-      backgroundColor: theme.status.grey.greyDivs,
-    },
+    marginBottom: 30,
   },
 }))
 
 function Product({ product }) {
   const { t } = useTranslation()
   const classes = useStyles()
-  const [activeStep, setActiveStep] = useState(0)
 
-  const handleIndexChange = activeStep => {
-    setActiveStep(activeStep)
-  }
-
-  const handleNext = () => {
-    setActiveStep(activeStep + 1)
-  }
-
-  const handleBack = () => {
-    setActiveStep(activeStep - 1)
-  }
-
-  const images = product.images || []
   console.log(product)
   return (
     <div className={classes.root}>
-      <div className={classes.container}>
-        <div className={classes.imgContainer}>
-          <SwipeableViews
-            enableMouseEvents
-            index={activeStep}
-            onChangeIndex={handleIndexChange}
-          >
-            {images.map((img, idx) => (
-              <img
-                src={img.src}
-                key={`img${idx}`}
-                className={classes.img}
-                alt={`product${idx}`}
-              />
-            ))}
-          </SwipeableViews>
-          <MobileStepper
-            steps={images.length}
-            position="static"
-            activeStep={activeStep}
-            className={classes.mobileStepper}
-            nextButton={
-              <IconButton
-                size="small"
-                aria-label={t('common.scrollLeft')}
-                onClick={handleNext}
-                disabled={activeStep === images.length - 1}
-              >
-                <KeyboardArrowRight />
-              </IconButton>
-            }
-            backButton={
-              <IconButton
-                size="small"
-                aria-label={t('common.scrollRight')}
-                onClick={handleBack}
-                disabled={activeStep === 0}
-              >
-                <KeyboardArrowLeft />
-              </IconButton>
-            }
-          />
-        </div>
-        <div className={classes.contentContainer}>
-          <div className={classes.priceContainer}>
-            <Typography variant="h6" className={classes.price}>
-              {`€${product.price}`}
-            </Typography>
+      {Object.keys(product).length !== 0 && (
+        <>
+          <div className={classes.imgContainer}>
+            <ProductImg images={product.images} />
           </div>
-          {/* <List disablePadding className={classes.scroll}>
-          {product.more[lng].map((item, idx) => (
-              <ListItem key={`listItem${idx}`} className={classes.listItem}>
-                <ListItemIcon>
-                  <StopIcon className={classes.icon} />
-                </ListItemIcon>
-                <ListItemText
-                  primary={item}
-                  classes={{
-                    root: classes.listItemTextRoot,
-                    primary: classes.listItemText,
-                  }}
-                />
-              </ListItem>
-            ))} 
-        </List> */}
-        </div>
-      </div>
+          <div className={classes.contentContainer}>
+            <Typography variant="h6" className={classes.name}>
+              {product.name}
+            </Typography>
+            <div className={classes.priceContainer}>
+              <Typography variant="h6" className={classes.price}>
+                {`€${product.price}`}
+              </Typography>
+              {!product.in_stock && (
+                <Typography className={classnames(classes.price, classes.red)}>
+                  {t('products.outOfStock')}
+                </Typography>
+              )}
+            </div>
+            {product.attributes.length !== 0 &&
+              product.attributes.map(elem => (
+                <ProductAttribute attribute={elem} />
+              ))}
+            <Button variant="contained" color="primary">
+              {t('products.addToCart')}
+            </Button>
+          </div>
+        </>
+      )}
     </div>
   )
 }
