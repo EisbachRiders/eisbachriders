@@ -6,71 +6,72 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="Hook-root-19a211f"
+        class="makeStyles-root-14"
       >
         <p
-          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-title-dyy0mi"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-title-15"
         >
           membership.title
         </p>
         <div>
           <img
-            class="Hook-logo-10wch87"
+            class="makeStyles-logo-16"
             src="test-file-stub"
           />
           <img
-            class="Hook-logo-10wch87"
+            class="makeStyles-logo-16"
             src="test-file-stub"
           />
         </div>
       </div>
       <div
-        class="Hook-root-cahx9v"
+        class="makeStyles-root-1"
       >
         <div
-          class="Hook-container-j2j92c"
+          class="makeStyles-container-2"
         >
           <div
-            class="Hook-flexItem-iwwodh"
+            class="makeStyles-flexItem-4"
           >
             <form
               autocomplete="off"
               novalidate=""
             >
               <h5
-                class="MuiTypography-root-1 MuiTypography-h5-17 Hook-textHeading-1o0r3x1"
+                class="MuiTypography-root MuiTypography-h5 makeStyles-textHeading-48"
               >
                 footer.message
               </h5>
               <p
-                class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-19jqmhw"
+                class="MuiTypography-root MuiTypography-body1 makeStyles-text-47"
               >
                 footer.questionsMessage
               </p>
               <div
-                class="Hook-inputContainer-1xgvdyh"
+                class="makeStyles-inputContainer-51"
               >
                 <div
-                  class="MuiFormControl-root-44 MuiFormControl-marginNormal-45 Hook-textField-135bycc"
+                  class="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root makeStyles-textField-49"
                 >
                   <label
-                    class="MuiFormLabel-root-59 MuiFormLabel-required-64 MuiInputLabel-required-52 MuiInputLabel-root-48 MuiInputLabel-formControl-53 MuiInputLabel-animated-56 Hook-inputLabel-1x2xnjg"
+                    class="MuiFormLabel-root Mui-required Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated makeStyles-inputLabel-54"
                     data-shrink="false"
                     for="footer_name"
                   >
                     common.name
                     <span
-                      class="MuiFormLabel-asterisk-65"
+                      class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
                     >
-                       *
+                       
+                      *
                     </span>
                   </label>
                   <div
-                    class="MuiInputBase-root-79 MuiInput-root-66 MuiInputBase-formControl-80 MuiInput-formControl-67 Hook-input-h0iya9"
+                    class="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl makeStyles-input-52"
                   >
                     <input
                       aria-invalid="false"
-                      class="MuiInputBase-input-89 MuiInput-input-74 Hook-textArea-e6ffmt"
+                      class="MuiInputBase-input MuiInput-input makeStyles-textArea-50"
                       id="footer_name"
                       placeholder="common.name"
                       required=""
@@ -80,26 +81,27 @@ Object {
                   </div>
                 </div>
                 <div
-                  class="MuiFormControl-root-44 MuiFormControl-marginNormal-45 Hook-textField-135bycc"
+                  class="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root makeStyles-textField-49"
                 >
                   <label
-                    class="MuiFormLabel-root-59 MuiFormLabel-required-64 MuiInputLabel-required-52 MuiInputLabel-root-48 MuiInputLabel-formControl-53 MuiInputLabel-animated-56 Hook-inputLabel-1x2xnjg"
+                    class="MuiFormLabel-root Mui-required Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated makeStyles-inputLabel-54"
                     data-shrink="false"
                     for="footer_email"
                   >
                     common.email
                     <span
-                      class="MuiFormLabel-asterisk-65"
+                      class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
                     >
-                       *
+                       
+                      *
                     </span>
                   </label>
                   <div
-                    class="MuiInputBase-root-79 MuiInput-root-66 MuiInputBase-formControl-80 MuiInput-formControl-67 Hook-input-h0iya9"
+                    class="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl makeStyles-input-52"
                   >
                     <input
                       aria-invalid="false"
-                      class="MuiInputBase-input-89 MuiInput-input-74 Hook-textArea-e6ffmt MuiInputBase-inputType-92 MuiInput-inputType-77"
+                      class="MuiInputBase-input MuiInput-input makeStyles-textArea-50"
                       id="footer_email"
                       placeholder="common.email"
                       required=""
@@ -110,26 +112,27 @@ Object {
                 </div>
               </div>
               <div
-                class="MuiFormControl-root-44 MuiFormControl-marginNormal-45 MuiFormControl-fullWidth-47"
+                class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root"
               >
                 <label
-                  class="MuiFormLabel-root-59 MuiFormLabel-required-64 MuiInputLabel-required-52 MuiInputLabel-root-48 MuiInputLabel-formControl-53 MuiInputLabel-animated-56 Hook-inputLabel-1x2xnjg"
+                  class="MuiFormLabel-root Mui-required Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated makeStyles-inputLabel-54"
                   data-shrink="false"
                   for="footer_message"
                 >
                   footer.message
                   <span
-                    class="MuiFormLabel-asterisk-65"
+                    class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
                   >
-                     *
+                     
+                    *
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root-79 MuiInput-root-66 MuiInputBase-fullWidth-88 MuiInput-fullWidth-73 MuiInputBase-formControl-80 MuiInput-formControl-67 MuiInputBase-multiline-87 MuiInput-multiline-72 Hook-input-h0iya9"
+                  class="MuiInputBase-root MuiInput-root MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl MuiInputBase-multiline MuiInput-multiline makeStyles-input-52"
                 >
                   <textarea
                     aria-invalid="false"
-                    class="MuiInputBase-input-89 MuiInput-input-74 Hook-textArea-e6ffmt MuiInputBase-inputMultiline-91 MuiInput-inputMultiline-76"
+                    class="MuiInputBase-input MuiInput-input makeStyles-textArea-50 MuiInputBase-inputMultiline MuiInput-inputMultiline"
                     id="footer_message"
                     placeholder="footer.message"
                     required=""
@@ -138,114 +141,196 @@ Object {
                 </div>
               </div>
               <button
-                class="MuiButtonBase-root-122 MuiButton-root-96 MuiButton-contained-107 MuiButton-containedPrimary-108 MuiButton-raised-110 MuiButton-raisedPrimary-111 MuiButton-fullWidth-121 Hook-buttonSend-4w8aol"
+                class="MuiButtonBase-root MuiButton-root makeStyles-buttonSend-55 MuiButton-containedPrimary MuiButton-contained MuiButton-fullWidth"
                 data-testid="footer_submit"
                 tabindex="0"
                 type="button"
               >
                 <span
-                  class="MuiButton-label-97"
+                  class="MuiButton-label"
                 >
                   footer.send
                 </span>
                 <span
-                  class="MuiTouchRipple-root-130"
+                  class="MuiTouchRipple-root"
                 />
               </button>
             </form>
           </div>
           <div
-            class="Hook-flexItem-iwwodh"
+            class="makeStyles-flexItem-4"
           >
-            <p
-              class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-19jqmhw"
-            >
-              footer.getInTouch
-            </p>
             <div
-              class="Hook-iconContainer-181m6ap"
+              class="makeStyles-containerInner-3"
             >
-              <a
-                class="MuiButtonBase-root-122 MuiButton-root-96 MuiButton-outlined-104 Hook-button-mpjf9e"
-                href="https://www.facebook.com/EisbachRiders/"
-                rel="noopener"
-                role="button"
-                tabindex="0"
-                target="_blank"
+              <div
+                class="makeStyles-flexItemInner-5"
               >
-                <span
-                  class="MuiButton-label-97"
-                >
-                  <svg
-                    aria-labelledby="title"
-                    class="Hook-icon-11lzqnu"
-                    height="32"
-                    viewBox="0 0 96.124 96.123"
-                    width="32"
-                    xmlns="http://www.w3.org/2000/svg"
+                <div>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 makeStyles-textHeading-7"
                   >
-                    <title
-                      id="title_facebook"
+                    footer.customerService
+                  </p>
+                  <a
+                    href="https://shop.eisbach-riders.com/payment/"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 makeStyles-text-6"
                     >
-                      Facebook Icon
-                    </title>
-                    <path
-                      d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803 c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654 c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246 c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </span>
-                <span
-                  class="MuiTouchRipple-root-130"
-                />
-              </a>
-              <a
-                class="MuiButtonBase-root-122 MuiButton-root-96 MuiButton-outlined-104 Hook-button-mpjf9e"
-                href="https://www.instagram.com/eisbachriders/"
-                rel="noopener"
-                role="button"
-                tabindex="0"
-                target="_blank"
+                      footer.payment
+                    </p>
+                  </a>
+                  <a
+                    href="https://shop.eisbach-riders.com/shipping/"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 makeStyles-text-6"
+                    >
+                      footer.shipping
+                    </p>
+                  </a>
+                  <a
+                    href="https://shop.eisbach-riders.com/returns/"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 makeStyles-text-6"
+                    >
+                      footer.returns
+                    </p>
+                  </a>
+                  <a
+                    href="https://shop.eisbach-riders.com/terms-and-conditions/"
+                  >
+                    <p
+                      class="MuiTypography-root MuiTypography-body1 makeStyles-text-6"
+                    >
+                      footer.terms
+                    </p>
+                  </a>
+                </div>
+              </div>
+              <div
+                class="makeStyles-flexItemInner-5"
               >
-                <span
-                  class="MuiButton-label-97"
-                >
-                  <svg
-                    aria-labelledby="title"
-                    class="Hook-icon-11lzqnu"
-                    height="32"
-                    viewBox="0 0 448 512"
-                    width="32"
-                    xmlns="http://www.w3.org/2000/svg"
+                <div>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 makeStyles-textHeading-7"
                   >
-                    <title
-                      id="title_instagram"
+                    footer.subscribe
+                  </p>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 makeStyles-text-6"
+                  >
+                    footer.subscribeText
+                  </p>
+                  <div
+                    class="makeStyles-containerNewsletter-136"
+                  >
+                    <button
+                      class="MuiButtonBase-root MuiButton-root makeStyles-buttonSm-140 MuiButton-containedPrimary MuiButton-contained"
+                      tabindex="0"
+                      type="button"
                     >
-                      Instagram Icon
-                    </title>
-                    <path
-                      d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-                      fill="currentColor"
+                      <span
+                        class="MuiButton-label"
+                      >
+                        newsletter.newsletter
+                      </span>
+                      <span
+                        class="MuiTouchRipple-root"
+                      />
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="makeStyles-iconContainer-10"
+                >
+                  <a
+                    aria-disabled="false"
+                    class="MuiButtonBase-root MuiButton-root makeStyles-button-8 MuiButton-outlined"
+                    href="https://www.facebook.com/EisbachRiders/"
+                    rel="noopener"
+                    role="button"
+                    tabindex="0"
+                    target="_blank"
+                  >
+                    <span
+                      class="MuiButton-label"
+                    >
+                      <svg
+                        aria-labelledby="title"
+                        class="makeStyles-icon-9"
+                        height="32"
+                        viewBox="0 0 96.124 96.123"
+                        width="32"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <title
+                          id="title_facebook"
+                        >
+                          Facebook Icon
+                        </title>
+                        <path
+                          d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803 c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654 c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246 c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
                     />
-                  </svg>
-                </span>
-                <span
-                  class="MuiTouchRipple-root-130"
-                />
-              </a>
+                  </a>
+                  <a
+                    aria-disabled="false"
+                    class="MuiButtonBase-root MuiButton-root makeStyles-button-8 MuiButton-outlined"
+                    href="https://www.instagram.com/eisbachriders/"
+                    rel="noopener"
+                    role="button"
+                    tabindex="0"
+                    target="_blank"
+                  >
+                    <span
+                      class="MuiButton-label"
+                    >
+                      <svg
+                        aria-labelledby="title"
+                        class="makeStyles-icon-9"
+                        height="32"
+                        viewBox="0 0 448 512"
+                        width="32"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <title
+                          id="title_instagram"
+                        >
+                          Instagram Icon
+                        </title>
+                        <path
+                          d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div
-          class="Hook-legal-rhdqod"
+          class="makeStyles-legal-12"
         >
           <p
-            class="MuiTypography-root-1 MuiTypography-body2-9 MuiTypography-alignCenter-24 Hook-copyright-1oi7zrg"
+            class="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter makeStyles-copyright-13"
           >
             © Eisbach Riders |
              
             <a
-              class="MuiTypography-root-1 MuiTypography-colorPrimary-31 MuiTypography-inline-36 MuiLink-root-125 MuiLink-underlineHover-127 Hook-link-u4zgvg"
+              class="MuiTypography-root MuiTypography-colorPrimary MuiLink-root MuiLink-underlineHover makeStyles-link-11"
               href="/legal/"
               style="text-decoration: none;"
             >
@@ -254,7 +339,7 @@ Object {
             |
              
             <a
-              class="MuiTypography-root-1 MuiTypography-colorPrimary-31 MuiTypography-inline-36 MuiLink-root-125 MuiLink-underlineHover-127 Hook-link-u4zgvg"
+              class="MuiTypography-root MuiTypography-colorPrimary MuiLink-root MuiLink-underlineHover makeStyles-link-11"
               href="/privacy/"
               style="text-decoration: none;"
             >
@@ -267,71 +352,72 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="Hook-root-19a211f"
+      class="makeStyles-root-14"
     >
       <p
-        class="MuiTypography-root-1 MuiTypography-body1-10 Hook-title-dyy0mi"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-title-15"
       >
         membership.title
       </p>
       <div>
         <img
-          class="Hook-logo-10wch87"
+          class="makeStyles-logo-16"
           src="test-file-stub"
         />
         <img
-          class="Hook-logo-10wch87"
+          class="makeStyles-logo-16"
           src="test-file-stub"
         />
       </div>
     </div>
     <div
-      class="Hook-root-cahx9v"
+      class="makeStyles-root-1"
     >
       <div
-        class="Hook-container-j2j92c"
+        class="makeStyles-container-2"
       >
         <div
-          class="Hook-flexItem-iwwodh"
+          class="makeStyles-flexItem-4"
         >
           <form
             autocomplete="off"
             novalidate=""
           >
             <h5
-              class="MuiTypography-root-1 MuiTypography-h5-17 Hook-textHeading-1o0r3x1"
+              class="MuiTypography-root MuiTypography-h5 makeStyles-textHeading-48"
             >
               footer.message
             </h5>
             <p
-              class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-19jqmhw"
+              class="MuiTypography-root MuiTypography-body1 makeStyles-text-47"
             >
               footer.questionsMessage
             </p>
             <div
-              class="Hook-inputContainer-1xgvdyh"
+              class="makeStyles-inputContainer-51"
             >
               <div
-                class="MuiFormControl-root-44 MuiFormControl-marginNormal-45 Hook-textField-135bycc"
+                class="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root makeStyles-textField-49"
               >
                 <label
-                  class="MuiFormLabel-root-59 MuiFormLabel-required-64 MuiInputLabel-required-52 MuiInputLabel-root-48 MuiInputLabel-formControl-53 MuiInputLabel-animated-56 Hook-inputLabel-1x2xnjg"
+                  class="MuiFormLabel-root Mui-required Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated makeStyles-inputLabel-54"
                   data-shrink="false"
                   for="footer_name"
                 >
                   common.name
                   <span
-                    class="MuiFormLabel-asterisk-65"
+                    class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
                   >
-                     *
+                     
+                    *
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root-79 MuiInput-root-66 MuiInputBase-formControl-80 MuiInput-formControl-67 Hook-input-h0iya9"
+                  class="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl makeStyles-input-52"
                 >
                   <input
                     aria-invalid="false"
-                    class="MuiInputBase-input-89 MuiInput-input-74 Hook-textArea-e6ffmt"
+                    class="MuiInputBase-input MuiInput-input makeStyles-textArea-50"
                     id="footer_name"
                     placeholder="common.name"
                     required=""
@@ -341,26 +427,27 @@ Object {
                 </div>
               </div>
               <div
-                class="MuiFormControl-root-44 MuiFormControl-marginNormal-45 Hook-textField-135bycc"
+                class="MuiFormControl-root MuiFormControl-marginNormal MuiTextField-root makeStyles-textField-49"
               >
                 <label
-                  class="MuiFormLabel-root-59 MuiFormLabel-required-64 MuiInputLabel-required-52 MuiInputLabel-root-48 MuiInputLabel-formControl-53 MuiInputLabel-animated-56 Hook-inputLabel-1x2xnjg"
+                  class="MuiFormLabel-root Mui-required Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated makeStyles-inputLabel-54"
                   data-shrink="false"
                   for="footer_email"
                 >
                   common.email
                   <span
-                    class="MuiFormLabel-asterisk-65"
+                    class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
                   >
-                     *
+                     
+                    *
                   </span>
                 </label>
                 <div
-                  class="MuiInputBase-root-79 MuiInput-root-66 MuiInputBase-formControl-80 MuiInput-formControl-67 Hook-input-h0iya9"
+                  class="MuiInputBase-root MuiInput-root MuiInputBase-formControl MuiInput-formControl makeStyles-input-52"
                 >
                   <input
                     aria-invalid="false"
-                    class="MuiInputBase-input-89 MuiInput-input-74 Hook-textArea-e6ffmt MuiInputBase-inputType-92 MuiInput-inputType-77"
+                    class="MuiInputBase-input MuiInput-input makeStyles-textArea-50"
                     id="footer_email"
                     placeholder="common.email"
                     required=""
@@ -371,26 +458,27 @@ Object {
               </div>
             </div>
             <div
-              class="MuiFormControl-root-44 MuiFormControl-marginNormal-45 MuiFormControl-fullWidth-47"
+              class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root"
             >
               <label
-                class="MuiFormLabel-root-59 MuiFormLabel-required-64 MuiInputLabel-required-52 MuiInputLabel-root-48 MuiInputLabel-formControl-53 MuiInputLabel-animated-56 Hook-inputLabel-1x2xnjg"
+                class="MuiFormLabel-root Mui-required Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated makeStyles-inputLabel-54"
                 data-shrink="false"
                 for="footer_message"
               >
                 footer.message
                 <span
-                  class="MuiFormLabel-asterisk-65"
+                  class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
                 >
-                   *
+                   
+                  *
                 </span>
               </label>
               <div
-                class="MuiInputBase-root-79 MuiInput-root-66 MuiInputBase-fullWidth-88 MuiInput-fullWidth-73 MuiInputBase-formControl-80 MuiInput-formControl-67 MuiInputBase-multiline-87 MuiInput-multiline-72 Hook-input-h0iya9"
+                class="MuiInputBase-root MuiInput-root MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl MuiInputBase-multiline MuiInput-multiline makeStyles-input-52"
               >
                 <textarea
                   aria-invalid="false"
-                  class="MuiInputBase-input-89 MuiInput-input-74 Hook-textArea-e6ffmt MuiInputBase-inputMultiline-91 MuiInput-inputMultiline-76"
+                  class="MuiInputBase-input MuiInput-input makeStyles-textArea-50 MuiInputBase-inputMultiline MuiInput-inputMultiline"
                   id="footer_message"
                   placeholder="footer.message"
                   required=""
@@ -399,114 +487,196 @@ Object {
               </div>
             </div>
             <button
-              class="MuiButtonBase-root-122 MuiButton-root-96 MuiButton-contained-107 MuiButton-containedPrimary-108 MuiButton-raised-110 MuiButton-raisedPrimary-111 MuiButton-fullWidth-121 Hook-buttonSend-4w8aol"
+              class="MuiButtonBase-root MuiButton-root makeStyles-buttonSend-55 MuiButton-containedPrimary MuiButton-contained MuiButton-fullWidth"
               data-testid="footer_submit"
               tabindex="0"
               type="button"
             >
               <span
-                class="MuiButton-label-97"
+                class="MuiButton-label"
               >
                 footer.send
               </span>
               <span
-                class="MuiTouchRipple-root-130"
+                class="MuiTouchRipple-root"
               />
             </button>
           </form>
         </div>
         <div
-          class="Hook-flexItem-iwwodh"
+          class="makeStyles-flexItem-4"
         >
-          <p
-            class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-19jqmhw"
-          >
-            footer.getInTouch
-          </p>
           <div
-            class="Hook-iconContainer-181m6ap"
+            class="makeStyles-containerInner-3"
           >
-            <a
-              class="MuiButtonBase-root-122 MuiButton-root-96 MuiButton-outlined-104 Hook-button-mpjf9e"
-              href="https://www.facebook.com/EisbachRiders/"
-              rel="noopener"
-              role="button"
-              tabindex="0"
-              target="_blank"
+            <div
+              class="makeStyles-flexItemInner-5"
             >
-              <span
-                class="MuiButton-label-97"
-              >
-                <svg
-                  aria-labelledby="title"
-                  class="Hook-icon-11lzqnu"
-                  height="32"
-                  viewBox="0 0 96.124 96.123"
-                  width="32"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div>
+                <p
+                  class="MuiTypography-root MuiTypography-body1 makeStyles-textHeading-7"
                 >
-                  <title
-                    id="title_facebook"
+                  footer.customerService
+                </p>
+                <a
+                  href="https://shop.eisbach-riders.com/payment/"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 makeStyles-text-6"
                   >
-                    Facebook Icon
-                  </title>
-                  <path
-                    d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803 c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654 c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246 c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </span>
-              <span
-                class="MuiTouchRipple-root-130"
-              />
-            </a>
-            <a
-              class="MuiButtonBase-root-122 MuiButton-root-96 MuiButton-outlined-104 Hook-button-mpjf9e"
-              href="https://www.instagram.com/eisbachriders/"
-              rel="noopener"
-              role="button"
-              tabindex="0"
-              target="_blank"
+                    footer.payment
+                  </p>
+                </a>
+                <a
+                  href="https://shop.eisbach-riders.com/shipping/"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 makeStyles-text-6"
+                  >
+                    footer.shipping
+                  </p>
+                </a>
+                <a
+                  href="https://shop.eisbach-riders.com/returns/"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 makeStyles-text-6"
+                  >
+                    footer.returns
+                  </p>
+                </a>
+                <a
+                  href="https://shop.eisbach-riders.com/terms-and-conditions/"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 makeStyles-text-6"
+                  >
+                    footer.terms
+                  </p>
+                </a>
+              </div>
+            </div>
+            <div
+              class="makeStyles-flexItemInner-5"
             >
-              <span
-                class="MuiButton-label-97"
-              >
-                <svg
-                  aria-labelledby="title"
-                  class="Hook-icon-11lzqnu"
-                  height="32"
-                  viewBox="0 0 448 512"
-                  width="32"
-                  xmlns="http://www.w3.org/2000/svg"
+              <div>
+                <p
+                  class="MuiTypography-root MuiTypography-body1 makeStyles-textHeading-7"
                 >
-                  <title
-                    id="title_instagram"
+                  footer.subscribe
+                </p>
+                <p
+                  class="MuiTypography-root MuiTypography-body1 makeStyles-text-6"
+                >
+                  footer.subscribeText
+                </p>
+                <div
+                  class="makeStyles-containerNewsletter-136"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root makeStyles-buttonSm-140 MuiButton-containedPrimary MuiButton-contained"
+                    tabindex="0"
+                    type="button"
                   >
-                    Instagram Icon
-                  </title>
-                  <path
-                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-                    fill="currentColor"
+                    <span
+                      class="MuiButton-label"
+                    >
+                      newsletter.newsletter
+                    </span>
+                    <span
+                      class="MuiTouchRipple-root"
+                    />
+                  </button>
+                </div>
+              </div>
+              <div
+                class="makeStyles-iconContainer-10"
+              >
+                <a
+                  aria-disabled="false"
+                  class="MuiButtonBase-root MuiButton-root makeStyles-button-8 MuiButton-outlined"
+                  href="https://www.facebook.com/EisbachRiders/"
+                  rel="noopener"
+                  role="button"
+                  tabindex="0"
+                  target="_blank"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <svg
+                      aria-labelledby="title"
+                      class="makeStyles-icon-9"
+                      height="32"
+                      viewBox="0 0 96.124 96.123"
+                      width="32"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <title
+                        id="title_facebook"
+                      >
+                        Facebook Icon
+                      </title>
+                      <path
+                        d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803 c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654 c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246 c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
                   />
-                </svg>
-              </span>
-              <span
-                class="MuiTouchRipple-root-130"
-              />
-            </a>
+                </a>
+                <a
+                  aria-disabled="false"
+                  class="MuiButtonBase-root MuiButton-root makeStyles-button-8 MuiButton-outlined"
+                  href="https://www.instagram.com/eisbachriders/"
+                  rel="noopener"
+                  role="button"
+                  tabindex="0"
+                  target="_blank"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    <svg
+                      aria-labelledby="title"
+                      class="makeStyles-icon-9"
+                      height="32"
+                      viewBox="0 0 448 512"
+                      width="32"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <title
+                        id="title_instagram"
+                      >
+                        Instagram Icon
+                      </title>
+                      <path
+                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root"
+                  />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div
-        class="Hook-legal-rhdqod"
+        class="makeStyles-legal-12"
       >
         <p
-          class="MuiTypography-root-1 MuiTypography-body2-9 MuiTypography-alignCenter-24 Hook-copyright-1oi7zrg"
+          class="MuiTypography-root MuiTypography-body2 MuiTypography-alignCenter makeStyles-copyright-13"
         >
           © Eisbach Riders |
            
           <a
-            class="MuiTypography-root-1 MuiTypography-colorPrimary-31 MuiTypography-inline-36 MuiLink-root-125 MuiLink-underlineHover-127 Hook-link-u4zgvg"
+            class="MuiTypography-root MuiTypography-colorPrimary MuiLink-root MuiLink-underlineHover makeStyles-link-11"
             href="/legal/"
             style="text-decoration: none;"
           >
@@ -515,7 +685,7 @@ Object {
           |
            
           <a
-            class="MuiTypography-root-1 MuiTypography-colorPrimary-31 MuiTypography-inline-36 MuiLink-root-125 MuiLink-underlineHover-127 Hook-link-u4zgvg"
+            class="MuiTypography-root MuiTypography-colorPrimary MuiLink-root MuiLink-underlineHover makeStyles-link-11"
             href="/privacy/"
             style="text-decoration: none;"
           >
@@ -547,41 +717,33 @@ Object {
   "getAllByLabelText": [Function],
   "getAllByPlaceholderText": [Function],
   "getAllByRole": [Function],
-  "getAllBySelectText": [Function],
   "getAllByTestId": [Function],
   "getAllByText": [Function],
   "getAllByTitle": [Function],
-  "getAllByValue": [Function],
   "getByAltText": [Function],
   "getByDisplayValue": [Function],
   "getByLabelText": [Function],
   "getByPlaceholderText": [Function],
   "getByRole": [Function],
-  "getBySelectText": [Function],
   "getByTestId": [Function],
   "getByText": [Function],
   "getByTitle": [Function],
-  "getByValue": [Function],
   "queryAllByAltText": [Function],
   "queryAllByDisplayValue": [Function],
   "queryAllByLabelText": [Function],
   "queryAllByPlaceholderText": [Function],
   "queryAllByRole": [Function],
-  "queryAllBySelectText": [Function],
   "queryAllByTestId": [Function],
   "queryAllByText": [Function],
   "queryAllByTitle": [Function],
-  "queryAllByValue": [Function],
   "queryByAltText": [Function],
   "queryByDisplayValue": [Function],
   "queryByLabelText": [Function],
   "queryByPlaceholderText": [Function],
   "queryByRole": [Function],
-  "queryBySelectText": [Function],
   "queryByTestId": [Function],
   "queryByText": [Function],
   "queryByTitle": [Function],
-  "queryByValue": [Function],
   "rerender": [Function],
   "unmount": [Function],
 }

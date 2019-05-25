@@ -5,7 +5,7 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { reducer } from '../../../state/createStore'
 import { ThemeProvider } from '@material-ui/styles'
-import theme from '../../../assets/theme/muiTheme'
+import theme from '../../../theme'
 
 describe('ShopItem', () => {
   it('renders correctly', () => {

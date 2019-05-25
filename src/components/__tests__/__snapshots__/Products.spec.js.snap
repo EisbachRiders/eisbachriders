@@ -6,117 +6,114 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="Hook-root-1ntpn8u"
+        class="makeStyles-root-1"
       >
         <h5
-          class="MuiTypography-root-1 MuiTypography-h5-17 Hook-title-30w93p"
+          class="MuiTypography-root MuiTypography-h5 makeStyles-title-3"
         >
           products.sectionTitle
         </h5>
         <div
-          class="Hook-container-13v418p"
+          class="makeStyles-container-2"
         >
           <div
-            class="Hook-itemContainer-vdh5bf"
+            class="makeStyles-itemContainer-4"
           >
             <img
               alt="product 0"
-              class="Hook-img-cai670"
+              class="makeStyles-img-5"
               src="test-file-stub"
             />
             <div
-              class="Hook-descriptionContainer-1tsden"
+              class="makeStyles-descriptionContainer-7"
             >
               <p
-                class="MuiTypography-root-1 MuiTypography-body1-10 Hook-name-uohml8"
+                class="MuiTypography-root MuiTypography-body1 makeStyles-name-6"
               >
                 FCS Double Tab Thruster
               </p>
               <a
-                class="MuiButtonBase-root-63 MuiButton-root-37 MuiButton-outlined-45 MuiButton-outlinedPrimary-46 Hook-button-429z7t"
-                href="https://amzn.to/2OfsJjc"
-                rel="noopener"
+                aria-disabled="false"
+                class="MuiButtonBase-root MuiButton-root makeStyles-button-9 MuiButton-outlined MuiButton-outlinedPrimary"
+                href="https://shop.eisbach-riders.com/product/double-tab-nylon-black/"
                 role="button"
                 tabindex="0"
-                target="_blank"
               >
                 <span
-                  class="MuiButton-label-38"
+                  class="MuiButton-label"
                 >
                   common.more
                 </span>
                 <span
-                  class="MuiTouchRipple-root-66"
+                  class="MuiTouchRipple-root"
                 />
               </a>
             </div>
           </div>
           <div
-            class="Hook-itemContainer-vdh5bf"
+            class="makeStyles-itemContainer-4"
           >
             <img
               alt="product 1"
-              class="Hook-img-cai670"
+              class="makeStyles-img-5"
               src="test-file-stub"
             />
             <div
-              class="Hook-descriptionContainer-1tsden"
+              class="makeStyles-descriptionContainer-7"
             >
               <p
-                class="MuiTypography-root-1 MuiTypography-body1-10 Hook-name-uohml8"
+                class="MuiTypography-root MuiTypography-body1 makeStyles-name-6"
               >
-                RailProtect Tape
+                SUP Single Fin US-Box
               </p>
               <a
-                class="MuiButtonBase-root-63 MuiButton-root-37 MuiButton-outlined-45 MuiButton-outlinedPrimary-46 Hook-button-429z7t"
-                href="https://amzn.to/2Y7BDDQ"
-                rel="noopener"
+                aria-disabled="false"
+                class="MuiButtonBase-root MuiButton-root makeStyles-button-9 MuiButton-outlined MuiButton-outlinedPrimary"
+                href="https://shop.eisbach-riders.com/product/sup-us-box-fin/"
                 role="button"
                 tabindex="0"
-                target="_blank"
               >
                 <span
-                  class="MuiButton-label-38"
+                  class="MuiButton-label"
                 >
                   common.more
                 </span>
                 <span
-                  class="MuiTouchRipple-root-66"
+                  class="MuiTouchRipple-root"
                 />
               </a>
             </div>
           </div>
           <div
-            class="Hook-itemContainer-vdh5bf"
+            class="makeStyles-itemContainer-4"
           >
             <img
               alt="product 2"
-              class="Hook-img-cai670"
+              class="makeStyles-img-5"
               src="test-file-stub"
             />
             <div
-              class="Hook-descriptionContainer-1tsden"
+              class="makeStyles-descriptionContainer-7"
             >
               <p
-                class="MuiTypography-root-1 MuiTypography-body1-10 Hook-name-uohml8"
+                class="MuiTypography-root MuiTypography-body1 makeStyles-name-6"
               >
                 Future Single Tab Thruster
               </p>
               <a
-                class="MuiButtonBase-root-63 MuiButton-root-37 MuiButton-outlined-45 MuiButton-outlinedPrimary-46 Hook-button-429z7t"
-                href="https://amzn.to/2OkhqGA"
-                rel="noopener"
+                aria-disabled="false"
+                class="MuiButtonBase-root MuiButton-root makeStyles-button-9 MuiButton-outlined MuiButton-outlinedPrimary"
+                href="https://shop.eisbach-riders.com/product/single-tab-nylon-fins/"
                 role="button"
                 tabindex="0"
-                target="_blank"
               >
                 <span
-                  class="MuiButton-label-38"
+                  class="MuiButton-label"
                 >
                   common.more
                 </span>
                 <span
-                  class="MuiTouchRipple-root-66"
+                  class="MuiTouchRipple-root"
                 />
               </a>
             </div>
@@ -127,117 +124,114 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="Hook-root-1ntpn8u"
+      class="makeStyles-root-1"
     >
       <h5
-        class="MuiTypography-root-1 MuiTypography-h5-17 Hook-title-30w93p"
+        class="MuiTypography-root MuiTypography-h5 makeStyles-title-3"
       >
         products.sectionTitle
       </h5>
       <div
-        class="Hook-container-13v418p"
+        class="makeStyles-container-2"
       >
         <div
-          class="Hook-itemContainer-vdh5bf"
+          class="makeStyles-itemContainer-4"
         >
           <img
             alt="product 0"
-            class="Hook-img-cai670"
+            class="makeStyles-img-5"
             src="test-file-stub"
           />
           <div
-            class="Hook-descriptionContainer-1tsden"
+            class="makeStyles-descriptionContainer-7"
           >
             <p
-              class="MuiTypography-root-1 MuiTypography-body1-10 Hook-name-uohml8"
+              class="MuiTypography-root MuiTypography-body1 makeStyles-name-6"
             >
               FCS Double Tab Thruster
             </p>
             <a
-              class="MuiButtonBase-root-63 MuiButton-root-37 MuiButton-outlined-45 MuiButton-outlinedPrimary-46 Hook-button-429z7t"
-              href="https://amzn.to/2OfsJjc"
-              rel="noopener"
+              aria-disabled="false"
+              class="MuiButtonBase-root MuiButton-root makeStyles-button-9 MuiButton-outlined MuiButton-outlinedPrimary"
+              href="https://shop.eisbach-riders.com/product/double-tab-nylon-black/"
               role="button"
               tabindex="0"
-              target="_blank"
             >
               <span
-                class="MuiButton-label-38"
+                class="MuiButton-label"
               >
                 common.more
               </span>
               <span
-                class="MuiTouchRipple-root-66"
+                class="MuiTouchRipple-root"
               />
             </a>
           </div>
         </div>
         <div
-          class="Hook-itemContainer-vdh5bf"
+          class="makeStyles-itemContainer-4"
         >
           <img
             alt="product 1"
-            class="Hook-img-cai670"
+            class="makeStyles-img-5"
             src="test-file-stub"
           />
           <div
-            class="Hook-descriptionContainer-1tsden"
+            class="makeStyles-descriptionContainer-7"
           >
             <p
-              class="MuiTypography-root-1 MuiTypography-body1-10 Hook-name-uohml8"
+              class="MuiTypography-root MuiTypography-body1 makeStyles-name-6"
             >
-              RailProtect Tape
+              SUP Single Fin US-Box
             </p>
             <a
-              class="MuiButtonBase-root-63 MuiButton-root-37 MuiButton-outlined-45 MuiButton-outlinedPrimary-46 Hook-button-429z7t"
-              href="https://amzn.to/2Y7BDDQ"
-              rel="noopener"
+              aria-disabled="false"
+              class="MuiButtonBase-root MuiButton-root makeStyles-button-9 MuiButton-outlined MuiButton-outlinedPrimary"
+              href="https://shop.eisbach-riders.com/product/sup-us-box-fin/"
               role="button"
               tabindex="0"
-              target="_blank"
             >
               <span
-                class="MuiButton-label-38"
+                class="MuiButton-label"
               >
                 common.more
               </span>
               <span
-                class="MuiTouchRipple-root-66"
+                class="MuiTouchRipple-root"
               />
             </a>
           </div>
         </div>
         <div
-          class="Hook-itemContainer-vdh5bf"
+          class="makeStyles-itemContainer-4"
         >
           <img
             alt="product 2"
-            class="Hook-img-cai670"
+            class="makeStyles-img-5"
             src="test-file-stub"
           />
           <div
-            class="Hook-descriptionContainer-1tsden"
+            class="makeStyles-descriptionContainer-7"
           >
             <p
-              class="MuiTypography-root-1 MuiTypography-body1-10 Hook-name-uohml8"
+              class="MuiTypography-root MuiTypography-body1 makeStyles-name-6"
             >
               Future Single Tab Thruster
             </p>
             <a
-              class="MuiButtonBase-root-63 MuiButton-root-37 MuiButton-outlined-45 MuiButton-outlinedPrimary-46 Hook-button-429z7t"
-              href="https://amzn.to/2OkhqGA"
-              rel="noopener"
+              aria-disabled="false"
+              class="MuiButtonBase-root MuiButton-root makeStyles-button-9 MuiButton-outlined MuiButton-outlinedPrimary"
+              href="https://shop.eisbach-riders.com/product/single-tab-nylon-fins/"
               role="button"
               tabindex="0"
-              target="_blank"
             >
               <span
-                class="MuiButton-label-38"
+                class="MuiButton-label"
               >
                 common.more
               </span>
               <span
-                class="MuiTouchRipple-root-66"
+                class="MuiTouchRipple-root"
               />
             </a>
           </div>
@@ -267,41 +261,33 @@ Object {
   "getAllByLabelText": [Function],
   "getAllByPlaceholderText": [Function],
   "getAllByRole": [Function],
-  "getAllBySelectText": [Function],
   "getAllByTestId": [Function],
   "getAllByText": [Function],
   "getAllByTitle": [Function],
-  "getAllByValue": [Function],
   "getByAltText": [Function],
   "getByDisplayValue": [Function],
   "getByLabelText": [Function],
   "getByPlaceholderText": [Function],
   "getByRole": [Function],
-  "getBySelectText": [Function],
   "getByTestId": [Function],
   "getByText": [Function],
   "getByTitle": [Function],
-  "getByValue": [Function],
   "queryAllByAltText": [Function],
   "queryAllByDisplayValue": [Function],
   "queryAllByLabelText": [Function],
   "queryAllByPlaceholderText": [Function],
   "queryAllByRole": [Function],
-  "queryAllBySelectText": [Function],
   "queryAllByTestId": [Function],
   "queryAllByText": [Function],
   "queryAllByTitle": [Function],
-  "queryAllByValue": [Function],
   "queryByAltText": [Function],
   "queryByDisplayValue": [Function],
   "queryByLabelText": [Function],
   "queryByPlaceholderText": [Function],
   "queryByRole": [Function],
-  "queryBySelectText": [Function],
   "queryByTestId": [Function],
   "queryByText": [Function],
   "queryByTitle": [Function],
-  "queryByValue": [Function],
   "rerender": [Function],
   "unmount": [Function],
 }

@@ -7,19 +7,19 @@ Object {
     <div>
       <div
         aria-describedby="client-snackbar"
-        class="MuiTypography-root-31 MuiTypography-body1-40 MuiPaper-root-4 MuiPaper-elevation6-12 MuiSnackbarContent-root-1 Hook-success-g4r5jr"
+        class="MuiTypography-root MuiTypography-body2 MuiPaper-root MuiPaper-elevation6 MuiSnackbarContent-root makeStyles-success-1"
         role="alertdialog"
       >
         <div
-          class="MuiSnackbarContent-message-2"
+          class="MuiSnackbarContent-message"
         >
           <span
-            class="Hook-message-1v13ai5"
+            class="makeStyles-message-7"
             id="client-snackbar"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root-67 Hook-icon-m363rg Hook-iconVariant-1rwfjsj"
+              class="MuiSvgIcon-root makeStyles-icon-5 makeStyles-iconVariant-6"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -35,20 +35,20 @@ Object {
           </span>
         </div>
         <div
-          class="MuiSnackbarContent-action-3"
+          class="MuiSnackbarContent-action"
         >
           <button
             aria-label="Close"
-            class="MuiButtonBase-root-82 MuiIconButton-root-76 MuiIconButton-colorInherit-77"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit"
             tabindex="0"
             type="button"
           >
             <span
-              class="MuiIconButton-label-81"
+              class="MuiIconButton-label"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root-67 Hook-icon-m363rg"
+                class="MuiSvgIcon-root makeStyles-icon-5"
                 focusable="false"
                 role="presentation"
                 viewBox="0 0 24 24"
@@ -63,7 +63,7 @@ Object {
               </svg>
             </span>
             <span
-              class="MuiTouchRipple-root-85"
+              class="MuiTouchRipple-root"
             />
           </button>
         </div>
@@ -73,19 +73,19 @@ Object {
   "container": <div>
     <div
       aria-describedby="client-snackbar"
-      class="MuiTypography-root-31 MuiTypography-body1-40 MuiPaper-root-4 MuiPaper-elevation6-12 MuiSnackbarContent-root-1 Hook-success-g4r5jr"
+      class="MuiTypography-root MuiTypography-body2 MuiPaper-root MuiPaper-elevation6 MuiSnackbarContent-root makeStyles-success-1"
       role="alertdialog"
     >
       <div
-        class="MuiSnackbarContent-message-2"
+        class="MuiSnackbarContent-message"
       >
         <span
-          class="Hook-message-1v13ai5"
+          class="makeStyles-message-7"
           id="client-snackbar"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root-67 Hook-icon-m363rg Hook-iconVariant-1rwfjsj"
+            class="MuiSvgIcon-root makeStyles-icon-5 makeStyles-iconVariant-6"
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"
@@ -101,20 +101,20 @@ Object {
         </span>
       </div>
       <div
-        class="MuiSnackbarContent-action-3"
+        class="MuiSnackbarContent-action"
       >
         <button
           aria-label="Close"
-          class="MuiButtonBase-root-82 MuiIconButton-root-76 MuiIconButton-colorInherit-77"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit"
           tabindex="0"
           type="button"
         >
           <span
-            class="MuiIconButton-label-81"
+            class="MuiIconButton-label"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root-67 Hook-icon-m363rg"
+              class="MuiSvgIcon-root makeStyles-icon-5"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -129,7 +129,7 @@ Object {
             </svg>
           </span>
           <span
-            class="MuiTouchRipple-root-85"
+            class="MuiTouchRipple-root"
           />
         </button>
       </div>
@@ -157,41 +157,33 @@ Object {
   "getAllByLabelText": [Function],
   "getAllByPlaceholderText": [Function],
   "getAllByRole": [Function],
-  "getAllBySelectText": [Function],
   "getAllByTestId": [Function],
   "getAllByText": [Function],
   "getAllByTitle": [Function],
-  "getAllByValue": [Function],
   "getByAltText": [Function],
   "getByDisplayValue": [Function],
   "getByLabelText": [Function],
   "getByPlaceholderText": [Function],
   "getByRole": [Function],
-  "getBySelectText": [Function],
   "getByTestId": [Function],
   "getByText": [Function],
   "getByTitle": [Function],
-  "getByValue": [Function],
   "queryAllByAltText": [Function],
   "queryAllByDisplayValue": [Function],
   "queryAllByLabelText": [Function],
   "queryAllByPlaceholderText": [Function],
   "queryAllByRole": [Function],
-  "queryAllBySelectText": [Function],
   "queryAllByTestId": [Function],
   "queryAllByText": [Function],
   "queryAllByTitle": [Function],
-  "queryAllByValue": [Function],
   "queryByAltText": [Function],
   "queryByDisplayValue": [Function],
   "queryByLabelText": [Function],
   "queryByPlaceholderText": [Function],
   "queryByRole": [Function],
-  "queryBySelectText": [Function],
   "queryByTestId": [Function],
   "queryByText": [Function],
   "queryByTitle": [Function],
-  "queryByValue": [Function],
   "rerender": [Function],
   "unmount": [Function],
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from 'react-testing-library'
 import Shop from '../Shop'
 import { ThemeProvider } from '@material-ui/styles'
-import theme from '../../../assets/theme/muiTheme'
+import theme from '../../../theme'
 
 describe('Shop', () => {
   const fetch = require('node-fetch')
