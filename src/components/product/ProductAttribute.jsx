@@ -22,7 +22,6 @@ function ProductAttribute({ attribute }) {
   //   setLabelWidth(inputLabel.current.offsetWidth)
   // }, [])
 
-  console.log(attribute)
   return (
     <form autoComplete="off" className={classes.form}>
       <FormControl className={classes.formControl}>
@@ -36,7 +35,9 @@ function ProductAttribute({ attribute }) {
           }}
         >
           {attribute.options.map(elem => (
-            <MenuItem value={elem}>{elem}</MenuItem>
+            <MenuItem value={elem} key={`attribute${elem}`}>
+              {elem}
+            </MenuItem>
           ))}
         </Select>
       </FormControl>

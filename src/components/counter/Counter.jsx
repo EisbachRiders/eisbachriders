@@ -1,29 +1,49 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/styles'
-import classnames from 'classnames'
 import IconButton from '@material-ui/core/IconButton'
-import MinusIcon from '@material-ui/icons/Minus'
+import RemoveIcon from '@material-ui/icons/Remove'
+import AddIcon from '@material-ui/icons/Add'
+import InputBase from '@material-ui/core/InputBase'
+import InputLabel from '@material-ui/core/InputLabel'
 
 const useStyles = makeStyles(theme => ({
-  form: { width: '100%', marginBottom: 30 },
-  formControl: {
-    width: '100%',
+  container: {
+    display: 'flex',
+  },
+  input: {
+    width: 32,
+  },
+  inputProp: {
+    textAlign: 'right',
   },
 }))
 
-function Counter() {
+function Counter({ handleRemove, handleAdd, value }) {
   const classes = useStyles()
 
   return (
-    <>
-      <IconButton>
-        <MinusIcon />
+    <div className={classes.container}>
+      <IconButton className={classes.iconButton} onClick={() => handleRemove()}>
+        <RemoveIcon />
       </IconButton>
-      <Input />
-      <IconButton>
-        <PlusIcon />
+      <form className={classes.container} noValidate autoComplete="off">
+        <InputLabel htmlFor="counter" className="visually-hidden">
+          Quantity
+        </InputLabel>
+        <InputBase
+          id="counter"
+          readOnly
+          className={classes.input}
+          classes={{ input: classes.inputProp }}
+          value={value}
+          margin="none"
+          type="number"
+        />
+      </form>
+      <IconButton className={classes.iconButton} onClick={() => handleAdd()}>
+        <AddIcon />
       </IconButton>
-    </>
+    </div>
   )
 }
 

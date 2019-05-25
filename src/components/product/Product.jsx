@@ -7,10 +7,18 @@ import classnames from 'classnames'
 import Button from '@material-ui/core/Button'
 import ProductAttribute from './ProductAttribute'
 import ProductImg from './ProductImg'
+import ProductDescription from './ProductDescription'
+import Counter from '../counter/Counter'
 
 const mapStateToProps = ({ product }) => {
   return { product }
 }
+
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     addToCart: (product,quantity) => dispatch({ type: `PRODUCT`, product }),
+//   }
+// }
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -18,8 +26,7 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: 30,
     paddingLeft: 15,
     paddingRight: 15,
-    display: 'flex',
-    justifyContent: 'space-between',
+
     [theme.breakpoints.up('sm')]: {
       paddingLeft: 60,
       paddingRight: 60,
@@ -43,8 +50,12 @@ const useStyles = makeStyles(theme => ({
       paddingRight: 400,
     },
   },
+  container: {
+    display: 'flex',
+    justifyContent: 'space-between',
+  },
   imgContainer: {
-    flexBasis: '60%',
+    flexBasis: '50%',
   },
   name: {
     paddingBottom: 10,
@@ -52,7 +63,13 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'left',
   },
   contentContainer: {
-    flexBasis: '30%',
+    flexBasis: '40%',
+  },
+  priceContainer: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 30,
   },
   price: {
     display: 'flex',
@@ -62,69 +79,86 @@ const useStyles = makeStyles(theme => ({
   red: {
     color: theme.status.red,
   },
-  listItem: {
-    alignItems: 'flex-start',
-    paddingLeft: 0,
-    paddingRight: 0,
-    paddingBottom: 0,
-  },
-  listItemTextRoot: {
-    paddingLeft: 0,
-    paddingRight: 0,
-  },
-  listItemText: {
-    fontSize: 14,
-  },
-  icon: {
-    fontSize: 18,
-  },
-  iconButton: {
-    color: theme.status.black,
-    fontSize: 36,
-  },
-  priceContainer: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: 30,
+  divider: {
+    marginBottom: 60,
+    marginTop: 60,
+    borderBottom: `1px solid ${theme.status.grey}`,
   },
 }))
 
 function Product({ product }) {
   const { t } = useTranslation()
   const classes = useStyles()
+  const [quantity, setQuantity] = useState(1)
 
-  console.log(product)
+  const handleRemove = () => {
+    if (quantity > 0) {
+      setQuantity(quantity - 1)
+    }
+  }
+
+  const handleAdd = () => {
+    if (quantity < 15 || quantity < product.stock_quantity) {
+      setQuantity(quantity + 1)
+    }
+  }
+
+  const handleCart = () => {}
+
   return (
     <div className={classes.root}>
       {Object.keys(product).length !== 0 && (
-        <>
-          <div className={classes.imgContainer}>
-            <ProductImg images={product.images} />
-          </div>
-          <div className={classes.contentContainer}>
-            <Typography variant="h6" className={classes.name}>
-              {product.name}
-            </Typography>
-            <div className={classes.priceContainer}>
-              <Typography variant="h6" className={classes.price}>
-                {`€${product.price}`}
-              </Typography>
-              {!product.in_stock && (
-                <Typography className={classnames(classes.price, classes.red)}>
-                  {t('products.outOfStock')}
-                </Typography>
-              )}
+        <div>
+          <div className={classes.container}>
+            <div className={classes.imgContainer}>
+              <ProductImg images={product.images} />
             </div>
-            {product.attributes.length !== 0 &&
-              product.attributes.map(elem => (
-                <ProductAttribute attribute={elem} />
-              ))}
-            <Button variant="contained" color="primary">
-              {t('products.addToCart')}
-            </Button>
+            <div className={classes.contentContainer}>
+              <Typography variant="h6" className={classes.name}>
+                {product.name}
+              </Typography>
+              <div
+                dangerouslySetInnerHTML={{ __html: product.short_description }}
+                className={classes.text}
+              />
+              <div className={classes.priceContainer}>
+                <Typography variant="h6" className={classes.price}>
+                  {`€${product.price}`}
+                </Typography>
+                {!product.in_stock && (
+                  <Typography
+                    className={classnames(classes.price, classes.red)}
+                  >
+                    {t('products.outOfStock')}
+                  </Typography>
+                )}
+              </div>
+              {product.attributes.length !== 0 &&
+                product.attributes.map(elem => (
+                  <ProductAttribute
+                    attribute={elem}
+                    key={`attribute_${elem.name}`}
+                  />
+                ))}
+              <div className={classes.priceContainer}>
+                <Counter
+                  handleRemove={handleRemove}
+                  handleAdd={handleAdd}
+                  value={quantity}
+                />
+                <Button
+                  variant="contained"
+                  color="primary"
+                  onClick={handleCart}
+                >
+                  {t('products.addToCart')}
+                </Button>
+              </div>
+            </div>
           </div>
-        </>
+          <div className={classes.divider} />
+          <ProductDescription product={product} />
+        </div>
       )}
     </div>
   )
