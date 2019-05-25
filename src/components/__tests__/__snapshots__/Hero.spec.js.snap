@@ -6,10 +6,10 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="Hook-root-1ko8ali"
+        class="makeStyles-root-1"
       >
         <div
-          class="Hook-img-fsctee gatsby-image-wrapper"
+          class="makeStyles-img-3 gatsby-image-wrapper"
           style="position: absolute; overflow: hidden;"
         >
           <div
@@ -25,52 +25,52 @@ Object {
             />
           </picture>
           <noscript>
-            &lt;picture&gt;&lt;img sizes="mockString" srcset="mockString" src="mockString" alt="wave" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+            &lt;picture&gt;&lt;img loading="lazy" sizes="mockString" srcset="mockString" src="mockString" alt="wave" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
           </noscript>
         </div>
         <div
-          class="Hook-container-jdq4g6"
+          class="makeStyles-container-2"
         >
           <h2
-            class="MuiTypography-root-1 MuiTypography-h2-14 MuiTypography-gutterBottom-28 Hook-text-n934yh Hook-title-1hy883f"
+            class="MuiTypography-root MuiTypography-h2 MuiTypography-gutterBottom makeStyles-text-4 makeStyles-title-5"
           >
             E
             <span
-              class="Hook-small-d5kd93"
+              class="makeStyles-small-7"
             >
               ISBACH
             </span>
           </h2>
           <h2
-            class="MuiTypography-root-1 MuiTypography-h2-14 MuiTypography-gutterBottom-28 Hook-text-n934yh Hook-title-1hy883f Hook-title2-z9aol5"
+            class="MuiTypography-root MuiTypography-h2 MuiTypography-gutterBottom makeStyles-text-4 makeStyles-title-5 makeStyles-title2-6"
           >
             R
             <span
-              class="Hook-small-d5kd93"
+              class="makeStyles-small-7"
             >
               IDERS
             </span>
           </h2>
           <p
-            class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-n934yh Hook-subtitle-mygehx"
+            class="MuiTypography-root MuiTypography-body1 makeStyles-text-4 makeStyles-subtitle-8"
           >
             hero.subtitle
           </p>
           <div
-            class="Hook-containerNewsletter-1aq479i"
+            class="makeStyles-containerNewsletter-39"
           >
             <button
-              class="MuiButtonBase-root-70 MuiButton-root-44 MuiButton-contained-55 MuiButton-containedPrimary-56 MuiButton-raised-58 MuiButton-raisedPrimary-59 MuiButton-fullWidth-69 Hook-button-1j9lk2z"
+              class="MuiButtonBase-root MuiButton-root makeStyles-button-42 MuiButton-containedPrimary MuiButton-contained MuiButton-fullWidth"
               tabindex="0"
               type="button"
             >
               <span
-                class="MuiButton-label-45"
+                class="MuiButton-label"
               >
                 newsletter.signUp
               </span>
               <span
-                class="MuiTouchRipple-root-89"
+                class="MuiTouchRipple-root"
               />
             </button>
           </div>
@@ -80,10 +80,10 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="Hook-root-1ko8ali"
+      class="makeStyles-root-1"
     >
       <div
-        class="Hook-img-fsctee gatsby-image-wrapper"
+        class="makeStyles-img-3 gatsby-image-wrapper"
         style="position: absolute; overflow: hidden;"
       >
         <div
@@ -99,52 +99,52 @@ Object {
           />
         </picture>
         <noscript>
-          &lt;picture&gt;&lt;img sizes="mockString" srcset="mockString" src="mockString" alt="wave" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+          &lt;picture&gt;&lt;img loading="lazy" sizes="mockString" srcset="mockString" src="mockString" alt="wave" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
         </noscript>
       </div>
       <div
-        class="Hook-container-jdq4g6"
+        class="makeStyles-container-2"
       >
         <h2
-          class="MuiTypography-root-1 MuiTypography-h2-14 MuiTypography-gutterBottom-28 Hook-text-n934yh Hook-title-1hy883f"
+          class="MuiTypography-root MuiTypography-h2 MuiTypography-gutterBottom makeStyles-text-4 makeStyles-title-5"
         >
           E
           <span
-            class="Hook-small-d5kd93"
+            class="makeStyles-small-7"
           >
             ISBACH
           </span>
         </h2>
         <h2
-          class="MuiTypography-root-1 MuiTypography-h2-14 MuiTypography-gutterBottom-28 Hook-text-n934yh Hook-title-1hy883f Hook-title2-z9aol5"
+          class="MuiTypography-root MuiTypography-h2 MuiTypography-gutterBottom makeStyles-text-4 makeStyles-title-5 makeStyles-title2-6"
         >
           R
           <span
-            class="Hook-small-d5kd93"
+            class="makeStyles-small-7"
           >
             IDERS
           </span>
         </h2>
         <p
-          class="MuiTypography-root-1 MuiTypography-body1-10 Hook-text-n934yh Hook-subtitle-mygehx"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-4 makeStyles-subtitle-8"
         >
           hero.subtitle
         </p>
         <div
-          class="Hook-containerNewsletter-1aq479i"
+          class="makeStyles-containerNewsletter-39"
         >
           <button
-            class="MuiButtonBase-root-70 MuiButton-root-44 MuiButton-contained-55 MuiButton-containedPrimary-56 MuiButton-raised-58 MuiButton-raisedPrimary-59 MuiButton-fullWidth-69 Hook-button-1j9lk2z"
+            class="MuiButtonBase-root MuiButton-root makeStyles-button-42 MuiButton-containedPrimary MuiButton-contained MuiButton-fullWidth"
             tabindex="0"
             type="button"
           >
             <span
-              class="MuiButton-label-45"
+              class="MuiButton-label"
             >
               newsletter.signUp
             </span>
             <span
-              class="MuiTouchRipple-root-89"
+              class="MuiTouchRipple-root"
             />
           </button>
         </div>
@@ -173,41 +173,33 @@ Object {
   "getAllByLabelText": [Function],
   "getAllByPlaceholderText": [Function],
   "getAllByRole": [Function],
-  "getAllBySelectText": [Function],
   "getAllByTestId": [Function],
   "getAllByText": [Function],
   "getAllByTitle": [Function],
-  "getAllByValue": [Function],
   "getByAltText": [Function],
   "getByDisplayValue": [Function],
   "getByLabelText": [Function],
   "getByPlaceholderText": [Function],
   "getByRole": [Function],
-  "getBySelectText": [Function],
   "getByTestId": [Function],
   "getByText": [Function],
   "getByTitle": [Function],
-  "getByValue": [Function],
   "queryAllByAltText": [Function],
   "queryAllByDisplayValue": [Function],
   "queryAllByLabelText": [Function],
   "queryAllByPlaceholderText": [Function],
   "queryAllByRole": [Function],
-  "queryAllBySelectText": [Function],
   "queryAllByTestId": [Function],
   "queryAllByText": [Function],
   "queryAllByTitle": [Function],
-  "queryAllByValue": [Function],
   "queryByAltText": [Function],
   "queryByDisplayValue": [Function],
   "queryByLabelText": [Function],
   "queryByPlaceholderText": [Function],
   "queryByRole": [Function],
-  "queryBySelectText": [Function],
   "queryByTestId": [Function],
   "queryByText": [Function],
   "queryByTitle": [Function],
-  "queryByValue": [Function],
   "rerender": [Function],
   "unmount": [Function],
 }

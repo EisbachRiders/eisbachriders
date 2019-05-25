@@ -6,23 +6,24 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="MuiSnackbar-root-1 MuiSnackbar-anchorOriginBottomCenter-3 Hook-snackbar-1x73or3"
+        class="MuiSnackbar-root MuiSnackbar-anchorOriginBottomCenter makeStyles-snackbar-1"
       >
         <div
           aria-describedby="client-snackbar"
-          class="MuiTypography-root-38 MuiTypography-body1-47 MuiPaper-root-11 MuiPaper-elevation6-19 MuiSnackbarContent-root-8 Hook-snackbarContent-vntwp2"
+          class="MuiTypography-root MuiTypography-body2 MuiPaper-root MuiPaper-elevation6 MuiSnackbarContent-root makeStyles-snackbarContent-2"
+          direction="up"
           role="alertdialog"
-          style="-webkit-transform: translate(0, 0); transform: translate(0, 0); -webkit-transition: -webkit-transform 225ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;"
+          style="opacity: 1; transform: scale(1, 1);"
         >
           <div
-            class="MuiSnackbarContent-message-9 Hook-message-1f4qzjh"
+            class="MuiSnackbarContent-message makeStyles-message-3"
           >
             <span
               id="client-snackbar"
             >
               tracking.message
               <a
-                class="Hook-link-1ajxyk9"
+                class="makeStyles-link-7"
                 href="/privacy/"
               >
                 tracking.privacyLink
@@ -30,35 +31,36 @@ Object {
             </span>
           </div>
           <div
-            class="MuiSnackbarContent-action-10 Hook-action-1w0eo5p"
+            class="MuiSnackbarContent-action makeStyles-action-4"
           >
             <a
-              class="MuiButtonBase-root-100 MuiButton-root-74 MuiButton-text-76 MuiButton-flat-79 Hook-buttonDecline-13ddspg"
+              aria-disabled="false"
+              class="MuiButtonBase-root MuiButton-root makeStyles-buttonDecline-6 MuiButton-text"
               href="javascript:gaOptout();"
               role="button"
               tabindex="0"
             >
               <span
-                class="MuiButton-label-75"
+                class="MuiButton-label"
               >
                 tracking.decline
               </span>
               <span
-                class="MuiTouchRipple-root-103"
+                class="MuiTouchRipple-root"
               />
             </a>
             <button
-              class="MuiButtonBase-root-100 MuiButton-root-74 MuiButton-contained-85 MuiButton-containedPrimary-86 MuiButton-raised-88 MuiButton-raisedPrimary-89 Hook-button-qulza8"
+              class="MuiButtonBase-root MuiButton-root makeStyles-button-5 MuiButton-containedPrimary MuiButton-contained"
               tabindex="0"
               type="button"
             >
               <span
-                class="MuiButton-label-75"
+                class="MuiButton-label"
               >
                 tracking.accept
               </span>
               <span
-                class="MuiTouchRipple-root-103"
+                class="MuiTouchRipple-root"
               />
             </button>
           </div>
@@ -68,23 +70,24 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="MuiSnackbar-root-1 MuiSnackbar-anchorOriginBottomCenter-3 Hook-snackbar-1x73or3"
+      class="MuiSnackbar-root MuiSnackbar-anchorOriginBottomCenter makeStyles-snackbar-1"
     >
       <div
         aria-describedby="client-snackbar"
-        class="MuiTypography-root-38 MuiTypography-body1-47 MuiPaper-root-11 MuiPaper-elevation6-19 MuiSnackbarContent-root-8 Hook-snackbarContent-vntwp2"
+        class="MuiTypography-root MuiTypography-body2 MuiPaper-root MuiPaper-elevation6 MuiSnackbarContent-root makeStyles-snackbarContent-2"
+        direction="up"
         role="alertdialog"
-        style="-webkit-transform: translate(0, 0); transform: translate(0, 0); -webkit-transition: -webkit-transform 225ms cubic-bezier(0.0, 0, 0.2, 1) 0ms;"
+        style="opacity: 1; transform: scale(1, 1);"
       >
         <div
-          class="MuiSnackbarContent-message-9 Hook-message-1f4qzjh"
+          class="MuiSnackbarContent-message makeStyles-message-3"
         >
           <span
             id="client-snackbar"
           >
             tracking.message
             <a
-              class="Hook-link-1ajxyk9"
+              class="makeStyles-link-7"
               href="/privacy/"
             >
               tracking.privacyLink
@@ -92,35 +95,36 @@ Object {
           </span>
         </div>
         <div
-          class="MuiSnackbarContent-action-10 Hook-action-1w0eo5p"
+          class="MuiSnackbarContent-action makeStyles-action-4"
         >
           <a
-            class="MuiButtonBase-root-100 MuiButton-root-74 MuiButton-text-76 MuiButton-flat-79 Hook-buttonDecline-13ddspg"
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiButton-root makeStyles-buttonDecline-6 MuiButton-text"
             href="javascript:gaOptout();"
             role="button"
             tabindex="0"
           >
             <span
-              class="MuiButton-label-75"
+              class="MuiButton-label"
             >
               tracking.decline
             </span>
             <span
-              class="MuiTouchRipple-root-103"
+              class="MuiTouchRipple-root"
             />
           </a>
           <button
-            class="MuiButtonBase-root-100 MuiButton-root-74 MuiButton-contained-85 MuiButton-containedPrimary-86 MuiButton-raised-88 MuiButton-raisedPrimary-89 Hook-button-qulza8"
+            class="MuiButtonBase-root MuiButton-root makeStyles-button-5 MuiButton-containedPrimary MuiButton-contained"
             tabindex="0"
             type="button"
           >
             <span
-              class="MuiButton-label-75"
+              class="MuiButton-label"
             >
               tracking.accept
             </span>
             <span
-              class="MuiTouchRipple-root-103"
+              class="MuiTouchRipple-root"
             />
           </button>
         </div>
@@ -149,41 +153,33 @@ Object {
   "getAllByLabelText": [Function],
   "getAllByPlaceholderText": [Function],
   "getAllByRole": [Function],
-  "getAllBySelectText": [Function],
   "getAllByTestId": [Function],
   "getAllByText": [Function],
   "getAllByTitle": [Function],
-  "getAllByValue": [Function],
   "getByAltText": [Function],
   "getByDisplayValue": [Function],
   "getByLabelText": [Function],
   "getByPlaceholderText": [Function],
   "getByRole": [Function],
-  "getBySelectText": [Function],
   "getByTestId": [Function],
   "getByText": [Function],
   "getByTitle": [Function],
-  "getByValue": [Function],
   "queryAllByAltText": [Function],
   "queryAllByDisplayValue": [Function],
   "queryAllByLabelText": [Function],
   "queryAllByPlaceholderText": [Function],
   "queryAllByRole": [Function],
-  "queryAllBySelectText": [Function],
   "queryAllByTestId": [Function],
   "queryAllByText": [Function],
   "queryAllByTitle": [Function],
-  "queryAllByValue": [Function],
   "queryByAltText": [Function],
   "queryByDisplayValue": [Function],
   "queryByLabelText": [Function],
   "queryByPlaceholderText": [Function],
   "queryByRole": [Function],
-  "queryBySelectText": [Function],
   "queryByTestId": [Function],
   "queryByText": [Function],
   "queryByTitle": [Function],
-  "queryByValue": [Function],
   "rerender": [Function],
   "unmount": [Function],
 }

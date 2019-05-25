@@ -3,8 +3,8 @@ import { render } from 'react-testing-library'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { ThemeProvider } from '@material-ui/styles'
-import theme from '../../assets/theme/muiTheme'
-import { reducer } from '../../state/createStore'
+import theme from '../../theme'
+import { reducer } from '../../redux/createStore'
 import Header from '../Header'
 
 describe('Header', () => {

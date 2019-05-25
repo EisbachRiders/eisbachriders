@@ -57,7 +57,7 @@ function MobileHeaderList({ links, linkLabels, lng, changeLng }) {
         <Button
           aria-label="shop"
           className={classes.button}
-          href="https://shop.eisbach-riders.com/shop/"
+          href="https://shop.eisbach-riders.com/"
           disableFocusRipple
           disableRipple
         >

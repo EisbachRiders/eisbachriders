@@ -1,0 +1,284 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product renders correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="makeStyles-root-1"
+      >
+        <div
+          class="makeStyles-container-2"
+        >
+          <div
+            class="makeStyles-imgContainer-3"
+          >
+            <div
+              style="overflow-x: hidden;"
+            >
+              <div
+                class="react-swipeable-view-container"
+                style="flex-direction: row; direction: ltr; display: flex;"
+              >
+                <div
+                  aria-hidden="false"
+                  data-swipeable="true"
+                  style="width: 100%; overflow: auto;"
+                >
+                  <img
+                    alt="product0"
+                    class="makeStyles-img-7"
+                    src=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiPaper-root MuiPaper-elevation0 MuiMobileStepper-root MuiMobileStepper-positionStatic makeStyles-mobileStepper-14"
+            >
+              <button
+                aria-label="common.scrollRight"
+                class="MuiButtonBase-root MuiIconButton-root Mui-disabled MuiIconButton-sizeSmall Mui-disabled"
+                disabled=""
+                tabindex="-1"
+                type="button"
+              >
+                <span
+                  class="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
+                    />
+                    <path
+                      d="M0 0h24v24H0V0z"
+                      fill="none"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <div
+                class="MuiMobileStepper-dots"
+              >
+                <div
+                  class="MuiMobileStepper-dot MuiMobileStepper-dotActive"
+                />
+              </div>
+              <button
+                aria-label="common.scrollLeft"
+                class="MuiButtonBase-root MuiIconButton-root Mui-disabled MuiIconButton-sizeSmall Mui-disabled"
+                disabled=""
+                tabindex="-1"
+                type="button"
+              >
+                <span
+                  class="MuiIconButton-label"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
+                    />
+                    <path
+                      d="M0 0h24v24H0V0z"
+                      fill="none"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+          <div
+            class="makeStyles-contentContainer-5"
+          >
+            <div
+              class="makeStyles-priceContainer-13"
+            >
+              <h6
+                class="MuiTypography-root MuiTypography-h6 makeStyles-price-6"
+              >
+                €undefined
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="makeStyles-root-1"
+    >
+      <div
+        class="makeStyles-container-2"
+      >
+        <div
+          class="makeStyles-imgContainer-3"
+        >
+          <div
+            style="overflow-x: hidden;"
+          >
+            <div
+              class="react-swipeable-view-container"
+              style="flex-direction: row; direction: ltr; display: flex;"
+            >
+              <div
+                aria-hidden="false"
+                data-swipeable="true"
+                style="width: 100%; overflow: auto;"
+              >
+                <img
+                  alt="product0"
+                  class="makeStyles-img-7"
+                  src=""
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="MuiPaper-root MuiPaper-elevation0 MuiMobileStepper-root MuiMobileStepper-positionStatic makeStyles-mobileStepper-14"
+          >
+            <button
+              aria-label="common.scrollRight"
+              class="MuiButtonBase-root MuiIconButton-root Mui-disabled MuiIconButton-sizeSmall Mui-disabled"
+              disabled=""
+              tabindex="-1"
+              type="button"
+            >
+              <span
+                class="MuiIconButton-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
+                  />
+                  <path
+                    d="M0 0h24v24H0V0z"
+                    fill="none"
+                  />
+                </svg>
+              </span>
+            </button>
+            <div
+              class="MuiMobileStepper-dots"
+            >
+              <div
+                class="MuiMobileStepper-dot MuiMobileStepper-dotActive"
+              />
+            </div>
+            <button
+              aria-label="common.scrollLeft"
+              class="MuiButtonBase-root MuiIconButton-root Mui-disabled MuiIconButton-sizeSmall Mui-disabled"
+              disabled=""
+              tabindex="-1"
+              type="button"
+            >
+              <span
+                class="MuiIconButton-label"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
+                  />
+                  <path
+                    d="M0 0h24v24H0V0z"
+                    fill="none"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div
+          class="makeStyles-contentContainer-5"
+        >
+          <div
+            class="makeStyles-priceContainer-13"
+          >
+            <h6
+              class="MuiTypography-root MuiTypography-h6 makeStyles-price-6"
+            >
+              €undefined
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

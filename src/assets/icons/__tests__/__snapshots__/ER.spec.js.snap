@@ -7,7 +7,7 @@ Object {
     <div>
       <svg
         aria-hidden="true"
-        class="MuiSvgIcon-root-1"
+        class="MuiSvgIcon-root"
         focusable="false"
         role="presentation"
         viewBox="0 0 256.000000 256.000000"
@@ -54,7 +54,7 @@ c29 0 55 4 58 8 3 5 -12 78 -33 163 l-38 154 -44 3 c-24 1 -50 -1 -56 -6z"
   "container": <div>
     <svg
       aria-hidden="true"
-      class="MuiSvgIcon-root-1"
+      class="MuiSvgIcon-root"
       focusable="false"
       role="presentation"
       viewBox="0 0 256.000000 256.000000"
@@ -119,41 +119,33 @@ c29 0 55 4 58 8 3 5 -12 78 -33 163 l-38 154 -44 3 c-24 1 -50 -1 -56 -6z"
   "getAllByLabelText": [Function],
   "getAllByPlaceholderText": [Function],
   "getAllByRole": [Function],
-  "getAllBySelectText": [Function],
   "getAllByTestId": [Function],
   "getAllByText": [Function],
   "getAllByTitle": [Function],
-  "getAllByValue": [Function],
   "getByAltText": [Function],
   "getByDisplayValue": [Function],
   "getByLabelText": [Function],
   "getByPlaceholderText": [Function],
   "getByRole": [Function],
-  "getBySelectText": [Function],
   "getByTestId": [Function],
   "getByText": [Function],
   "getByTitle": [Function],
-  "getByValue": [Function],
   "queryAllByAltText": [Function],
   "queryAllByDisplayValue": [Function],
   "queryAllByLabelText": [Function],
   "queryAllByPlaceholderText": [Function],
   "queryAllByRole": [Function],
-  "queryAllBySelectText": [Function],
   "queryAllByTestId": [Function],
   "queryAllByText": [Function],
   "queryAllByTitle": [Function],
-  "queryAllByValue": [Function],
   "queryByAltText": [Function],
   "queryByDisplayValue": [Function],
   "queryByLabelText": [Function],
   "queryByPlaceholderText": [Function],
   "queryByRole": [Function],
-  "queryBySelectText": [Function],
   "queryByTestId": [Function],
   "queryByText": [Function],
   "queryByTitle": [Function],
-  "queryByValue": [Function],
   "rerender": [Function],
   "unmount": [Function],
 }
