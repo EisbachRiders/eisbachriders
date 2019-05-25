@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from 'react-testing-library'
 import Newsletter from '../Newsletter'
 import { ThemeProvider } from '@material-ui/styles'
-import theme from '../../assets/theme/muiTheme'
+import theme from '../../theme'
 
 describe('Newsletter', () => {
   const mockProps = {

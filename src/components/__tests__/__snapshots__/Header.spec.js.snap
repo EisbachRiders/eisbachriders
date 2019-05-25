@@ -7,20 +7,20 @@ Object {
     <div>
       <div>
         <header
-          class="MuiPaper-root-10 MuiPaper-elevation4-16 MuiAppBar-root-1 MuiAppBar-positionStatic-5 MuiAppBar-colorPrimary-8 Hook-appbarDarkTheme-15lkwew"
+          class="MuiPaper-root MuiPaper-elevation4 MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary makeStyles-appbarDarkTheme-3"
         >
           <div
-            class="MuiToolbar-root-37 MuiToolbar-regular-39 MuiToolbar-gutters-38 Hook-toolbar-znuomc"
+            class="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters makeStyles-toolbar-4"
           >
             <a
               aria-label="home"
-              class="MuiTypography-root-46 MuiTypography-colorPrimary-76 MuiTypography-inline-81 MuiLink-root-41 MuiLink-underlineHover-43 Hook-logoButton-12u8327"
+              class="MuiTypography-root MuiTypography-colorPrimary MuiLink-root MuiLink-underlineHover makeStyles-logoButton-10"
               href="/"
               style="text-decoration: none;"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root-82 Hook-logoDarkTheme-qeq1lz"
+                class="MuiSvgIcon-root makeStyles-logoDarkTheme-7"
                 focusable="false"
                 role="presentation"
                 viewBox="0 0 256.000000 256.000000"
@@ -65,33 +65,35 @@ c29 0 55 4 58 8 3 5 -12 78 -33 163 l-38 154 -44 3 c-24 1 -50 -1 -56 -6z"
             </a>
             <div>
               <a
-                class="MuiButtonBase-root-117 MuiButton-root-91 MuiButton-text-93 MuiButton-flat-96 Hook-buttonDarkTheme-sgwht1"
-                href="https://shop.eisbach-riders.com/shop/"
+                aria-disabled="false"
+                class="MuiButtonBase-root MuiButton-root makeStyles-buttonDarkTheme-9 MuiButton-text"
+                href="https://shop.eisbach-riders.com/"
                 role="button"
                 tabindex="0"
               >
                 <span
-                  class="MuiButton-label-92"
+                  class="MuiButton-label"
                 >
                   header.shop
                 </span>
                 <span
-                  class="MuiTouchRipple-root-120"
+                  class="MuiTouchRipple-root"
                 />
               </a>
               <a
-                class="MuiButtonBase-root-117 MuiButton-root-91 MuiButton-text-93 MuiButton-flat-96 Hook-buttonDarkTheme-sgwht1"
-                href="https://shop.eisbach-riders.com/shop/"
+                aria-disabled="false"
+                class="MuiButtonBase-root MuiButton-root makeStyles-buttonDarkTheme-9 MuiButton-text"
+                href="https://shop.eisbach-riders.com/"
                 role="button"
                 tabindex="0"
               >
                 <span
-                  class="MuiButton-label-92"
+                  class="MuiButton-label"
                 >
                   header.cart
                 </span>
                 <span
-                  class="MuiTouchRipple-root-120"
+                  class="MuiTouchRipple-root"
                 />
               </a>
             </div>
@@ -103,20 +105,20 @@ c29 0 55 4 58 8 3 5 -12 78 -33 163 l-38 154 -44 3 c-24 1 -50 -1 -56 -6z"
   "container": <div>
     <div>
       <header
-        class="MuiPaper-root-10 MuiPaper-elevation4-16 MuiAppBar-root-1 MuiAppBar-positionStatic-5 MuiAppBar-colorPrimary-8 Hook-appbarDarkTheme-15lkwew"
+        class="MuiPaper-root MuiPaper-elevation4 MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary makeStyles-appbarDarkTheme-3"
       >
         <div
-          class="MuiToolbar-root-37 MuiToolbar-regular-39 MuiToolbar-gutters-38 Hook-toolbar-znuomc"
+          class="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters makeStyles-toolbar-4"
         >
           <a
             aria-label="home"
-            class="MuiTypography-root-46 MuiTypography-colorPrimary-76 MuiTypography-inline-81 MuiLink-root-41 MuiLink-underlineHover-43 Hook-logoButton-12u8327"
+            class="MuiTypography-root MuiTypography-colorPrimary MuiLink-root MuiLink-underlineHover makeStyles-logoButton-10"
             href="/"
             style="text-decoration: none;"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root-82 Hook-logoDarkTheme-qeq1lz"
+              class="MuiSvgIcon-root makeStyles-logoDarkTheme-7"
               focusable="false"
               role="presentation"
               viewBox="0 0 256.000000 256.000000"
@@ -161,33 +163,35 @@ c29 0 55 4 58 8 3 5 -12 78 -33 163 l-38 154 -44 3 c-24 1 -50 -1 -56 -6z"
           </a>
           <div>
             <a
-              class="MuiButtonBase-root-117 MuiButton-root-91 MuiButton-text-93 MuiButton-flat-96 Hook-buttonDarkTheme-sgwht1"
-              href="https://shop.eisbach-riders.com/shop/"
+              aria-disabled="false"
+              class="MuiButtonBase-root MuiButton-root makeStyles-buttonDarkTheme-9 MuiButton-text"
+              href="https://shop.eisbach-riders.com/"
               role="button"
               tabindex="0"
             >
               <span
-                class="MuiButton-label-92"
+                class="MuiButton-label"
               >
                 header.shop
               </span>
               <span
-                class="MuiTouchRipple-root-120"
+                class="MuiTouchRipple-root"
               />
             </a>
             <a
-              class="MuiButtonBase-root-117 MuiButton-root-91 MuiButton-text-93 MuiButton-flat-96 Hook-buttonDarkTheme-sgwht1"
-              href="https://shop.eisbach-riders.com/shop/"
+              aria-disabled="false"
+              class="MuiButtonBase-root MuiButton-root makeStyles-buttonDarkTheme-9 MuiButton-text"
+              href="https://shop.eisbach-riders.com/"
               role="button"
               tabindex="0"
             >
               <span
-                class="MuiButton-label-92"
+                class="MuiButton-label"
               >
                 header.cart
               </span>
               <span
-                class="MuiTouchRipple-root-120"
+                class="MuiTouchRipple-root"
               />
             </a>
           </div>
@@ -217,41 +221,33 @@ c29 0 55 4 58 8 3 5 -12 78 -33 163 l-38 154 -44 3 c-24 1 -50 -1 -56 -6z"
   "getAllByLabelText": [Function],
   "getAllByPlaceholderText": [Function],
   "getAllByRole": [Function],
-  "getAllBySelectText": [Function],
   "getAllByTestId": [Function],
   "getAllByText": [Function],
   "getAllByTitle": [Function],
-  "getAllByValue": [Function],
   "getByAltText": [Function],
   "getByDisplayValue": [Function],
   "getByLabelText": [Function],
   "getByPlaceholderText": [Function],
   "getByRole": [Function],
-  "getBySelectText": [Function],
   "getByTestId": [Function],
   "getByText": [Function],
   "getByTitle": [Function],
-  "getByValue": [Function],
   "queryAllByAltText": [Function],
   "queryAllByDisplayValue": [Function],
   "queryAllByLabelText": [Function],
   "queryAllByPlaceholderText": [Function],
   "queryAllByRole": [Function],
-  "queryAllBySelectText": [Function],
   "queryAllByTestId": [Function],
   "queryAllByText": [Function],
   "queryAllByTitle": [Function],
-  "queryAllByValue": [Function],
   "queryByAltText": [Function],
   "queryByDisplayValue": [Function],
   "queryByLabelText": [Function],
   "queryByPlaceholderText": [Function],
   "queryByRole": [Function],
-  "queryBySelectText": [Function],
   "queryByTestId": [Function],
   "queryByText": [Function],
   "queryByTitle": [Function],
-  "queryByValue": [Function],
   "rerender": [Function],
   "unmount": [Function],
 }

@@ -3,7 +3,7 @@ import { render } from 'react-testing-library'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { ThemeProvider } from '@material-ui/styles'
-import theme from '../../assets/theme/muiTheme'
+import theme from '../../theme'
 import { reducer } from '../../state/createStore'
 import Header from '../Header'
 
