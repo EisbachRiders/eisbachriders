@@ -6,40 +6,11 @@ import { makeStyles } from '@material-ui/styles'
 import Hidden from '@material-ui/core/Hidden'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
-import BrushStroke from '../BrushStroke'
+import BrushStroke from '../ui/BrushStroke'
 import FeatureDetail from './FeatureDetail'
-import { featureProduct } from '../../data/ProductData'
+import Container from '../ui/Container'
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    paddingTop: 30,
-    paddingBottom: 30,
-    paddingLeft: 15,
-    paddingRight: 15,
-    background: theme.palette.common.white,
-    [theme.breakpoints.up('sm')]: {
-      paddingLeft: 60,
-      paddingRight: 60,
-    },
-    [theme.breakpoints.up('md')]: {
-      paddingTop: 60,
-      paddingBottom: 60,
-      paddingLeft: 90,
-      paddingRight: 90,
-    },
-    [theme.breakpoints.up('lg')]: {
-      paddingTop: 90,
-      paddingBottom: 90,
-      paddingLeft: 170,
-      paddingRight: 170,
-    },
-    [theme.breakpoints.up('xl')]: {
-      paddingTop: 90,
-      paddingBottom: 90,
-      paddingLeft: 400,
-      paddingRight: 400,
-    },
-  },
   container: {
     display: 'flex',
     flexDirection: 'column',
@@ -111,7 +82,7 @@ function Feature({ img }) {
   const { t } = useTranslation()
 
   return (
-    <div className={classes.root}>
+    <Container>
       <Typography className={classes.title} variant="h5">
         {t('feature.featuredProduct')}
       </Typography>
@@ -145,7 +116,7 @@ function Feature({ img }) {
           </Button>
         </div>
       </div>
-    </div>
+    </Container>
   )
 }
 

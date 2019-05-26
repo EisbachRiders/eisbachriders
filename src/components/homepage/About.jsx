@@ -5,39 +5,11 @@ import { useTranslation } from 'react-i18next'
 import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
 import Hidden from '@material-ui/core/Hidden'
+import Container from '../ui/Container'
 
 const useStyles = makeStyles(theme => ({
-  root: {
+  container: {
     position: 'relative',
-    paddingTop: 30,
-    paddingBottom: 30,
-    paddingLeft: 15,
-    paddingRight: 15,
-    background: theme.status.greyBlue,
-    display: 'flex',
-    alignItems: 'center',
-    [theme.breakpoints.up('sm')]: {
-      paddingLeft: 60,
-      paddingRight: 60,
-    },
-    [theme.breakpoints.up('md')]: {
-      paddingTop: 60,
-      paddingBottom: 60,
-      paddingLeft: 90,
-      paddingRight: 90,
-    },
-    [theme.breakpoints.up('lg')]: {
-      paddingTop: 45,
-      paddingBottom: 90,
-      paddingLeft: 170,
-      paddingRight: 170,
-    },
-    [theme.breakpoints.up('xl')]: {
-      paddingTop: 90,
-      paddingBottom: 90,
-      paddingLeft: 400,
-      paddingRight: 400,
-    },
   },
   textContainer: {
     zIndex: 2,
@@ -124,7 +96,7 @@ function About({ img, waveImg }) {
   const classes = useStyles()
   const { t } = useTranslation()
   return (
-    <div className={classes.root} id="about">
+    <Container variant="center" background="grey" className={classes.container}>
       <div className={classes.textContainer}>
         <Typography className={classes.title} variant="h5">
           {t('about.sectionTitle1')}
@@ -155,7 +127,7 @@ function About({ img, waveImg }) {
         imgStyle={{ objectFit: 'fill' }}
         style={{ position: 'absolute' }}
       />
-    </div>
+    </Container>
   )
 }
 

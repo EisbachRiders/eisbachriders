@@ -9,6 +9,7 @@ import ProductAttribute from './ProductAttribute'
 import ProductImg from './ProductImg'
 import ProductDescription from './ProductDescription'
 import Counter from '../counter/Counter'
+import Container from '../ui/Container'
 
 const mapStateToProps = ({ product }) => {
   return { product }
@@ -21,35 +22,6 @@ const mapStateToProps = ({ product }) => {
 // }
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    paddingTop: 30,
-    paddingBottom: 30,
-    paddingLeft: 15,
-    paddingRight: 15,
-
-    [theme.breakpoints.up('sm')]: {
-      paddingLeft: 60,
-      paddingRight: 60,
-    },
-    [theme.breakpoints.up('md')]: {
-      paddingTop: 60,
-      paddingBottom: 60,
-      paddingLeft: 90,
-      paddingRight: 90,
-    },
-    [theme.breakpoints.up('lg')]: {
-      paddingTop: 45,
-      paddingBottom: 45,
-      paddingLeft: 170,
-      paddingRight: 170,
-    },
-    [theme.breakpoints.up('xl')]: {
-      paddingTop: 90,
-      paddingBottom: 90,
-      paddingLeft: 400,
-      paddingRight: 400,
-    },
-  },
   container: {
     display: 'flex',
     justifyContent: 'space-between',
@@ -106,7 +78,7 @@ function Product({ product }) {
   const handleCart = () => {}
 
   return (
-    <div className={classes.root}>
+    <Container>
       {Object.keys(product).length !== 0 && (
         <div>
           <div className={classes.container}>
@@ -160,7 +132,7 @@ function Product({ product }) {
           <ProductDescription product={product} />
         </div>
       )}
-    </div>
+    </Container>
   )
 }
 

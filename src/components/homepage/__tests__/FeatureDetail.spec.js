@@ -1,7 +1,7 @@
 import React from 'react'
 import { render } from 'react-testing-library'
 import { ThemeProvider } from '@material-ui/styles'
-import theme from '../../../assets/theme/muiTheme'
+import theme from '../../../theme'
 import FeatureDetail from '../FeatureDetail'
 
 describe('FeatureDetail', () => {

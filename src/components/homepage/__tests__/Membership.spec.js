@@ -1,17 +1,17 @@
 import React from 'react'
 import { render } from 'react-testing-library'
-import Newsletter from '../Newsletter'
+import Membership from '../Membership'
 import { ThemeProvider } from '@material-ui/styles'
-import theme from '../../assets/theme/muiTheme'
+import theme from '../../../theme'
 
-describe('Newsletter', () => {
-  const mockProps = {
-    t: () => '',
-  }
+describe('Membership', () => {
   it('renders correctly', () => {
+    const mockProps = {
+      t: () => '',
+    }
     const component = render(
       <ThemeProvider theme={theme}>
-        <Newsletter {...mockProps} />
+        <Membership {...mockProps} />
       </ThemeProvider>
     )
     expect(component).toMatchSnapshot()

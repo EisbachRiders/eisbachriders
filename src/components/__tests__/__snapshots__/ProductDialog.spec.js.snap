@@ -10,57 +10,62 @@ Object {
       aria-hidden="true"
     >
       <button
-        class="MuiButtonBase-root-27 MuiButton-root-1 MuiButton-outlined-9 MuiButton-outlinedPrimary-10 Hook-button-lupj5y"
+        class="MuiButtonBase-root MuiButton-root makeStyles-button-2 MuiButton-outlined MuiButton-outlinedPrimary"
         tabindex="0"
         type="button"
       >
         <span
-          class="MuiButton-label-2"
+          class="MuiButton-label"
         >
           mockButtonText
         </span>
         <span
-          class="MuiTouchRipple-root-46"
+          class="MuiTouchRipple-root"
         />
       </button>
     </div>
     <div
-      class="MuiModal-root-44 MuiDialog-root-30"
+      class="MuiDialog-root"
       role="dialog"
+      style="position: fixed; z-index: 1300; right: 0px; bottom: 0px; top: 0px; left: 0px;"
     >
       <div
         aria-hidden="true"
-        class="MuiBackdrop-root-53"
+        class="MuiBackdrop-root"
         style="opacity: 1; -webkit-transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
       />
       <div
-        class="MuiDialog-container-33 MuiDialog-scrollPaper-31"
+        data-test="sentinelStart"
+        tabindex="0"
+      />
+      <div
+        class="MuiDialog-container MuiDialog-scrollPaper"
         role="document"
         style="opacity: 1; -webkit-transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
         tabindex="-1"
       >
         <div
-          class="MuiPaper-root-55 MuiPaper-elevation24-81 MuiPaper-rounded-56 MuiDialog-paper-34 Hook-paper-y3zfpz MuiDialog-paperScrollPaper-35 MuiDialog-paperWidthMd-39"
+          class="MuiPaper-root MuiPaper-elevation24 MuiPaper-rounded MuiDialog-paper makeStyles-paper-3 MuiDialog-paperScrollPaper MuiDialog-paperWidthMd"
         >
           <div
-            class="MuiDialogTitle-root-82 Hook-dialogTitle-1w0wwyx"
+            class="MuiDialogTitle-root makeStyles-dialogTitle-7"
             id="dialog-title"
           >
-            <h2
-              class="MuiTypography-root-83 MuiTypography-title-89"
+            <h6
+              class="MuiTypography-root MuiTypography-h6"
             >
               <button
                 aria-label="close"
-                class="MuiButtonBase-root-27 MuiIconButton-root-119 MuiIconButton-colorInherit-120 Hook-closeButton-112e1qq"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit makeStyles-closeButton-8"
                 tabindex="0"
                 type="button"
               >
                 <span
-                  class="MuiIconButton-label-124"
+                  class="MuiIconButton-label"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root-125"
+                    class="MuiSvgIcon-root"
                     focusable="false"
                     role="presentation"
                     viewBox="0 0 24 24"
@@ -75,19 +80,19 @@ Object {
                   </svg>
                 </span>
                 <span
-                  class="MuiTouchRipple-root-46"
+                  class="MuiTouchRipple-root"
                 />
               </button>
-            </h2>
+            </h6>
           </div>
           <div
-            class="MuiDialogContent-root-134 Hook-dialogRoot-1xsx80b"
+            class="MuiDialogContent-root makeStyles-dialogRoot-20"
           >
             <div
-              class="Hook-dialogContainer-102dr8y"
+              class="makeStyles-dialogContainer-4"
             >
               <div
-                class="Hook-dialogImg-tyu7fo"
+                class="makeStyles-dialogImg-5"
               >
                 <div
                   style="overflow-x: hidden;"
@@ -98,21 +103,21 @@ Object {
                   />
                 </div>
                 <div
-                  class="MuiPaper-root-55 MuiPaper-elevation0-57 MuiMobileStepper-root-135 MuiMobileStepper-positionStatic-138 Hook-mobileStepper-1equy9r"
+                  class="MuiPaper-root MuiPaper-elevation0 MuiMobileStepper-root MuiMobileStepper-positionStatic makeStyles-mobileStepper-18"
                 >
                   <button
                     aria-label="scroll right"
-                    class="MuiButtonBase-root-27 MuiButtonBase-disabled-28 MuiIconButton-root-119 MuiIconButton-disabled-123"
+                    class="MuiButtonBase-root MuiIconButton-root Mui-disabled MuiIconButton-sizeSmall Mui-disabled"
                     disabled=""
                     tabindex="-1"
                     type="button"
                   >
                     <span
-                      class="MuiIconButton-label-124"
+                      class="MuiIconButton-label"
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-125"
+                        class="MuiSvgIcon-root"
                         focusable="false"
                         role="presentation"
                         viewBox="0 0 24 24"
@@ -128,20 +133,20 @@ Object {
                     </span>
                   </button>
                   <div
-                    class="MuiMobileStepper-dots-139"
+                    class="MuiMobileStepper-dots"
                   />
                   <button
                     aria-label="scroll left"
-                    class="MuiButtonBase-root-27 MuiIconButton-root-119"
+                    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeSmall"
                     tabindex="0"
                     type="button"
                   >
                     <span
-                      class="MuiIconButton-label-124"
+                      class="MuiIconButton-label"
                     >
                       <svg
                         aria-hidden="true"
-                        class="MuiSvgIcon-root-125"
+                        class="MuiSvgIcon-root"
                         focusable="false"
                         role="presentation"
                         viewBox="0 0 24 24"
@@ -156,49 +161,53 @@ Object {
                       </svg>
                     </span>
                     <span
-                      class="MuiTouchRipple-root-46"
+                      class="MuiTouchRipple-root"
                     />
                   </button>
                 </div>
               </div>
               <div
-                class="Hook-dialogContent-ikr7rs"
+                class="makeStyles-dialogContent-6"
               >
                 <div
-                  class="Hook-priceContainer-19tfvb6"
+                  class="makeStyles-priceContainer-17"
                 >
                   <h6
-                    class="MuiTypography-root-83 MuiTypography-h6-100 Hook-price-1gw20eh"
+                    class="MuiTypography-root MuiTypography-h6 makeStyles-price-10"
                   >
                     €undefined
                   </h6>
                   <div />
                 </div>
                 <ul
-                  class="MuiList-root-143 Hook-scroll-y6j20v"
+                  class="MuiList-root makeStyles-scroll-19"
                 />
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div
+        data-test="sentinelEnd"
+        tabindex="0"
+      />
     </div>
   </body>,
   "container": <div
     aria-hidden="true"
   >
     <button
-      class="MuiButtonBase-root-27 MuiButton-root-1 MuiButton-outlined-9 MuiButton-outlinedPrimary-10 Hook-button-lupj5y"
+      class="MuiButtonBase-root MuiButton-root makeStyles-button-2 MuiButton-outlined MuiButton-outlinedPrimary"
       tabindex="0"
       type="button"
     >
       <span
-        class="MuiButton-label-2"
+        class="MuiButton-label"
       >
         mockButtonText
       </span>
       <span
-        class="MuiTouchRipple-root-46"
+        class="MuiTouchRipple-root"
       />
     </button>
   </div>,
@@ -224,41 +233,33 @@ Object {
   "getAllByLabelText": [Function],
   "getAllByPlaceholderText": [Function],
   "getAllByRole": [Function],
-  "getAllBySelectText": [Function],
   "getAllByTestId": [Function],
   "getAllByText": [Function],
   "getAllByTitle": [Function],
-  "getAllByValue": [Function],
   "getByAltText": [Function],
   "getByDisplayValue": [Function],
   "getByLabelText": [Function],
   "getByPlaceholderText": [Function],
   "getByRole": [Function],
-  "getBySelectText": [Function],
   "getByTestId": [Function],
   "getByText": [Function],
   "getByTitle": [Function],
-  "getByValue": [Function],
   "queryAllByAltText": [Function],
   "queryAllByDisplayValue": [Function],
   "queryAllByLabelText": [Function],
   "queryAllByPlaceholderText": [Function],
   "queryAllByRole": [Function],
-  "queryAllBySelectText": [Function],
   "queryAllByTestId": [Function],
   "queryAllByText": [Function],
   "queryAllByTitle": [Function],
-  "queryAllByValue": [Function],
   "queryByAltText": [Function],
   "queryByDisplayValue": [Function],
   "queryByLabelText": [Function],
   "queryByPlaceholderText": [Function],
   "queryByRole": [Function],
-  "queryBySelectText": [Function],
   "queryByTestId": [Function],
   "queryByText": [Function],
   "queryByTitle": [Function],
-  "queryByValue": [Function],
   "rerender": [Function],
   "unmount": [Function],
 }

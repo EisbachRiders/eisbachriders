@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
-import brushStrokeImg from '../assets/images/brushStroke.svg'
+import brushStrokeImg from '../../assets/images/brushStroke.svg'
 
 const useStyles = makeStyles(theme => ({
   root: {

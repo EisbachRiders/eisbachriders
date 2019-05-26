@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 import { useTranslation } from 'react-i18next'
-import classnames from 'classnames'
+import clsx from 'clsx'
 import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
 import Hidden from '@material-ui/core/Hidden'
-import Newsletter from './Newsletter'
+import Newsletter from '../newsletter/Newsletter'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -134,14 +134,14 @@ function Hero({ img }) {
           <Typography
             variant="h2"
             gutterBottom
-            className={classnames(classes.text, classes.title)}
+            className={clsx(classes.text, classes.title)}
           >
             E<span className={classes.small}>ISBACH</span>
           </Typography>
           <Typography
             variant="h2"
             gutterBottom
-            className={classnames(classes.text, classes.title, classes.title2)}
+            className={clsx(classes.text, classes.title, classes.title2)}
           >
             R<span className={classes.small}>IDERS</span>
           </Typography>
@@ -150,14 +150,14 @@ function Hero({ img }) {
           <Typography
             variant="h2"
             gutterBottom
-            className={classnames(classes.text, classes.title)}
+            className={clsx(classes.text, classes.title)}
           >
             E<span className={classes.small}>ISBACH</span> R
             <span className={classes.small}>IDERS</span>
           </Typography>
         </Hidden>
 
-        <Typography className={classnames(classes.text, classes.subtitle)}>
+        <Typography className={clsx(classes.text, classes.subtitle)}>
           {t('hero.subtitle')}
         </Typography>
         <Newsletter />

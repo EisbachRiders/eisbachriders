@@ -1,10 +1,10 @@
 import React from 'react'
 import { render } from 'react-testing-library'
-import Feature from '../Feature'
+import Hero from '../Hero'
 import { ThemeProvider } from '@material-ui/styles'
-import theme from '../../../assets/theme/muiTheme'
+import theme from '../../../theme'
 
-describe('Feature', () => {
+describe('Hero', () => {
   it('renders correctly', () => {
     const mockProps = {
       img: {
@@ -21,7 +21,7 @@ describe('Feature', () => {
     }
     const component = render(
       <ThemeProvider theme={theme}>
-        <Feature {...mockProps} />
+        <Hero {...mockProps} />
       </ThemeProvider>
     )
     expect(component).toMatchSnapshot()

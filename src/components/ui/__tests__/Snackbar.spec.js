@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from 'react-testing-library'
 import Snackbar from '../Snackbar'
 import { ThemeProvider } from '@material-ui/styles'
-import theme from '../../assets/theme/muiTheme'
+import theme from '../../../theme'
 
 describe('Snackbar', () => {
   it('renders correctly', () => {

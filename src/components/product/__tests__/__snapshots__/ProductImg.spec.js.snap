@@ -1,70 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Product renders correctly 1`] = `
+exports[`ProductImg renders correctly 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
-    <div>
-      <div
-        class="Hook-root-go6127"
-      >
-        <img
-          class="Hook-img-cai670"
-          src=""
-        />
-        <div
-          class="Hook-descriptionContainer-1tsden"
-        >
-          <p
-            class="MuiTypography-root-1 MuiTypography-body1-10"
-          />
-          <div
-            class="Hook-fullWidth-t3yivt"
-          >
-            <div
-              class="Hook-priceContainer-11bofz3"
-            >
-              <h6
-                class="MuiTypography-root-1 MuiTypography-h6-18 Hook-price-6knxjf"
-              >
-                €undefined
-              </h6>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div />
   </body>,
-  "container": <div>
-    <div
-      class="Hook-root-go6127"
-    >
-      <img
-        class="Hook-img-cai670"
-        src=""
-      />
-      <div
-        class="Hook-descriptionContainer-1tsden"
-      >
-        <p
-          class="MuiTypography-root-1 MuiTypography-body1-10"
-        />
-        <div
-          class="Hook-fullWidth-t3yivt"
-        >
-          <div
-            class="Hook-priceContainer-11bofz3"
-          >
-            <h6
-              class="MuiTypography-root-1 MuiTypography-h6-18 Hook-price-6knxjf"
-            >
-              €undefined
-            </h6>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>,
+  "container": <div />,
   "debug": [Function],
   "findAllByAltText": [Function],
   "findAllByDisplayValue": [Function],
@@ -87,41 +29,33 @@ Object {
   "getAllByLabelText": [Function],
   "getAllByPlaceholderText": [Function],
   "getAllByRole": [Function],
-  "getAllBySelectText": [Function],
   "getAllByTestId": [Function],
   "getAllByText": [Function],
   "getAllByTitle": [Function],
-  "getAllByValue": [Function],
   "getByAltText": [Function],
   "getByDisplayValue": [Function],
   "getByLabelText": [Function],
   "getByPlaceholderText": [Function],
   "getByRole": [Function],
-  "getBySelectText": [Function],
   "getByTestId": [Function],
   "getByText": [Function],
   "getByTitle": [Function],
-  "getByValue": [Function],
   "queryAllByAltText": [Function],
   "queryAllByDisplayValue": [Function],
   "queryAllByLabelText": [Function],
   "queryAllByPlaceholderText": [Function],
   "queryAllByRole": [Function],
-  "queryAllBySelectText": [Function],
   "queryAllByTestId": [Function],
   "queryAllByText": [Function],
   "queryAllByTitle": [Function],
-  "queryAllByValue": [Function],
   "queryByAltText": [Function],
   "queryByDisplayValue": [Function],
   "queryByLabelText": [Function],
   "queryByPlaceholderText": [Function],
   "queryByRole": [Function],
-  "queryBySelectText": [Function],
   "queryByTestId": [Function],
   "queryByText": [Function],
   "queryByTitle": [Function],
-  "queryByValue": [Function],
   "rerender": [Function],
   "unmount": [Function],
 }

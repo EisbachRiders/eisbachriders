@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { useTranslation } from 'react-i18next'
 import SwipeableViews from 'react-swipeable-views'
-import classnames from 'classnames'
+import clsx from 'clsx'
 import { makeStyles } from '@material-ui/styles'
 import IconButton from '@material-ui/core/IconButton'
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft'
@@ -73,7 +73,7 @@ function Colors({ colors }) {
   const circle = color => (
     <div
       key={color}
-      className={classnames(classes.circle, {
+      className={clsx(classes.circle, {
         [classes.blue]: color === 'Blue',
         [classes.grey]: color === 'Grey',
         [classes.white]: color === 'White',

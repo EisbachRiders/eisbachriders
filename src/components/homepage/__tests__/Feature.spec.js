@@ -1,25 +1,27 @@
 import React from 'react'
 import { render } from 'react-testing-library'
-import ProductDialog from '../ProductDialog'
+import Feature from '../Feature'
 import { ThemeProvider } from '@material-ui/styles'
-import theme from '../../assets/theme/muiTheme'
+import theme from '../../../theme'
 
-describe('ProductDialog', () => {
+describe('Feature', () => {
   it('renders correctly', () => {
     const mockProps = {
-      handleDialogOpen: jest.fn,
-      handleDialogClose: jest.fn,
-      isDialogOpen: true,
-      product: {
-        images: [],
-        more: { en: [] },
+      img: {
+        node: {
+          fluid: {
+            aspectRatio: 0,
+            src: 'mockString',
+            srcSet: 'mockString',
+            sizes: 'mockString',
+          },
+        },
       },
-      buttonText: 'mockButtonText',
       t: () => '',
     }
     const component = render(
       <ThemeProvider theme={theme}>
-        <ProductDialog {...mockProps} />
+        <Feature {...mockProps} />
       </ThemeProvider>
     )
     expect(component).toMatchSnapshot()

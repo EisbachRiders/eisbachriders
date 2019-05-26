@@ -3,9 +3,9 @@ import { render } from 'react-testing-library'
 import Product from '../Product'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-import { reducer } from '../../../state/createStore'
+import { reducer } from '../../../redux/createStore'
 import { ThemeProvider } from '@material-ui/styles'
-import theme from '../../../assets/theme/muiTheme'
+import theme from '../../../theme'
 
 describe('Product', () => {
   it('renders correctly', () => {
