@@ -1,50 +1,17 @@
 import React from 'react'
-import Link from './Link'
+import Link from './ui/Link'
 import { useTranslation } from 'react-i18next'
 import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
-import Membership from './Membership'
+import Membership from './homepage/Membership'
 import InstagramIcon from '../assets/icons/Instagram'
 import FacebookIcon from '../assets/icons/Facebook'
 import Contact from './Contact'
-import Newsletter from './Newsletter'
+import Newsletter from './newsletter/Newsletter'
+import Container from './ui/Container'
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    backgroundColor: theme.status.black,
-    width: '100%',
-  },
-  container: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
-    padding: 15,
-    [theme.breakpoints.up('sm')]: {
-      paddingTop: 30,
-      paddingBottom: 30,
-      paddingLeft: 60,
-      paddingRight: 60,
-    },
-    [theme.breakpoints.up('md')]: {
-      paddingTop: 45,
-      paddingBottom: 45,
-      paddingLeft: 170,
-      paddingRight: 170,
-    },
-    [theme.breakpoints.up('lg')]: {
-      paddingTop: 45,
-      paddingBottom: 45,
-      paddingLeft: 170,
-      paddingRight: 170,
-    },
-    [theme.breakpoints.up('xl')]: {
-      paddingTop: 90,
-      paddingBottom: 90,
-      paddingLeft: 400,
-      paddingRight: 400,
-    },
-  },
   containerInner: {
     display: 'flex',
     height: '100%',
@@ -138,19 +105,18 @@ function Footer() {
   return (
     <>
       <Membership />
-      <div className={classes.root}>
-        <div className={classes.container}>
-          <div className={classes.flexItem}>
-            <Contact />
-          </div>
-          <div className={classes.flexItem}>
-            <div className={classes.containerInner}>
-              <div className={classes.flexItemInner}>
-                <div>
-                  <Typography className={classes.textHeading}>
-                    {t('footer.customerService')}
-                  </Typography>
-                  {/* <Link to="/payment/">
+      <Container variant="spaceBetween" background="black">
+        <div className={classes.flexItem}>
+          <Contact />
+        </div>
+        <div className={classes.flexItem}>
+          <div className={classes.containerInner}>
+            <div className={classes.flexItemInner}>
+              <div>
+                <Typography className={classes.textHeading}>
+                  {t('footer.customerService')}
+                </Typography>
+                {/* <Link to="/payment/">
                     <Typography className={classes.text}>
                       {t('footer.payment')}
                     </Typography>
@@ -165,77 +131,77 @@ function Footer() {
                       {t('footer.returns')}
                     </Typography>
                   </Link> */}
-                  <a href="https://shop.eisbach-riders.com/payment/">
-                    <Typography className={classes.text}>
-                      {t('footer.payment')}
-                    </Typography>
-                  </a>
-                  <a href="https://shop.eisbach-riders.com/shipping/">
-                    <Typography className={classes.text}>
-                      {t('footer.shipping')}
-                    </Typography>
-                  </a>
-                  <a href="https://shop.eisbach-riders.com/returns/">
-                    <Typography className={classes.text}>
-                      {t('footer.returns')}
-                    </Typography>
-                  </a>
-                  <a href="https://shop.eisbach-riders.com/terms-and-conditions/">
-                    <Typography className={classes.text}>
-                      {t('footer.terms')}
-                    </Typography>
-                  </a>
-                </div>
-              </div>
-              <div className={classes.flexItemInner}>
-                <div>
-                  <Typography className={classes.textHeading}>
-                    {t('footer.subscribe')}
-                  </Typography>
+                <a href="https://shop.eisbach-riders.com/payment/">
                   <Typography className={classes.text}>
-                    {t('footer.subscribeText')}
+                    {t('footer.payment')}
                   </Typography>
-                  <Newsletter variant="small" />
-                </div>
-                <div className={classes.iconContainer}>
-                  <Button
-                    variant="outlined"
-                    className={classes.button}
-                    href="https://www.facebook.com/EisbachRiders/"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <FacebookIcon className={classes.icon} />
-                  </Button>
-                  <Button
-                    variant="outlined"
-                    className={classes.button}
-                    href="https://www.instagram.com/eisbachriders/"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <InstagramIcon className={classes.icon} />
-                  </Button>
-                </div>
+                </a>
+                <a href="https://shop.eisbach-riders.com/shipping/">
+                  <Typography className={classes.text}>
+                    {t('footer.shipping')}
+                  </Typography>
+                </a>
+                <a href="https://shop.eisbach-riders.com/returns/">
+                  <Typography className={classes.text}>
+                    {t('footer.returns')}
+                  </Typography>
+                </a>
+                <a href="https://shop.eisbach-riders.com/terms-and-conditions/">
+                  <Typography className={classes.text}>
+                    {t('footer.terms')}
+                  </Typography>
+                </a>
+              </div>
+            </div>
+            <div className={classes.flexItemInner}>
+              <div>
+                <Typography className={classes.textHeading}>
+                  {t('footer.subscribe')}
+                </Typography>
+                <Typography className={classes.text}>
+                  {t('footer.subscribeText')}
+                </Typography>
+                <Newsletter variant="small" />
+              </div>
+              <div className={classes.iconContainer}>
+                <Button
+                  variant="outlined"
+                  className={classes.button}
+                  href="https://www.facebook.com/EisbachRiders/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <FacebookIcon className={classes.icon} />
+                </Button>
+                <Button
+                  variant="outlined"
+                  className={classes.button}
+                  href="https://www.instagram.com/eisbachriders/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <InstagramIcon className={classes.icon} />
+                </Button>
               </div>
             </div>
           </div>
         </div>
-        <div className={classes.legal}>
-          <Typography
-            variant="body2"
-            align="center"
-            className={classes.copyright}
-          >
-            &copy; Eisbach Riders |{' '}
-            <Link to="/legal/" className={classes.link}>
-              {t('footer.imprint')}
-            </Link>
-            |{' '}
-            <Link to="/privacy/" className={classes.link}>
-              {t('footer.privacy')}
-            </Link>
-            {/* <a
+      </Container>
+      <div className={classes.legal}>
+        <Typography
+          variant="body2"
+          align="center"
+          className={classes.copyright}
+        >
+          &copy; Eisbach Riders |{' '}
+          <Link to="/legal/" className={classes.link}>
+            {t('footer.imprint')}
+          </Link>
+          |{' '}
+          <Link to="/privacy/" className={classes.link}>
+            {t('footer.privacy')}
+          </Link>
+          {/* <a
               href="https://shop.eisbach-riders.com/imprint/"
               className={classes.link}
             >
@@ -248,8 +214,7 @@ function Footer() {
             >
               {t('footer.privacy')}
             </a> */}
-          </Typography>
-        </div>
+        </Typography>
       </div>
     </>
   )

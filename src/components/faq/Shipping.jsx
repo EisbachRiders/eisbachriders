@@ -2,26 +2,9 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
+import Container from '../ui/Container'
 
 const useStyles = makeStyles(theme => ({
-  container: {
-    background: theme.status.white,
-    paddingLeft: 15,
-    paddingRight: 15,
-    paddingBottom: 30,
-    textAlign: 'left',
-    [theme.breakpoints.up('sm')]: {
-      paddingLeft: 60,
-      paddingRight: 60,
-      paddingBottom: 30,
-    },
-    [theme.breakpoints.up('md')]: {
-      paddingLeft: 90,
-      paddingRight: 90,
-      paddingBottom: 90,
-      paddingTop: 30,
-    },
-  },
   title: {
     paddingBottom: 15,
     textAlign: 'center',
@@ -49,7 +32,7 @@ function Shipping() {
   const classes = useStyles()
   const { t } = useTranslation()
   return (
-    <div className={classes.container} id="Shipping">
+    <Container>
       <Typography variant="h6" className={classes.title}>
         {t('shipping.shipping')}
       </Typography>
@@ -60,7 +43,7 @@ function Shipping() {
       <Typography className={classes.text}>{t('shipping.text2')}</Typography>
       <Typography className={classes.text}>{t('shipping.text3')}</Typography>
       <Typography className={classes.text}>{t('shipping.text4')}</Typography>
-    </div>
+    </Container>
   )
 }
 

@@ -6,7 +6,7 @@ import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField'
 import Snackbar from '@material-ui/core/Snackbar'
 import CircularProgress from '@material-ui/core/CircularProgress'
-import Notification from './Snackbar'
+import Notification from './ui/Snackbar'
 
 const useStyles = makeStyles(theme => ({
   text: {
