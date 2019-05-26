@@ -5,7 +5,7 @@ import Link from '../Link'
 import { useTranslation } from 'react-i18next'
 import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
-import classnames from 'classnames'
+import clsx from 'clsx'
 import Colors from './Colors'
 
 const mapDispatchToProps = dispatch => {
@@ -91,9 +91,7 @@ function ShopItem({ product, changeProduct }) {
                   product.price
                 }`}</Typography>
                 {!product.in_stock && (
-                  <Typography
-                    className={classnames(classes.price, classes.red)}
-                  >
+                  <Typography className={clsx(classes.price, classes.red)}>
                     {t('products.outOfStock')}
                   </Typography>
                 )}

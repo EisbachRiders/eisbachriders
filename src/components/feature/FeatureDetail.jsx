@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import { useTranslation } from 'react-i18next'
 import { makeStyles } from '@material-ui/styles'
-import classnames from 'classnames'
+import clsx from 'clsx'
 import Img from 'gatsby-image'
 import Typography from '@material-ui/core/Typography'
 import Hidden from '@material-ui/core/Hidden'
@@ -94,24 +94,18 @@ function FeatureDetail({ img }) {
             </Hidden>
           )}
           {elem === 'response' && (
-            <div
-              className={classnames(classes.containerDetail, classes.bottom1)}
-            >
+            <div className={clsx(classes.containerDetail, classes.bottom1)}>
               <Typography className={classes.title} variant="h5">
                 {t(`feature.${elem}`)}
               </Typography>
-              <div
-                className={classnames(classes.containerIcon, classes.bottom2)}
-              >
+              <div className={clsx(classes.containerIcon, classes.bottom2)}>
                 <Typography className={classes.detailText}>
                   {t('feature.surfDetail2')}
                 </Typography>
                 <div>
                   <FeatherIcon className={classes.icon} />
                   <FeatherIcon className={classes.icon} />
-                  <FeatherIcon
-                    className={classnames(classes.off, classes.icon)}
-                  />
+                  <FeatherIcon className={clsx(classes.off, classes.icon)} />
                 </div>
               </div>
               <div className={classes.containerIcon}>
@@ -131,9 +125,7 @@ function FeatureDetail({ img }) {
               <Typography className={classes.title} variant="h5">
                 {t(`feature.${elem}`)}
               </Typography>
-              <div
-                className={classnames(classes.containerIcon, classes.bottom)}
-              >
+              <div className={clsx(classes.containerIcon, classes.bottom)}>
                 <Typography className={classes.detailText}>
                   {t('feature.beginner')}
                 </Typography>
