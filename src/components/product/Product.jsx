@@ -13,32 +13,13 @@ import ListItemIcon from '@material-ui/core/ListItemIcon'
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft'
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight'
 import MobileStepper from '@material-ui/core/MobileStepper'
+import Container from '../ui/Container'
 
 const mapStateToProps = ({ product }) => {
   return { product }
 }
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    paddingLeft: 15,
-    paddingRight: 15,
-    [theme.breakpoints.up('sm')]: {
-      paddingLeft: 60,
-      paddingRight: 60,
-    },
-    [theme.breakpoints.up('md')]: {
-      paddingLeft: 90,
-      paddingRight: 90,
-    },
-    [theme.breakpoints.up('lg')]: {
-      paddingLeft: 170,
-      paddingRight: 170,
-    },
-    [theme.breakpoints.up('xl')]: {
-      paddingLeft: 400,
-      paddingRight: 400,
-    },
-  },
   container: {
     display: 'flex',
     justifyContent: 'space-between',
@@ -143,7 +124,7 @@ function Product({ product }) {
   const images = product.images || []
   console.log(product)
   return (
-    <div className={classes.root}>
+    <Container>
       <div className={classes.container}>
         <div className={classes.imgContainer}>
           <SwipeableViews
@@ -211,7 +192,7 @@ function Product({ product }) {
         </List> */}
         </div>
       </div>
-    </div>
+    </Container>
   )
 }
 

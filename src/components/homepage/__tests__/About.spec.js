@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from 'react-testing-library'
 import About from '../About'
 import { ThemeProvider } from '@material-ui/styles'
-import theme from '../../theme'
+import theme from '../../../theme'
 
 describe('About', () => {
   it('renders correctly', () => {

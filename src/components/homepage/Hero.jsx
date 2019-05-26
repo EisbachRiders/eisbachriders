@@ -6,7 +6,7 @@ import clsx from 'clsx'
 import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
 import Hidden from '@material-ui/core/Hidden'
-import Newsletter from './Newsletter'
+import Newsletter from '../newsletter/Newsletter'
 
 const useStyles = makeStyles(theme => ({
   root: {

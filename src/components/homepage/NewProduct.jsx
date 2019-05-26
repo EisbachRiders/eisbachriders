@@ -11,49 +11,23 @@ import IconButton from '@material-ui/core/IconButton'
 import MobileStepper from '@material-ui/core/MobileStepper'
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft'
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight'
-import img_wax from '../assets/images/newProduct/surfWax.jpg'
-import img_hangers from '../assets/images/newProduct/hangers.png'
-import logo_wax from '../assets/images/newProduct/waxLogo.jpg'
-import logo_hangers from '../assets/images/newProduct/hangerLogo.png'
+import img_wax from '../../assets/images/newProduct/surfWax.jpg'
+import img_hangers from '../../assets/images/newProduct/hangers.png'
+import logo_wax from '../../assets/images/newProduct/waxLogo.jpg'
+import logo_hangers from '../../assets/images/newProduct/hangerLogo.png'
+import Container from '../ui/Container'
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    paddingTop: 30,
-    paddingBottom: 30,
-    paddingLeft: 15,
-    paddingRight: 15,
+  container: {
     background: `linear-gradient(to bottom, ${
       theme.status.greyBlue
     } 50%, #fff 50%)`,
-    display: 'flex',
     flexDirection: 'column',
-    [theme.breakpoints.up('sm')]: {
-      paddingLeft: 60,
-      paddingRight: 60,
-    },
-    [theme.breakpoints.up('md')]: {
-      paddingTop: 60,
-      paddingBottom: 60,
-      paddingLeft: 90,
-      paddingRight: 90,
-    },
-    [theme.breakpoints.up('lg')]: {
-      paddingTop: 45,
-      paddingBottom: 45,
-      paddingLeft: 170,
-      paddingRight: 170,
-    },
-    [theme.breakpoints.up('xl')]: {
-      paddingTop: 90,
-      paddingBottom: 90,
-      paddingLeft: 400,
-      paddingRight: 400,
-    },
   },
   swipeable: {
     flexShrink: 'none',
   },
-  container: {
+  textContainer: {
     display: 'flex',
     alignItems: 'center',
   },
@@ -149,7 +123,7 @@ function NewProduct() {
     },
   ]
   return (
-    <div className={classes.root}>
+    <Container className={classes.container}>
       <SwipeableViews
         enableMouseEvents
         index={activeStep}
@@ -157,7 +131,10 @@ function NewProduct() {
         className={classes.swipeable}
       >
         {products.map(elem => (
-          <div key={`newproduct${elem.product}`} className={classes.container}>
+          <div
+            key={`newproduct${elem.product}`}
+            className={classes.textContainer}
+          >
             <Hidden xsDown>
               <img
                 src={elem.img}
@@ -213,7 +190,7 @@ function NewProduct() {
           </IconButton>
         }
       />
-    </div>
+    </Container>
   )
 }
 

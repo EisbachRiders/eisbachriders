@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import Shipping from '../components/Shipping'
+import Shipping from '../components/faq/Shipping'
 
 function ShippingPage() {
   return (

@@ -9,7 +9,7 @@ import Button from '@material-ui/core/Button'
 import MobileStepper from '@material-ui/core/MobileStepper'
 import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft'
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight'
-import { productsFins } from '../data/ProductData'
+import { productsFins } from '../../data/ProductData'
 
 const useStyles = makeStyles(theme => ({
   root: {

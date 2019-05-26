@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import Link from './Link'
+import Link from './ui/Link'
 import { useTranslation } from 'react-i18next'
 import { makeStyles } from '@material-ui/styles'
 import AppBar from '@material-ui/core/AppBar'

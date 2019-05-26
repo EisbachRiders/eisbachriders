@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import Link from '../Link'
+import Link from '../ui/Link'
 import { useTranslation } from 'react-i18next'
 import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
