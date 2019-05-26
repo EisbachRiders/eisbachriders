@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import SwipeableViews from 'react-swipeable-views'
 import { useTranslation } from 'react-i18next'
 import { makeStyles } from '@material-ui/styles'
-import classnames from 'classnames'
+import clsx from 'clsx'
 import Typography from '@material-ui/core/Typography'
 import Paper from '@material-ui/core/Paper'
 import Hidden from '@material-ui/core/Hidden'
@@ -176,7 +176,7 @@ function NewProduct() {
               <Button
                 color="primary"
                 variant="outlined"
-                className={classnames(classes.button)}
+                className={clsx(classes.button)}
                 href={elem.amazon}
               >
                 {t('common.more')}
