@@ -8,36 +8,9 @@ import MenuItem from '@material-ui/core/MenuItem'
 import InputLabel from '@material-ui/core/InputLabel'
 import ShopItem from './ShopItem'
 import CircularProgress from '@material-ui/core/CircularProgress'
+import Container from '../ui/Container'
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    paddingTop: 30,
-    paddingBottom: 30,
-    paddingLeft: 15,
-    paddingRight: 15,
-    [theme.breakpoints.up('sm')]: {
-      paddingLeft: 60,
-      paddingRight: 60,
-    },
-    [theme.breakpoints.up('md')]: {
-      paddingTop: 60,
-      paddingBottom: 60,
-      paddingLeft: 90,
-      paddingRight: 90,
-    },
-    [theme.breakpoints.up('lg')]: {
-      paddingTop: 45,
-      paddingBottom: 45,
-      paddingLeft: 170,
-      paddingRight: 170,
-    },
-    [theme.breakpoints.up('xl')]: {
-      paddingTop: 90,
-      paddingBottom: 90,
-      paddingLeft: 400,
-      paddingRight: 400,
-    },
-  },
   form: {
     display: 'flex',
     justifyContent: 'flex-end',
@@ -154,7 +127,7 @@ function Shop() {
   }
 
   return (
-    <div className={classes.root}>
+    <Container>
       <div className={classes.form}>
         <FormControl>
           <InputLabel htmlFor="category">Filter</InputLabel>
@@ -199,7 +172,7 @@ function Shop() {
           <div className={classes.container}>{shopItems(filter)}</div>
         </>
       )}
-    </div>
+    </Container>
   )
 }
 

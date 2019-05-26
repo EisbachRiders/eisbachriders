@@ -11,15 +11,15 @@ import ProductDescription from './ProductDescription'
 import Counter from '../counter/Counter'
 import Container from '../ui/Container'
 
-const mapStateToProps = ({ product }) => {
-  return { product }
+const mapStateToProps = ({ product, cart }) => {
+  return { product, cart }
 }
 
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     addToCart: (product,quantity) => dispatch({ type: `PRODUCT`, product }),
-//   }
-// }
+const mapDispatchToProps = dispatch => {
+  return {
+    addToCart: cart => dispatch({ type: `CART`, cart }),
+  }
+}
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -58,7 +58,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-function Product({ product }) {
+function Product({ product, cart, addToCart }) {
   const { t } = useTranslation()
   const classes = useStyles()
   const [quantity, setQuantity] = useState(1)
@@ -75,8 +75,21 @@ function Product({ product }) {
     }
   }
 
-  const handleCart = () => {}
-
+  const handleCart = () => {
+    if (cart.length === 0) {
+      cart.push({ quantity, product })
+      addToCart(cart)
+    } else {
+      // remove this product from cart
+      cart.filter(item => item.product.id !== product.id)
+      console.log(cart)
+      cart.push({ quantity, product })
+      // add current product to cart
+      addToCart(cart)
+    }
+  }
+  // map
+  console.log(cart)
   return (
     <Container>
       {Object.keys(product).length !== 0 && (
@@ -138,5 +151,5 @@ function Product({ product }) {
 
 export default connect(
   mapStateToProps,
-  null
+  mapDispatchToProps
 )(Product)

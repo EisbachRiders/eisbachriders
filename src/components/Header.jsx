@@ -14,9 +14,10 @@ import ERIcon from '../assets/icons/ER'
 import CartIcon from '@material-ui/icons/ShoppingCart'
 import { connect } from 'react-redux'
 import MenuIcon from '@material-ui/icons/Menu'
+import Badge from '@material-ui/core/Badge'
 
-const mapStateToProps = ({ lng }) => {
-  return { lng }
+const mapStateToProps = ({ lng, cart }) => {
+  return { lng, cart }
 }
 
 const mapDispatchToProps = dispatch => {
@@ -126,10 +127,12 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-function Header({ isHomepage, lng, changeLng }) {
+function Header({ isHomepage, lng, changeLng, cart }) {
   const classes = useStyles()
   const { t } = useTranslation()
   const [isDrawerOpen, setDrawer] = useState(false)
+  console.log(cart)
+  const totalItems = cart.length !== 0 ? cart[0].quantity : 0
 
   return (
     <div className={classes.root}>
@@ -154,21 +157,25 @@ function Header({ isHomepage, lng, changeLng }) {
                   {t('header.shop')}
                 </Button>
               </Link>
-              <Button
+              {/* <Button
                 className={
                   isHomepage ? classes.button : classes.buttonDarkTheme
                 }
                 href="https://shop.eisbach-riders.com/"
               >
                 {t('header.cart')}
-              </Button>
-              {/* <IconButton
-                className={classes.button}
-                aria-label="Checkout"
-                href="https://shop.eisbach-riders.com/cart/"
-              >
-                <CartIcon className={classes.icon} />
-              </IconButton> */}
+              </Button> */}
+              <Badge badgeContent={totalItems} color="primary">
+                <IconButton
+                  className={
+                    isHomepage ? classes.button : classes.buttonDarkTheme
+                  }
+                  aria-label="Checkout"
+                  href="https://shop.eisbach-riders.com/cart/"
+                >
+                  <CartIcon className={classes.icon} />
+                </IconButton>
+              </Badge>
               {/* <Button
                 className={
                   isHomepage ? classes.button : classes.buttonDarkTheme

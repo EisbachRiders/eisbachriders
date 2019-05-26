@@ -20,16 +20,18 @@ export const reducer = (state, action) => {
         product: action.product,
       }
     case 'CART':
+      console.log(action.cart)
+      let newCart = action.cart
       return {
         ...state,
-        cart: action.cart,
+        cart: newCart,
       }
     default:
       return state
   }
 }
 
-const initialState = { lng: 'en', isGAopen: true, product: {}, cart: {} }
+const initialState = { lng: 'en', isGAopen: true, product: {}, cart: [] }
 
 const createStore = () => reduxCreateStore(reducer, initialState)
 
