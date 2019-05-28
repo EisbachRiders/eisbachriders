@@ -13,24 +13,18 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-function ProductAttribute({ attribute }) {
+function ProductAttribute({ attribute, selected, onChange, name }) {
   const classes = useStyles()
-  const [value, setValue] = useState('')
-  const inputLabel = useRef(null)
-  const [labelWidth, setLabelWidth] = useState(0)
-  // useEffect(() => {
-  //   setLabelWidth(inputLabel.current.offsetWidth)
-  // }, [])
 
   return (
     <form autoComplete="off" className={classes.form}>
       <FormControl className={classes.formControl}>
         <InputLabel htmlFor={attribute.name}>{attribute.name}</InputLabel>
         <Select
-          value={value}
-          onChange={e => setValue(e.target.value)}
+          value={selected.value}
+          onChange={onChange}
           inputProps={{
-            name: attribute.name,
+            name,
             id: attribute.name,
           }}
         >

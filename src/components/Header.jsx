@@ -79,8 +79,7 @@ const useStyles = makeStyles(theme => ({
     textTransform: 'uppercase',
     fontSize: 14,
     fontWeight: 700,
-    paddingRight: 30,
-    paddingLeft: 0,
+    marginLeft: 15,
     '&:hover': {
       color: theme.palette.primary.main,
       background: 'transparent',
@@ -93,8 +92,7 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.common.white,
     fontSize: 14,
     fontWeight: 400,
-    paddingLeft: 0,
-    paddingRight: 30,
+    marginLeft: 15,
     '&:hover': {
       color: theme.palette.primary.main,
     },
@@ -131,9 +129,7 @@ function Header({ isHomepage, lng, changeLng, cart }) {
   const classes = useStyles()
   const { t } = useTranslation()
   const [isDrawerOpen, setDrawer] = useState(false)
-  console.log(cart)
   const totalItems = cart.length !== 0 ? cart[0].quantity : 0
-
   return (
     <div className={classes.root}>
       <AppBar
@@ -165,25 +161,25 @@ function Header({ isHomepage, lng, changeLng, cart }) {
               >
                 {t('header.cart')}
               </Button> */}
-              <Badge badgeContent={totalItems} color="primary">
-                <IconButton
-                  className={
-                    isHomepage ? classes.button : classes.buttonDarkTheme
-                  }
-                  aria-label="Checkout"
-                  href="https://shop.eisbach-riders.com/cart/"
-                >
+              <IconButton
+                className={
+                  isHomepage ? classes.button : classes.buttonDarkTheme
+                }
+                aria-label="Checkout"
+                href="https://shop.eisbach-riders.com/cart/"
+              >
+                <Badge badgeContent={totalItems} color="primary">
                   <CartIcon className={classes.icon} />
-                </IconButton>
-              </Badge>
-              {/* <Button
+                </Badge>
+              </IconButton>
+              <Button
                 className={
                   isHomepage ? classes.button : classes.buttonDarkTheme
                 }
                 onClick={changeLng}
               >
                 {lng === 'en' ? 'de' : 'en'}
-              </Button> */}
+              </Button>
             </div>
           </Hidden>
           <Hidden smUp>

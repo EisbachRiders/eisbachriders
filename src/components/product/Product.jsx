@@ -11,8 +11,8 @@ import ProductDescription from './ProductDescription'
 import Counter from '../counter/Counter'
 import Container from '../ui/Container'
 
-const mapStateToProps = ({ product, cart }) => {
-  return { product, cart }
+const mapStateToProps = ({ product, lng, cart }) => {
+  return { product, lng, cart }
 }
 
 const mapDispatchToProps = dispatch => {
@@ -62,6 +62,11 @@ function Product({ product, cart, addToCart }) {
   const { t } = useTranslation()
   const classes = useStyles()
   const [quantity, setQuantity] = useState(1)
+  const [values, setValues] = useState({
+    attr1: '',
+    attr2: '',
+    attr3: '',
+  })
 
   const handleRemove = () => {
     if (quantity > 0) {
@@ -75,21 +80,36 @@ function Product({ product, cart, addToCart }) {
     }
   }
 
-  const handleCart = () => {
-    if (cart.length === 0) {
-      cart.push({ quantity, product })
-      addToCart(cart)
-    } else {
-      // remove this product from cart
-      cart.filter(item => item.product.id !== product.id)
-      console.log(cart)
-      cart.push({ quantity, product })
-      // add current product to cart
-      addToCart(cart)
-    }
+  function handleChange(event) {
+    console.log(event)
+    setValues(oldValues => ({
+      ...oldValues,
+      [event.target.name]: event.target.value,
+    }))
   }
-  // map
-  console.log(cart)
+
+  const handleCart = () => {
+    let productInfo = {
+      id: product.id,
+      attr1: values.attr1,
+      attr2: values.attr2,
+      attr3: values.attr3,
+    }
+    const newCart = []
+    if (cart.length === 0) {
+      newCart.push({ quantity, productInfo })
+    } else {
+      cart.forEach(item => {
+        if (item.product.id !== product.id) {
+          newCart.push(item)
+        }
+      })
+      newCart.push({ quantity, productInfo })
+    }
+    addToCart(newCart)
+    console.log(newCart)
+  }
+  console.log(values)
   return (
     <Container>
       {Object.keys(product).length !== 0 && (
@@ -119,8 +139,11 @@ function Product({ product, cart, addToCart }) {
                 )}
               </div>
               {product.attributes.length !== 0 &&
-                product.attributes.map(elem => (
+                product.attributes.map((elem, idx) => (
                   <ProductAttribute
+                    selected={`values.attr${idx + 1}`}
+                    name={`attr${idx + 1}`}
+                    onChange={handleChange}
                     attribute={elem}
                     key={`attribute_${elem.name}`}
                   />
