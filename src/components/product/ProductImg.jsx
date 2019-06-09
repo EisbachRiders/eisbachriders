@@ -9,8 +9,7 @@ import { makeStyles } from '@material-ui/styles'
 
 const useStyles = makeStyles(theme => ({
   img: {
-    height: 300,
-    width: 300,
+    width: '100%',
   },
 }))
 
@@ -44,7 +43,7 @@ function ProductImg({ images }) {
                 src={img.src}
                 key={`img${idx}`}
                 className={classes.img}
-                alt={`product image ${idx}`}
+                alt={`product${idx}`}
               />
             ))}
           </SwipeableViews>
@@ -52,7 +51,6 @@ function ProductImg({ images }) {
             steps={images.length}
             position="static"
             activeStep={activeStep}
-            className={classes.mobileStepper}
             nextButton={
               <IconButton
                 size="small"

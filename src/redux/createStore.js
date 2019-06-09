@@ -2,6 +2,8 @@ import { createStore as reduxCreateStore } from 'redux'
 import i18n from 'i18next'
 
 export const reducer = (state, action) => {
+  // console.log(state)
+  // console.log(action)
   switch (action.type) {
     case 'LANGUAGE':
       i18n.changeLanguage(state.lng === 'en' ? 'de' : 'en')
@@ -29,7 +31,7 @@ export const reducer = (state, action) => {
   }
 }
 
-const initialState = { lng: 'en', isGAopen: true, product: {}, cart: {} }
+const initialState = { lng: 'en', isGAopen: true, product: {}, cart: [] }
 
 const createStore = () => reduxCreateStore(reducer, initialState)
 

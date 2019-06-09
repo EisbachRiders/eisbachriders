@@ -3,20 +3,22 @@ import { connect } from 'react-redux'
 import { useTranslation } from 'react-i18next'
 import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
-import SwipeableViews from 'react-swipeable-views'
-import clsx from 'clsx'
-import IconButton from '@material-ui/core/IconButton'
-import List from '@material-ui/core/List'
-import ListItem from '@material-ui/core/ListItem'
-import ListItemText from '@material-ui/core/ListItemText'
-import ListItemIcon from '@material-ui/core/ListItemIcon'
-import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft'
-import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight'
-import MobileStepper from '@material-ui/core/MobileStepper'
+import classnames from 'classnames'
+import Button from '@material-ui/core/Button'
+import ProductAttribute from './ProductAttribute'
+import ProductImg from './ProductImg'
+import ProductDescription from './ProductDescription'
+import Counter from '../counter/Counter'
 import Container from '../ui/Container'
 
-const mapStateToProps = ({ product }) => {
-  return { product }
+const mapStateToProps = ({ product, lng, cart }) => {
+  return { product, lng, cart }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    addToCart: cart => dispatch({ type: `CART`, cart }),
+  }
 }
 
 const useStyles = makeStyles(theme => ({
@@ -25,178 +27,152 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'space-between',
   },
   imgContainer: {
-    // paddingRight: 0,
-    // paddingLeft: 0,
-    flexBasis: '40%',
-    // [theme.breakpoints.up('md')]: {
-    //   paddingRight: 60,
-    //   paddingLeft: 60,
-    // },
+    flexBasis: '50%',
   },
   name: {
-    paddingTop: 15,
     paddingBottom: 10,
-    fontWeight: 600,
+    fontWeight: 300,
     textAlign: 'left',
   },
   contentContainer: {
-    flexBasis: '50%',
-  },
-  price: {
-    color: theme.palette.primary.main,
-    fontWeight: 600,
-    display: 'flex',
-    justifyContent: 'space-between',
-    paddingBottom: 10,
-  },
-  img: {
-    width: 300,
-  },
-  listItem: {
-    alignItems: 'flex-start',
-    paddingLeft: 0,
-    paddingRight: 0,
-    paddingBottom: 0,
-  },
-  listItemTextRoot: {
-    paddingLeft: 0,
-    paddingRight: 0,
-  },
-  listItemText: {
-    fontSize: 14,
-  },
-  icon: {
-    fontSize: 18,
-  },
-  iconButton: {
-    color: theme.status.black,
-    fontSize: 36,
+    flexBasis: '40%',
   },
   priceContainer: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
+    marginBottom: 30,
   },
-  mobileStepper: {
-    background: theme.status.white,
+  price: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    paddingBottom: 10,
   },
-  scroll: {
-    paddingBottom: 30,
-    overflowY: 'hidden',
-    [theme.breakpoints.up('sm')]: {
-      height: '55vh',
-      overflowY: 'auto',
-    },
-    '&::-webkit-scrollbar-track': {
-      WebkitBoxShadow: 'inset 0 0 6px rgba(0, 0, 0, 0.1)',
-      borderRadius: 4,
-      backgroundColor: theme.status.grey.greyBG,
-    },
-    '&::-webkit-scrollbar': {
-      width: 4,
-      backgroundColor: theme.status.grey.greyBG,
-    },
-    '&::-webkit-scrollbar-thumb': {
-      WebkitBoxShadow: 'inset 0 0 6px rgba(0, 0, 0, 0.1)',
-      borderRadius: 4,
-      backgroundColor: theme.status.grey.greyDivs,
-    },
+  red: {
+    color: theme.status.red,
+  },
+  divider: {
+    marginBottom: 60,
+    marginTop: 60,
+    borderBottom: `1px solid ${theme.status.grey}`,
   },
 }))
 
-function Product({ product }) {
+function Product({ product, cart, addToCart }) {
   const { t } = useTranslation()
   const classes = useStyles()
-  const [activeStep, setActiveStep] = useState(0)
+  const [quantity, setQuantity] = useState(1)
+  const [values, setValues] = useState({
+    attr1: '',
+    attr2: '',
+    attr3: '',
+  })
 
-  const handleIndexChange = activeStep => {
-    setActiveStep(activeStep)
+  const handleRemove = () => {
+    if (quantity > 0) {
+      setQuantity(quantity - 1)
+    }
   }
 
-  const handleNext = () => {
-    setActiveStep(activeStep + 1)
+  const handleAdd = () => {
+    if (quantity < 15 || quantity < product.stock_quantity) {
+      setQuantity(quantity + 1)
+    }
   }
 
-  const handleBack = () => {
-    setActiveStep(activeStep - 1)
+  function handleChange(event) {
+    console.log(event)
+    setValues(oldValues => ({
+      ...oldValues,
+      [event.target.name]: event.target.value,
+    }))
   }
 
-  const images = product.images || []
-  console.log(product)
+  const handleCart = () => {
+    let productInfo = {
+      id: product.id,
+      attr1: values.attr1,
+      attr2: values.attr2,
+      attr3: values.attr3,
+    }
+    const newCart = []
+    if (cart.length === 0) {
+      newCart.push({ quantity, productInfo })
+    } else {
+      cart.forEach(item => {
+        if (item.product.id !== product.id) {
+          newCart.push(item)
+        }
+      })
+      newCart.push({ quantity, productInfo })
+    }
+    addToCart(newCart)
+    console.log(newCart)
+  }
+  console.log(values)
   return (
     <Container>
-      <div className={classes.container}>
-        <div className={classes.imgContainer}>
-          <SwipeableViews
-            enableMouseEvents
-            index={activeStep}
-            onChangeIndex={handleIndexChange}
-          >
-            {images.map((img, idx) => (
-              <img
-                src={img.src}
-                key={`img${idx}`}
-                className={classes.img}
-                alt={`product${idx}`}
+      {Object.keys(product).length !== 0 && (
+        <div>
+          <div className={classes.container}>
+            <div className={classes.imgContainer}>
+              <ProductImg images={product.images} />
+            </div>
+            <div className={classes.contentContainer}>
+              <Typography variant="h6" className={classes.name}>
+                {product.name}
+              </Typography>
+              <div
+                dangerouslySetInnerHTML={{ __html: product.short_description }}
+                className={classes.text}
               />
-            ))}
-          </SwipeableViews>
-          <MobileStepper
-            steps={images.length}
-            position="static"
-            activeStep={activeStep}
-            className={classes.mobileStepper}
-            nextButton={
-              <IconButton
-                size="small"
-                aria-label={t('common.scrollLeft')}
-                onClick={handleNext}
-                disabled={activeStep === images.length - 1}
-              >
-                <KeyboardArrowRight />
-              </IconButton>
-            }
-            backButton={
-              <IconButton
-                size="small"
-                aria-label={t('common.scrollRight')}
-                onClick={handleBack}
-                disabled={activeStep === 0}
-              >
-                <KeyboardArrowLeft />
-              </IconButton>
-            }
-          />
-        </div>
-        <div className={classes.contentContainer}>
-          <div className={classes.priceContainer}>
-            <Typography variant="h6" className={classes.price}>
-              {`€${product.price}`}
-            </Typography>
-          </div>
-          {/* <List disablePadding className={classes.scroll}>
-          {product.more[lng].map((item, idx) => (
-              <ListItem key={`listItem${idx}`} className={classes.listItem}>
-                <ListItemIcon>
-                  <StopIcon className={classes.icon} />
-                </ListItemIcon>
-                <ListItemText
-                  primary={item}
-                  classes={{
-                    root: classes.listItemTextRoot,
-                    primary: classes.listItemText,
-                  }}
+              <div className={classes.priceContainer}>
+                <Typography variant="h6" className={classes.price}>
+                  {`€${product.price}`}
+                </Typography>
+                {!product.in_stock && (
+                  <Typography
+                    className={classnames(classes.price, classes.red)}
+                  >
+                    {t('products.outOfStock')}
+                  </Typography>
+                )}
+              </div>
+              {product.attributes.length !== 0 &&
+                product.attributes.map((elem, idx) => (
+                  <ProductAttribute
+                    selected={`values.attr${idx + 1}`}
+                    name={`attr${idx + 1}`}
+                    onChange={handleChange}
+                    attribute={elem}
+                    key={`attribute_${elem.name}`}
+                  />
+                ))}
+              <div className={classes.priceContainer}>
+                <Counter
+                  handleRemove={handleRemove}
+                  handleAdd={handleAdd}
+                  value={quantity}
                 />
-              </ListItem>
-            ))} 
-        </List> */}
+                <Button
+                  variant="contained"
+                  color="primary"
+                  onClick={handleCart}
+                >
+                  {t('products.addToCart')}
+                </Button>
+              </div>
+            </div>
+          </div>
+          <div className={classes.divider} />
+          <ProductDescription product={product} />
         </div>
-      </div>
+      )}
     </Container>
   )
 }
 
 export default connect(
   mapStateToProps,
-  null
+  mapDispatchToProps
 )(Product)

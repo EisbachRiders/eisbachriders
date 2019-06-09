@@ -14,9 +14,10 @@ import ERIcon from '../assets/icons/ER'
 import CartIcon from '@material-ui/icons/ShoppingCart'
 import { connect } from 'react-redux'
 import MenuIcon from '@material-ui/icons/Menu'
+import Badge from '@material-ui/core/Badge'
 
-const mapStateToProps = ({ lng }) => {
-  return { lng }
+const mapStateToProps = ({ lng, cart }) => {
+  return { lng, cart }
 }
 
 const mapDispatchToProps = dispatch => {
@@ -78,8 +79,7 @@ const useStyles = makeStyles(theme => ({
     textTransform: 'uppercase',
     fontSize: 14,
     fontWeight: 700,
-    paddingRight: 30,
-    paddingLeft: 0,
+    marginLeft: 15,
     '&:hover': {
       color: theme.palette.primary.main,
       background: 'transparent',
@@ -92,8 +92,7 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.common.white,
     fontSize: 14,
     fontWeight: 400,
-    paddingLeft: 0,
-    paddingRight: 30,
+    marginLeft: 15,
     '&:hover': {
       color: theme.palette.primary.main,
     },
@@ -108,6 +107,13 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.common.black,
   },
   icon: {
+    color: theme.palette.common.black,
+    fontSize: 22,
+    '&:hover': {
+      color: theme.palette.primary.main,
+    },
+  },
+  iconDarkTheme: {
     color: theme.palette.common.white,
     fontSize: 22,
     '&:hover': {
@@ -126,11 +132,11 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-function Header({ isHomepage, lng, changeLng }) {
+function Header({ isHomepage, lng, changeLng, cart }) {
   const classes = useStyles()
   const { t } = useTranslation()
   const [isDrawerOpen, setDrawer] = useState(false)
-
+  const totalItems = cart.length !== 0 ? cart[0].quantity : 0
   return (
     <div className={classes.root}>
       <AppBar
@@ -154,29 +160,38 @@ function Header({ isHomepage, lng, changeLng }) {
                   {t('header.shop')}
                 </Button>
               </Link>
-              <Button
+              {/* <Button
                 className={
                   isHomepage ? classes.button : classes.buttonDarkTheme
                 }
                 href="https://shop.eisbach-riders.com/"
               >
                 {t('header.cart')}
-              </Button>
-              {/* <IconButton
-                className={classes.button}
-                aria-label="Checkout"
-                href="https://shop.eisbach-riders.com/cart/"
-              >
-                <CartIcon className={classes.icon} />
-              </IconButton> */}
-              {/* <Button
+              </Button> */}
+              <Link to="/cart/">
+                <IconButton
+                  className={
+                    isHomepage ? classes.button : classes.buttonDarkTheme
+                  }
+                  aria-label="Checkout"
+                >
+                  <Badge badgeContent={totalItems} color="primary">
+                    <CartIcon
+                      className={
+                        isHomepage ? classes.icon : classes.iconDarkTheme
+                      }
+                    />
+                  </Badge>
+                </IconButton>
+              </Link>
+              <Button
                 className={
                   isHomepage ? classes.button : classes.buttonDarkTheme
                 }
                 onClick={changeLng}
               >
                 {lng === 'en' ? 'de' : 'en'}
-              </Button> */}
+              </Button>
             </div>
           </Hidden>
           <Hidden smUp>

@@ -8,25 +8,11 @@ import MenuItem from '@material-ui/core/MenuItem'
 import InputLabel from '@material-ui/core/InputLabel'
 import ShopItem from './ShopItem'
 import CircularProgress from '@material-ui/core/CircularProgress'
+import Container from '../ui/Container'
+import test1 from '../../assets/images/FCS/img1.jpg'
+import test2 from '../../assets/images/FCS/img2.jpg'
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    paddingTop: 30,
-    paddingBottom: 30,
-    paddingLeft: 15,
-    paddingRight: 15,
-    background: theme.palette.common.white,
-    [theme.breakpoints.up('sm')]: {
-      paddingLeft: 60,
-      paddingRight: 60,
-    },
-    [theme.breakpoints.up('md')]: {
-      paddingTop: 90,
-      paddingBottom: 90,
-      paddingLeft: 170,
-      paddingRight: 170,
-    },
-  },
   form: {
     display: 'flex',
     justifyContent: 'flex-end',
@@ -142,8 +128,74 @@ function Shop() {
     ))
   }
 
+  let product = {
+    attributes: [
+      { id: 2, name: 'Color', position: 0, visible: true, variation: true },
+    ],
+    length: 1,
+    average_rating: '0.00',
+    backordered: false,
+    backorders: 'no',
+    backorders_allowed: false,
+    button_text: '',
+    catalog_visibility: 'visible',
+    categories: [{ id: 70, name: 'Fins', slug: 'fins' }],
+    cross_sell_ids: [],
+    date_created: '2019-04-14T09:32:57',
+    date_created_gmt: '2019-04-14T09:32:57',
+    date_modified: '2019-05-26T07:00:40',
+    date_modified_gmt: '2019-05-26T07:00:40',
+    date_on_sale_from: null,
+    date_on_sale_from_gmt: null,
+    date_on_sale_to: null,
+    date_on_sale_to_gmt: null,
+    default_attributes: [],
+    description: '<div>This is a test</div>',
+    dimensions: { length: '', width: '', height: '' },
+    downloadable: false,
+    id: 19755,
+    images: [{ src: test1 }, { src: test2 }],
+    permalink:
+      'https://shop.eisbach-riders.com/product/double-tab-nylon-black/',
+    price: '19.90',
+    price_html: '<span>price html</span>',
+    purchasable: true,
+    purchase_note: '',
+    rating_count: 0,
+    regular_price: '',
+    related_ids: [19927, 19937, 19962, 19798, 19870],
+    reviews_allowed: false,
+    sale_price: '',
+    shipping_class: '',
+    shipping_class_id: 0,
+    shipping_required: true,
+    shipping_taxable: true,
+    short_description: '<div>short description</div>',
+    sku: '',
+    slug: 'double-tab-nylon-black',
+    sold_individually: false,
+    status: 'publish',
+    stock_quantity: null,
+    tags: [
+      { id: 85, name: 'double tab', slug: 'double-tab' },
+      { id: 84, name: 'fcs', slug: 'fcs' },
+      { id: 88, name: 'fin key', slug: 'fin-key' },
+      { id: 83, name: 'fins', slug: 'fins' },
+      { id: 86, name: 'nylon', slug: 'nylon' },
+      { id: 87, name: 'thruster', slug: 'thruster' },
+    ],
+    tax_class: '',
+    tax_status: 'taxable',
+    total_sales: 9,
+    type: 'variable',
+    upsell_ids: [],
+    variations: [19833, 19768],
+    virtual: false,
+    weight: '',
+  }
+
   return (
-    <div className={classes.root}>
+    <Container>
       <div className={classes.form}>
         <FormControl>
           <InputLabel htmlFor="category">Filter</InputLabel>
@@ -188,7 +240,7 @@ function Shop() {
           <div className={classes.container}>{shopItems(filter)}</div>
         </>
       )}
-    </div>
+    </Container>
   )
 }
 
