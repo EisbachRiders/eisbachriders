@@ -107,6 +107,13 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.common.black,
   },
   icon: {
+    color: theme.palette.common.black,
+    fontSize: 22,
+    '&:hover': {
+      color: theme.palette.primary.main,
+    },
+  },
+  iconDarkTheme: {
     color: theme.palette.common.white,
     fontSize: 22,
     '&:hover': {
@@ -161,17 +168,22 @@ function Header({ isHomepage, lng, changeLng, cart }) {
               >
                 {t('header.cart')}
               </Button> */}
-              <IconButton
-                className={
-                  isHomepage ? classes.button : classes.buttonDarkTheme
-                }
-                aria-label="Checkout"
-                href="https://shop.eisbach-riders.com/cart/"
-              >
-                <Badge badgeContent={totalItems} color="primary">
-                  <CartIcon className={classes.icon} />
-                </Badge>
-              </IconButton>
+              <Link to="/cart/">
+                <IconButton
+                  className={
+                    isHomepage ? classes.button : classes.buttonDarkTheme
+                  }
+                  aria-label="Checkout"
+                >
+                  <Badge badgeContent={totalItems} color="primary">
+                    <CartIcon
+                      className={
+                        isHomepage ? classes.icon : classes.iconDarkTheme
+                      }
+                    />
+                  </Badge>
+                </IconButton>
+              </Link>
               <Button
                 className={
                   isHomepage ? classes.button : classes.buttonDarkTheme

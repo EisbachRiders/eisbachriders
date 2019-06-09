@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/styles'
-import MyBag from './Bag'
+import Cart from '../cart/Cart'
 import MyTotal from './Total'
 
 const useStyles = makeStyles(theme => ({
@@ -29,7 +29,7 @@ function Checkout() {
 
   return (
     <div className={classes.root}>
-      <MyBag />
+      <Cart />
       <MyTotal />
     </div>
   )

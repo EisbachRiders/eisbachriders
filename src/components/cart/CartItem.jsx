@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import { useTranslation } from 'react-i18next'
 import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
-import img1 from '../../assets/images/FCS/img1.jpg'
-import img2 from '../../assets/images/FCS/img2.jpg'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -17,13 +15,13 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-function BagItem({ item }) {
+function CartItem({ item }) {
   const classes = useStyles()
   const { t } = useTranslation()
 
   return (
     <div className={classes.root}>
-      t67tfc cvg89b jno0-pokm ,lp;-=p[;l.]{' '}
+      Fin
       <Typography className={classes.quantity}>{item.quantity}</Typography>
       <Typography className={classes.price}>
         {item.price * item.quantity}
@@ -32,8 +30,8 @@ function BagItem({ item }) {
   )
 }
 
-BagItem.propTypes = {
+CartItem.propTypes = {
   item: PropTypes.object.isRequired,
 }
 
-export default BagItem
+export default CartItem

@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 import { useTranslation } from 'react-i18next'
 import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
-import BagItem from './BagItem'
+import BagItem from './CartItem'
+import Container from '../ui/Container'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -21,10 +22,10 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-function Bag() {
+function Cart() {
   const classes = useStyles()
   const { t } = useTranslation()
-  const bag = [
+  const cart = [
     {
       img: '../../assets/images/FCS/img1.jpg',
       name: 'fin number item',
@@ -39,16 +40,16 @@ function Bag() {
     },
   ]
   return (
-    <div className={classes.root}>
+    <Container>
       <Typography className={classes.title}>{t('checkout.myBag')}</Typography>
-      {bag.map((elem, idx) => (
+      {cart.map((elem, idx) => (
         <BagItem item={elem} key={`bagItem${idx}`} />
       ))}
       <Typography className={classes.total}>{t('checkout.total')}</Typography>
-    </div>
+    </Container>
   )
 }
 
-Bag.propTypes = {}
+Cart.propTypes = {}
 
-export default Bag
+export default Cart
