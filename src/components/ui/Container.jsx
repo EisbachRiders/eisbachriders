@@ -35,8 +35,8 @@ const useStyles = makeStyles(theme => ({
   greyBlue: {
     background: theme.status.greyBlue,
   },
-  black: {
-    background: theme.status.black,
+  cream: {
+    background: theme.status.cream,
   },
   primary: {
     background: theme.palette.primary.main,
@@ -81,7 +81,7 @@ function Container({
         {
           [classes.greyBlue]: background === 'grey',
           [classes.primary]: background === 'primary',
-          [classes.black]: background === 'black',
+          [classes.cream]: background === 'cream',
           [classes[variant]]: variant !== undefined,
         },
         classNameProp
@@ -94,7 +94,7 @@ function Container({
 
 Container.propTypes = {
   children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
-  background: PropTypes.oneOf(['grey', 'primary', 'black']),
+  background: PropTypes.oneOf(['grey', 'primary', 'cream']),
   variant: PropTypes.oneOf([
     'flexStart',
     'flexEnd',

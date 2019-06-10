@@ -15,6 +15,7 @@ import CartIcon from '@material-ui/icons/ShoppingCart'
 import { connect } from 'react-redux'
 import MenuIcon from '@material-ui/icons/Menu'
 import Badge from '@material-ui/core/Badge'
+import test from '../assets/images/test.png'
 
 const mapStateToProps = ({ lng, cart }) => {
   return { lng, cart }
@@ -28,13 +29,26 @@ const useStyles = makeStyles(theme => ({
   grow: {
     flexGrow: 1,
   },
+  test: {
+    width: '100%',
+    // height: 200,
+  },
+  banner: {
+    background: theme.status.black,
+    color: theme.status.white,
+    textAlign: 'center',
+    padding: 5,
+  },
   appbar: {
     boxShadow: 'none',
-    backgroundColor: 'transparent',
+    // backgroundColor: 'transparent',
+    backgroundColor: theme.status.white,
+    borderBottom: `1px solid ${theme.status.grey}`,
   },
   appbarDarkTheme: {
     boxShadow: 'none',
-    backgroundColor: theme.status.black,
+    backgroundColor: theme.status.white,
+    borderBottom: `1px solid ${theme.status.grey}`,
   },
   toolbar: {
     paddingLeft: 15,
@@ -43,18 +57,6 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('sm')]: {
       paddingLeft: 60,
       paddingRight: 60,
-    },
-    [theme.breakpoints.up('md')]: {
-      paddingLeft: 90,
-      paddingRight: 90,
-    },
-    [theme.breakpoints.up('lg')]: {
-      paddingLeft: 170,
-      paddingRight: 170,
-    },
-    [theme.breakpoints.up('xl')]: {
-      paddingLeft: 400,
-      paddingRight: 400,
     },
   },
   containerXS: {
@@ -72,7 +74,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: 5,
     width: 'auto',
     height: 60,
-    color: theme.status.white,
+    color: theme.palette.primary.main,
   },
   button: {
     color: theme.palette.common.black,
@@ -89,12 +91,12 @@ const useStyles = makeStyles(theme => ({
     },
   },
   buttonDarkTheme: {
-    color: theme.palette.common.white,
+    color: theme.palette.primary.main,
     fontSize: 14,
     fontWeight: 400,
     marginLeft: 15,
     '&:hover': {
-      color: theme.palette.primary.main,
+      color: theme.palette.common.black,
     },
     [theme.breakpoints.up('md')]: {
       fontSize: 16,
@@ -114,10 +116,10 @@ const useStyles = makeStyles(theme => ({
     },
   },
   iconDarkTheme: {
-    color: theme.palette.common.white,
+    color: theme.palette.primary.main,
     fontSize: 22,
     '&:hover': {
-      color: theme.palette.primary.main,
+      color: theme.palette.common.black,
     },
   },
   mobileButton: {
@@ -140,9 +142,10 @@ function Header({ isHomepage, lng, changeLng, cart }) {
   return (
     <div className={classes.root}>
       <AppBar
-        position="static"
+        position="fixed"
         className={isHomepage ? classes.appbar : classes.appbarDarkTheme}
       >
+        <div className={classes.banner}>Free Shipping on Orders Over 25€!</div>
         <Toolbar className={classes.toolbar}>
           <Link to="/" className={classes.logoButton} aria-label="home">
             <ERIcon
@@ -160,14 +163,15 @@ function Header({ isHomepage, lng, changeLng, cart }) {
                   {t('header.shop')}
                 </Button>
               </Link>
-              {/* <Button
-                className={
-                  isHomepage ? classes.button : classes.buttonDarkTheme
-                }
-                href="https://shop.eisbach-riders.com/"
-              >
-                {t('header.cart')}
-              </Button> */}
+              <Link to="/weather/">
+                <Button
+                  className={
+                    isHomepage ? classes.button : classes.buttonDarkTheme
+                  }
+                >
+                  {t('header.weather')}
+                </Button>
+              </Link>
               <Link to="/cart/">
                 <IconButton
                   className={
@@ -184,14 +188,14 @@ function Header({ isHomepage, lng, changeLng, cart }) {
                   </Badge>
                 </IconButton>
               </Link>
-              <Button
+              {/* <Button
                 className={
                   isHomepage ? classes.button : classes.buttonDarkTheme
                 }
                 onClick={changeLng}
               >
                 {lng === 'en' ? 'de' : 'en'}
-              </Button>
+              </Button> */}
             </div>
           </Hidden>
           <Hidden smUp>
@@ -224,6 +228,7 @@ function Header({ isHomepage, lng, changeLng, cart }) {
           </Hidden>
         </Toolbar>
       </AppBar>
+      {!isHomepage && <img src={test} className={classes.test} />}
     </div>
   )
 }

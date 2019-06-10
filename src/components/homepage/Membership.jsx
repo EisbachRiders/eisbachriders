@@ -11,6 +11,8 @@ const useStyles = makeStyles(theme => ({
     marginBottom: 5,
     textTransform: 'uppercase',
     letterSpacing: 3,
+    width: '100%',
+    textAlign: 'center',
   },
   logo: {
     marginLeft: 15,
@@ -24,11 +26,15 @@ function Membership() {
   const classes = useStyles()
   const { t } = useTranslation()
   return (
-    <Container variant="center" background="primary">
+    <Container variant="center">
       <Typography className={classes.title}>{t('membership.title')}</Typography>
       <div>
-        <img src={surfriderLogo} className={classes.logo} />
-        <img src={igsmLogo} className={classes.logo} />
+        <a href="https://www.surfrider.org/" target="_blank">
+          <img src={surfriderLogo} className={classes.logo} />
+        </a>
+        <a href="https://www.igsm.info/" target="_blank">
+          <img src={igsmLogo} className={classes.logo} />
+        </a>
       </div>
     </Container>
   )
