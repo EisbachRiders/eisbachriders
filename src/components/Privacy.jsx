@@ -5,26 +5,9 @@ import Typography from '@material-ui/core/Typography'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
+import Container from './ui/Container'
 
 const useStyles = makeStyles(theme => ({
-  container: {
-    background: theme.status.white,
-    paddingLeft: 15,
-    paddingRight: 15,
-    paddingBottom: 30,
-    textAlign: 'center',
-    [theme.breakpoints.up('sm')]: {
-      paddingLeft: 60,
-      paddingRight: 60,
-      paddingBottom: 30,
-    },
-    [theme.breakpoints.up('md')]: {
-      paddingLeft: 90,
-      paddingRight: 90,
-      paddingBottom: 90,
-      paddingTop: 30,
-    },
-  },
   title: {
     paddingBottom: 15,
     textAlign: 'center',
@@ -54,7 +37,7 @@ function Privacy() {
   const classes = useStyles()
   const { t } = useTranslation()
   return (
-    <div className={classes.container} id="privacy">
+    <Container>
       <Typography variant="h6" className={classes.title}>
         {t('privacy.privacy')}
       </Typography>
@@ -233,7 +216,7 @@ function Privacy() {
       <Typography className={classes.text}>{t('privacy.terms10_2')}</Typography>
       <Typography variant="subtitle1">{t('privacy.title11')}</Typography>
       <Typography className={classes.text}>{t('privacy.terms11_1')}</Typography>
-    </div>
+    </Container>
   )
 }
 

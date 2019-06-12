@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Link from './Link'
+import Link from './ui/Link'
 import { makeStyles } from '@material-ui/styles'
 import Button from '@material-ui/core/Button'
 import List from '@material-ui/core/List'
@@ -127,10 +127,10 @@ function MobileHeaderList({ links, linkLabels, lng, changeLng }) {
 }
 
 MobileHeaderList.propTypes = {
-  links: PropTypes.array.isRequired,
-  linkLabels: PropTypes.array.isRequired,
-  lng: PropTypes.string.isRequired,
-  changeLng: PropTypes.func.isRequired,
+  links: PropTypes.array,
+  linkLabels: PropTypes.array,
+  lng: PropTypes.string,
+  changeLng: PropTypes.func,
 }
 
 export default MobileHeaderList

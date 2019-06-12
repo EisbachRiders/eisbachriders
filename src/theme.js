@@ -2,36 +2,38 @@ import { createMuiTheme } from '@material-ui/core/styles'
 import './app.css'
 
 const status = {
-  white: '#ffffff',
-  black: '#0b0c10',
-  blue: '#1f2833',
-  greyLt: '#F7F5F5',
-  greyMed: '#656565',
-  grey: '#c5c6c7',
-  greyDk: '#404040',
-  tealLt: '#4deda3',
-  teal: '#16d57d',
-  tealDk: '#10a05e',
-  ocean: '#233d54',
+  // for shop colors
+  blue: '#004AB5',
   green: '#00942b',
   yellow: '#fce566',
+  orange: '#ff8000',
+  pink: '#ff0080',
   red: '#FF0012',
   redLt: '#ff4e5b',
+  // theme colors
+  cream: '#f7f5ee',
   greyBlue: '#f3f8fc',
+  white: '#fafafa',
+  fin: '#00d7a2',
+  finDk: '#00be8f',
+  finLt: '#00f1b5',
+  greyLt: '#d5d9db',
+  grey: '#818C93',
+  black: '#00130e', // typography
 }
 
 const theme = createMuiTheme({
   palette: {
     type: 'light',
     primary: {
-      light: status.tealLt,
-      main: status.teal,
-      dark: status.tealDk,
+      light: status.finDk,
+      main: status.fin,
+      dark: status.finLt,
     },
     secondary: {
-      light: status.ocean,
-      main: status.ocean,
-      dark: status.ocean,
+      light: status.blue,
+      main: status.blue,
+      dark: status.blue,
     },
     error: { main: status.red },
   },
@@ -59,7 +61,7 @@ const theme = createMuiTheme({
   overrides: {
     MuiTypography: {
       colorPrimary: {
-        color: status.greyDk,
+        color: status.black,
       },
       colorSecondary: {
         color: status.grey,

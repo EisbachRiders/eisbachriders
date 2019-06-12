@@ -4,7 +4,7 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { ThemeProvider } from '@material-ui/styles'
 import theme from '../../theme'
-import { reducer } from '../../state/createStore'
+import { reducer } from '../../redux/createStore'
 import Header from '../Header'
 
 describe('Header', () => {

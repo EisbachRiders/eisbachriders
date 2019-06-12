@@ -1,11 +1,11 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import ShopItem from '../components/shop/ShopItem'
+import Product from '../components/product/Product'
 
 function ProductPage() {
   return (
     <Layout>
-      <ShopItem />
+      <Product />
     </Layout>
   )
 }

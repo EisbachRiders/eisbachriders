@@ -212,50 +212,6 @@ Object {
               </div>
             </span>
           </a>
-          <button
-            aria-label="change language"
-            class="MuiButtonBase-root MuiButton-root makeStyles-button-5 MuiButton-text"
-            tabindex="0"
-            type="button"
-          >
-            <span
-              class="MuiButton-label"
-            >
-              <div
-                aria-disabled="false"
-                class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-divider MuiListItem-button"
-                role="button"
-                tabindex="0"
-              >
-                <div
-                  class="MuiListItemText-root MuiListItemText-dense makeStyles-text-2"
-                >
-                  en
-                </div>
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root makeStyles-icon-4"
-                  focusable="false"
-                  role="presentation"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
-                  />
-                  <path
-                    d="M0 0h24v24H0V0z"
-                    fill="none"
-                  />
-                </svg>
-                <span
-                  class="MuiTouchRipple-root"
-                />
-              </div>
-            </span>
-            <span
-              class="MuiTouchRipple-root"
-            />
-          </button>
         </nav>
       </div>
     </div>
@@ -468,50 +424,6 @@ Object {
             </div>
           </span>
         </a>
-        <button
-          aria-label="change language"
-          class="MuiButtonBase-root MuiButton-root makeStyles-button-5 MuiButton-text"
-          tabindex="0"
-          type="button"
-        >
-          <span
-            class="MuiButton-label"
-          >
-            <div
-              aria-disabled="false"
-              class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-divider MuiListItem-button"
-              role="button"
-              tabindex="0"
-            >
-              <div
-                class="MuiListItemText-root MuiListItemText-dense makeStyles-text-2"
-              >
-                en
-              </div>
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root makeStyles-icon-4"
-                focusable="false"
-                role="presentation"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
-                />
-                <path
-                  d="M0 0h24v24H0V0z"
-                  fill="none"
-                />
-              </svg>
-              <span
-                class="MuiTouchRipple-root"
-              />
-            </div>
-          </span>
-          <span
-            class="MuiTouchRipple-root"
-          />
-        </button>
       </nav>
     </div>
   </div>,

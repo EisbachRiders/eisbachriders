@@ -4,8 +4,9 @@ import Shop from '../Shop'
 import { ThemeProvider } from '@material-ui/styles'
 import theme from '../../../theme'
 
+const fetch = require('node-fetch')
+
 describe('Shop', () => {
-  const fetch = require('node-fetch')
   const mockProps = {
     t: () => '',
   }

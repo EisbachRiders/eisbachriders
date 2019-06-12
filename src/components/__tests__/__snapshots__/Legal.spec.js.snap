@@ -6,16 +6,15 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="makeStyles-container-1"
-        id="legal"
+        class="makeStyles-container-3"
       >
         <h5
-          class="MuiTypography-root MuiTypography-h5 makeStyles-title-2"
+          class="MuiTypography-root MuiTypography-h5 makeStyles-title-1"
         >
           imprint.imprint
         </h5>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           Eisbach Riders 
           <br />
@@ -29,19 +28,19 @@ Object {
           <br />
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           Tel.: 0176/69019542 
           <br />
           E-Mail: business@eisbach-riders.com
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           Vertretungsberechtigte Gesellschafter: Robin Eisenhardt, Michael Schmidt
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz: DE 320071401 Plattform der EU-Kommission zur 
           <br />
@@ -55,12 +54,12 @@ Object {
           Wir sind zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle weder verpflichtet noch bereit.
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           Verantwortliche/r i.S.d. § 55 Abs. 2 RStV: Robin Eisenhardt, Michael Schmidt, Lothstr. 72, 80797, München
         </p>
         <h6
-          class="MuiTypography-root MuiTypography-h6 makeStyles-title-2"
+          class="MuiTypography-root MuiTypography-h6 makeStyles-title-1"
         >
           imprint.terms
         </h6>
@@ -70,17 +69,17 @@ Object {
           imprint.title1
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms1_1
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms1_2
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms1_3
         </p>
@@ -90,37 +89,37 @@ Object {
           imprint.title2
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms2_1
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms2_2
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms2_3
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms2_4
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms2_5
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms2_6
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms2_7
         </p>
@@ -130,12 +129,12 @@ Object {
           imprint.title3
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms3_1
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms3_2
         </p>
@@ -145,22 +144,22 @@ Object {
           imprint.title4
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms4_1
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms4_2
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms4_3
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms4_4
         </p>
@@ -170,17 +169,17 @@ Object {
           imprint.title5
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms5_1
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms5_2
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms5_3
         </p>
@@ -190,7 +189,7 @@ Object {
           imprint.title6
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms6_1
         </p>
@@ -200,17 +199,17 @@ Object {
           imprint.title7
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms7_1
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms7_2
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms7_3
         </p>
@@ -220,7 +219,7 @@ Object {
           imprint.title8
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms8_1
         </p>
@@ -230,22 +229,22 @@ Object {
           imprint.title9
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms9_1
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms9_2
         </p>
         <h6
-          class="MuiTypography-root MuiTypography-h6 makeStyles-title-2"
+          class="MuiTypography-root MuiTypography-h6 makeStyles-title-1"
         >
           imprint.title10
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms10_1
         </p>
@@ -255,32 +254,32 @@ Object {
           imprint.title11
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms11_1
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms11_2
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms11_3
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms11_4
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms11_5
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms11_6
         </p>
@@ -290,12 +289,12 @@ Object {
           imprint.title12
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms12_1
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           Eisbach Riders 
           <br />
@@ -310,12 +309,12 @@ Object {
           E-Mail: business@eisbach-riders.com
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           imprint.terms12_2
         </p>
         <h5
-          class="MuiTypography-root MuiTypography-h5 makeStyles-title-2"
+          class="MuiTypography-root MuiTypography-h5 makeStyles-title-1"
         >
           imprint.credits
         </h5>
@@ -440,16 +439,15 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="makeStyles-container-1"
-      id="legal"
+      class="makeStyles-container-3"
     >
       <h5
-        class="MuiTypography-root MuiTypography-h5 makeStyles-title-2"
+        class="MuiTypography-root MuiTypography-h5 makeStyles-title-1"
       >
         imprint.imprint
       </h5>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         Eisbach Riders 
         <br />
@@ -463,19 +461,19 @@ Object {
         <br />
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         Tel.: 0176/69019542 
         <br />
         E-Mail: business@eisbach-riders.com
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         Vertretungsberechtigte Gesellschafter: Robin Eisenhardt, Michael Schmidt
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz: DE 320071401 Plattform der EU-Kommission zur 
         <br />
@@ -489,12 +487,12 @@ Object {
         Wir sind zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle weder verpflichtet noch bereit.
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         Verantwortliche/r i.S.d. § 55 Abs. 2 RStV: Robin Eisenhardt, Michael Schmidt, Lothstr. 72, 80797, München
       </p>
       <h6
-        class="MuiTypography-root MuiTypography-h6 makeStyles-title-2"
+        class="MuiTypography-root MuiTypography-h6 makeStyles-title-1"
       >
         imprint.terms
       </h6>
@@ -504,17 +502,17 @@ Object {
         imprint.title1
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms1_1
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms1_2
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms1_3
       </p>
@@ -524,37 +522,37 @@ Object {
         imprint.title2
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms2_1
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms2_2
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms2_3
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms2_4
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms2_5
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms2_6
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms2_7
       </p>
@@ -564,12 +562,12 @@ Object {
         imprint.title3
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms3_1
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms3_2
       </p>
@@ -579,22 +577,22 @@ Object {
         imprint.title4
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms4_1
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms4_2
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms4_3
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms4_4
       </p>
@@ -604,17 +602,17 @@ Object {
         imprint.title5
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms5_1
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms5_2
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms5_3
       </p>
@@ -624,7 +622,7 @@ Object {
         imprint.title6
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms6_1
       </p>
@@ -634,17 +632,17 @@ Object {
         imprint.title7
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms7_1
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms7_2
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms7_3
       </p>
@@ -654,7 +652,7 @@ Object {
         imprint.title8
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms8_1
       </p>
@@ -664,22 +662,22 @@ Object {
         imprint.title9
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms9_1
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms9_2
       </p>
       <h6
-        class="MuiTypography-root MuiTypography-h6 makeStyles-title-2"
+        class="MuiTypography-root MuiTypography-h6 makeStyles-title-1"
       >
         imprint.title10
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms10_1
       </p>
@@ -689,32 +687,32 @@ Object {
         imprint.title11
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms11_1
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms11_2
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms11_3
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms11_4
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms11_5
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms11_6
       </p>
@@ -724,12 +722,12 @@ Object {
         imprint.title12
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms12_1
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         Eisbach Riders 
         <br />
@@ -744,12 +742,12 @@ Object {
         E-Mail: business@eisbach-riders.com
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         imprint.terms12_2
       </p>
       <h5
-        class="MuiTypography-root MuiTypography-h5 makeStyles-title-2"
+        class="MuiTypography-root MuiTypography-h5 makeStyles-title-1"
       >
         imprint.credits
       </h5>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import Link from './Link'
+import Link from './ui/Link'
+import Img from 'gatsby-image'
 import { useTranslation } from 'react-i18next'
 import { makeStyles } from '@material-ui/styles'
 import AppBar from '@material-ui/core/AppBar'
@@ -11,12 +12,13 @@ import Button from '@material-ui/core/Button'
 import Drawer from '@material-ui/core/Drawer'
 import MobileHeaderList from '../components/MobileHeaderList'
 import ERIcon from '../assets/icons/ER'
-import CartIcon from '@material-ui/icons/ShoppingCart'
 import { connect } from 'react-redux'
 import MenuIcon from '@material-ui/icons/Menu'
+// import Badge from '@material-ui/core/Badge'
+// import CartIcon from '@material-ui/icons/ShoppingCart'
 
-const mapStateToProps = ({ lng }) => {
-  return { lng }
+const mapStateToProps = ({ lng, cart }) => {
+  return { lng, cart }
 }
 
 const mapDispatchToProps = dispatch => {
@@ -27,13 +29,17 @@ const useStyles = makeStyles(theme => ({
   grow: {
     flexGrow: 1,
   },
+  belowHeaderImg: { width: '100%' },
+  banner: {
+    background: theme.status.black,
+    color: theme.status.white,
+    textAlign: 'center',
+    padding: 5,
+  },
   appbar: {
     boxShadow: 'none',
-    backgroundColor: 'transparent',
-  },
-  appbarDarkTheme: {
-    boxShadow: 'none',
-    backgroundColor: theme.status.black,
+    backgroundColor: theme.status.white,
+    borderBottom: `1px solid ${theme.status.grey}`,
   },
   toolbar: {
     paddingLeft: 15,
@@ -42,18 +48,6 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('sm')]: {
       paddingLeft: 60,
       paddingRight: 60,
-    },
-    [theme.breakpoints.up('md')]: {
-      paddingLeft: 90,
-      paddingRight: 90,
-    },
-    [theme.breakpoints.up('lg')]: {
-      paddingLeft: 170,
-      paddingRight: 170,
-    },
-    [theme.breakpoints.up('xl')]: {
-      paddingLeft: 400,
-      paddingRight: 400,
     },
   },
   containerXS: {
@@ -64,21 +58,21 @@ const useStyles = makeStyles(theme => ({
   logo: {
     marginTop: 5,
     width: 'auto',
-    height: 60,
+    height: 45,
     color: theme.status.black,
   },
   logoDarkTheme: {
     marginTop: 5,
     width: 'auto',
-    height: 60,
-    color: theme.status.white,
+    height: 45,
+    color: theme.palette.primary.main,
   },
   button: {
     color: theme.palette.common.black,
+    textTransform: 'uppercase',
     fontSize: 14,
     fontWeight: 700,
-    paddingRight: 30,
-    paddingLeft: 0,
+    marginLeft: 15,
     '&:hover': {
       color: theme.palette.primary.main,
       background: 'transparent',
@@ -88,13 +82,12 @@ const useStyles = makeStyles(theme => ({
     },
   },
   buttonDarkTheme: {
-    color: theme.palette.common.white,
+    color: theme.palette.primary.main,
     fontSize: 14,
     fontWeight: 400,
-    paddingLeft: 0,
-    paddingRight: 30,
+    marginLeft: 15,
     '&:hover': {
-      color: theme.palette.primary.main,
+      color: theme.palette.common.black,
     },
     [theme.breakpoints.up('md')]: {
       fontSize: 16,
@@ -107,10 +100,17 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.common.black,
   },
   icon: {
-    color: theme.palette.common.white,
+    color: theme.palette.common.black,
     fontSize: 22,
     '&:hover': {
       color: theme.palette.primary.main,
+    },
+  },
+  iconDarkTheme: {
+    color: theme.palette.primary.main,
+    fontSize: 22,
+    '&:hover': {
+      color: theme.palette.common.black,
     },
   },
   mobileButton: {
@@ -125,17 +125,16 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-function Header({ isHomepage, lng, changeLng }) {
+function Header({ isHomepage, lng, changeLng, cart, img }) {
+  console.log(img)
   const classes = useStyles()
   const { t } = useTranslation()
   const [isDrawerOpen, setDrawer] = useState(false)
-
+  const totalItems = cart.length !== 0 ? cart[0].quantity : 0
   return (
     <div className={classes.root}>
-      <AppBar
-        position="static"
-        className={isHomepage ? classes.appbar : classes.appbarDarkTheme}
-      >
+      <AppBar position="fixed" className={classes.appbar}>
+        <div className={classes.banner}>Free Shipping on Orders Over 15€!</div>
         <Toolbar className={classes.toolbar}>
           <Link to="/" className={classes.logoButton} aria-label="home">
             <ERIcon
@@ -160,14 +159,41 @@ function Header({ isHomepage, lng, changeLng }) {
               >
                 {t('header.cart')}
               </Button>
-              {/* <IconButton
-                className={classes.button}
-                aria-label="Checkout"
-                href="https://shop.eisbach-riders.com/cart/"
-              >
-                <CartIcon className={classes.icon} />
-              </IconButton> */}
-              {/* <Button
+              {/* <Link to="/shop/">
+                <Button
+                  className={
+                    isHomepage ? classes.button : classes.buttonDarkTheme
+                  }
+                >
+                  {t('header.shop')}
+                </Button>
+              </Link>
+              <Link to="/weather/">
+                <Button
+                  className={
+                    isHomepage ? classes.button : classes.buttonDarkTheme
+                  }
+                >
+                  {t('header.weather')}
+                </Button>
+              </Link>
+              <Link to="/cart/">
+                <IconButton
+                  className={
+                    isHomepage ? classes.button : classes.buttonDarkTheme
+                  }
+                  aria-label="Checkout"
+                >
+                  <Badge badgeContent={totalItems} color="primary">
+                    <CartIcon
+                      className={
+                        isHomepage ? classes.icon : classes.iconDarkTheme
+                      }
+                    />
+                  </Badge>
+                </IconButton>
+              </Link> 
+               <Button
                 className={
                   isHomepage ? classes.button : classes.buttonDarkTheme
                 }
@@ -207,6 +233,13 @@ function Header({ isHomepage, lng, changeLng }) {
           </Hidden>
         </Toolbar>
       </AppBar>
+      {!isHomepage && (
+        <Img
+          fluid={img.node.fluid}
+          alt="surfer with leash and board"
+          className={classes.belowHeaderImg}
+        />
+      )}
     </div>
   )
 }

@@ -6,11 +6,10 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="makeStyles-container-1"
-        id="privacy"
+        class="makeStyles-container-5"
       >
         <h6
-          class="MuiTypography-root MuiTypography-h6 makeStyles-title-2"
+          class="MuiTypography-root MuiTypography-h6 makeStyles-title-1"
         >
           privacy.privacy
         </h6>
@@ -20,17 +19,17 @@ Object {
           privacy.title1
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           privacy.terms1_1
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           privacy.terms1_2
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           privacy.terms1_3
         </p>
@@ -40,7 +39,7 @@ Object {
           privacy.title2
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           privacy.terms2_1
         </p>
@@ -48,91 +47,91 @@ Object {
           class="MuiList-root MuiList-padding"
         >
           <li
-            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
           >
             <div
               class="MuiListItemText-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
               >
                 privacy.terms2_list1
               </span>
             </div>
           </li>
           <li
-            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
           >
             <div
               class="MuiListItemText-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
               >
                 privacy.terms2_list2
               </span>
             </div>
           </li>
           <li
-            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
           >
             <div
               class="MuiListItemText-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
               >
                 privacy.terms2_list3
               </span>
             </div>
           </li>
           <li
-            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
           >
             <div
               class="MuiListItemText-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
               >
                 privacy.terms2_list4
               </span>
             </div>
           </li>
           <li
-            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
           >
             <div
               class="MuiListItemText-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
               >
                 privacy.terms2_list5
               </span>
             </div>
           </li>
           <li
-            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
           >
             <div
               class="MuiListItemText-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
               >
                 privacy.terms2_list6
               </span>
             </div>
           </li>
           <li
-            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
           >
             <div
               class="MuiListItemText-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
               >
                 privacy.terms2_list7
               </span>
@@ -140,7 +139,7 @@ Object {
           </li>
         </ul>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           privacy.terms2_2
         </p>
@@ -150,22 +149,22 @@ Object {
           privacy.title3
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           privacy.terms3_1
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           privacy.terms3_2
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           privacy.terms3_3
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           privacy.terms3_4
         </p>
@@ -173,65 +172,65 @@ Object {
           class="MuiList-root MuiList-padding"
         >
           <li
-            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
           >
             <div
               class="MuiListItemText-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
               >
                 - Internet Explorer: https://support.microsoft.com/en-us/help/17442/windows-internet-explorer-delete-manage-cookies 
               </span>
             </div>
           </li>
           <li
-            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
           >
             <div
               class="MuiListItemText-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
               >
                 - Firefox: https://www.mozilla.org/en-US/privacy/websites/#cookies 
               </span>
             </div>
           </li>
           <li
-            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
           >
             <div
               class="MuiListItemText-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
               >
                 - Chrome: https://support.google.com/accounts/answer/61416?co=GENIE.Platform%3DDesktop&hl=en 
               </span>
             </div>
           </li>
           <li
-            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
           >
             <div
               class="MuiListItemText-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
               >
                 - Safari: https://support.apple.com/en-gb/guide/safari/manage-cookies-and-website-data-sfri11471/mac 
               </span>
             </div>
           </li>
           <li
-            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
           >
             <div
               class="MuiListItemText-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
               >
                 - Opera: https://help.opera.com/en/latest/web-preferences/#cookies 
               </span>
@@ -239,7 +238,7 @@ Object {
           </li>
         </ul>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           privacy.terms3_5
         </p>
@@ -249,7 +248,7 @@ Object {
           privacy.title4
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           privacy.terms4_1
         </p>
@@ -259,7 +258,7 @@ Object {
           privacy.title5
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           privacy.terms5_1
         </p>
@@ -269,12 +268,12 @@ Object {
           privacy.title6
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           privacy.terms6_1
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           privacy.terms6_2
         </p>
@@ -284,17 +283,17 @@ Object {
           privacy.title7
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           privacy.terms7_1
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           privacy.terms7_2
         </p>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           privacy.terms7_3
         </p>
@@ -304,18 +303,18 @@ Object {
           privacy.title8
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           privacy.terms8_1
         </p>
         <a
-          class="makeStyles-link-5"
+          class="makeStyles-link-4"
           href="javascript:gaOptout()"
         >
           privacy.terms8_3
         </a>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           privacy.terms8_4
         </p>
@@ -325,7 +324,7 @@ Object {
           privacy.title9
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           privacy.terms9_1
         </p>
@@ -335,7 +334,7 @@ Object {
           privacy.title10
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           privacy.terms10_1
         </p>
@@ -343,26 +342,26 @@ Object {
           class="MuiList-root MuiList-padding"
         >
           <li
-            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
           >
             <div
               class="MuiListItemText-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
               >
                 privacy.terms10_list1
               </span>
             </div>
           </li>
           <li
-            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
           >
             <div
               class="MuiListItemText-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
               >
                 privacy.terms10_list2
               </span>
@@ -370,13 +369,13 @@ Object {
              
           </li>
           <li
-            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
           >
             <div
               class="MuiListItemText-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
               >
                 privacy.terms10_list3
               </span>
@@ -384,13 +383,13 @@ Object {
              
           </li>
           <li
-            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
           >
             <div
               class="MuiListItemText-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
               >
                 privacy.terms10_list4
               </span>
@@ -398,13 +397,13 @@ Object {
              
           </li>
           <li
-            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
           >
             <div
               class="MuiListItemText-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
               >
                 privacy.terms10_list5
               </span>
@@ -412,13 +411,13 @@ Object {
              
           </li>
           <li
-            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
           >
             <div
               class="MuiListItemText-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
               >
                 privacy.terms10_list6
               </span>
@@ -426,13 +425,13 @@ Object {
              
           </li>
           <li
-            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
           >
             <div
               class="MuiListItemText-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
               >
                 privacy.terms10_list7
               </span>
@@ -440,13 +439,13 @@ Object {
              
           </li>
           <li
-            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+            class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
           >
             <div
               class="MuiListItemText-root"
             >
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+                class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
               >
                 privacy.terms10_list8
               </span>
@@ -460,7 +459,7 @@ Object {
           privacy.title10_2
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           privacy.terms10_2
         </p>
@@ -470,7 +469,7 @@ Object {
           privacy.title11
         </h6>
         <p
-          class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+          class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
         >
           privacy.terms11_1
         </p>
@@ -479,11 +478,10 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="makeStyles-container-1"
-      id="privacy"
+      class="makeStyles-container-5"
     >
       <h6
-        class="MuiTypography-root MuiTypography-h6 makeStyles-title-2"
+        class="MuiTypography-root MuiTypography-h6 makeStyles-title-1"
       >
         privacy.privacy
       </h6>
@@ -493,17 +491,17 @@ Object {
         privacy.title1
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         privacy.terms1_1
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         privacy.terms1_2
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         privacy.terms1_3
       </p>
@@ -513,7 +511,7 @@ Object {
         privacy.title2
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         privacy.terms2_1
       </p>
@@ -521,91 +519,91 @@ Object {
         class="MuiList-root MuiList-padding"
       >
         <li
-          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
         >
           <div
             class="MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
             >
               privacy.terms2_list1
             </span>
           </div>
         </li>
         <li
-          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
         >
           <div
             class="MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
             >
               privacy.terms2_list2
             </span>
           </div>
         </li>
         <li
-          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
         >
           <div
             class="MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
             >
               privacy.terms2_list3
             </span>
           </div>
         </li>
         <li
-          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
         >
           <div
             class="MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
             >
               privacy.terms2_list4
             </span>
           </div>
         </li>
         <li
-          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
         >
           <div
             class="MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
             >
               privacy.terms2_list5
             </span>
           </div>
         </li>
         <li
-          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
         >
           <div
             class="MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
             >
               privacy.terms2_list6
             </span>
           </div>
         </li>
         <li
-          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
         >
           <div
             class="MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
             >
               privacy.terms2_list7
             </span>
@@ -613,7 +611,7 @@ Object {
         </li>
       </ul>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         privacy.terms2_2
       </p>
@@ -623,22 +621,22 @@ Object {
         privacy.title3
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         privacy.terms3_1
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         privacy.terms3_2
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         privacy.terms3_3
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         privacy.terms3_4
       </p>
@@ -646,65 +644,65 @@ Object {
         class="MuiList-root MuiList-padding"
       >
         <li
-          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
         >
           <div
             class="MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
             >
               - Internet Explorer: https://support.microsoft.com/en-us/help/17442/windows-internet-explorer-delete-manage-cookies 
             </span>
           </div>
         </li>
         <li
-          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
         >
           <div
             class="MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
             >
               - Firefox: https://www.mozilla.org/en-US/privacy/websites/#cookies 
             </span>
           </div>
         </li>
         <li
-          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
         >
           <div
             class="MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
             >
               - Chrome: https://support.google.com/accounts/answer/61416?co=GENIE.Platform%3DDesktop&hl=en 
             </span>
           </div>
         </li>
         <li
-          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
         >
           <div
             class="MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
             >
               - Safari: https://support.apple.com/en-gb/guide/safari/manage-cookies-and-website-data-sfri11471/mac 
             </span>
           </div>
         </li>
         <li
-          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
         >
           <div
             class="MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
             >
               - Opera: https://help.opera.com/en/latest/web-preferences/#cookies 
             </span>
@@ -712,7 +710,7 @@ Object {
         </li>
       </ul>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         privacy.terms3_5
       </p>
@@ -722,7 +720,7 @@ Object {
         privacy.title4
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         privacy.terms4_1
       </p>
@@ -732,7 +730,7 @@ Object {
         privacy.title5
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         privacy.terms5_1
       </p>
@@ -742,12 +740,12 @@ Object {
         privacy.title6
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         privacy.terms6_1
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         privacy.terms6_2
       </p>
@@ -757,17 +755,17 @@ Object {
         privacy.title7
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         privacy.terms7_1
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         privacy.terms7_2
       </p>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         privacy.terms7_3
       </p>
@@ -777,18 +775,18 @@ Object {
         privacy.title8
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         privacy.terms8_1
       </p>
       <a
-        class="makeStyles-link-5"
+        class="makeStyles-link-4"
         href="javascript:gaOptout()"
       >
         privacy.terms8_3
       </a>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         privacy.terms8_4
       </p>
@@ -798,7 +796,7 @@ Object {
         privacy.title9
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         privacy.terms9_1
       </p>
@@ -808,7 +806,7 @@ Object {
         privacy.title10
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         privacy.terms10_1
       </p>
@@ -816,26 +814,26 @@ Object {
         class="MuiList-root MuiList-padding"
       >
         <li
-          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
         >
           <div
             class="MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
             >
               privacy.terms10_list1
             </span>
           </div>
         </li>
         <li
-          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
         >
           <div
             class="MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
             >
               privacy.terms10_list2
             </span>
@@ -843,13 +841,13 @@ Object {
            
         </li>
         <li
-          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
         >
           <div
             class="MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
             >
               privacy.terms10_list3
             </span>
@@ -857,13 +855,13 @@ Object {
            
         </li>
         <li
-          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
         >
           <div
             class="MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
             >
               privacy.terms10_list4
             </span>
@@ -871,13 +869,13 @@ Object {
            
         </li>
         <li
-          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
         >
           <div
             class="MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
             >
               privacy.terms10_list5
             </span>
@@ -885,13 +883,13 @@ Object {
            
         </li>
         <li
-          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
         >
           <div
             class="MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
             >
               privacy.terms10_list6
             </span>
@@ -899,13 +897,13 @@ Object {
            
         </li>
         <li
-          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
         >
           <div
             class="MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
             >
               privacy.terms10_list7
             </span>
@@ -913,13 +911,13 @@ Object {
            
         </li>
         <li
-          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-4"
+          class="MuiListItem-root MuiListItem-gutters makeStyles-listItem-3"
         >
           <div
             class="MuiListItemText-root"
           >
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-3"
+              class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary makeStyles-text-2"
             >
               privacy.terms10_list8
             </span>
@@ -933,7 +931,7 @@ Object {
         privacy.title10_2
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         privacy.terms10_2
       </p>
@@ -943,7 +941,7 @@ Object {
         privacy.title11
       </h6>
       <p
-        class="MuiTypography-root MuiTypography-body1 makeStyles-text-3"
+        class="MuiTypography-root MuiTypography-body1 makeStyles-text-2"
       >
         privacy.terms11_1
       </p>

@@ -1,11 +1,11 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Feature from '../components/feature/Feature'
-import NewProduct from '../components/NewProduct'
-import Products from '../components/Products'
-import About from '../components/About'
-import Hero from '../components/Hero'
+import Feature from '../components/homepage/Feature'
+import NewProduct from '../components/homepage/NewProduct'
+import Showcase from '../components/homepage/Showcase'
+import About from '../components/homepage/About'
+import Hero from '../components/homepage/Hero'
 
 function Index({ data }) {
   const heroImg = data.allImageSharp.edges.find(x =>
@@ -33,7 +33,7 @@ function Index({ data }) {
         <Hero img={heroImg} />
         <Feature img={featureImg} />
         <NewProduct img={newImg} detailImg={detailImg} />
-        <Products />
+        <Showcase />
         <About img={aboutImg} waveImg={waveImg} />
       </Layout>
     </div>

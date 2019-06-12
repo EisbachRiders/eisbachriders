@@ -27,6 +27,14 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
+    // {
+    //   resolve: "gatsby-source-graphql",
+    //   options: {
+    //     typeName: "woocommerceAPI",
+    //     fieldName: "woo",
+    //     url: "https://rickandmortyapi-gql.now.sh/",
+    //   },
+    // },
     {
       resolve: 'gatsby-mdx',
       options: {
