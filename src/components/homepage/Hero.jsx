@@ -10,35 +10,31 @@ import Newsletter from '../newsletter/Newsletter'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    height: 250,
-    marginTop: -74,
-    [theme.breakpoints.up('sm')]: {
-      height: 300,
-    },
+    height: 350,
     [theme.breakpoints.up('md')]: {
-      height: 700,
+      height: 600,
     },
     [theme.breakpoints.up('xl')]: {
       height: 1000,
     },
   },
   container: {
-    paddingTop: 100,
+    paddingTop: 125,
     margin: '0 auto',
     width: '90%',
     [theme.breakpoints.up('sm')]: {
       position: 'absolute',
       width: 'auto',
-      paddingLeft: 120,
-      paddingTop: 100,
+      paddingLeft: 150,
+      paddingTop: 130,
     },
     [theme.breakpoints.up('md')]: {
       paddingLeft: 150,
-      paddingTop: 150,
+      paddingTop: 175,
     },
     [theme.breakpoints.up('lg')]: {
       paddingLeft: 250,
-      paddingTop: 200,
+      paddingTop: 15,
     },
     [theme.breakpoints.up('xl')]: {
       paddingLeft: 500,
@@ -50,12 +46,9 @@ const useStyles = makeStyles(theme => ({
     left: 0,
     top: 0,
     width: '100%',
-    height: 250,
-    [theme.breakpoints.up('sm')]: {
-      height: 300,
-    },
+    height: 350,
     [theme.breakpoints.up('md')]: {
-      height: 700,
+      height: 600,
     },
     [theme.breakpoints.up('xl')]: {
       height: 1000,

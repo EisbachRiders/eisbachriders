@@ -67,13 +67,13 @@ const useStyles = makeStyles(theme => ({
   logo: {
     marginTop: 5,
     width: 'auto',
-    height: 60,
+    height: 45,
     color: theme.status.black,
   },
   logoDarkTheme: {
     marginTop: 5,
     width: 'auto',
-    height: 60,
+    height: 45,
     color: theme.palette.primary.main,
   },
   button: {
