@@ -10,7 +10,7 @@ import Notification from './ui/Snackbar'
 
 const useStyles = makeStyles(theme => ({
   text: {
-    color: theme.palette.common.white,
+    color: theme.palette.common.black,
     fontSize: 12,
     lineHeight: 1.5,
     [theme.breakpoints.up('sm')]: {
@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   textHeading: {
-    color: theme.palette.common.white,
+    color: theme.palette.common.black,
     fontSize: 12,
     textTransform: 'uppercase',
     paddingBottom: 15,
@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
   },
   textArea: {
     paddingLeft: 20,
-    color: theme.palette.common.white,
+    color: theme.palette.common.black,
   },
   inputContainer: {
     display: 'flex',
@@ -43,7 +43,7 @@ const useStyles = makeStyles(theme => ({
   },
   input: {
     fontSize: 12,
-    color: theme.palette.common.white,
+    color: theme.palette.common.black,
     border: '1px solid',
   },
   inputError: {
@@ -53,7 +53,7 @@ const useStyles = makeStyles(theme => ({
   inputLabel: {
     fontSize: 12,
     paddingLeft: 20,
-    color: theme.palette.common.white,
+    color: theme.palette.common.black,
   },
   buttonSend: {
     marginTop: 15,

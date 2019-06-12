@@ -31,7 +31,22 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'space-between',
   },
   text: {
-    color: theme.palette.common.white,
+    color: theme.status.black,
+    fontSize: 12,
+    textTransform: 'capitalize',
+    paddingBottom: 10,
+    [theme.breakpoints.up('sm')]: {
+      lineHeight: 2,
+    },
+    '&:active': {
+      color: theme.palette.primary.main,
+    },
+    '&:hover': {
+      color: theme.palette.primary.main,
+    },
+  },
+  text2: {
+    color: theme.status.black,
     fontSize: 12,
     textTransform: 'capitalize',
     paddingBottom: 10,
@@ -40,7 +55,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   textHeading: {
-    color: theme.palette.common.white,
+    color: theme.status.finDarker,
     fontSize: 12,
     textTransform: 'uppercase',
     paddingBottom: 15,
@@ -52,7 +67,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   button: {
-    borderColor: theme.status.white,
+    borderColor: theme.status.finDarker,
     borderRadius: 0,
     minWidth: 0,
     padding: 8,
@@ -70,7 +85,7 @@ const useStyles = makeStyles(theme => ({
   icon: {
     width: 18,
     height: 18,
-    color: theme.palette.common.white,
+    color: theme.status.black,
   },
   iconContainer: {
     display: 'flex',
@@ -84,6 +99,9 @@ const useStyles = makeStyles(theme => ({
     cursor: 'pointer',
     paddingLeft: 5,
     paddingRight: 5,
+    '&:hover': {
+      color: theme.palette.primary.main,
+    },
   },
   legal: {
     backgroundColor: theme.status.black,
@@ -93,8 +111,7 @@ const useStyles = makeStyles(theme => ({
     textTransform: 'capitalize',
     color: theme.palette.common.white,
     letterSpacing: 3,
-    paddingTop: 15,
-    paddingBottom: 15,
+    padding: 5,
   },
 }))
 
@@ -105,7 +122,7 @@ function Footer() {
   return (
     <>
       <Membership />
-      <Container variant="spaceBetween" background="black">
+      <Container variant="spaceBetween" background="grey">
         <div className={classes.flexItem}>
           <Contact />
         </div>
@@ -158,7 +175,7 @@ function Footer() {
                 <Typography className={classes.textHeading}>
                   {t('footer.subscribe')}
                 </Typography>
-                <Typography className={classes.text}>
+                <Typography className={classes.text2}>
                   {t('footer.subscribeText')}
                 </Typography>
                 <Newsletter variant="small" />
