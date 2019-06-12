@@ -19,6 +19,7 @@ const useStyles = makeStyles(theme => ({
   snackbar: {
     left: 0,
     right: 0,
+    bottom: 0,
     transform: 'none',
   },
   snackbarContent: {

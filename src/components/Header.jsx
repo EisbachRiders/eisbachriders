@@ -126,7 +126,6 @@ const useStyles = makeStyles(theme => ({
 }))
 
 function Header({ isHomepage, lng, changeLng, cart, img }) {
-  console.log(img)
   const classes = useStyles()
   const { t } = useTranslation()
   const [isDrawerOpen, setDrawer] = useState(false)
@@ -233,7 +232,7 @@ function Header({ isHomepage, lng, changeLng, cart, img }) {
           </Hidden>
         </Toolbar>
       </AppBar>
-      {!isHomepage && (
+      {!isHomepage && img && (
         <Img
           fluid={img.node.fluid}
           alt="surfer with leash and board"
