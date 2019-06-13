@@ -51,7 +51,6 @@ const useStyles = makeStyles(theme => ({
     flexBasis: '30%',
   },
   detailText: {
-    textTransform: 'capitalize',
     color: theme.status.greyDk,
     fontSize: 12,
     marginBottom: 15,
@@ -110,7 +109,7 @@ function Feature({ img }) {
             color="primary"
             variant="outlined"
             className={classes.button}
-            href="https://shop.eisbach-riders.com/product/double-tab-honeycomb-fins/"
+            href="https://shop.eisbach-riders.com/product/single-tab-fiberglass-honeycomb-fins/"
           >
             {t('common.more')}
           </Button>

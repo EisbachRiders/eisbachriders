@@ -90,6 +90,10 @@ const useStyles = makeStyles(theme => ({
   iconContainer: {
     display: 'flex',
     justifyContent: 'flex-end',
+    marginTop: 15,
+    [theme.breakpoints.up('sm')]: {
+      marginTop: 0,
+    },
   },
   link: {
     color: theme.palette.common.white,

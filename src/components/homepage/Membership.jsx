@@ -15,10 +15,12 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'center',
   },
   logo: {
-    marginLeft: 15,
-    marginRight: 15,
     height: 100,
     width: 'auto',
+    [theme.breakpoints.up('md')]: {
+      marginLeft: 15,
+      marginRight: 15,
+    },
   },
 }))
 

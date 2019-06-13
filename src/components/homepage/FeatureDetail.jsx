@@ -56,13 +56,13 @@ const useStyles = makeStyles(theme => ({
     marginLeft: 5,
   },
   off: {
-    color: theme.status.grey,
+    color: theme.status.greyLt,
   },
   barOn: {
     width: 18,
     height: 5,
     marginLeft: 5,
-    background: theme.status.grey,
+    background: theme.status.greyLt,
   },
   barOff: {
     width: 18,

@@ -5,11 +5,11 @@ import Footer from './Footer'
 import SEO from './seo/SEO'
 import Tracking from './tracking/Tracking'
 
-function Layout({ isHomepage, children }) {
+function Layout({ isHomepage, img, children }) {
   return (
     <>
       <SEO />
-      <Header isHomepage={isHomepage} />
+      <Header isHomepage={isHomepage} img={img} />
       {children}
       <Footer />
       {process.env.NODE_ENV !== 'development' && <Tracking />}

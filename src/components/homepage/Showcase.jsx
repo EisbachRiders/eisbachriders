@@ -80,7 +80,7 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
   },
   mobileStepper: {
-    background: theme.status.white,
+    background: theme.palette.common.white,
   },
   button: {
     color: theme.palette.common.black,

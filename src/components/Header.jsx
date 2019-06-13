@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import Link from './ui/Link'
+import Img from 'gatsby-image'
 import { useTranslation } from 'react-i18next'
 import { makeStyles } from '@material-ui/styles'
 import AppBar from '@material-ui/core/AppBar'
@@ -29,10 +30,7 @@ const useStyles = makeStyles(theme => ({
   grow: {
     flexGrow: 1,
   },
-  test: {
-    width: '100%',
-    // height: 200,
-  },
+  belowHeaderImg: { width: '100%' },
   banner: {
     background: theme.status.black,
     color: theme.status.white,
@@ -40,12 +38,6 @@ const useStyles = makeStyles(theme => ({
     padding: 5,
   },
   appbar: {
-    boxShadow: 'none',
-    // backgroundColor: 'transparent',
-    backgroundColor: theme.status.white,
-    borderBottom: `1px solid ${theme.status.grey}`,
-  },
-  appbarDarkTheme: {
     boxShadow: 'none',
     backgroundColor: theme.status.white,
     borderBottom: `1px solid ${theme.status.grey}`,
@@ -134,18 +126,15 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-function Header({ isHomepage, lng, changeLng, cart }) {
+function Header({ isHomepage, lng, changeLng, cart, img }) {
   const classes = useStyles()
   const { t } = useTranslation()
   const [isDrawerOpen, setDrawer] = useState(false)
   const totalItems = cart.length !== 0 ? cart[0].quantity : 0
   return (
     <div className={classes.root}>
-      <AppBar
-        position="fixed"
-        className={isHomepage ? classes.appbar : classes.appbarDarkTheme}
-      >
-        <div className={classes.banner}>Free Shipping on Orders Over 25€!</div>
+      <AppBar position="fixed" className={classes.appbar}>
+        <div className={classes.banner}>Free Shipping on Orders Over 15€!</div>
         <Toolbar className={classes.toolbar}>
           <Link to="/" className={classes.logoButton} aria-label="home">
             <ERIcon
@@ -228,7 +217,13 @@ function Header({ isHomepage, lng, changeLng, cart }) {
           </Hidden>
         </Toolbar>
       </AppBar>
-      {!isHomepage && <img src={test} className={classes.test} />}
+      {!isHomepage && img && (
+        <Img
+          fluid={img.node.fluid}
+          alt="surfer with leash and board"
+          className={classes.belowHeaderImg}
+        />
+      )}
     </div>
   )
 }
