@@ -90,7 +90,6 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     justifyContent: 'flex-end',
     marginTop: 15,
-
     [theme.breakpoints.up('sm')]: {
       marginTop: 0,
     },
