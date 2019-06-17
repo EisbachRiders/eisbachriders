@@ -48,7 +48,6 @@ const useStyles = makeStyles(theme => ({
   text2: {
     color: theme.status.black,
     fontSize: 12,
-    textTransform: 'capitalize',
     paddingBottom: 10,
     [theme.breakpoints.up('sm')]: {
       lineHeight: 2,

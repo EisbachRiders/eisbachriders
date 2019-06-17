@@ -12,11 +12,10 @@ import Button from '@material-ui/core/Button'
 import Drawer from '@material-ui/core/Drawer'
 import MobileHeaderList from '../components/MobileHeaderList'
 import ERIcon from '../assets/icons/ER'
-import CartIcon from '@material-ui/icons/ShoppingCart'
 import { connect } from 'react-redux'
 import MenuIcon from '@material-ui/icons/Menu'
-import Badge from '@material-ui/core/Badge'
-import test from '../assets/images/test.png'
+// import Badge from '@material-ui/core/Badge'
+// import CartIcon from '@material-ui/icons/ShoppingCart'
 
 const mapStateToProps = ({ lng, cart }) => {
   return { lng, cart }
@@ -143,7 +142,23 @@ function Header({ isHomepage, lng, changeLng, cart, img }) {
           </Link>
           <Hidden xsDown>
             <div>
-              <Link to="/shop/">
+              <Button
+                className={
+                  isHomepage ? classes.button : classes.buttonDarkTheme
+                }
+                href="https://shop.eisbach-riders.com/"
+              >
+                {t('header.shop')}
+              </Button>
+              <Button
+                className={
+                  isHomepage ? classes.button : classes.buttonDarkTheme
+                }
+                href="https://shop.eisbach-riders.com/cart/"
+              >
+                {t('header.cart')}
+              </Button>
+              {/* <Link to="/shop/">
                 <Button
                   className={
                     isHomepage ? classes.button : classes.buttonDarkTheme
@@ -151,8 +166,8 @@ function Header({ isHomepage, lng, changeLng, cart, img }) {
                 >
                   {t('header.shop')}
                 </Button>
-              </Link>
-              <Link to="/weather/">
+              </Link> */}
+              <Link to="/eisbach/">
                 <Button
                   className={
                     isHomepage ? classes.button : classes.buttonDarkTheme
@@ -161,7 +176,7 @@ function Header({ isHomepage, lng, changeLng, cart, img }) {
                   {t('header.weather')}
                 </Button>
               </Link>
-              <Link to="/cart/">
+              {/* <Link to="/cart/">
                 <IconButton
                   className={
                     isHomepage ? classes.button : classes.buttonDarkTheme
@@ -176,7 +191,7 @@ function Header({ isHomepage, lng, changeLng, cart, img }) {
                     />
                   </Badge>
                 </IconButton>
-              </Link>
+              </Link> */}
               {/* <Button
                 className={
                   isHomepage ? classes.button : classes.buttonDarkTheme

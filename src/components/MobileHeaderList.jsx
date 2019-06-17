@@ -107,7 +107,7 @@ function MobileHeaderList({ links, linkLabels, lng, changeLng }) {
             <ArrowIcon className={classes.icon} />
           </ListItem>
         </Button>
-        <Button
+        {/* <Button
           aria-label="change language"
           className={classes.button}
           onClick={changeLng}
@@ -120,7 +120,7 @@ function MobileHeaderList({ links, linkLabels, lng, changeLng }) {
             />
             <ArrowIcon className={classes.icon} />
           </ListItem>
-        </Button>
+        </Button> */}
       </List>
     </div>
   )
