@@ -13,10 +13,18 @@ const useStyles = makeStyles(theme => ({
   },
   container: {
     display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+  },
+  chartContainer: {
+    display: 'flex',
+    flexWrap: 'wrap',
     justifyContent: 'center',
   },
   header: {
     marginBottom: 15,
+    fontSize: 16,
+    fontWeight: 'bold',
   },
   subheader: {
     marginBottom: 30,
@@ -177,11 +185,11 @@ function Weather() {
 
   return (
     <div className={classes.root}>
-      <Container className={classes.container}>
-        {isLoading && <CircularProgress />}
-        {!isLoading && (
-          <div>
-            <Typography variant="h6" align="center" className={classes.header}>
+      {isLoading && <CircularProgress />}
+      {!isLoading && (
+        <>
+          <Container className={classes.container}>
+            <Typography variant="h1" align="center" className={classes.header}>
               Current Conditions on the Eisbach
             </Typography>
             <Typography align="center" className={classes.subheader}>
@@ -195,16 +203,6 @@ function Weather() {
               surf session!
             </Typography>
 
-            <div className={classes.container}>
-              <Chart
-                value={water}
-                title="Water Temperature"
-                unit="°C"
-                max="25"
-              />
-              <Chart value={level} title="Water Level" max="200" unit="cm" />
-              <Chart value={runoff} title="Runoff" max="30" unit="m³/s" />
-            </div>
             {/* <div className={classes.footnoteContainer}>
               <Typography className={classes.footnote} align="right">
                 Taken at: {waterTime}
@@ -217,9 +215,14 @@ function Weather() {
                 source
               </a>
             </div> */}
+          </Container>
+          <div className={classes.chartContainer}>
+            <Chart value={water} title="Water Temperature" unit="°C" max="25" />
+            <Chart value={level} title="Water Level" max="200" unit="cm" />
+            <Chart value={runoff} title="Runoff" max="30" unit="m³/s" />
           </div>
-        )}
-      </Container>
+        </>
+      )}
       {!isLoading && (
         <Container background="grey" className={classes.footnoteContainer}>
           {/* <TempChart temp={temp} /> */}
