@@ -71,6 +71,32 @@ function MobileHeaderList({ links, linkLabels, lng, changeLng }) {
           </ListItem>
         </Button>
         <Button
+          aria-label="cart"
+          className={classes.button}
+          href="https://shop.eisbach-riders.com/cart/"
+          disableFocusRipple
+          disableRipple
+        >
+          <ListItem button divider dense>
+            <ListItemText
+              disableTypography
+              className={classes.text}
+              primary={linkLabels[1]}
+            />
+            <ArrowIcon className={classes.icon} />
+          </ListItem>
+        </Button>
+        <Link to={`/eisbach/`}>
+          <ListItem button divider dense>
+            <ListItemText
+              disableTypography
+              className={classes.text}
+              primary={linkLabels[2]}
+            />
+            <ArrowIcon className={classes.icon} />
+          </ListItem>
+        </Link>
+        <Button
           aria-label="facebook"
           className={classes.button}
           href="https://www.facebook.com/EisbachRiders/"

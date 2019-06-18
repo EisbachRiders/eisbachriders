@@ -223,7 +223,11 @@ function Header({ isHomepage, lng, changeLng, cart, img }) {
                 onKeyDown={() => setDrawer(false)}
               >
                 <MobileHeaderList
-                  linkLabels={[t('header.shop')]}
+                  linkLabels={[
+                    t('header.shop'),
+                    t('header.cart'),
+                    t('header.weather'),
+                  ]}
                   lng={lng}
                   changeLng={changeLng}
                 />

@@ -15,12 +15,17 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'center',
   },
   logo: {
-    height: 100,
+    height: 80,
+    margin: '0 auto',
     width: 'auto',
     [theme.breakpoints.up('md')]: {
+      height: 100,
       marginLeft: 15,
       marginRight: 15,
     },
+  },
+  container: {
+    display: 'flex',
   },
 }))
 
@@ -30,7 +35,7 @@ function Membership() {
   return (
     <Container variant="center">
       <Typography className={classes.title}>{t('membership.title')}</Typography>
-      <div>
+      <div className={classes.container}>
         <a href="https://www.surfrider.org/" target="_blank">
           <img src={surfriderLogo} className={classes.logo} />
         </a>
