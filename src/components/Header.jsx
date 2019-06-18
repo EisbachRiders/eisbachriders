@@ -166,8 +166,8 @@ function Header({ isHomepage, lng, changeLng, cart, img }) {
                 >
                   {t('header.shop')}
                 </Button>
-              </Link>
-              <Link to="/weather/">
+              </Link> */}
+              <Link to="/eisbach/">
                 <Button
                   className={
                     isHomepage ? classes.button : classes.buttonDarkTheme
@@ -176,7 +176,7 @@ function Header({ isHomepage, lng, changeLng, cart, img }) {
                   {t('header.weather')}
                 </Button>
               </Link>
-              <Link to="/cart/">
+              {/* <Link to="/cart/">
                 <IconButton
                   className={
                     isHomepage ? classes.button : classes.buttonDarkTheme
@@ -191,8 +191,8 @@ function Header({ isHomepage, lng, changeLng, cart, img }) {
                     />
                   </Badge>
                 </IconButton>
-              </Link> 
-               <Button
+              </Link> */}
+              {/* <Button
                 className={
                   isHomepage ? classes.button : classes.buttonDarkTheme
                 }
