@@ -1,42 +1,4 @@
 {
-  "products": {
-    "title": "products",
-    "subnav": {
-      "singleFin": {
-        "title": "I broke/lost one of my fins. Do you sell center/side fins separately?"
-      },
-      "finTypes": {
-        "title": "What is the difference between honeycomb and plastic fins?"
-      },
-      "finSystem": {
-        "title": "Which system do I have on my surfboard? FCS, Future, FCS2?"
-      },
-      "thruster": {
-        "title": "What is a thruster set?"
-      },
-      "quad": {
-        "title": "What is a quad set?"
-      },
-      "g": {
-        "title": "What is the difference between G3, G5, G7?"
-      },
-      "glgx": {
-        "title": "What is the difference between GL and GX?"
-      },
-      "leash": {
-        "title": "What is the difference between a curled and straight leash?"
-      },
-      "leashLength": {
-        "title": "What length leash do I need?"
-      },
-      "wax": {
-        "title": "How often should I use surf wax?"
-      },
-      "waxExpire": {
-        "title": "Does surf wax expire?"
-      }
-    }
-  },
   "shipping": {
     "title": "shipping",
     "subnav": {
@@ -57,17 +19,6 @@
       },
       "company": {
         "title": "What shipping company do you use?"
-      }
-    }
-  },
-  "payments": {
-    "title": "payments",
-    "subnav": {
-      "services": {
-        "title": "Which payment services do you offer?"
-      },
-      "currency": {
-        "title": "What currency can I pay with?"
       }
     }
   },

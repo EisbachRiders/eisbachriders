@@ -1,5 +1,7 @@
 import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 import { useTranslation } from 'react-i18next'
+import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 import { withStyles } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/styles'
 import MuiExpansionPanel from '@material-ui/core/ExpansionPanel'
@@ -7,7 +9,6 @@ import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary'
 import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails'
 import Typography from '@material-ui/core/Typography'
 import Container from '../ui/Container'
-import Link from '../ui/Link'
 import faq from '../../data/faq.json'
 
 const useStyles = makeStyles(theme => ({
@@ -17,6 +18,13 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     textTransform: 'capitalize',
+  },
+  sectionTitle: {
+    textTransform: 'capitalize',
+    marginBottom: 15,
+  },
+  expansionPanelContainer: {
+    marginBottom: 30,
   },
   link: {
     paddingBottom: 5,
@@ -58,7 +66,6 @@ const ExpansionPanelSummary = withStyles(theme => ({
       margin: '12px 0',
     },
   },
-  expanded: {},
 }))(MuiExpansionPanelSummary)
 
 const ExpansionPanelDetails = withStyles(theme => ({
@@ -71,50 +78,137 @@ const ExpansionPanelDetails = withStyles(theme => ({
 }))(MuiExpansionPanelDetails)
 
 export default function CustomizedExpansionPanels() {
-  const [expanded, setExpanded] = React.useState('panel1')
+  const [expanded, setExpanded] = React.useState(null)
   const classes = useStyles()
   const { t } = useTranslation()
 
   const handleChange = panel => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false)
   }
-
   return (
-    <Container>
-      <Typography
-        variant="h5"
-        component="h1"
-        align="center"
-        className={classes.header}
-      >
-        {t('faq.faq')}
-      </Typography>
-      {Object.keys(faq).map((elem, idx) => (
-        <ExpansionPanel
-          key={`faq_${elem}`}
-          square
-          expanded={expanded === `panel${idx}`}
-          onChange={handleChange(`panel${idx}`)}
-        >
-          <ExpansionPanelSummary
-            aria-controls={`panel${idx}d-content`}
-            id={`panel${idx}d-header`}
-          >
-            <Typography className={classes.title}>{faq[elem].title}</Typography>
-          </ExpansionPanelSummary>
-          <ExpansionPanelDetails>
-            {Object.keys(faq[elem].subnav).map(item => (
-              <Link
-                to={`/faq/${elem}/${item}/`}
-                className={classes.link}
-                key={`link${item}`}
-              >
-                {faq[elem].subnav[item].title}
-              </Link>
+    <StaticQuery
+      query={graphql`
+        query {
+          allMdx {
+            edges {
+              node {
+                id
+                frontmatter {
+                  title
+                  label
+                }
+                code {
+                  body
+                }
+              }
+            }
+          }
+        }
+      `}
+      render={data => {
+        return (
+          <Container>
+            <Typography
+              variant="h5"
+              component="h1"
+              align="center"
+              className={classes.header}
+            >
+              {t('faq.faq')}
+            </Typography>
+            {Object.keys(faq).map(elem => (
+              <div key={`section${elem}`}>
+                <Typography
+                  variant="h5"
+                  component="h2"
+                  className={classes.sectionTitle}
+                >
+                  {elem}
+                </Typography>
+                <div className={classes.expansionPanelContainer}>
+                  {Object.keys(faq[elem].subnav).map((item, idx) => (
+                    <ExpansionPanel
+                      key={`faq_${elem}${idx}`}
+                      square
+                      expanded={expanded === `panel${elem}${idx}`}
+                      onChange={handleChange(`panel${elem}${idx}`)}
+                      href={`#${elem}/${item}`}
+                    >
+                      <ExpansionPanelSummary
+                        aria-controls={`panel${elem}${idx}d-content`}
+                        id={`panel${elem}${idx}d-header`}
+                      >
+                        <Typography className={classes.title}>
+                          {faq[elem].subnav[item].title}
+                        </Typography>
+                      </ExpansionPanelSummary>
+                      <ExpansionPanelDetails>
+                        <MDXRenderer>
+                          {
+                            data.allMdx.edges.find(
+                              x => x.node.frontmatter.label === item
+                            ).node.code.body
+                          }
+                        </MDXRenderer>
+                      </ExpansionPanelDetails>
+                    </ExpansionPanel>
+                  ))}
+                </div>
+              </div>
             ))}
-          </ExpansionPanelDetails>
-        </ExpansionPanel>
-      ))}
-    </Container>
+          </Container>
+        )
+      }}
+    />
   )
 }
+
+// "products": {
+//   "title": "products",
+//   "subnav": {
+//     "singleFin": {
+//       "title": "I broke/lost one of my fins. Do you sell center/side fins separately?"
+//     },
+//     "finTypes": {
+//       "title": "What is the difference between honeycomb and plastic fins?"
+//     },
+//     "finSystem": {
+//       "title": "Which system do I have on my surfboard? FCS, Future, FCS2?"
+//     },
+//     "thruster": {
+//       "title": "What is a thruster set?"
+//     },
+//     "quad": {
+//       "title": "What is a quad set?"
+//     },
+//     "g": {
+//       "title": "What is the difference between G3, G5, G7?"
+//     },
+//     "glgx": {
+//       "title": "What is the difference between GL and GX?"
+//     },
+//     "leash": {
+//       "title": "What is the difference between a curled and straight leash?"
+//     },
+//     "leashLength": {
+//       "title": "What length leash do I need?"
+//     },
+//     "wax": {
+//       "title": "How often should I use surf wax?"
+//     },
+//     "waxExpire": {
+//       "title": "Does surf wax expire?"
+//     }
+//   }
+// },
+// "payments": {
+//   "title": "payments",
+//   "subnav": {
+//     "services": {
+//       "title": "Which payment services do you offer?"
+//     },
+//     "currency": {
+//       "title": "What currency can I pay with?"
+//     }
+//   }
+// },
