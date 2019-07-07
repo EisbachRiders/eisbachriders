@@ -9,8 +9,8 @@ import InputLabel from '@material-ui/core/InputLabel'
 import ShopItem from './ShopItem'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import Container from '../ui/Container'
-import test1 from '../../assets/images/FCS/img1.jpg'
-import test2 from '../../assets/images/FCS/img2.jpg'
+import test1 from '../../assets/images/FCS/main.jpg'
+import test2 from '../../assets/images/FCS/main.jpg'
 
 const useStyles = makeStyles(theme => ({
   form: {

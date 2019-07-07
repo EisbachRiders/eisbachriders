@@ -1,32 +1,16 @@
 //FCS
 import product1 from '../assets/images/FCS/main.jpg'
-import product1_img1 from '../assets/images/FCS/img1.jpg'
-import product1_img2 from '../assets/images/FCS/img2.jpg'
-import product1_img3 from '../assets/images/FCS/img3.jpg'
-import product1_img4 from '../assets/images/FCS/img4.jpg'
-import product1_img5 from '../assets/images/FCS/img5.jpg'
+
 //RailProtect
 import product2 from '../assets/images/SUP/main.png'
-import product2_img1 from '../assets/images/SUP/img1.jpg'
-import product2_img2 from '../assets/images/SUP/img2.jpg'
+
 //Future
 import product3 from '../assets/images/Future/main.jpg'
-import product3_img1 from '../assets/images/Future/img1.jpg'
-import product3_img2 from '../assets/images/Future/img2.jpg'
-import product3_img3 from '../assets/images/Future/img3.jpg'
-import product3_img4 from '../assets/images/Future/img4.jpg'
 
 export const productsFins = [
   {
     name: 'FCS Double Tab Thruster',
-    images: [
-      product1,
-      product1_img1,
-      product1_img2,
-      product1_img3,
-      product1_img4,
-      product1_img5,
-    ],
+    images: [product1],
     price: '19.90',
     ebay: '',
     amazon: 'https://shop.eisbach-riders.com/product/double-tab-nylon-black/',
@@ -57,7 +41,7 @@ export const productsFins = [
   },
   {
     name: 'SUP Single Fin US-Box',
-    images: [product2, product2_img1, product2_img2],
+    images: [product2],
     price: '25,90',
     ebay: '',
     amazon: 'https://shop.eisbach-riders.com/product/sup-us-box-fin/',
@@ -68,13 +52,7 @@ export const productsFins = [
   },
   {
     name: 'Future Single Tab Thruster',
-    images: [
-      product3,
-      product3_img1,
-      product3_img2,
-      product3_img3,
-      product3_img4,
-    ],
+    images: [product3],
     price: '19.90',
     ebay: '',
     amazon: 'https://shop.eisbach-riders.com/product/single-tab-nylon-fins/',
