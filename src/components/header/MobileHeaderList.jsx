@@ -1,14 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Link from './ui/Link'
+import Link from '../ui/Link'
 import { makeStyles } from '@material-ui/styles'
 import Button from '@material-ui/core/Button'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 import ArrowIcon from '@material-ui/icons/KeyboardArrowRight'
-import FacebookIcon from '../assets/icons/Facebook'
-import InstagramIcon from '../assets/icons/Instagram'
+import FacebookIcon from '../../assets/icons/Facebook'
+import InstagramIcon from '../../assets/icons/Instagram'
 
 const useStyles = makeStyles(theme => ({
   list: {
@@ -54,6 +54,26 @@ function MobileHeaderList({ links, linkLabels, lng, changeLng }) {
             <ArrowIcon className={classes.icon} />
           </ListItem>
         </Link>
+        <Link to={`/eisbach/`}>
+          <ListItem button divider dense>
+            <ListItemText
+              disableTypography
+              className={classes.text}
+              primary={linkLabels[2]}
+            />
+            <ArrowIcon className={classes.icon} />
+          </ListItem>
+        </Link>
+        <Link to={`/faq/`}>
+          <ListItem button divider dense>
+            <ListItemText
+              disableTypography
+              className={classes.text}
+              primary={linkLabels[3]}
+            />
+            <ArrowIcon className={classes.icon} />
+          </ListItem>
+        </Link>
         <Button
           aria-label="shop"
           className={classes.button}
@@ -86,16 +106,6 @@ function MobileHeaderList({ links, linkLabels, lng, changeLng }) {
             <ArrowIcon className={classes.icon} />
           </ListItem>
         </Button>
-        <Link to={`/eisbach/`}>
-          <ListItem button divider dense>
-            <ListItemText
-              disableTypography
-              className={classes.text}
-              primary={linkLabels[2]}
-            />
-            <ArrowIcon className={classes.icon} />
-          </ListItem>
-        </Link>
         <Button
           aria-label="facebook"
           className={classes.button}

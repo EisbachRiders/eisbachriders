@@ -19,9 +19,7 @@ import Container from '../ui/Container'
 
 const useStyles = makeStyles(theme => ({
   container: {
-    background: `linear-gradient(to bottom, ${
-      theme.status.greyBlue
-    } 50%, #fff 50%)`,
+    background: `linear-gradient(to bottom, ${theme.status.greyBlue} 50%, #fff 50%)`,
     flexDirection: 'column',
   },
   swipeable: {
@@ -39,8 +37,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   paper: {
-    padding: 30,
-    width: '90%',
+    padding: 15,
     textAlign: 'center',
     boxShadow: 'none',
     [theme.breakpoints.up('sm')]: {
@@ -68,7 +65,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: 16,
   },
   mobileStepper: {
-    background: theme.status.white,
+    background: 'transparent',
   },
   button: {
     marginTop: 30,

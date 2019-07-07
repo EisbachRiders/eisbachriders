@@ -28,7 +28,7 @@ function Legal() {
   const { t } = useTranslation()
   return (
     <Container>
-      <Typography variant="h5" className={classes.title}>
+      <Typography variant="h5" variantMapping="h1" className={classes.title}>
         {t('imprint.imprint')}
       </Typography>
       <Typography className={classes.text}>

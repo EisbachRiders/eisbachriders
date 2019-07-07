@@ -38,7 +38,7 @@ function Privacy() {
   const { t } = useTranslation()
   return (
     <Container>
-      <Typography variant="h6" className={classes.title}>
+      <Typography variant="h6" variantMapping="h1" className={classes.title}>
         {t('privacy.privacy')}
       </Typography>
       <Typography variant="subtitle1">{t('privacy.title1')}</Typography>

@@ -60,7 +60,7 @@ function Payment() {
   const { t } = useTranslation()
   return (
     <div className={classes.container} id="Payment">
-      <Typography variant="h6" className={classes.title}>
+      <Typography variant="h6" variantMapping="h1" className={classes.title}>
         {t('payment.payment')}
       </Typography>
       <Typography variant="subtitle1" className={classes.subtitle}>

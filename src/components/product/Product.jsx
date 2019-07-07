@@ -119,7 +119,11 @@ function Product({ product, cart, addToCart }) {
               <ProductImg images={product.images} />
             </div>
             <div className={classes.contentContainer}>
-              <Typography variant="h6" className={classes.name}>
+              <Typography
+                variant="h6"
+                variantMapping="h1"
+                className={classes.name}
+              >
                 {product.name}
               </Typography>
               <div
