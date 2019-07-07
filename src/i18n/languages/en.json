@@ -9,7 +9,8 @@
     "shop": "shop",
     "contact": "contact",
     "cart": "cart",
-    "weather": "eisbach"
+    "weather": "eisbach",
+    "faq": "faq"
   },
   "footer": {
     "message": "send us a message",
@@ -29,6 +30,13 @@
     "subscribeText": "Join to get hear about our latest products and deals!",
     "terms": "terms & conditions",
     "conditions": "Free shipping for orders over 15 Euro within Germany 1 month unconditional exchange or refund"
+  },
+  "faq": {
+    "title": "faq",
+    "faq": "frequently asked questions"
+  },
+  "banner": {
+    "shipping": "Free Shipping on Orders Over 15€ (within Germany)!"
   },
   "membership": {
     "title": "Proud Members of"

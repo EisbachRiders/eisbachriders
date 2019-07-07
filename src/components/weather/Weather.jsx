@@ -8,9 +8,7 @@ import Chart from './Chart'
 import TempChart from './TempChart'
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    marginTop: 100,
-  },
+  root: {},
   container: {
     display: 'flex',
     flexDirection: 'column',
@@ -26,9 +24,7 @@ const useStyles = makeStyles(theme => ({
     fontSize: 16,
     fontWeight: 'bold',
   },
-  subheader: {
-    marginBottom: 30,
-  },
+  subheader: {},
   title: {
     fontWeight: 'bold',
     marginBottom: 30,
@@ -224,7 +220,7 @@ function Weather() {
         </>
       )}
       {!isLoading && (
-        <Container background="grey" className={classes.footnoteContainer}>
+        <Container className={classes.footnoteContainer}>
           {/* <TempChart temp={temp} /> */}
           <Typography className={classes.footnote} align="right">
             Taken at: {waterTime}

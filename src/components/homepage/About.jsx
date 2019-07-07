@@ -5,85 +5,42 @@ import { useTranslation } from 'react-i18next'
 import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
 import Hidden from '@material-ui/core/Hidden'
+import BrushStroke from '../ui/BrushStroke'
 import Container from '../ui/Container'
 
 const useStyles = makeStyles(theme => ({
+  root: { display: 'flex' },
   container: {
-    position: 'relative',
-  },
-  textContainer: {
-    zIndex: 2,
     flexBasis: '100%',
-    paddingBottom: 30,
-    paddingRight: 15,
-    paddingLeft: 15,
     [theme.breakpoints.up('sm')]: {
-      flexBasis: '60%',
+      flexBasis: '50%',
     },
     [theme.breakpoints.up('md')]: {
-      marginBottom: 60,
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'space-between',
+      paddingRight: 75,
+      paddingTop: 30,
+      paddingBottom: 30,
     },
     [theme.breakpoints.up('lg')]: {
       paddingTop: 45,
-      paddingRight: 60,
-      marginBottom: 90,
+    },
+  },
+  margin: {
+    marginLeft: '15%',
+    [theme.breakpoints.up('sm')]: {
+      marginLeft: 0,
     },
   },
   imgContainer: {
-    flexBasis: '40%',
-    marginBottom: 45,
-    zIndex: 2,
-  },
-  sideText: {
-    position: 'relative',
-    float: 'right',
-    marginTop: -100,
-    marginRight: 0,
-    transform: 'rotate(-270deg)',
-    WebkitTransform: 'rotate(-270deg)',
-    MozTransform: 'rotate(-270deg)',
-    MsTransform: 'rotate(-270deg)',
-    OTransform: 'rotate(-270deg)',
-    filter: 'progid:DXImageTransform.Microsoft.BasicImage(rotation=3)',
-    [theme.breakpoints.up('sm')]: {
-      marginTop: -150,
-      marginRight: 0,
-    },
-    [theme.breakpoints.up('md')]: {
-      marginTop: -150,
-      marginRight: 0,
-    },
+    flexBasis: '50%',
   },
   img: {
-    width: 200,
-    height: 150,
-    margin: '0 auto',
+    height: '100%',
     [theme.breakpoints.up('md')]: {
-      width: '80%',
-      height: '80%',
-    },
-  },
-  backgroundImg: {
-    zIndex: 1,
-    left: 0,
-    bottom: 0,
-    width: '100%',
-    objectFit: 'fill',
-    height: 150,
-  },
-  title: {
-    textTransform: 'uppercase',
-    fontWeight: 700,
-    fontSize: 16,
-    [theme.breakpoints.up('md')]: {
-      fontSize: 36,
+      height: 400,
+      width: '100%',
     },
   },
   text: {
-    paddingTop: 30,
     color: theme.palette.common.black,
     fontSize: 12,
     [theme.breakpoints.up('md')]: {
@@ -92,22 +49,19 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-function About({ img, waveImg }) {
+function About({ img }) {
   const classes = useStyles()
   const { t } = useTranslation()
   return (
-    <Container variant="center" background="grey" className={classes.container}>
-      <div className={classes.textContainer}>
-        <Typography className={classes.title} variant="h5">
-          {t('about.sectionTitle1')}
-        </Typography>
-        <Typography className={classes.title} variant="h5">
-          {t('about.sectionTitle2')}
-        </Typography>
+    <div className={classes.root}>
+      <Container className={classes.container}>
+        <div className={classes.margin}>
+          <BrushStroke title={t('about.sectionTitle1')} />
+        </div>
         <Typography className={classes.text} variant="body1">
           {t('about.message')}
         </Typography>
-      </div>
+      </Container>
       <Hidden xsDown>
         <div className={classes.imgContainer}>
           <Img
@@ -115,25 +69,14 @@ function About({ img, waveImg }) {
             alt="two surfers in ocean"
             className={classes.img}
           />
-          {/* <Typography className={classes.sideText}>
-            Surf Accessories from Munich
-          </Typography> */}
         </div>
       </Hidden>
-      <Img
-        fluid={waveImg.node.fluid}
-        alt="wave background"
-        className={classes.backgroundImg}
-        imgStyle={{ objectFit: 'fill' }}
-        style={{ position: 'absolute' }}
-      />
-    </Container>
+    </div>
   )
 }
 
 About.propTypes = {
   img: PropTypes.object.isRequired,
-  waveImg: PropTypes.object.isRequired,
 }
 
 export default About

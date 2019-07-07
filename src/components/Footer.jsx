@@ -118,13 +118,13 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-function Footer() {
+function Footer({ waveImg }) {
   const classes = useStyles()
   const { t } = useTranslation()
 
   return (
     <>
-      <Membership />
+      <Membership waveImg={waveImg} />
       <Container variant="spaceBetween" background="grey">
         <div className={classes.flexItem}>
           <Contact />
@@ -221,19 +221,6 @@ function Footer() {
           <Link to="/privacy/" className={classes.link}>
             {t('footer.privacy')}
           </Link>
-          {/* <a
-              href="https://shop.eisbach-riders.com/imprint/"
-              className={classes.link}
-            >
-              {t('footer.imprint')}
-            </a>
-            |{' '}
-            <a
-              href="https://shop.eisbach-riders.com/privacy/"
-              className={classes.link}
-            >
-              {t('footer.privacy')}
-            </a> */}
         </Typography>
       </div>
     </>

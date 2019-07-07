@@ -33,7 +33,7 @@ function Shipping() {
   const { t } = useTranslation()
   return (
     <Container>
-      <Typography variant="h6" className={classes.title}>
+      <Typography variant="h6" variantMapping="h1" className={classes.title}>
         {t('shipping.shipping')}
       </Typography>
       <Typography variant="subtitle1" className={classes.subtitle}>

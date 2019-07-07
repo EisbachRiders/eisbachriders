@@ -1,0 +1,39 @@
+{
+  "shipping": {
+    "title": "shipping",
+    "subnav": {
+      "shop": {
+        "title": "Do you have a physical shop where I can pick up products?"
+      },
+      "typo": {
+        "title": "I made a mistake in my email address/shipping address, how can I correct it?"
+      },
+      "country": {
+        "title": "What countries do you ship to?"
+      },
+      "cost": {
+        "title": "How much are shipping costs?"
+      },
+      "time": {
+        "title": "How long does shipping take?"
+      },
+      "company": {
+        "title": "What shipping company do you use?"
+      }
+    }
+  },
+  "returns": {
+    "title": "returns & exchanges",
+    "subnav": {
+      "time": {
+        "title": "What is your return or exchange policy?"
+      },
+      "return": {
+        "title": "How do I return an item?"
+      },
+      "exchange": {
+        "title": "How do I exchange an item?"
+      }
+    }
+  }
+}
