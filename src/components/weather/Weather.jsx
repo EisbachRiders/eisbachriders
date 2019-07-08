@@ -5,10 +5,14 @@ import Typography from '@material-ui/core/Typography'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import Container from '../ui/Container'
 import Chart from './Chart'
-import TempChart from './TempChart'
+// import TempChart from './TempChart'
 
 const useStyles = makeStyles(theme => ({
   root: {},
+  containerProgress: {
+    margin: 60,
+    textAlign: 'center',
+  },
   container: {
     display: 'flex',
     flexDirection: 'column',
@@ -74,7 +78,7 @@ function Weather() {
       'https://www.gkd.bayern.de/en/rivers/waterlevel/kelheim/muenchen-himmelreichbruecke-16515005/current-values/table'
     const urlRunoff =
       'https://www.gkd.bayern.de/en/rivers/discharge/kelheim/muenchen-himmelreichbruecke-16515005/current-values/table'
-    const urlTemp = `api.openweathermap.org/data/2.5/forecast/hourly?q=Munich&APPID=${process.env.OPENWEATHER}&units=metric`
+    // const urlTemp = `api.openweathermap.org/data/2.5/forecast/hourly?q=Munich&APPID=${process.env.OPENWEATHER}&units=metric`
     const fetchData1 = () => {
       setLoading(true)
       fetch(proxyurl + urlWater)
@@ -160,28 +164,32 @@ function Weather() {
         })
     }
     fetchData3()
-    const fetchData4 = () => {
-      setLoading(true)
-      fetch(proxyurl + urlTemp)
-        .then(function(response) {
-          return response
-        })
-        .then(response => response.json())
-        .then(contents => {
-          console.log(contents)
-          setTemp(contents), setLoading(false)
-        })
-        .catch(function(e) {
-          console.log(e)
-          setLoading(false)
-        })
-    }
-    fetchData4()
+    // const fetchData4 = () => {
+    //   setLoading(true)
+    //   fetch(proxyurl + urlTemp)
+    //     .then(function(response) {
+    //       return response
+    //     })
+    //     .then(response => response.json())
+    //     .then(contents => {
+    //       console.log(contents)
+    //       setTemp(contents), setLoading(false)
+    //     })
+    //     .catch(function(e) {
+    //       console.log(e)
+    //       setLoading(false)
+    //     })
+    // }
+    // fetchData4()
   }, [])
 
   return (
     <div className={classes.root}>
-      {isLoading && <CircularProgress />}
+      {isLoading && (
+        <Container className={classes.containerProgress}>
+          <CircularProgress />
+        </Container>
+      )}
       {!isLoading && (
         <>
           <Container className={classes.container}>
