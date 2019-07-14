@@ -13,11 +13,6 @@ const useStyles = makeStyles(theme => ({
   title: {
     fontWeight: 'bold',
   },
-  value: {
-    fontWeight: 'bold',
-    marginTop: -170,
-    textAlign: 'center',
-  },
   chartContainer: {
     display: 'flex',
     justifyContent: 'center',
@@ -44,6 +39,13 @@ const useStyles = makeStyles(theme => ({
     bottom: -12,
     left: '56.5%',
   },
+  legend:{
+    width: 165,
+    marginTop: 5,
+    margin: '0 auto',
+    display: 'flex',
+    justifyContent: "space-between"
+  }
 }))
 
 function Chart({ value, max, unit, title }) {
@@ -75,12 +77,13 @@ function Chart({ value, max, unit, title }) {
       : colors1
   const percent = value / max
   const needle = percent < 0.66 ? 'high' : percent < 0.33 ? 'low' : 'med'
-  console.log(needle)
+
   return (
     <div className={classes.root}>
       <Typography className={classes.title} align="center">
         {title}
       </Typography>
+      <Typography className={classes.title} align="center">{`${value} ${unit}`}</Typography>
       <div className={classes.chartContainer}>
         <PieChart
           width={300}
@@ -106,7 +109,10 @@ function Chart({ value, max, unit, title }) {
           })}
         />
       </div>
-      {/* <Typography className={classes.value}>{`${value} ${unit}`}</Typography> */}
+        <div className={classes.legend}>
+        <Typography variant="caption">0</Typography>
+        <Typography variant="caption">{max}</Typography>
+        </div>
     </div>
   )
 }
