@@ -20,6 +20,12 @@ const status = {
   greyLt: '#d5d9db',
   grey: '#818C93',
   black: '#00130e', // typography
+  blueLt1: '#0062f0',
+  blueLt2: '#3f8eff',
+  greyBlueDk1: '#d4e6f4',
+  greyBlueDk2: '#95c1e4',
+  greenLt1: '#6dff97',
+  greenLt2: '#00cf3c',
 }
 
 const theme = createMuiTheme({
