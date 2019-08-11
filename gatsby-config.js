@@ -36,7 +36,7 @@ module.exports = {
     //   },
     // },
     {
-      resolve: 'gatsby-mdx',
+      resolve: `gatsby-plugin-mdx`,
       options: {
         defaultLayouts: {
           default: require.resolve('./src/components/LayoutMdx.jsx'),
@@ -70,11 +70,12 @@ module.exports = {
       options: {
         trackingId: process.env.GA_KEY,
         anonymize: true,
+        respectDNT: true,
         cookie_expires: 0,
         cookieDomain: 'https://eisbach-riders.com',
       },
     },
-    //`gatsby-plugin-feed`,
+    `gatsby-plugin-feed`,
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
@@ -94,9 +95,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-top-layout',
-    {
-      resolve: 'gatsby-plugin-material-ui',
-    },
+    'gatsby-plugin-material-ui',
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,

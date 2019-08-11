@@ -1,21 +1,11 @@
 import React from 'react'
-import { render } from 'react-testing-library'
+import { render } from '../../../../test-utils'
 import Shop from '../Shop'
-import { ThemeProvider } from '@material-ui/styles'
-import theme from '../../../theme'
-
 const fetch = require('node-fetch')
 
 describe('Shop', () => {
-  const mockProps = {
-    t: () => '',
-  }
   it('renders correctly', () => {
-    const component = render(
-      <ThemeProvider theme={theme}>
-        <Shop {...mockProps} />
-      </ThemeProvider>
-    )
+    const component = render(<Shop />)
     expect(component).toMatchSnapshot()
   })
 })

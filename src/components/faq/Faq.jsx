@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import { useTranslation } from 'react-i18next'
-import MDXRenderer from 'gatsby-mdx/mdx-renderer'
+import { MDXRenderer } from "gatsby-plugin-mdx"
 import { withStyles } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/styles'
 import MuiExpansionPanel from '@material-ui/core/ExpansionPanel'
@@ -97,9 +97,7 @@ export default function CustomizedExpansionPanels() {
                   title
                   label
                 }
-                code {
-                  body
-                }
+                body
               }
             }
           }
@@ -147,7 +145,7 @@ export default function CustomizedExpansionPanels() {
                           {
                             data.allMdx.edges.find(
                               x => x.node.frontmatter.label === item
-                            ).node.code.body
+                            ).node.body
                           }
                         </MDXRenderer>
                       </ExpansionPanelDetails>

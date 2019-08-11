@@ -12,7 +12,7 @@ Object {
           class="MuiList-root MuiList-padding"
         >
           <a
-            class="MuiTypography-root MuiTypography-colorPrimary MuiLink-root MuiLink-underlineHover"
+            class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
             href="/"
             style="text-decoration: none;"
           >
@@ -23,10 +23,78 @@ Object {
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root MuiListItemText-dense makeStyles-text-2"
+                class="MuiListItemText-root makeStyles-text-2 MuiListItemText-dense"
               >
                 home
               </div>
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root makeStyles-icon-4"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
+                />
+                <path
+                  d="M0 0h24v24H0V0z"
+                  fill="none"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </div>
+          </a>
+          <a
+            class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+            href="/eisbach/"
+            style="text-decoration: none;"
+          >
+            <div
+              aria-disabled="false"
+              class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-divider MuiListItem-button"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="MuiListItemText-root makeStyles-text-2 MuiListItemText-dense"
+              />
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root makeStyles-icon-4"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
+                />
+                <path
+                  d="M0 0h24v24H0V0z"
+                  fill="none"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </div>
+          </a>
+          <a
+            class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+            href="/faq/"
+            style="text-decoration: none;"
+          >
+            <div
+              aria-disabled="false"
+              class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-divider MuiListItem-button"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="MuiListItemText-root makeStyles-text-2 MuiListItemText-dense"
+              />
               <svg
                 aria-hidden="true"
                 class="MuiSvgIcon-root makeStyles-icon-4"
@@ -52,7 +120,6 @@ Object {
             aria-label="shop"
             class="MuiButtonBase-root MuiButton-root makeStyles-button-5 MuiButton-text"
             href="https://shop.eisbach-riders.com/"
-            role="button"
             tabindex="0"
           >
             <span
@@ -65,7 +132,47 @@ Object {
                 tabindex="0"
               >
                 <div
-                  class="MuiListItemText-root MuiListItemText-dense makeStyles-text-2"
+                  class="MuiListItemText-root makeStyles-text-2 MuiListItemText-dense"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root makeStyles-icon-4"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
+                  />
+                  <path
+                    d="M0 0h24v24H0V0z"
+                    fill="none"
+                  />
+                </svg>
+                <span
+                  class="MuiTouchRipple-root"
+                />
+              </div>
+            </span>
+          </a>
+          <a
+            aria-disabled="false"
+            aria-label="cart"
+            class="MuiButtonBase-root MuiButton-root makeStyles-button-5 MuiButton-text"
+            href="https://shop.eisbach-riders.com/cart/"
+            tabindex="0"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              <div
+                aria-disabled="false"
+                class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-divider MuiListItem-button"
+                role="button"
+                tabindex="0"
+              >
+                <div
+                  class="MuiListItemText-root makeStyles-text-2 MuiListItemText-dense"
                 />
                 <svg
                   aria-hidden="true"
@@ -94,7 +201,6 @@ Object {
             class="MuiButtonBase-root MuiButton-root makeStyles-button-5 MuiButton-text"
             href="https://www.facebook.com/EisbachRiders/"
             rel="noopener"
-            role="button"
             tabindex="0"
             target="_blank"
           >
@@ -108,7 +214,7 @@ Object {
                 tabindex="0"
               >
                 <div
-                  class="MuiListItemText-root MuiListItemText-dense makeStyles-text-2"
+                  class="MuiListItemText-root makeStyles-text-2 MuiListItemText-dense"
                 >
                   <svg
                     aria-labelledby="title"
@@ -156,7 +262,6 @@ Object {
             class="MuiButtonBase-root MuiButton-root makeStyles-button-5 MuiButton-text"
             href="https://www.instagram.com/eisbachriders/"
             rel="noopener"
-            role="button"
             tabindex="0"
             target="_blank"
           >
@@ -170,7 +275,7 @@ Object {
                 tabindex="0"
               >
                 <div
-                  class="MuiListItemText-root MuiListItemText-dense makeStyles-text-2"
+                  class="MuiListItemText-root makeStyles-text-2 MuiListItemText-dense"
                 >
                   <svg
                     aria-labelledby="title"
@@ -224,7 +329,7 @@ Object {
         class="MuiList-root MuiList-padding"
       >
         <a
-          class="MuiTypography-root MuiTypography-colorPrimary MuiLink-root MuiLink-underlineHover"
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
           href="/"
           style="text-decoration: none;"
         >
@@ -235,10 +340,78 @@ Object {
             tabindex="0"
           >
             <div
-              class="MuiListItemText-root MuiListItemText-dense makeStyles-text-2"
+              class="MuiListItemText-root makeStyles-text-2 MuiListItemText-dense"
             >
               home
             </div>
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root makeStyles-icon-4"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
+              />
+              <path
+                d="M0 0h24v24H0V0z"
+                fill="none"
+              />
+            </svg>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </div>
+        </a>
+        <a
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+          href="/eisbach/"
+          style="text-decoration: none;"
+        >
+          <div
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-divider MuiListItem-button"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiListItemText-root makeStyles-text-2 MuiListItemText-dense"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root makeStyles-icon-4"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
+              />
+              <path
+                d="M0 0h24v24H0V0z"
+                fill="none"
+              />
+            </svg>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </div>
+        </a>
+        <a
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+          href="/faq/"
+          style="text-decoration: none;"
+        >
+          <div
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-divider MuiListItem-button"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiListItemText-root makeStyles-text-2 MuiListItemText-dense"
+            />
             <svg
               aria-hidden="true"
               class="MuiSvgIcon-root makeStyles-icon-4"
@@ -264,7 +437,6 @@ Object {
           aria-label="shop"
           class="MuiButtonBase-root MuiButton-root makeStyles-button-5 MuiButton-text"
           href="https://shop.eisbach-riders.com/"
-          role="button"
           tabindex="0"
         >
           <span
@@ -277,7 +449,47 @@ Object {
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root MuiListItemText-dense makeStyles-text-2"
+                class="MuiListItemText-root makeStyles-text-2 MuiListItemText-dense"
+              />
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root makeStyles-icon-4"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
+                />
+                <path
+                  d="M0 0h24v24H0V0z"
+                  fill="none"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </div>
+          </span>
+        </a>
+        <a
+          aria-disabled="false"
+          aria-label="cart"
+          class="MuiButtonBase-root MuiButton-root makeStyles-button-5 MuiButton-text"
+          href="https://shop.eisbach-riders.com/cart/"
+          tabindex="0"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            <div
+              aria-disabled="false"
+              class="MuiButtonBase-root MuiListItem-root MuiListItem-dense MuiListItem-gutters MuiListItem-divider MuiListItem-button"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="MuiListItemText-root makeStyles-text-2 MuiListItemText-dense"
               />
               <svg
                 aria-hidden="true"
@@ -306,7 +518,6 @@ Object {
           class="MuiButtonBase-root MuiButton-root makeStyles-button-5 MuiButton-text"
           href="https://www.facebook.com/EisbachRiders/"
           rel="noopener"
-          role="button"
           tabindex="0"
           target="_blank"
         >
@@ -320,7 +531,7 @@ Object {
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root MuiListItemText-dense makeStyles-text-2"
+                class="MuiListItemText-root makeStyles-text-2 MuiListItemText-dense"
               >
                 <svg
                   aria-labelledby="title"
@@ -368,7 +579,6 @@ Object {
           class="MuiButtonBase-root MuiButton-root makeStyles-button-5 MuiButton-text"
           href="https://www.instagram.com/eisbachriders/"
           rel="noopener"
-          role="button"
           tabindex="0"
           target="_blank"
         >
@@ -382,7 +592,7 @@ Object {
               tabindex="0"
             >
               <div
-                class="MuiListItemText-root MuiListItemText-dense makeStyles-text-2"
+                class="MuiListItemText-root makeStyles-text-2 MuiListItemText-dense"
               >
                 <svg
                   aria-labelledby="title"
