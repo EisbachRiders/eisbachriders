@@ -87,9 +87,9 @@ function ShopItem({ product, changeProduct }) {
           <div className={classes.descriptionContainer}>
             <div>
               <div className={classes.priceContainer}>
-                <Typography className={classes.price}>{`€${
-                  product.price
-                }`}</Typography>
+                <Typography
+                  className={classes.price}
+                >{`€${product.price}`}</Typography>
                 {!product.in_stock && (
                   <Typography className={clsx(classes.price, classes.red)}>
                     {t('products.outOfStock')}
@@ -104,10 +104,6 @@ function ShopItem({ product, changeProduct }) {
       )}
     </div>
   )
-}
-
-ShopItem.propTypes = {
-  product: PropTypes.object.isRequired,
 }
 
 export default connect(

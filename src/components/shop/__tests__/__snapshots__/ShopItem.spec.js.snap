@@ -8,7 +8,46 @@ Object {
       <div
         class="makeStyles-root-1"
       >
-        test
+        <a
+          class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+          href="/product/"
+          style="text-decoration: none;"
+        >
+          <img
+            class="makeStyles-img-2"
+            src=""
+          />
+        </a>
+        <div
+          class="makeStyles-descriptionContainer-3"
+        >
+          <div>
+            <div
+              class="makeStyles-priceContainer-5"
+            >
+              <p
+                class="MuiTypography-root makeStyles-price-6 MuiTypography-body1"
+              >
+                €undefined
+              </p>
+              <p
+                class="MuiTypography-root makeStyles-price-6 makeStyles-red-7 MuiTypography-body1"
+              >
+                Out of Stock!
+              </p>
+            </div>
+            <p
+              class="MuiTypography-root makeStyles-name-4 MuiTypography-body1"
+            />
+          </div>
+          <div
+            class="makeStyles-containerCenter-45"
+          >
+            <div
+              class="makeStyles-containerCenter-45"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </body>,
@@ -16,7 +55,46 @@ Object {
     <div
       class="makeStyles-root-1"
     >
-      test
+      <a
+        class="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+        href="/product/"
+        style="text-decoration: none;"
+      >
+        <img
+          class="makeStyles-img-2"
+          src=""
+        />
+      </a>
+      <div
+        class="makeStyles-descriptionContainer-3"
+      >
+        <div>
+          <div
+            class="makeStyles-priceContainer-5"
+          >
+            <p
+              class="MuiTypography-root makeStyles-price-6 MuiTypography-body1"
+            >
+              €undefined
+            </p>
+            <p
+              class="MuiTypography-root makeStyles-price-6 makeStyles-red-7 MuiTypography-body1"
+            >
+              Out of Stock!
+            </p>
+          </div>
+          <p
+            class="MuiTypography-root makeStyles-name-4 MuiTypography-body1"
+          />
+        </div>
+        <div
+          class="makeStyles-containerCenter-45"
+        >
+          <div
+            class="makeStyles-containerCenter-45"
+          />
+        </div>
+      </div>
     </div>
   </div>,
   "debug": [Function],
