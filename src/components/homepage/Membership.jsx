@@ -54,11 +54,21 @@ function Membership({ waveImg }) {
     <Container variant="center" background="grey" className={classes.container}>
       <Typography className={classes.title}>{t('membership.title')}</Typography>
       <div className={classes.logoContainer}>
-        <a href="https://www.surfrider.org/" target="_blank" rel="noopener">
-          <img src={surfriderLogo} className={classes.logo} />
+        <a
+          href="https://www.surfrider.org/"
+          target="_blank"
+          rel="noopener"
+          alt="surf rider website"
+        >
+          <img src={surfriderLogo} className={classes.logo} alt="surfrider" />
         </a>
-        <a href="https://www.igsm.info/" target="_blank" rel="noopener">
-          <img src={igsmLogo} className={classes.logo} />
+        <a
+          href="https://www.igsm.info/"
+          target="_blank"
+          rel="noopener"
+          alt="igsm website"
+        >
+          <img src={igsmLogo} className={classes.logo} alt="igsm" />
         </a>
       </div>
       {waveImg && (
