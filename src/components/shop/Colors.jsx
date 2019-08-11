@@ -48,7 +48,7 @@ const useStyles = makeStyles(theme => ({
     background: theme.status.orange,
   },
   green: {
-    background: theme.status.teal,
+    background: theme.status.greenLt2,
   },
 }))
 
