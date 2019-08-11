@@ -75,7 +75,7 @@ module.exports = {
         cookieDomain: 'https://eisbach-riders.com',
       },
     },
-    `gatsby-plugin-feed`,
+    // `gatsby-plugin-feed`,
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
