@@ -135,6 +135,9 @@ function Contact() {
           if (response.status === 200) {
             setSnackbar(true)
             setNotification('success')
+            setEmail('')
+            setMessage('')
+            setName('')
             setLoading(false)
           } else {
             setSnackbar(true)
