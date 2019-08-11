@@ -7,7 +7,7 @@ const FacebookIcon = ({ className, width, height, fill, viewBox }) => (
     height={height}
     xmlns="http://www.w3.org/2000/svg"
     viewBox={viewBox}
-    aria-labelledby="title"
+    aria-label="facebook icon"
     className={className}
   >
     <title id="title_facebook">Facebook Icon</title>
