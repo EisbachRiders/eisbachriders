@@ -1,4 +1,24 @@
 {
+  "products": {
+    "title": "products",
+    "subnav": {
+      "singleFin": {
+        "title": "I broke / lost one of my fins. Do you sell center fins or side fins separately?"
+      },
+      "incorrectFit": {
+        "title": "The fins do not fit into my surfboard"
+      },
+      "finTypes": {
+        "title": "What is the difference between nylon, fiberglass and honeycomb fins?"
+      },
+      "finSystem": {
+        "title": "What different fin setups exist?"
+      },
+      "wax": {
+        "title": "When should I use surfwax?"
+      }
+    }
+  },
   "shipping": {
     "title": "shipping",
     "subnav": {
@@ -33,6 +53,20 @@
       },
       "exchange": {
         "title": "How do I exchange an item?"
+      }
+    }
+  },
+  "payments": {
+    "title": "payments",
+    "subnav": {
+      "services": {
+        "title": "What methods of payment do you accept?"
+      },
+      "currency": {
+        "title": "What currency do you accept for payments?"
+      },
+      "largeOrders": {
+        "title": "Do you offer special deals for large or bulk orders?"
       }
     }
   }

@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import { useTranslation } from 'react-i18next'
-import { MDXRenderer } from "gatsby-plugin-mdx"
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { withStyles } from '@material-ui/core/styles'
 import { makeStyles } from '@material-ui/styles'
 import MuiExpansionPanel from '@material-ui/core/ExpansionPanel'
@@ -85,6 +85,7 @@ export default function CustomizedExpansionPanels() {
   const handleChange = panel => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false)
   }
+
   return (
     <StaticQuery
       query={graphql`
@@ -94,7 +95,6 @@ export default function CustomizedExpansionPanels() {
               node {
                 id
                 frontmatter {
-                  title
                   label
                 }
                 body
@@ -196,17 +196,6 @@ export default function CustomizedExpansionPanels() {
 //     },
 //     "waxExpire": {
 //       "title": "Does surf wax expire?"
-//     }
-//   }
-// },
-// "payments": {
-//   "title": "payments",
-//   "subnav": {
-//     "services": {
-//       "title": "Which payment services do you offer?"
-//     },
-//     "currency": {
-//       "title": "What currency can I pay with?"
 //     }
 //   }
 // },
