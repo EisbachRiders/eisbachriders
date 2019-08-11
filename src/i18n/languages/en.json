@@ -10,7 +10,11 @@
     "contact": "contact",
     "cart": "cart",
     "weather": "eisbach",
-    "faq": "faq"
+    "faq": "faq",
+    "productFinder": "product finder"
+  },
+  "productFinder": {
+    "header": "Our Products"
   },
   "footer": {
     "message": "send us a message",
