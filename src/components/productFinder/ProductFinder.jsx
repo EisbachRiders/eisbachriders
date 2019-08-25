@@ -105,7 +105,7 @@ function ProductFinder({ img }) {
         {t('productFinder.header')}
       </Typography>
       <Container>
-        <LeashGuide />>
+        <LeashGuide />
       </Container>
       <div className={classes.container}>
         <div className={classes.textContainer}>

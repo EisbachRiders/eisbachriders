@@ -16,6 +16,9 @@
   "productFinder": {
     "header": "Our Products"
   },
+  "leashGuide": {
+    "title": "Leash Guide"
+  },
   "footer": {
     "message": "send us a message",
     "your message": "your message",
