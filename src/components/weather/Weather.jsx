@@ -70,10 +70,32 @@ function Weather() {
     setLoading(false)
   }
 
+  getWaterData = contents => {
+    let results = null
+
+    setWaterTime(
+      contents
+        .split('table')[7]
+        .split('<td  class="center">')[0]
+        .split('<td >')[1]
+        .split('</td>')[0]
+    ),
+      setWater(
+        contents
+          .split('table')[7]
+          .split('<td  class="center">')[1]
+          .split('</td>')[0]
+      )
+  }
+
   useEffect(() => {
     const proxyurl = 'https://cors-anywhere.herokuapp.com/'
     const urlWater =
       'https://www.gkd.bayern.de/en/rivers/watertemperature/kelheim/muenchen-himmelreichbruecke-16515005/current-values/table'
+    const urlWater2 =
+      'https://www.gkd.bayern.de/en/rivers/watertemperature/kelheim/muenchen-tieraerztl-hochschule-16516008/current-values/table'
+    const urlWater3 =
+      'https://www.gkd.bayern.de/en/rivers/watertemperature/isar/muenchen-16005701/current-values/table'
     const urlLevel =
       'https://www.gkd.bayern.de/en/rivers/waterlevel/kelheim/muenchen-himmelreichbruecke-16515005/current-values/table'
     const urlRunoff =
@@ -231,7 +253,7 @@ function Weather() {
         <Container className={classes.footnoteContainer}>
           {/* <TempChart temp={temp} /> */}
           <Typography className={classes.footnote} align="right">
-            Taken at: {waterTime}
+            Taken at: {runoffTime}
           </Typography>
           <a
             className={classes.link}
