@@ -10,7 +10,8 @@
     "contact": "contact",
     "cart": "cart",
     "weather": "eisbach",
-    "faq": "faq"
+    "faq": "faq",
+    "about": "about"
   },
   "footer": {
     "message": "send us a message",

@@ -99,6 +99,11 @@ function Header({ isHomepage, lng, changeLng, cart, img }) {
                 title={t('header.faq')}
               />
               <HeaderLink
+                to="/about/"
+                isHomepage={isHomepage}
+                title={t('header.about')}
+              />
+              <HeaderLink
                 to="/shop/"
                 isHomepage={isHomepage}
                 title={t('header.shop')}
@@ -141,6 +146,7 @@ function Header({ isHomepage, lng, changeLng, cart, img }) {
                     t('header.cart'),
                     t('header.weather'),
                     t('header.faq'),
+                    t('header.about'),
                   ]}
                   lng={lng}
                   changeLng={changeLng}

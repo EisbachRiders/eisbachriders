@@ -4,7 +4,7 @@ import Layout from '../components/Layout'
 import Feature from '../components/homepage/Feature'
 import NewProduct from '../components/homepage/NewProduct'
 import Showcase from '../components/homepage/Showcase'
-import About from '../components/homepage/About'
+import AboutUs from '../components/homepage/AboutUs'
 import Hero from '../components/homepage/Hero'
 
 function Index({ data }) {
@@ -34,7 +34,7 @@ function Index({ data }) {
         <Feature img={featureImg} />
         <NewProduct img={newImg} detailImg={detailImg} />
         <Showcase />
-        <About img={aboutImg} />
+        <AboutUs img={aboutImg} />
       </Layout>
     </div>
   )
