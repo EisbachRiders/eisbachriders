@@ -8,6 +8,9 @@ import Container from '../ui/Container'
 import classnames from 'classnames'
 import FeatherIcon from '../../assets/icons/Feather'
 import LeashGuide from './LeashGuide'
+import FinGuide from './FinGuide'
+import Paper from '@material-ui/core/paper'
+import Hidden from '@material-ui/core/Hidden'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -23,6 +26,48 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('xl')]: {
       paddingTop: 90,
     },
+  },
+  header: {
+    marginBottom: 30,
+  },
+  featureContainer: {
+    display: 'flex',
+    alignItems: 'center',
+  },
+  featureText: {
+    marginBottom: 30,
+  },
+  featureImg: {
+    height: '40%',
+    width: '60%',
+    [theme.breakpoints.up('lg')]: {
+      marginLeft: 50,
+    },
+  },
+  paper: {
+    padding: 15,
+    textAlign: 'center',
+    boxShadow: 'none',
+    zIndex: 200,
+    [theme.breakpoints.up('sm')]: {
+      flexBasis: '50%',
+      marginLeft: -100,
+      marginRight: 10,
+      marginBottom: 10,
+      boxShadow:
+        '0px 6px 6px -3px rgba(0,0,0,0.2), 0px 10px 14px 1px rgba(0,0,0,0.14), 0px 4px 18px 3px rgba(0,0,0,0.12)',
+    },
+    [theme.breakpoints.up('md')]: {
+      width: 400,
+      marginLeft: -100,
+      marginBottom: 0,
+    },
+  },
+  featureMargin: {
+    marginLeft: '24%',
+    // [theme.breakpoints.up('sm')]: {
+    //   marginLeft: 0,
+    // },
   },
   container: {
     display: 'flex',
@@ -48,20 +93,20 @@ const useStyles = makeStyles(theme => ({
       paddingRight: 100,
     },
   },
-  margin: {
-    marginLeft: '15%',
-    [theme.breakpoints.up('sm')]: {
-      marginLeft: 0,
-    },
+  containerGuides: {
+    display: 'flex',
+    justifyContent: 'space-between',
   },
   imgContainer: {
     flexBasis: '50%',
+    background: theme.palette.common.white,
   },
   img: {
     height: '100%',
+    margin: 'auto',
     [theme.breakpoints.up('md')]: {
       height: 400,
-      width: '100%',
+      width: '70%',
     },
   },
   text: {
@@ -70,9 +115,6 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('md')]: {
       fontSize: 14,
     },
-  },
-  header: {
-    marginBottom: 30,
   },
   containerIcon: {
     // display: 'flex',
@@ -105,11 +147,32 @@ function ProductFinder({ img }) {
         {t('productFinder.header')}
       </Typography>
       <Container>
-        <LeashGuide />
+        <div className={classes.featureContainer}>
+          <Hidden xsDown>
+            <Img
+              fluid={img[0].node.fluid}
+              alt="surfers walking home"
+              className={classes.featureImg}
+            />
+          </Hidden>
+          <Paper className={classes.paper} elevation={10}>
+            <div className={classes.featureMargin}>
+              <BrushStroke title="Product Finder" />
+            </div>
+            <Typography className={classes.featureText}>
+              Not sure what product is right for your board? Check out our fin
+              and leash guides!
+            </Typography>
+            <div className={classes.container}>
+              <LeashGuide />
+              <FinGuide />
+            </div>
+          </Paper>
+        </div>
       </Container>
       <div className={classes.container}>
         <div className={classes.textContainer}>
-          <div className={classes.margin}>
+          <div>
             <BrushStroke title="Honeycomb Fiberglass" />
           </div>
           <div className={classnames(classes.containerIcon)}>
@@ -129,7 +192,7 @@ function ProductFinder({ img }) {
         </div>
         <div className={classes.imgContainer}>
           <Img
-            fluid={img[0].node.fluid}
+            fluid={img[3].node.fluid}
             alt="honeycomb"
             className={classes.img}
           />
@@ -144,7 +207,7 @@ function ProductFinder({ img }) {
           />
         </div>
         <div className={classes.textContainer}>
-          <div className={classes.marginRight}>
+          <div>
             <BrushStroke title="Fiberglass Line" />
           </div>
           <div className={classnames(classes.containerIcon)}>
@@ -167,7 +230,7 @@ function ProductFinder({ img }) {
       </div>
       <div className={classes.container}>
         <div className={classes.textContainer}>
-          <div className={classes.margin}>
+          <div>
             <BrushStroke title="Essential Line" />
           </div>
           <div className={classnames(classes.containerIcon)}>

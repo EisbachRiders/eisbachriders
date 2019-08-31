@@ -11,14 +11,14 @@ function LeashGuide() {
   return (
     <>
       <Button
-        variant="contained"
+        variant="outlined"
         color="primary"
         onClick={() => setDialog(true)}
       >
         {t('leashGuide.title')}
       </Button>
-      <Dialog open={isDialogOpen} onClose={() => setDialog(false)}>
-        <LeashGuideSteps />
+      <Dialog open={isDialogOpen} onClose={() => setDialog(false)} fullWidth>
+        <LeashGuideSteps onClose={() => setDialog(false)} />
       </Dialog>
     </>
   )

@@ -7,18 +7,21 @@ function ProductFinderPage({ data }) {
   const waveImg = data.allImageSharp.edges.find(x =>
     x.node.fluid.src.includes('wave')
   )
+  const img1 = data.allImageSharp.edges.find(x =>
+    x.node.fluid.src.includes('groupWalkingHome')
+  )
   const fin1 = data.allImageSharp.edges.find(x =>
-    x.node.fluid.src.includes('finderfin1')
+    x.node.fluid.src.includes('fin1')
   )
   const fin2 = data.allImageSharp.edges.find(x =>
-    x.node.fluid.src.includes('finderfin2')
+    x.node.fluid.src.includes('fin2')
   )
   const fin3 = data.allImageSharp.edges.find(x =>
-    x.node.fluid.src.includes('finderfin3')
+    x.node.fluid.src.includes('fin3')
   )
   return (
     <Layout waveImg={waveImg}>
-      <ProductFinder img={[fin1, fin2, fin3]} />
+      <ProductFinder img={[img1, fin1, fin2, fin3]} />
     </Layout>
   )
 }

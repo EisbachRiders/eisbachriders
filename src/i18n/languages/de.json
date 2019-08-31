@@ -11,13 +11,16 @@
     "cart": "cart",
     "weather": "eisbach",
     "faq": "FAQ",
-    "productFinder": "Produktfinder"
+    "products": "Produkts"
   },
   "productFinder": {
     "header": "Our Products"
   },
   "leashGuide": {
     "title": "Leash Guide"
+  },
+  "finGuide": {
+    "title": "Fin Guide"
   },
   "footer": {
     "message": "Schreib uns",
