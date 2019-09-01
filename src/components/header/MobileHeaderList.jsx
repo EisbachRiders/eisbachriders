@@ -74,6 +74,16 @@ function MobileHeaderList({ links, linkLabels, lng, changeLng }) {
             <ArrowIcon className={classes.icon} />
           </ListItem>
         </Link>
+        <Link to={`/productFinder/`}>
+          <ListItem button divider dense>
+            <ListItemText
+              disableTypography
+              className={classes.text}
+              primary={linkLabels[4]}
+            />
+            <ArrowIcon className={classes.icon} />
+          </ListItem>
+        </Link>
         <Button
           aria-label="shop"
           className={classes.button}
