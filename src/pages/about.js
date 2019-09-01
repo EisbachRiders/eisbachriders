@@ -1,15 +1,31 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import About from '../components/About'
+import About from '../components/about/About'
 
 function AboutPage({ data }) {
-  const headerImg = data.allImageSharp.edges.find(x =>
-    x.node.fluid.src.includes('header')
+  const about1 = data.allImageSharp.edges.find(x =>
+    x.node.fluid.src.includes('about1')
   )
+  const about2 = data.allImageSharp.edges.find(x =>
+    x.node.fluid.src.includes('about2')
+  )
+  const about3 = data.allImageSharp.edges.find(x =>
+    x.node.fluid.src.includes('about3')
+  )
+  const about4 = data.allImageSharp.edges.find(x =>
+    x.node.fluid.src.includes('about4')
+  )
+  const about5 = data.allImageSharp.edges.find(x =>
+    x.node.fluid.src.includes('aboutAuthor1')
+  )
+  const about6 = data.allImageSharp.edges.find(x =>
+    x.node.fluid.src.includes('aboutAuthor2')
+  )
+
   return (
-    <Layout img={headerImg}>
-      <About />
+    <Layout>
+      <About img={[about1, about2, about3, about4, about5, about6]} />
     </Layout>
   )
 }

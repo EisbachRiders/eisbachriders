@@ -4,7 +4,6 @@ import Layout from '../components/Layout'
 import Feature from '../components/homepage/Feature'
 import NewProduct from '../components/homepage/NewProduct'
 import Showcase from '../components/homepage/Showcase'
-import AboutUs from '../components/homepage/AboutUs'
 import Hero from '../components/homepage/Hero'
 
 function Index({ data }) {
@@ -23,9 +22,6 @@ function Index({ data }) {
   const waveImg = data.allImageSharp.edges.find(x =>
     x.node.fluid.src.includes('wave')
   )
-  const aboutImg = data.allImageSharp.edges.find(x =>
-    x.node.fluid.src.includes('founder')
-  )
 
   return (
     <div id="body">
@@ -34,7 +30,6 @@ function Index({ data }) {
         <Feature img={featureImg} />
         <NewProduct img={newImg} detailImg={detailImg} />
         <Showcase />
-        <AboutUs img={aboutImg} />
       </Layout>
     </div>
   )
