@@ -85,6 +85,7 @@ export default function CustomizedExpansionPanels() {
   const handleChange = panel => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false)
   }
+
   return (
     <StaticQuery
       query={graphql`
@@ -94,12 +95,9 @@ export default function CustomizedExpansionPanels() {
               node {
                 id
                 frontmatter {
-                  title
                   label
                 }
-                code {
-                  body
-                }
+                body
               }
             }
           }
@@ -147,7 +145,7 @@ export default function CustomizedExpansionPanels() {
                           {
                             data.allMdx.edges.find(
                               x => x.node.frontmatter.label === item
-                            ).node.code.body
+                            ).node.body
                           }
                         </MDXRenderer>
                       </ExpansionPanelDetails>
@@ -198,17 +196,6 @@ export default function CustomizedExpansionPanels() {
 //     },
 //     "waxExpire": {
 //       "title": "Does surf wax expire?"
-//     }
-//   }
-// },
-// "payments": {
-//   "title": "payments",
-//   "subnav": {
-//     "services": {
-//       "title": "Which payment services do you offer?"
-//     },
-//     "currency": {
-//       "title": "What currency can I pay with?"
 //     }
 //   }
 // },

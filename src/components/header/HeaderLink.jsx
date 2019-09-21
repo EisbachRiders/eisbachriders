@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
       background: 'transparent',
     },
   },
-  altTheme: {
+  isActive: {
     color: theme.palette.primary.main,
     '&:hover': {
       color: theme.palette.common.black,
@@ -35,7 +35,7 @@ function HeaderLink({
   href,
   to,
   onClick,
-  isHomepage,
+  isActive,
   className: classNameProp,
 }) {
   const classes = useStyles()
@@ -45,7 +45,7 @@ function HeaderLink({
       className={clsx(
         classNameProp,
         classes.button,
-        isHomepage ? classes.mainTheme : classes.altTheme
+        isActive ? classes.isActive : classes.mainTheme
       )}
       href={href}
       onClick={onClick}
@@ -58,7 +58,7 @@ function HeaderLink({
         className={clsx(
           classNameProp,
           classes.button,
-          isHomepage ? classes.mainTheme : classes.altTheme
+          isActive ? classes.isActive : classes.mainTheme
         )}
       >
         {title}
@@ -71,7 +71,7 @@ HeaderLink.propTypes = {
   title: PropTypes.string.isRequired,
   to: PropTypes.string,
   href: PropTypes.string,
-  isHomepage: PropTypes.bool,
+  isActive: PropTypes.bool,
 }
 
 export default HeaderLink

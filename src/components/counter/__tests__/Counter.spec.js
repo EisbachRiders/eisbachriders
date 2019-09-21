@@ -1,17 +1,10 @@
 import React from 'react'
-import { render } from 'react-testing-library'
+import { render } from '../../../../test-utils'
 import Counter from '../Counter'
-import { ThemeProvider } from '@material-ui/styles'
-import theme from '../../theme'
 
 describe('Counter', () => {
   it('renders correctly', () => {
-    const mockProps = {}
-    const component = render(
-      <ThemeProvider theme={theme}>
-        <Counter {...mockProps} />
-      </ThemeProvider>
-    )
+    const component = render(<Counter />)
     expect(component).toMatchSnapshot()
   })
 })

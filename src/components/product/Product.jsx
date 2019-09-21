@@ -81,7 +81,6 @@ function Product({ product, cart, addToCart }) {
   }
 
   function handleChange(event) {
-    console.log(event)
     setValues(oldValues => ({
       ...oldValues,
       [event.target.name]: event.target.value,
@@ -107,9 +106,8 @@ function Product({ product, cart, addToCart }) {
       newCart.push({ quantity, productInfo })
     }
     addToCart(newCart)
-    console.log(newCart)
   }
-  console.log(values)
+
   return (
     <Container>
       {Object.keys(product).length !== 0 && (
