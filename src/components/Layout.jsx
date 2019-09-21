@@ -10,7 +10,7 @@ function Layout({ isHomepage, img, waveImg, children }) {
     <>
       <SEO />
       <Header isHomepage={isHomepage} img={img} />
-      {children}
+      <div>{children}</div>
       <Footer waveImg={waveImg} />
       {process.env.NODE_ENV !== 'development' && <Tracking />}
     </>

@@ -18,6 +18,7 @@ import ERIcon from '../../assets/icons/ER'
 import HeaderLink from './HeaderLink'
 import HeaderLinkIcon from './HeaderLinkIcon'
 import Banner from './Banner'
+import { Location } from '@reach/router'
 
 const mapStateToProps = ({ lng, cart }) => {
   return { lng, cart }
@@ -63,7 +64,7 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up('sm')]: {
       marginTop: 80,
     },
-    [theme.breakpoints.up('l')]: {
+    [theme.breakpoints.up('lg')]: {
       marginTop: 100,
     },
   },
@@ -73,60 +74,64 @@ function Header({ isHomepage, lng, changeLng, cart, img }) {
   const classes = useStyles()
   const { t } = useTranslation()
   const [isDrawerOpen, setDrawer] = useState(false)
+
+  const isActive = true
   return (
     <>
       <AppBar position="fixed" className={classes.appbar}>
         <Hidden smDown>
           <Banner
-            isHomepage={isHomepage}
+            isActive={isActive}
             cartItems={cart.length !== 0 ? cart[0].quantity : 0}
           />
         </Hidden>
+
         <Toolbar className={classes.toolbar}>
           <Link to="/" aria-label="home">
             <ERIcon className={classes.logo} />
           </Link>
           <Hidden xsDown>
-            <div>
-              <HeaderLink
-                to="/eisbach/"
-                isHomepage={isHomepage}
-                title={t('header.weather')}
-              />
-              <HeaderLink
-                to="/faq/"
-                isHomepage={isHomepage}
-                title={t('header.faq')}
-              />
-              <HeaderLink
-                to="/about/"
-                isHomepage={isHomepage}
-                title={t('header.about')}
-                to="/productFinder/"
-                isHomepage={isHomepage}
-                title={t('header.products')}
-              />
-              <HeaderLink
-                to="/productFinder/"
-                isHomepage={isHomepage}
-                title={t('header.products')}
-              />
-              <HeaderLink
-                to="/shop/"
-                isHomepage={isHomepage}
-                title={t('header.shop')}
-                href="https://shop.eisbach-riders.com/"
-              />
-              <HeaderLink
-                to="/cart/"
-                isHomepage={isHomepage}
-                title={t('header.cart')}
-                href="https://shop.eisbach-riders.com/cart/"
-              />
-              {/* <HeaderLink onClick={changeLng} isHomepage={isHomepage}>
+            <Location>
+              {({ location }) => (
+                <div>
+                  <HeaderLink
+                    to="/eisbach/"
+                    isActive={location.pathname == '/eisbach/'}
+                    title={t('header.weather')}
+                  />
+                  <HeaderLink
+                    to="/faq/"
+                    isActive={location.pathname == '/faq/'}
+                    title={t('header.faq')}
+                  />
+                  {/* <HeaderLink
+                    to="/productFinder/"
+                    isActive={location.pathname == '/productFinder/'}
+                    title={t('header.products')}
+                  /> */}
+                  <HeaderLink
+                    to="/about/"
+                    isActive={location.pathname == '/about/'}
+                    title={t('header.about')}
+                  />
+                  <HeaderLink
+                    to="/shop/"
+                    isActive={location.pathname == '/shop/'}
+                    title={t('header.shop')}
+                    href="https://shop.eisbach-riders.com/"
+                  />
+                  <HeaderLink
+                    to="/cart/"
+                    isActive={location.pathname == '/cart/'}
+                    title={t('header.cart')}
+                    href="https://shop.eisbach-riders.com/cart/"
+                  />
+                  {/* <HeaderLink onClick={changeLng} isActive={isActive}>
                 {lng === 'en' ? 'de' : 'en'}
               </HeaderLink> */}
-            </div>
+                </div>
+              )}
+            </Location>
           </Hidden>
           <Hidden smUp>
             <IconButton
@@ -178,7 +183,7 @@ function Header({ isHomepage, lng, changeLng, cart, img }) {
 }
 
 Header.propTypes = {
-  isHomepage: PropTypes.bool,
+  isActive: PropTypes.bool,
   lng: PropTypes.string.isRequired,
   changeLng: PropTypes.func.isRequired,
 }

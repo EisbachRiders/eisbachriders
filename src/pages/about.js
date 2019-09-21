@@ -14,13 +14,13 @@ function AboutPage({ data }) {
     x.node.fluid.src.includes('about3')
   )
   const about4 = data.allImageSharp.edges.find(x =>
-    x.node.fluid.src.includes('about4')
+    x.node.fluid.src.includes('groupWalking')
   )
   const about5 = data.allImageSharp.edges.find(x =>
-    x.node.fluid.src.includes('aboutAuthor1')
+    x.node.fluid.src.includes('author1')
   )
   const about6 = data.allImageSharp.edges.find(x =>
-    x.node.fluid.src.includes('aboutAuthor2')
+    x.node.fluid.src.includes('author2')
   )
 
   return (

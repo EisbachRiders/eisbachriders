@@ -86,9 +86,14 @@
     "pay": "pay now"
   },
   "about": {
+    "mission": "Eisbach Riders is a surf brand from Munich, Germany that specializes in surf equipment and accessories. We are passionate surfers with a mission to protect our playgrounds - the ocean and rivers that provide us so much enjoyment - by supporting local communities and efforts to preserve our water sources. Our focus is to provide sustainably packaged and affordable products so you can feel good about jumping back into the water.",
     "sectionTitle1": "about",
     "sectionTitle2": " Eisbach Riders",
-    "message": "Eisbach Riders is a young local surf brand from Munich and offers equipment for surfing. Whether you are in the sea, in the river or on the city wave. We, Michael and Robin, are passionate surfers ourselves and value quality products at comparable prices. Packed in sustainable and environmentally friendly packaging, we will ship as fast as possible so that you can jump right back into the water with a smile on your face."
+    "community": "We are members of and support our local outdoor clubs in protecting our water playgrounds and we want to encourage other communities to come together to protect theirs! Check out below for how you can get involved in Munich or globally by joining a club, donating, teaching kids to surf, or picking up trash!",
+    "sustainability": "All of our products are packed in sustainable and environmentally friendly packaging and we are trying to take all measures that we can to reduce the amount of waste and plastic that goes into the development and shipping of our products. We donate 1% of our revenue to charities that help protect our oceans, rivers and lakes. COMING SOON: We will offer a new Green Line of fins that will focus on donating the majority of the profits to protecting the ocean!",
+    "us1": "We are Robin and Michael. We met during our studies at Technical University of Munich and have been friends ever since. We are not professional surfers and if we are being honest, we will likely never be haha, but we love being out on the waves! And we want everyone to be able to enjoy their local water sources without breaking the bank or having to feel guilty for buying something double wrapped in plastic.",
+    "us2": "When we decided to follow our passion and start this brand we wanted to focus on sustainable packaging and supporting local communities. Eisbach Riders was founded in September 2018 in Munich and while we are still a young start up, we are overflowing with ideas on how to making purchasing surf gear more sustainable.",
+    "us3": "Stay Tuned!"
   },
   "products": {
     "sectionTitle": "essential surf equipment",
