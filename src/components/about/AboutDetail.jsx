@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
-import classnames from 'classnames'
+import clsx from 'clsx'
 import { useTranslation } from 'react-i18next'
 import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
@@ -107,7 +107,7 @@ function AboutDetail({ img }) {
   return (
     <>
       <Container className={classes.root}>
-        <div className={classnames(classes.container, classes.containerLeft)}>
+        <div className={clsx(classes.container, classes.containerLeft)}>
           <div className={classes.margin}>
             <BrushStroke title="Community" />
           </div>
@@ -134,7 +134,7 @@ function AboutDetail({ img }) {
             />
           </div>
         </Hidden>
-        <div className={classnames(classes.container, classes.containerRight)}>
+        <div className={clsx(classes.container, classes.containerRight)}>
           <div className={classes.margin}>
             <BrushStroke title="sustainability" />
           </div>

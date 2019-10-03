@@ -5,7 +5,7 @@ import Img from 'gatsby-image'
 import Typography from '@material-ui/core/Typography'
 import BrushStroke from '../ui/BrushStroke'
 import Container from '../ui/Container'
-import classnames from 'classnames'
+import clsx from 'clsx'
 import FeatherIcon from '../../assets/icons/Feather'
 import LeashGuide from './LeashGuide'
 import FinGuide from './FinGuide'
@@ -175,14 +175,14 @@ function ProductFinder({ img }) {
           <div>
             <BrushStroke title="Honeycomb Fiberglass" />
           </div>
-          <div className={classnames(classes.containerIcon)}>
+          <div className={clsx(classes.containerIcon)}>
             <Typography className={classes.detailText}>
               {t('feature.surfDetail2')}
             </Typography>
             <div>
               <FeatherIcon className={classes.icon} />
               <FeatherIcon className={classes.icon} />
-              <FeatherIcon className={classnames(classes.off, classes.icon)} />
+              <FeatherIcon className={clsx(classes.off, classes.icon)} />
             </div>
           </div>
           <Typography className={classes.text} variant="body1">
@@ -210,14 +210,14 @@ function ProductFinder({ img }) {
           <div>
             <BrushStroke title="Fiberglass Line" />
           </div>
-          <div className={classnames(classes.containerIcon)}>
+          <div className={clsx(classes.containerIcon)}>
             <Typography className={classes.detailText}>
               {t('feature.surfDetail2')}
             </Typography>
             <div>
               <FeatherIcon className={classes.icon} />
               <FeatherIcon className={classes.icon} />
-              <FeatherIcon className={classnames(classes.off, classes.icon)} />
+              <FeatherIcon className={clsx(classes.off, classes.icon)} />
             </div>
           </div>
           <Typography className={classes.text} variant="body1">
@@ -233,14 +233,14 @@ function ProductFinder({ img }) {
           <div>
             <BrushStroke title="Essential Line" />
           </div>
-          <div className={classnames(classes.containerIcon)}>
+          <div className={clsx(classes.containerIcon)}>
             <Typography className={classes.detailText}>
               {t('feature.surfDetail2')}
             </Typography>
             <div>
               <FeatherIcon className={classes.icon} />
               <FeatherIcon className={classes.icon} />
-              <FeatherIcon className={classnames(classes.off, classes.icon)} />
+              <FeatherIcon className={clsx(classes.off, classes.icon)} />
             </div>
           </div>
           <Typography className={classes.text} variant="body1">

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { makeStyles } from '@material-ui/styles'
-import classnames from 'classnames'
+import clsx from 'clsx'
 import Typography from '@material-ui/core/Typography'
 import Container from '../ui/Container'
 import Img from 'gatsby-image'
@@ -68,7 +68,7 @@ function Founder({ img }) {
           <Img
             fluid={img[1].node.fluid}
             alt="ceo1"
-            className={classnames(classes.img, classes.right)}
+            className={clsx(classes.img, classes.right)}
           />
         </div>
         <div>

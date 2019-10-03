@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { useTranslation } from 'react-i18next'
 import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
-import classnames from 'classnames'
+import clsx from 'clsx'
 import Button from '@material-ui/core/Button'
 import ProductAttribute from './ProductAttribute'
 import ProductImg from './ProductImg'
@@ -137,7 +137,7 @@ function Product({ product, cart, addToCart }) {
                 </Typography>
                 {!product.in_stock && (
                   <Typography
-                    className={classnames(classes.price, classes.red)}
+                    className={clsx(classes.price, classes.red)}
                   >
                     {t('products.outOfStock')}
                   </Typography>
