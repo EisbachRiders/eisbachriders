@@ -136,41 +136,26 @@ function Footer({ waveImg }) {
                 <Typography className={classes.textHeading}>
                   {t('footer.customerService')}
                 </Typography>
-                {/* <Link to="/payment/">
-                    <Typography className={classes.text}>
-                      {t('footer.payment')}
-                    </Typography>
-                  </Link>
-                  <Link to="/shipping/">
-                    <Typography className={classes.text}>
-                      {t('footer.shipping')}
-                    </Typography>
-                  </Link>
-                  <Link to="/returns/">
-                    <Typography className={classes.text}>
-                      {t('footer.returns')}
-                    </Typography>
-                  </Link> */}
-                <a href="https://shop.eisbach-riders.com/payment/">
+                <Link to="/payment/">
                   <Typography className={classes.text}>
                     {t('footer.payment')}
                   </Typography>
-                </a>
-                <a href="https://shop.eisbach-riders.com/shipping/">
+                </Link>
+                <Link to="/shipping/">
                   <Typography className={classes.text}>
                     {t('footer.shipping')}
                   </Typography>
-                </a>
-                <a href="https://shop.eisbach-riders.com/returns/">
+                </Link>
+                <Link to="/returns/">
                   <Typography className={classes.text}>
                     {t('footer.returns')}
                   </Typography>
-                </a>
-                <a href="https://shop.eisbach-riders.com/terms-and-conditions/">
+                </Link>
+                <Link to="/termsAndConditions/">
                   <Typography className={classes.text}>
                     {t('footer.terms')}
                   </Typography>
-                </a>
+                </Link>
               </div>
             </div>
             <div className={classes.flexItemInner}>
@@ -214,7 +199,7 @@ function Footer({ waveImg }) {
           className={classes.copyright}
         >
           &copy; Eisbach Riders |{' '}
-          <Link to="/legal/" className={classes.link}>
+          <Link to="/imprint/" className={classes.link}>
             {t('footer.imprint')}
           </Link>
           |{' '}
