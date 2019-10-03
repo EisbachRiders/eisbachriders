@@ -5,10 +5,10 @@ import Typography from '@material-ui/core/Typography'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import Container from '../ui/Container'
 import Chart from './Chart'
+import { nullLiteral } from '@babel/types'
 // import TempChart from './TempChart'
 
 const useStyles = makeStyles(theme => ({
-  root: {},
   containerProgress: {
     margin: 60,
     textAlign: 'center',
@@ -28,7 +28,6 @@ const useStyles = makeStyles(theme => ({
     fontSize: 16,
     fontWeight: 'bold',
   },
-  subheader: {},
   title: {
     fontWeight: 'bold',
     marginBottom: 30,
@@ -56,7 +55,9 @@ function Weather() {
   const classes = useStyles()
   const [isLoading, setLoading] = useState(false)
   const [water, setWater] = useState('')
+  const [water2, setWater2] = useState('')
   const [waterTime, setWaterTime] = useState('')
+  const [waterTime2, setWaterTime2] = useState('')
   const [temp, setTemp] = useState('')
   const [level, setLevel] = useState('')
   const [levelTime, setLevelTime] = useState('')
@@ -70,22 +71,56 @@ function Weather() {
     setLoading(false)
   }
 
-  getWaterData = contents => {
-    let results = null
-
-    setWaterTime(
-      contents
+  const getWaterData = value => {
+    let waterTemp = null
+    let waterTime = null
+    if (
+      value
+        .split('table')[7]
+        .split('<td  class="center">')[1]
+        .split('</td>')[0] !== '--'
+    ) {
+      waterTemp = value
+        .split('table')[7]
+        .split('<td  class="center">')[1]
+        .split('</td>')[0]
+      waterTime = value
         .split('table')[7]
         .split('<td  class="center">')[0]
         .split('<td >')[1]
         .split('</td>')[0]
-    ),
-      setWater(
-        contents
-          .split('table')[7]
-          .split('<td  class="center">')[1]
-          .split('</td>')[0]
-      )
+    } else if (
+      value
+        .split('table')[7]
+        .split('<td  class="center">')[2]
+        .split('</td>')[0] !== '--'
+    ) {
+      waterTemp = value
+        .split('table')[7]
+        .split('<td  class="center">')[2]
+        .split('</td>')[0]
+      waterTime = value
+        .split('table')[7]
+        .split('<td  class="center">')[1]
+        .split('<td >')[1]
+        .split('</td>')[0]
+    } else if (
+      value
+        .split('table')[7]
+        .split('<td  class="center">')[3]
+        .split('</td>')[0] !== '--'
+    ) {
+      waterTemp = value
+        .split('table')[7]
+        .split('<td  class="center">')[3]
+        .split('</td>')[0]
+      waterTime = value
+        .split('table')[7]
+        .split('<td  class="center">')[2]
+        .split('<td >')[1]
+        .split('</td>')[0]
+    }
+    return [waterTemp, waterTime]
   }
 
   useEffect(() => {
@@ -94,8 +129,8 @@ function Weather() {
       'https://www.gkd.bayern.de/en/rivers/watertemperature/kelheim/muenchen-himmelreichbruecke-16515005/current-values/table'
     const urlWater2 =
       'https://www.gkd.bayern.de/en/rivers/watertemperature/kelheim/muenchen-tieraerztl-hochschule-16516008/current-values/table'
-    const urlWater3 =
-      'https://www.gkd.bayern.de/en/rivers/watertemperature/isar/muenchen-16005701/current-values/table'
+    // const urlWater3 =
+    //   'https://www.gkd.bayern.de/en/rivers/watertemperature/isar/muenchen-16005701/current-values/table'
     const urlLevel =
       'https://www.gkd.bayern.de/en/rivers/waterlevel/kelheim/muenchen-himmelreichbruecke-16515005/current-values/table'
     const urlRunoff =
@@ -109,19 +144,8 @@ function Weather() {
         })
         .then(response => response.text())
         .then(contents => {
-          setWaterTime(
-            contents
-              .split('table')[7]
-              .split('<td  class="center">')[0]
-              .split('<td >')[1]
-              .split('</td>')[0]
-          ),
-            setWater(
-              contents
-                .split('table')[7]
-                .split('<td  class="center">')[1]
-                .split('</td>')[0]
-            )
+          let waterData = getWaterData(contents)
+          setWaterTime(waterData[1]), setWater(waterData[0])
           setLoading(false)
         })
         .catch(function(e) {
@@ -186,6 +210,24 @@ function Weather() {
         })
     }
     fetchData3()
+    const fetchData4 = () => {
+      setLoading(true)
+      fetch(proxyurl + urlWater2)
+        .then(function(response) {
+          return response
+        })
+        .then(response => response.text())
+        .then(contents => {
+          let waterData = getWaterData(contents)
+          setWaterTime2(waterData[1]), setWater2(waterData[0])
+          setLoading(false)
+        })
+        .catch(function(e) {
+          console.log(e)
+          setLoading(false)
+        })
+    }
+    fetchData4()
     // const fetchData4 = () => {
     //   setLoading(true)
     //   fetch(proxyurl + urlTemp)
@@ -243,7 +285,12 @@ function Weather() {
             </div> */}
           </Container>
           <div className={classes.chartContainer}>
-            <Chart value={water} title="Water Temperature" unit="°C" max="25" />
+            <Chart
+              value={water || water2}
+              title="Water Temperature"
+              unit="°C"
+              max="25"
+            />
             <Chart value={level} title="Water Level" max="200" unit="cm" />
             <Chart value={runoff} title="Runoff" max="30" unit="m³/s" />
           </div>

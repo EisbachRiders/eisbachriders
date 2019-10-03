@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React from 'react'
 import { makeStyles } from '@material-ui/styles'
-import classnames from 'classnames'
 import Select from '@material-ui/core/Select'
 import FormControl from '@material-ui/core/FormControl'
 import InputLabel from '@material-ui/core/InputLabel'
@@ -18,7 +17,6 @@ const useStyles = makeStyles(theme => ({
 
 function ProductAttribute({ attribute, selected, onChange, name }) {
   const classes = useStyles()
-  console.log(selected)
   return (
     <form autoComplete="off" className={classes.form}>
       <FormControl className={classes.formControl}>
