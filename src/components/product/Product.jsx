@@ -62,6 +62,7 @@ function Product({ product, cart, addToCart }) {
   const { t } = useTranslation()
   const classes = useStyles()
   const [quantity, setQuantity] = useState(1)
+  const [isDisabled, setDisabled] = useState(true)
   const [values, setValues] = useState({
     attr1: '',
     attr2: '',
@@ -81,6 +82,7 @@ function Product({ product, cart, addToCart }) {
   }
 
   function handleChange(event) {
+    console.log(event)
     setValues(oldValues => ({
       ...oldValues,
       [event.target.name]: event.target.value,
@@ -94,6 +96,7 @@ function Product({ product, cart, addToCart }) {
       attr2: values.attr2,
       attr3: values.attr3,
     }
+
     const newCart = []
     if (cart.length === 0) {
       newCart.push({ quantity, productInfo })
@@ -107,7 +110,7 @@ function Product({ product, cart, addToCart }) {
     }
     addToCart(newCart)
   }
-
+  console.log(product.attributes.length)
   return (
     <Container>
       {Object.keys(product).length !== 0 && (
@@ -143,7 +146,7 @@ function Product({ product, cart, addToCart }) {
               {product.attributes.length !== 0 &&
                 product.attributes.map((elem, idx) => (
                   <ProductAttribute
-                    selected={`values.attr${idx + 1}`}
+                    selected={values[`attr${idx + 1}`]}
                     name={`attr${idx + 1}`}
                     onChange={handleChange}
                     attribute={elem}
@@ -160,6 +163,7 @@ function Product({ product, cart, addToCart }) {
                   variant="contained"
                   color="primary"
                   onClick={handleCart}
+                  disabled={isDisabled}
                 >
                   {t('products.addToCart')}
                 </Button>

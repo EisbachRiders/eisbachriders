@@ -5,6 +5,9 @@
       "singleFin": {
         "title": "I broke / lost one of my fins. Do you sell center fins or side fins separately?"
       },
+      "finSize": {
+        "title": "Which fin size is the best for me - small, medium or large?"
+      },
       "incorrectFit": {
         "title": "The fins do not fit into my surfboard"
       },
@@ -45,14 +48,11 @@
   "returns": {
     "title": "returns & exchanges",
     "subnav": {
-      "time": {
+      "policy": {
         "title": "What is your return or exchange policy?"
       },
       "return": {
-        "title": "How do I return an item?"
-      },
-      "exchange": {
-        "title": "How do I exchange an item?"
+        "title": "How do I return/exchange an item?"
       }
     }
   },
