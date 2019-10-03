@@ -110,7 +110,6 @@ function Product({ product, cart, addToCart }) {
     }
     addToCart(newCart)
   }
-  console.log(product.attributes.length)
   return (
     <Container>
       {Object.keys(product).length !== 0 && (
@@ -136,9 +135,7 @@ function Product({ product, cart, addToCart }) {
                   {`€${product.price}`}
                 </Typography>
                 {!product.in_stock && (
-                  <Typography
-                    className={clsx(classes.price, classes.red)}
-                  >
+                  <Typography className={clsx(classes.price, classes.red)}>
                     {t('products.outOfStock')}
                   </Typography>
                 )}
