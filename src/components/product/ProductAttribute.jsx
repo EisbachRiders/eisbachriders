@@ -11,25 +11,32 @@ const useStyles = makeStyles(theme => ({
   formControl: {
     width: '100%',
   },
+  menuItem: {
+    textTransform: 'capitalize',
+  },
 }))
 
 function ProductAttribute({ attribute, selected, onChange, name }) {
   const classes = useStyles()
-
+  console.log(selected)
   return (
     <form autoComplete="off" className={classes.form}>
       <FormControl className={classes.formControl}>
         <InputLabel htmlFor={attribute.name}>{attribute.name}</InputLabel>
         <Select
-          value={selected.value}
+          value={selected}
           onChange={onChange}
           inputProps={{
-            name,
+            name: name,
             id: attribute.name,
           }}
         >
           {attribute.options.map(elem => (
-            <MenuItem value={elem} key={`attribute${elem}`}>
+            <MenuItem
+              value={elem}
+              key={`attribute${elem}`}
+              className={classes.menuItem}
+            >
               {elem}
             </MenuItem>
           ))}
