@@ -84,6 +84,16 @@ function MobileHeaderList({ links, linkLabels, lng, changeLng }) {
             <ArrowIcon className={classes.icon} />
           </ListItem>
         </Link> */}
+        {/* <Link to={`/blog/`}>
+          <ListItem button divider dense>
+            <ListItemText
+              disableTypography
+              className={classes.text}
+              primary={linkLabels[4]}
+            />
+            <ArrowIcon className={classes.icon} />
+          </ListItem>
+        </Link> */}
         <Link to={`/about/`}>
           <ListItem button divider dense>
             <ListItemText

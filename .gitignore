@@ -9,3 +9,5 @@ coverage/
 yarn.lock
 .env.development
 .env.production
+.htaccess
+

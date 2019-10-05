@@ -27,12 +27,21 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
+    {
+      resolve: `gatsby-source-graphql`,
+      options: {
+        typeName: 'WPGraphQL',
+        fieldName: 'wpgraphql',
+        url: 'https://shop.eisbach-riders.com/graphql',
+      },
+    },
     // {
-    //   resolve: "gatsby-source-graphql",
+    //   resolve: `gatsby-source-wordpress`,
     //   options: {
-    //     typeName: "woocommerceAPI",
-    //     fieldName: "woo",
-    //     url: "https://rickandmortyapi-gql.now.sh/",
+    //     baseUrl: `shop.eisbach-riders.com`,
+    //     protocol: `https`,
+    //     hostingWPCOM: false,
+    //     useACF: true,
     //   },
     // },
     {

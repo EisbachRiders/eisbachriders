@@ -115,6 +115,11 @@ function Header({ isHomepage, lng, changeLng, cart, img }) {
                     title={t('header.about')}
                   />
                   <HeaderLink
+                    to="/blog/"
+                    isActive={location.pathname == '/blog/'}
+                    title={t('header.blog')}
+                  />
+                  <HeaderLink
                     to="/shop/"
                     isActive={location.pathname == '/shop/'}
                     title={t('header.shop')}
@@ -159,6 +164,8 @@ function Header({ isHomepage, lng, changeLng, cart, img }) {
                     t('header.cart'),
                     t('header.weather'),
                     t('header.faq'),
+                    // t('header.products'),
+                    // t('header.blog'),
                     t('header.about'),
                     t('header.products'),
                   ]}

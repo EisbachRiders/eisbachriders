@@ -135,7 +135,7 @@ function Weather() {
       'https://www.gkd.bayern.de/en/rivers/waterlevel/kelheim/muenchen-himmelreichbruecke-16515005/current-values/table'
     const urlRunoff =
       'https://www.gkd.bayern.de/en/rivers/discharge/kelheim/muenchen-himmelreichbruecke-16515005/current-values/table'
-    // const urlTemp = `api.openweathermap.org/data/2.5/forecast/hourly?q=Munich&APPID=${process.env.OPENWEATHER}&units=metric`
+
     const fetchData1 = () => {
       setLoading(true)
       fetch(proxyurl + urlWater)

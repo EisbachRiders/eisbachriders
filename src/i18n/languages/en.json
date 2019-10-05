@@ -12,7 +12,8 @@
     "weather": "eisbach",
     "faq": "faq",
     "about": "about",
-    "products": "products"
+    "products": "products",
+    "blog": "blog"
   },
   "productFinder": {
     "header": "Our Products"

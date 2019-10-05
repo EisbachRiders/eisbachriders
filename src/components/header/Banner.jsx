@@ -58,13 +58,13 @@ function Banner({ cartItems }) {
       <p className={clsx(classes.flexItem, classes.text)}>
         {t('banner.shipping')}
       </p>
-      {/* <div className={clsx(classes.flexItem, classes.flexEnd)}>
-        <HeaderLinkIcon to="/cart/" ariaLabel="cart">
+      <div className={clsx(classes.flexItem, classes.flexEnd)}>
+        {/* <HeaderLinkIcon to="/cart/" ariaLabel="cart">
           <Badge badgeContent={cartItems} color="primary">
             <CartIcon />
           </Badge>
-        </HeaderLinkIcon>
-      </div> */}
+        </HeaderLinkIcon> */}
+      </div>
     </div>
   )
 }
