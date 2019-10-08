@@ -7,11 +7,11 @@ function WeatherPage({ data }) {
   const headerImg = data.allImageSharp.edges.find(x =>
     x.node.fluid.src.includes('header')
   )
-  const waveImg = data.allImageSharp.edges.find(x =>
-    x.node.fluid.src.includes('wave')
+  const footerImg = data.allImageSharp.edges.find(x =>
+    x.node.fluid.src.includes('footer')
   )
   return (
-    <Layout waveImg={waveImg} img={headerImg}>
+    <Layout footerImg={footerImg} img={headerImg}>
       <Weather />
     </Layout>
   )

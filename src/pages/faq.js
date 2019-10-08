@@ -4,11 +4,11 @@ import Layout from '../components/Layout'
 import FAQ from '../components/faq/Faq'
 
 function FaqPage({ data }) {
-  const waveImg = data.allImageSharp.edges.find(x =>
-    x.node.fluid.src.includes('wave')
+  const footerImg = data.allImageSharp.edges.find(x =>
+    x.node.fluid.src.includes('footer')
   )
   return (
-    <Layout waveImg={waveImg}>
+    <Layout footerImg={footerImg}>
       <FAQ />
     </Layout>
   )

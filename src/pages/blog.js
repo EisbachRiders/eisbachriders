@@ -4,14 +4,14 @@ import Layout from '../components/Layout'
 import Blog from '../components/blog/Blog'
 
 function BlogPage({ data }) {
-  const waveImg = data.allImageSharp.edges.find(x =>
-    x.node.fluid.src.includes('wave')
+  const footerImg = data.allImageSharp.edges.find(x =>
+    x.node.fluid.src.includes('footer')
   )
-  const blogImg = data.allImageSharp.edges.find(x =>
+  const headerImg = data.allImageSharp.edges.find(x =>
     x.node.fluid.src.includes('blogHeader')
   )
   return (
-    <Layout waveImg={waveImg} img={blogImg}>
+    <Layout footerImg={waveImg} img={blogImg}>
       <Blog />
     </Layout>
   )

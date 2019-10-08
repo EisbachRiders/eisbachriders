@@ -20,13 +20,13 @@ function Index({ data }) {
   const detailImg = data.allImageSharp.edges.find(x =>
     x.node.fluid.src.includes('newDetail')
   )
-  const waveImg = data.allImageSharp.edges.find(x =>
+  const footerImg = data.allImageSharp.edges.find(x =>
     x.node.fluid.src.includes('footer')
   )
 
   return (
     <div id="body">
-      <Layout isHomepage waveImg={waveImg}>
+      <Layout isHomepage footerImg={footerImg}>
         <Hero img={heroImg} />
         <HeroBottom />
         <Feature img={featureImg} />
