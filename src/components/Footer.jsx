@@ -1,17 +1,26 @@
 import React from 'react'
 import Link from './ui/Link'
+import Img from 'gatsby-image'
 import { useTranslation } from 'react-i18next'
 import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
-import Membership from './homepage/Membership'
 import InstagramIcon from '../assets/icons/Instagram'
 import FacebookIcon from '../assets/icons/Facebook'
 import Contact from './Contact'
-import Newsletter from './newsletter/Newsletter'
+import NewsletterInline from './newsletter/NewsletterInline'
 import Container from './ui/Container'
 
 const useStyles = makeStyles(theme => ({
+  container: {
+    position: 'relative',
+    height: 600,
+  },
+  footerContainer: {
+    justifyContent: 'space-between',
+    display: 'flex',
+    zIndex: 2,
+  },
   containerInner: {
     display: 'flex',
     height: '100%',
@@ -116,6 +125,14 @@ const useStyles = makeStyles(theme => ({
     letterSpacing: 3,
     padding: 5,
   },
+  backgroundImg: {
+    zIndex: 0,
+    left: 0,
+    bottom: 0,
+    width: '100%',
+    overflow: 'hidden',
+    zIndex: -1,
+  },
 }))
 
 function Footer({ waveImg }) {
@@ -124,73 +141,64 @@ function Footer({ waveImg }) {
 
   return (
     <>
-      <Membership waveImg={waveImg} />
-      <Container variant="spaceBetween" background="grey">
-        <div className={classes.flexItem}>
-          <Contact />
-        </div>
-        <div className={classes.flexItem}>
-          <div className={classes.containerInner}>
-            <div className={classes.flexItemInner}>
-              <div>
-                <Typography className={classes.textHeading}>
-                  {t('footer.customerService')}
-                </Typography>
-                <Link to="/payment/">
-                  <Typography className={classes.text}>
-                    {t('footer.payment')}
-                  </Typography>
-                </Link>
-                <Link to="/shipping/">
-                  <Typography className={classes.text}>
-                    {t('footer.shipping')}
-                  </Typography>
-                </Link>
-                <Link to="/returns/">
-                  <Typography className={classes.text}>
-                    {t('footer.returns')}
-                  </Typography>
-                </Link>
-                <Link to="/termsAndConditions/">
-                  <Typography className={classes.text}>
-                    {t('footer.terms')}
-                  </Typography>
-                </Link>
-              </div>
+      <Container className={classes.container}>
+        <>
+          <div className={classes.footerContainer}>
+            <div className={classes.flexItem}>
+              <Contact />
             </div>
-            <div className={classes.flexItemInner}>
-              <div>
-                <Typography className={classes.textHeading}>
-                  {t('footer.subscribe')}
-                </Typography>
-                <Typography className={classes.text2}>
-                  {t('footer.subscribeText')}
-                </Typography>
-                <Newsletter variant="small" />
-              </div>
-              <div className={classes.iconContainer}>
-                <Button
-                  variant="outlined"
-                  className={classes.button}
-                  href="https://www.facebook.com/EisbachRiders/"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <FacebookIcon className={classes.icon} />
-                </Button>
-                <Button
-                  variant="outlined"
-                  className={classes.button}
-                  href="https://www.instagram.com/eisbachriders/"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <InstagramIcon className={classes.icon} />
-                </Button>
+            <div className={classes.flexItem}>
+              <div className={classes.containerInner}>
+                <div className={classes.flexItemInner}>
+                  <div>
+                    <Typography className={classes.textHeading}>
+                      {t('footer.customerService')}
+                    </Typography>
+                    <Link to="/payment/">
+                      <Typography className={classes.text}>
+                        {t('footer.payment')}
+                      </Typography>
+                    </Link>
+                    <Link to="/shipping/">
+                      <Typography className={classes.text}>
+                        {t('footer.shipping')}
+                      </Typography>
+                    </Link>
+                    <Link to="/returns/">
+                      <Typography className={classes.text}>
+                        {t('footer.returns')}
+                      </Typography>
+                    </Link>
+                    <Link to="/termsAndConditions/">
+                      <Typography className={classes.text}>
+                        {t('footer.terms')}
+                      </Typography>
+                    </Link>
+                  </div>
+                  <div>
+                    <Typography className={classes.textHeading}>
+                      {t('header.about')}
+                    </Typography>
+                    <Link to="/about/">
+                      <Typography className={classes.text}>
+                        {t('footer.payment')}
+                      </Typography>
+                    </Link>
+                  </div>
+                </div>
+                <div className={classes.flexItemInner}></div>
               </div>
             </div>
           </div>
-        </div>
+          <NewsletterInline />
+        </>
+        <Img
+          fluid={waveImg.node.fluid}
+          alt="wave background"
+          className={classes.backgroundImg}
+          imgStyle={{ objectFit: 'fill' }}
+          style={{ position: 'absolute' }}
+        />
       </Container>
       <div className={classes.legal}>
         <Typography

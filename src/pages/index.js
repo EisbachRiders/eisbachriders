@@ -5,10 +5,11 @@ import Feature from '../components/homepage/Feature'
 import NewProduct from '../components/homepage/NewProduct'
 import Showcase from '../components/homepage/Showcase'
 import Hero from '../components/homepage/Hero'
+import HeroBottom from '../components/homepage/HeroBottom'
 
 function Index({ data }) {
   const heroImg = data.allImageSharp.edges.find(x =>
-    x.node.fluid.src.includes('backsplash')
+    x.node.fluid.src.includes('blog')
   )
   const featureImg = data.allImageSharp.edges.find(x =>
     x.node.fluid.src.includes('featuredProduct')
@@ -20,13 +21,14 @@ function Index({ data }) {
     x.node.fluid.src.includes('newDetail')
   )
   const waveImg = data.allImageSharp.edges.find(x =>
-    x.node.fluid.src.includes('wave')
+    x.node.fluid.src.includes('footer')
   )
 
   return (
     <div id="body">
       <Layout isHomepage waveImg={waveImg}>
         <Hero img={heroImg} />
+        <HeroBottom />
         <Feature img={featureImg} />
         <NewProduct img={newImg} detailImg={detailImg} />
         <Showcase />

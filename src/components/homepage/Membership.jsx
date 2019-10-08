@@ -40,10 +40,10 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     objectFit: 'cover',
     height: '100%',
-    [theme.breakpoints.up('md')]: {
-      objectFit: 'fill',
-      height: 150,
-    },
+    // [theme.breakpoints.up('md')]: {
+    //   objectFit: 'fill',
+    //   height: 150,
+    // },
   },
 }))
 

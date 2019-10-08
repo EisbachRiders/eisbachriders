@@ -114,11 +114,11 @@ function Header({ isHomepage, lng, changeLng, cart, img }) {
                     isActive={location.pathname == '/about/'}
                     title={t('header.about')}
                   />
-                  <HeaderLink
+                  {/* <HeaderLink
                     to="/blog/"
                     isActive={location.pathname == '/blog/'}
                     title={t('header.blog')}
-                  />
+                  /> */}
                   <HeaderLink
                     to="/shop/"
                     isActive={location.pathname == '/shop/'}
