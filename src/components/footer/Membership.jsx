@@ -16,6 +16,7 @@ const useStyles = makeStyles(theme => ({
   },
   logoContainer: {
     display: 'flex',
+    justifyContent: 'space-around',
     zIndex: 1,
   },
   logo: {
@@ -33,7 +34,7 @@ function Membership() {
   const classes = useStyles()
   const { t } = useTranslation()
   return (
-    <>
+    <div>
       <Typography className={classes.title}>{t('membership.title')}</Typography>
       <div className={classes.logoContainer}>
         <a
@@ -53,7 +54,7 @@ function Membership() {
           <img src={igsmLogo} className={classes.logo} alt="igsm" />
         </a>
       </div>
-    </>
+    </div>
   )
 }
 

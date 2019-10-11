@@ -1,15 +1,13 @@
 import React, { useState } from 'react'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 import { useTranslation } from 'react-i18next'
-import { makeStyles, withStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField'
 import Snackbar from '@material-ui/core/Snackbar'
-import Checkbox from '@material-ui/core/Checkbox'
 import IconButton from '@material-ui/core/IconButton'
 import CloseIcon from '@material-ui/icons/Close'
-import FormGroup from '@material-ui/core/FormGroup'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import Toggle from '../ui/Toggle'
 
@@ -21,73 +19,42 @@ const useStyles = makeStyles(theme => ({
     background: theme.status.green,
   },
   title: {
-    marginBottom: 5,
+    marginBottom: 15,
     textTransform: 'uppercase',
     letterSpacing: 3,
     width: '100%',
     textAlign: 'center',
   },
   container: {
-    background: theme.status.greyLt,
+    background: theme.status.greyLt2,
     padding: 15,
     display: 'flex',
     justifyContent: 'center',
   },
   legalError: {
     color: theme.palette.error.main,
+    fontSize: 10,
   },
   legal: {
     color: theme.palette.white,
+    fontSize: 10,
   },
-  //   form: {
-  //     display: 'flex',
-  //     flexDirection: 'column',
-  //   },
-  //   textField: {
-  //     marginBottom: 15,
-  //   },
-  //   button: {
-  //     padding: '9px 27px',
-  //     fontSize: 14,
-  //     [theme.breakpoints.up('md')]: {
-  //       padding: '16px 48px',
-  //       fontSize: 18,
-  //     },
-  //   },
-  //   buttonSm: {
-  //     fontSize: 12,
-  //   },
-
-  //   dialogContent: {
-  //     paddingBottom: 0,
-  //   },
-  //   legal: {
-  //     fontSize: 11,
-  //     marginTop: 15,
-  //   },
-  //   legalContainer: {
-  //     display: 'flex',
-  //     alignItems: 'center',
-  //   },
-  //   img: {
-  //     marginRight: 15,
-  //     marginLeft: 15,
-  //     height: 60,
-  //   },
-  //   dialogActions: {
-  //     marginLeft: 30,
-  //     marginRight: 30,
-  //     marginBottom: 30,
-  //   },
-  //   close: {
-  //     float: 'right',
-  //   },
-  //   actionButton: {
-  //     margin: 0,
-  //   },
-  //   error: {
-  //     color: theme.palette.error.main,
-  //   },
+  toggleContainer: {
+    background: theme.status.white,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingLeft: 10,
+  },
+  textField: {
+    background: theme.status.white,
+    width: 300,
+  },
+  outline: {
+    borderRadius: 0,
+    border: 'none',
+    borderRight: `1px solid ${theme.status.greyLt}`,
+  },
 }))
 
 function NewsletterInline() {
@@ -97,19 +64,18 @@ function NewsletterInline() {
   const [name, setName] = useState('')
   const [isEmailValid, setEmailValid] = useState(null)
   const [isNameValid, setNameValid] = useState(null)
-  const [isDataChecked, setDataCheck] = useState(false)
+  const [isCheckboxFalse, setCheckbox] = useState(true)
   const [isSnackbarOpen, setSnackbar] = useState(false)
   const [snackbarMessage, setSnackbarMessage] = useState(false)
   const [error, setError] = useState(false)
   const pattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
 
   const handleSubmit = async e => {
-    if (isCheckboxOpen && isEmailValid && isNameValid) {
+    if (!isCheckboxFalse && isEmailValid && isNameValid) {
       const result = await addToMailchimp(email, {
         FNAME: name,
         gdpr_26529: true,
       })
-      setDialog(false)
       if (result.result === 'error') {
         setSnackbar(true)
         setSnackbarMessage(
@@ -123,13 +89,13 @@ function NewsletterInline() {
         setSnackbarMessage('success')
       }
     }
-    if (!isCheckboxOpen) {
+    if (isCheckboxFalse) {
       setError(true)
     }
     if (!pattern.test(email)) {
       setEmailValid(false)
     }
-    if (name.length <= 500) {
+    if (name.length >= 500) {
       setNameValid(false)
     }
   }
@@ -157,7 +123,7 @@ function NewsletterInline() {
         setName(event.target.value)
       }
     } else if ((name = 'toggle')) {
-      setDataCheck(event.target.checked)
+      setCheckbox(event.target.checked)
     }
   }
 
@@ -210,8 +176,8 @@ function NewsletterInline() {
             placeholder={t('common.email')}
             value={email}
             onChange={handleChange('email')}
-            // className={classes.textField}
-            margin="normal"
+            InputProps={{ classes: { notchedOutline: classes.outline } }}
+            className={classes.textField}
             variant="outlined"
           />
           <TextField
@@ -222,30 +188,33 @@ function NewsletterInline() {
             error={isNameValid === null ? null : !isNameValid}
             placeholder={t('common.name')}
             value={name}
+            InputProps={{ classes: { notchedOutline: classes.outline } }}
             onChange={handleChange('name')}
-            // className={classes.textField}
-            margin="normal"
+            className={classes.textField}
             variant="outlined"
           />
         </form>
-        <FormControlLabel
-          classes={{
-            label: error && !isDataChecked ? classes.legalError : classes.legal,
-          }}
-          control={
-            <Toggle
-              checked={isDataChecked}
-              onChange={handleChange('toggle')}
-              value="consent"
-            />
-          }
-          label="Yes, I would like to receive emails from Eisbach Riders."
-        />
+        <div className={classes.toggleContainer}>
+          <FormControlLabel
+            classes={{
+              label:
+                error && isCheckboxFalse ? classes.legalError : classes.legal,
+            }}
+            control={
+              <Toggle
+                checked={isCheckboxFalse}
+                onChange={handleChange('toggle')}
+                value="consent"
+              />
+            }
+            label="Yes, email me!"
+          />
+        </div>
         <Button
           variant="contained"
           color="primary"
           className={classes.button}
-          onClick={() => setDialog(true)}
+          onClick={() => handleSubmit()}
         >
           {t('newsletter.join')}
         </Button>
@@ -255,87 +224,3 @@ function NewsletterInline() {
 }
 
 export default NewsletterInline
-
-// <Dialog open={isDialogOpen} onClose={() => setDialog(false)}>
-// <DialogTitle id="dialog-title">
-//   {t('newsletter.newsletter')}
-//   <IconButton
-//     aria-label={t('common.close')}
-//     className={classes.close}
-//     color="inherit"
-//     onClick={() => setDialog(false)}
-//   >
-//     <CloseIcon />
-//   </IconButton>
-// </DialogTitle>
-// <DialogContent className={classes.dialogContent}>
-//   <form className={classes.form}>
-//     <TextField
-//       required
-//       id="email"
-//       type="text"
-//       label="email"
-//       error={isEmailValid === null ? null : !isEmailValid}
-//       placeholder={t('common.email')}
-//       value={email}
-//       onChange={handleChange('email')}
-//       className={classes.textField}
-//       margin="normal"
-//       variant="outlined"
-//     />
-//     <TextField
-//       required
-//       id="name"
-//       type="text"
-//       label="name"
-//       error={isNameValid === null ? null : !isNameValid}
-//       placeholder={t('common.name')}
-//       value={name}
-//       onChange={handleChange('name')}
-//       className={classes.textField}
-//       margin="normal"
-//       variant="outlined"
-//     />
-//   </form>
-//   <div className={classes.legalContainer}>
-//     <FormControlLabel
-//       classes={{
-//         label: error && !isCheckboxOpen ? classes.error : null,
-//       }}
-//       control={
-//         <Checkbox
-//           checked={isCheckboxOpen}
-//           onChange={handleChange('checkbox')}
-//           className={error ? classes.error : null}
-//           value="consent"
-//           color="primary"
-//         />
-//       }
-//       label="Yes, I would like to receive emails from Eisbach Riders."
-//     />
-//   </div>
-//   <Typography className={classes.legal}>
-//     {t('newsletter.legal1')}
-//     <a href="https://mailchimp.com/legal/">{t('newsletter.legal2')}</a>
-//   </Typography>
-// </DialogContent>
-// <DialogActions className={classes.dialogActions}>
-//   <Button
-//     onClick={() => setDialog(false)}
-//     className={classes.actionButton}
-//   >
-//     {t('common.cancel')}
-//   </Button>
-//   <Button
-//     data-testid="submit"
-//     onClick={handleSubmit}
-//     className={classes.actionButton}
-//     color="primary"
-//     variant="contained"
-//     autoFocus
-//     type="submit"
-//   >
-//     {t('newsletter.subscribe')}
-//   </Button>
-// </DialogActions>
-// </Dialog>

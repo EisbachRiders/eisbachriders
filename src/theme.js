@@ -17,6 +17,7 @@ const status = {
   fin: '#00d7a2',
   finDk: '#00be8f',
   finLt: '#00f1b5',
+  greyLt2: '#eeeff0',
   greyLt: '#d5d9db',
   grey: '#818C93',
   black: '#00130e', // typography
