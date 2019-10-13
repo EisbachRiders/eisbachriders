@@ -1,8 +1,10 @@
 import React from 'react'
 import Link from '../ui/Link'
+import clsx from 'clsx'
 import { useTranslation } from 'react-i18next'
 import { makeStyles } from '@material-ui/styles'
 import Typography from '@material-ui/core/Typography'
+import MuiLink from '@material-ui/core/Link'
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -14,6 +16,25 @@ const useStyles = makeStyles(theme => ({
     fontSize: 12,
     textTransform: 'capitalize',
     paddingBottom: 10,
+    [theme.breakpoints.up('sm')]: {
+      lineHeight: 2,
+    },
+    '&:active': {
+      color: theme.palette.primary.main,
+    },
+    '&:hover': {
+      color: theme.palette.primary.main,
+    },
+  },
+  link: {
+    height: 34,
+    margin: 0,
+    paddingBottom: 10,
+  },
+  linkText: {
+    color: theme.status.black,
+    fontSize: 12,
+    textTransform: 'capitalize',
     [theme.breakpoints.up('sm')]: {
       lineHeight: 2,
     },
@@ -85,18 +106,38 @@ function FooterNavigation() {
         <Typography className={classes.textHeading}>
           {t('header.shop')}
         </Typography>
-        <Link to="/shop/">
-          <Typography className={classes.text}>fins</Typography>
-        </Link>
-        <Link to="/shop/">
-          <Typography className={classes.text}>leashes</Typography>
-        </Link>
-        <Link to="/shop/">
-          <Typography className={classes.text}>accessories</Typography>
-        </Link>
-        <Link to="/shop/">
-          <Typography className={classes.text}>clothing</Typography>
-        </Link>
+        <p className={classes.link}>
+          <MuiLink
+            className={classes.linkText}
+            href="https://shop.eisbach-riders.com/product-category/fins/"
+          >
+            fins
+          </MuiLink>
+        </p>
+        <p className={classes.link}>
+          <MuiLink
+            className={classes.linkText}
+            href="https://shop.eisbach-riders.com/product-category/fins/"
+          >
+            leashes
+          </MuiLink>
+        </p>
+        <p className={classes.link}>
+          <MuiLink
+            className={classes.linkText}
+            href="https://shop.eisbach-riders.com/product-category/fins/"
+          >
+            accessories
+          </MuiLink>
+        </p>
+        <p className={classes.link}>
+          <MuiLink
+            className={classes.linkText}
+            href="https://shop.eisbach-riders.com/product-category/fins/"
+          >
+            apparel
+          </MuiLink>
+        </p>
       </div>
     </div>
   )

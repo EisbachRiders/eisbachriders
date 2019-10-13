@@ -4,8 +4,8 @@ import Layout from '../components/Layout'
 import ProductFinder from '../components/productFinder/ProductFinder'
 
 function ProductFinderPage({ data }) {
-  const waveImg = data.allImageSharp.edges.find(x =>
-    x.node.fluid.src.includes('wave')
+  const footerImg = data.allImageSharp.edges.find(x =>
+    x.node.fluid.src.includes('footer')
   )
   const img1 = data.allImageSharp.edges.find(x =>
     x.node.fluid.src.includes('groupWalkingHome')
@@ -20,7 +20,7 @@ function ProductFinderPage({ data }) {
     x.node.fluid.src.includes('fin3')
   )
   return (
-    <Layout waveImg={waveImg}>
+    <Layout footerImg={footerImg}>
       <ProductFinder img={[img1, fin1, fin2, fin3]} />
     </Layout>
   )

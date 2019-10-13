@@ -22,9 +22,12 @@ function AboutPage({ data }) {
   const about6 = data.allImageSharp.edges.find(x =>
     x.node.fluid.src.includes('author2')
   )
+  const footerImg = data.allImageSharp.edges.find(x =>
+    x.node.fluid.src.includes('footer')
+  )
 
   return (
-    <Layout>
+    <Layout footerImg={footerImg}>
       <About img={[about1, about2, about3, about4, about5, about6]} />
     </Layout>
   )

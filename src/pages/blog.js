@@ -11,7 +11,7 @@ function BlogPage({ data }) {
     x.node.fluid.src.includes('blogHeader')
   )
   return (
-    <Layout footerImg={waveImg} img={blogImg}>
+    <Layout footerImg={footerImg} img={headerImg}>
       <Blog />
     </Layout>
   )

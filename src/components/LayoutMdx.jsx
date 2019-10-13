@@ -21,8 +21,8 @@ function LayoutMdx({ children }) {
       }
     }
   `)
-  const waveImg = data.allImageSharp.edges.find(x =>
-    x.node.fluid.src.includes('wave')
+  const footerImg = data.allImageSharp.edges.find(x =>
+    x.node.fluid.src.includes('footer')
   )
   const headerImg = data.allImageSharp.edges.find(x =>
     x.node.fluid.src.includes('header')
@@ -30,9 +30,9 @@ function LayoutMdx({ children }) {
   return (
     <>
       <SEO />
-      <Header isHomepage={false} img={headerImg} />
+      <Header img={headerImg} />
       <Container>{children}</Container>
-      <Footer waveImg={waveImg} />
+      <Footer img={footerImg} />
       {process.env.NODE_ENV !== 'development' && <Tracking />}
     </>
   )
