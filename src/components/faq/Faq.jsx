@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import { useTranslation } from 'react-i18next'
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { withStyles } from '@material-ui/core/styles'
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import MuiExpansionPanel from '@material-ui/core/ExpansionPanel'
 import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary'
 import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails'

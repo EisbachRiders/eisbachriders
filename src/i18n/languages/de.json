@@ -12,7 +12,8 @@
     "weather": "eisbach",
     "faq": "FAQ",
     "about": "about",
-    "products": "Produkts"
+    "products": "Produkts",
+    "blog": "blog"
   },
   "productFinder": {
     "header": "Our Products"
@@ -50,7 +51,12 @@
     "shipping": "Free Shipping on Orders Over 15€ (within Germany)!"
   },
   "hero": {
-    "subtitle": "Surf Equipment und Zubehör aus München"
+    "subtitle": "Surf Equipment und Zubehör aus München",
+    "sustainable": "Nachhaltigkeit",
+    "community": "Gemeinschaft",
+    "surf": "Surfausrüstung",
+    "story": "Unsere Geschichte",
+    "summary": "Unsere Mission ist es, unsere Spielplätze - das Meer und die Flüsse, die uns so viel Freude bereiten - zu schützen, indem wir lokale Gemeinschaften unterstützen und uns bemühen, unsere Wasserquellen zu erhalten."
   },
   "shop": {
     "fins": "fins",
@@ -114,7 +120,8 @@
     "subscribe": "Trag dich ein",
     "legal1": "Du kannst Dich jederzeit wieder austragen indem Du den Link am Ende der eMails klickst. Wir nutzen Mailchimp als Marketing Plattform. Mit dem Klick auf Eintragen, akzeptierst Du, dass Deine Daten an Mailchimp weitergeleitet werden.",
     "legal2": "Mehr Infos über den Mailchimp Datenschutz.",
-    "newsletter": "Newsletter"
+    "newsletter": "Newsletter",
+    "join": "Beitreten"
   },
   "instagram": {
     "sectionTitle": "Instagram"

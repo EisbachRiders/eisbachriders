@@ -2,7 +2,7 @@ import React from 'react'
 import { render } from '@testing-library/react'
 import { I18nextProvider } from 'react-i18next'
 import i18n from './src/i18n/i18n'
-import { ThemeProvider } from '@material-ui/styles'
+import { ThemeProvider } from '@material-ui/core/styles'
 import theme from './src/theme'
 
 const AllTheProviders = ({ children }) => {

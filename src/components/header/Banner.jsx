@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import clsx from 'clsx'
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import { useTranslation } from 'react-i18next'
 import HeaderLinkIcon from './HeaderLinkIcon'
 import InstagramIcon from '../../assets/icons/Instagram'
@@ -58,13 +58,13 @@ function Banner({ cartItems }) {
       <p className={clsx(classes.flexItem, classes.text)}>
         {t('banner.shipping')}
       </p>
-      {/* <div className={clsx(classes.flexItem, classes.flexEnd)}>
-        <HeaderLinkIcon to="/cart/" ariaLabel="cart">
+      <div className={clsx(classes.flexItem, classes.flexEnd)}>
+        {/* <HeaderLinkIcon to="/cart/" ariaLabel="cart">
           <Badge badgeContent={cartItems} color="primary">
             <CartIcon />
           </Badge>
-        </HeaderLinkIcon>
-      </div> */}
+        </HeaderLinkIcon> */}
+      </div>
     </div>
   )
 }

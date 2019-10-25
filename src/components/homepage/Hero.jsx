@@ -3,13 +3,13 @@ import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 import { useTranslation } from 'react-i18next'
 import clsx from 'clsx'
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import Hidden from '@material-ui/core/Hidden'
-import Newsletter from '../newsletter/Newsletter'
 
 const useStyles = makeStyles(theme => ({
   root: {
+    position: 'relative',
     height: 350,
     [theme.breakpoints.up('md')]: {
       height: 600,
@@ -19,26 +19,35 @@ const useStyles = makeStyles(theme => ({
     },
   },
   container: {
-    paddingTop: 125,
-    margin: '0 auto',
-    width: '90%',
+    background: 'rgba(255, 255, 255 , 0.5)',
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    padding: 30,
+    textAlign: 'center',
     [theme.breakpoints.up('sm')]: {
-      position: 'absolute',
-      width: 'auto',
-      paddingLeft: 150,
-      paddingTop: 130,
+      top: '55%',
+      left: '70%',
+      transform: 'translate(-50%, -50%)',
+      padding: 30,
+      textAlign: 'center',
     },
     [theme.breakpoints.up('md')]: {
-      paddingLeft: 150,
-      paddingTop: 175,
+      top: '40%',
+      left: '70%',
+      transform: 'translate(-50%, -50%)',
+      padding: 30,
+      width: 'fit-content',
+      textAlign: 'center',
     },
     [theme.breakpoints.up('lg')]: {
-      paddingLeft: 250,
-      paddingTop: 160,
-    },
-    [theme.breakpoints.up('xl')]: {
-      paddingLeft: 500,
-      paddingTop: 350,
+      top: '40%',
+      left: '70%',
+      transform: 'translate(-50%, -50%)',
+      padding: 30,
+      width: 'fit-content',
+      textAlign: 'center',
     },
   },
   img: {
@@ -57,23 +66,25 @@ const useStyles = makeStyles(theme => ({
   text: {
     letterSpacing: 3,
     color: theme.status.black,
-    textShadow: '2px 2px 4px #ccc',
   },
   title: {
     textTransform: 'capitalize',
     textAlign: 'center',
     fontSize: 35,
     fontWeight: 600,
+    letterSpacing: 5,
     margin: 0,
     [theme.breakpoints.up('sm')]: {
-      textAlign: 'left',
       fontSize: 48,
     },
     [theme.breakpoints.up('md')]: {
-      fontSize: 96,
+      fontSize: 42,
     },
     [theme.breakpoints.up('lg')]: {
-      fontSize: 122,
+      fontSize: 58,
+    },
+    [theme.breakpoints.up('xl')]: {
+      fontSize: 80,
     },
   },
   title2: {
@@ -83,29 +94,20 @@ const useStyles = makeStyles(theme => ({
       margin: 0,
     },
   },
-  small: {
-    fontSize: 35,
-    [theme.breakpoints.up('sm')]: {
-      fontSize: 48,
-    },
-    [theme.breakpoints.up('md')]: {
-      fontSize: 72,
-    },
-    [theme.breakpoints.up('lg')]: {
-      fontSize: 96,
-    },
-  },
   subtitle: {
     textTransform: 'uppercase',
     textAlign: 'center',
     fontSize: 14,
     paddingTop: 15,
     [theme.breakpoints.up('sm')]: {
-      fontSize: 12,
+      fontSize: 18,
       paddingTop: 10,
     },
     [theme.breakpoints.up('md')]: {
-      fontSize: 24,
+      fontSize: 20,
+    },
+    [theme.breakpoints.up('xl')]: {
+      fontSize: 32,
     },
   },
 }))
@@ -129,14 +131,7 @@ function Hero({ img }) {
             gutterBottom
             className={clsx(classes.text, classes.title)}
           >
-            E<span className={classes.small}>ISBACH</span>
-          </Typography>
-          <Typography
-            variant="h2"
-            gutterBottom
-            className={clsx(classes.text, classes.title, classes.title2)}
-          >
-            R<span className={classes.small}>IDERS</span>
+            EISBACH RIDERS
           </Typography>
         </Hidden>
         <Hidden smUp>
@@ -153,7 +148,6 @@ function Hero({ img }) {
         <Typography className={clsx(classes.text, classes.subtitle)}>
           {t('hero.subtitle')}
         </Typography>
-        <Newsletter />
       </div>
     </div>
   )

@@ -5,7 +5,7 @@ import clsx from 'clsx'
 import Img from 'gatsby-image'
 import { useTranslation } from 'react-i18next'
 import { connect } from 'react-redux'
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Hidden from '@material-ui/core/Hidden'
@@ -114,6 +114,11 @@ function Header({ isHomepage, lng, changeLng, cart, img }) {
                     isActive={location.pathname == '/about/'}
                     title={t('header.about')}
                   />
+                  {/* <HeaderLink
+                    to="/blog/"
+                    isActive={location.pathname == '/blog/'}
+                    title={t('header.blog')}
+                  /> */}
                   <HeaderLink
                     to="/shop/"
                     isActive={location.pathname == '/shop/'}
@@ -159,6 +164,8 @@ function Header({ isHomepage, lng, changeLng, cart, img }) {
                     t('header.cart'),
                     t('header.weather'),
                     t('header.faq'),
+                    // t('header.products'),
+                    // t('header.blog'),
                     t('header.about'),
                     t('header.products'),
                   ]}

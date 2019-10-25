@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Header from './header/Header'
-import Footer from './Footer'
+import Footer from './footer/Footer'
 import SEO from './seo/SEO'
 import Tracking from './tracking/Tracking'
 import Container from './ui/Container'
@@ -21,8 +21,8 @@ function LayoutMdx({ children }) {
       }
     }
   `)
-  const waveImg = data.allImageSharp.edges.find(x =>
-    x.node.fluid.src.includes('wave')
+  const footerImg = data.allImageSharp.edges.find(x =>
+    x.node.fluid.src.includes('footer')
   )
   const headerImg = data.allImageSharp.edges.find(x =>
     x.node.fluid.src.includes('header')
@@ -30,9 +30,9 @@ function LayoutMdx({ children }) {
   return (
     <>
       <SEO />
-      <Header isHomepage={false} img={headerImg} />
+      <Header img={headerImg} />
       <Container>{children}</Container>
-      <Footer waveImg={waveImg} />
+      <Footer img={footerImg} />
       {process.env.NODE_ENV !== 'development' && <Tracking />}
     </>
   )
