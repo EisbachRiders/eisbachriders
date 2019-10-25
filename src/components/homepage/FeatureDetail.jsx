@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import { useTranslation } from 'react-i18next'
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import clsx from 'clsx'
 import Img from 'gatsby-image'
 import Typography from '@material-ui/core/Typography'

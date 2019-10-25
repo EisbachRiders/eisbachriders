@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import clsx from 'clsx'
 import { PieChart, Pie, Cell } from 'recharts'
 import { Typography } from '@material-ui/core'

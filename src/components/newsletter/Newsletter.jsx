@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 import { useTranslation } from 'react-i18next'
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles, useTheme } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import Dialog from '@material-ui/core/Dialog'
@@ -14,10 +14,11 @@ import FormControlLabel from '@material-ui/core/FormControlLabel'
 import Checkbox from '@material-ui/core/Checkbox'
 import IconButton from '@material-ui/core/IconButton'
 import CloseIcon from '@material-ui/icons/Close'
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const useStyles = makeStyles(theme => ({
   containerNewsletter: {
-    marginTop: 15,
+    marginBottom: 30,
   },
   form: {
     display: 'flex',
@@ -63,6 +64,8 @@ const useStyles = makeStyles(theme => ({
     marginLeft: 30,
     marginRight: 30,
     marginBottom: 30,
+    display: "flex",
+    flexDirection: "column-reverse"
   },
   close: {
     float: 'right',
@@ -77,6 +80,8 @@ const useStyles = makeStyles(theme => ({
 
 function Newsletter({ variant }) {
   const classes = useStyles()
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down('xs'));
   const { t } = useTranslation()
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
@@ -184,7 +189,7 @@ function Newsletter({ variant }) {
       />
 
       <Button
-        variant="contained"
+        variant="outlined"
         color="primary"
         className={variant === 'small' ? classes.buttonSm : classes.button}
         fullWidth={variant === 'small' ? null : true}
@@ -192,7 +197,7 @@ function Newsletter({ variant }) {
       >
         {t(variant === 'small' ? 'newsletter.newsletter' : 'newsletter.signUp')}
       </Button>
-      <Dialog open={isDialogOpen} onClose={() => setDialog(false)}>
+      <Dialog open={isDialogOpen} onClose={() => setDialog(false)} fullScreen={fullScreen}>
         <DialogTitle id="dialog-title">
           {t('newsletter.newsletter')}
           <IconButton

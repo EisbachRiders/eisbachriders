@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import Container from '../ui/Container'
@@ -64,7 +64,7 @@ function Weather() {
   const [runoff, setRunoff] = useState('')
   const [runoffTime, setRunoffTime] = useState('')
 
-  async function fetchUrl() {
+  async function fetchUrl(url) {
     const response = await fetch(url)
     const json = await response.json()
     setData(json)

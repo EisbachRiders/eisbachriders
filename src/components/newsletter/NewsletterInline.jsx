@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import addToMailchimp from 'gatsby-plugin-mailchimp'
 import { useTranslation } from 'react-i18next'
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField'
@@ -27,6 +27,7 @@ const useStyles = makeStyles(theme => ({
   },
   container: {
     background: theme.status.greyLt2,
+    marginBottom: 30,
     padding: 15,
     display: 'flex',
     justifyContent: 'center',
@@ -46,9 +47,15 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     paddingLeft: 10,
   },
+  form:{
+    display: "flex",
+    flexWrap: "noWrap",
+    width: "100%",
+
+  },
   textField: {
     background: theme.status.white,
-    width: 300,
+    flexGrow: 1
   },
   outline: {
     borderRadius: 0,
@@ -169,19 +176,6 @@ function NewsletterInline() {
         <form className={classes.form}>
           <TextField
             required
-            id="email"
-            type="text"
-            label="email"
-            error={isEmailValid === null ? null : !isEmailValid}
-            placeholder={t('common.email')}
-            value={email}
-            onChange={handleChange('email')}
-            InputProps={{ classes: { notchedOutline: classes.outline } }}
-            className={classes.textField}
-            variant="outlined"
-          />
-          <TextField
-            required
             id="name"
             type="text"
             label="name"
@@ -190,6 +184,19 @@ function NewsletterInline() {
             value={name}
             InputProps={{ classes: { notchedOutline: classes.outline } }}
             onChange={handleChange('name')}
+            className={classes.textField}
+            variant="outlined"
+          />
+          <TextField
+            required
+            id="email"
+            type="text"
+            label="email"
+            error={isEmailValid === null ? null : !isEmailValid}
+            placeholder={t('common.email')}
+            value={email}
+            onChange={handleChange('email')}
+            InputProps={{ classes: { notchedOutline: classes.outline } }}
             className={classes.textField}
             variant="outlined"
           />

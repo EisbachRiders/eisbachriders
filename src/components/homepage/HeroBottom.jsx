@@ -1,7 +1,7 @@
 import React from 'react'
 import clsx from 'clsx'
 import { useTranslation } from 'react-i18next'
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import Container from '../ui/Container'
 import Button from '@material-ui/core/Button'
@@ -14,21 +14,30 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
   },
   headerContainer: {
-    flexBasis: '50%',
+    flexBasis: '100%',
+    [theme.breakpoints.up('md')]: {
+      flexBasis: '50%',
+    },
   },
   title: {
     color: theme.status.greyLt,
-    fontSize: 32,
+    fontSize: 15,
     letterSpacing: 3,
     textTransform: 'uppercase',
     fontWeight: 600,
     marginBottom: 5,
+    [theme.breakpoints.up('lg')]: {
+      fontSize: 32,
+    },
   },
   margin: {
     marginLeft: 0,
   },
   textContainer: {
-    flexBasis: '45%',
+    flexBasis: '100%',
+    [theme.breakpoints.up('md')]: {
+      flexBasis: '45%',
+    },
   },
   buttonContainer: {
     textAlign: 'right',
@@ -51,20 +60,18 @@ function HeroBottom() {
           className={clsx(classes.title, classes.margin)}
           align="left"
         >
-          sustainable,
+          {t('hero.sustainable')}
         </Typography>
         <Typography className={classes.title} align="center">
-          affordable,
+          {t('hero.community')}
         </Typography>
         <Typography className={classes.title} align="right">
-          surf equipment
+        {t('hero.surf')}
         </Typography>
       </div>
       <div className={classes.textContainer}>
         <Typography className={classes.text}>
-          Our mission is to protect our playgrounds - the ocean and rivers that
-          provide us so much enjoyment - by supporting local communities and
-          efforts to preserve our water sources.
+        {t("hero.summary")}
         </Typography>
         <div className={classes.buttonContainer}>
           <Link to="/about/">
@@ -73,7 +80,7 @@ function HeroBottom() {
               variant="contained"
               className={classes.button}
             >
-              Our Story
+              {t("hero.story")}
             </Button>
           </Link>
         </div>

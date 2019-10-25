@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import Layout from '../Layout'
 import Container from '../ui/Container'
 import Sidebar from './Sidebar'

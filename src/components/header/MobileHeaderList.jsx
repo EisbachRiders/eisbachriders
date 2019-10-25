@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Link from '../ui/Link'
-import { makeStyles } from '@material-ui/styles'
+import { useTranslation } from 'react-i18next'
+import { makeStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
@@ -41,6 +42,8 @@ const useStyles = makeStyles(theme => ({
 
 function MobileHeaderList({ links, linkLabels, lng, changeLng }) {
   const classes = useStyles()
+  const { t } = useTranslation()
+
   return (
     <div className={classes.list}>
       <List component="nav">
@@ -136,6 +139,47 @@ function MobileHeaderList({ links, linkLabels, lng, changeLng }) {
             <ArrowIcon className={classes.icon} />
           </ListItem>
         </Button>
+      
+        <Link to={`/payment/`}>
+          <ListItem button divider dense>
+            <ListItemText
+              disableTypography
+              className={classes.text}
+              primary={t('footer.payment')}
+            />
+            <ArrowIcon className={classes.icon} />
+          </ListItem>
+        </Link>
+        <Link to={`/shipping/`}>
+          <ListItem button divider dense>
+            <ListItemText
+              disableTypography
+              className={classes.text}
+              primary={t('footer.shipping')}
+            />
+            <ArrowIcon className={classes.icon} />
+          </ListItem>
+        </Link>
+        <Link to={`/returns/`}>
+          <ListItem button divider dense>
+            <ListItemText
+              disableTypography
+              className={classes.text}
+              primary={t('footer.returns')}
+            />
+            <ArrowIcon className={classes.icon} />
+          </ListItem>
+        </Link>
+        <Link to={`/termsAndConditions/`}>
+          <ListItem button divider dense>
+            <ListItemText
+              disableTypography
+              className={classes.text}
+              primary=  {t('footer.terms')}
+            />
+            <ArrowIcon className={classes.icon} />
+          </ListItem>
+        </Link>
         <Button
           aria-label="facebook"
           className={classes.button}

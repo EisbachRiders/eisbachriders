@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import clsx from 'clsx'
-import { makeStyles } from '@material-ui/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import { useTranslation } from 'react-i18next'
 import HeaderLinkIcon from './HeaderLinkIcon'
 import InstagramIcon from '../../assets/icons/Instagram'

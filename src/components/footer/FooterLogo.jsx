@@ -1,10 +1,10 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/styles'
-import Button from '@material-ui/core/Button'
+import { makeStyles } from '@material-ui/core/styles'
 import logo from '../../assets/logos/logoBlack.png'
-import InstagramIcon from '../../assets/icons/Instagram'
-import FacebookIcon from '../../assets/icons/Facebook'
 import ContactUs from './ContactUs'
+// import InstagramIcon from '../../assets/icons/Instagram'
+// import Button from '@material-ui/core/Button'
+// import FacebookIcon from '../../assets/icons/Facebook'
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -32,8 +32,11 @@ const useStyles = makeStyles(theme => ({
     },
   },
   img: {
-    width: 200,
+    width: 100,
     marginBottom: 30,
+    [theme.breakpoints.up('md')]: {
+      width: 200,
+    },
   },
   button: {
     marginBottom: 30,
@@ -66,28 +69,8 @@ function FooterLogo() {
 
   return (
     <div className={classes.container}>
-      <img src={logo} className={classes.img} />
+      <img src={logo} className={classes.img} alt="logo" />
       <ContactUs />
-      <div>
-        <Button
-          variant="outlined"
-          className={classes.iconButton}
-          href="https://www.facebook.com/EisbachRiders/"
-          target="_blank"
-          rel="noopener"
-        >
-          <FacebookIcon className={classes.icon} />
-        </Button>
-        <Button
-          variant="outlined"
-          className={classes.iconButton}
-          href="https://www.instagram.com/eisbachriders/"
-          target="_blank"
-          rel="noopener"
-        >
-          <InstagramIcon className={classes.icon} />
-        </Button>
-      </div>
     </div>
   )
 }

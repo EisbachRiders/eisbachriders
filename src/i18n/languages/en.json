@@ -54,7 +54,12 @@
     "title": "Proud Members of"
   },
   "hero": {
-    "subtitle": "Surf Equipment from Munich"
+    "subtitle": "Surf Equipment from Munich",
+    "sustainable": "sustainability",
+    "community": "community",
+    "surf": "surf equipment",
+    "story": "Our Story",
+    "summary": "Our mission is to protect our playgrounds - the ocean and rivers that provide us so much enjoyment - by supporting local communities and efforts to preserve our water sources."
   },
   "shop": {
     "fins": "fins",
