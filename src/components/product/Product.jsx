@@ -82,7 +82,6 @@ function Product({ product, cart, addToCart }) {
   }
 
   function handleChange(event) {
-    console.log(event)
     setValues(oldValues => ({
       ...oldValues,
       [event.target.name]: event.target.value,

@@ -1,6 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import logo from '../../assets/logos/logoBlack.png'
+import logo from '../../assets/logos/ER_full.png'
 import ContactUs from './ContactUs'
 // import InstagramIcon from '../../assets/icons/Instagram'
 // import Button from '@material-ui/core/Button'

@@ -76,7 +76,7 @@ function Chart({ value, max, unit, title }) {
       ? colors3
       : colors1
   const percent = value / max
-  const needle = percent < 0.66 ? 'high' : percent < 0.33 ? 'low' : 'med'
+  const needle = percent > 0.66 ? 'high' : percent < 0.42 ? 'low' : 'med'
 
   return (
     <div className={classes.root}>

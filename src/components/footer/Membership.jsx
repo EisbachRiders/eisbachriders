@@ -7,7 +7,7 @@ import igsmLogo from '../../assets/logos/igsmLogo.png'
 
 const useStyles = makeStyles(theme => ({
   title: {
-    marginBottom: 5,
+    marginBottom: 15,
     textTransform: 'uppercase',
     letterSpacing: 3,
     width: '100%',
@@ -15,8 +15,10 @@ const useStyles = makeStyles(theme => ({
     zIndex: 1,
   },
   logoContainer: {
+    width: 350,
+    margin: "0 auto",
     display: 'flex',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     zIndex: 1,
   },
   logo: {

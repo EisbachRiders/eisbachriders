@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography'
 import Paper from '@material-ui/core/Paper'
 import Hidden from '@material-ui/core/Hidden'
 import Button from '@material-ui/core/Button'
-import erLogo from '../../assets/logos/ER_minimal_black.svg'
+import logo from '../../assets/logos/logo.png'
 import Container from '../ui/Container'
 import ReactPlayer from 'react-player'
 import video from '../../assets/images/aboutMovie.mp4'
@@ -50,7 +50,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   logo: {
-    width: 100,
+    width: 75,
   },
   title: {
     textTransform: 'uppercase',
@@ -145,8 +145,8 @@ function Video({ img }) {
         </Hidden>
         <Paper className={classes.paper} elevation={10}>
           <img
-            src={erLogo}
-            alt="eisbach riders logo"
+            src={logo}
+            alt=""
             className={classes.logo}
           />
           <Typography className={classes.text}>{t('about.mission')}</Typography>

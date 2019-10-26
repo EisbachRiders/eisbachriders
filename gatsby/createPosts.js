@@ -64,12 +64,12 @@ module.exports = async ({ actions, graphql }) => {
     const postTemplate = path.resolve(`./src/components/blog/BlogPost.jsx`)
 
     blogPages.map(blogPage => {
-      console.log(`createBlogPage ${blogPage.context.pageNumber}`)
+      // console.log(`createBlogPage ${blogPage.context.pageNumber}`)
       createPage(blogPage)
     })
 
     allPosts.map(post => {
-      console.log(`create post: ${post.uri}`)
+      // console.log(`create post: ${post.uri}`)
       createPage({
         path: `/blog/${post.uri}/`,
         component: postTemplate,

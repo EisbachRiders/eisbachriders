@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import Link from '../ui/Link'
-import clsx from 'clsx'
+// import clsx from 'clsx'
 import Img from 'gatsby-image'
 import { useTranslation } from 'react-i18next'
 import { connect } from 'react-redux'
@@ -10,13 +10,13 @@ import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Hidden from '@material-ui/core/Hidden'
 import IconButton from '@material-ui/core/IconButton'
-import Button from '@material-ui/core/Button'
+// import Button from '@material-ui/core/Button'
 import Drawer from '@material-ui/core/Drawer'
 import MenuIcon from '@material-ui/icons/Menu'
 import MobileHeaderList from './MobileHeaderList'
-import ERIcon from '../../assets/icons/ER'
+import logo from '../../assets/logos/logo.png'
 import HeaderLink from './HeaderLink'
-import HeaderLinkIcon from './HeaderLinkIcon'
+// import HeaderLinkIcon from './HeaderLinkIcon'
 import Banner from './Banner'
 import { Location } from '@reach/router'
 
@@ -46,7 +46,7 @@ const useStyles = makeStyles(theme => ({
   logo: {
     marginTop: 5,
     width: 'auto',
-    height: 45,
+    height: 35,
     color: theme.status.black,
   },
   belowHeaderImg: {
@@ -88,7 +88,7 @@ function Header({ isHomepage, lng, changeLng, cart, img }) {
 
         <Toolbar className={classes.toolbar}>
           <Link to="/" aria-label="home">
-            <ERIcon className={classes.logo} />
+            <img src={logo} alt="" className={classes.logo} />
           </Link>
           <Hidden xsDown>
             <Location>

@@ -149,7 +149,6 @@ function Weather() {
           setLoading(false)
         })
         .catch(function(e) {
-          console.log(e)
           setLoading(false)
         })
     }
@@ -177,7 +176,6 @@ function Weather() {
           setLoading(false)
         })
         .catch(function(e) {
-          console.log(e)
           setLoading(false)
         })
     }
@@ -205,7 +203,6 @@ function Weather() {
           setLoading(false)
         })
         .catch(function(e) {
-          console.log(e)
           setLoading(false)
         })
     }
@@ -223,7 +220,6 @@ function Weather() {
           setLoading(false)
         })
         .catch(function(e) {
-          console.log(e)
           setLoading(false)
         })
     }

@@ -21,7 +21,6 @@ const useStyles = makeStyles(theme => ({
 function TempChart({ temp }) {
   const { t } = useTranslation()
   const classes = useStyles()
-  console.log(temp)
   const data = []
   //   temp.forEach(elem => {
   //     data.push({

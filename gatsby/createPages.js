@@ -49,7 +49,7 @@ module.exports = async ({ actions, graphql }) => {
     const pageTemplate = path.resolve(`./src/components/Layout.jsx`)
 
     allPages.map(page => {
-      console.log(`create page: ${page.uri}`)
+      // console.log(`create page: ${page.uri}`)
       createPage({
         path: `/${page.uri}`,
         component: pageTemplate,

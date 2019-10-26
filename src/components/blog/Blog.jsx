@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import { useTranslation } from 'react-i18next'
-import Img from 'gatsby-image'
+// import Img from 'gatsby-image'
 import { makeStyles } from '@material-ui/core/styles'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
@@ -9,7 +9,7 @@ import ListItemText from '@material-ui/core/ListItemText'
 import Divider from '@material-ui/core/Divider'
 import Typography from '@material-ui/core/Typography'
 import Container from '../ui/Container'
-import Logo from '../../assets/logos/logoBlack.png'
+import Logo from '../../assets/logos/ER_full.png'
 import Newsletter from '../newsletter/Newsletter'
 
 const useStyles = makeStyles(theme => ({
@@ -166,7 +166,6 @@ export default function Blog() {
         }
       `}
       render={data => {
-        console.log(data)
         return (
           <Container className={classes.container}>
             <div className={classes.blog}>

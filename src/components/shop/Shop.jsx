@@ -78,13 +78,13 @@ function Shop() {
             setProducts(products)
             setLoading(false)
           } else {
-            console.log('load error')
+            // console.log('load error')
             setLoading(false)
           }
         })
         .catch(err => {
           setLoading(false)
-          console.log('load error: ' + err)
+          // console.log('load error: ' + err)
         })
       fetch(
         'https://shop.eisbach-riders.com/wp-json/wc/v2/products/categories',
