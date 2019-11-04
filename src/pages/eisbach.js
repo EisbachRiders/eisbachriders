@@ -4,15 +4,15 @@ import Layout from '../components/Layout'
 import Weather from '../components/weather/Weather'
 
 function WeatherPage({ data }) {
-  const headerImg = data.allImageSharp.edges.find(x =>
-    x.node.fluid.src.includes('header')
+  const weatherImg = data.allImageSharp.edges.find(x =>
+    x.node.fluid.src.includes('weather')
   )
   const footerImg = data.allImageSharp.edges.find(x =>
     x.node.fluid.src.includes('footer')
   )
   return (
-    <Layout footerImg={footerImg} img={headerImg}>
-      <Weather />
+    <Layout footerImg={footerImg}>
+      <Weather img={weatherImg} />
     </Layout>
   )
 }

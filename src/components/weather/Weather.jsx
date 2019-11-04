@@ -5,7 +5,8 @@ import Typography from '@material-ui/core/Typography'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import Container from '../ui/Container'
 import Chart from './Chart'
-import { nullLiteral } from '@babel/types'
+import WeatherHero from "./WeatherHero"
+import Chart2 from "./Chart2"
 // import TempChart from './TempChart'
 
 const useStyles = makeStyles(theme => ({
@@ -17,16 +18,21 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
+
   },
   chartContainer: {
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'center',
+    justifyContent: 'space-around',
+
   },
   header: {
-    marginBottom: 15,
     fontSize: 16,
     fontWeight: 'bold',
+  },
+  subheader:{
+    // marginRight: 180,
+    // marginLeft: 180
   },
   title: {
     fontWeight: 'bold',
@@ -50,7 +56,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-function Weather() {
+function Weather({img}) {
   const { t } = useTranslation()
   const classes = useStyles()
   const [isLoading, setLoading] = useState(false)
@@ -252,11 +258,25 @@ function Weather() {
       )}
       {!isLoading && (
         <>
+        <WeatherHero img={img}/>
           <Container className={classes.container}>
             <Typography variant="h1" align="center" className={classes.header}>
               Current Conditions on the Eisbach
             </Typography>
-            <Typography align="center" className={classes.subheader}>
+          </Container>
+          <div className={classes.chartContainer}>
+            <Chart2
+              value={water || water2}
+              title="Water Temperature"
+              unit="°C"
+              max="22"
+              min='0'
+            />
+            <Chart2 value={level} title="Water Level" max="155" min="75" unit="cm" />
+            <Chart2 value={runoff} title="Runoff" max="30" min="0" unit="m³/s" />
+          </div>
+          <Container className={classes.container}>
+          <Typography align="center" className={classes.subheader}>
               The Eisbach is the famous river surfing spot in Munich which can
               be surfed year around. The German name <em>Eisbach</em> (which can
               be translated to <em>ice creek</em>) acts as a synonym for the
@@ -266,31 +286,9 @@ function Weather() {
               current river conditions. Pack the right wetsuit and enjoy your
               surf session!
             </Typography>
-
-            {/* <div className={classes.footnoteContainer}>
-              <Typography className={classes.footnote} align="right">
-                Taken at: {waterTime}
-              </Typography>
-              <a
-                className={classes.link}
-                href="https://www.gkd.bayern.de/en/"
-                target="_blank"
-              >
-                source
-              </a>
-            </div> */}
           </Container>
-          <div className={classes.chartContainer}>
-            <Chart
-              value={water || water2}
-              title="Water Temperature"
-              unit="°C"
-              max="25"
-            />
-            <Chart value={level} title="Water Level" max="200" unit="cm" />
-            <Chart value={runoff} title="Runoff" max="30" unit="m³/s" />
-          </div>
-        </>
+
+            </>
       )}
       {!isLoading && (
         <Container className={classes.footnoteContainer}>

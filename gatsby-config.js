@@ -9,7 +9,7 @@ module.exports = {
     description: 'Eisbach Riders - Surf Accessories',
     siteUrl: 'https://www.eisbach-riders.com',
     url: 'https://www.eisbach-riders.com', // No trailing slash allowed!
-    image: 'src/assets/logos/icon-192.png',
+    image: 'src/assets/logos/logo.png',
   },
   pathPrefix: '/eisbach-riders',
   plugins: [

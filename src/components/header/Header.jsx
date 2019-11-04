@@ -46,7 +46,7 @@ const useStyles = makeStyles(theme => ({
   logo: {
     marginTop: 5,
     width: 'auto',
-    height: 35,
+    height: 40,
     color: theme.status.black,
   },
   belowHeaderImg: {
