@@ -123,7 +123,7 @@ function Header({ isHomepage, lng, changeLng, cart, img }) {
                     to="/shop/"
                     isActive={location.pathname == '/shop/'}
                     title={t('header.shop')}
-                    href="https://shop.eisbach-riders.com/"
+                    // href="https://shop.eisbach-riders.com/"
                   />
                   <HeaderLink
                     to="/cart/"

@@ -93,7 +93,11 @@ function Container({
 }
 
 Container.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
+  children: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array,
+    PropTypes.bool,
+  ]),
   background: PropTypes.oneOf(['grey', 'primary', 'cream']),
   variant: PropTypes.oneOf([
     'flexStart',

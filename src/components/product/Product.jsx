@@ -57,17 +57,21 @@ const useStyles = makeStyles(theme => ({
     borderBottom: `1px solid ${theme.status.grey}`,
   },
 }))
+const createValues = attributes => {
+  let vals = {}
+  attributes.forEach(elem => {
+    vals[elem.name] = ''
+  })
+  return vals
+}
 
 function Product({ product, cart, addToCart }) {
   const { t } = useTranslation()
   const classes = useStyles()
   const [quantity, setQuantity] = useState(1)
-  const [isDisabled, setDisabled] = useState(true)
-  const [values, setValues] = useState({
-    attr1: '',
-    attr2: '',
-    attr3: '',
-  })
+  const [values, setValues] = useState(
+    createValues(product === 0 ? [] : product.attributes)
+  )
 
   const handleRemove = () => {
     if (quantity > 0) {
@@ -91,9 +95,7 @@ function Product({ product, cart, addToCart }) {
   const handleCart = () => {
     let productInfo = {
       id: product.id,
-      attr1: values.attr1,
-      attr2: values.attr2,
-      attr3: values.attr3,
+      attributes: values,
     }
 
     const newCart = []
@@ -118,11 +120,7 @@ function Product({ product, cart, addToCart }) {
               <ProductImg images={product.images} />
             </div>
             <div className={classes.contentContainer}>
-              <Typography
-                variant="h6"
-                variantMapping="h1"
-                className={classes.name}
-              >
+              <Typography variant="h6" component="h1" className={classes.name}>
                 {product.name}
               </Typography>
               <div
@@ -140,10 +138,10 @@ function Product({ product, cart, addToCart }) {
                 )}
               </div>
               {product.attributes.length !== 0 &&
-                product.attributes.map((elem, idx) => (
+                product.attributes.map(elem => (
                   <ProductAttribute
-                    selected={values[`attr${idx + 1}`]}
-                    name={`attr${idx + 1}`}
+                    selected={values[elem.name]}
+                    name={elem.name}
                     onChange={handleChange}
                     attribute={elem}
                     key={`attribute_${elem.name}`}
@@ -159,7 +157,11 @@ function Product({ product, cart, addToCart }) {
                   variant="contained"
                   color="primary"
                   onClick={handleCart}
-                  disabled={isDisabled}
+                  disabled={
+                    product.attributes
+                      ? !Object.values(values).every(item => item !== '')
+                      : true
+                  }
                 >
                   {t('products.addToCart')}
                 </Button>
