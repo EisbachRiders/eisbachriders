@@ -3,11 +3,13 @@ import PropTypes from 'prop-types'
 import clsx from 'clsx'
 import { makeStyles } from '@material-ui/core/styles'
 import { useTranslation } from 'react-i18next'
-import HeaderLinkIcon from './HeaderLinkIcon'
 import InstagramIcon from '../../assets/icons/Instagram'
 import FacebookIcon from '../../assets/icons/Facebook'
+import HeaderLinkIcon from './HeaderLinkIcon'
 import Badge from '@material-ui/core/Badge'
+import IconButton from '@material-ui/core/IconButton'
 import CartIcon from '@material-ui/icons/ShoppingCart'
+import Link from '../ui/Link'
 
 const useStyles = makeStyles(theme => ({
   banner: {
@@ -33,11 +35,20 @@ const useStyles = makeStyles(theme => ({
     margin: 0,
     verticalAlign: 'middle',
   },
+  icon: {
+    fill: theme.status.white,
+  },
 }))
 
-function Banner({ cartItems }) {
+function Banner({ cart }) {
   const classes = useStyles()
   const { t } = useTranslation()
+  let cartItems = 0
+  cart.forEach(elem => {
+    cartItems += elem.quantity
+  })
+  console.log(cart)
+  console.log(cartItems)
 
   return (
     <div className={classes.banner}>
@@ -59,11 +70,17 @@ function Banner({ cartItems }) {
         {t('banner.shipping')}
       </p>
       <div className={clsx(classes.flexItem, classes.flexEnd)}>
-        {/* <HeaderLinkIcon to="/cart/" ariaLabel="cart">
-          <Badge badgeContent={cartItems} color="primary">
-            <CartIcon />
-          </Badge>
-        </HeaderLinkIcon> */}
+        <Link to="/cart/">
+          <IconButton
+            className={classes.button}
+            color="inherit"
+            aria-label="cart"
+          >
+            <Badge badgeContent={cartItems} color="primary">
+              <CartIcon className={classes.icon} />
+            </Badge>
+          </IconButton>
+        </Link>
       </div>
     </div>
   )

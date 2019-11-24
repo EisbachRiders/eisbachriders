@@ -31,6 +31,10 @@ const useStyles = makeStyles(theme => ({
     marginBottom: 30,
     textTransform: 'uppercase',
   },
+  progress: {
+    textAlign: 'center',
+    marginTop: 200,
+  },
 }))
 
 const multipleOfFour = array => {
@@ -154,7 +158,7 @@ function Shop() {
           </Select>
         </FormControl>
       </div>
-      {isLoading && <CircularProgress />}
+      {isLoading && <CircularProgress className={classes.progress} />}
       {!isLoading && filter === '' && (
         <>
           {categories.map(elem => (

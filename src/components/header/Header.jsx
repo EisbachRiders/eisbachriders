@@ -74,16 +74,12 @@ function Header({ isHomepage, lng, changeLng, cart, img }) {
   const classes = useStyles()
   const { t } = useTranslation()
   const [isDrawerOpen, setDrawer] = useState(false)
-
   const isActive = true
   return (
     <>
       <AppBar position="fixed" className={classes.appbar}>
         <Hidden smDown>
-          <Banner
-            isActive={isActive}
-            cartItems={cart.length !== 0 ? cart[0].quantity : 0}
-          />
+          <Banner isActive={isActive} cart={cart} />
         </Hidden>
 
         <Toolbar className={classes.toolbar}>
@@ -104,33 +100,33 @@ function Header({ isHomepage, lng, changeLng, cart, img }) {
                     isActive={location.pathname == '/faq/'}
                     title={t('header.faq')}
                   />
-                  {/* <HeaderLink
+                  <HeaderLink
                     to="/productFinder/"
                     isActive={location.pathname == '/productFinder/'}
                     title={t('header.products')}
-                  /> */}
+                  />
                   <HeaderLink
                     to="/about/"
                     isActive={location.pathname == '/about/'}
                     title={t('header.about')}
                   />
-                  {/* <HeaderLink
+                  <HeaderLink
                     to="/blog/"
                     isActive={location.pathname == '/blog/'}
                     title={t('header.blog')}
-                  /> */}
+                  />
                   <HeaderLink
                     to="/shop/"
                     isActive={location.pathname == '/shop/'}
                     title={t('header.shop')}
                     // href="https://shop.eisbach-riders.com/"
                   />
-                  <HeaderLink
+                  {/* <HeaderLink
                     to="/cart/"
                     isActive={location.pathname == '/cart/'}
                     title={t('header.cart')}
                     href="https://shop.eisbach-riders.com/cart/"
-                  />
+                  /> */}
                   {/* <HeaderLink onClick={changeLng} isActive={isActive}>
                 {lng === 'en' ? 'de' : 'en'}
               </HeaderLink> */}

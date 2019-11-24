@@ -103,7 +103,7 @@ function Product({ product, cart, addToCart }) {
       newCart.push({ quantity, productInfo })
     } else {
       cart.forEach(item => {
-        if (item.product.id !== product.id) {
+        if (item.productInfo.id !== product.id) {
           newCart.push(item)
         }
       })
