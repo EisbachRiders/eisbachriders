@@ -59,9 +59,10 @@ const useStyles = makeStyles(theme => ({
 }))
 const createValues = attributes => {
   let vals = {}
-  attributes.forEach(elem => {
-    vals[elem.name] = ''
-  })
+  attributes &&
+    attributes.forEach(elem => {
+      vals[elem.name] = ''
+    })
   return vals
 }
 
