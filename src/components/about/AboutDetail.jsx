@@ -325,7 +325,7 @@ function AboutDetail({ img }) {
             </ListItem>
           </List>
 
-          <List
+          {/*   <List
             component="nav"
             aria-label="trash pickup"
             subheader={
@@ -334,7 +334,7 @@ function AboutDetail({ img }) {
               </ListSubheader>
             }
           >
-            <ListItem
+          <ListItem
               button
               href="https://www.worldcleanupday.org/"
               component="a"
@@ -354,8 +354,8 @@ function AboutDetail({ img }) {
                 primary="World Cleanup Day is September 21st!!"
                 secondary="Be a part of a global effort to clean up our planet. Join a local group and volunteer your time, organize your own team, donate, or simple go out yourself and make a difference (don't forget to download the TrashOut app, that's what we will do since our team is currently travelling)!!"
               />
-            </ListItem>
-          </List>
+            </ListItem> 
+          </List>*/}
         </div>
       </Container>
     </>
