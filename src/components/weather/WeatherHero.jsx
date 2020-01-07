@@ -10,12 +10,12 @@ import Hidden from '@material-ui/core/Hidden'
 const useStyles = makeStyles(theme => ({
   root: {
     position: 'relative',
-    height: 350,
+    height: 250,
     [theme.breakpoints.up('md')]: {
-      height: 600,
+      height: 250,
     },
     [theme.breakpoints.up('xl')]: {
-      height: 1000,
+      height: 250,
     },
   },
   container: {
@@ -55,12 +55,12 @@ const useStyles = makeStyles(theme => ({
     left: 0,
     top: 0,
     width: '100%',
-    height: 350,
+    height: 250,
     [theme.breakpoints.up('md')]: {
-      height: 600,
+      height: 250,
     },
     [theme.breakpoints.up('xl')]: {
-      height: 1000,
+      height: 250,
     },
   },
   text: {
@@ -126,7 +126,7 @@ function WeatherHero({ img }) {
       />
       <div className={classes.container}>
         <Typography className={clsx(classes.text, classes.subtitle)}>
-        Current Surf Outlook:
+          Current Surf Outlook:
         </Typography>
         <Hidden xsDown>
           <Typography
@@ -134,7 +134,7 @@ function WeatherHero({ img }) {
             gutterBottom
             className={clsx(classes.text, classes.title)}
           >
-           surfs up! 
+            surfs up!
           </Typography>
         </Hidden>
         <Hidden smUp>
@@ -146,7 +146,6 @@ function WeatherHero({ img }) {
             surfs up!
           </Typography>
         </Hidden>
-
       </div>
     </div>
   )
