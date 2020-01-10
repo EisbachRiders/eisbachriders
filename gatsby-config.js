@@ -11,6 +11,15 @@ module.exports = {
     url: 'https://www.eisbach-riders.com', // No trailing slash allowed!
     image: 'src/assets/logos/logo.png',
   },
+  siteMetadata: {
+    title: 'Eisbach Riders',
+    titleTemplate: '',
+    description:
+      'Local brand from Munich that offers sustainably packaged surf accessories and equipment for SUP, River Surfing, Ocean Surfing, Kite Surfing and more!',
+    url: 'https://www.eisbach-riders.com', // No trailing slash allowed!
+    image: '/src/assets/logos/logo.png', // Path to your image you placed in the 'static' folder
+    twitterUsername: '@EisbachRiders',
+  },
   pathPrefix: '/eisbach-riders',
   plugins: [
     {
