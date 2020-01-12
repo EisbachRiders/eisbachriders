@@ -139,13 +139,17 @@ function Hero({ img }) {
             variant="h2"
             gutterBottom
             className={clsx(classes.text, classes.title)}
+            component="p"
           >
             E<span className={classes.small}>ISBACH</span> R
             <span className={classes.small}>IDERS</span>
           </Typography>
         </Hidden>
 
-        <Typography className={clsx(classes.text, classes.subtitle)}>
+        <Typography
+          component="h1"
+          className={clsx(classes.text, classes.subtitle)}
+        >
           {t('hero.subtitle')}
         </Typography>
       </div>

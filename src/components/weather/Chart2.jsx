@@ -1,7 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import { VictoryPie, VictoryLabel } from "victory";
-
+import { VictoryPie, VictoryLabel } from "victory"
 import theme from '../../theme'
 
 const useStyles = makeStyles(theme => ({
