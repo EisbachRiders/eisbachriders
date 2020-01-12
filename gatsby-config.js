@@ -5,18 +5,11 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: 'Eisbach Riders',
-    author: 'Alyssa Butler',
-    description: 'Eisbach Riders - Surf Accessories',
-    siteUrl: 'https://www.eisbach-riders.com',
-    url: 'https://www.eisbach-riders.com', // No trailing slash allowed!
-    image: 'src/assets/logos/logo.png',
-  },
-  siteMetadata: {
-    title: 'Eisbach Riders',
     titleTemplate: '',
     description:
       'Local brand from Munich that offers sustainably packaged surf accessories and equipment for SUP, River Surfing, Ocean Surfing, Kite Surfing and more!',
     url: 'https://www.eisbach-riders.com', // No trailing slash allowed!
+    siteUrl: 'https://www.eisbach-riders.com',
     image: '/src/assets/logos/logo.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@EisbachRiders',
   },
