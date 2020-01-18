@@ -7,9 +7,26 @@ function ShopPage({ data }) {
   const footerImg = data.allImageSharp.edges.find(x =>
     x.node.fluid.src.includes('footer')
   )
+  const bannerImg = data.allImageSharp.edges.find(x =>
+    x.node.fluid.src.includes('shopBanner')
+  )
+  const apparelImg = data.allImageSharp.edges.find(x =>
+    x.node.fluid.src.includes('apparel')
+  )
+  const finsImg = data.allImageSharp.edges.find(x =>
+    x.node.fluid.src.includes('fin')
+  )
+  const leashesImg = data.allImageSharp.edges.find(x =>
+    x.node.fluid.src.includes('leash')
+  )
+  const accessoriesImg = data.allImageSharp.edges.find(x =>
+    x.node.fluid.src.includes('accessories')
+  )
   return (
     <Layout footerImg={footerImg}>
-      <Shop />
+      <Shop
+        images={[bannerImg, apparelImg, finsImg, leashesImg, accessoriesImg]}
+      />
     </Layout>
   )
 }
