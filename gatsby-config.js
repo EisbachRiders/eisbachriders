@@ -37,6 +37,12 @@ module.exports = {
         url: 'https://shop.eisbach-riders.com/graphql',
       },
     },
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: '203659477338999',
+      },
+    },
     // {
     //   resolve: `gatsby-source-wordpress`,
     //   options: {
