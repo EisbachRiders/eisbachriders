@@ -2,33 +2,50 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import Img from 'gatsby-image'
 import { makeStyles } from '@material-ui/core/styles'
-import Typography from '@material-ui/core/Typography'
+import Hidden from '@material-ui/core/Hidden'
 import Container from '../ui/Container'
-
-// const categories = ['Leashes', 'Fins', 'Bundle', 'Apparel', 'Accessories']
+import ShopCategory from './ShopCategory'
 
 const useStyles = makeStyles(theme => ({
-  imgContainer: {
+  img: {
     width: '100%',
-    height: 350,
+    [theme.breakpoints.up('sm')]: {
+      marginBottom: 15,
+      height: 300,
+    },
     [theme.breakpoints.up('md')]: {
-      height: 600,
+      marginBottom: 15,
+      height: 400,
     },
     [theme.breakpoints.up('xl')]: {
-      height: 1000,
+      height: 700,
     },
   },
-  img: {
-    zIndex: -5,
-    left: 0,
-    top: 0,
-    width: '100%',
-    height: 350,
-    [theme.breakpoints.up('md')]: {
-      height: 600,
+  row: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    [theme.breakpoints.up('sm')]: {
+      marginBottom: 45,
     },
-    [theme.breakpoints.up('xl')]: {
-      height: 1000,
+    [theme.breakpoints.up('md')]: {
+      marginBottom: 60,
+    },
+  },
+  rowImg: {
+    flexBasis: '100%',
+    width: '100%',
+    height: 300,
+    marginBottom: 30,
+    [theme.breakpoints.up('sm')]: {
+      height: 250,
+      marginBottom: 0,
+      flexBasis: '45%',
+    },
+    [theme.breakpoints.up('lg')]: {
+      height: 350,
+      marginBottom: 0,
+      flexBasis: '45%',
     },
   },
 }))
@@ -36,24 +53,60 @@ const useStyles = makeStyles(theme => ({
 function Shop({ images }) {
   const classes = useStyles()
   const { t } = useTranslation()
-  console.log(images)
 
   return (
-    <div>
-      <div className={classes.imgContainer}>
+    <>
+      <Hidden smUp>
         <Img
           fluid={images[0].node.fluid}
           alt="new year new adventures"
           className={classes.img}
           imgStyle={{ objectPosition: 'center center' }}
-          style={{ position: 'absolute' }}
         />
-      </div>
+      </Hidden>
+      <Hidden xsDown xlUp>
+        <Img
+          fluid={images[1].node.fluid}
+          alt="new year new adventures"
+          className={classes.img}
+          imgStyle={{ objectPosition: 'center center' }}
+        />
+      </Hidden>
+      <Hidden lgDown>
+        <Img
+          fluid={images[2].node.fluid}
+          alt="new year new adventures"
+          className={classes.img}
+          imgStyle={{ objectPosition: 'center center' }}
+        />
+      </Hidden>
       <Container className={classes.container}>
-        <div className={classes.row}>cat 1</div>
-        <div className={classes.row}>ca 2</div>
+        <div className={classes.row}>
+          <ShopCategory
+            img={images[3]}
+            title="fins"
+            subtitle="for every board"
+          />
+          <ShopCategory
+            img={images[4]}
+            title="leashes"
+            subtitle="get the best fit"
+          />
+        </div>
+        <div className={classes.row}>
+          <ShopCategory
+            img={images[5]}
+            title="apparel"
+            subtitle="sleek & stylish"
+          />
+          <ShopCategory
+            img={images[6]}
+            title="accessories"
+            subtitle="everything you need"
+          />
+        </div>
       </Container>
-    </div>
+    </>
   )
 }
 

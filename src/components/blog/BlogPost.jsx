@@ -28,6 +28,7 @@ const useStyles = makeStyles(theme => ({
 export default ({ data }) => {
   const classes = useStyles()
   const post = data.wpgraphql.post
+  // console.log(post)
   return (
     <Layout seoTitle={post.title}>
       <Container className={classes.container}>

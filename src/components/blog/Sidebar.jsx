@@ -7,7 +7,7 @@ import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'
 import Divider from '@material-ui/core/Divider'
 import Typography from '@material-ui/core/Typography'
-import Logo from '../../assets/logos/logoBlack.png'
+import Logo from '../../assets/logos/logo.png'
 import Newsletter from '../newsletter/Newsletter'
 import Link from '../ui/Link'
 

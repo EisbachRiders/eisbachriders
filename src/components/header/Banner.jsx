@@ -47,8 +47,6 @@ function Banner({ cart }) {
   cart.forEach(elem => {
     cartItems += elem.quantity
   })
-  console.log(cart)
-  console.log(cartItems)
 
   return (
     <div className={classes.banner}>
@@ -87,8 +85,7 @@ function Banner({ cart }) {
 }
 
 Banner.propTypes = {
-  cartItems: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
-    .isRequired,
+  cart: PropTypes.array.isRequired,
 }
 
 export default Banner

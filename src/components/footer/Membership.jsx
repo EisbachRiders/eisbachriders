@@ -15,11 +15,13 @@ const useStyles = makeStyles(theme => ({
     zIndex: 1,
   },
   logoContainer: {
-    width: 350,
-    margin: "0 auto",
+    margin: '0 auto',
     display: 'flex',
     justifyContent: 'space-between',
     zIndex: 1,
+    [theme.breakpoints.up('md')]: {
+      width: 350,
+    },
   },
   logo: {
     height: 50,

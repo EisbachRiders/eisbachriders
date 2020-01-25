@@ -2,6 +2,8 @@ import React, { Fragment } from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import { useTranslation } from 'react-i18next'
 // import Img from 'gatsby-image'
+import clsx from 'clsx'
+import Link from '../ui/Link'
 import { makeStyles } from '@material-ui/core/styles'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
@@ -82,9 +84,13 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     marginBottom: 45,
   },
+  blogImgLink: {
+    width: 250,
+    height: 200,
+  },
   blogImg: {
-    width: '40%',
-    height: '40%',
+    width: 250,
+    height: 200,
   },
   blogDate: {
     letterSpacing: 3,
@@ -149,6 +155,7 @@ export default function Blog() {
             posts {
               nodes {
                 title(format: RENDERED)
+                uri
                 content
                 date
                 excerpt(format: RENDERED)
@@ -170,13 +177,16 @@ export default function Blog() {
           <Container className={classes.container}>
             <div className={classes.blog}>
               <div className={classes.firstBlogImgContainer}>
-                <a className={classes.firstBlogImgLink}>
+                <Link
+                  className={classes.firstBlogImgLink}
+                  to={`/blog/${data.wpgraphql.posts.nodes[0].uri}`}
+                >
                   <img
                     src={data.wpgraphql.posts.nodes[0].featuredImage.link}
                     alt="blog image 1"
                     className={classes.firstBlogImg}
                   />
-                </a>
+                </Link>
                 <div className={classes.firstBlogTextContainer}>
                   <Typography className={classes.firstBlogImgText}>
                     {data.wpgraphql.posts.nodes[0].title}
@@ -187,24 +197,30 @@ export default function Blog() {
                 </div>
               </div>
               {data.wpgraphql.posts.nodes.map((elem, idx) => (
-                <div className={classes.blogItem}>
+                <div className={classes.blogItem} key={`blogItem_${idx}`}>
                   {idx !== 0 && (
                     <Fragment key={`blog_${elem.title}`}>
-                      <img
-                        src={elem.featuredImage.link}
-                        alt={`blog image ${idx}`}
-                        className={classes.blogImg}
-                      ></img>
+                      <Link
+                        to={`/blog/${elem.uri}`}
+                        className={classes.blogImgLink}
+                      >
+                        <img
+                          src={elem.featuredImage.link}
+                          alt={`blog image ${idx}`}
+                          className={classes.blogImg}
+                        />
+                      </Link>
                       <div className={classes.blogExcerpt}>
-                        <Typography className={classes.blogDate}>
-                          {formatDate(elem.date)} -
-                          <span className={classes.categories}>
-                            {` ${elem.categories.nodes[0].name}`}
-                          </span>
+                        <Typography
+                          className={clsx(classes.blogDate, classes.categories)}
+                        >
+                          {elem.categories.nodes[0].name}
                         </Typography>
-                        <Typography className={classes.blogTitle}>
-                          {elem.title}
-                        </Typography>
+                        <Link to={`/blog/${elem.uri}`}>
+                          <Typography className={classes.blogTitle}>
+                            {elem.title}
+                          </Typography>
+                        </Link>
                         <div
                           dangerouslySetInnerHTML={{ __html: elem.excerpt }}
                         />
@@ -235,12 +251,12 @@ export default function Blog() {
                 {data.wpgraphql.categories.nodes.map(
                   elem =>
                     elem.name !== 'Uncategorized' && (
-                      <>
+                      <Fragment key={`category_${elem.name}`}>
                         <ListItem button>
                           <ListItemText primary={elem.name} />
                         </ListItem>
                         <Divider />
-                      </>
+                      </Fragment>
                     )
                 )}
               </List>

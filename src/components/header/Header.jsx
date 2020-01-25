@@ -32,7 +32,6 @@ const useStyles = makeStyles(theme => ({
   appbar: {
     boxShadow: 'none',
     backgroundColor: theme.status.white,
-    borderBottom: `1px solid ${theme.status.grey}`,
   },
   toolbar: {
     paddingLeft: 15,
@@ -60,12 +59,12 @@ const useStyles = makeStyles(theme => ({
     },
   },
   spacer: {
-    marginTop: 60,
+    marginTop: 50,
     [theme.breakpoints.up('sm')]: {
       marginTop: 80,
     },
     [theme.breakpoints.up('lg')]: {
-      marginTop: 100,
+      marginTop: 120,
     },
   },
 }))
@@ -79,7 +78,7 @@ function Header({ isHomepage, lng, changeLng, cart, img }) {
     <>
       <AppBar position="fixed" className={classes.appbar}>
         <Hidden smDown>
-          <Banner isActive={isActive} cart={cart} />
+          <Banner isActive={isActive} cart={cart ? cart : []} />
         </Hidden>
 
         <Toolbar className={classes.toolbar}>
@@ -191,7 +190,4 @@ Header.propTypes = {
   changeLng: PropTypes.func.isRequired,
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Header)
+export default connect(mapStateToProps, mapDispatchToProps)(Header)

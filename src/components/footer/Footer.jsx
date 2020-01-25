@@ -1,6 +1,5 @@
 import React from 'react'
 import Img from 'gatsby-image'
-import clsx from 'clsx'
 import { makeStyles } from '@material-ui/core/styles'
 import Hidden from '@material-ui/core/Hidden'
 import NewsletterInline from '../newsletter/NewsletterInline'
@@ -38,12 +37,6 @@ const useStyles = makeStyles(theme => ({
       flexBasis: '45%',
     },
   },
-  // spacer: {
-  //   paddingBottom: 45,
-  //   [theme.breakpoints.up('md')]: {
-  //     paddingBottom: 0,
-  //   },
-  // },
   backgroundImg: {
     zIndex: 0,
     left: 0,
@@ -67,11 +60,11 @@ function Footer({ img }) {
               <FooterLogo />
             </div>
             <Hidden xsDown>
-            <div className={classes.flexItem}>
-              <div className={classes.containerInner}>
-                <FooterNavigation />
+              <div className={classes.flexItem}>
+                <div className={classes.containerInner}>
+                  <FooterNavigation />
+                </div>
               </div>
-            </div>
             </Hidden>
           </div>
           <Hidden smDown>
@@ -82,13 +75,15 @@ function Footer({ img }) {
           </Hidden>
           <Membership />
         </>
-        <Img
-          fluid={img.node.fluid}
-          alt="wave background"
-          className={classes.backgroundImg}
-          imgStyle={{ objectFit: 'fill' }}
-          style={{ position: 'absolute' }}
-        />
+        {img && (
+          <Img
+            fluid={img.node.fluid}
+            alt="wave background"
+            className={classes.backgroundImg}
+            imgStyle={{ objectFit: 'fill' }}
+            style={{ position: 'absolute' }}
+          />
+        )}
       </Container>
       <FooterBanner />
     </>
