@@ -1,18 +1,14 @@
 import React, { Fragment } from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import { useTranslation } from 'react-i18next'
-// import Img from 'gatsby-image'
 import clsx from 'clsx'
 import Link from '../ui/Link'
 import { makeStyles } from '@material-ui/core/styles'
-import List from '@material-ui/core/List'
-import ListItem from '@material-ui/core/ListItem'
-import ListItemText from '@material-ui/core/ListItemText'
-import Divider from '@material-ui/core/Divider'
 import Typography from '@material-ui/core/Typography'
+// import Divider from '@material-ui/core/Divider'
 import Container from '../ui/Container'
-import Logo from '../../assets/logos/ER_full.png'
-import Newsletter from '../newsletter/Newsletter'
+import Sidebar from './Sidebar'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -22,27 +18,12 @@ const useStyles = makeStyles(theme => ({
   blog: {
     display: 'flex',
     flexDirection: 'column',
-    flexBasis: '60%',
+    flexBasis: '70%',
   },
   sidebar: {
     display: 'flex',
     flexDirection: 'column',
-    flexBasis: '30%',
-  },
-  sidebarTitle: {
-    textAlign: 'center',
-    fontSize: '1.5rem',
-    textTransform: 'uppercase',
-    letterSpacing: 3,
-    marginBottom: 15,
-  },
-  sidebarContainer: {
-    textAlign: 'center',
-  },
-  logo: {
-    width: 150,
-    height: 150,
-    marginBottom: 15,
+    flexBasis: '25%',
   },
   text: {
     textAlign: 'center',
@@ -54,10 +35,13 @@ const useStyles = makeStyles(theme => ({
   firstBlogImgContainer: {
     position: 'relative',
     textAlign: 'center',
-    marginBottom: 45,
+    // marginBottom: 45,
+    margin: '0 auto',
+    width: '50%',
   },
   firstBlogImg: {
     width: '100%',
+    height: 400,
   },
   firstBlogTextContainer: {
     position: 'absolute',
@@ -109,171 +93,87 @@ const useStyles = makeStyles(theme => ({
   categories: {
     color: theme.palette.primary.main,
   },
+  title: {
+    padding: 30,
+    textAlign: 'center',
+    fontSize: 30,
+  },
+  subHeader: {
+    padding: 15,
+  },
 }))
 
-export default function Blog() {
-  const [expanded, setExpanded] = React.useState(null)
+export default function Blog({ posts, blogImg }) {
   const classes = useStyles()
   const { t } = useTranslation()
 
-  const handleChange = panel => (event, newExpanded) => {
-    setExpanded(newExpanded ? panel : false)
-  }
-
-  const formatDate = date => {
-    const d = new Date(date)
-    const months = [
-      'JAN',
-      'FEB',
-      'MAR',
-      'APR',
-      'MAY',
-      'JUN',
-      'JUL',
-      'AUG',
-      'SEP',
-      'OCT',
-      'NOV',
-      'DEC',
-    ]
-    const day = d.getDay()
-    const month = months[d.getMonth()]
-    const year = d.getFullYear()
-    return `${month} ${day}, ${year}`
-  }
-
   return (
-    <StaticQuery
-      query={graphql`
-        query {
-          wpgraphql {
-            categories {
-              nodes {
-                name
-              }
-            }
-            posts {
-              nodes {
-                title(format: RENDERED)
-                uri
-                content
-                date
-                excerpt(format: RENDERED)
-                featuredImage {
-                  link
-                }
-                categories {
-                  nodes {
-                    name
-                  }
-                }
-              }
-            }
-          }
-        }
-      `}
-      render={data => {
-        return (
-          <Container className={classes.container}>
-            <div className={classes.blog}>
-              <div className={classes.firstBlogImgContainer}>
-                <Link
-                  className={classes.firstBlogImgLink}
-                  to={`/blog/${data.wpgraphql.posts.nodes[0].uri}`}
-                >
-                  <img
-                    src={data.wpgraphql.posts.nodes[0].featuredImage.link}
-                    alt="blog image 1"
-                    className={classes.firstBlogImg}
-                  />
-                </Link>
-                <div className={classes.firstBlogTextContainer}>
-                  <Typography className={classes.firstBlogImgText}>
-                    {data.wpgraphql.posts.nodes[0].title}
-                  </Typography>
-                  <Typography className={classes.firstBlogImgText2}>
-                    {formatDate(data.wpgraphql.posts.nodes[0].date)}
-                  </Typography>
-                </div>
-              </div>
-              {data.wpgraphql.posts.nodes.map((elem, idx) => (
-                <div className={classes.blogItem} key={`blogItem_${idx}`}>
-                  {idx !== 0 && (
-                    <Fragment key={`blog_${elem.title}`}>
-                      <Link
-                        to={`/blog/${elem.uri}`}
-                        className={classes.blogImgLink}
+    <div>
+      <Typography className={classes.title}>Blog</Typography>
+      {/* <Divider />
+      <Typography align="center" className={classes.subHeader}>
+        Travel Guides Tutorials Surf
+      </Typography> */}
+      <div className={classes.firstBlogImgContainer}>
+        <Img
+          alt=""
+          fluid={posts[0].node.heroImage.fluid}
+          className={classes.firstBlogImg}
+        />
+        <Link
+          className={classes.firstBlogImgLink}
+          to={`/blog/${posts[0].node.slug}`}
+        >
+          <div className={classes.firstBlogTextContainer}>
+            <Typography className={classes.firstBlogImgText}>
+              {posts[0].node.title}
+            </Typography>
+          </div>
+        </Link>
+      </div>
+
+      <Container className={classes.container}>
+        <div className={classes.blog}>
+          {posts.map(({ node }, idx) => {
+            return (
+              <div className={classes.blogItem} key={`blogItem_${idx}`}>
+                {idx !== 0 && (
+                  <Fragment key={`blog_${node.title}`}>
+                    <Link
+                      to={`/blog/${node.slug}`}
+                      className={classes.blogImgLink}
+                    >
+                      <Img
+                        alt={`blog image ${idx}`}
+                        fluid={node.heroImage.fluid}
+                        className={classes.blogImg}
+                      />
+                    </Link>
+                    <div className={classes.blogExcerpt}>
+                      <Typography
+                        className={clsx(classes.blogDate, classes.categories)}
                       >
-                        <img
-                          src={elem.featuredImage.link}
-                          alt={`blog image ${idx}`}
-                          className={classes.blogImg}
-                        />
-                      </Link>
-                      <div className={classes.blogExcerpt}>
-                        <Typography
-                          className={clsx(classes.blogDate, classes.categories)}
-                        >
-                          {elem.categories.nodes[0].name}
+                        {node.tags ? node.tags[0] : ''}
+                      </Typography>
+                      <Link to={`/blog/${node.slug}`}>
+                        <Typography className={classes.blogTitle}>
+                          {node.title}
                         </Typography>
-                        <Link to={`/blog/${elem.uri}`}>
-                          <Typography className={classes.blogTitle}>
-                            {elem.title}
-                          </Typography>
-                        </Link>
-                        <div
-                          dangerouslySetInnerHTML={{ __html: elem.excerpt }}
-                        />
-                      </div>
-                    </Fragment>
-                  )}
-                </div>
-              ))}
-            </div>
-            <div className={classes.sidebar}>
-              <Typography className={classes.sidebarTitle}>About</Typography>
-              <div className={classes.sidebarContainer}>
-                <img src={Logo} alt="logo" className={classes.logo}></img>
-              </div>
-              <Typography className={classes.text}>
-                Follow us on our adventures through Munich and travels around
-                the world to learn more about surfing and sustainability!
-              </Typography>
-              <Typography className={classes.sidebarTitle}>
-                Categories
-              </Typography>
-
-              <List
-                component="nav"
-                aria-label="categories"
-                className={classes.list}
-              >
-                {data.wpgraphql.categories.nodes.map(
-                  elem =>
-                    elem.name !== 'Uncategorized' && (
-                      <Fragment key={`category_${elem.name}`}>
-                        <ListItem button>
-                          <ListItemText primary={elem.name} />
-                        </ListItem>
-                        <Divider />
-                      </Fragment>
-                    )
+                      </Link>
+                      <MDXRenderer>
+                        {node.description.childMdx.body}
+                      </MDXRenderer>
+                    </div>
+                  </Fragment>
                 )}
-              </List>
-
-              <Typography className={classes.sidebarTitle}>
-                Newsletter
-              </Typography>
-              <div className={classes.sidebarContainer}>
-                <Newsletter variant="small" />
               </div>
-              {/* <Typography className={classes.sidebarTitle}>
-                Instagram
-              </Typography> */}
-            </div>
-          </Container>
-        )
-      }}
-    />
+            )
+          })}
+        </div>
+        <div className={classes.sidebar}>
+          <Sidebar blogImg={blogImg} />
+        </div>
+      </Container>
+    </div>
   )
 }

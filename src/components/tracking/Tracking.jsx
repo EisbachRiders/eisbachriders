@@ -82,6 +82,7 @@ function Tracking({ isGAopen, changeGA }) {
   const { t } = useTranslation()
 
   const handleSnackbarDecline = () => {
+    gaOptout()
     window['ga-disable-UA-130658859-1'] = true
     changeGA()
   }
@@ -110,8 +111,7 @@ function Tracking({ isGAopen, changeGA }) {
         action={[
           <Fragment key={`snackbar`}>
             <Button
-              className={classes.buttonDecline} //eslint-disable-next-line
-              href="javascript:gaOptout();"
+              className={classes.buttonDecline}
               onClick={handleSnackbarDecline}
             >
               {t('tracking.decline')}
@@ -131,7 +131,4 @@ function Tracking({ isGAopen, changeGA }) {
   )
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Tracking)
+export default connect(mapStateToProps, mapDispatchToProps)(Tracking)

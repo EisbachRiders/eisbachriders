@@ -1,15 +1,14 @@
 import React, { Fragment } from 'react'
 import { useTranslation } from 'react-i18next'
-import { StaticQuery, graphql } from 'gatsby'
 import { makeStyles } from '@material-ui/core/styles'
-import List from '@material-ui/core/List'
-import ListItem from '@material-ui/core/ListItem'
-import ListItemText from '@material-ui/core/ListItemText'
-import Divider from '@material-ui/core/Divider'
+import Img from 'gatsby-image'
+// import List from '@material-ui/core/List'
+// import ListItem from '@material-ui/core/ListItem'
+// import ListItemText from '@material-ui/core/ListItemText'
+// import Divider from '@material-ui/core/Divider'
 import Typography from '@material-ui/core/Typography'
-import Logo from '../../assets/logos/logo.png'
+// import Logo from '../../assets/logos/logo.png'
 import Newsletter from '../newsletter/Newsletter'
-import Link from '../ui/Link'
 
 const useStyles = makeStyles(theme => ({
   sidebarTitle: {
@@ -20,7 +19,8 @@ const useStyles = makeStyles(theme => ({
     marginBottom: 15,
   },
   sidebarContainer: {
-    textAlign: 'center',
+    display: 'flex',
+    justifyContent: 'center',
   },
   logo: {
     width: 150,
@@ -39,70 +39,41 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-export default function Sidebar() {
+export default function Sidebar({ categories, blogImg }) {
   const classes = useStyles()
   const { t } = useTranslation()
 
   return (
-    <StaticQuery
-      query={graphql`
-        query {
-          wpgraphql {
-            categories {
-              nodes {
-                name
-                slug
-              }
-            }
-          }
-        }
-      `}
-      render={data => {
-        return (
-          <>
-            <Typography className={classes.sidebarTitle}>
-              {t('header.about')}
-            </Typography>
-            <div className={classes.sidebarContainer}>
-              <img src={Logo} alt="logo" className={classes.logo}></img>
-            </div>
-            <Typography className={classes.text}>
-              {t('blog.aboutUs')}
-            </Typography>
-            <Typography className={classes.sidebarTitle}>
-              {t('blog.categories')}
-            </Typography>
-            <List
-              component="nav"
-              aria-label="categories"
-              className={classes.list}
-            >
-              {data.wpgraphql.categories.nodes.map(
-                (elem, idx) =>
-                  elem.name !== 'Uncategorized' && (
-                    <Fragment key={`category_${idx}`}>
-                      <Link to={`/blog/category/${elem.slug}`}>
-                        <ListItem button>
-                          <ListItemText primary={elem.name} />
-                        </ListItem>
-                      </Link>
-                      <Divider />
-                    </Fragment>
-                  )
-              )}
-            </List>
-            <Typography className={classes.sidebarTitle}>
-              {t('newsletter.newsletter')}
-            </Typography>
-            <div className={classes.sidebarContainer}>
-              <Newsletter variant="small" />
-            </div>
-            {/* <Typography className={classes.sidebarTitle}>
-                {t('instagram.sectionTitle')}
-              </Typography> */}
-          </>
-        )
-      }}
-    />
+    <div className={classes.sidebar}>
+      <Typography className={classes.sidebarTitle}>About</Typography>
+      <div className={classes.sidebarContainer}>
+        <Img alt="" fluid={blogImg.node.fluid} className={classes.logo} />
+      </div>
+      <Typography className={classes.text}>
+        Follow us on our adventures through Munich and travels around the world
+        to learn more about surfing and sustainability!
+      </Typography>
+      {/* <Typography className={classes.sidebarTitle}>Categories</Typography>
+      <List component="nav" aria-label="categories" className={classes.list}>
+        {[{ name: 'travel' }, { name: 'guides' }].map(
+          elem =>
+            elem.name !== 'Uncategorized' && (
+              <Fragment key={`category_${elem.name}`}>
+                <ListItem button>
+                  <ListItemText primary={elem.name} />
+                </ListItem>
+                <Divider />
+              </Fragment>
+            )
+        )}
+      </List> */}
+      <Typography className={classes.sidebarTitle}>Newsletter</Typography>
+      <div className={classes.sidebarContainer}>
+        <Newsletter variant="small" />
+      </div>
+      {/* <Typography className={classes.sidebarTitle}>
+            Instagram
+          </Typography> */}
+    </div>
   )
 }

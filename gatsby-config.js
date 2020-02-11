@@ -29,14 +29,14 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
-    {
-      resolve: `gatsby-source-graphql`,
-      options: {
-        typeName: 'WPGraphQL',
-        fieldName: 'wpgraphql',
-        url: 'https://shop.eisbach-riders.com/graphql',
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-graphql`,
+    //   options: {
+    //     typeName: 'WPGraphQL',
+    //     fieldName: 'wpgraphql',
+    //     url: 'https://shop.eisbach-riders.com/graphql',
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-facebook-pixel`,
       options: {
@@ -57,8 +57,15 @@ module.exports = {
       options: {
         extensions: [`.mdx`, `.md`],
         defaultLayouts: {
-          default: require.resolve('./src/components/LayoutMdx.jsx'),
+          default: require.resolve('./src/components/Layout.jsx'),
         },
+      },
+    },
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE,
+        accessToken: process.env.CONTENTFUL_API,
       },
     },
     {
