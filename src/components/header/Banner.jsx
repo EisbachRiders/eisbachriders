@@ -68,7 +68,7 @@ function Banner({ cart }) {
         {t('banner.shipping')}
       </p>
       <div className={clsx(classes.flexItem, classes.flexEnd)}>
-        <Link to="/cart/">
+        {/* <Link to="/cart/">
           <IconButton
             className={classes.button}
             color="inherit"
@@ -78,7 +78,7 @@ function Banner({ cart }) {
               <CartIcon className={classes.icon} />
             </Badge>
           </IconButton>
-        </Link>
+        </Link> */}
       </div>
     </div>
   )

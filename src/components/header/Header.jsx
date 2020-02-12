@@ -99,11 +99,11 @@ function Header({ isHomepage, lng, changeLng, cart, img }) {
                     isActive={location.pathname == '/faq/'}
                     title={t('header.faq')}
                   />
-                  <HeaderLink
+                  {/* <HeaderLink
                     to="/productFinder/"
                     isActive={location.pathname == '/productFinder/'}
                     title={t('header.products')}
-                  />
+                  /> */}
                   <HeaderLink
                     to="/about/"
                     isActive={location.pathname == '/about/'}
@@ -115,17 +115,17 @@ function Header({ isHomepage, lng, changeLng, cart, img }) {
                     title={t('header.blog')}
                   />
                   <HeaderLink
-                    to="/shop/"
+                    // to="/shop/"
                     isActive={location.pathname == '/shop/'}
                     title={t('header.shop')}
-                    // href="https://shop.eisbach-riders.com/"
+                    href="https://shop.eisbach-riders.com/"
                   />
-                  {/* <HeaderLink
-                    to="/cart/"
+                  <HeaderLink
+                    // to="/cart/"
                     isActive={location.pathname == '/cart/'}
                     title={t('header.cart')}
                     href="https://shop.eisbach-riders.com/cart/"
-                  /> */}
+                  />
                   {/* <HeaderLink onClick={changeLng} isActive={isActive}>
                 {lng === 'en' ? 'de' : 'en'}
               </HeaderLink> */}

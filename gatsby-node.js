@@ -10,7 +10,7 @@ exports.createPages = ({ graphql, actions }) => {
       graphql(
         `
           {
-            allContentfulBlogPost(filter: { frontmatter: { published: { ne: false } } } {
+            allContentfulBlogPost {
               edges {
                 node {
                   title
