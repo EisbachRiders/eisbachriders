@@ -8,7 +8,9 @@ import Img from 'gatsby-image'
 // import Divider from '@material-ui/core/Divider'
 import Typography from '@material-ui/core/Typography'
 // import Logo from '../../assets/logos/logo.png'
-import Newsletter from '../newsletter/Newsletter'
+import NewsletterBlog from '../newsletter/NewsletterBlog'
+import BrushStroke from '../ui/BrushStroke'
+import Link from '../ui/Link'
 
 const useStyles = makeStyles(theme => ({
   sidebarTitle: {
@@ -29,12 +31,18 @@ const useStyles = makeStyles(theme => ({
   },
   text: {
     textAlign: 'center',
-    marginBottom: 45,
+    marginBottom: 75,
   },
   list: {
     marginBottom: 45,
   },
   categories: {
+    color: theme.palette.primary.main,
+  },
+  margin: {
+    marginLeft: '10%',
+  },
+  link: {
     color: theme.palette.primary.main,
   },
 }))
@@ -45,13 +53,18 @@ export default function Sidebar({ categories, blogImg }) {
 
   return (
     <div className={classes.sidebar}>
-      <Typography className={classes.sidebarTitle}>About</Typography>
+      <div className={classes.margin}>
+        <BrushStroke title="About" />
+      </div>
       <div className={classes.sidebarContainer}>
         <Img alt="" fluid={blogImg.node.fluid} className={classes.logo} />
       </div>
       <Typography className={classes.text}>
         Follow us on our adventures through Munich and travels around the world
-        to learn more about surfing and sustainability!
+        to learn more about surfing and sustainability!{' '}
+        <Link to="/about" className={classes.link}>
+          More...
+        </Link>
       </Typography>
       {/* <Typography className={classes.sidebarTitle}>Categories</Typography>
       <List component="nav" aria-label="categories" className={classes.list}>
@@ -67,9 +80,12 @@ export default function Sidebar({ categories, blogImg }) {
             )
         )}
       </List> */}
-      <Typography className={classes.sidebarTitle}>Newsletter</Typography>
+      <div className={classes.margin}>
+        <BrushStroke title="Subscribe" />
+      </div>
+
       <div className={classes.sidebarContainer}>
-        <Newsletter variant="small" />
+        <NewsletterBlog />
       </div>
       {/* <Typography className={classes.sidebarTitle}>
             Instagram

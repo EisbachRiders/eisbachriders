@@ -43,7 +43,7 @@ const useStyles = makeStyles(theme => ({
     bottom: 0,
     width: '100%',
     overflow: 'hidden',
-    zIndex: -1,
+    zIndex: -100,
   },
 }))
 
@@ -53,28 +53,25 @@ function Footer({ img }) {
   return (
     <>
       <Container className={classes.container}>
-        <>
-          <div className={classes.footerContainer}>
-            {/* <div className={clsx(classes.flexItem, classes.spacer)}> */}
-            <div className={classes.flexItem}>
-              <FooterLogo />
-            </div>
-            <Hidden xsDown>
-              <div className={classes.flexItem}>
-                <div className={classes.containerInner}>
-                  <FooterNavigation />
-                </div>
-              </div>
-            </Hidden>
+        <div className={classes.footerContainer}>
+          <div className={classes.flexItem}>
+            <FooterLogo />
           </div>
-          <Hidden smDown>
-            <NewsletterInline />
+          <Hidden xsDown>
+            <div className={classes.flexItem}>
+              <div className={classes.containerInner}>
+                <FooterNavigation />
+              </div>
+            </div>
           </Hidden>
-          <Hidden mdUp>
-            <Newsletter />
-          </Hidden>
-          <Membership />
-        </>
+        </div>
+        <Hidden smDown>
+          <NewsletterInline />
+        </Hidden>
+        <Hidden mdUp>
+          <Newsletter />
+        </Hidden>
+        <Membership />
         {img && (
           <Img
             fluid={img.node.fluid}

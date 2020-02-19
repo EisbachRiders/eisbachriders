@@ -12,7 +12,7 @@ function Index({ data }) {
     x.node.fluid.src.includes('blogHeader')
   )
   const featureImg = data.allImageSharp.edges.find(x =>
-    x.node.fluid.src.includes('featuredProduct')
+    x.node.fluid.src.includes('fin2')
   )
   const newImg = data.allImageSharp.edges.find(x =>
     x.node.fluid.src.includes('newProduct')

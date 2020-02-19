@@ -88,6 +88,14 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `username`,
+        access_token: process.env.INSTA_API,
+      },
+    },
+    'gatsby-plugin-eslint',
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

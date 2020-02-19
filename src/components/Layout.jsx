@@ -24,6 +24,24 @@ const useStyles = makeStyles(theme => ({
   },
   img: {
     width: '100%',
+    marginBottom: 5,
+  },
+  sub: {
+    fontSize: 10,
+    textAlign: 'center',
+    marginBottom: 60,
+  },
+  h1: {
+    marginBottom: 60,
+  },
+  h2: {
+    textAlign: 'center',
+  },
+  p: {
+    marginBottom: 45,
+  },
+  a: {
+    color: theme.palette.primary.main,
   },
 }))
 
@@ -41,6 +59,7 @@ function Layout({ isHomepage, img, footerImg, siteTitle, children }) {
   const preStyled = props => <div {...props} />
   const strongStyled = props => <strong className={classes.strong} {...props} />
   const imgStyled = props => <img className={classes.img} {...props} />
+  const subStyled = props => <sub className={classes.sub} {...props} />
 
   const components = {
     h1: h1Styled,
@@ -52,12 +71,15 @@ function Layout({ isHomepage, img, footerImg, siteTitle, children }) {
     a: aStyled,
     strong: strongStyled,
     img: imgStyled,
+    sub: subStyled,
   }
   return (
     <>
       <SEO title={siteTitle} />
       <Header isHomepage={isHomepage} img={img} />
-      <MDXProvider components={components}>{children}</MDXProvider>
+      <MDXProvider components={components} style={{ background: '#fafafa' }}>
+        {children}
+      </MDXProvider>
       <Footer img={footerImg} />
       {process.env.NODE_ENV !== 'development' && <Tracking />}
     </>

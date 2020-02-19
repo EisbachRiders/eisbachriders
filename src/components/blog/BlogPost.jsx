@@ -23,6 +23,9 @@ const useStyles = makeStyles(theme => ({
   featureImg: {
     height: 600,
   },
+  h1: {
+    marginBottom: 30,
+  },
 }))
 
 export default function BlogPost({ post, blogImg }) {
@@ -31,12 +34,12 @@ export default function BlogPost({ post, blogImg }) {
   return (
     <Container className={classes.container}>
       <div className={classes.blog}>
+        <h1 className={classes.h1}>{post.title}</h1>
         <Img
           fluid={post.heroImage.fluid}
           alt="blog feature image"
           className={classes.featureImg}
         />
-        <h1>{post.title}</h1>
         <MDXRenderer>{post.body.childMdx.body}</MDXRenderer>
       </div>
       <div className={classes.sidebar}>

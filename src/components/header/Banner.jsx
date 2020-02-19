@@ -1,15 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import clsx from 'clsx'
-import { makeStyles } from '@material-ui/core/styles'
 import { useTranslation } from 'react-i18next'
+import { makeStyles } from '@material-ui/core/styles'
+import Badge from '@material-ui/core/Badge'
+import CartIcon from '@material-ui/icons/ShoppingCart'
 import InstagramIcon from '../../assets/icons/Instagram'
 import FacebookIcon from '../../assets/icons/Facebook'
 import HeaderLinkIcon from './HeaderLinkIcon'
-import Badge from '@material-ui/core/Badge'
-import IconButton from '@material-ui/core/IconButton'
-import CartIcon from '@material-ui/icons/ShoppingCart'
-import Link from '../ui/Link'
+import HeaderLink from './HeaderLink'
 
 const useStyles = makeStyles(theme => ({
   banner: {
@@ -23,24 +22,24 @@ const useStyles = makeStyles(theme => ({
     paddingRight: 10,
   },
   flexItem: {
-    flexBasis: '30%',
+    flexBasis: '20%',
   },
-  flexStart: {
+  start: {
     textAlign: 'left',
   },
-  flexEnd: {
+  end: {
     textAlign: 'right',
   },
   text: {
+    flexGrow: 1,
     margin: 0,
-    verticalAlign: 'middle',
   },
   icon: {
     fill: theme.status.white,
   },
 }))
 
-function Banner({ cart }) {
+function Banner({ cart, lng, changeLng }) {
   const classes = useStyles()
   const { t } = useTranslation()
   let cartItems = 0
@@ -50,7 +49,7 @@ function Banner({ cart }) {
 
   return (
     <div className={classes.banner}>
-      <div className={clsx(classes.flexItem, classes.flexStart)}>
+      <div className={clsx(classes.flexItem, classes.start)}>
         <HeaderLinkIcon
           href="https://www.facebook.com/EisbachRiders/"
           ariaLabel="facebook"
@@ -64,21 +63,22 @@ function Banner({ cart }) {
           <InstagramIcon />
         </HeaderLinkIcon>
       </div>
-      <p className={clsx(classes.flexItem, classes.text)}>
-        {t('banner.shipping')}
-      </p>
-      <div className={clsx(classes.flexItem, classes.flexEnd)}>
-        {/* <Link to="/cart/">
-          <IconButton
-            className={classes.button}
-            color="inherit"
-            aria-label="cart"
-          >
-            <Badge badgeContent={cartItems} color="primary">
-              <CartIcon className={classes.icon} />
-            </Badge>
-          </IconButton>
-        </Link> */}
+      <p className={clsx(classes.text)}>{t('banner.shipping')}</p>
+      <div className={clsx(classes.flexItem, classes.end)}>
+        {process.env.NODE_ENV === 'development' && (
+          <>
+            <HeaderLink
+              onClick={changeLng}
+              inverse
+              title={lng === 'en' ? 'de' : 'en'}
+            />
+            <HeaderLinkIcon to="/cart/" ariaLabel="cart">
+              <Badge badgeContent={cartItems} color="primary">
+                <CartIcon className={classes.icon} />
+              </Badge>
+            </HeaderLinkIcon>
+          </>
+        )}
       </div>
     </div>
   )
