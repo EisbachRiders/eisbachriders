@@ -17,7 +17,6 @@ import Container from '../ui/Container'
 import oceana from '../../assets/images/about/oceana.png'
 import oceanconservancy from '../../assets/images/about/oceanconservancy.png'
 import oceancleanup from '../../assets/images/about/oceancleanup.png'
-import worldcleanupday from '../../assets/images/about/worldcleanupday.png'
 import igsmLogo from '../../assets/logos/igsmLogo.png'
 import srfLogo from '../../assets/images/about/surfrider.png'
 import wirmachenwelleLogo from '../../assets/images/about/wirmachenwelle.png'
@@ -196,7 +195,11 @@ function AboutDetail({ img }) {
             >
               <ListItemAvatar>
                 <Avatar>
-                  <img src={igsmLogo} className={classes.avatar} />
+                  <img
+                    src={igsmLogo}
+                    className={classes.avatar}
+                    alt="igsm logo"
+                  />
                 </Avatar>
               </ListItemAvatar>
               <ListItemText
@@ -217,7 +220,11 @@ function AboutDetail({ img }) {
             >
               <ListItemAvatar>
                 <Avatar>
-                  <img src={wirmachenwelleLogo} className={classes.avatar} />
+                  <img
+                    src={wirmachenwelleLogo}
+                    className={classes.avatar}
+                    alt="wir machen welle logo"
+                  />
                 </Avatar>
               </ListItemAvatar>
               <ListItemText
@@ -238,7 +245,11 @@ function AboutDetail({ img }) {
             >
               <ListItemAvatar>
                 <Avatar>
-                  <img src={srfLogo} className={classes.avatar} />
+                  <img
+                    src={srfLogo}
+                    className={classes.avatar}
+                    alt="surf rider logo"
+                  />
                 </Avatar>
               </ListItemAvatar>
               <ListItemText
@@ -269,7 +280,11 @@ function AboutDetail({ img }) {
             >
               <ListItemAvatar>
                 <Avatar>
-                  <img src={oceanconservancy} className={classes.avatar} />
+                  <img
+                    src={oceanconservancy}
+                    className={classes.avatar}
+                    alt="ocean conservancy logo"
+                  />
                 </Avatar>
               </ListItemAvatar>
               <ListItemText
@@ -290,7 +305,11 @@ function AboutDetail({ img }) {
             >
               <ListItemAvatar>
                 <Avatar>
-                  <img src={oceancleanup} className={classes.avatar} />
+                  <img
+                    src={oceancleanup}
+                    className={classes.avatar}
+                    alt="ocean cleanup logo"
+                  />
                 </Avatar>
               </ListItemAvatar>
               <ListItemText
@@ -311,7 +330,11 @@ function AboutDetail({ img }) {
             >
               <ListItemAvatar>
                 <Avatar>
-                  <img src={oceana} className={classes.avatar} />
+                  <img
+                    src={oceana}
+                    className={classes.avatar}
+                    alt="oceana logo"
+                  />
                 </Avatar>
               </ListItemAvatar>
               <ListItemText

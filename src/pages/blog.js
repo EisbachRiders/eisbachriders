@@ -4,10 +4,9 @@ import Layout from '../components/Layout'
 import Blog from '../components/blog/Blog'
 
 function BlogIndex({ data }) {
-  console.log(data)
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allContentfulBlogPost.edges
-  const instagram = data.allInstaNode
+  const instagram = data.allInstaNode.edges
   const footerImg = data.allImageSharp.edges.find(x =>
     x.node.fluid.src.includes('footer')
   )
@@ -51,6 +50,21 @@ export const pageQuery = graphql`
         }
       }
     }
+    allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 6) {
+      edges {
+        node {
+          likes
+          id
+          localFile {
+            childImageSharp {
+              fluid {
+                srcWebp
+              }
+            }
+          }
+        }
+      }
+    }
     allContentfulBlogPost(sort: { order: DESC, fields: publishDate }) {
       edges {
         node {
@@ -66,6 +80,7 @@ export const pageQuery = graphql`
           description {
             childMdx {
               body
+              excerpt(pruneLength: 200)
             }
           }
         }

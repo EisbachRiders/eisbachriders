@@ -6,6 +6,7 @@ import BlogPost from '../components/blog/BlogPost'
 function BlogPostTemplate({ data }) {
   const post = data.contentfulBlogPost
   const siteTitle = data.site.siteMetadata.title
+  const instagram = data.allInstaNode.edges
   const blogImg = data.allImageSharp.edges.find(x =>
     x.node.fluid.src.includes('blogAbout')
   )
@@ -14,7 +15,7 @@ function BlogPostTemplate({ data }) {
   )
   return (
     <Layout siteTitle={siteTitle} footerImg={footerImg}>
-      <BlogPost post={post} blogImg={blogImg} />
+      <BlogPost post={post} blogImg={blogImg} instagram={instagram} />
     </Layout>
   )
 }
@@ -34,6 +35,21 @@ export const pageQuery = graphql`
           id
           fluid(maxWidth: 3000) {
             ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+    allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 6) {
+      edges {
+        node {
+          likes
+          id
+          localFile {
+            childImageSharp {
+              fluid {
+                srcWebp
+              }
+            }
           }
         }
       }

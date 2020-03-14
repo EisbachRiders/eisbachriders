@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-export default function BlogPost({ post, blogImg }) {
+export default function BlogPost({ post, blogImg, instagram }) {
   const classes = useStyles()
 
   return (
@@ -43,7 +43,7 @@ export default function BlogPost({ post, blogImg }) {
         <MDXRenderer>{post.body.childMdx.body}</MDXRenderer>
       </div>
       <div className={classes.sidebar}>
-        <Sidebar blogImg={blogImg} />
+        <Sidebar blogImg={blogImg} instagram={instagram} />
       </div>
     </Container>
   )

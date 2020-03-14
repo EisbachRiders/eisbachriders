@@ -1,16 +1,12 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { makeStyles } from '@material-ui/core/styles'
 import Img from 'gatsby-image'
-// import List from '@material-ui/core/List'
-// import ListItem from '@material-ui/core/ListItem'
-// import ListItemText from '@material-ui/core/ListItemText'
-// import Divider from '@material-ui/core/Divider'
 import Typography from '@material-ui/core/Typography'
-// import Logo from '../../assets/logos/logo.png'
 import NewsletterBlog from '../newsletter/NewsletterBlog'
 import BrushStroke from '../ui/BrushStroke'
 import Link from '../ui/Link'
+import Instagram from '../instagram/Instagram'
 
 const useStyles = makeStyles(theme => ({
   sidebarTitle: {
@@ -23,6 +19,7 @@ const useStyles = makeStyles(theme => ({
   sidebarContainer: {
     display: 'flex',
     justifyContent: 'center',
+    marginBottom: 60,
   },
   logo: {
     width: 150,
@@ -47,7 +44,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-export default function Sidebar({ categories, blogImg }) {
+export default function Sidebar({ blogImg, instagram }) {
   const classes = useStyles()
   const { t } = useTranslation()
 
@@ -60,26 +57,12 @@ export default function Sidebar({ categories, blogImg }) {
         <Img alt="" fluid={blogImg.node.fluid} className={classes.logo} />
       </div>
       <Typography className={classes.text}>
-        Follow us on our adventures through Munich and travels around the world
-        to learn more about surfing and sustainability!{' '}
+        {t('sidebar.about')}
         <Link to="/about" className={classes.link}>
-          More...
+          {t('sidebar.more')}
         </Link>
       </Typography>
-      {/* <Typography className={classes.sidebarTitle}>Categories</Typography>
-      <List component="nav" aria-label="categories" className={classes.list}>
-        {[{ name: 'travel' }, { name: 'guides' }].map(
-          elem =>
-            elem.name !== 'Uncategorized' && (
-              <Fragment key={`category_${elem.name}`}>
-                <ListItem button>
-                  <ListItemText primary={elem.name} />
-                </ListItem>
-                <Divider />
-              </Fragment>
-            )
-        )}
-      </List> */}
+
       <div className={classes.margin}>
         <BrushStroke title="Subscribe" />
       </div>
@@ -87,9 +70,12 @@ export default function Sidebar({ categories, blogImg }) {
       <div className={classes.sidebarContainer}>
         <NewsletterBlog />
       </div>
-      {/* <Typography className={classes.sidebarTitle}>
-            Instagram
-          </Typography> */}
+
+      <div className={classes.margin}>
+        <BrushStroke title="Instagram" />
+      </div>
+
+      <Instagram images={instagram} />
     </div>
   )
 }

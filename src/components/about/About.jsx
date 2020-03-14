@@ -1,13 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import AboutDetail from './AboutDetail'
-import Video from './Video'
+import AboutHero from './AboutHero'
 import Founder from './Founder'
 
 function About({ img }) {
   return (
     <div>
-      <Video img={img[3]} />
+      <AboutHero img={img[3]} />
 
       <AboutDetail img={img} />
 

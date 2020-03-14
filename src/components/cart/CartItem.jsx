@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { useTranslation } from 'react-i18next'
 import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 
@@ -17,11 +16,9 @@ const useStyles = makeStyles(theme => ({
 
 function CartItem({ item }) {
   const classes = useStyles()
-  const { t } = useTranslation()
 
   return (
     <div className={classes.root}>
-      Fin
       <Typography className={classes.quantity}>{item.quantity}</Typography>
       <Typography className={classes.price}>
         {item.price * item.quantity}

@@ -82,7 +82,7 @@ function FeatureDetail({ img }) {
     <div className={classes.root}>
       {details.map((elem, idx) => (
         <Fragment key={`detail${idx}`}>
-          {elem == 'img' && (
+          {elem === 'img' && (
             <Hidden mdUp>
               <div className={classes.containerDetail}>
                 <Img

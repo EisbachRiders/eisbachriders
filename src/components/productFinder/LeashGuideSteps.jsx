@@ -47,9 +47,9 @@ function getStepContent(
   surfLocation,
   setBoardType,
   setBoardSize,
-  setSurfLocation
+  setSurfLocation,
+  classes
 ) {
-  const classes = useStyles()
   switch (step) {
     case 0:
       return (
@@ -262,7 +262,8 @@ export default function LeashGuideSteps({ onClose }) {
                   surfLocation,
                   setBoardType,
                   setBoardSize,
-                  setSurfLocation
+                  setSurfLocation,
+                  classes
                 )}
               </>
               <div className={classes.actionsContainer}>

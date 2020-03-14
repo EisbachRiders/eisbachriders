@@ -50,7 +50,6 @@ function NewsletterBlog() {
   const [isNameValid, setNameValid] = useState(null)
   const [isSnackbarOpen, setSnackbar] = useState(false)
   const [snackbarMessage, setSnackbarMessage] = useState(false)
-  const [error, setError] = useState(false)
   const pattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
 
   const handleSubmit = async e => {
@@ -66,7 +65,6 @@ function NewsletterBlog() {
         )
       } else {
         setSnackbar(true)
-        setError(false)
         setEmailValid(true)
         setNameValid(true)
         setSnackbarMessage('success')
@@ -102,8 +100,6 @@ function NewsletterBlog() {
         setNameValid(true)
         setName(event.target.value)
       }
-    } else if ((name = 'toggle')) {
-      setCheckbox(event.target.checked)
     }
   }
 

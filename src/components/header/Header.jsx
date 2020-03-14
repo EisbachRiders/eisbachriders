@@ -99,42 +99,42 @@ function Header({ isHomepage, lng, changeLng, cart, img }) {
                 <div>
                   <HeaderLink
                     to="/eisbach/"
-                    isActive={location.pathname == '/eisbach/'}
+                    isActive={location.pathname === '/eisbach/'}
                     title={t('header.weather')}
                   />
                   <HeaderLink
                     to="/faq/"
-                    isActive={location.pathname == '/faq/'}
+                    isActive={location.pathname === '/faq/'}
                     title={t('header.faq')}
                   />
                   {process.env.NODE_ENV === 'development' && (
                     <HeaderLink
                       to="/productFinder/"
-                      isActive={location.pathname == '/productFinder/'}
+                      isActive={location.pathname === '/productFinder/'}
                       title={t('header.products')}
                     />
                   )}
                   <HeaderLink
                     to="/about/"
-                    isActive={location.pathname == '/about/'}
+                    isActive={location.pathname === '/about/'}
                     title={t('header.about')}
                   />
                   <HeaderLink
                     to="/blog/"
-                    isActive={location.pathname == '/blog/'}
+                    isActive={location.pathname === '/blog/'}
                     title={t('header.blog')}
                   />
                   <HeaderLink
                     to={
                       process.env.NODE_ENV === 'development' ? '/shop/' : null
                     }
-                    isActive={location.pathname == '/shop/'}
+                    isActive={location.pathname === '/shop/'}
                     title={t('header.shop')}
                     href="https://shop.eisbach-riders.com/"
                   />
                   {process.env.NODE_ENV !== 'development' && (
                     <HeaderLink
-                      isActive={location.pathname == '/cart/'}
+                      isActive={location.pathname === '/cart/'}
                       title={t('header.cart')}
                       href="https://shop.eisbach-riders.com/cart/"
                     />

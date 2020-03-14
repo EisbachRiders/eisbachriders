@@ -8,8 +8,8 @@ import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import Container from '../ui/Container'
 import Sidebar from './Sidebar'
-import Instagram from '../instagram/Instagram'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
+import Paper from '@material-ui/core/Paper'
 
 const useStyles = makeStyles(theme => ({
   title: {
@@ -60,23 +60,33 @@ const useStyles = makeStyles(theme => ({
   },
   blogItem: {
     display: 'flex',
+    alignItems: 'center',
     marginBottom: 45,
   },
   blogImgLink: {
-    width: 250,
-    height: 200,
+    width: 350,
+    height: 350,
   },
   blogImg: {
-    width: 250,
-    height: 200,
+    width: 350,
+    height: 350,
   },
   blogDate: {
     letterSpacing: 3,
     textTransform: 'uppercase',
     marginBottom: 5,
   },
-  blogExcerpt: {
-    margin: 30,
+  blogExcerptRight: {
+    padding: 30,
+    marginRight: -120,
+    zIndex: 2,
+    boxShadow: '0 0 70px rgba(0,0,0,.11)',
+  },
+  blogExcerptLeft: {
+    padding: 30,
+    marginLeft: -120,
+    zIndex: 2,
+    boxShadow: '0 0 70px rgba(0,0,0,.11)',
   },
   blogTitle: {
     fontWeight: 600,
@@ -92,9 +102,11 @@ const useStyles = makeStyles(theme => ({
 export default function Blog({ posts, blogImg, instagram, blogHeaders }) {
   const classes = useStyles()
   const { t } = useTranslation()
+  console.log(posts)
 
   const featured = posts.find(x => x.node.tags[0].includes('featured'))
-  console.log(featured)
+  const listed = posts.filter(x => x.node.slug !== featured.node.slug)
+
   return (
     <div>
       <Typography className={classes.title}>Blog</Typography>
@@ -129,49 +141,64 @@ export default function Blog({ posts, blogImg, instagram, blogHeaders }) {
 
       <Container className={classes.container}>
         <div className={classes.blog}>
-          {posts.map(({ node }, idx) => (
-            <>
-              {node.slug !== featured.node.slug && idx !== 0 && (
-                <div className={classes.blogItem} key={`blogItem_${idx}`}>
-                  {idx !== 0 && (
-                    <Fragment key={`blog_${node.title}`}>
-                      <Link
-                        to={`/blog/${node.slug}`}
-                        className={classes.blogImgLink}
-                      >
-                        <Img
-                          alt={`blog image ${idx}`}
-                          fluid={node.heroImage.fluid}
-                          className={classes.blogImg}
-                        />
-                      </Link>
-                      <div className={classes.blogExcerpt}>
-                        <Typography
-                          className={clsx(classes.blogDate, classes.categories)}
-                        >
-                          {node.tags ? node.tags[0] : ''}
-                        </Typography>
-                        <Link to={`/blog/${node.slug}`}>
-                          <Typography className={classes.blogTitle}>
-                            {node.title}
-                          </Typography>
-                        </Link>
-                        <MDXRenderer>
-                          {node.description.childMdx.body}
-                        </MDXRenderer>
-                      </div>
-                    </Fragment>
+          {listed.map(({ node }, idx) => (
+            <Fragment key={`post_${idx}`}>
+              <div className={classes.blogItem} key={`blogItem_${idx}`}>
+                <Fragment key={`blog_${node.title}`}>
+                  {idx % 2 !== 0 && (
+                    <Link
+                      to={`/blog/${node.slug}`}
+                      className={classes.blogImgLink}
+                    >
+                      <Img
+                        alt={`blog image ${idx}`}
+                        fluid={node.heroImage.fluid}
+                        className={classes.blogImg}
+                      />
+                    </Link>
                   )}
-                </div>
-              )}
-            </>
+                  <Paper
+                    className={
+                      idx % 2 !== 0
+                        ? classes.blogExcerptLeft
+                        : classes.blogExcerptRight
+                    }
+                    square={true}
+                    elevation={0}
+                  >
+                    <Typography
+                      className={clsx(classes.blogDate, classes.categories)}
+                    >
+                      {node.tags ? node.tags[0] : ''}
+                    </Typography>
+                    <Link to={`/blog/${node.slug}`}>
+                      <Typography className={classes.blogTitle}>
+                        {node.title}
+                      </Typography>
+                    </Link>
+                    <p>{node.description.childMdx.excerpt}</p>
+                  </Paper>
+                  {idx % 2 === 0 && (
+                    <Link
+                      to={`/blog/${node.slug}`}
+                      className={classes.blogImgLink}
+                    >
+                      <Img
+                        alt={`blog image ${idx}`}
+                        fluid={node.heroImage.fluid}
+                        className={classes.blogImg}
+                      />
+                    </Link>
+                  )}
+                </Fragment>
+              </div>
+            </Fragment>
           ))}
         </div>
         <div className={classes.sidebar}>
-          <Sidebar blogImg={blogImg} />
+          <Sidebar blogImg={blogImg} instagram={instagram} />
         </div>
       </Container>
-      {/* <Instagram images={instagram} /> */}
     </div>
   )
 }

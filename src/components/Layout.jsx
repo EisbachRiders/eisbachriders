@@ -37,11 +37,12 @@ const useStyles = makeStyles(theme => ({
   h2: {
     textAlign: 'center',
   },
-  p: {
-    marginBottom: 45,
-  },
   a: {
     color: theme.palette.primary.main,
+  },
+  hr: {
+    margin: 30,
+    border: 'transparent',
   },
 }))
 
@@ -52,9 +53,7 @@ function Layout({ isHomepage, img, footerImg, siteTitle, children }) {
   const h1Styled = props => <h1 className={classes.h1} {...props} />
   const h2Styled = props => <h2 className={classes.h2} {...props} />
   const h3Styled = props => <h3 className={classes.h3} {...props} />
-  const pStyled = props => <p className={classes.p} {...props} />
   const hrStyled = () => <hr className={classes.hr} />
-
   const aStyled = props => <a className={classes.a} {...props} />
   const preStyled = props => <div {...props} />
   const strongStyled = props => <strong className={classes.strong} {...props} />
@@ -65,7 +64,6 @@ function Layout({ isHomepage, img, footerImg, siteTitle, children }) {
     h1: h1Styled,
     h2: h2Styled,
     h3: h3Styled,
-    p: pStyled,
     hr: hrStyled,
     pre: preStyled,
     a: aStyled,

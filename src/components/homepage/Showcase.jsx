@@ -117,7 +117,6 @@ function Showcase() {
                 src={elem.images[0]}
                 className={classes.img}
                 alt={`product ${idx}`}
-                onClick={() => handleDialogOpen(idx)}
               />
               <div className={classes.descriptionContainer}>
                 <Typography className={classes.name}>{elem.name}</Typography>

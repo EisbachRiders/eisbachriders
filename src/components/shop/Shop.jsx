@@ -1,5 +1,4 @@
 import React from 'react'
-import { useTranslation } from 'react-i18next'
 import Img from 'gatsby-image'
 import { makeStyles } from '@material-ui/core/styles'
 import Hidden from '@material-ui/core/Hidden'
@@ -52,7 +51,6 @@ const useStyles = makeStyles(theme => ({
 
 function Shop({ images }) {
   const classes = useStyles()
-  const { t } = useTranslation()
 
   return (
     <>

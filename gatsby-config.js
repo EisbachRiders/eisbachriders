@@ -66,6 +66,7 @@ module.exports = {
       options: {
         spaceId: process.env.CONTENTFUL_SPACE,
         accessToken: process.env.CONTENTFUL_API,
+        host: process.env.CONTENTFUL_HOST,
       },
     },
     {
@@ -91,11 +92,10 @@ module.exports = {
     {
       resolve: `gatsby-source-instagram`,
       options: {
-        username: `username`,
-        access_token: process.env.INSTA_API,
+        username: `eisbachriders`,
       },
     },
-    'gatsby-plugin-eslint',
+    // 'gatsby-plugin-eslint',
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -127,7 +127,6 @@ module.exports = {
         icon: `src/assets/logos/logo.png`,
       },
     },
-    'gatsby-plugin-top-layout',
     'gatsby-plugin-material-ui',
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,

@@ -44,7 +44,7 @@ function Membership() {
         <a
           href="https://www.surfrider.org/"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           alt="surf rider website"
         >
           <img src={surfriderLogo} className={classes.logo} alt="surfrider" />
@@ -52,7 +52,7 @@ function Membership() {
         <a
           href="https://www.igsm.info/"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           alt="igsm website"
         >
           <img src={igsmLogo} className={classes.logo} alt="igsm" />

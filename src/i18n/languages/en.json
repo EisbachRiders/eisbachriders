@@ -135,5 +135,13 @@
   },
   "stores": {
     "sectionTitle": "More Stores"
+  },
+  "weather": {
+    "heroTitle": "Current Surf Outlook:",
+    "heroText": "Surf's Up!"
+  },
+  "sidebar": {
+    "more": " More...",
+    "about": "Follow us on our adventures through Munich and travels around the world to learn more about surfing and sustainability!"
   }
 }

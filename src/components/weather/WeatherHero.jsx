@@ -126,7 +126,7 @@ function WeatherHero({ img }) {
       />
       <div className={classes.container}>
         <Typography className={clsx(classes.text, classes.subtitle)}>
-          Current Surf Outlook:
+          {t('weather.heroTitle')}
         </Typography>
         <Hidden xsDown>
           <Typography
@@ -134,7 +134,7 @@ function WeatherHero({ img }) {
             gutterBottom
             className={clsx(classes.text, classes.title)}
           >
-            surfs up!
+            {t('weather.heroText')}
           </Typography>
         </Hidden>
         <Hidden smUp>
@@ -143,7 +143,7 @@ function WeatherHero({ img }) {
             gutterBottom
             className={clsx(classes.text, classes.title)}
           >
-            surfs up!
+            {t('weather.heroText')}
           </Typography>
         </Hidden>
       </div>

@@ -1,13 +1,15 @@
 import React from 'react'
-import { useTranslation } from 'react-i18next'
 import { makeStyles } from '@material-ui/core/styles'
-import clsx from 'clsx'
-import Container from '../ui/Container'
+import MuiLink from '@material-ui/core/Link'
 
 const useStyles = makeStyles(theme => ({
   container: {
     display: 'flex',
     justifyContent: 'space-between',
+    flexWrap: 'wrap',
+  },
+  flexItem: {
+    flexBasis: '30%',
   },
   img: {
     width: '100%',
@@ -16,20 +18,23 @@ const useStyles = makeStyles(theme => ({
 
 function Instagram({ images }) {
   const classes = useStyles()
-  const { t } = useTranslation()
-
-  const posts = images.edges.slice(0, 6)
 
   return (
     <div className={classes.container}>
-      {posts.map((elem, idx) => (
-        <div key={`instagram_photo_${idx}`}>
+      {images.map((elem, idx) => (
+        <MuiLink
+          key={`instagram_photo_${idx}`}
+          className={classes.flexItem}
+          href={`https://www.instagram.com/p/${elem.node.id}/`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
-            src={elem.node.preview}
-            alt={elem.node.caption}
+            src={elem.node.localFile.childImageSharp.fluid.srcWebp}
+            alt={`instagram image ${idx}`}
             className={classes.img}
           />
-        </div>
+        </MuiLink>
       ))}
     </div>
   )

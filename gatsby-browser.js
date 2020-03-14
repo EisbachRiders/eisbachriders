@@ -4,5 +4,5 @@ import wrapWithProvider from './wrap-with-provider'
 // export const replaceHydrateFunction = () => (element, container, callback) =>
 //   ReactDOM.render(element, container, callback)
 
-//For Redux
+//For Redux and MUI theme
 export const wrapRootElement = wrapWithProvider
