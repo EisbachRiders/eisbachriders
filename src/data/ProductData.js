@@ -13,7 +13,7 @@ export const productsFins = [
     images: [product1],
     price: '19.90',
     ebay: '',
-    amazon: 'https://shop.eisbach-riders.com/product/double-tab-nylon-black/',
+    amazon: 'https://shop.eisbach-riders.com/shop/essential-double-tab-fins/',
     more: {
       en: [
         'Set of 3 fins with center fin and the two side fins (right and left) with inside profile in standard size G5 / M5.',
@@ -55,7 +55,7 @@ export const productsFins = [
     images: [product3],
     price: '19.90',
     ebay: '',
-    amazon: 'https://shop.eisbach-riders.com/product/single-tab-nylon-fins/',
+    amazon: 'https://shop.eisbach-riders.com/shop/essential-single-tab-fins/',
     more: {
       en: [
         'Set of 3 fins with center fin and the two side fins (right and left) with inside profile in standard size G5 / M5.',

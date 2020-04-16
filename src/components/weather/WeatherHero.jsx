@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
-import { useTranslation } from 'react-i18next'
-import clsx from 'clsx'
+// import { useTranslation } from 'react-i18next'
+// import clsx from 'clsx'
 import { makeStyles } from '@material-ui/core/styles'
-import Typography from '@material-ui/core/Typography'
-import Hidden from '@material-ui/core/Hidden'
+// import Typography from '@material-ui/core/Typography'
+// import Hidden from '@material-ui/core/Hidden'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -114,7 +114,7 @@ const useStyles = makeStyles(theme => ({
 
 function WeatherHero({ img }) {
   const classes = useStyles()
-  const { t } = useTranslation()
+  // const { t } = useTranslation()
   return (
     <div className={classes.root}>
       <Img
@@ -124,7 +124,7 @@ function WeatherHero({ img }) {
         imgStyle={{ objectPosition: 'center center' }}
         style={{ position: 'absolute' }}
       />
-      <div className={classes.container}>
+      {/* <div className={classes.container}>
         <Typography className={clsx(classes.text, classes.subtitle)}>
           {t('weather.heroTitle')}
         </Typography>
@@ -146,7 +146,7 @@ function WeatherHero({ img }) {
             {t('weather.heroText')}
           </Typography>
         </Hidden>
-      </div>
+      </div> */}
     </div>
   )
 }

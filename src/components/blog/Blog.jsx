@@ -102,9 +102,7 @@ const useStyles = makeStyles(theme => ({
 export default function Blog({ posts, blogImg, instagram, blogHeaders }) {
   const classes = useStyles()
   const { t } = useTranslation()
-  console.log(posts)
-
-  const featured = posts.find(x => x.node.tags[0].includes('featured'))
+  const featured = posts.find(x => x.node.tags.includes('featured'))
   const listed = posts.filter(x => x.node.slug !== featured.node.slug)
 
   return (

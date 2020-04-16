@@ -251,7 +251,10 @@ function Weather({ img }) {
           <WeatherHero img={img} />
           <Container className={classes.container}>
             <Typography variant="h1" align="center" className={classes.header}>
-              Current Conditions on the Eisbach
+              Please be respectful, the Eisbach is currently closed.
+            </Typography>
+            <Typography variant="h1" align="center" className={classes.header}>
+              Now is a great time to take care of your board!
             </Typography>
           </Container>
           <div className={classes.chartContainer}>
