@@ -8,7 +8,6 @@ import ListItemText from '@material-ui/core/ListItemText'
 
 const useStyles = makeStyles(theme => ({
   container: {
-    background: theme.status.white,
     paddingLeft: 15,
     paddingRight: 15,
     paddingBottom: 30,

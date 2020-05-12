@@ -47,9 +47,9 @@ function getStepContent(
   surfLocation,
   setBoardType,
   setWaveSize,
-  setSurfLocation
+  setSurfLocation,
+  classes
 ) {
-  const classes = useStyles()
   switch (step) {
     case 0:
       return (
@@ -262,7 +262,8 @@ export default function FinGuideSteps({ onClose }) {
                   surfLocation,
                   setBoardType,
                   setWaveSize,
-                  setSurfLocation
+                  setSurfLocation,
+                  classes
                 )}
               </>
               <div className={classes.actionsContainer}>

@@ -9,10 +9,10 @@ import HeroBottom from '../components/homepage/HeroBottom'
 
 function Index({ data }) {
   const heroImg = data.allImageSharp.edges.find(x =>
-    x.node.fluid.src.includes('blog')
+    x.node.fluid.src.includes('blogHeader')
   )
   const featureImg = data.allImageSharp.edges.find(x =>
-    x.node.fluid.src.includes('featuredProduct')
+    x.node.fluid.src.includes('fin2')
   )
   const newImg = data.allImageSharp.edges.find(x =>
     x.node.fluid.src.includes('newProduct')

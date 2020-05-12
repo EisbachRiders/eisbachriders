@@ -1,63 +1,8 @@
 import React from 'react'
-import { useTranslation } from 'react-i18next'
-import { makeStyles } from '@material-ui/core/styles'
-import clsx from 'clsx'
-import { PieChart, Pie, Cell } from 'recharts'
-import { Typography } from '@material-ui/core'
+import { VictoryPie, VictoryLabel } from 'victory'
 import theme from '../../theme'
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    marginBottom: 60,
-  },
-  title: {
-    fontWeight: 'bold',
-  },
-  chartContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-    position: 'relative',
-  },
-  needle: {
-    height: 70,
-    zIndex: 2,
-    position: 'absolute',
-  },
-  low: {
-    borderLeft: `2px solid ${theme.status.black}`,
-    transform: 'rotate(305deg)',
-    bottom: -12,
-    left: '42.5%',
-  },
-  med: {
-    borderLeft: `2px solid ${theme.status.black}`,
-    bottom: 0,
-  },
-  high: {
-    borderLeft: `2px solid ${theme.status.black}`,
-    transform: 'rotate(55deg)',
-    bottom: -12,
-    left: '56.5%',
-  },
-  legend:{
-    width: 165,
-    marginTop: 5,
-    margin: '0 auto',
-    display: 'flex',
-    justifyContent: "space-between"
-  }
-}))
-
-function Chart({ value, max, unit, title }) {
-  const { t } = useTranslation()
-  const classes = useStyles()
-
-  const data = [
-    { name: 'Group A', value: 60 },
-    { name: 'Group B', value: 60 },
-    { name: 'Group C', value: 60 },
-  ]
-
+function Chart({ value, max, min, unit, title }) {
   const colors1 = [theme.status.finLt, theme.status.fin, theme.status.finDk]
   const colors2 = [
     theme.status.blueLt2,
@@ -69,51 +14,68 @@ function Chart({ value, max, unit, title }) {
     theme.status.greenLt2,
     theme.status.green,
   ]
-  const colors =
-    title === 'Water Temperature'
-      ? colors2
-      : title === 'Runoff'
-      ? colors3
-      : colors1
-  const percent = value / max
-  const needle = percent > 0.66 ? 'high' : percent < 0.42 ? 'low' : 'med'
+  const percent = [((value - min) / (max - min)) * 100]
 
   return (
-    <div className={classes.root}>
-      <Typography className={classes.title} align="center">
-        {title}
-      </Typography>
-      <Typography className={classes.title} align="center">{`${value} ${unit}`}</Typography>
-      <div className={classes.chartContainer}>
-        <PieChart
-          width={300}
-          height={100}
-          margin={{ top: 0, right: 0, bottom: -100, left: 0 }}
-        >
-          <Pie
-            dataKey="value"
-            data={data}
-            startAngle={180}
-            endAngle={0}
-            innerRadius={60}
-            outerRadius={80}
-          >
-            {data.map((entry, index) => (
-              <Cell key={entry.name} fill={colors[index % colors.length]} />
-            ))}
-          </Pie>
-        </PieChart>
-        <div
-          className={clsx(classes.needle, {
-            [classes[needle]]: needle !== null,
-          })}
-        />
-      </div>
-        <div className={classes.legend}>
-        <Typography variant="caption">0</Typography>
-        <Typography variant="caption">{max}</Typography>
-        </div>
-    </div>
+    <svg viewBox="0 0 400 400" width="20%" height="20%">
+      <defs>
+        <linearGradient id="myGradient1">
+          <stop offset="0%" stopColor={colors2[0]} />
+          <stop offset="50%" stopColor={colors2[1]} />
+          <stop offset="100%" stopColor={colors2[2]} />
+        </linearGradient>
+        <linearGradient id="myGradient2">
+          <stop offset="0%" stopColor={colors3[0]} />
+          <stop offset="50%" stopColor={colors3[1]} />
+          <stop offset="100%" stopColor={colors3[2]} />
+        </linearGradient>
+        <linearGradient id="myGradient3">
+          <stop offset="0%" stopColor={colors1[0]} />
+          <stop offset="50%" stopColor={colors1[1]} />
+          <stop offset="100%" stopColor={colors1[2]} />
+        </linearGradient>
+      </defs>
+      <VictoryPie
+        standalone={false}
+        width={400}
+        height={400}
+        data={[
+          { x: 1, y: percent },
+          { x: 2, y: 100 - percent },
+        ]}
+        innerRadius={120}
+        labels={() => null}
+        style={{
+          data: {
+            fill: ({ datum }) => {
+              return datum.x === 1
+                ? title === 'Water Temperature'
+                  ? 'url(#myGradient1)'
+                  : title === 'Runoff'
+                  ? 'url(#myGradient2)'
+                  : 'url(#myGradient3)'
+                : theme.status.greyLt2
+            },
+          },
+        }}
+      />
+      <VictoryLabel
+        textAnchor="middle"
+        verticalAnchor="middle"
+        x={200}
+        y={175}
+        text={title}
+        style={{ fontSize: 20 }}
+      />
+      <VictoryLabel
+        textAnchor="middle"
+        verticalAnchor="middle"
+        x={200}
+        y={225}
+        text={`${value} ${unit}`}
+        style={{ fontSize: 28 }}
+      />
+    </svg>
   )
 }
 

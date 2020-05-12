@@ -47,15 +47,14 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     paddingLeft: 10,
   },
-  form:{
-    display: "flex",
-    flexWrap: "noWrap",
-    width: "100%",
-
+  form: {
+    display: 'flex',
+    flexWrap: 'noWrap',
+    width: '100%',
   },
   textField: {
     background: theme.status.white,
-    flexGrow: 1
+    flexGrow: 1,
   },
   outline: {
     borderRadius: 0,

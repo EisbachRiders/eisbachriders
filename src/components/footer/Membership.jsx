@@ -15,11 +15,13 @@ const useStyles = makeStyles(theme => ({
     zIndex: 1,
   },
   logoContainer: {
-    width: 350,
-    margin: "0 auto",
+    margin: '0 auto',
     display: 'flex',
     justifyContent: 'space-between',
     zIndex: 1,
+    [theme.breakpoints.up('md')]: {
+      width: 350,
+    },
   },
   logo: {
     height: 50,
@@ -42,7 +44,7 @@ function Membership() {
         <a
           href="https://www.surfrider.org/"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           alt="surf rider website"
         >
           <img src={surfriderLogo} className={classes.logo} alt="surfrider" />
@@ -50,7 +52,7 @@ function Membership() {
         <a
           href="https://www.igsm.info/"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
           alt="igsm website"
         >
           <img src={igsmLogo} className={classes.logo} alt="igsm" />

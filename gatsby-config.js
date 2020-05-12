@@ -29,14 +29,14 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
-    {
-      resolve: `gatsby-source-graphql`,
-      options: {
-        typeName: 'WPGraphQL',
-        fieldName: 'wpgraphql',
-        url: 'https://shop.eisbach-riders.com/graphql',
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-graphql`,
+    //   options: {
+    //     typeName: 'WPGraphQL',
+    //     fieldName: 'wpgraphql',
+    //     url: 'https://shop.eisbach-riders.com/graphql',
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-facebook-pixel`,
       options: {
@@ -57,8 +57,16 @@ module.exports = {
       options: {
         extensions: [`.mdx`, `.md`],
         defaultLayouts: {
-          default: require.resolve('./src/components/LayoutMdx.jsx'),
+          default: require.resolve('./src/components/Layout.jsx'),
         },
+      },
+    },
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE,
+        accessToken: process.env.CONTENTFUL_API,
+        host: process.env.CONTENTFUL_HOST,
       },
     },
     {
@@ -81,6 +89,13 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `eisbachriders`,
+      },
+    },
+    // 'gatsby-plugin-eslint',
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -112,7 +127,6 @@ module.exports = {
         icon: `src/assets/logos/logo.png`,
       },
     },
-    'gatsby-plugin-top-layout',
     'gatsby-plugin-material-ui',
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,

@@ -109,7 +109,7 @@ function Feature({ img }) {
             color="primary"
             variant="outlined"
             className={classes.button}
-            href="https://shop.eisbach-riders.com/product/single-tab-fiberglass-honeycomb-fins/"
+            href="https://shop.eisbach-riders.com/shop/single-tab-fiberglass-honeycomb-fins/"
           >
             {t('common.more')}
           </Button>

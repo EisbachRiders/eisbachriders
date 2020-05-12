@@ -28,6 +28,9 @@ const useStyles = makeStyles(theme => ({
       color: theme.palette.common.black,
     },
   },
+  inverse: {
+    color: theme.status.white,
+  },
 }))
 
 function HeaderLink({
@@ -36,6 +39,7 @@ function HeaderLink({
   to,
   onClick,
   isActive,
+  inverse,
   className: classNameProp,
 }) {
   const classes = useStyles()
@@ -45,7 +49,10 @@ function HeaderLink({
       className={clsx(
         classNameProp,
         classes.button,
-        isActive ? classes.isActive : classes.mainTheme
+        isActive ? classes.isActive : classes.mainTheme,
+        {
+          [classes.inverse]: inverse,
+        }
       )}
       href={href}
       onClick={onClick}
@@ -58,7 +65,10 @@ function HeaderLink({
         className={clsx(
           classNameProp,
           classes.button,
-          isActive ? classes.isActive : classes.mainTheme
+          isActive ? classes.isActive : classes.mainTheme,
+          {
+            [classes.inverse]: inverse,
+          }
         )}
       >
         {title}

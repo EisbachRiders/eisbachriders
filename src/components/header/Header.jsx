@@ -31,8 +31,7 @@ const mapDispatchToProps = dispatch => {
 const useStyles = makeStyles(theme => ({
   appbar: {
     boxShadow: 'none',
-    backgroundColor: theme.status.white,
-    borderBottom: `1px solid ${theme.status.grey}`,
+    background: theme.status.white,
   },
   toolbar: {
     paddingLeft: 15,
@@ -60,12 +59,15 @@ const useStyles = makeStyles(theme => ({
     },
   },
   spacer: {
-    marginTop: 60,
+    marginTop: 50,
     [theme.breakpoints.up('sm')]: {
+      marginTop: 104,
+    },
+    [theme.breakpoints.up('md')]: {
       marginTop: 80,
     },
     [theme.breakpoints.up('lg')]: {
-      marginTop: 100,
+      marginTop: 98,
     },
   },
 }))
@@ -74,15 +76,16 @@ function Header({ isHomepage, lng, changeLng, cart, img }) {
   const classes = useStyles()
   const { t } = useTranslation()
   const [isDrawerOpen, setDrawer] = useState(false)
-
   const isActive = true
   return (
     <>
       <AppBar position="fixed" className={classes.appbar}>
-        <Hidden smDown>
+        <Hidden xsDown>
           <Banner
             isActive={isActive}
-            cartItems={cart.length !== 0 ? cart[0].quantity : 0}
+            cart={cart ? cart : []}
+            lng={lng}
+            changeLng={changeLng}
           />
         </Hidden>
 
@@ -96,44 +99,46 @@ function Header({ isHomepage, lng, changeLng, cart, img }) {
                 <div>
                   <HeaderLink
                     to="/eisbach/"
-                    isActive={location.pathname == '/eisbach/'}
+                    isActive={location.pathname === '/eisbach/'}
                     title={t('header.weather')}
                   />
                   <HeaderLink
                     to="/faq/"
-                    isActive={location.pathname == '/faq/'}
+                    isActive={location.pathname === '/faq/'}
                     title={t('header.faq')}
                   />
-                  {/* <HeaderLink
-                    to="/productFinder/"
-                    isActive={location.pathname == '/productFinder/'}
-                    title={t('header.products')}
-                  /> */}
+                  {process.env.NODE_ENV === 'development' && (
+                    <HeaderLink
+                      to="/productFinder/"
+                      isActive={location.pathname === '/productFinder/'}
+                      title={t('header.products')}
+                    />
+                  )}
                   <HeaderLink
                     to="/about/"
-                    isActive={location.pathname == '/about/'}
+                    isActive={location.pathname === '/about/'}
                     title={t('header.about')}
                   />
-                  {/* <HeaderLink
-                    to="/blog/"
-                    isActive={location.pathname == '/blog/'}
-                    title={t('header.blog')}
-                  /> */}
                   <HeaderLink
-                    to="/shop/"
-                    isActive={location.pathname == '/shop/'}
+                    to="/blog/"
+                    isActive={location.pathname === '/blog/'}
+                    title={t('header.blog')}
+                  />
+                  <HeaderLink
+                    to={
+                      process.env.NODE_ENV === 'development' ? '/shop/' : null
+                    }
+                    isActive={location.pathname === '/shop/'}
                     title={t('header.shop')}
                     href="https://shop.eisbach-riders.com/"
                   />
-                  <HeaderLink
-                    to="/cart/"
-                    isActive={location.pathname == '/cart/'}
-                    title={t('header.cart')}
-                    href="https://shop.eisbach-riders.com/cart/"
-                  />
-                  {/* <HeaderLink onClick={changeLng} isActive={isActive}>
-                {lng === 'en' ? 'de' : 'en'}
-              </HeaderLink> */}
+                  {process.env.NODE_ENV !== 'development' && (
+                    <HeaderLink
+                      isActive={location.pathname === '/cart/'}
+                      title={t('header.cart')}
+                      href="https://shop.eisbach-riders.com/cart/"
+                    />
+                  )}
                 </div>
               )}
             </Location>
@@ -195,7 +200,4 @@ Header.propTypes = {
   changeLng: PropTypes.func.isRequired,
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Header)
+export default connect(mapStateToProps, mapDispatchToProps)(Header)

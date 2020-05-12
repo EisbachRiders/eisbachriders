@@ -15,14 +15,14 @@ import ListItemText from '@material-ui/core/ListItemText'
 import BrushStroke from '../ui/BrushStroke'
 import Container from '../ui/Container'
 import oceana from '../../assets/images/about/oceana.png'
+import provideTheSlide from '../../assets/images/provideTheSlide.png'
 import oceanconservancy from '../../assets/images/about/oceanconservancy.png'
 import oceancleanup from '../../assets/images/about/oceancleanup.png'
-import worldcleanupday from '../../assets/images/about/worldcleanupday.png'
 import igsmLogo from '../../assets/logos/igsmLogo.png'
 import srfLogo from '../../assets/images/about/surfrider.png'
 import wirmachenwelleLogo from '../../assets/images/about/wirmachenwelle.png'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexWrap: 'wrap',
@@ -189,6 +189,31 @@ function AboutDetail({ img }) {
           >
             <ListItem
               button
+              href="https://providetheslide.com/"
+              component="a"
+              target="_blank"
+              rel="noopener"
+            >
+              <ListItemAvatar>
+                <Avatar>
+                  <img
+                    src={provideTheSlide}
+                    className={classes.avatar}
+                    alt="provide the slide logo"
+                  />
+                </Avatar>
+              </ListItemAvatar>
+              <ListItemText
+                classes={{
+                  primary: classes.listTextPrimary,
+                  secondary: classes.listText,
+                }}
+                primary="Provide the Slide"
+                secondary="Provide the Slide focuses on bringing boards, waves and people together. While on a trip to Liberia, they saw a need for surfboard, which was a shame given the beauty of the waves in the area. The thought of all of the unused surfboards out there that would serve a better purpose and founded this project. By making a donation of an used surfboard to this foundation, PROVIDETHESLIDE brings the boards where they are needed and surfed. They enable locals to surf and pass on the surfing to others as well as generate a small income around the sport (e.g. with a small shop, board rental, board repair, etc.) ). So if you are getting a new board and are looking for a good use for your old board, we cannot recommend this enough!"
+              />
+            </ListItem>
+            <ListItem
+              button
               href="https://www.igsm.info/"
               component="a"
               target="_blank"
@@ -196,7 +221,11 @@ function AboutDetail({ img }) {
             >
               <ListItemAvatar>
                 <Avatar>
-                  <img src={igsmLogo} className={classes.avatar} />
+                  <img
+                    src={igsmLogo}
+                    className={classes.avatar}
+                    alt="igsm logo"
+                  />
                 </Avatar>
               </ListItemAvatar>
               <ListItemText
@@ -217,7 +246,11 @@ function AboutDetail({ img }) {
             >
               <ListItemAvatar>
                 <Avatar>
-                  <img src={wirmachenwelleLogo} className={classes.avatar} />
+                  <img
+                    src={wirmachenwelleLogo}
+                    className={classes.avatar}
+                    alt="wir machen welle logo"
+                  />
                 </Avatar>
               </ListItemAvatar>
               <ListItemText
@@ -238,7 +271,11 @@ function AboutDetail({ img }) {
             >
               <ListItemAvatar>
                 <Avatar>
-                  <img src={srfLogo} className={classes.avatar} />
+                  <img
+                    src={srfLogo}
+                    className={classes.avatar}
+                    alt="surf rider logo"
+                  />
                 </Avatar>
               </ListItemAvatar>
               <ListItemText
@@ -269,7 +306,11 @@ function AboutDetail({ img }) {
             >
               <ListItemAvatar>
                 <Avatar>
-                  <img src={oceanconservancy} className={classes.avatar} />
+                  <img
+                    src={oceanconservancy}
+                    className={classes.avatar}
+                    alt="ocean conservancy logo"
+                  />
                 </Avatar>
               </ListItemAvatar>
               <ListItemText
@@ -290,7 +331,11 @@ function AboutDetail({ img }) {
             >
               <ListItemAvatar>
                 <Avatar>
-                  <img src={oceancleanup} className={classes.avatar} />
+                  <img
+                    src={oceancleanup}
+                    className={classes.avatar}
+                    alt="ocean cleanup logo"
+                  />
                 </Avatar>
               </ListItemAvatar>
               <ListItemText
@@ -311,7 +356,11 @@ function AboutDetail({ img }) {
             >
               <ListItemAvatar>
                 <Avatar>
-                  <img src={oceana} className={classes.avatar} />
+                  <img
+                    src={oceana}
+                    className={classes.avatar}
+                    alt="oceana logo"
+                  />
                 </Avatar>
               </ListItemAvatar>
               <ListItemText

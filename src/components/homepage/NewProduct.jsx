@@ -114,7 +114,7 @@ function NewProduct() {
     {
       product: 'wax',
       title: 'Bee Swell Surf Wax',
-      amazon: 'https://shop.eisbach-riders.com/product/handmade-surf-wax/',
+      amazon: 'https://shop.eisbach-riders.com/shop/bee-swell-surf-wax/',
       img: img_wax,
       logo: logo_wax,
     },

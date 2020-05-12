@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/core/styles'
 import Cart from '../cart/Cart'
 import MyTotal from './Total'
@@ -34,7 +33,5 @@ function Checkout() {
     </div>
   )
 }
-
-Checkout.propTypes = {}
 
 export default Checkout

@@ -1,9 +1,9 @@
 import React from 'react'
-import { graphql } from 'gatsby'
 import { makeStyles } from '@material-ui/core/styles'
-import Layout from '../Layout'
+import Img from 'gatsby-image'
 import Container from '../ui/Container'
 import Sidebar from './Sidebar'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -13,70 +13,38 @@ const useStyles = makeStyles(theme => ({
   blog: {
     display: 'flex',
     flexDirection: 'column',
-    flexBasis: '60%',
+    flexBasis: '70%',
   },
   sidebar: {
     display: 'flex',
     flexDirection: 'column',
-    flexBasis: '30%',
+    flexBasis: '25%',
   },
   featureImg: {
-    width: 600,
+    height: 600,
+  },
+  h1: {
+    marginBottom: 30,
   },
 }))
 
-export default ({ data }) => {
+export default function BlogPost({ post, blogImg, instagram }) {
   const classes = useStyles()
-  const post = data.wpgraphql.post
+
   return (
-    <Layout seoTitle={post.title}>
-      <Container className={classes.container}>
-        <div className={classes.blog}>
-          <img
-            src={post.featuredImage.link}
-            alt="blog feature image"
-            className={classes.featureImg}
-          />
-          <h1>{post.title}</h1>
-          <div dangerouslySetInnerHTML={{ __html: post.content }} />
-        </div>
-        <div className={classes.sidebar}>
-          <Sidebar />
-        </div>
-      </Container>
-    </Layout>
+    <Container className={classes.container}>
+      <div className={classes.blog}>
+        <h1 className={classes.h1}>{post.title}</h1>
+        <Img
+          fluid={post.heroImage.fluid}
+          alt="blog feature image"
+          className={classes.featureImg}
+        />
+        <MDXRenderer>{post.body.childMdx.body}</MDXRenderer>
+      </div>
+      <div className={classes.sidebar}>
+        <Sidebar blogImg={blogImg} instagram={instagram} />
+      </div>
+    </Container>
   )
 }
-export const pageQuery = graphql`
-  query GET_POST($id: ID!) {
-    wpgraphql {
-      post(id: $id) {
-        title
-        content
-        uri
-        featuredImage {
-          link
-        }
-        author {
-          name
-          slug
-          avatar {
-            url
-          }
-        }
-        tags {
-          nodes {
-            name
-            link
-          }
-        }
-        categories {
-          nodes {
-            name
-            link
-          }
-        }
-      }
-    }
-  }
-`

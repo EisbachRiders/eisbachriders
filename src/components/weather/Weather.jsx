@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { useTranslation } from 'react-i18next'
 import { makeStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import CircularProgress from '@material-ui/core/CircularProgress'
 import Container from '../ui/Container'
+import WeatherHero from './WeatherHero'
 import Chart from './Chart'
-import WeatherHero from "./WeatherHero"
-import Chart2 from "./Chart2"
-// import TempChart from './TempChart'
 
 const useStyles = makeStyles(theme => ({
   containerProgress: {
@@ -18,21 +15,15 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-
   },
   chartContainer: {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
-
   },
   header: {
     fontSize: 16,
     fontWeight: 'bold',
-  },
-  subheader:{
-    // marginRight: 180,
-    // marginLeft: 180
   },
   title: {
     fontWeight: 'bold',
@@ -56,8 +47,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-function Weather({img}) {
-  const { t } = useTranslation()
+function Weather({ img }) {
   const classes = useStyles()
   const [isLoading, setLoading] = useState(false)
   const [water, setWater] = useState('')
@@ -70,12 +60,12 @@ function Weather({img}) {
   const [runoff, setRunoff] = useState('')
   const [runoffTime, setRunoffTime] = useState('')
 
-  async function fetchUrl(url) {
-    const response = await fetch(url)
-    const json = await response.json()
-    setData(json)
-    setLoading(false)
-  }
+  // async function fetchUrl(url) {
+  //   const response = await fetch(url)
+  //   const json = await response.json()
+  //   setData(json)
+  //   setLoading(false)
+  // }
 
   const getWaterData = value => {
     let waterTemp = null
@@ -258,25 +248,34 @@ function Weather({img}) {
       )}
       {!isLoading && (
         <>
-        <WeatherHero img={img}/>
+          <WeatherHero img={img} />
           <Container className={classes.container}>
             <Typography variant="h1" align="center" className={classes.header}>
-              Current Conditions on the Eisbach
+              Please be respectful, the Eisbach is currently closed.
+            </Typography>
+            <Typography variant="h1" align="center" className={classes.header}>
+              Now is a great time to take care of your board!
             </Typography>
           </Container>
           <div className={classes.chartContainer}>
-            <Chart2
+            <Chart
               value={water || water2}
               title="Water Temperature"
               unit="°C"
               max="22"
-              min='0'
+              min="0"
             />
-            <Chart2 value={level} title="Water Level" max="155" min="75" unit="cm" />
-            <Chart2 value={runoff} title="Runoff" max="30" min="0" unit="m³/s" />
+            <Chart
+              value={level}
+              title="Water Level"
+              max="155"
+              min="75"
+              unit="cm"
+            />
+            <Chart value={runoff} title="Runoff" max="30" min="0" unit="m³/s" />
           </div>
           <Container className={classes.container}>
-          <Typography align="center" className={classes.subheader}>
+            <Typography align="center">
               The Eisbach is the famous river surfing spot in Munich which can
               be surfed year around. The German name <em>Eisbach</em> (which can
               be translated to <em>ice creek</em>) acts as a synonym for the
@@ -287,12 +286,10 @@ function Weather({img}) {
               surf session!
             </Typography>
           </Container>
-
-            </>
+        </>
       )}
       {!isLoading && (
         <Container className={classes.footnoteContainer}>
-          {/* <TempChart temp={temp} /> */}
           <Typography className={classes.footnote} align="right">
             Taken at: {runoffTime}
           </Typography>
@@ -300,6 +297,7 @@ function Weather({img}) {
             className={classes.link}
             href="https://www.gkd.bayern.de/en/"
             target="_blank"
+            rel="noopener noreferrer"
           >
             source
           </a>

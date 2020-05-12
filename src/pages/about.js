@@ -5,7 +5,7 @@ import About from '../components/about/About'
 
 function AboutPage({ data }) {
   const about1 = data.allImageSharp.edges.find(x =>
-    x.node.fluid.src.includes('about1')
+    x.node.fluid.src.includes('trash')
   )
   const about2 = data.allImageSharp.edges.find(x =>
     x.node.fluid.src.includes('about2')

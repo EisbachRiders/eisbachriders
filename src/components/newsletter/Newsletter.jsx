@@ -14,7 +14,7 @@ import FormControlLabel from '@material-ui/core/FormControlLabel'
 import Checkbox from '@material-ui/core/Checkbox'
 import IconButton from '@material-ui/core/IconButton'
 import CloseIcon from '@material-ui/icons/Close'
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 const useStyles = makeStyles(theme => ({
   containerNewsletter: {
@@ -64,8 +64,8 @@ const useStyles = makeStyles(theme => ({
     marginLeft: 30,
     marginRight: 30,
     marginBottom: 30,
-    display: "flex",
-    flexDirection: "column-reverse"
+    display: 'flex',
+    flexDirection: 'column-reverse',
   },
   close: {
     float: 'right',
@@ -80,8 +80,8 @@ const useStyles = makeStyles(theme => ({
 
 function Newsletter({ variant }) {
   const classes = useStyles()
-  const theme = useTheme();
-  const fullScreen = useMediaQuery(theme.breakpoints.down('xs'));
+  const theme = useTheme()
+  const fullScreen = useMediaQuery(theme.breakpoints.down('xs'))
   const { t } = useTranslation()
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
@@ -197,7 +197,11 @@ function Newsletter({ variant }) {
       >
         {t(variant === 'small' ? 'newsletter.newsletter' : 'newsletter.signUp')}
       </Button>
-      <Dialog open={isDialogOpen} onClose={() => setDialog(false)} fullScreen={fullScreen}>
+      <Dialog
+        open={isDialogOpen}
+        onClose={() => setDialog(false)}
+        fullScreen={fullScreen}
+      >
         <DialogTitle id="dialog-title">
           {t('newsletter.newsletter')}
           <IconButton
@@ -273,7 +277,6 @@ function Newsletter({ variant }) {
             className={classes.actionButton}
             color="primary"
             variant="contained"
-            autoFocus
             type="submit"
           >
             {t('newsletter.subscribe')}

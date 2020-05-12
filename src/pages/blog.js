@@ -3,30 +3,85 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Blog from '../components/blog/Blog'
 
-function BlogPage({ data }) {
+function BlogIndex({ data }) {
+  const siteTitle = data.site.siteMetadata.title
+  const posts = data.allContentfulBlogPost.edges
+  const instagram = data.allInstaNode.edges
   const footerImg = data.allImageSharp.edges.find(x =>
     x.node.fluid.src.includes('footer')
   )
-  const headerImg = data.allImageSharp.edges.find(x =>
-    x.node.fluid.src.includes('blogHeader')
+  const blogImg = data.allImageSharp.edges.find(x =>
+    x.node.fluid.src.includes('blogAbout')
+  )
+  const blog1 = data.allImageSharp.edges.find(x =>
+    x.node.fluid.src.includes('blog1')
+  )
+  const blog2 = data.allImageSharp.edges.find(x =>
+    x.node.fluid.src.includes('blog2')
   )
   return (
-    <Layout footerImg={footerImg} img={headerImg}>
-      <Blog />
+    <Layout siteTitle={siteTitle} footerImg={footerImg}>
+      <Blog
+        posts={posts}
+        blogImg={blogImg}
+        instagram={instagram}
+        blogHeaders={[blog1, blog2]}
+      />
     </Layout>
   )
 }
 
-export default BlogPage
+export default BlogIndex
 
 export const pageQuery = graphql`
-  query {
+  query BlogIndexQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     allImageSharp {
       edges {
         node {
           id
-          fluid(maxWidth: 3000, quality: 100) {
+          fluid(maxWidth: 3000) {
             ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+    allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 6) {
+      edges {
+        node {
+          likes
+          id
+          localFile {
+            childImageSharp {
+              fluid {
+                srcWebp
+              }
+            }
+          }
+        }
+      }
+    }
+    allContentfulBlogPost(sort: { order: DESC, fields: publishDate }) {
+      edges {
+        node {
+          title
+          slug
+          publishDate(formatString: "MMMM Do, YYYY")
+          tags
+          heroImage {
+            fluid(maxWidth: 1000, maxHeight: 1000, resizingBehavior: SCALE) {
+              ...GatsbyContentfulFluid_tracedSVG
+            }
+          }
+          description {
+            childMdx {
+              body
+              excerpt(pruneLength: 200)
+            }
           }
         }
       }
