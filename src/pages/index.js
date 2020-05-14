@@ -5,7 +5,6 @@ import Hero from "../components/homepage/Hero"
 import MissionStatement from "../components/homepage/MissionStatement"
 import Featured from "../components/homepage/Featured"
 import ShopCategories from "../components/homepage/ShopCategories"
-import BlogWidget from "../components/blog/BlogWidget"
 
 const Homepage = () => {
   return (
@@ -15,7 +14,6 @@ const Homepage = () => {
       <MissionStatement />
       <Featured />
       <ShopCategories />
-      <BlogWidget />
     </Layout>
   )
 }

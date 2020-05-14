@@ -172,7 +172,6 @@ const useStyles = makeStyles((theme) => ({
 function Footer() {
   const classes = useStyles()
   const { t } = useTranslation()
-  const blog = ["lifestyle", "travel", "gear", "community"]
   const shop = ["rapid", "fins", "sup", "leashes", "accessories", "apparel"]
   const customerService = ["faq", "contact", "shipping", "returns"]
   const features = [
@@ -236,18 +235,6 @@ function Footer() {
         </div>
         <Hidden xsDown>
           <div className={classes.linksContainer}>
-            <div className={classes.list}>
-              <p className={classes.title}>{t("links.blog")}</p>
-              {blog.map((elem, idx) => (
-                <Link
-                  key={`blog${idx}`}
-                  to={`/tags/${elem}`}
-                  className={clsx(classes.text, classes.link)}
-                >
-                  {t(`links.${elem}`)}
-                </Link>
-              ))}
-            </div>
             <div className={classes.list}>
               <p className={classes.title}>{t("links.shop")}</p>
               {shop.map((elem, idx) => (
