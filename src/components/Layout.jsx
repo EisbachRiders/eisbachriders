@@ -1,91 +1,84 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Header from './header/Header'
-import Footer from './footer/Footer'
-import SEO from './seo/SEO'
-import Tracking from './tracking/Tracking'
-import { MDXProvider } from '@mdx-js/react'
-import { makeStyles } from '@material-ui/core/styles'
+import React from "react"
+import { useTranslation } from "react-i18next"
+import CookieConsent from "react-cookie-consent"
+import { makeStyles } from "@material-ui/core/styles"
+import Header from "./Header"
+import Footer from "./Footer"
+import { Link } from "gatsby-theme-material-ui"
+import "../i18n/i18n"
 
-const useStyles = makeStyles(theme => ({
-  container: {
-    display: 'flex',
-    justifyContent: 'space-between',
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: "flex",
+    flexDirection: "column",
+    background: theme.color.white,
+    minHeight: "100%",
   },
-  blog: {
-    display: 'flex',
-    flexDirection: 'column',
-    flexBasis: '70%',
-  },
-  sidebar: {
-    display: 'flex',
-    flexDirection: 'column',
-    flexBasis: '25%',
-  },
-  img: {
-    width: '100%',
-    marginBottom: 5,
-  },
-  sub: {
-    fontSize: 10,
-    textAlign: 'center',
-    marginBottom: 60,
-  },
-  h1: {
-    marginBottom: 60,
-  },
-  h2: {
-    textAlign: 'center',
-  },
-  a: {
-    color: theme.palette.primary.main,
-  },
-  hr: {
-    margin: 30,
-    border: 'transparent',
+  main: {
+    flexGrow: 1,
   },
 }))
 
-function Layout({ isHomepage, img, footerImg, siteTitle, children }) {
+const Layout = ({ children }) => {
   const classes = useStyles()
+  const { i18n, t } = useTranslation()
 
-  // Styles for mdx/md pages
-  const h1Styled = props => <h1 className={classes.h1} {...props} />
-  const h2Styled = props => <h2 className={classes.h2} {...props} />
-  const h3Styled = props => <h3 className={classes.h3} {...props} />
-  const hrStyled = () => <hr className={classes.hr} />
-  const aStyled = props => <a className={classes.a} {...props} />
-  const preStyled = props => <div {...props} />
-  const strongStyled = props => <strong className={classes.strong} {...props} />
-  const imgStyled = props => <img className={classes.img} {...props} />
-  const subStyled = props => <sub className={classes.sub} {...props} />
-
-  const components = {
-    h1: h1Styled,
-    h2: h2Styled,
-    h3: h3Styled,
-    hr: hrStyled,
-    pre: preStyled,
-    a: aStyled,
-    strong: strongStyled,
-    img: imgStyled,
-    sub: subStyled,
+  const handleSetLang = (language) => {
+    i18n.changeLanguage(language)
   }
-  return (
-    <>
-      <SEO title={siteTitle} />
-      <Header isHomepage={isHomepage} img={img} />
-      <MDXProvider components={components} style={{ background: '#fafafa' }}>
-        {children}
-      </MDXProvider>
-      <Footer img={footerImg} />
-      {process.env.NODE_ENV !== 'development' && <Tracking />}
-    </>
-  )
-}
 
-Layout.propTypes = {
-  isHomepage: PropTypes.bool,
+  const handleOptOut = () => {
+    var disableStr = "ga-disable-" + process.env.GA_KEY
+    document.cookie =
+      disableStr + "=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/"
+    window[disableStr] = true
+  }
+
+  return (
+    <div className={classes.root}>
+      <Header handleSetLang={handleSetLang} />
+      <main className={classes.main}>{children}</main>
+      <CookieConsent
+        location="bottom"
+        enableDeclineButton
+        onDecline={() => handleOptOut()}
+        declineButtonText={t("tracking.decline")}
+        setDeclineCookie
+        declineButtonStyle={{
+          color: "#00d7a2",
+          fontSize: "14px",
+          textTransform: "uppercase",
+          background: "transparent",
+          letterSpacing: 1.5,
+        }}
+        buttonText={t("tracking.accept")}
+        cookieName="gatsby-gdpr-google-analytics"
+        style={{ background: "#e2f9ef", color: "#00130e" }}
+        buttonStyle={{
+          background: "#00d7a2",
+          color: "#00130e",
+          fontSize: "14px",
+          padding: "14px 24px",
+          borderRadius: 3,
+          lineHeight: "1.25rem",
+          textTransform: "uppercase",
+          letterSpacing: "1.25px",
+          fontFamily: '"Roboto", sans-serif,',
+          fontWeight: 500,
+        }}
+        expires={150}
+      >
+        {t("tracking.consent")}
+        <Link
+          to="/dataProtection/"
+          style={{ color: "#00d7a2", textDecoration: "underline" }}
+        >
+          {t("tracking.dataPrivacy")}.
+        </Link>
+      </CookieConsent>
+      <Footer />
+    </div>
+  )
 }
 
 export default Layout

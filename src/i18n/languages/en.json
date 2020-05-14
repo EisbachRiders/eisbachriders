@@ -1,147 +1,169 @@
 {
-  "tracking": {
-    "message": "By using our website, you agree with the use of cookies.",
-    "accept": "accept",
-    "decline": "decline",
-    "privacyLink": "more information"
-  },
-  "header": {
-    "shop": "shop",
-    "contact": "contact",
-    "cart": "cart",
-    "weather": "eisbach",
-    "faq": "faq",
-    "about": "about",
-    "products": "products",
-    "blog": "blog"
-  },
-  "productFinder": {
-    "header": "Our Products"
-  },
-  "leashGuide": {
-    "title": "Leash Guide"
-  },
-  "finGuide": {
-    "title": "Fin Guide"
-  },
-  "footer": {
-    "message": "send us a message",
-    "your message": "your message",
-    "send": "send",
-    "questions": "any questions",
-    "questionsMessage": "If you have any question about our products, fulfillment or what is the best time to go surfing in Munich, drop us a message. We are happy to help!",
-    "getInTouch": "You can also get in touch with us via Facebook or Instagram.",
+  "links": {
+    "terms": "terms & conditions",
     "imprint": "imprint",
-    "privacy": "privacy",
+    "data": "data privacy",
+    "credit": "credit",
+    "explore": "explore",
+    "eisbach": "eisbach",
+    "about": "about",
+    "blog": "blog",
+    "shop": "shop",
+    "rapid": "rapid surfing",
+    "fins": "fins",
+    "sup": "SUP",
+    "leashes": "leashes",
+    "apparel": "apparel",
+    "accessories": "accessories",
     "customerService": "customer service",
+    "faq": "faq",
+    "contact": "contact",
     "payment": "payment",
     "shipping": "shipping",
     "returns": "returns",
-    "social": "social",
-    "subscribe": "subscribe",
-    "subscribeText": "Join to get hear about our latest products and deals!",
-    "terms": "terms & conditions",
-    "conditions": "Free shipping for orders over 15 Euro within Germany 1 month unconditional exchange or refund"
+    "lifestyle": "lifestyle",
+    "travel": "travel",
+    "gear": "gear",
+    "community": "community",
+    "home": "home"
   },
-  "faq": {
-    "title": "faq",
-    "faq": "frequently asked questions"
+  "tracking": {
+    "consent": "Eisbach Riders uses cookies on its pages to enable you to make optimal use of the page. If you agree, just continue visiting the site. To learn more read our ",
+    "dataPrivacy": "data privacy policy",
+    "accept": "accept",
+    "decline": "opt-out"
   },
-  "banner": {
-    "shipping": "Free Shipping on Orders Over 15€ (within Germany)!"
-  },
-  "membership": {
-    "title": "Proud Members of"
-  },
-  "hero": {
-    "subtitle": "Surf Equipment from Munich",
+  "homepage": {
+    "heroSubtitle": "Surf Equipment from Munich",
     "sustainable": "sustainability",
     "community": "community",
     "surf": "surf equipment",
-    "story": "Our Story",
-    "summary": "Our mission is to protect our playgrounds - the ocean and rivers that provide us so much enjoyment - by supporting local communities and efforts to preserve our water sources."
-  },
-  "shop": {
-    "fins": "fins",
-    "leashes": "leashes",
-    "other": "other"
-  },
-  "feature": {
-    "featuredProduct": "featured",
-    "response": "response",
-    "surfDetail1": "stiffness",
-    "surfDetail2": "weight",
-    "experience": "experience",
-    "beginner": "beginner",
-    "intermediate": "intermediate",
-    "pro": "pro",
-    "highlight": "High performance",
-    "text": "The Eisbach Riders Single Tab Future fiberglass in with a honeycomb core is extra lightweight and provides an immediate response during your turns. With a moderate flex it is ideal for making fast changes of direction. The fin design is suited for any waves as well as for river surfing."
-  },
-  "newProduct": {
-    "imgAlt": "surfer",
-    "logo": "logo",
-    "text_wax": "We are so excited to be able to bring you this premium, eco-friendly surf wax! Ride waves with confidence and a clear conscience! Bee Swell Eco-Friendly surf wax is made with 100% pure beeswax that has been ethically sourced by natural beekeepers. Proceeds help to provide pollinator habitat and resources for honeybee rescues.",
-    "text_hangers": " The patented SHEPPS GNARWALL surfboard hook and hanger system is the only completely hidden surfboard rack on the market. The eco-conscious surf rack is made in Canada by SHEPPS and fits FCS I/II, Future and single fin boards. Secure the hanger to a wall, attach the hook to your board, and you're ready to hang!"
-  },
-  "checkout": {
-    "myBag": "my bag",
-    "total": "total",
-    "subtotal": "subtotal",
-    "shipping": "shipping & handling",
-    "pay": "pay now"
-  },
-  "about": {
-    "mission": "Eisbach Riders is a surf brand from Munich, Germany that specializes in surf equipment and accessories. We are passionate surfers with a mission to protect our playgrounds - the ocean and rivers that provide us so much enjoyment - by supporting local communities and efforts to preserve our water sources. Our focus is to provide sustainably packaged and affordable products so you can feel good about jumping back into the water.",
-    "sectionTitle1": "about",
-    "sectionTitle2": " Eisbach Riders",
-    "community": "We are members of and support our local outdoor clubs in protecting our water playgrounds and we want to encourage other communities to come together to protect theirs! Check out below for how you can get involved in Munich or globally by joining a club, donating, teaching kids to surf, or picking up trash!",
-    "sustainability": "All of our products are packed in sustainable and environmentally friendly packaging and we are trying to take all measures that we can to reduce the amount of waste and plastic that goes into the development and shipping of our products. We donate 1% of our revenue to charities that help protect our oceans, rivers and lakes. COMING SOON: We will offer a new Green Line of fins that will focus on donating the majority of the profits to protecting the ocean!",
-    "us1": "We are Robin and Michael. We met during our studies at Technical University of Munich and have been friends ever since. We are not professional surfers and if we are being honest, we will likely never be haha, but we love being out on the waves! And we want everyone to be able to enjoy their local water sources without breaking the bank or having to feel guilty for buying something double wrapped in plastic.",
-    "us2": "When we decided to follow our passion and start this brand we wanted to focus on sustainable packaging and supporting local communities. Eisbach Riders was founded in September 2018 in Munich and while we are still a young start up, we are overflowing with ideas on how to making purchasing surf gear more sustainable.",
-    "us3": "Stay Tuned!"
-  },
-  "products": {
-    "sectionTitle": "essential surf equipment",
-    "features": "features",
-    "outOfStock": "Out of Stock!",
-    "addToCart": "Add To Cart",
-    "related": "Related Products",
-    "description": "Description",
-    "additional": "Additional Information"
-  },
-  "common": {
-    "name": "name",
-    "email": "email address",
-    "close": "close",
-    "cancel": "cancel",
-    "scrollRight": "scroll right",
-    "scrollLeft": "scroll left",
-    "more": "more info"
+    "ourStory": "Our Story",
+    "mission": "Our mission is to protect our playgrounds - the ocean and rivers that provide us so much enjoyment - by supporting local communities and efforts to preserve our water sources."
   },
   "newsletter": {
-    "sectionTitle": "Let's stay in touch!",
-    "message": "Sign up for our monthly newsletter to be the first to hear about the latest products and on-goings at Eisbach Riders.",
-    "success": "Success! Thanks for joining.",
-    "signUp": "Join now",
-    "subscribe": "Subscribe to List",
-    "legal1": "You can unsubscribe at any time.",
-    "legal2": "privacy policy",
-    "newsletter": "Newsletter",
-    "join": "join"
+    "stayintouch1": "Stay in touch with all the ",
+    "stayintouch2": "latest news and products!",
+    "signup": "sign up",
+    "consent": "Yes, I would like to receive emails from Eisbach Riders!",
+    "subscribe": "subscribe",
+    "cancel": "cancel"
   },
-  "instagram": {
-    "sectionTitle": "Instagram"
+  "form": {
+    "contactTitle": "Send us a message!",
+    "email": "email",
+    "name": "name",
+    "message": "message",
+    "send": "send",
+    "cancel": "cancel",
+    "success": "Your email has been sent successfully",
+    "error": "An error has occurred! Please try again later."
   },
-  "stores": {
-    "sectionTitle": "More Stores"
+  "footer": {
+    "emailSupport": "email support",
+    "emailSupportText": "contact us at support@eisbach-riders.com",
+    "30dayReturns": "30 day returns",
+    "30dayReturnsText": "return any items within 30 days",
+    "freeShipping": "free shipping",
+    "freeShippingText": "Free Shipping on Orders Over 15€ within Germany"
   },
-  "weather": {
-    "heroTitle": "Current Surf Outlook:",
-    "heroText": "Surf's Up!"
+  "shop": {
+    "viewCollection": "view collection",
+    "leashes": "leashes",
+    "fins": "fins",
+    "accessories": "accessories",
+    "apparel": "apparel",
+    "sup": "SUP",
+    "rapidSurfing": "rapid surfing",
+    "leashesTagline": "get the best fit",
+    "finsTagline": "for every board",
+    "accessoriesTagline": "sleek & stylish",
+    "apparelTagline": "everything you need",
+    "supTagline": "all gear for paddling",
+    "rapidSurfingTagline": "designed for rivers or wavepools"
+  },
+  "common": {
+    "about": "about",
+    "more": "more",
+    "subscribe": "subscribe",
+    "previous": "previous",
+    "next": "next",
+    "sustainability": "sustainability",
+    "community": "community",
+    "contactUs": "contact us",
+    "today": "today",
+    "tomorrow": "tomorrow"
   },
   "sidebar": {
-    "more": " More...",
-    "about": "Follow us on our adventures through Munich and travels around the world to learn more about surfing and sustainability!"
+    "about": "Follow us on our adventures through Munich and travels around the world to learn more about surfing and sustainability!",
+    "latest": "latest posts",
+    "popular": "popular posts"
+  },
+  "about": {
+    "about": "about us",
+    "tagline": "sustainability, community, surf equipment",
+    "content": "Eisbach Riders is a surf brand from Munich, Germany that specializes in surf equipment and accessories. We are passionate surfers with a mission to protect our playgrounds - the ocean and rivers that provide us so much enjoyment - by supporting local communities and efforts to preserve our water sources. Our focus is to provide sustainably packaged and affordable products so you can feel good about jumping back into the water.",
+    "founders1": "We are Robin and Michael. We met during our studies at Technical University of Munich and have been friends ever since. We are not professional surfers and if we are being honest, we will likely never be haha, but we love being out on the waves! And we want everyone to be able to enjoy their local water sources without breaking the bank or having to feel guilty for buying something double wrapped in plastic.",
+    "founders2": "When we decided to follow our passion and start this brand we wanted to focus on sustainable packaging and supporting local communities. Eisbach Riders was founded in September 2018 in Munich and while we are still a young start up, we are overflowing with ideas on how to making purchasing surf gear more sustainable.",
+    "founders3": "stay tuned!",
+    "sustainability": "All of our products are packed in sustainable and environmentally friendly packaging and we are trying to take all measures that we can to reduce the amount of waste and plastic that goes into the development and shipping of our products. We donate 1% of our revenue to charities that help protect our oceans, rivers and lakes. COMING SOON: We will offer a new Green Line of fins that will focus on donating the majority of the profits to protecting the ocean!",
+    "community": "We are members of and support our local outdoor clubs in protecting our water playgrounds and we want to encourage other communities to come together to protect theirs! Check out below for how you can get involved in Munich or globally by joining a club, donating, teaching kids to surf, or picking up trash!",
+    "getInvolved": "get involved",
+    "local": "local organizations",
+    "global": "global organizations",
+    "provide the slide": "Provide the Slide focuses on bringing boards, waves and people together. While on a trip to Liberia, they saw a need for surfboard, which was a shame given the beauty of the waves in the area. The thought of all of the unused surfboards out there that would serve a better purpose and founded this project. By making a donation of an used surfboard to this foundation, PROVIDETHESLIDE brings the boards where they are needed and surfed. They enable locals to surf and pass on the surfing to others as well as generate a small income around the sport (e.g. with a small shop, board rental, board repair, etc.). So if you are getting a new board and are looking for a good use for your old board, we cannot recommend this enough!",
+    "Interessengemeinschaft Surfen in München": "The Interessengemeinschaft Surfen in München eV is a registered association that takes care of all matters relating to river surfing in Munich. They are committed to preserving existing waves in and around the city, fighting for new surf spots, negotiating with the city's political organs and helping the youth to practice this sport.",
+    "Wirmachenwelle": "Wir Machen Welle is the first Germany-wide surf organization that works with the social and therapeutic effect of the sport. The program 'Surf's Up Germany', promotes the personal growth of young people among themselves and everyone involved. They create a unique and sustainable experience that not only shows young people different perspectives, but motivates them to positively change their future 'world of life and work' and community. 'Wirmachenwelle' is committed to greater equal opportunities in the development and training of young people. They are convinced that surfing not only changes the life of each individual but makes it better.",
+    "Surfrider Foundation": "The Surfrider Foundation is dedicated to the protection and enjoyment of the world's ocean, waves and beaches through a powerful activist network.",
+    "Ocean Conservancy": "Ocean Conservancy is working with you to protect the ocean from today’s greatest global challenges. The Ocean Conservancy creates science-based solutions for a healthy ocean and the wildlife and communities that depend on it.",
+    "The Ocean Cleanup": "The Ocean Cleanup is a non-profit organization, developing advanced technologies to rid the world’s oceans of plastic. By utilizing the ocean currents to our advantage, our passive drifting systems are estimated to clean up half the Great Pacific Garbage Patch in 5 years’ time.",
+    "Oceana": "An international organization focused solely on oceans, dedicated to achieving measurable change by conducting specific, science-based policy campaigns with fixed deadlines and articulated goals."
+  },
+  "faq": {
+    "learnMore": "Learn More",
+    "singleFin_question": "I broke / lost one of my fins. Do you sell center fins or side fins separately?",
+    "singleFin_answer": "We do not sell individual surfboard fins (except for SUP single fins as they come this way). You can buy our fins in a set of two, three or four, depending on your fin setup. However, sometimes we have separate fins in our warehouse which are part of incomplete sets. Simply contact us and we will check what we have available.",
+    "finSize_question": "Which fin size is the best for me - small, medium or large?",
+    "finSize_answer": "Surfboard fins come in different sizes and shapes to suit your personal surfing style. For the most common thruster fin setup with three fins, you can choose between small, medium and large fins. Bigger fins equal more hold, as more surface area is in contact with the water. Smaller ones create a “looser” feel. If you are in between sizes, you should consider the type and size of waves and the board you will be surfing. We recommend the following sizes;",
+    "incorrectFit_question": "The fins do not fit into my surfboard",
+    "incorrectFit_answer": "The process to build a surfboard is a craft and there are sometimes smaller tolerances between the different fin setups and surfboard shapes. This can occur for boards with separate FCS I plugs for each fin tab, since they are positioned in the surfboard using a template fin that could deviate from the standard. For FCS I Sana, Future or FCS II plugs this issue should not occur. If you find that your fin does not fit, you can of course return your fin and we would be happy to try and help find you something better for your board!",
+    "finTypes_question": "What is the difference between nylon, fiberglass and honeycomb fins?",
+    "finTypes_answer": "The main difference (between the commonly used materials nylon and fiberglass) is the resulting flexibility or stiffness of the fin. Nylon fins are the most common found and are an affordable option for beginners or river surfing. We offer two types of nylon fins; super flex and moderate stiffness. Our super flex fins are very flexible and feel rubbery to the touch. They are extremely durable and are very unlikely to break or break your fin plug. The tradeoff for durability is that, as they are flexible, they offer less support. However, they perfectly suited for beginners and for making turns with a larger radius. Our modern stiffness fins (the surf essential line) will give you more response during turn. While stiffer fins in general are more likely to break, our fins are designed to break above the tab so not to destroy the fin plug. Fiberglass fins are made of fiberglass tissue filled with resin. They are stiffer than the nylon fins and give the opportunity for sharp cutbacks and speed generation. The fiberglass fins are bit heavier than nylon fins. Honeycomb fiberglass fins are a lightweight version of the fiberglass fins with a honeycomb core.",
+    "finSystem_question": "What different fin setups exist?",
+    "finSystem_answer": "Single Fin | Thruster | Quad",
+    "wax_question": "When should I use surf wax?",
+    "wax_answer": "Surf wax is used for getting a grip on the slippery surfboard surface. One bar usually coats a complete longboard with 10-12 ft. Depending on the water temperature different wax mixtures should be used: • Grip-Bee is the extra grippy cold water wax (58°F / 14°C and below). This wax is perfect for cold-water river and wake surfing. • Hana Hou is the tropical wax (70°F / 21°C and warmer). This wax can also be used as a base coat in cooler temp water.",
+    "shop_question": "Do you have a physical shop where I can pick up products?",
+    "shop_answer": "We do not have a physical shop at this time, however if you live in Munich and don't want to wait for shipping for your order, we are happy to meet with you! Contact us to schedule a time to meet up!",
+    "typo_question": "I made a mistake in my email address/shipping address, how can I correct it?",
+    "typo_answer": "No worries, simply contact us as soon as possible and we will do everything we can to make sure your order gets to the right place.",
+    "country_question": "What countries do you ship to?",
+    "country_answer": "We currently ship anywhere within the European Union. If you live in Switzerland or anywhere else outside the EU, please reach out to us as we are happy to ship to you however import fees and shipping fees vary.",
+    "cost_question": "How much are shipping costs?",
+    "cost_answer": "Within Germany: Free shipping on orders over 15€! | 2.90€ for orders under 15€. Outside Germany: Free shipping on orders over 50€! | 3.90€ for orders under 50€.",
+    "time_question": "How long does shipping take?",
+    "time_answer": "Orders are usually shipped within 24h of purchase. Within Germany: You can expect a delivery in 1-2 business days. Outside Germany: You can expect a delivery in 3-7 business days.",
+    "company_question": "What shipping company do you use?",
+    "company_answer": "We use the Deutsche Post, DHL or Hermes.",
+    "policy_question": "What is your return or exchange policy?",
+    "policy_answer": "You may make a return or exchange within 30 days of purchase.",
+    "returns_question": "How do I return/exchange an item?",
+    "returns_answer": "You can return the goods within one month of receipt. The costs for the return have to payed by you. To return or exchange an item, please follow the steps in the link below. Please understand that we cannot make refunds if shipments are lost without tracking. Once we have received your return, we will review it and arrange for the refund to be made. We will immediately refund all payments we have received from you, including delivery charges. We will endeavor to process all returns as quickly as possible.",
+    "services_question": "What methods of payment do you accept?",
+    "services_answer": "We currently accept payments via PayPal, wire transfer or cash on in person pick ups. Shipments are made as soon as we received your payment. PayPal payments are verified immediately but please note wire transfers usually take 2-3 business days. Wire transfers should take place within 10 days – otherwise, we will have to cancel your order.",
+    "currency_question": "What currency do you accept for payments?",
+    "currency_answer": "All prices are stated in Euros including VAT of 19%.",
+    "largeOrders_question": "Do you offer special deals for large or bulk orders?",
+    "largeOrders_answer": "Are you a surf club, shop/retailer, or group of friends looking to make a larger order? Please contact us for more information about discounts or deals on larger orders!"
+  },
+  "eisbach": {
+    "about": "The Eisbach is the famous river surfing spot in Munich which can be surfed year around. The German name Eisbach (which can be translated to ice creek) acts as a synonym for the water temperature that is often ice cold. The water originates in the Bavarian Alps and slowly heats up during the summer months on its way to Munich. This page will give you a quick overview of the current river conditions. Pack the right wetsuit and enjoy your surf session!",
+    "advanced": "skill level advanced",
+    "intermediate": "skill level intermediate",
+    "beginner": "skill level beginner",
+    "runoff": "runoff",
+    "waterLevel": "water level",
+    "faq1_question": "When is the best time to go surfing?",
+    "faq1_answer": "Temperatures of the water heats up over the day so the warmest time to go surfing is late afternoon."
   }
 }

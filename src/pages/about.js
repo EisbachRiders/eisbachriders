@@ -1,51 +1,15 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import About from '../components/about/About'
+import React from "react"
+import SEO from "../components/seo"
+import Layout from "../components/Layout"
+import About from "../components/about/About"
 
-function AboutPage({ data }) {
-  const about1 = data.allImageSharp.edges.find(x =>
-    x.node.fluid.src.includes('trash')
-  )
-  const about2 = data.allImageSharp.edges.find(x =>
-    x.node.fluid.src.includes('about2')
-  )
-  const about3 = data.allImageSharp.edges.find(x =>
-    x.node.fluid.src.includes('about3')
-  )
-  const about4 = data.allImageSharp.edges.find(x =>
-    x.node.fluid.src.includes('groupWalking')
-  )
-  const about5 = data.allImageSharp.edges.find(x =>
-    x.node.fluid.src.includes('author1')
-  )
-  const about6 = data.allImageSharp.edges.find(x =>
-    x.node.fluid.src.includes('author2')
-  )
-  const footerImg = data.allImageSharp.edges.find(x =>
-    x.node.fluid.src.includes('footer')
-  )
-
+const AboutPage = () => {
   return (
-    <Layout footerImg={footerImg}>
-      <About img={[about1, about2, about3, about4, about5, about6]} />
+    <Layout>
+      <SEO />
+      <About />
     </Layout>
   )
 }
 
 export default AboutPage
-
-export const pageQuery = graphql`
-  query {
-    allImageSharp {
-      edges {
-        node {
-          id
-          fluid(maxWidth: 3000) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  }
-`

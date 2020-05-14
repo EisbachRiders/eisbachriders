@@ -1,140 +1,169 @@
 {
-  "tracking": {
-    "message": "Wir verwenden Cookies, um sicherzustellen, dass wir dir die beste Erfahrung auf unserer Website bieten. Wenn du weitersurfst, werten wir dies als Zustimmung.",
-    "accept": "akzeptieren",
-    "decline": "Verhindern",
-    "privacyLink": "Mehr erfahren"
-  },
-  "header": {
-    "shop": "shop",
-    "contact": "Kontakt",
-    "cart": "cart",
-    "weather": "eisbach",
-    "faq": "FAQ",
-    "about": "about",
-    "products": "Produkts",
-    "blog": "blog"
-  },
-  "productFinder": {
-    "header": "Our Products"
-  },
-  "leashGuide": {
-    "title": "Leash Guide"
-  },
-  "finGuide": {
-    "title": "Fin Guide"
-  },
-  "footer": {
-    "message": "Schreib uns",
-    "your message": "Deine Nachricht",
-    "send": "Senden",
-    "questions": "Fragen",
-    "questionsMessage": "Wenn Du Fragen zu unseren Produkten, Versand oder einfach wissen möchtest, wann und wo Du in München surfen gehen solltest, schreib uns einfach.  Wir freuen uns von Dir zu hören!",
-    "getInTouch": "Du kannst uns auch auf Facebook oder Instagram folgen.",
+  "links": {
+    "terms": "Geschäftsbedingungen",
     "imprint": "Impressum",
-    "privacy": "Datenschutz",
-    "customerService": "customer service",
-    "payment": "payment",
-    "shipping": "shipping",
-    "returns": "returns",
-    "social": "social",
-    "subscribe": "subscribe",
-    "subscribeText": "Join to hear about our latest products and deals!",
-    "terms": "terms & conditions",
-    "conditions": "Free shipping for orders over 15 Euro within Germany 1 month unconditional exchange or refund"
+    "data": "Datenschutz",
+    "credit": "Anerkennung",
+    "explore": "erkunden",
+    "eisbach": "eisbach",
+    "about": "Über",
+    "blog": "blog",
+    "shop": "Geschäft",
+    "rapid": "schnelles Surfen",
+    "fins": "fins",
+    "sup": "SUP",
+    "leashes": "Leinen",
+    "apparel": "Kleidung",
+    "accessories": "accessories",
+    "customerService": "kundenservice",
+    "faq": "faq",
+    "contact": "kontakt",
+    "payment": "Bezahlung",
+    "shipping": "Versand",
+    "returns": "Rücksendung",
+    "lifestyle": "Lebensstil",
+    "travel": "Reise",
+    "gear": "Ausrüstung",
+    "community": "Gemeinschaft",
+    "home": "zuhause"
   },
-  "faq": {
-    "title": "faq",
-    "faq": "frequently asked questions"
+  "tracking": {
+    "consent": "Eisbach Riders verwendet Cookies auf seinen Seiten, damit Sie die Seite optimal nutzen können. Wenn Sie damit einverstanden sind, besuchen Sie die Website einfach weiter. Um mehr zu erfahren, lesen Sie unsere ",
+    "dataPrivacy": "Datenschutz",
+    "accept": "akzeptieren",
+    "decline": "opt-out"
   },
-  "banner": {
-    "shipping": "Free Shipping on Orders Over 15€ (within Germany)!"
-  },
-  "hero": {
-    "subtitle": "Surf Equipment und Zubehör aus München",
+  "homepage": {
+    "heroSubtitle": "Surf Equipment und Zubehör aus München",
     "sustainable": "Nachhaltigkeit",
     "community": "Gemeinschaft",
     "surf": "Surfausrüstung",
-    "story": "Unsere Geschichte",
-    "summary": "Unsere Mission ist es, unsere Spielplätze - das Meer und die Flüsse, die uns so viel Freude bereiten - zu schützen, indem wir lokale Gemeinschaften unterstützen und uns bemühen, unsere Wasserquellen zu erhalten."
-  },
-  "shop": {
-    "fins": "fins",
-    "leashes": "leashes",
-    "other": "other"
-  },
-  "membership": {
-    "title": "Proud Members of"
-  },
-  "feature": {
-    "featuredProduct": "vorgestelltes",
-    "response": "Surfbedingungen",
-    "surfDetail1": "kniehoch",
-    "surfDetail2": "Hüftkopf hoch",
-    "experience": "Erfahrung",
-    "beginner": "Anfänger",
-    "intermediate": "mittlere",
-    "pro": "Profi",
-    "highlight": "Hochleistung",
-    "text": "The Eisbach Riders Single Tab Future fiberglass in with a honeycomb core is extra lightweight and provides an immediate response during your turns. With a moderate flex it is ideal for making fast changes of direction. The fin design is suited for any waves as well as for river surfing."
-  },
-  "newProduct": {
-    "imgAlt": "surfer",
-    "logo": "logo",
-    "text": "We are so excited to be able to bring you this premium, eco-friendly surf wax! Ride waves with confidence and a clear conscience! Bee Swell Eco-Friendly surf wax is made with 100% pure beeswax that has been ethically sourced by natural beekeepers. Proceeds help to provide pollinator habitat and resources for honeybee rescues."
-  },
-  "about": {
-    "sectionTitle1": "Über",
-    "sectionTitle2": " Eisbach Riders",
-    "message": "Eisbach Riders is a young local surf brand from Munich and offers equipment for surfing. We are passionate surfers ourselves and value quality and affordable products. Packed in sustainable and environmentally friendly packaging, we will ship as fast as possible so that you can jump right back into the water with a smile on your face."
-  },
-  "products": {
-    "sectionTitle": "essential surf equipment",
-    "features": "features",
-    "outOfStock": "Out of Stock!",
-    "addToCart": "Add To Cart",
-    "related": "Related Products",
-    "description": "Description",
-    "additional": "Additional Information"
-  },
-  "common": {
-    "name": "Name",
-    "email": "E-Mail",
-    "close": "Schließen",
-    "cancel": "Abbrechen",
-    "scrollRight": "Scroll rechts",
-    "scrollLeft": "Scroll links",
-    "more": "Mehr Info"
-  },
-  "checkout": {
-    "myBag": "my bag",
-    "total": "total",
-    "subtotal": "subtotal",
-    "shipping": "shipping & handling"
+    "ourStory": "Unsere Geschichte",
+    "mission": "Unsere Mission ist es, unsere Spielplätze - das Meer und die Flüsse, die uns so viel Freude bereiten - zu schützen, indem wir lokale Gemeinschaften unterstützen und uns bemühen, unsere Wasserquellen zu erhalten."
   },
   "newsletter": {
-    "sectionTitle": "Bleib auf dem Laufenden!",
-    "message": "Trag Dich in unseren monatlichen Newsletter ein und erfahre als Erster über Neuigkeiten von Eisbach Riders.",
-    "success": "Es hat geklappt! Vielen Dank.",
-    "signUp": "Join our mailing list",
+    "stayintouch1": "Bleiben Sie mit den neuesten ",
+    "stayintouch2": "Nachrichten und Produkten in Kontakt!",
+    "signup": "Anmelden",
+    "consent": "Ja, ich möchte E-Mails von Eisbach Riders erhalten!",
     "subscribe": "Trag dich ein",
-    "legal1": "Du kannst Dich jederzeit wieder austragen indem Du den Link am Ende der eMails klickst. Wir nutzen Mailchimp als Marketing Plattform. Mit dem Klick auf Eintragen, akzeptierst Du, dass Deine Daten an Mailchimp weitergeleitet werden.",
-    "legal2": "Mehr Infos über den Mailchimp Datenschutz.",
-    "newsletter": "Newsletter",
-    "join": "Beitreten"
+    "cancel": "stornieren"
   },
-  "instagram": {
-    "sectionTitle": "Instagram"
+  "form": {
+    "contactTitle": "Schick uns eine Nachricht!",
+    "email": "email",
+    "name": "name",
+    "message": "Nachricht",
+    "send": "senden",
+    "cancel": "stornieren",
+    "success": "Ihre E-Mail wurde erfolgreich gesendet",
+    "error": "Ein Fehler ist aufgetreten! Bitte versuchen Sie es später noch einmal."
   },
-  "stores": {
-    "sectionTitle": "More Stores"
+  "footer": {
+    "emailSupport": "email Unterstützung",
+    "emailSupportText": "kontaktieren Sie uns unter support@eisbach-riders.com",
+    "30dayReturns": "30 Tage zurück",
+    "30dayReturnsText": "Senden Sie alle Artikel innerhalb von 30 Tagen zurück",
+    "freeShipping": "Kostenloser Versand",
+    "freeShippingText": "Kostenloser Versand für Bestellungen über 15€ innerhalb Deutschlands"
   },
-  "weather": {
-    "heroTitle": "Current Surf Outlook:",
-    "heroText": "Surf's Up!"
+  "shop": {
+    "viewCollection": "Sammlung anzeigen",
+    "leashes": "Leinen",
+    "fins": "Finne",
+    "accessories": "accessories",
+    "apparel": "kleidung",
+    "sup": "SUP",
+    "rapidSurfing": "rapid surfing",
+    "leashesTagline": "Holen Sie sich die beste Passform",
+    "finsTagline": "für jedes Board",
+    "accessoriesTagline": "schlank & stilvoll",
+    "apparelTagline": "Alles, was du brauchst",
+    "supTagline": "alle Ausrüstung zum Paddeln",
+    "rapidSurfingTagline": "ausgelegt für Flüsse oder Wellenpools"
+  },
+  "common": {
+    "about": "Über",
+    "more": "Mehr",
+    "subscribe": "abonnieren",
+    "previous": "Bisherige",
+    "next": "Nächster",
+    "sustainability": "Nachhaltigkeit",
+    "community": "community",
+    "contactUs": "kontaktiere uns",
+    "today": "heute",
+    "tomorrow": "Morgen"
   },
   "sidebar": {
-    "more": " More...",
-    "about": "Follow us on our adventures through Munich and travels around the world to learn more about surfing and sustainability!"
+    "about": "Folgen Sie uns auf unseren Abenteuern durch München und bereisen Sie die Welt, um mehr über Surfen und Nachhaltigkeit zu erfahren!",
+    "latest": "Neueste Beiträge",
+    "popular": "Beliebte Beiträge"
+  },
+  "about": {
+    "about": "Über uns",
+    "tagline": "Nachhaltigkeit, Community, Surfausrüstung",
+    "content": "Wir sind ein leidenschaftliches Team von Surfern und Wassersportlern mit Sitz in München. Im Second Wave Surfing Shop finden Sie unsere handverlesenen Marken, die sich auf nachhaltige Surfprodukte konzentrieren. Bitte zögern Sie nicht, uns zu kontaktieren, wenn Sie entweder Händler für eine dieser Marken werden möchten oder wenn Sie möchten, dass Ihre Marke durch Second Wave Surfing vertreten wird.",
+    "founders1": "Wir sind Robin und Michael. Wir haben uns während unseres Studiums an der Technischen Universität München kennengelernt und sind seitdem Freunde. Wir sind keine professionellen Surfer und wenn wir ehrlich sind, werden wir wahrscheinlich nie haha sein, aber wir lieben es, auf den Wellen zu sein! Und wir möchten, dass jeder seine lokalen Wasserquellen genießen kann, ohne die Bank zu sprengen oder sich schuldig fühlen zu müssen, wenn er etwas doppelt in Plastik eingewickeltes gekauft hat.",
+    "founders2": "Als wir beschlossen, unserer Leidenschaft zu folgen und diese Marke zu gründen, wollten wir uns auf nachhaltige Verpackungen konzentrieren und die lokalen Gemeinschaften unterstützen. Eisbach Riders wurde im September 2018 in München gegründet und während wir noch ein junges Start-up sind, strotzen wir vor Ideen, wie wir den Kauf von Surfausrüstung nachhaltiger gestalten können.",
+    "founders3": "Bleib dran!",
+    "sustainability": "Alle unsere Produkte sind in nachhaltigen und umweltfreundlichen Verpackungen verpackt und wir versuchen, alle möglichen Maßnahmen zu ergreifen, um die Menge an Abfall und Kunststoff zu reduzieren, die für die Entwicklung und den Versand unserer Produkte anfällt. Wir spenden 1% unserer Einnahmen an Wohltätigkeitsorganisationen, die zum Schutz unserer Ozeane, Flüsse und Seen beitragen. BALD KOMMEN: Wir werden eine neue grüne Flossenlinie anbieten, die sich darauf konzentriert, den größten Teil des Gewinns für den Schutz des Ozeans zu spenden!",
+    "community": "Wir sind Mitglieder unserer lokalen Outdoor-Clubs und unterstützen sie beim Schutz unserer Wasserspielplätze. Wir möchten andere Gemeinden ermutigen, sich zusammenzuschließen, um ihre zu schützen! Lesen Sie weiter unten, wie Sie sich in München oder weltweit engagieren können, indem Sie einem Club beitreten, spenden, Kindern das Surfen beibringen oder Müll einsammeln!",
+    "getInvolved": "Machen Sie mit",
+    "local": "lokale Organisationen",
+    "global": "globale Organisationen",
+    "provide the slide": "Provide the Slide konzentriert sich darauf, Bretter, Wellen und Menschen zusammenzubringen. Während einer Reise nach Liberia sahen sie einen Bedarf an Surfbrettern, was angesichts der Schönheit der Wellen in der Gegend eine Schande war. Der Gedanke an all die unbenutzten Surfbretter da draußen, die einen besseren Zweck erfüllen würden, gründete dieses Projekt. Durch die Spende eines gebrauchten Surfbretts an diese Stiftung bringt PROVIDETHESLIDE die Boards dorthin, wo sie gebraucht und gesurft werden. Sie ermöglichen es den Einheimischen, zu surfen und das Surfen an andere weiterzugeben sowie ein geringes Einkommen rund um den Sport zu generieren (z. B. mit einem kleinen Laden, Boardverleih, Boardreparatur usw.). Wenn Sie also ein neues Board bekommen und nach einer guten Verwendung für Ihr altes Board suchen, können wir dies nicht genug empfehlen!",
+    "Interessengemeinschaft Surfen in München": "Die Interessengemeinschaft Surfen in München eV ist ein eingetragener Verein, der sich um alle Angelegenheiten des Flusssurfens in München kümmert. Sie setzen sich dafür ein, bestehende Wellen in und um die Stadt zu erhalten, für neue Surfspots zu kämpfen, mit den politischen Organen der Stadt zu verhandeln und den Jugendlichen zu helfen, diesen Sport auszuüben.",
+    "Wirmachenwelle": "Wir Machen Welle ist die erste deutschlandweite Surforganisation, die sich mit der sozialen und therapeutischen Wirkung des Sports befasst. Das Programm 'Surf's Up Germany' fördert das persönliche Wachstum junger Menschen untereinander und unter allen Beteiligten. Sie schaffen eine einzigartige und nachhaltige Erfahrung, die jungen Menschen nicht nur unterschiedliche Perspektiven zeigt, sondern sie auch motiviert, ihre zukünftige „Welt des Lebens und Arbeitens“ und der Gemeinschaft positiv zu verändern. 'Wirmachenwelle' setzt sich für mehr Chancengleichheit bei der Entwicklung und Ausbildung junger Menschen ein. Sie sind überzeugt, dass das Surfen das Leben jedes Einzelnen nicht nur verändert, sondern auch verbessert.",
+    "Surfrider Foundation": "Die Surfrider Foundation widmet sich dem Schutz und Genuss des Ozeans, der Wellen und Strände der Welt durch ein starkes Aktivistennetzwerk.",
+    "Ocean Conservancy": "Ocean Conservancy arbeitet mit Ihnen zusammen, um den Ozean vor den größten globalen Herausforderungen von heute zu schützen. The Ocean Conservancy schafft wissenschaftlich fundierte Lösungen für einen gesunden Ozean und die davon abhängigen Wildtiere und Gemeinschaften.",
+    "The Ocean Cleanup": "The Ocean Cleanup ist eine gemeinnützige Organisation, die fortschrittliche Technologien entwickelt, um die Weltmeere von Plastik zu befreien. Durch die Nutzung der Meeresströmungen zu unserem Vorteil wird geschätzt, dass unsere passiven Driftsysteme in 5 Jahren die Hälfte des Great Pacific Garbage Patch beseitigen.",
+    "Oceana": "Eine internationale Organisation, die sich ausschließlich auf Ozeane konzentriert und sich der Erreichung messbarer Veränderungen durch die Durchführung spezifischer, wissenschaftlich fundierter politischer Kampagnen mit festen Fristen und festgelegten Zielen widmet."
+  },
+  "faq": {
+    "learnMore": "Erfahren Sie mehr",
+    "singleFin_question": "Ich habe eine meiner Flossen gebrochen / verloren. Verkaufen Sie Mittel- oder Seitenflossen separat?",
+    "singleFin_answer": "Wir verkaufen keine einzelnen Surfbrettflossen (außer SUP-Einzelflossen, wie sie auf diese Weise kommen). Sie können unsere Flossen in einem Satz von zwei, drei oder vier kaufen, abhängig von Ihrer Flossenkonfiguration. Manchmal haben wir jedoch separate Lamellen in unserem Lager, die Teil unvollständiger Sets sind. Kontaktieren Sie uns einfach und wir prüfen, was wir zur Verfügung haben.",
+    "finSize_question": "Welche Flossengröße ist die beste für mich - klein, mittel oder groß?",
+    "finSize_answer": "Surfbrettflossen gibt es in verschiedenen Größen und Formen, um Ihrem persönlichen Surfstil zu entsprechen. Für das gängigste Thruster-Finnen-Setup mit drei Finnen können Sie zwischen kleinen, mittleren und großen Finnen wählen. Größere Flossen bedeuten mehr Halt, da mehr Oberfläche mit dem Wasser in Kontakt kommt. Kleinere sorgen für ein „lockereres“ Gefühl. Wenn Sie zwischen zwei Größen liegen, sollten Sie die Art und Größe der Wellen und das Board berücksichtigen, auf dem Sie surfen werden. Wir empfehlen die folgenden Größen;",
+    "incorrectFit_question": "Die Flossen passen nicht in mein Surfbrett",
+    "incorrectFit_answer": "Der Prozess zum Bauen eines Surfbretts ist ein Handwerk und es gibt manchmal kleinere Toleranzen zwischen den verschiedenen Finnen-Setups und Surfbrettformen. Dies kann bei Boards mit separaten FCS I-Steckern für jede Finnenlasche auftreten, da diese mithilfe einer vom Standard abweichenden Template-Finne im Surfbrett positioniert werden. Bei FCS I Sana-, Future- oder FCS II-Steckern sollte dieses Problem nicht auftreten. Wenn Sie feststellen, dass Ihre Flosse nicht passt, können Sie Ihre Flosse natürlich zurückgeben. Wir würden uns freuen, Ihnen bei der Suche nach etwas Besserem für Ihr Board behilflich zu sein!",
+    "finTypes_question": "Was ist der Unterschied zwischen Nylon-, Glasfaser- und Wabenflossen?",
+    "finTypes_answer": "Der Hauptunterschied (zwischen den üblicherweise verwendeten Materialien Nylon und Glasfaser) ist die resultierende Flexibilität oder Steifheit der Flosse. Nylonflossen sind die am häufigsten vorkommenden und eine erschwingliche Option für Anfänger oder Flusssurfer. Wir bieten zwei Arten von Nylonflossen an. Super Flex und mäßige Steifheit. Unsere Super-Flex-Flossen sind sehr flexibel und fühlen sich gummiartig an. Sie sind extrem langlebig und es ist sehr unwahrscheinlich, dass sie Ihren Flossenstecker brechen oder brechen. Der Nachteil für die Haltbarkeit besteht darin, dass sie aufgrund ihrer Flexibilität weniger Unterstützung bieten. Sie eignen sich jedoch perfekt für Anfänger und zum Abbiegen mit einem größeren Radius. Unsere modernen Steifigkeitsflossen (die Surf-Essential-Linie) geben Ihnen im Turn mehr Reaktion. Während steifere Lamellen im Allgemeinen eher brechen, sind unsere Lamellen so konstruiert, dass sie über der Lasche brechen, um den Lamellenstopfen nicht zu zerstören. Glasfaserflossen bestehen aus mit Harz gefülltem Glasfasergewebe. Sie sind steifer als die Nylonflossen und bieten die Möglichkeit für scharfe Kürzungen und Geschwindigkeitsgenerierung. Die Glasfaserflossen sind etwas schwerer als Nylonflossen. Wabenglasfaserflossen sind eine leichte Version der Glasfaserflossen mit einem Wabenkern.",
+    "finSystem_question": "Welche unterschiedlichen Finnen-Setups gibt es?",
+    "finSystem_answer": "Single Fin | Thruster | Quad",
+    "wax_question": "Wann sollte ich Surfwachs verwenden?",
+    "wax_answer": "Surfwachs wird verwendet, um die rutschige Surfbrettoberfläche festzuhalten. Ein Riegel beschichtet normalerweise ein komplettes Longboard mit 10-12 Fuß. Abhängig von der Wassertemperatur sollten verschiedene Wachsmischungen verwendet werden: • Grip-Bee ist das besonders griffige Kaltwasserwachs (58 ° F / 14 ° C und darunter). Dieses Wachs ist perfekt für Kaltwasserflüsse und Wake-Surfen. • Hana Hou ist das tropische Wachs (21 ° C und wärmer). Dieses Wachs kann auch als Grundierung in kühlerem Tempowasser verwendet werden.",
+    "shop_question": "Haben Sie einen Laden, in dem ich Produkte abholen kann?",
+    "shop_answer": "Wir haben derzeit kein physisches Geschäft. Wenn Sie jedoch in München wohnen und nicht auf den Versand Ihrer Bestellung warten möchten, freuen wir uns, Sie kennenzulernen! Kontaktieren Sie uns, um einen Termin für ein Treffen zu vereinbaren!",
+    "typo_question": "Ich habe einen Fehler in meiner E-Mail-Adresse / Lieferadresse gemacht. Wie kann ich diesen korrigieren?",
+    "typo_answer": "Keine Sorge, kontaktieren Sie uns einfach so schnell wie möglich und wir werden alles tun, um sicherzustellen, dass Ihre Bestellung am richtigen Ort ankommt.",
+    "country_question": "In welche Länder versenden Sie?",
+    "country_answer": "Wir versenden derzeit überall in der Europäischen Union. Wenn Sie in der Schweiz oder anderswo außerhalb der EU leben, wenden Sie sich bitte an uns, da wir Ihnen gerne zusenden. Die Import- und Versandkosten variieren jedoch.",
+    "cost_question": "Wie hoch sind die Versandkosten?",
+    "cost_answer": "Innerhalb Deutschlands: Kostenloser Versand ab einem Bestellwert von 15 €! | 2,90 € für Bestellungen unter 15 €. Außerhalb Deutschlands: Kostenloser Versand ab einem Bestellwert von 50 €! | 3,90 € für Bestellungen unter 50 €.",
+    "time_question": "Wie lange dauert der Versand?",
+    "time_answer": "Bestellungen werden normalerweise innerhalb von 24 Stunden nach dem Kauf versendet. Innerhalb Deutschlands: Sie können eine Lieferung innerhalb von 1-2 Werktagen erwarten. Außerhalb Deutschlands: Sie können eine Lieferung innerhalb von 3-7 Werktagen erwarten.",
+    "company_question": "Welche Reederei benutzen Sie?",
+    "company_answer": "Wir benutzen die Deutsche Post, DHL oder Hermes.",
+    "policy_question": "Was ist Ihre Rückgabe- oder Umtauschrichtlinie?",
+    "policy_answer": "Sie können innerhalb von 30 Tagen nach dem Kauf eine Rückgabe oder einen Umtausch vornehmen.",
+    "returns_question": "Wie kann ich einen Artikel zurückgeben / umtauschen?",
+    "returns_answer": "Sie können die Ware innerhalb eines Monats nach Erhalt zurücksenden. Die Kosten für die Rücksendung sind von Ihnen zu tragen. Befolgen Sie die Schritte unter dem folgenden Link, um einen Artikel zurückzugeben oder umzutauschen. Bitte haben Sie Verständnis dafür, dass wir keine Rückerstattung leisten können, wenn Sendungen ohne Sendungsverfolgung verloren gehen. Sobald wir Ihre Rücksendung erhalten haben, werden wir sie überprüfen und die Rückerstattung veranlassen. Wir erstatten sofort alle Zahlungen, die wir von Ihnen erhalten haben, einschließlich der Versandkosten. Wir werden uns bemühen, alle Rücksendungen so schnell wie möglich zu bearbeiten.",
+    "services_question": "Welche Zahlungsmethoden akzeptieren Sie?",
+    "services_answer": "Wir akzeptieren derzeit Zahlungen per PayPal, Überweisung oder persönliche Abholung. Der Versand erfolgt, sobald wir Ihre Zahlung erhalten haben. PayPal-Zahlungen werden sofort überprüft. Bitte beachten Sie, dass Überweisungen normalerweise 2-3 Werktage dauern. Überweisungen sollten innerhalb von 10 Tagen erfolgen - andernfalls müssen wir Ihre Bestellung stornieren.",
+    "currency_question": "Welche Währung akzeptieren Sie für Zahlungen?",
+    "currency_answer": "Alle Preise sind in Euro inklusive Mehrwertsteuer von 19% angegeben.",
+    "largeOrders_question": "Bieten Sie Sonderangebote für Groß- oder Großaufträge an?",
+    "largeOrders_answer": "Sind Sie ein Surfclub, ein Geschäft / Einzelhändler oder eine Gruppe von Freunden, die eine größere Bestellung aufgeben möchten? Bitte kontaktieren Sie uns für weitere Informationen zu Rabatten oder Angeboten bei größeren Bestellungen!"
+  },
+  "eisbach": {
+    "about": "Der Eisbach ist der berühmte Flusssurfspot in München, der das ganze Jahr über gesurft werden kann. Der deutsche Name Eisbach (übersetzt in Ice Creek) ist ein Synonym für die Wassertemperatur, die oft eiskalt ist. Das Wasser stammt aus den bayerischen Alpen und erwärmt sich in den Sommermonaten auf dem Weg nach München langsam. Diese Seite gibt Ihnen einen schnellen Überblick über die aktuellen Flussbedingungen. Pack den richtigen Neoprenanzug ein und genieße deine Surf-Session!",
+    "advanced": "Fähigkeitsstufe fortgeschritten",
+    "intermediate": "Fähigkeitsstufe Mittelstufe",
+    "beginner": "Schwierigkeitsgrad Anfänger",
+    "runoff": "Abfließen",
+    "waterLevel": "Wasserstand",
+    "faq1_question": "Wann ist die beste Zeit zum Surfen?",
+    "faq1_answer": "Die Wassertemperaturen erwärmen sich im Laufe des Tages, sodass die wärmste Zeit zum Surfen der späte Nachmittag ist."
   }
 }

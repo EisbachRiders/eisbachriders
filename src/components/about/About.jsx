@@ -1,23 +1,16 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import AboutDetail from './AboutDetail'
-import AboutHero from './AboutHero'
-import Founder from './Founder'
+import React from "react"
+import AboutHero from "./AboutHero"
+import AboutDetail from "./AboutDetail"
+import Founders from "./Founders"
+import Organizations from "./Organizations"
 
-function About({ img }) {
+export default function About() {
   return (
-    <div>
-      <AboutHero img={img[3]} />
-
-      <AboutDetail img={img} />
-
-      <Founder img={[img[5], img[4]]} />
-    </div>
+    <>
+      <AboutHero />
+      <AboutDetail />
+      <Organizations />
+      <Founders />
+    </>
   )
 }
-
-About.propTypes = {
-  img: PropTypes.array.isRequired,
-}
-
-export default About

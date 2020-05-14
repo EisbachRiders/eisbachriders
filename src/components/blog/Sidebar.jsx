@@ -1,81 +1,92 @@
-import React from 'react'
-import { useTranslation } from 'react-i18next'
-import { makeStyles } from '@material-ui/core/styles'
-import Img from 'gatsby-image'
-import Typography from '@material-ui/core/Typography'
-import NewsletterBlog from '../newsletter/NewsletterBlog'
-import BrushStroke from '../ui/BrushStroke'
-import Link from '../ui/Link'
-import Instagram from '../instagram/Instagram'
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
+import { Link } from "gatsby-theme-material-ui"
+import { useTranslation } from "react-i18next"
+import { makeStyles } from "@material-ui/core/styles"
+import Paper from "@material-ui/core/Paper"
+import LatestPosts from "./LatestPosts"
+import PopularPosts from "./PopularPosts"
+import InstagramWidget from "../instagram/InstagramWidget"
 
-const useStyles = makeStyles(theme => ({
-  sidebarTitle: {
-    textAlign: 'center',
-    fontSize: '1.5rem',
-    textTransform: 'uppercase',
+const useStyles = makeStyles((theme) => ({
+  paper: {
+    padding: 30,
+    marginBottom: 30,
+    boxShadow: "0 0 70px rgba(0,0,0,.11)",
+  },
+  title: {
+    textAlign: "center",
+    fontSize: 14,
+    textTransform: "lowercase",
     letterSpacing: 3,
-    marginBottom: 15,
+    marginBottom: 30,
+    fontFamily: "secondary",
   },
-  sidebarContainer: {
-    display: 'flex',
-    justifyContent: 'center',
-    marginBottom: 60,
-  },
-  logo: {
-    width: 150,
-    height: 150,
-    marginBottom: 15,
-  },
+  img: { width: "75%", margin: "0 auto", marginBottom: 30 },
   text: {
-    textAlign: 'center',
-    marginBottom: 75,
-  },
-  list: {
-    marginBottom: 45,
-  },
-  categories: {
-    color: theme.palette.primary.main,
-  },
-  margin: {
-    marginLeft: '10%',
+    textAlign: "center",
   },
   link: {
     color: theme.palette.primary.main,
+    paddingLeft: 5,
   },
 }))
 
-export default function Sidebar({ blogImg, instagram }) {
+export default function Sidebar() {
   const classes = useStyles()
   const { t } = useTranslation()
+  const data = useStaticQuery(graphql`
+    query {
+      fileName: file(relativePath: { eq: "aboutUs.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
 
   return (
-    <div className={classes.sidebar}>
-      <div className={classes.margin}>
-        <BrushStroke title="About" />
-      </div>
-      <div className={classes.sidebarContainer}>
-        <Img alt="" fluid={blogImg.node.fluid} className={classes.logo} />
-      </div>
-      <Typography className={classes.text}>
-        {t('sidebar.about')}
-        <Link to="/about" className={classes.link}>
-          {t('sidebar.more')}
-        </Link>
-      </Typography>
+    <>
+      <Paper className={classes.paper} square elevation={0}>
+        <p className={classes.title}>{t("common.about")}</p>
+        <div className={classes.imgContainer}>
+          <Img
+            fluid={data.fileName.childImageSharp.fluid}
+            alt="2 friends sitting together"
+            placeholderStyle={{ backgroundColor: `blue` }}
+            className={classes.img}
+            imgStyle={{ objectPosition: "center center" }}
+          />
+        </div>
+        <p className={classes.text}>
+          {t("sidebar.about")}
+          <Link to="/about" className={classes.link}>
+            {t("common.more")}...
+          </Link>
+        </p>
+      </Paper>
 
-      <div className={classes.margin}>
-        <BrushStroke title="Subscribe" />
-      </div>
+      {/* <Paper className={classes.paper} square elevation={0}>
+        <p className={classes.title}>{t("common.subscribe")}</p>
+      </Paper> */}
 
-      <div className={classes.sidebarContainer}>
-        <NewsletterBlog />
-      </div>
+      <Paper className={classes.paper} square elevation={0}>
+        <p className={classes.title}>{t("sidebar.latest")}</p>
+        <LatestPosts />
+      </Paper>
 
-      <div className={classes.margin}>
-        <BrushStroke title="Instagram" />
-      </div>
+      <Paper className={classes.paper} square elevation={0}>
+        <p className={classes.title}>{t("sidebar.popular")}</p>
+        <PopularPosts />
+      </Paper>
 
-      <Instagram images={instagram} />
-    </div>
+      <Paper className={classes.paper} square elevation={0}>
+        <p className={classes.title}>Instagram</p>
+        <InstagramWidget />
+      </Paper>
+    </>
   )
 }

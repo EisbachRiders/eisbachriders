@@ -1,3 +1,5 @@
-import wrapWithProvider from './wrap-with-provider'
-//For Redux
-export const wrapRootElement = wrapWithProvider
+/**
+ * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/ssr-apis/
+ */
