@@ -123,8 +123,6 @@ function EisbachForecast() {
     fetchData()
   }, [])
 
-  console.log(data)
-
   let runoff = [25.3, 24.2, 26.7]
   let waterLevel = [144, 145, 146]
 

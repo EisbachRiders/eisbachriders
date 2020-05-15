@@ -78,7 +78,7 @@ function EisbachMap() {
         <div className={classes.mapContainer}>
           <LoadScript
             id="script-loader"
-            googleMapsApiKey="AIzaSyCAyy3EDSCcrozc1uIYb3zL0XdBhK6oe-8"
+            googleMapsApiKey={process.env.GOOGLEMAPS}
             language={i18n.language}
             region="DE"
             loadingElement={<CircularProgress />}
