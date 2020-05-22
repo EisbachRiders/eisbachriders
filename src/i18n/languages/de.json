@@ -5,6 +5,7 @@
     "data": "Datenschutz",
     "credit": "Anerkennung",
     "explore": "erkunden",
+    "products": "Produkte",
     "eisbach": "eisbach",
     "about": "Über",
     "blog": "blog",
@@ -33,13 +34,26 @@
     "accept": "akzeptieren",
     "decline": "opt-out"
   },
+  "loadError": "Ein Fehler ist aufgetreten! Bitte versuchen Sie es später noch einmal.",
   "homepage": {
     "heroSubtitle": "Surf Equipment und Zubehör aus München",
     "sustainable": "Nachhaltigkeit",
     "community": "Gemeinschaft",
     "surf": "Surfausrüstung",
     "ourStory": "Unsere Geschichte",
-    "mission": "Unsere Mission ist es, unsere Spielplätze - das Meer und die Flüsse, die uns so viel Freude bereiten - zu schützen, indem wir lokale Gemeinschaften unterstützen und uns bemühen, unsere Wasserquellen zu erhalten."
+    "mission": "Unsere Mission ist es, unsere Spielplätze - das Meer und die Flüsse, die uns so viel Freude bereiten - zu schützen, indem wir lokale Gemeinschaften unterstützen und uns bemühen, unsere Wasserquellen zu erhalten.",
+    "featured": "Die Eisbach Riders Single Tab Future Glasfaser mit Wabenkern ist besonders leicht und bietet eine sofortige Reaktion während Ihrer Kurven. Mit einem moderaten Flex ist es ideal für schnelle Richtungswechsel. Das Finnen-Design eignet sich sowohl für Wellen als auch zum Flusssurfen."
+  },
+  "feature": {
+    "featuredProduct": "vorgestelltes",
+    "response": "Surfbedingungen",
+    "surfDetail1": "kniehoch",
+    "surfDetail2": "Hüftkopf hoch",
+    "experience": "Erfahrung",
+    "beginner": "Anfänger",
+    "intermediate": "mittlere",
+    "pro": "Profi",
+    "highlight": "Hochleistung"
   },
   "newsletter": {
     "stayintouch1": "Bleiben Sie mit den neuesten ",

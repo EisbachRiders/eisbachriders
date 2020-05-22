@@ -214,6 +214,8 @@ function Footer() {
               href="https://www.facebook.com/EisbachRiders/"
               aria-label="facebook"
               size="small"
+              rel="noopener"
+              target="_blank"
             >
               <FacebookIcon className={classes.iconSocial} />
             </IconButton>
@@ -221,6 +223,8 @@ function Footer() {
               href="https://www.instagram.com/eisbachriders/"
               aria-label="instagram"
               size="small"
+              rel="noopener"
+              target="_blank"
             >
               <InstagramIcon className={classes.iconSocial} />
             </IconButton>
@@ -228,6 +232,8 @@ function Footer() {
               href="https://www.pinterest.com/eisbachriders/"
               aria-label="pinterest"
               size="small"
+              rel="noopener"
+              target="_blank"
             >
               <PinterestIcon className={classes.iconSocial} />
             </IconButton>

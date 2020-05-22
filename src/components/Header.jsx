@@ -129,7 +129,10 @@ function Header({ handleSetLang }) {
     threshold: 0,
   })
 
-  const links = ["eisbach", "shop", "about"]
+  const links =
+    process.env.NODE_ENV === "development"
+      ? ["eisbach", "products", "about", "shop"]
+      : ["eisbach", "blog", "about", "shop"]
   const mobileLinks = ["contact", "customerService"]
 
   return (
@@ -150,6 +153,8 @@ function Header({ handleSetLang }) {
           href="https://www.facebook.com/EisbachRiders/"
           aria-label="facebook"
           size="small"
+          rel="noopener"
+          target="_blank"
         >
           <FacebookIcon className={classes.icon} />
         </IconButton>
@@ -157,6 +162,8 @@ function Header({ handleSetLang }) {
           href="https://www.instagram.com/eisbachriders/"
           aria-label="instagram"
           size="small"
+          rel="noopener"
+          target="_blank"
         >
           <InstagramIcon className={classes.icon} />
         </IconButton>
@@ -164,6 +171,8 @@ function Header({ handleSetLang }) {
           href="https://www.pinterest.com/eisbachriders/"
           aria-label="pinterest"
           size="small"
+          rel="noopener"
+          target="_blank"
         >
           <PinterestIcon className={classes.icon} />
         </IconButton>
@@ -212,9 +221,27 @@ function Header({ handleSetLang }) {
                       : classes.listItem
                   }
                 >
-                  <Link to={`/${elem}`} className={classes.link}>
-                    {t(`links.${elem}`)}
-                  </Link>
+                  {elem === "shop" ? (
+                    <a
+                      href="https://shop.eisbach-riders.com/"
+                      alt="shop"
+                      className={classes.link}
+                    >
+                      {t(`links.${elem}`)}
+                    </a>
+                  ) : elem === "blog" ? (
+                    <a
+                      href="https://secondwavesurfing.com/blog"
+                      alt="blog"
+                      className={classes.link}
+                    >
+                      {t(`links.${elem}`)}
+                    </a>
+                  ) : (
+                    <Link to={`/${elem}`} className={classes.link}>
+                      {t(`links.${elem}`)}
+                    </Link>
+                  )}
                 </ListItem>
               ))}
             </List>

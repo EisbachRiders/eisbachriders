@@ -83,6 +83,14 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-graphql`,
+      options: {
+        typeName: "WPGraphQL",
+        fieldName: "wpgraphql",
+        url: "https://shop.eisbach-riders.com/graphql",
+      },
+    },
+    {
       resolve: `gatsby-plugin-gdpr-cookies`,
       options: {
         googleAnalytics: {

@@ -6,6 +6,7 @@
     "credit": "credit",
     "explore": "explore",
     "eisbach": "eisbach",
+    "products": "products",
     "about": "about",
     "blog": "blog",
     "shop": "shop",
@@ -33,13 +34,26 @@
     "accept": "accept",
     "decline": "opt-out"
   },
+  "loadError": "An error has occurred! Please try again later.",
   "homepage": {
     "heroSubtitle": "Surf Equipment from Munich",
     "sustainable": "sustainability",
     "community": "community",
     "surf": "surf equipment",
     "ourStory": "Our Story",
-    "mission": "Our mission is to protect our playgrounds - the ocean and rivers that provide us so much enjoyment - by supporting local communities and efforts to preserve our water sources."
+    "mission": "Our mission is to protect our playgrounds - the ocean and rivers that provide us so much enjoyment - by supporting local communities and efforts to preserve our water sources.",
+    "featured": "The Eisbach Riders Single Tab Future fiberglass in with a honeycomb core is extra lightweight and provides an immediate response during your turns. With a moderate flex it is ideal for making fast changes of direction. The fin design is suited for any waves as well as for river surfing."
+  },
+  "feature": {
+    "featuredProduct": "featured",
+    "response": "response",
+    "surfDetail1": "stiffness",
+    "surfDetail2": "weight",
+    "experience": "experience",
+    "beginner": "beginner",
+    "intermediate": "intermediate",
+    "pro": "pro",
+    "highlight": "High performance"
   },
   "newsletter": {
     "stayintouch1": "Stay in touch with all the ",

@@ -47,6 +47,9 @@ const useStyles = makeStyles((theme) => ({
   gray: {
     background: theme.color.gray,
   },
+  grayLt: {
+    background: "#fafafa",
+  },
   flexStart: {
     justifyContent: "flex-start",
   },
@@ -121,7 +124,13 @@ Container.propTypes = {
     PropTypes.array,
     PropTypes.bool,
   ]),
-  background: PropTypes.oneOf(["secondary", "primary", "black", "gray"]),
+  background: PropTypes.oneOf([
+    "secondary",
+    "primary",
+    "black",
+    "gray",
+    "grayLt",
+  ]),
   justifyContent: PropTypes.oneOf([
     "flexStart",
     "flexEnd",
