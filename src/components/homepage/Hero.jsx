@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
   title: {
     textTransform: "capitalize",
     fontSize: 52,
-    fontWeight: 600,
+    marginBottom: 0,
     [theme.breakpoints.up("sm")]: {
       textAlign: "left",
       fontSize: 48,
@@ -71,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 58,
     },
     [theme.breakpoints.up("xl")]: {
-      fontSize: 100,
+      fontSize: 150,
     },
   },
   subtitle: {
@@ -82,7 +82,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 20,
     },
     [theme.breakpoints.up("xl")]: {
-      fontSize: 34,
+      fontSize: 42,
     },
   },
 }))
@@ -117,14 +117,16 @@ function Hero() {
           gutterBottom
           className={clsx(classes.text, classes.title)}
         >
-          <span className={classes.textBig}>E</span>isbach
+          {/* <span className={classes.textBig}>E</span> */}
+          Eisbach
         </Typography>
         <Typography
           variant="h1"
           gutterBottom
           className={clsx(classes.text, classes.title, classes.indent)}
         >
-          <span className={classes.textBig}>R</span>iders
+          {/* <span className={classes.textBig}>R</span> */}
+          Riders
         </Typography>
 
         <Typography

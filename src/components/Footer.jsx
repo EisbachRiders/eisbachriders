@@ -14,12 +14,9 @@ import LocalShippingIcon from "@material-ui/icons/LocalShipping"
 import Newsletter from "./newsletter/Newsletter"
 import Container from "./ui/Container"
 import Contact from "./Contact"
-import fullLogo from "../assets/logos/ER_full_black.svg"
+import fullLogo from "../assets/logos/ER_full_white.svg"
 
 const useStyles = makeStyles((theme) => ({
-  footer: {
-    background: theme.color.white,
-  },
   container: {
     justifyContent: "center",
     [theme.breakpoints.up("sm")]: {
@@ -29,15 +26,18 @@ const useStyles = makeStyles((theme) => ({
   title: {
     textTransform: "lowercase",
     fontSize: 16,
+    fontWeight: 600,
     letterSpacing: 3,
     marginBottom: 15,
+    color: theme.color.white,
     [theme.breakpoints.up("md")]: {
       fontSize: 24,
     },
   },
   text: {
     textTransform: "capitalize",
-    color: theme.color.black,
+    color: theme.color.white,
+    fontWeight: 600,
     letterSpacing: 2,
     marginBottom: 15,
     fontSize: 12,
@@ -102,7 +102,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-around",
   },
   iconSocial: {
-    color: theme.color.black,
+    color: theme.color.white,
     width: 22,
     height: 22,
     "&:hover": {
@@ -206,7 +206,11 @@ function Footer() {
 
       <Newsletter />
 
-      <Container alignItems="flexStart" className={classes.container}>
+      <Container
+        alignItems="flexStart"
+        className={classes.container}
+        background="blackLt"
+      >
         <div className={classes.imgContainer}>
           <img src={fullLogo} alt="logo" className={classes.img} />
           <div className={classes.socialContainer}>

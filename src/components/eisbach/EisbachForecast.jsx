@@ -14,10 +14,14 @@ import {
   YAxis,
   LabelList,
 } from "recharts"
-import WetsuitLongIcon from "../../assets/icons/WetsuitLong"
-import TempIcon from "../../assets/icons/temperature"
+import WetsuitLong from "../../assets/icons/WetsuitLong.png"
+// import WetsuitLongIcon from "../../assets/icons/WetsuitLong"
+// import WetsuitShortIcon from "../../assets/icons/WetsuitShort"
+// import WetsuitHoodIcon from "../../assets/icons/WetsuitHood"
+// import SwimTrunkIcon from "../../assets/icons/SwimTrunk"
+import TempIcon from "../../assets/icons/Temperature"
 import WbSunnyIcon from "@material-ui/icons/WbSunny"
-import WaterIcon from "../../assets/icons/water"
+import WaterIcon from "../../assets/icons/Water"
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -59,7 +63,8 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-around",
   },
   chartTempContainer: {
-    textAlign: "center",
+    display: "flex",
+    alignItems: "center",
   },
   chartOuterContainer: {
     width: "100%",
@@ -72,18 +77,40 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "center",
   },
+  recommendationContainer: {
+    display: "flex",
+  },
+  recommendation: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  },
+  recommendation2: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-around",
+    alignItems: "center",
+  },
   img: {
-    height: 80,
-    width: 60,
-    marginRight: 15,
+    width: 100,
+    height: 100,
   },
   imgLg: {
     height: 200,
     width: 150,
   },
   weather: {
-    fontSize: 32,
+    fontSize: 42,
     margin: 0,
+  },
+  weather2: {
+    fontSize: 28,
+    margin: 0,
+  },
+  weather3: {
+    fontSize: 28,
+    margin: 0,
+    color: "rgb(102, 102, 102, .5)",
   },
   weatherDetail: {
     textTransform: "capitalize",
@@ -95,12 +122,22 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
   },
+  iconContainer2: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
   icon: {
     height: 32,
   },
   label: {
     fontSize: 11,
     fill: "rgb(102, 102, 102)",
+  },
+  labelBold: {
+    fontSize: 11,
+    fontWeight: 700,
+    fill: "black",
   },
   tempIcon: {
     height: 22,
@@ -111,6 +148,12 @@ const useStyles = makeStyles((theme) => ({
   tempIcon2: {
     height: 16,
     width: 16,
+    fill: "rgb(102, 102, 102,.8)",
+    color: "rgb(102, 102, 102, .8)",
+  },
+  tempIcon3: {
+    height: 24,
+    width: 24,
     fill: "rgb(102, 102, 102,.8)",
     color: "rgb(102, 102, 102, .8)",
   },
@@ -189,6 +232,81 @@ function EisbachForecast() {
     .map((e) => new Date(new Date().getTime() - e * 60 * 60 * 1000).getHours())
     .reverse()
 
+  let recommendation = (
+    <img src={WetsuitLong} alt="long wetsuit" className={classes.img} />
+  )
+  let thickness = 4
+  // if (data) {
+  //   let waterTemp = data.current.waterTemp[8]
+  //   switch (true) {
+  //     case waterTemp < 7:
+  //       recommendation = (
+  //         <WetsuitHoodIcon
+  //           alt="wetsuit recommendation"
+  //           className={classes.img}
+  //         />
+  //       )
+  //       thickness = 5
+  //       break
+  //     case waterTemp >= 7 && waterTemp < 10:
+  //       recommendation = (
+  //         <WetsuitHoodIcon
+  //           alt="wetsuit recommendation"
+  //           className={classes.img}
+  //         />
+  //       )
+  //       thickness = 5
+  //       break
+  //     case waterTemp >= 10 && waterTemp < 14:
+  //       recommendation = (
+  //         <WetsuitHoodIcon
+  //           alt="wetsuit recommendation"
+  //           className={classes.img}
+  //         />
+  //       )
+  //       thickness = 5
+  //       break
+  //     case waterTemp >= 14 && waterTemp < 16:
+  //       recommendation = (
+  //         <WetsuitLongIcon
+  //           alt="wetsuit recommendation"
+  //           className={classes.img}
+  //         />
+  //       )
+  //       thickness = 4
+  //       break
+  //     case waterTemp >= 16 && waterTemp < 20:
+  //       recommendation = (
+  //         <WetsuitLongIcon
+  //           alt="wetsuit recommendation"
+  //           className={classes.img}
+  //         />
+  //       )
+  //       thickness = 3
+  //       break
+  //     case waterTemp >= 20 && waterTemp < 22:
+  //       recommendation = (
+  //         <WetsuitShortIcon
+  //           alt="wetsuit recommendation"
+  //           className={classes.img}
+  //         />
+  //       )
+  //       break
+  //     case waterTemp >= 22:
+  //       recommendation = (
+  //         <SwimTrunkIcon alt="wetsuit recommendation" className={classes.img} />
+  //       )
+  //       break
+  //     default:
+  //       recommendation = (
+  //         <WetsuitLongIcon
+  //           alt="wetsuit recommendation"
+  //           className={classes.img}
+  //         />
+  //       )
+  //   }
+  // }
+
   return (
     <Container
       justifyContent="spaceBetween"
@@ -215,12 +333,15 @@ function EisbachForecast() {
                   </p>
                 </div>
                 <div className={classes.chartTempContainer}>
-                  <WetsuitLongIcon
-                    alt="wetsuit recommendation"
-                    className={classes.img}
-                  />
+                  <div className={classes.recommendation}>
+                    {recommendation}
+                    {thickness ? `${thickness}mm` : null}
+                  </div>
                   <p className={classes.weather}>
-                    {data.current.waterTemp[8]}&#176;C
+                    {(Math.round(data.current.waterTemp[8] * 10) / 10).toFixed(
+                      1
+                    )}
+                    &#176;C
                   </p>
                 </div>
               </div>
@@ -246,7 +367,7 @@ function EisbachForecast() {
                       data={data.current.temp.map((elem) => {
                         return { value: elem }
                       })}
-                      margin={{ top: 0, right: 12, left: 12, bottom: 0 }}
+                      margin={{ top: 0, right: 15, left: 10, bottom: 0 }}
                     >
                       <YAxis
                         hide={true}
@@ -255,7 +376,7 @@ function EisbachForecast() {
                       <Line
                         type="monotone"
                         dataKey="value"
-                        stroke="#fce566"
+                        stroke="#E6C55E"
                         strokeWidth="2"
                       >
                         <LabelList
@@ -271,7 +392,7 @@ function EisbachForecast() {
                       data={data.current.waterTemp.map((elem, idx) => {
                         return { time: `${time[idx]}:00`, value: elem }
                       })}
-                      margin={{ top: 0, right: 12, left: 12, bottom: 0 }}
+                      margin={{ top: 0, right: 15, left: 10, bottom: 0 }}
                     >
                       <YAxis
                         hide={true}
@@ -288,13 +409,24 @@ function EisbachForecast() {
                         dataKey="value"
                         stroke="#0062f0"
                         fill="#0062f0"
-                      >
-                        <LabelList
-                          dataKey="value"
-                          position="top"
-                          className={classes.label}
-                        />
-                      </Area>
+                        label={(elem) => (
+                          <text
+                            x={elem.x - elem.offset}
+                            y={elem.y - elem.offset}
+                            textAnchor="top"
+                            className={clsx(
+                              "recharts-text recharts-label",
+                              elem.index === 8
+                                ? classes.labelBold
+                                : classes.label
+                            )}
+                          >
+                            <tspan x={elem.x - elem.offset * 2} dy="0em">
+                              {elem.value}
+                            </tspan>
+                          </text>
+                        )}
+                      ></Area>
                     </AreaChart>
                   </ResponsiveContainer>
                 </div>
@@ -318,22 +450,31 @@ function EisbachForecast() {
                     ).format(new Date().setDate(new Date().getDate() + 2))}
               </p>
               <div className={classes.innerContainer}>
-                <WetsuitLongIcon
-                  alt="wetsuit recommendation"
-                  className={classes.imgLg}
-                />
-                <div className={classes.spaceAroundContainer}>
-                  <p className={classes.weather}>
-                    {data[elem].minWaterTemp}&#176;C
-                  </p>
-                  <p className={classes.weather}>
-                    {data[elem].maxWaterTemp}&#176;C
-                  </p>
+                <div className={classes.recommendationContainer}>
+                  <div className={classes.recommendation}>
+                    {recommendation}
+                    {thickness ? `${thickness}mm` : null}
+                  </div>
+                  <div className={classes.recommendation2}>
+                    <p className={classes.weather2}>
+                      {(Math.round(data[elem].maxWaterTemp * 10) / 10).toFixed(
+                        1
+                      )}
+                      &#176;C
+                    </p>
+                    <p className={classes.weather3}>
+                      {(Math.round(data[elem].minWaterTemp * 10) / 10).toFixed(
+                        1
+                      )}
+                      &#176;C
+                    </p>
+                  </div>
                 </div>
-                <div className={classes.iconContainer}>
-                  <WbSunnyIcon className={classes.icon} />
-                  <p>{data[elem].maxTemp}&#176;C</p>
-                </div>
+                {/* <div className={classes.iconContainer2}>
+                  <WbSunnyIcon className={classes.tempIcon3} />
+                  <TempIcon className={classes.tempIcon3} />
+                  <p>{data[elem].maxTemp}</p>
+                </div> */}
               </div>
             </div>
           ))}

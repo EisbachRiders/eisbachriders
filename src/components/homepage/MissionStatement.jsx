@@ -6,7 +6,7 @@ import Typography from "@material-ui/core/Typography"
 import Container from "../ui/Container"
 import { Link } from "gatsby-theme-material-ui"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   container: {
     display: "flex",
     justifyContent: "space-around",
@@ -24,12 +24,11 @@ const useStyles = makeStyles(theme => ({
   title: {
     color: theme.color.greyLt,
     fontFamily: "secondary",
-    fontSize: 15,
+    fontSize: 18,
     letterSpacing: 4,
-    fontWeight: 600,
-    marginBottom: 5,
+    lineHeight: 1,
     [theme.breakpoints.up("lg")]: {
-      fontSize: 18,
+      fontSize: 32,
     },
   },
   margin: {
@@ -57,7 +56,7 @@ const useStyles = makeStyles(theme => ({
     textAlign: "center",
     letterSpacing: 3,
     background: theme.palette.primary.main,
-    color: theme.color.white,
+    color: theme.color.black,
     fontSize: 16,
     fontWeight: 500,
     padding: "15px 45px",

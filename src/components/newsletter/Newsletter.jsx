@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { useTranslation } from "react-i18next"
+import addToMailchimp from "gatsby-plugin-mailchimp"
 import clsx from "clsx"
 import { makeStyles, useTheme } from "@material-ui/core/styles"
 import Typography from "@material-ui/core/Typography"
@@ -12,7 +13,7 @@ import TextField from "@material-ui/core/TextField"
 import useMediaQuery from "@material-ui/core/useMediaQuery"
 import NewsletterSnackbar from "./Snackbar"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     background: theme.palette.primary.main,
     display: "flex",
@@ -29,10 +30,10 @@ const useStyles = makeStyles(theme => ({
     },
   },
   text: {
-    color: theme.color.white,
+    color: theme.color.black,
     fontFamily: "secondary",
     letterSpacing: 2,
-    fontSize: 18,
+    fontSize: 32,
     margin: 0,
     [theme.breakpoints.up("md")]: {
       width: 500,
@@ -44,11 +45,12 @@ const useStyles = makeStyles(theme => ({
     },
   },
   button: {
-    background: theme.color.white,
-    color: theme.palette.primary.main,
     fontSize: 16,
     [theme.breakpoints.up("md")]: {
       padding: "15px 45px",
+    },
+    "&:hover": {
+      boxShadow: "none",
     },
   },
   form: {
@@ -95,14 +97,12 @@ function Newsletter() {
   const [snackbarMessage, setSnackbarMessage] = useState(false)
   const pattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
 
-  const handleSubmit = async e => {
+  const handleSubmit = async (e) => {
     if (isEmailValid && isNameValid) {
-      //   const result = await addToMailchimp(email, {
-      //     FNAME: name,
-      //     gdpr_26529: true,
-      //   })
-      const result = { msg: "test" }
-      setDialog(false)
+      const result = await addToMailchimp(email, {
+        FNAME: name,
+        gdpr_26529: true,
+      })
       if (result.result === "error") {
         setSnackbar(true)
         setSnackbarMessage(
@@ -123,7 +123,7 @@ function Newsletter() {
     }
   }
 
-  const handleChange = name => event => {
+  const handleChange = (name) => (event) => {
     if (name === "email") {
       setEmail(event.target.value)
       if (!pattern.test(event.target.value)) {
@@ -157,6 +157,7 @@ function Newsletter() {
         </div>
         <Button
           variant="contained"
+          color="secondary"
           size="large"
           className={classes.button}
           onClick={() => setDialog(true)}

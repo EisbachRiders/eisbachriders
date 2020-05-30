@@ -24,28 +24,25 @@ const color = {
   redLt: "#ff4e5b",
   // theme colors
   white: "#ffffff",
-  black: "#000000",
-  almostBlack: "#363738", // typography
-  textLight: "#838588",
-  gray: "#ebedee",
-  primaryBlue: "#0062f0",
-  primaryBlueLt: "#3f8eff",
-  gold: "#E6C55E",
-  goldLt: "#f0dda0",
+  black: "#0B0C10",
+  blackLt: "#1F2833",
+  gray: "#C5C6C7",
+  teal: "#66FCF1",
+  tealDk: "#45A29E",
 }
 
 const theme = createMuiTheme({
   palette: {
     type: "light",
     primary: {
-      light: color.goldLt,
-      main: color.gold,
-      dark: color.goldLt,
+      light: color.tealDk,
+      main: color.teal,
+      dark: color.tealDk,
     },
     secondary: {
-      light: color.primaryBlueLt,
-      main: color.primaryBlue,
-      dark: color.primaryBlueLt,
+      light: "#9d9fa0",
+      main: color.gray,
+      dark: "#9d9fa0",
     },
     error: { main: color.red },
   },

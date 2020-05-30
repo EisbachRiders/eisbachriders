@@ -129,10 +129,7 @@ function Header({ handleSetLang }) {
     threshold: 0,
   })
 
-  const links =
-    process.env.NODE_ENV === "development"
-      ? ["eisbach", "products", "about", "shop"]
-      : ["eisbach", "blog", "about", "shop"]
+  const links = ["eisbach", "blog", "shop", "about"]
   const mobileLinks = ["contact", "customerService"]
 
   return (

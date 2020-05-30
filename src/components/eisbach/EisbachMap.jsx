@@ -71,7 +71,11 @@ function EisbachMap() {
   ]
 
   return (
-    <Container variant="center" className={classes.container} background="gray">
+    <Container
+      variant="center"
+      className={classes.container}
+      background="grayLt"
+    >
       <p className={classes.header}>eisbach</p>
       <p className={classes.text}>{t("eisbach.about")}</p>
       <div className={classes.mapListContainer}>
