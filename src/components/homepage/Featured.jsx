@@ -56,6 +56,14 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 14,
     },
   },
+  detailTitle: {
+    fontFamily: "secondary",
+    fontSize: 22,
+    marginBottom: 15,
+    [theme.breakpoints.up("md")]: {
+      fontSize: 32,
+    },
+  },
   img: {
     width: "60%",
     margin: "0 auto",
@@ -103,7 +111,7 @@ function FeaturedProduct() {
           </div>
         </Hidden>
         <div className={classes.containerInfo}>
-          <Typography className={classes.detailText}>Honeycomb Fin</Typography>
+          <Typography className={classes.detailTitle}>Honeycomb Fin</Typography>
           <Typography className={classes.detailText}>
             {t("homepage.featured")}
           </Typography>
