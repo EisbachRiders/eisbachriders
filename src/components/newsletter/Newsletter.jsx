@@ -46,6 +46,7 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     fontSize: 16,
+    background: theme.color.white,
     [theme.breakpoints.up("md")]: {
       padding: "15px 45px",
     },
@@ -157,7 +158,6 @@ function Newsletter() {
         </div>
         <Button
           variant="contained"
-          color="secondary"
           size="large"
           className={classes.button}
           onClick={() => setDialog(true)}

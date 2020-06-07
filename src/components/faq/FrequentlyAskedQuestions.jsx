@@ -131,7 +131,7 @@ function FrequentlyAskedQuestions() {
       <Container
         justifyContent="spaceBetween"
         alignItems="center"
-        background="gray"
+        background="grayLt"
       >
         {Object.keys(faqData).map((elem) => (
           <div key={`section${elem}`} className={classes.flexItem}>

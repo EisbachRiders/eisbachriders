@@ -102,14 +102,38 @@ function ShopCategories() {
     }
   `)
   const big = [
-    { cat: "sup", path: "sup-on-lake-bavaria" },
-    { cat: "rapidSurfing", path: "surfer-at-eisbach" },
+    {
+      cat: "sup",
+      path: "sup-on-lake-bavaria",
+      href: "https://shop.eisbach-riders.com/product-category/sup/",
+    },
+    {
+      cat: "rapidSurfing",
+      path: "surfer-at-eisbach",
+      href: "https://shop.eisbach-riders.com/product-category/rapid-surfing/",
+    },
   ]
   const small = [
-    { cat: "fins", path: "fiberglass-single-tab-on-rocks-at-beach" },
-    { cat: "leashes", path: "surfer-putting-on-blue-leash-at-beach" },
-    { cat: "apparel", path: "girl-sitting-at-lake" },
-    { cat: "accessories", path: "surfboards-hanging-on-wall" },
+    {
+      cat: "fins",
+      path: "fiberglass-single-tab-on-rocks-at-beach",
+      href: "https://shop.eisbach-riders.com/product-category/fins/",
+    },
+    {
+      cat: "leashes",
+      path: "surfer-putting-on-blue-leash-at-beach",
+      href: "https://shop.eisbach-riders.com/product-category/leashes/",
+    },
+    {
+      cat: "apparel",
+      path: "girl-sitting-at-lake",
+      href: "https://shop.eisbach-riders.com/product-category/apparel/",
+    },
+    {
+      cat: "accessories",
+      path: "surfboards-hanging-on-wall",
+      href: "https://shop.eisbach-riders.com/product-category/accessories/",
+    },
   ]
   const boxes = [big, small]
 
@@ -147,7 +171,13 @@ function ShopCategories() {
                 <p className={clsx(classes.text, classes.subtitle)}>
                   {t(`shop.${elem.cat}Tagline`)}
                 </p>
-                <Button variant="contained" className={classes.button}>
+                <Button
+                  variant="contained"
+                  className={classes.button}
+                  href={elem.href}
+                  rel="noopener"
+                  target="_blank"
+                >
                   {t("shop.viewCollection")}
                 </Button>
               </div>

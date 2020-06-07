@@ -172,7 +172,32 @@ const useStyles = makeStyles((theme) => ({
 function Footer() {
   const classes = useStyles()
   const { t } = useTranslation()
-  const shop = ["rapid", "fins", "sup", "leashes", "accessories", "apparel"]
+  const shop = [
+    {
+      name: "rapid",
+      link: "https://shop.eisbach-riders.com/product-category/rapid-surfing/",
+    },
+    {
+      name: "fins",
+      link: "https://shop.eisbach-riders.com/product-category/fins/",
+    },
+    {
+      name: "sup",
+      link: "https://shop.eisbach-riders.com/product-category/sup/",
+    },
+    {
+      name: "leashes",
+      link: "https://shop.eisbach-riders.com/product-category/leashes/",
+    },
+    {
+      name: "accessories",
+      link: "https://shop.eisbach-riders.com/product-category/accessories/",
+    },
+    {
+      name: "apparel",
+      link: "https://shop.eisbach-riders.com/product-category/apparel/",
+    },
+  ]
   const customerService = ["faq", "contact", "shipping", "returns"]
   const features = [
     {
@@ -248,13 +273,15 @@ function Footer() {
             <div className={classes.list}>
               <p className={classes.title}>{t("links.shop")}</p>
               {shop.map((elem, idx) => (
-                <Link
+                <a
                   key={`shop${idx}`}
-                  to={`/${elem}`}
+                  href={elem.link}
                   className={clsx(classes.text, classes.link)}
+                  rel="noopener"
+                  target="_blank"
                 >
-                  {t(`links.${elem}`)}
-                </Link>
+                  {t(`links.${elem.name}`)}
+                </a>
               ))}
             </div>
             <div className={classes.list}>
