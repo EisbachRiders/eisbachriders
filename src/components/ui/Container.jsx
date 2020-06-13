@@ -131,6 +131,7 @@ Container.propTypes = {
     "secondary",
     "primary",
     "black",
+    "blackLt",
     "gray",
     "grayLt",
   ]),

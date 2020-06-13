@@ -15,10 +15,9 @@ import {
   LabelList,
 } from "recharts"
 import WetsuitLong from "../../assets/icons/WetsuitLong.png"
-// import WetsuitLongIcon from "../../assets/icons/WetsuitLong"
-// import WetsuitShortIcon from "../../assets/icons/WetsuitShort"
-// import WetsuitHoodIcon from "../../assets/icons/WetsuitHood"
-// import SwimTrunkIcon from "../../assets/icons/SwimTrunk"
+import WetsuitShort from "../../assets/icons/WetsuitShort.jpg"
+import WetsuitHood from "../../assets/icons/WetsuitHood.jpg"
+import SwimTrunk from "../../assets/icons/SwimTrunk.jpg"
 import TempIcon from "../../assets/icons/Temperature"
 import WbSunnyIcon from "@material-ui/icons/WbSunny"
 import WaterIcon from "../../assets/icons/Water"
@@ -162,37 +161,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-let test = {
-  today: {
-    date: "21.05.2020",
-    minWaterTemp: 13.0,
-    maxWaterTemp: 15.0,
-    maxTemp: 78,
-  },
-  tomorrow: {
-    date: "22.05.2020",
-    minWaterTemp: 13.5,
-    maxWaterTemp: 15.0,
-    maxTemp: 73,
-  },
-  next: {
-    date: "23.05.2020",
-    minWaterTemp: 13.0,
-    maxWaterTemp: 14.5,
-    maxTemp: 65,
-  },
-  current: {
-    temp: [58, 60, 69, 74, 77, 68, 65, 64, 65],
-    waterTemp: [15.8, 15.7, 15.4, 15.1, 15.2, 14.9, 14.8, 14.7, 14.7],
-    waterLevel: 146,
-    runoff: 24.7,
-  },
-}
-
 function EisbachForecast() {
-  const [data, setData] = useState(
-    process.env.NODE_ENV === "development" ? test : null
-  )
+  const [data, setData] = useState(null)
   const [loading, setLoading] = useState(false)
   const [loadError, setLoadError] = useState(false)
   const classes = useStyles()
@@ -200,14 +170,10 @@ function EisbachForecast() {
 
   useEffect(() => {
     setLoading(true)
+    let proxyUrl = "https://cors-anywhere.herokuapp.com/"
+    let targetUrl = "http://temperature.eisbach-riders.com/forecast.json"
     const fetchData = () => {
-      fetch(`https://silver-theme-277912.ew.r.appspot.com/`, {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-      })
+      fetch(proxyUrl + targetUrl)
         .then((response) => response.json())
         .then((response) => {
           if (response) {
@@ -223,89 +189,64 @@ function EisbachForecast() {
         })
       setLoading(false)
     }
-    if (process.env.NODE_ENV !== "development") {
-      fetchData()
-    } else setLoading(false)
+    fetchData()
   }, [])
 
   const time = [0, 1, 3, 5, 7, 9, 11, 13, 15]
     .map((e) => new Date(new Date().getTime() - e * 60 * 60 * 1000).getHours())
     .reverse()
 
-  let recommendation = (
-    <img src={WetsuitLong} alt="long wetsuit" className={classes.img} />
-  )
-  let thickness = 4
-  // if (data) {
-  //   let waterTemp = data.current.waterTemp[8]
-  //   switch (true) {
-  //     case waterTemp < 7:
-  //       recommendation = (
-  //         <WetsuitHoodIcon
-  //           alt="wetsuit recommendation"
-  //           className={classes.img}
-  //         />
-  //       )
-  //       thickness = 5
-  //       break
-  //     case waterTemp >= 7 && waterTemp < 10:
-  //       recommendation = (
-  //         <WetsuitHoodIcon
-  //           alt="wetsuit recommendation"
-  //           className={classes.img}
-  //         />
-  //       )
-  //       thickness = 5
-  //       break
-  //     case waterTemp >= 10 && waterTemp < 14:
-  //       recommendation = (
-  //         <WetsuitHoodIcon
-  //           alt="wetsuit recommendation"
-  //           className={classes.img}
-  //         />
-  //       )
-  //       thickness = 5
-  //       break
-  //     case waterTemp >= 14 && waterTemp < 16:
-  //       recommendation = (
-  //         <WetsuitLongIcon
-  //           alt="wetsuit recommendation"
-  //           className={classes.img}
-  //         />
-  //       )
-  //       thickness = 4
-  //       break
-  //     case waterTemp >= 16 && waterTemp < 20:
-  //       recommendation = (
-  //         <WetsuitLongIcon
-  //           alt="wetsuit recommendation"
-  //           className={classes.img}
-  //         />
-  //       )
-  //       thickness = 3
-  //       break
-  //     case waterTemp >= 20 && waterTemp < 22:
-  //       recommendation = (
-  //         <WetsuitShortIcon
-  //           alt="wetsuit recommendation"
-  //           className={classes.img}
-  //         />
-  //       )
-  //       break
-  //     case waterTemp >= 22:
-  //       recommendation = (
-  //         <SwimTrunkIcon alt="wetsuit recommendation" className={classes.img} />
-  //       )
-  //       break
-  //     default:
-  //       recommendation = (
-  //         <WetsuitLongIcon
-  //           alt="wetsuit recommendation"
-  //           className={classes.img}
-  //         />
-  //       )
-  //   }
-  // }
+  let recommendation = null
+  let thickness = null
+  if (data) {
+    let waterTemp = data.current.waterTemp[8]
+    switch (true) {
+      case waterTemp < 7:
+        recommendation = (
+          <img src={WetsuitHood} alt="long wetsuit" className={classes.img} />
+        )
+        thickness = 5
+        break
+      case waterTemp >= 7 && waterTemp < 10:
+        recommendation = (
+          <img src={WetsuitHood} alt="long wetsuit" className={classes.img} />
+        )
+        thickness = 5
+        break
+      case waterTemp >= 10 && waterTemp < 14:
+        recommendation = (
+          <img src={WetsuitHood} alt="long wetsuit" className={classes.img} />
+        )
+        thickness = 5
+        break
+      case waterTemp >= 14 && waterTemp < 16:
+        recommendation = (
+          <img src={WetsuitLong} alt="long wetsuit" className={classes.img} />
+        )
+        thickness = 4
+        break
+      case waterTemp >= 16 && waterTemp < 20:
+        recommendation = (
+          <img src={WetsuitLong} alt="long wetsuit" className={classes.img} />
+        )
+        thickness = 3
+        break
+      case waterTemp >= 20 && waterTemp < 22:
+        recommendation = (
+          <img src={WetsuitShort} alt="long wetsuit" className={classes.img} />
+        )
+        break
+      case waterTemp >= 22:
+        recommendation = (
+          <img src={SwimTrunk} alt="long wetsuit" className={classes.img} />
+        )
+        break
+      default:
+        recommendation = (
+          <img src={WetsuitLong} alt="long wetsuit" className={classes.img} />
+        )
+    }
+  }
 
   return (
     <Container
