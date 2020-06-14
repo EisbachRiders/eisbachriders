@@ -61,7 +61,9 @@
     "signup": "Anmelden",
     "consent": "Ja, ich möchte E-Mails von Eisbach Riders erhalten!",
     "subscribe": "Trag dich ein",
-    "cancel": "stornieren"
+    "cancel": "stornieren",
+    "legal1": "Du kannst Dich jederzeit wieder austragen indem Du den Link am Ende der eMails klickst. Wir nutzen Mailchimp als Marketing Plattform. Mit dem Klick auf Eintragen, akzeptierst Du, dass Deine Daten an Mailchimp weitergeleitet werden.",
+    "legal2": "Mehr Infos über den Mailchimp Datenschutz."
   },
   "form": {
     "contactTitle": "Schick uns eine Nachricht!",
