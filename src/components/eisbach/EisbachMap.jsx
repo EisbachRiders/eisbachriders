@@ -1,4 +1,5 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
+import GoogleMapReact from "google-map-react"
 import { useTranslation } from "react-i18next"
 import { makeStyles } from "@material-ui/core/styles"
 import List from "@material-ui/core/List"
@@ -8,9 +9,9 @@ import ListItemAvatar from "@material-ui/core/ListItemAvatar"
 import Avatar from "@material-ui/core/Avatar"
 import CircularProgress from "@material-ui/core/CircularProgress"
 import RoomIcon from "@material-ui/icons/Room"
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api"
 import Container from "../ui/Container"
 import mapStyles from "./mapStyles.json"
+import waveIcon from "../../assets/icons/surf.svg"
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -41,11 +42,20 @@ const useStyles = makeStyles((theme) => ({
     border: `1px solid #ccc`,
     padding: 15,
   },
+  icon: {
+    height: 32,
+    width: 32,
+  },
 }))
 
+const Marker = ({ children }) => children
+
 function EisbachMap() {
-  const [map, setMap] = useState(null)
-  const [center, setCenter] = useState({ lat: 48.134234, lng: 11.588486 })
+  const mapRef = useRef()
+  const [bounds, setBounds] = useState(null)
+  const [zoom, setZoom] = useState(12)
+  const [mapFilter, setMapFilter] = useState(false)
+  const [center, setCenter] = useState({ lat: 48.12, lng: 11.59 })
   const classes = useStyles()
   const { i18n, t } = useTranslation()
 
@@ -80,41 +90,40 @@ function EisbachMap() {
       <p className={classes.text}>{t("eisbach.about")}</p>
       <div className={classes.mapListContainer}>
         <div className={classes.mapContainer}>
-          <LoadScript
-            id="script-loader"
-            googleMapsApiKey={process.env.GOOGLEMAPS}
-            language={i18n.language}
+          <GoogleMapReact
+            bootstrapURLKeys={{
+              key: process.env.GOOGLEMAPS,
+            }}
+            defaultCenter={{ lat: 48.134234, lng: 11.588486 }}
+            defaultZoom={12}
+            yesIWantToUseGoogleMapApiInternals
+            onGoogleApiLoaded={({ map }) => {
+              mapRef.current = map
+            }}
+            language="de"
             region="DE"
-            loadingElement={<CircularProgress />}
+            options={{
+              styles: mapStyles,
+              mapTypeControl: false,
+              streetViewControl: false,
+            }}
+            center={center}
+            onChange={({ zoom, bounds }) => {
+              setZoom(zoom)
+              setBounds([
+                bounds.nw.lng,
+                bounds.se.lat,
+                bounds.se.lng,
+                bounds.nw.lat,
+              ])
+            }}
           >
-            <GoogleMap
-              onLoad={(map) => setMap(map)}
-              id="eisbach-locations"
-              mapContainerStyle={{
-                height: "100%",
-                width: "100%",
-              }}
-              options={{
-                styles: mapStyles,
-                mapTypeControl: false,
-                streetViewControl: false,
-              }}
-              zoom={12}
-              center={center}
-            >
-              {locations.map((elem) => (
-                <Marker
-                  key={`marker${elem.name}`}
-                  position={{ lat: elem.lat, lng: elem.lng }}
-                  label={{
-                    text: elem.name,
-                    fontWeight: "normal",
-                    fontSize: "14px",
-                  }}
-                ></Marker>
-              ))}
-            </GoogleMap>
-          </LoadScript>
+            {locations.map((elem, idx) => (
+              <Marker key={`marker${idx}`} lat={elem.lat} lng={elem.lng}>
+                <img src={waveIcon} alt="marker" className={classes.icon} />
+              </Marker>
+            ))}
+          </GoogleMapReact>
         </div>
         <List className={classes.root}>
           {locations.map((elem, idx) => (
