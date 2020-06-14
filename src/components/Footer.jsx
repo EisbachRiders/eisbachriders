@@ -24,20 +24,18 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   title: {
-    textTransform: "lowercase",
-    fontSize: 16,
-    fontWeight: 600,
+    textTransform: "capitalize",
     letterSpacing: 3,
     marginBottom: 15,
     color: theme.color.white,
+    fontWeight: 600,
     [theme.breakpoints.up("md")]: {
-      fontSize: 24,
+      fontSize: 20,
     },
   },
   text: {
     textTransform: "capitalize",
     color: theme.color.white,
-    fontWeight: 600,
     letterSpacing: 2,
     marginBottom: 15,
     fontSize: 12,

@@ -173,7 +173,7 @@ function Header({ handleSetLang }) {
         >
           <PinterestIcon className={classes.icon} />
         </IconButton>
-        <IconButton
+        {/* <IconButton
           aria-controls="simple-menu"
           aria-label="language"
           aria-haspopup="true"
@@ -191,7 +191,7 @@ function Header({ handleSetLang }) {
         >
           <MenuItem onClick={() => handleClose("en")}>EN</MenuItem>
           <MenuItem onClick={() => handleClose("de")}>DE</MenuItem>
-        </Menu>
+        </Menu> */}
       </Container>
       <Container padding="none">
         <Toolbar className={classes.toolbar} disableGutters>

@@ -30,9 +30,6 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     marginBottom: 30,
   },
-  linkText: {
-    fontWeight: 600,
-  },
   link: {
     textTransform: "capitalize",
     padding: 0,
@@ -166,11 +163,7 @@ function Contact({ variant }) {
   return (
     <>
       {variant === "link" ? (
-        <Button
-          className={classes.link}
-          classes={{ label: classes.linkText }}
-          onClick={() => setOpen(true)}
-        >
+        <Button className={classes.link} onClick={() => setOpen(true)}>
           {t("common.contactUs")}
         </Button>
       ) : (

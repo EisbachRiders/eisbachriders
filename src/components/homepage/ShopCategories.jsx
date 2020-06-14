@@ -64,13 +64,14 @@ const useStyles = makeStyles((theme) => ({
   },
   text: {
     color: theme.color.white,
-    fontSize: 18,
-    fontWeight: 600,
+    fontSize: 16,
     marginTop: 0,
     marginBottom: 5,
   },
   title: {
     textTransform: "capitalize",
+    fontSize: 18,
+    fontWeight: 600,
   },
   subtitle: {
     textTransform: "uppercase",

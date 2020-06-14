@@ -35,9 +35,13 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   title: {
+    textTransform: "capitalize",
     fontFamily: "secondary",
     color: theme.palette.primary.main,
-    fontSize: 18,
+    fontSize: 32,
+    letterSpacing: 3,
+    margin: 0,
+    marginBottom: 10,
   },
 }))
 

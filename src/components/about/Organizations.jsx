@@ -21,9 +21,13 @@ const useStyles = makeStyles((theme) => ({
     textTransform: "capitalize",
     width: "100%",
     fontFamily: "secondary",
-    fontSize: 18,
+    fontSize: 32,
     textAlign: "center",
     marginBottom: 30,
+  },
+  subheader: {
+    textTransform: "uppercase",
+    fontSize: 18,
   },
   avatar: {
     width: 50,
@@ -59,7 +63,7 @@ function Organizations() {
 
   const local = [
     {
-      name: "provide the slide",
+      name: "Provide the Slide",
       img: provideTheSlide,
       href: "https://providetheslide.com/",
     },
@@ -104,7 +108,11 @@ function Organizations() {
         component="nav"
         aria-label={t("about.local")}
         subheader={
-          <ListSubheader component="div" id="nested-list-subheader">
+          <ListSubheader
+            component="div"
+            id="nested-list-subheader"
+            className={classes.subheader}
+          >
             {t("about.local")}
           </ListSubheader>
         }
@@ -139,7 +147,11 @@ function Organizations() {
         component="nav"
         aria-label={t("about.global")}
         subheader={
-          <ListSubheader component="div" id="nested-list-subheader">
+          <ListSubheader
+            component="div"
+            id="nested-list-subheader"
+            className={classes.subheader}
+          >
             {t("about.global")}
           </ListSubheader>
         }

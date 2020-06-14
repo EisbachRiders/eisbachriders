@@ -41,9 +41,11 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   title: {
-    textTransform: "uppercase",
+    textTransform: "capitalize",
+    fontFamily: "secondary",
     color: theme.palette.primary.main,
-    fontWeight: 700,
+    fontSize: 32,
+    letterSpacing: 3,
     margin: 0,
     marginBottom: 10,
   },
