@@ -173,7 +173,9 @@
     "largeOrders_answer": "Are you a surf club, shop/retailer, or group of friends looking to make a larger order? Please contact us for more information about discounts or deals on larger orders!"
   },
   "eisbach": {
-    "about": "The Eisbach is the famous river surfing spot in Munich which can be surfed year around. The German name Eisbach (which can be translated to ice creek) acts as a synonym for the water temperature that is often ice cold. The water originates in the Bavarian Alps and slowly heats up during the summer months on its way to Munich. This page will give you a quick overview of the current river conditions. Pack the right wetsuit and enjoy your surf session!",
+    "title": "Urban Surfing in Munich",
+    "localConditions": "Check out the local conditions!",
+    "about": "The Eisbach is the famous river surfing spot in Munich which can be surfed year around. The German name Eisbach (which can be translated to ice creek) acts as a synonym for the water temperature that is often ice cold. The water originates in the Bavarian Alps and slowly heats up during the summer months on its way to Munich.",
     "advanced": "skill level advanced",
     "intermediate": "skill level intermediate",
     "beginner": "skill level beginner",

@@ -19,11 +19,10 @@ const useStyles = makeStyles((theme) => ({
   },
   header: {
     textAlign: "center",
-    fontWeight: 700,
     width: "100%",
     fontFamily: "secondary",
+    textTransform: "capitalize",
     fontSize: 32,
-    marginBottom: 15,
   },
   text: {
     marginBottom: 45,
@@ -86,7 +85,7 @@ function EisbachMap() {
       className={classes.container}
       background="grayLt"
     >
-      <p className={classes.header}>eisbach</p>
+      <h2 className={classes.header}>The Eisbach</h2>
       <p className={classes.text}>{t("eisbach.about")}</p>
       <div className={classes.mapListContainer}>
         <div className={classes.mapContainer}>

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 import clsx from "clsx"
 import { useTranslation } from "react-i18next"
 import { makeStyles } from "@material-ui/core/styles"
@@ -21,9 +23,43 @@ import SwimTrunk from "../../assets/icons/SwimTrunk.jpg"
 import TempIcon from "../../assets/icons/Temperature"
 import WbSunnyIcon from "@material-ui/icons/WbSunny"
 import WaterIcon from "../../assets/icons/Water"
+import WeatherCode from "./WeatherCode"
 
 const useStyles = makeStyles((theme) => ({
+  h1: {
+    textAlign: "center",
+    fontFamily: "secondary",
+    textTransform: "capitalize",
+    fontSize: 72,
+    fontWeight: 500,
+    letterSpacing: 3,
+    color: "white",
+  },
+  h2: {
+    textAlign: "center",
+    fontFamily: "secondary",
+    textTransform: "capitalize",
+    fontSize: 32,
+    marginBottom: 0,
+  },
+  background: {
+    position: "relative",
+    height: 300,
+  },
+  backgroundContainer: {
+    position: "absolute",
+    width: "100%",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+  },
+  backgroundImg: {
+    width: "100%",
+    height: 300,
+  },
   container: {
+    display: "flex",
+    justifyContent: "space-between",
     margin: "60px 0",
   },
   calendarItem: {
@@ -83,6 +119,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    width: 100,
   },
   recommendation2: {
     display: "flex",
@@ -192,6 +229,18 @@ function EisbachForecast() {
     fetchData()
   }, [])
 
+  const img = useStaticQuery(graphql`
+    query {
+      fileName: file(relativePath: { eq: "street-art.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
   const time = [0, 1, 3, 5, 7, 9, 11, 13, 15]
     .map((e) => new Date(new Date().getTime() - e * 60 * 60 * 1000).getHours())
     .reverse()
@@ -248,180 +297,219 @@ function EisbachForecast() {
     }
   }
 
+  console.log(data)
   return (
-    <Container
-      justifyContent="spaceBetween"
-      flexWrap="nowrap"
-      className={classes.container}
-    >
-      {loadError && <p>{t("loadError")}</p>}
-      {loading && <CircularProgress />}
-      {data && (
-        <>
-          <div className={clsx(classes.firstItem, classes.calendarItem)}>
-            <p className={classes.calendarDate}>{t("common.today")}</p>
-            <div className={classes.innerContainer}>
-              <div className={classes.spaceAroundContainer}>
-                <div>
-                  <p className={classes.weatherDetail}>
-                    {`${t("eisbach.runoff")}: ${data.current.runoff} `}
-                    <span className={classes.lowercase}>
-                      m<sup>3</sup>/s
-                    </span>
-                  </p>
-                  <p className={classes.weatherDetail}>
-                    {`${t("eisbach.waterLevel")}: ${data.current.waterLevel}cm`}
-                  </p>
-                </div>
-                <div className={classes.chartTempContainer}>
-                  <div className={classes.recommendation}>
-                    {recommendation}
-                    {thickness ? `${thickness}mm` : null}
+    <>
+      <div className={classes.background}>
+        <Img
+          fluid={img.fileName.childImageSharp.fluid}
+          alt="street art"
+          placeholderStyle={{ backgroundColor: `blue` }}
+          className={classes.backgroundImg}
+          imgStyle={{ objectPosition: "center center" }}
+        />
+        <div className={classes.backgroundContainer}>
+          <h1 className={classes.h1}>{t("eisbach.title")}</h1>
+        </div>
+      </div>
+
+      <div>
+        <Container flexDirection="column">
+          <h2 className={classes.h2}>{t("eisbach.localConditions")}</h2>
+          {loadError && <p>{t("loadError")}</p>}
+          {loading && <CircularProgress />}
+          {data && (
+            <div className={classes.container}>
+              <div className={clsx(classes.firstItem, classes.calendarItem)}>
+                <p className={classes.calendarDate}>{t("common.today")}</p>
+                <div className={classes.innerContainer}>
+                  <div className={classes.spaceAroundContainer}>
+                    <div>
+                      <p className={classes.weatherDetail}>
+                        {`${t("eisbach.runoff")}: ${data.current.runoff} `}
+                        <span className={classes.lowercase}>
+                          m<sup>3</sup>/s
+                        </span>
+                      </p>
+                      <p className={classes.weatherDetail}>
+                        {`${t("eisbach.waterLevel")}: ${
+                          data.current.waterLevel
+                        }cm`}
+                      </p>
+                    </div>
+                    <div className={classes.chartTempContainer}>
+                      <div className={classes.recommendation}>
+                        {recommendation}
+                        {thickness ? `${thickness}mm` : null}
+                      </div>
+                      <p className={classes.weather}>
+                        {(
+                          Math.round(data.current.waterTemp[8] * 10) / 10
+                        ).toFixed(1)}
+                        &#176;C
+                      </p>
+                    </div>
                   </div>
-                  <p className={classes.weather}>
-                    {(Math.round(data.current.waterTemp[8] * 10) / 10).toFixed(
-                      1
-                    )}
-                    &#176;C
-                  </p>
-                </div>
-              </div>
-              <div className={classes.chartOuterContainer}>
-                <div className={classes.chartIconContainer}>
-                  <div
-                    className={clsx(
-                      classes.marginBottom,
-                      classes.iconContainer
-                    )}
-                  >
-                    <WbSunnyIcon className={classes.tempIcon2} />
-                    <TempIcon className={classes.tempIcon} />
-                  </div>
-                  <div className={classes.iconContainer}>
-                    <WaterIcon className={classes.tempIcon2} />
-                    <TempIcon className={classes.tempIcon} />
-                  </div>
-                </div>
-                <div className={classes.chartContainer}>
-                  <ResponsiveContainer width="95%" height={75}>
-                    <LineChart
-                      data={data.current.temp.map((elem) => {
-                        return { value: elem }
-                      })}
-                      margin={{ top: 0, right: 15, left: 10, bottom: 0 }}
-                    >
-                      <YAxis
-                        hide={true}
-                        domain={["dataMin -10", "dataMax + 10"]}
-                      />
-                      <Line
-                        type="monotone"
-                        dataKey="value"
-                        stroke="#E6C55E"
-                        strokeWidth="2"
-                      >
-                        <LabelList
-                          dataKey="value"
-                          position="top"
-                          className={classes.label}
-                        />
-                      </Line>
-                    </LineChart>
-                  </ResponsiveContainer>
-                  <ResponsiveContainer width="95%" height={100}>
-                    <AreaChart
-                      data={data.current.waterTemp.map((elem, idx) => {
-                        return { time: `${time[idx]}:00`, value: elem }
-                      })}
-                      margin={{ top: 0, right: 15, left: 10, bottom: 0 }}
-                    >
-                      <YAxis
-                        hide={true}
-                        domain={["dataMin - 1", "dataMax + 1"]}
-                      />
-                      <XAxis
-                        dataKey="time"
-                        axisLine={false}
-                        tickLine={false}
-                        tick={{ fontSize: 12, dx: 40 }}
-                      />
-                      <Area
-                        type="monotone"
-                        dataKey="value"
-                        stroke="#0062f0"
-                        fill="#0062f0"
-                        label={(elem) => (
-                          <text
-                            x={elem.x - elem.offset}
-                            y={elem.y - elem.offset}
-                            textAnchor="top"
-                            className={clsx(
-                              "recharts-text recharts-label",
-                              elem.index === 8
-                                ? classes.labelBold
-                                : classes.label
-                            )}
-                          >
-                            <tspan x={elem.x - elem.offset * 2} dy="0em">
-                              {elem.value}
-                            </tspan>
-                          </text>
+                  <div className={classes.chartOuterContainer}>
+                    <div className={classes.chartIconContainer}>
+                      <div
+                        className={clsx(
+                          classes.marginBottom,
+                          classes.iconContainer
                         )}
-                      ></Area>
-                    </AreaChart>
-                  </ResponsiveContainer>
+                      >
+                        <WbSunnyIcon className={classes.tempIcon2} />
+                        <TempIcon className={classes.tempIcon} />
+                      </div>
+                      <div className={classes.iconContainer}>
+                        <WaterIcon className={classes.tempIcon2} />
+                        <TempIcon className={classes.tempIcon} />
+                      </div>
+                    </div>
+                    <div className={classes.chartContainer}>
+                      <ResponsiveContainer width="95%" height={75}>
+                        <LineChart
+                          data={data.current.temp.map((elem) => {
+                            return { value: elem }
+                          })}
+                          margin={{ top: 0, right: 15, left: 10, bottom: 0 }}
+                        >
+                          <YAxis
+                            hide={true}
+                            domain={["dataMin -10", "dataMax + 10"]}
+                          />
+                          <Line
+                            type="monotone"
+                            dataKey="value"
+                            stroke="#E6C55E"
+                            strokeWidth="2"
+                          >
+                            <LabelList
+                              dataKey="value"
+                              position="top"
+                              className={classes.label}
+                            />
+                          </Line>
+                        </LineChart>
+                      </ResponsiveContainer>
+                      <ResponsiveContainer width="95%" height={100}>
+                        <AreaChart
+                          data={data.current.waterTemp.map((elem, idx) => {
+                            return { time: `${time[idx]}:00`, value: elem }
+                          })}
+                          margin={{ top: 0, right: 15, left: 10, bottom: 0 }}
+                        >
+                          <YAxis
+                            hide={true}
+                            domain={["dataMin - 1", "dataMax + 1"]}
+                          />
+                          <XAxis
+                            dataKey="time"
+                            axisLine={false}
+                            tickLine={false}
+                            tick={{ fontSize: 12, dx: 40 }}
+                          />
+                          <Area
+                            type="monotone"
+                            dataKey="value"
+                            stroke="#0062f0"
+                            fill="#0062f0"
+                            label={(elem) => (
+                              <text
+                                x={elem.x - elem.offset}
+                                y={elem.y - elem.offset}
+                                textAnchor="top"
+                                className={clsx(
+                                  "recharts-text recharts-label",
+                                  elem.index === 8
+                                    ? classes.labelBold
+                                    : classes.label
+                                )}
+                              >
+                                <tspan x={elem.x - elem.offset * 2} dy="0em">
+                                  {elem.value}
+                                </tspan>
+                              </text>
+                            )}
+                          ></Area>
+                        </AreaChart>
+                      </ResponsiveContainer>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          {["tomorrow", "next"].map((elem, idx) => (
-            <div
-              className={clsx(classes.notFirstItem, classes.calendarItem)}
-              key={elem}
-            >
-              <p className={classes.calendarDate}>
-                {idx === 0
-                  ? t("common.tomorrow")
-                  : new Intl.DateTimeFormat(
-                      i18n.language === "en" ? "en-US" : "de",
-                      {
-                        weekday: "long",
-                        timeZone: "Europe/Berlin",
-                      }
-                    ).format(new Date().setDate(new Date().getDate() + 2))}
-              </p>
-              <div className={classes.innerContainer}>
-                <div className={classes.recommendationContainer}>
-                  <div className={classes.recommendation}>
-                    {recommendation}
-                    {thickness ? `${thickness}mm` : null}
-                  </div>
-                  <div className={classes.recommendation2}>
-                    <p className={classes.weather2}>
-                      {(Math.round(data[elem].maxWaterTemp * 10) / 10).toFixed(
-                        1
-                      )}
-                      &#176;C
-                    </p>
-                    <p className={classes.weather3}>
-                      {(Math.round(data[elem].minWaterTemp * 10) / 10).toFixed(
-                        1
-                      )}
-                      &#176;C
-                    </p>
+              {["tomorrow", "next"].map((elem, idx) => (
+                <div
+                  className={clsx(classes.notFirstItem, classes.calendarItem)}
+                  key={elem}
+                >
+                  <p className={classes.calendarDate}>
+                    {idx === 0
+                      ? t("common.tomorrow")
+                      : new Intl.DateTimeFormat(
+                          i18n.language === "en" ? "en-US" : "de",
+                          {
+                            weekday: "long",
+                            timeZone: "Europe/Berlin",
+                          }
+                        ).format(new Date().setDate(new Date().getDate() + 2))}
+                  </p>
+                  <div className={classes.innerContainer}>
+                    <div className={classes.recommendationContainer}>
+                      <div className={classes.recommendation}>
+                        {recommendation}
+                        {thickness ? `${thickness}mm` : null}
+                      </div>
+                      <div className={classes.recommendation2}>
+                        <p className={classes.weather2}>
+                          {(
+                            Math.round(data[elem].maxWaterTemp * 10) / 10
+                          ).toFixed(1)}
+                          &#176;C
+                        </p>
+                        <p className={classes.weather3}>
+                          {(
+                            Math.round(data[elem].minWaterTemp * 10) / 10
+                          ).toFixed(1)}
+                          &#176;C
+                        </p>
+                      </div>
+                    </div>
+                    <div className={classes.recommendationContainer}>
+                      <div className={classes.recommendation}>
+                        <WeatherCode
+                          code={data.weatherApiDaily[idx + 1].weatherCode}
+                        />
+                      </div>
+                      <div className={classes.recommendation2}>
+                        <p className={classes.weather2}>
+                          {(
+                            Math.round(
+                              data.weatherApiDaily[idx + 1].temp[1].max.value *
+                                10
+                            ) / 10
+                          ).toFixed(1)}
+                          &#176;C
+                        </p>
+                        <p className={classes.weather3}>
+                          {(
+                            Math.round(
+                              data.weatherApiDaily[idx + 1].temp[0].min.value *
+                                10
+                            ) / 10
+                          ).toFixed(1)}
+                          &#176;C
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                {/* <div className={classes.iconContainer2}>
-                  <WbSunnyIcon className={classes.tempIcon3} />
-                  <TempIcon className={classes.tempIcon3} />
-                  <p>{data[elem].maxTemp}</p>
-                </div> */}
-              </div>
+              ))}
             </div>
-          ))}
-        </>
-      )}
-    </Container>
+          )}
+        </Container>
+      </div>
+    </>
   )
 }
 

@@ -77,12 +77,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-instagram`,
-      options: {
-        username: `eisbachriders`,
-      },
-    },
-    {
       resolve: `gatsby-source-graphql`,
       options: {
         typeName: "WPGraphQL",
