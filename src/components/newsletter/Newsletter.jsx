@@ -33,10 +33,11 @@ const useStyles = makeStyles((theme) => ({
     color: theme.color.black,
     fontFamily: "secondary",
     letterSpacing: 2,
-    fontSize: 32,
+    fontSize: 24,
     margin: 0,
     [theme.breakpoints.up("md")]: {
       width: 500,
+      fontSize: 32,
     },
   },
   textIndent: {

@@ -262,11 +262,29 @@ function Header({ handleSetLang }) {
                   <ListItem
                     button
                     key={`navItem${idx}`}
-                    className={classes.listItem}
+                    className={classes.listItemMobile}
                   >
-                    <Link to="/" className={classes.link}>
-                      {t(`links.${elem}`)}
-                    </Link>
+                    {elem === "shop" ? (
+                      <a
+                        href="https://shop.eisbach-riders.com/"
+                        alt="shop"
+                        className={classes.link}
+                      >
+                        {t(`links.${elem}`)}
+                      </a>
+                    ) : elem === "blog" ? (
+                      <a
+                        href="https://secondwavesurfing.com/blog"
+                        alt="blog"
+                        className={classes.link}
+                      >
+                        {t(`links.${elem}`)}
+                      </a>
+                    ) : (
+                      <Link to={`/${elem}`} className={classes.link}>
+                        {t(`links.${elem}`)}
+                      </Link>
+                    )}
                   </ListItem>
                 ))}
                 {mobileLinks.map((elem, idx) => (
@@ -275,7 +293,7 @@ function Header({ handleSetLang }) {
                     key={`navItem${idx}`}
                     className={classes.listItemMobile}
                   >
-                    <Link to="/" className={classes.link}>
+                    <Link to={`/${elem}`} className={classes.link}>
                       {t(`links.${elem}`)}
                     </Link>
                   </ListItem>

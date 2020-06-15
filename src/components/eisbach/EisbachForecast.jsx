@@ -30,21 +30,29 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     fontFamily: "secondary",
     textTransform: "capitalize",
-    fontSize: 72,
+    fontSize: 32,
     fontWeight: 500,
     letterSpacing: 3,
     color: "white",
+    [theme.breakpoints.up("md")]: {
+      fontSize: 72,
+    },
   },
   h2: {
     textAlign: "center",
-    fontFamily: "secondary",
     textTransform: "capitalize",
-    fontSize: 32,
+    fontSize: 24,
     marginBottom: 0,
+    [theme.breakpoints.up("md")]: {
+      fontSize: 32,
+    },
   },
   background: {
     position: "relative",
-    height: 300,
+    height: 150,
+    [theme.breakpoints.up("md")]: {
+      height: 300,
+    },
   },
   backgroundContainer: {
     position: "absolute",
@@ -55,10 +63,14 @@ const useStyles = makeStyles((theme) => ({
   },
   backgroundImg: {
     width: "100%",
-    height: 300,
+    height: 150,
+    [theme.breakpoints.up("md")]: {
+      height: 300,
+    },
   },
   container: {
     display: "flex",
+    flexWrap: "wrap",
     justifyContent: "space-between",
     margin: "60px 0",
   },
@@ -68,10 +80,16 @@ const useStyles = makeStyles((theme) => ({
     height: 400,
   },
   firstItem: {
-    flexBasis: "55%",
+    flexBasis: "100%",
+    [theme.breakpoints.up("md")]: {
+      flexBasis: "55%",
+    },
   },
   notFirstItem: {
-    flexBasis: "20%",
+    flexBasis: "100%",
+    [theme.breakpoints.up("md")]: {
+      flexBasis: "20%",
+    },
   },
   calendarDate: {
     fontWeight: 700,
@@ -297,7 +315,6 @@ function EisbachForecast() {
     }
   }
 
-  console.log(data)
   return (
     <>
       <div className={classes.background}>

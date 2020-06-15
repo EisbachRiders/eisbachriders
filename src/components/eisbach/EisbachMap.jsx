@@ -29,12 +29,16 @@ const useStyles = makeStyles((theme) => ({
   },
   mapListContainer: {
     display: "flex",
+    flexWrap: "wrap",
     justifyContent: "center",
     width: "100%",
   },
   mapContainer: {
     height: 400,
-    width: "50%",
+    width: "100%",
+    [theme.breakpoints.up("md")]: {
+      width: "50%",
+    },
   },
   infoWindow: {
     background: `white`,
