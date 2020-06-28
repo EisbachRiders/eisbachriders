@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   title: {
-    color: theme.color.greyLt,
+    color: theme.color.grayLt,
     fontFamily: "secondary",
     fontSize: 18,
     letterSpacing: 4,

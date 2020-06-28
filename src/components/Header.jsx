@@ -129,7 +129,7 @@ function Header({ handleSetLang }) {
     threshold: 0,
   })
 
-  const links = ["eisbach", "blog", "shop", "about"]
+  const links = ["eisbach", "products", "blog", "shop", "about"]
   const mobileLinks = ["contact", "customerService"]
 
   return (

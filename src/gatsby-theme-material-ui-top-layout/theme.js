@@ -5,10 +5,10 @@ import "../../static/fonts/fonts.css"
 // fin: "#00d7a2",
 // finDk: "#00be8f",
 // finLt: "#e2f9ef",
-// greyLt2: "#eeeff0",
-// greyLt: "#d5d9db",
-// grey: "#818C93",
-// greyBlue: "#f3f8fc",
+// grayLt2: "#eeeff0",
+// grayLt: "#d5d9db",
+// gray: "#818C93",
+// grayBlue: "#f3f8fc",
 // greenLt1: "#6dff97",
 // greenLt2: "#00cf3c",
 // cream: "#f7f5ee",
@@ -22,13 +22,16 @@ const color = {
   pink: "#ff0080",
   red: "#FF0012",
   redLt: "#ff4e5b",
+  seaGlass: "#5F5850",
   // theme colors
   white: "#ffffff",
   black: "#0B0C10",
   blackLt: "#1F2833",
   gray: "#C5C6C7",
-  teal: "#66FCF1",
+  // teal: "#66FCF1",
+  teal: "#00d7a2",
   tealDk: "#45A29E",
+  test: "#F7F680",
 }
 
 const theme = createMuiTheme({

@@ -183,5 +183,23 @@
     "waterLevel": "water level",
     "faq1_question": "When is the best time to go surfing?",
     "faq1_answer": "Temperatures of the water heats up over the day so the warmest time to go surfing is late afternoon."
+  },
+  "product": {
+    "features": "features",
+    "colors": "colors",
+    "sizes": "sizes",
+    "Blue": "Blue",
+    "Grey": "Grey",
+    "Sea Glass": "Sea Glass",
+    "White": "White",
+    "Black": "Black",
+    "Pink": "Pink",
+    "Orange": "Orange",
+    "Red": "Red",
+    "Teal": "Teal",
+    "Turquoise": "Turquoise",
+    "Green": "Green",
+    "Green Glass": "Green Glass",
+    "Yellow": "Yellow"
   }
 }

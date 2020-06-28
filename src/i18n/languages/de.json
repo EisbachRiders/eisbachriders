@@ -183,5 +183,23 @@
     "waterLevel": "Wasserstand",
     "faq1_question": "Wann ist die beste Zeit zum Surfen?",
     "faq1_answer": "Die Wassertemperaturen erwärmen sich im Laufe des Tages, sodass die wärmste Zeit zum Surfen der späte Nachmittag ist."
+  },
+  "product": {
+    "features": "features",
+    "colors": "colors",
+    "sizes": "sizes",
+    "Blue": "Blue",
+    "Grey": "Grey",
+    "Sea Glass": "Sea Glass",
+    "White": "White",
+    "Black": "Black",
+    "Pink": "Pink",
+    "Orange": "Orange",
+    "Red": "Red",
+    "Teal": "Teal",
+    "Turquoise": "Turquoise",
+    "Green": "Green",
+    "Green Glass": "Green Glass",
+    "Yellow": "Yellow"
   }
 }

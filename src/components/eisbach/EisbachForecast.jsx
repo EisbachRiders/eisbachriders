@@ -42,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     textTransform: "capitalize",
     fontSize: 24,
+    fontWeight: 500,
     marginBottom: 0,
     [theme.breakpoints.up("md")]: {
       fontSize: 32,
@@ -398,7 +399,7 @@ function EisbachForecast() {
                           <Line
                             type="monotone"
                             dataKey="value"
-                            stroke="#E6C55E"
+                            stroke="#F8DA53"
                             strokeWidth="2"
                           >
                             <LabelList
@@ -429,8 +430,8 @@ function EisbachForecast() {
                           <Area
                             type="monotone"
                             dataKey="value"
-                            stroke="#0062f0"
-                            fill="#0062f0"
+                            stroke="#68AAD7"
+                            fill="#B9F4F2"
                             label={(elem) => (
                               <text
                                 x={elem.x - elem.offset}
