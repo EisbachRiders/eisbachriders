@@ -20,9 +20,9 @@ import WetsuitLong from "../../assets/icons/WetsuitLong.png"
 import WetsuitShort from "../../assets/icons/WetsuitShort.jpg"
 import WetsuitHood from "../../assets/icons/WetsuitHood.jpg"
 import SwimTrunk from "../../assets/icons/SwimTrunk.jpg"
-import TempIcon from "../../assets/icons/Temperature.js"
+import TempIcon from "./Temperature.js"
 import WbSunnyIcon from "@material-ui/icons/WbSunny"
-import WaterIcon from "../../assets/icons/Water.js"
+import WaterIcon from "./Water.js"
 import WeatherCode from "./WeatherCode"
 
 const useStyles = makeStyles((theme) => ({
