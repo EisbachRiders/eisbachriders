@@ -99,6 +99,7 @@ function ProductsOverview() {
       }
       fins: wpgraphql {
         products(
+          first: 30
           where: { category: "Fins", tagIn: "Eisbach Riders", tagNotIn: "sup" }
         ) {
           edges {
@@ -143,6 +144,7 @@ function ProductsOverview() {
       }
       sup: wpgraphql {
         products(
+          first: 30
           where: { category: "SUP", tagIn: "Eisbach Riders", tagNotIn: "leash" }
         ) {
           edges {
@@ -165,7 +167,10 @@ function ProductsOverview() {
         }
       }
       accessories: wpgraphql {
-        products(where: { category: "Accessories", tagIn: "Eisbach Riders" }) {
+        products(
+          first: 30
+          where: { category: "Accessories", tagIn: "Eisbach Riders" }
+        ) {
           edges {
             node {
               name

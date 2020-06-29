@@ -70,7 +70,7 @@ function ShopItem({ product }) {
           </Link>
           <div className={classes.descriptionContainer}>
             <Typography className={classes.name}>{product.name}</Typography>
-            {colors.length > 1 && <Colors colors={colors} />}
+            {colors.length > 1 && <Colors colors={colors} variant="small" />}
           </div>
         </>
       )}

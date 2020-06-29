@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next"
 import clsx from "clsx"
 import { makeStyles } from "@material-ui/core/styles"
 import Typography from "@material-ui/core/Typography"
+import Button from "@material-ui/core/Button"
 import Container from "../ui/Container"
 import Colors from "./Colors"
 
@@ -25,9 +26,13 @@ const useStyles = makeStyles((theme) => ({
   imgContainer: {
     display: "flex",
     flexWrap: "wrap",
+    alignItems: "flex-start",
   },
   img: {
     width: "50%",
+  },
+  imgFull: {
+    width: "100%",
   },
   img3: {
     width: "33%",
@@ -46,10 +51,16 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
   },
+  text: {
+    marginBottom: 60,
+  },
   divider: {
     borderBottom: `1px solid ${theme.color.gray}`,
     marginTop: 30,
     marginBottom: 30,
+  },
+  buttonContainer: {
+    textAlign: "center",
   },
 }))
 
@@ -73,25 +84,33 @@ function Product({ product }) {
         <img
           src={product.image.sourceUrl}
           alt={product.image.slug}
-          className={classes.img}
-        />
-        <img
-          src={product.galleryImages.edges[0].node.sourceUrl}
-          alt={product.galleryImages.edges[0].node.slug}
-          className={classes.img}
-        />
-        {product.galleryImages.edges.map((elem, idx) => {
-          if (idx !== 0) {
-            return (
-              <img
-                key={`img${idx}`}
-                src={elem.node.sourceUrl}
-                alt={elem.node.slug}
-                className={classes.img3}
-              />
-            )
+          className={
+            product.galleryImages.edges.length === 0
+              ? classes.imgFull
+              : classes.img
           }
-        })}
+        />
+        {product.galleryImages.edges.length > 0 && (
+          <>
+            <img
+              src={product.galleryImages.edges[0].node.sourceUrl}
+              alt={product.galleryImages.edges[0].node.slug}
+              className={classes.img}
+            />
+            {product.galleryImages.edges.map((elem, idx) => {
+              if (idx !== 0) {
+                return (
+                  <img
+                    key={`img${idx}`}
+                    src={elem.node.sourceUrl}
+                    alt={elem.node.slug}
+                    className={classes.img3}
+                  />
+                )
+              }
+            })}
+          </>
+        )}
       </div>
 
       <div className={classes.flexContainer2}>
@@ -102,7 +121,7 @@ function Product({ product }) {
         {colors.length > 0 && (
           <div className={classes.attributeContainer}>
             <p className={classes.subheader}>{t("product.colors")}:</p>
-            <Colors colors={colors} variant="long" />
+            <Colors colors={colors} variant="large" />
           </div>
         )}
         {sizes.length > 0 && (
@@ -123,6 +142,12 @@ function Product({ product }) {
           dangerouslySetInnerHTML={{ __html: product.shortDescription }}
           className={classes.text}
         />
+
+        <div className={classes.buttonContainer}>
+          <Button variant="contained" color="primary" href={product.link}>
+            {t("product.buy")}
+          </Button>
+        </div>
       </div>
     </Container>
   )

@@ -22,6 +22,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       }
       fins: wpgraphql {
         products(
+          first: 30
           where: { category: "Fins", tagIn: "Eisbach Riders", tagNotIn: "sup" }
         ) {
           edges {
@@ -55,6 +56,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                 }
               }
               slug
+              link
             }
           }
         }
@@ -92,12 +94,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                 }
               }
               slug
+              link
             }
           }
         }
       }
       sup: wpgraphql {
         products(
+          first: 30
           where: { category: "SUP", tagIn: "Eisbach Riders", tagNotIn: "leash" }
         ) {
           edges {
@@ -131,12 +135,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                 }
               }
               slug
+              link
             }
           }
         }
       }
       accessories: wpgraphql {
-        products(where: { category: "Accessories", tagIn: "Eisbach Riders" }) {
+        products(
+          first: 30
+          where: { category: "Accessories", tagIn: "Eisbach Riders" }
+        ) {
           edges {
             node {
               name
@@ -168,6 +176,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                 }
               }
               slug
+              link
             }
           }
         }
@@ -205,6 +214,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                 }
               }
               slug
+              link
             }
           }
         }
