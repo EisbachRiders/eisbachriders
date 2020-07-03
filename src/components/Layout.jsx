@@ -53,7 +53,7 @@ const Layout = ({ children }) => {
         }}
         buttonText={t("tracking.accept")}
         cookieName="gatsby-gdpr-google-analytics"
-        style={{ background: "#66FCF1", color: "#00130e" }}
+        style={{ background: "#00d7a2", color: "#00130e" }}
         buttonStyle={{
           background: "#1F2833",
           color: "#ffffff",

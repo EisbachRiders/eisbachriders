@@ -11,6 +11,57 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: "gatsby-plugin-htaccess",
+      options: {
+        redirect: [
+          "RewriteRule ^not-existing-url/?$ /existing-url [R=301,L,NE]",
+          {
+            from: "/blog",
+            to: "secondwavesurfing.com/blog",
+          },
+          {
+            from: "/shop",
+            to: "secondwavesurfing.com/shop",
+          },
+          {
+            from:
+              "/blog/product-insights-gnarwall-surfboard-hangers-from-sheppsolutions",
+            to:
+              "secondwavesurfing.com/blog/product-insights-gnarwall-surfboard-hangers-from-SHEPPSolutions",
+          },
+          {
+            from:
+              "/blog/provide-the-slide-collecting-and-donating-surfboards-to-spread-the-joy-of-surfing",
+            to:
+              "secondwavesurfing.com/blog/provide-the-slide-collecting-and-donating-surfboards-for-liberia",
+          },
+          {
+            from: "/blog/8-things-you-can-do-as-landlocked-surfer",
+            to:
+              "secondwavesurfing.com/blog/8-things-you-can-do-as-landlocked-surfer",
+          },
+          {
+            from: "/blog/fuerteventura-the-european-winter-surf-destination",
+            to:
+              "secondwavesurfing.com/blog/fuerteventura-the-european-winter-surf-destination",
+          },
+          {
+            from: "/blog/big-city-surf-escape-in-hong-kong",
+            to: "secondwavesurfing.com/blog/big-city-surf-escape-in-hong-kong",
+          },
+          {
+            from: "/blog/product-insights-organic-surf-wax-by-bee-swell",
+            to:
+              "secondwavesurfing.com/blog/product-insights-organic-surf-wax-by-bee-swell",
+          },
+          {
+            from: "/blog/where-to-find-used-surfboards",
+            to: "secondwavesurfing.com/blog/where-to-find-used-surfboards",
+          },
+        ],
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `content`,
