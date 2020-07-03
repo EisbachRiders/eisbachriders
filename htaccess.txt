@@ -1,16 +1,12 @@
 
-RewriteEngine On
-RewriteBase /
-RewriteRule ^index\.php$ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.php [L]
 
-Redirect /blog/ https://secondwavesurfing.com/blog
-Redirect /blog/product-insights-gnarwall-surfboard-hangers-from-sheppsolutions/ https://secondwavesurfing.com/blog/product-insights-gnarwall-surfboard-hangers-from-SHEPPSolutions/
-Redirect /blog/provide-the-slide-collecting-and-donating-surfboards-to-spread-the-joy-of-surfing https://secondwavesurfing.com/blog/provide-the-slide-collecting-and-donating-surfboards-for-liberia/
-Redirect /blog/8-things-you-can-do-as-landlocked-surfer https://secondwavesurfing.com/blog/8-things-you-can-do-as-landlocked-surfer/
-Redirect /blog/fuerteventura-the-european-winter-surf-destination https://secondwavesurfing.com/blog/fuerteventura-the-european-winter-surf-destination/
+
+Redirect /blog https://secondwavesurfing.com/blog
+Redirect /shop https://shop.eisbach-riders.com
+Redirect /blog/product-insights-gnarwall-surfboard-hangers-from-sheppsolutions https://secondwavesurfing.com/blog/product-insights-gnarwall-surfboard-hangers-from-SHEPPSolutions
+Redirect /blog/provide-the-slide-collecting-and-donating-surfboards-to-spread-the-joy-of-surfing https://secondwavesurfing.com/blog/provide-the-slide-collecting-and-donating-surfboards-for-liberia
+Redirect /blog/8-things-you-can-do-as-landlocked-surfer https://secondwavesurfing.com/blog/8-things-you-can-do-as-landlocked-surfer
+Redirect /blog/fuerteventura-the-european-winter-surf-destination https://secondwavesurfing.com/blogfuerteventura-the-european-winter-surf-destination
 Redirect /blog/big-city-surf-escape-in-hong-kong https://secondwavesurfing.com/blog/big-city-surf-escape-in-hong-kong/
-Redirect /blog/product-insights-organic-surf-wax-by-bee-swell https://secondwavesurfing.com/blog/product-insights-organic-surf-wax-by-bee-swell/
-Redirect /blog/where-to-find-used-surfboards https://secondwavesurfing.com/blog/where-to-find-used-surfboards/
+Redirect /blog/product-insights-organic-surf-wax-by-bee-swell https://secondwavesurfing.com/blog/product-insights-organic-surf-wax-by-bee-swell
+Redirect /blog/where-to-find-used-surfboards https://secondwavesurfing.com/blog/where-to-find-used-surfboards
