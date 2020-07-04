@@ -1,11 +1,17 @@
-import React, { useState } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import { useTranslation } from "react-i18next"
 import clsx from "clsx"
 import { Link } from "gatsby-theme-material-ui"
 import { makeStyles } from "@material-ui/styles"
 import IconButton from "@material-ui/core/IconButton"
+import Button from "@material-ui/core/Button"
+import ClickAwayListener from "@material-ui/core/ClickAwayListener"
+import Grow from "@material-ui/core/Grow"
+import Paper from "@material-ui/core/Paper"
+import Popper from "@material-ui/core/Popper"
 import Menu from "@material-ui/core/Menu"
 import MenuItem from "@material-ui/core/MenuItem"
+import MenuList from "@material-ui/core/MenuList"
 import List from "@material-ui/core/List"
 import ListItem from "@material-ui/core/ListItem"
 import AppBar from "@material-ui/core/AppBar"
@@ -96,12 +102,27 @@ const useStyles = makeStyles((theme) => ({
     borderBottom: `1px solid ${theme.color.gray}`,
     textAlign: "center",
   },
+  productsLink: {
+    color: theme.color.black,
+    "&:hover": {
+      textDecoration: "none",
+    },
+  },
+  buttonOverride: {
+    padding: 0,
+    margin: 0,
+    "&:hover": {
+      background: "transparent",
+    },
+  },
 }))
 
 function Header({ handleSetLang }) {
   const [anchorEl, setAnchorEl] = useState(null)
+  const [open, setOpen] = useState(false)
   const [drawer, setDrawer] = useState(false)
   const classes = useStyles()
+  const anchorRef = useRef(null)
   const { t } = useTranslation()
 
   const handleClick = (event) => {
@@ -124,6 +145,35 @@ function Header({ handleSetLang }) {
     setDrawer(open)
   }
 
+  const handleToggle = () => {
+    setOpen((prevOpen) => !prevOpen)
+  }
+
+  const handleCloseMenu = (event) => {
+    if (anchorRef.current && anchorRef.current.contains(event.target)) {
+      return
+    }
+
+    setOpen(false)
+  }
+
+  function handleListKeyDown(event) {
+    if (event.key === "Tab") {
+      event.preventDefault()
+      setOpen(false)
+    }
+  }
+
+  // return focus to the button when we transitioned from !open -> open
+  const prevOpen = useRef(open)
+  useEffect(() => {
+    if (prevOpen.current === true && open === false) {
+      anchorRef.current.focus()
+    }
+
+    prevOpen.current = open
+  }, [open])
+
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 0,
@@ -131,6 +181,13 @@ function Header({ handleSetLang }) {
 
   const links = ["eisbach", "products", "blog", "shop", "about"]
   const mobileLinks = ["contact", "customerService"]
+  const products = [
+    "surfboard-fins",
+    "sup-longboard-fins",
+    "leashes",
+    "accessories",
+    "apparel",
+  ]
 
   return (
     <AppBar
@@ -234,6 +291,62 @@ function Header({ handleSetLang }) {
                     >
                       {t(`links.${elem}`)}
                     </a>
+                  ) : elem === "products" ? (
+                    <>
+                      <Button
+                        ref={anchorRef}
+                        aria-controls={open ? "menu-list-grow" : undefined}
+                        aria-haspopup="true"
+                        onClick={handleToggle}
+                        classes={{ root: classes.link }}
+                        className={classes.buttonOverride}
+                      >
+                        {elem}
+                      </Button>
+                      <Popper
+                        open={open}
+                        anchorEl={anchorRef.current}
+                        role={undefined}
+                        transition
+                        disablePortal
+                      >
+                        {({ TransitionProps, placement }) => (
+                          <Grow
+                            {...TransitionProps}
+                            style={{
+                              transformOrigin:
+                                placement === "bottom"
+                                  ? "center top"
+                                  : "center bottom",
+                            }}
+                          >
+                            <Paper>
+                              <ClickAwayListener onClickAway={handleCloseMenu}>
+                                <MenuList
+                                  autoFocusItem={open}
+                                  id="menu-list-grow"
+                                  onKeyDown={handleListKeyDown}
+                                >
+                                  {products.map((elem) => (
+                                    <Link
+                                      to={`/product/${elem}`}
+                                      className={classes.productsLink}
+                                    >
+                                      <MenuItem
+                                        onClick={handleCloseMenu}
+                                        key={`product_link_${elem}`}
+                                      >
+                                        {t(`product.${elem}`)}
+                                      </MenuItem>
+                                    </Link>
+                                  ))}
+                                </MenuList>
+                              </ClickAwayListener>
+                            </Paper>
+                          </Grow>
+                        )}
+                      </Popper>
+                    </>
                   ) : (
                     <Link to={`/${elem}`} className={classes.link}>
                       {t(`links.${elem}`)}

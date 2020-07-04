@@ -138,6 +138,7 @@
   "faq": {
     "learnMore": "Erfahren Sie mehr",
     "singleFin_question": "Ich habe eine meiner Flossen gebrochen / verloren. Verkaufen Sie Mittel- oder Seitenflossen separat?",
+    "the_team": "Das Team",
     "singleFin_answer": "Wir verkaufen keine einzelnen Surfbrettflossen (außer SUP-Einzelflossen, wie sie auf diese Weise kommen). Sie können unsere Flossen in einem Satz von zwei, drei oder vier kaufen, abhängig von Ihrer Flossenkonfiguration. Manchmal haben wir jedoch separate Lamellen in unserem Lager, die Teil unvollständiger Sets sind. Kontaktieren Sie uns einfach und wir prüfen, was wir zur Verfügung haben.",
     "finSize_question": "Welche Flossengröße ist die beste für mich - klein, mittel oder groß?",
     "finSize_answer": "Surfbrettflossen gibt es in verschiedenen Größen und Formen, um Ihrem persönlichen Surfstil zu entsprechen. Für das gängigste Thruster-Finnen-Setup mit drei Finnen können Sie zwischen kleinen, mittleren und großen Finnen wählen. Größere Flossen bedeuten mehr Halt, da mehr Oberfläche mit dem Wasser in Kontakt kommt. Kleinere sorgen für ein „lockereres“ Gefühl. Wenn Sie zwischen zwei Größen liegen, sollten Sie die Art und Größe der Wellen und das Board berücksichtigen, auf dem Sie surfen werden. Wir empfehlen die folgenden Größen;",
@@ -201,6 +202,11 @@
     "Green": "Green",
     "Green Glass": "Green Glass",
     "Yellow": "Yellow",
-    "buy": "shop now"
+    "buy": "shop now",
+    "surfboard-fins": "Surfboard Fins",
+    "leashes": "Leashes",
+    "accessories": "Accessories",
+    "apparel": "Apparel",
+    "sup-longboard-fins": "SUP & Longboard Fins"
   }
 }

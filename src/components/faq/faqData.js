@@ -28,59 +28,63 @@ const faqData = {
       },
     ],
   },
-  shipping: {
-    title: "shipping",
-    nav: [
-      {
-        key: "shop",
-        button: true,
-      },
-      {
-        key: "typo",
-        button: true,
-      },
-      {
-        key: "country",
-        button: true,
-      },
-      {
-        key: "cost",
-      },
-      {
-        key: "time",
-      },
-      {
-        key: "company",
-      },
-    ],
+  other: {
+    title: "miscellaneous",
+    nav: [{ key: "purchase" }],
   },
-  returns: {
-    title: "returns & exchanges",
-    nav: [
-      {
-        key: "policy",
-      },
-      {
-        key: "returns",
-        link: true,
-      },
-    ],
-  },
-  payments: {
-    title: "payments",
-    nav: [
-      {
-        key: "services",
-      },
-      {
-        key: "currency",
-      },
-      {
-        key: "largeOrders",
-        button: true,
-      },
-    ],
-  },
+  // shipping: {
+  //   title: "shipping",
+  //   nav: [
+  //     {
+  //       key: "shop",
+  //       button: true,
+  //     },
+  //     {
+  //       key: "typo",
+  //       button: true,
+  //     },
+  //     {
+  //       key: "country",
+  //       button: true,
+  //     },
+  //     {
+  //       key: "cost",
+  //     },
+  //     {
+  //       key: "time",
+  //     },
+  //     {
+  //       key: "company",
+  //     },
+  //   ],
+  // },
+  // returns: {
+  //   title: "returns & exchanges",
+  //   nav: [
+  //     {
+  //       key: "policy",
+  //     },
+  //     {
+  //       key: "returns",
+  //       link: true,
+  //     },
+  //   ],
+  // },
+  // payments: {
+  //   title: "payments",
+  //   nav: [
+  //     {
+  //       key: "services",
+  //     },
+  //     {
+  //       key: "currency",
+  //     },
+  //     {
+  //       key: "largeOrders",
+  //       button: true,
+  //     },
+  //   ],
+  // },
 }
 
 export default faqData
