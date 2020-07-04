@@ -1,93 +1,122 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { makeStyles } from '@material-ui/core/styles'
-import clsx from 'clsx'
+import React from "react"
+import PropTypes from "prop-types"
+import { makeStyles } from "@material-ui/styles"
+import clsx from "clsx"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: "flex",
+    justifyContent: "center",
+  },
   container: {
-    paddingTop: 30,
-    paddingBottom: 30,
-    paddingLeft: 15,
-    paddingRight: 15,
-    [theme.breakpoints.up('sm')]: {
-      paddingLeft: 60,
-      paddingRight: 60,
+    display: "flex",
+    width: "100%",
+    padding: `30px 30px`,
+    [theme.breakpoints.up("sm")]: {
+      padding: `30px 45px`,
     },
-    [theme.breakpoints.up('md')]: {
-      paddingTop: 60,
-      paddingBottom: 60,
-      paddingLeft: 90,
-      paddingRight: 90,
+    [theme.breakpoints.up("lg")]: {
+      padding: `30px 60px`,
     },
-    [theme.breakpoints.up('lg')]: {
-      paddingTop: 45,
-      paddingBottom: 90,
-      paddingLeft: 170,
-      paddingRight: 170,
-    },
-    [theme.breakpoints.up('xl')]: {
-      paddingTop: 90,
-      paddingBottom: 90,
-      paddingLeft: 400,
-      paddingRight: 400,
+    [theme.breakpoints.up("xl")]: {
+      width: 1440,
+      padding: `30px 0`,
     },
   },
-  greyBlue: {
-    background: theme.status.greyBlue,
+  containerSlim: {
+    display: "flex",
+    width: "100%",
+    padding: `0 30px`,
+    [theme.breakpoints.up("sm")]: {
+      padding: `0 60px`,
+    },
+    [theme.breakpoints.up("xl")]: {
+      width: 1440,
+      padding: 0,
+    },
   },
-  cream: {
-    background: theme.status.cream,
+  secondary: {
+    background: theme.palette.primary.light,
   },
   primary: {
     background: theme.palette.primary.main,
   },
+  black: {
+    background: theme.color.black,
+  },
+  blackLt: {
+    background: theme.color.blackLt,
+  },
+  gray: {
+    background: theme.color.gray,
+  },
+  grayLt: {
+    background: "#fafafa",
+  },
   flexStart: {
-    display: 'flex',
-    flexWrap: 'wrap',
+    justifyContent: "flex-start",
   },
   flexEnd: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'flex-end',
+    justifyContent: "flex-end",
   },
   center: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
+    justifyContent: "center",
   },
   spaceBetween: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
+    justifyContent: "space-between",
   },
   spaceAround: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
+    justifyContent: "space-around",
+  },
+  alignflexStart: {
+    alignItems: "flex-start",
+  },
+  alignflexEnd: {
+    alignItems: "flex-end",
+  },
+  aligncenter: {
+    alignItems: "center",
+  },
+  flexWrap: {
+    flexWrap: "wrap",
+  },
+  flexColumn: {
+    flexDirection: "column",
   },
 }))
 
 function Container({
   children,
-  variant,
+  justifyContent,
+  alignItems,
+  flexDirection,
+  flexWrap,
   background,
+  padding,
   className: classNameProp,
 }) {
   const classes = useStyles()
   return (
     <div
-      className={clsx(
-        classes.container,
-        {
-          [classes.greyBlue]: background === 'grey',
-          [classes.primary]: background === 'primary',
-          [classes.cream]: background === 'cream',
-          [classes[variant]]: variant !== undefined,
-        },
-        classNameProp
-      )}
+      className={clsx(classes.root, {
+        [classes[background]]: background,
+      })}
     >
-      {children}
+      <div
+        className={clsx(
+          {
+            [classes[justifyContent]]: justifyContent !== undefined,
+            [classes.flexWrap]: flexWrap !== "nowrap",
+            [classes[`align${alignItems}`]]: alignItems !== undefined,
+            [classes.container]: padding !== "none",
+            [classes.containerSlim]: padding === "none",
+            [classes.flexColumn]: flexDirection === "column",
+          },
+          classNameProp
+        )}
+      >
+        {children}
+      </div>
     </div>
   )
 }
@@ -98,14 +127,23 @@ Container.propTypes = {
     PropTypes.array,
     PropTypes.bool,
   ]),
-  background: PropTypes.oneOf(['grey', 'primary', 'cream']),
-  variant: PropTypes.oneOf([
-    'flexStart',
-    'flexEnd',
-    'center',
-    'spaceBetween',
-    'spaceAround',
+  background: PropTypes.oneOf([
+    "secondary",
+    "primary",
+    "black",
+    "blackLt",
+    "gray",
+    "grayLt",
   ]),
+  justifyContent: PropTypes.oneOf([
+    "flexStart",
+    "flexEnd",
+    "center",
+    "spaceBetween",
+    "spaceAround",
+  ]),
+  alignItems: PropTypes.oneOf(["flexStart", "flexEnd", "center"]),
+  padding: PropTypes.oneOf(["none", null]),
 }
 
 export default Container

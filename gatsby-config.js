@@ -1,74 +1,111 @@
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
-
 module.exports = {
   siteMetadata: {
-    title: 'Eisbach Riders',
-    titleTemplate: '',
+    title: "Eisbach Riders: Surf Equipment from Munich",
+    titleTemplate: "",
     description:
-      'Local brand from Munich that offers sustainably packaged surf accessories and equipment for SUP, River Surfing, Ocean Surfing, Kite Surfing and more!',
-    url: 'https://www.eisbach-riders.com', // No trailing slash allowed!
-    siteUrl: 'https://www.eisbach-riders.com',
-    image: '/src/assets/logos/logo.png', // Path to your image you placed in the 'static' folder
-    twitterUsername: '@EisbachRiders',
+      "Local brand from Munich that offers sustainably packaged surf accessories and equipment for SUP, River Surfing, Ocean Surfing, Kite Surfing and more!",
+    url: "https://www.eisbach-riders.com", // No trailing slash allowed!
+    siteUrl: "https://www.eisbach-riders.com",
+    image: "/src/assets/logos/logo.png", // Path to your image you placed in the 'static' folder
+    twitterUsername: "@EisbachRiders",
   },
-  pathPrefix: '/eisbach-riders',
   plugins: [
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-plugin-htaccess",
       options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages',
+        redirect: [
+          "RewriteRule ^not-existing-url/?$ /existing-url [R=301,L,NE]",
+          {
+            from: "/blog",
+            to: "secondwavesurfing.com/blog",
+          },
+          {
+            from: "/shop",
+            to: "secondwavesurfing.com/shop",
+          },
+          {
+            from:
+              "/blog/product-insights-gnarwall-surfboard-hangers-from-sheppsolutions",
+            to:
+              "secondwavesurfing.com/blog/product-insights-gnarwall-surfboard-hangers-from-SHEPPSolutions",
+          },
+          {
+            from:
+              "/blog/provide-the-slide-collecting-and-donating-surfboards-to-spread-the-joy-of-surfing",
+            to:
+              "secondwavesurfing.com/blog/provide-the-slide-collecting-and-donating-surfboards-for-liberia",
+          },
+          {
+            from: "/blog/8-things-you-can-do-as-landlocked-surfer",
+            to:
+              "secondwavesurfing.com/blog/8-things-you-can-do-as-landlocked-surfer",
+          },
+          {
+            from: "/blog/fuerteventura-the-european-winter-surf-destination",
+            to:
+              "secondwavesurfing.com/blog/fuerteventura-the-european-winter-surf-destination",
+          },
+          {
+            from: "/blog/big-city-surf-escape-in-hong-kong",
+            to: "secondwavesurfing.com/blog/big-city-surf-escape-in-hong-kong",
+          },
+          {
+            from: "/blog/product-insights-organic-surf-wax-by-bee-swell",
+            to:
+              "secondwavesurfing.com/blog/product-insights-organic-surf-wax-by-bee-swell",
+          },
+          {
+            from: "/blog/where-to-find-used-surfboards",
+            to: "secondwavesurfing.com/blog/where-to-find-used-surfboards",
+          },
+        ],
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `img`,
-        path: `${__dirname}/src/assets/images`,
-      },
-    },
-    // {
-    //   resolve: `gatsby-source-graphql`,
-    //   options: {
-    //     typeName: 'WPGraphQL',
-    //     fieldName: 'wpgraphql',
-    //     url: 'https://shop.eisbach-riders.com/graphql',
-    //   },
-    // },
-    {
-      resolve: `gatsby-plugin-facebook-pixel`,
-      options: {
-        pixelId: '203659477338999',
-      },
-    },
-    // {
-    //   resolve: `gatsby-source-wordpress`,
-    //   options: {
-    //     baseUrl: `shop.eisbach-riders.com`,
-    //     protocol: `https`,
-    //     hostingWPCOM: false,
-    //     useACF: true,
-    //   },
-    // },
-    {
-      resolve: 'gatsby-plugin-mdx',
-      options: {
-        extensions: [`.mdx`, `.md`],
-        defaultLayouts: {
-          default: require.resolve('./src/components/Layout.jsx'),
-        },
+        name: `content`,
+        path: `${__dirname}/src/content`,
       },
     },
     {
-      resolve: 'gatsby-source-contentful',
+      resolve: `gatsby-source-filesystem`,
       options: {
-        spaceId: process.env.CONTENTFUL_SPACE,
-        accessToken: process.env.CONTENTFUL_API,
-        host: process.env.CONTENTFUL_HOST,
+        path: `${__dirname}/src/assets/logos`,
+        name: `logos`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/assets/websiteImages`,
+        name: `websiteImages`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `shopCategory`,
+        path: `${__dirname}/src/assets/shopCategory`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+              sizeByPixelDensity: true,
+            },
+          },
+        ],
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-remark-images`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -85,34 +122,45 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          'gatsby-remark-copy-linked-files',
+
+          `gatsby-remark-copy-linked-files`,
         ],
       },
     },
     {
-      resolve: `gatsby-source-instagram`,
+      resolve: `gatsby-source-graphql`,
       options: {
-        username: `eisbachriders`,
+        typeName: "WPGraphQL",
+        fieldName: "wpgraphql",
+        url: "https://shop.eisbach-riders.com/graphql",
       },
     },
-    // 'gatsby-plugin-eslint',
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-gdpr-cookies`,
       options: {
-        trackingId: process.env.GA_KEY,
-        anonymize: true,
-        respectDNT: true,
-        cookie_expires: 0,
-        cookieDomain: 'https://eisbach-riders.com',
+        googleAnalytics: {
+          trackingId: "UA-130658859-1", // leave empty if you want to disable the tracker
+          cookieName: "gatsby-gdpr-google-analytics", // default
+          anonymize: true, // default
+        },
+        googleTagManager: {
+          trackingId: "", // leave empty if you want to disable the tracker
+          cookieName: "gatsby-gdpr-google-tagmanager", // default
+          dataLayerName: "dataLayer", // default
+        },
+        facebookPixel: {
+          pixelId: "", // leave empty if you want to disable the tracker
+          cookieName: "gatsby-gdpr-facebook-pixel", // default
+        },
+        // defines the environments where the tracking should be available  - default is ["production"]
+        environments: ["production", "development"],
       },
     },
-    // `gatsby-plugin-feed`,
     {
-      resolve: 'gatsby-plugin-mailchimp',
+      resolve: "gatsby-plugin-i18n",
       options: {
-        endpoint: process.env.MAILCHIMP,
+        langKeyDefault: "en",
+        useLangKeyLayout: false,
       },
     },
     {
@@ -121,15 +169,16 @@ module.exports = {
         name: `Eisbach Riders`,
         short_name: `ER`,
         start_url: `/`,
-        background_color: `#0b0c10`,
+        background_color: `#ffffff`,
         theme_color: `#00d7a2`,
         display: `minimal-ui`,
-        icon: `src/assets/logos/logo.png`,
+        icon: `${__dirname}/src/assets/logos/logo.png`,
       },
     },
-    'gatsby-plugin-material-ui',
-    `gatsby-plugin-sitemap`,
-    `gatsby-plugin-offline`,
+    "gatsby-theme-material-ui",
     `gatsby-plugin-react-helmet`,
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    `gatsby-plugin-offline`,
   ],
 }

@@ -1,15 +1,16 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
+import React from "react"
+import { graphql } from "gatsby"
+import Layout from "../components/Layout"
+import SEO from "../components/seo"
 
-function NotFoundPage({ data }) {
-  const footerImg = data.allImageSharp.edges.find(x =>
-    x.node.fluid.src.includes('footer')
-  )
+const NotFoundPage = ({ data, location }) => {
+  const siteTitle = data.site.siteMetadata.title
+
   return (
-    <Layout footerImg={footerImg}>
-      <h1>NOT FOUND</h1>
-      <p>Sorry, the page you are looking for cannot be found.</p>
+    <Layout location={location} title={siteTitle}>
+      <SEO title="404: Not Found" />
+      <h1>Not Found</h1>
+      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
     </Layout>
   )
 }
@@ -18,14 +19,9 @@ export default NotFoundPage
 
 export const pageQuery = graphql`
   query {
-    allImageSharp {
-      edges {
-        node {
-          id
-          fluid(maxWidth: 3000) {
-            ...GatsbyImageSharpFluid
-          }
-        }
+    site {
+      siteMetadata {
+        title
       }
     }
   }

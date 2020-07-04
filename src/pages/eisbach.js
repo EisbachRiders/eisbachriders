@@ -1,35 +1,19 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import Weather from '../components/weather/Weather'
+import React from "react"
+import SEO from "../components/seo"
+import Layout from "../components/Layout"
+import EisbachForecast from "../components/eisbach/EisbachForecast"
+import EisbachMap from "../components/eisbach/EisbachMap"
+// import EisbachFaq from "../components/eisbach/EisbachFaq"
 
-function WeatherPage({ data }) {
-  const weatherImg = data.allImageSharp.edges.find((x) =>
-    x.node.fluid.src.includes('weatherClosed')
-  )
-  const footerImg = data.allImageSharp.edges.find((x) =>
-    x.node.fluid.src.includes('footer')
-  )
+const EisbachPage = () => {
   return (
-    <Layout footerImg={footerImg}>
-      <Weather img={weatherImg} />
+    <Layout>
+      <SEO />
+      <EisbachForecast />
+      <EisbachMap />
+      {/* <EisbachFaq /> */}
     </Layout>
   )
 }
 
-export default WeatherPage
-
-export const pageQuery = graphql`
-  query {
-    allImageSharp {
-      edges {
-        node {
-          id
-          fluid(maxWidth: 3000) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  }
-`
+export default EisbachPage

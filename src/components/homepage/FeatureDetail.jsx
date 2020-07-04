@@ -1,38 +1,39 @@
-import React, { Fragment } from 'react'
-import { useTranslation } from 'react-i18next'
-import { makeStyles } from '@material-ui/core/styles'
-import clsx from 'clsx'
-import Img from 'gatsby-image'
-import Typography from '@material-ui/core/Typography'
-import Hidden from '@material-ui/core/Hidden'
-import SurfIcon from '../../assets/icons/Surf'
-import FeatherIcon from '../../assets/icons/Feather'
+import React, { Fragment } from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
+import clsx from "clsx"
+import { useTranslation } from "react-i18next"
+import { makeStyles } from "@material-ui/core/styles"
+import Typography from "@material-ui/core/Typography"
+import Hidden from "@material-ui/core/Hidden"
+import SurfIcon from "../../assets/icons/Surf"
+import FeatherIcon from "../../assets/icons/Feather"
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    flexBasis: '100%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-around',
+    flexBasis: "100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-around",
     marginBottom: 30,
-    [theme.breakpoints.up('md')]: {
-      flexBasis: '30%',
-      flexDirection: 'column',
+    [theme.breakpoints.up("md")]: {
+      flexBasis: "30%",
+      flexDirection: "column",
       marginRight: 30,
     },
   },
   flex: {
-    display: 'flex',
+    display: "flex",
   },
   containerDetail: {
-    flexBasis: '30%',
-    [theme.breakpoints.up('md')]: {
-      width: '100%',
+    flexBasis: "30%",
+    [theme.breakpoints.up("md")]: {
+      width: "100%",
     },
   },
   bottom1: {
     marginBottom: 0,
-    [theme.breakpoints.up('lg')]: {
+    [theme.breakpoints.up("lg")]: {
       marginBottom: 45,
     },
   },
@@ -40,15 +41,15 @@ const useStyles = makeStyles(theme => ({
     marginBottom: 5,
   },
   title: {
-    textTransform: 'uppercase',
-    textAlign: 'right',
+    textTransform: "uppercase",
+    textAlign: "right",
     fontSize: 16,
     marginBottom: 15,
   },
   containerIcon: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
   icon: {
     width: 18,
@@ -56,51 +57,67 @@ const useStyles = makeStyles(theme => ({
     marginLeft: 5,
   },
   off: {
-    color: theme.status.greyLt,
+    color: theme.color.gray,
   },
   barOn: {
     width: 18,
     height: 5,
     marginLeft: 5,
-    background: theme.status.greyLt,
+    background: theme.color.gray,
   },
   barOff: {
     width: 18,
     height: 5,
     marginLeft: 5,
-    background: theme.status.black,
+    background: theme.color.black,
   },
 }))
 
-function FeatureDetail({ img }) {
+function FeatureDetail() {
   const classes = useStyles()
   const { t } = useTranslation()
 
-  const details = ['response', 'img', 'experience']
+  const details = ["response", "img", "experience"]
+
+  const data = useStaticQuery(graphql`
+    query {
+      fileName: file(
+        relativePath: { eq: "single-tab-honeycomb-fin-green.png" }
+      ) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
 
   return (
     <div className={classes.root}>
       {details.map((elem, idx) => (
         <Fragment key={`detail${idx}`}>
-          {elem === 'img' && (
+          {elem === "img" && (
             <Hidden mdUp>
               <div className={classes.containerDetail}>
                 <Img
-                  fluid={img.node.fluid}
-                  alt={t('feature.featureProduct')}
+                  fluid={data.fileName.childImageSharp.fluid}
+                  alt="featured product"
+                  placeholderStyle={{ backgroundColor: `blue` }}
                   className={classes.img}
+                  imgStyle={{ objectPosition: "center center" }}
                 />
               </div>
             </Hidden>
           )}
-          {elem === 'response' && (
+          {elem === "response" && (
             <div className={clsx(classes.containerDetail, classes.bottom1)}>
               <Typography className={classes.title} variant="h5">
                 {t(`feature.${elem}`)}
               </Typography>
               <div className={clsx(classes.containerIcon, classes.bottom2)}>
                 <Typography className={classes.detailText}>
-                  {t('feature.surfDetail2')}
+                  {t("feature.surfDetail2")}
                 </Typography>
                 <div>
                   <FeatherIcon className={classes.icon} />
@@ -110,7 +127,7 @@ function FeatureDetail({ img }) {
               </div>
               <div className={classes.containerIcon}>
                 <Typography className={classes.detailText}>
-                  {t('feature.surfDetail1')}
+                  {t("feature.surfDetail1")}
                 </Typography>
                 <div>
                   <SurfIcon className={classes.icon} />
@@ -120,14 +137,14 @@ function FeatureDetail({ img }) {
               </div>
             </div>
           )}
-          {elem === 'experience' && (
+          {elem === "experience" && (
             <div className={classes.containerDetail}>
               <Typography className={classes.title} variant="h5">
                 {t(`feature.${elem}`)}
               </Typography>
               <div className={clsx(classes.containerIcon, classes.bottom)}>
                 <Typography className={classes.detailText}>
-                  {t('feature.beginner')}
+                  {t("feature.beginner")}
                 </Typography>
                 <div className={classes.flex}>
                   <div className={classes.barOn} />
@@ -138,7 +155,7 @@ function FeatureDetail({ img }) {
               </div>
               <div className={classes.containerIcon}>
                 <Typography className={classes.detailText}>
-                  {t('feature.intermediate')}
+                  {t("feature.intermediate")}
                 </Typography>
                 <div className={classes.flex}>
                   <div className={classes.barOff} />
@@ -149,7 +166,7 @@ function FeatureDetail({ img }) {
               </div>
               <div className={classes.containerIcon}>
                 <Typography className={classes.detailText}>
-                  {t('feature.pro')}
+                  {t("feature.pro")}
                 </Typography>
                 <div className={classes.flex}>
                   <div className={classes.barOff} />

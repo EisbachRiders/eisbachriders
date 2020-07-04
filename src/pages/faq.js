@@ -1,32 +1,15 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import FAQ from '../components/faq/Faq'
+import React from "react"
+import SEO from "../components/seo"
+import Layout from "../components/Layout"
+import FrequentlyAskedQuestions from "../components/faq/FrequentlyAskedQuestions"
 
-function FaqPage({ data }) {
-  const footerImg = data.allImageSharp.edges.find(x =>
-    x.node.fluid.src.includes('footer')
-  )
+const FaqPage = () => {
   return (
-    <Layout footerImg={footerImg}>
-      <FAQ />
+    <Layout>
+      <SEO />
+      <FrequentlyAskedQuestions />
     </Layout>
   )
 }
 
 export default FaqPage
-
-export const pageQuery = graphql`
-  query {
-    allImageSharp {
-      edges {
-        node {
-          id
-          fluid(maxWidth: 3000) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  }
-`

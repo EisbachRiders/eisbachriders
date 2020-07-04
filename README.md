@@ -5,37 +5,19 @@
 
 <div align="center">
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/51910244b8bb4a7e8766de66db748292)](https://app.codacy.com/app/cabutler10/website_EisbachRidersGatsby?utm_source=github.com&utm_medium=referral&utm_content=cabutler10/website_EisbachRidersGatsby&utm_campaign=Badge_Grade_Dashboard)
-[![Coverage Status](https://coveralls.io/repos/github/cabutler10/website_EisbachRidersGatsby/badge.svg?branch=master)](https://coveralls.io/github/cabutler10/website_EisbachRidersGatsby?branch=master)
-![](https://img.shields.io/github/languages/code-size/cabutler10/website_EisbachRidersGatsby.svg?style=flat)
-![](https://img.shields.io/github/license/cabutler10/website_EisbachRidersGatsby.svg?ogoColor=orange&style=flat)
-![](https://img.shields.io/github/package-json/version/cabutler10/website_EisbachRidersGatsby.svg?style=flat)
+![](https://img.shields.io/github/languages/code-size/EisbachRiders/eisbachriders.svg?style=flat)
+![](https://img.shields.io/github/license/EisbachRiders/eisbachriders.svg?ogoColor=orange&style=flat)
+![](https://img.shields.io/github/package-json/version/EisbachRiders/eisbachriders.svg?style=flat)
 ![Code style](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)
 
-</div>
+Kick off your project with this blog boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
-This website is an e-commerce shop for the brand **Eisbach Riders**.
+## 🚀 Quick start
 
-## Deployment
+1.  **Running a Gatsby site.**
 
-To run this site in development run the following code and navigate to `http://localhost:8000`
+    Use the Gatsby CLI to create a new site, specifying the blog starter.
 
-```
-    yarn develop
-```
-
-To build this site for final development run the following code
-
-```
-    yarn format
-    yarn lint
-    yarn test
-    yarn build
-```
-
-## Project
-
-This website was build using Gatsby, Material-UI, and Redux
-
-Testing Libraries:
-jest, cypress, and @testing-library/react
+    ```shell
+    gatsby develop
+    ```

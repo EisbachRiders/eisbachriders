@@ -1,418 +1,102 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Img from 'gatsby-image'
-import clsx from 'clsx'
-import { useTranslation } from 'react-i18next'
-import { makeStyles } from '@material-ui/core/styles'
-import Typography from '@material-ui/core/Typography'
-import Hidden from '@material-ui/core/Hidden'
-import List from '@material-ui/core/List'
-import ListItem from '@material-ui/core/ListItem'
-import ListSubheader from '@material-ui/core/ListSubheader'
-import ListItemAvatar from '@material-ui/core/ListItemAvatar'
-import Avatar from '@material-ui/core/Avatar'
-import ListItemText from '@material-ui/core/ListItemText'
-import BrushStroke from '../ui/BrushStroke'
-import Container from '../ui/Container'
-import oceana from '../../assets/images/about/oceana.png'
-import provideTheSlide from '../../assets/images/provideTheSlide.png'
-import oceanconservancy from '../../assets/images/about/oceanconservancy.png'
-import oceancleanup from '../../assets/images/about/oceancleanup.png'
-import igsmLogo from '../../assets/logos/igsmLogo.png'
-import srfLogo from '../../assets/images/about/surfrider.png'
-import wirmachenwelleLogo from '../../assets/images/about/wirmachenwelle.png'
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
+import clsx from "clsx"
+import { useTranslation } from "react-i18next"
+import { makeStyles } from "@material-ui/core/styles"
+import Container from "../ui/Container"
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    [theme.breakpoints.up('sm')]: {
-      flexWrap: 'nowrap',
+  flex: {
+    display: "flex",
+    justifyContent: "space-between",
+    flexWrap: "wrap",
+    [theme.breakpoints.up("sm")]: {
+      flexWrap: "nowrap",
     },
   },
-  container: {
-    flexBasis: '100%',
-    [theme.breakpoints.up('sm')]: {
-      flexBasis: '50%',
-    },
-    [theme.breakpoints.up('md')]: {
-      paddingTop: 30,
-      paddingBottom: 30,
-    },
-    [theme.breakpoints.up('lg')]: {
-      paddingTop: 45,
+  reverse: {
+    flexDirection: "column-reverse",
+    [theme.breakpoints.up("sm")]: {
+      flexDirection: "row",
     },
   },
-  containerRight: {
-    [theme.breakpoints.up('md')]: {
-      paddingLeft: 75,
-    },
-  },
-  containerLeft: {
-    [theme.breakpoints.up('md')]: {
-      paddingRight: 75,
-    },
-  },
-  margin: {
-    [theme.breakpoints.up('sm')]: {
-      marginLeft: '15%',
-    },
-  },
-  imgContainer: {
-    flexBasis: '100%',
-    [theme.breakpoints.up('sm')]: {
-      flexBasis: '50%',
+  text: {
+    [theme.breakpoints.up("sm")]: {
+      flexBasis: "60%",
+      padding: 60,
     },
   },
   img: {
-    height: 200,
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-      height: 300,
-      width: '100%',
-    },
-    [theme.breakpoints.up('md')]: {
+    width: "100%",
+    [theme.breakpoints.up("sm")]: {
+      flexBasis: "40%",
       height: 400,
-      width: '100%',
     },
   },
-  img2: {
-    height: 200,
-    width: '100%',
-  },
-  text: {
-    textAlign: 'justify',
-    color: theme.palette.common.black,
-    fontSize: 12,
-    [theme.breakpoints.up('md')]: {
-      fontSize: 14,
-    },
-  },
-  avatar: {
-    width: '100%',
-    height: '100%',
-  },
-  listText: {
-    color: theme.palette.common.black,
-  },
-  listTextPrimary: {
-    fontWeight: 'bold',
+  title: {
+    textTransform: "capitalize",
+    fontFamily: "secondary",
+    color: theme.palette.primary.main,
+    fontSize: 32,
+    letterSpacing: 3,
+    margin: 0,
+    marginBottom: 10,
   },
 }))
 
-function AboutDetail({ img }) {
+function AboutDetail() {
   const classes = useStyles()
   const { t } = useTranslation()
+  const images = useStaticQuery(graphql`
+    query {
+      community: file(relativePath: { eq: "aboutCommunity.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      sustainability: file(relativePath: { eq: "aboutSustainability.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
 
   return (
-    <>
-      <Container className={classes.root}>
-        <div className={clsx(classes.container, classes.containerLeft)}>
-          <div className={classes.margin}>
-            <BrushStroke title="Community" />
-          </div>
-          <Typography className={classes.text} variant="body1">
-            {t('about.community')}
-          </Typography>
+    <Container>
+      <div className={clsx(classes.flex, classes.reverse)}>
+        <Img
+          fluid={images.community.childImageSharp.fluid}
+          alt="wave"
+          placeholderStyle={{ backgroundColor: `blue` }}
+          className={classes.img}
+          imgStyle={{ objectPosition: "center center" }}
+        />
+        <div className={classes.text}>
+          <p className={classes.title}>{t("common.community")}</p>
+          <p>{t("about.community")}</p>
         </div>
-        <div className={classes.imgContainer}>
-          <Img
-            fluid={img[1].node.fluid}
-            alt="surfers walking together"
-            className={classes.img}
-          />
+      </div>
+      <div className={classes.flex}>
+        <div className={classes.text}>
+          <p className={classes.title}>{t("common.sustainability")}</p>
+          <p>{t("about.sustainability")}</p>
         </div>
-      </Container>
-
-      <Container className={classes.root}>
-        <Hidden xsDown>
-          <div className={classes.imgContainer}>
-            <Img
-              fluid={img[0].node.fluid}
-              alt="group picking up trash"
-              className={classes.img}
-            />
-          </div>
-        </Hidden>
-        <div className={clsx(classes.container, classes.containerRight)}>
-          <div className={classes.margin}>
-            <BrushStroke title="sustainability" />
-          </div>
-          <Typography className={classes.text} variant="body1">
-            {t('about.sustainability')}
-          </Typography>
-        </div>
-        <Hidden smUp>
-          <div className={classes.imgContainer}>
-            <Img
-              fluid={img[0].node.fluid}
-              alt="group picking up trash"
-              className={classes.img}
-            />
-          </div>
-        </Hidden>
-      </Container>
-
-      {/* <div className={classes.root}>
-        <Hidden xsDown>
-          <Img
-            fluid={img[1].node.fluid}
-            alt="picking up trash"
-            className={classes.img2}
-          />
-          <Img
-            fluid={img[1].node.fluid}
-            alt="picking up trash"
-            className={classes.img2}
-          />
-          <Img
-            fluid={img[1].node.fluid}
-            alt="picking up trash"
-            className={classes.img2}
-          />
-        </Hidden>
-      </div> */}
-
-      <Container>
-        <Typography align="center" variant="h5">
-          Get Involved
-        </Typography>
-        <div className={classes.container}>
-          <List
-            component="nav"
-            aria-label="local organizations"
-            subheader={
-              <ListSubheader component="div" id="nested-list-subheader">
-                Local Organizations
-              </ListSubheader>
-            }
-          >
-            <ListItem
-              button
-              href="https://providetheslide.com/"
-              component="a"
-              target="_blank"
-              rel="noopener"
-            >
-              <ListItemAvatar>
-                <Avatar>
-                  <img
-                    src={provideTheSlide}
-                    className={classes.avatar}
-                    alt="provide the slide logo"
-                  />
-                </Avatar>
-              </ListItemAvatar>
-              <ListItemText
-                classes={{
-                  primary: classes.listTextPrimary,
-                  secondary: classes.listText,
-                }}
-                primary="Provide the Slide"
-                secondary="Provide the Slide focuses on bringing boards, waves and people together. While on a trip to Liberia, they saw a need for surfboard, which was a shame given the beauty of the waves in the area. The thought of all of the unused surfboards out there that would serve a better purpose and founded this project. By making a donation of an used surfboard to this foundation, PROVIDETHESLIDE brings the boards where they are needed and surfed. They enable locals to surf and pass on the surfing to others as well as generate a small income around the sport (e.g. with a small shop, board rental, board repair, etc.) ). So if you are getting a new board and are looking for a good use for your old board, we cannot recommend this enough!"
-              />
-            </ListItem>
-            <ListItem
-              button
-              href="https://www.igsm.info/"
-              component="a"
-              target="_blank"
-              rel="noopener"
-            >
-              <ListItemAvatar>
-                <Avatar>
-                  <img
-                    src={igsmLogo}
-                    className={classes.avatar}
-                    alt="igsm logo"
-                  />
-                </Avatar>
-              </ListItemAvatar>
-              <ListItemText
-                classes={{
-                  primary: classes.listTextPrimary,
-                  secondary: classes.listText,
-                }}
-                primary="Interessengemeinschaft Surfen in München"
-                secondary="The Interessengemeinschaft Surfen in München eV is a registered association that takes care of all matters relating to river surfing in Munich. They are committed to preserving existing waves in and around the city, fighting for new surf spots, negotiating with the city's political organs and helping the youth to practice this sport."
-              />
-            </ListItem>
-            <ListItem
-              button
-              href="https://wirmachenwelle.org/"
-              component="a"
-              target="_blank"
-              rel="noopener"
-            >
-              <ListItemAvatar>
-                <Avatar>
-                  <img
-                    src={wirmachenwelleLogo}
-                    className={classes.avatar}
-                    alt="wir machen welle logo"
-                  />
-                </Avatar>
-              </ListItemAvatar>
-              <ListItemText
-                classes={{
-                  primary: classes.listTextPrimary,
-                  secondary: classes.listText,
-                }}
-                primary="Wirmachenwelle"
-                secondary="Wir Machen Welle is the first Germany-wide surf organization that works with the social and therapeutic effect of the sport. The program 'Surf's Up Germany', promotes the personal growth of young people among themselves and everyone involved. They create a unique and sustainable experience that not only shows young people different perspectives, but motivates them to positively change their future 'world of life and work' and community. 'Wirmachenwelle' is committed to greater equal opportunities in the development and training of young people. They are convinced that surfing not only changes the life of each individual but makes it better."
-              />
-            </ListItem>
-            <ListItem
-              button
-              href="https://www.surfrider.org/"
-              component="a"
-              target="_blank"
-              rel="noopener"
-            >
-              <ListItemAvatar>
-                <Avatar>
-                  <img
-                    src={srfLogo}
-                    className={classes.avatar}
-                    alt="surf rider logo"
-                  />
-                </Avatar>
-              </ListItemAvatar>
-              <ListItemText
-                classes={{
-                  primary: classes.listTextPrimary,
-                  secondary: classes.listText,
-                }}
-                primary="Surfrider Foundation"
-                secondary="The Surfrider Foundation is dedicated to the protection and enjoyment of the world's ocean, waves and beaches through a powerful activist network."
-              />
-            </ListItem>
-          </List>
-          <List
-            component="nav"
-            aria-label="global organizations"
-            subheader={
-              <ListSubheader component="div" id="nested-list-subheader">
-                Global Organizations
-              </ListSubheader>
-            }
-          >
-            <ListItem
-              button
-              href="https://oceanconservancy.org/"
-              component="a"
-              target="_blank"
-              rel="noopener"
-            >
-              <ListItemAvatar>
-                <Avatar>
-                  <img
-                    src={oceanconservancy}
-                    className={classes.avatar}
-                    alt="ocean conservancy logo"
-                  />
-                </Avatar>
-              </ListItemAvatar>
-              <ListItemText
-                classes={{
-                  primary: classes.listTextPrimary,
-                  secondary: classes.listText,
-                }}
-                primary="Ocean Conservancy"
-                secondary="Ocean Conservancy is working with you to protect the ocean from today’s greatest global challenges. The Ocean Conservancy creates science-based solutions for a healthy ocean and the wildlife and communities that depend on it."
-              />
-            </ListItem>
-            <ListItem
-              button
-              href="https://theoceancleanup.com/"
-              component="a"
-              target="_blank"
-              rel="noopener"
-            >
-              <ListItemAvatar>
-                <Avatar>
-                  <img
-                    src={oceancleanup}
-                    className={classes.avatar}
-                    alt="ocean cleanup logo"
-                  />
-                </Avatar>
-              </ListItemAvatar>
-              <ListItemText
-                classes={{
-                  primary: classes.listTextPrimary,
-                  secondary: classes.listText,
-                }}
-                primary="The Ocean Cleanup"
-                secondary="The Ocean Cleanup is a non-profit organization, developing advanced technologies to rid the world’s oceans of plastic. By utilizing the ocean currents to our advantage, our passive drifting systems are estimated to clean up half the Great Pacific Garbage Patch in 5 years’ time."
-              />
-            </ListItem>
-            <ListItem
-              button
-              href="https://oceana.org/"
-              component="a"
-              target="_blank"
-              rel="noopener"
-            >
-              <ListItemAvatar>
-                <Avatar>
-                  <img
-                    src={oceana}
-                    className={classes.avatar}
-                    alt="oceana logo"
-                  />
-                </Avatar>
-              </ListItemAvatar>
-              <ListItemText
-                classes={{
-                  primary: classes.listTextPrimary,
-                  secondary: classes.listText,
-                }}
-                primary="Oceana"
-                secondary="An international organization focused solely on oceans, dedicated to achieving measurable change by conducting specific, science-based policy campaigns with fixed deadlines and articulated goals."
-              />
-            </ListItem>
-          </List>
-
-          {/*   <List
-            component="nav"
-            aria-label="trash pickup"
-            subheader={
-              <ListSubheader component="div" id="nested-list-subheader">
-                Trash Pickups
-              </ListSubheader>
-            }
-          >
-          <ListItem
-              button
-              href="https://www.worldcleanupday.org/"
-              component="a"
-              target="_blank"
-              rel="noopener"
-            >
-              <ListItemAvatar>
-                <Avatar>
-                  <img src={worldcleanupday} className={classes.avatar} />
-                </Avatar>
-              </ListItemAvatar>
-              <ListItemText
-                classes={{
-                  primary: classes.listTextPrimary,
-                  secondary: classes.listText,
-                }}
-                primary="World Cleanup Day is September 21st!!"
-                secondary="Be a part of a global effort to clean up our planet. Join a local group and volunteer your time, organize your own team, donate, or simple go out yourself and make a difference (don't forget to download the TrashOut app, that's what we will do since our team is currently travelling)!!"
-              />
-            </ListItem> 
-          </List>*/}
-        </div>
-      </Container>
-    </>
+        <Img
+          fluid={images.sustainability.childImageSharp.fluid}
+          alt="wave"
+          placeholderStyle={{ backgroundColor: `blue` }}
+          className={classes.img}
+          imgStyle={{ objectPosition: "center center" }}
+        />
+      </div>
+    </Container>
   )
-}
-
-AboutDetail.propTypes = {
-  img: PropTypes.array.isRequired,
 }
 
 export default AboutDetail
