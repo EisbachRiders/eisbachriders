@@ -30,7 +30,7 @@ const faqData = {
   },
   other: {
     title: "miscellaneous",
-    nav: [{ key: "purchase" }],
+    nav: [{ key: "other1" }, { key: "other2" }],
   },
   // shipping: {
   //   title: "shipping",

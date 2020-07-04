@@ -171,7 +171,11 @@
     "currency_question": "What currency do you accept for payments?",
     "currency_answer": "All prices are stated in Euros including VAT of 19%.",
     "largeOrders_question": "Do you offer special deals for large or bulk orders?",
-    "largeOrders_answer": "Are you a surf club, shop/retailer, or group of friends looking to make a larger order? Please contact us for more information about discounts or deals on larger orders!"
+    "largeOrders_answer": "Are you a surf club, shop/retailer, or group of friends looking to make a larger order? Please contact us for more information about discounts or deals on larger orders!",
+    "other1_question": "Do you have a store where I can pick up products?",
+    "other1_answer": "We currently do not have a store. However, if you are in Munich and do not want to wait for your order to be shipped, you are welcome to come to our warehouse with an appointment! Write to us to schedule a time!",
+    "other2_question": "Do you also have special offers for retailers or bulk orders?",
+    "other2_answer": "Yes! If you are a surf club, shop / retailer or a group of friends who want to place a larger order simply write to us for more information on discounts or offers!"
   },
   "eisbach": {
     "title": "Urban Surfing in Munich",
