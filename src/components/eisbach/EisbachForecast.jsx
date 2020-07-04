@@ -40,7 +40,6 @@ const useStyles = makeStyles((theme) => ({
   },
   h2: {
     textAlign: "center",
-    textTransform: "capitalize",
     fontSize: 24,
     fontWeight: 500,
     marginBottom: 0,

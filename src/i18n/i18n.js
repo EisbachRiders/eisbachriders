@@ -8,7 +8,7 @@ i18n
   .use(detector)
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
-    lng: "de",
+    lng: "en",
     fallbackLng: "en", // use en if detected lng is not available
     resources: {
       en: {
