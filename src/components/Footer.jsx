@@ -213,7 +213,7 @@ function Footer() {
   ]
   return (
     <footer className={classes.footer}>
-      <Container justifyContent="spaceAround">
+      {/* <Container justifyContent="spaceAround">
         {features.map((elem, idx) => (
           <div className={classes.iconContainer} key={`feature${idx}`}>
             {elem.icon}
@@ -225,7 +225,7 @@ function Footer() {
             </div>
           </div>
         ))}
-      </Container>
+      </Container> */}
 
       <Newsletter />
 

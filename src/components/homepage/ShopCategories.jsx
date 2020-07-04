@@ -105,7 +105,7 @@ function ShopCategories() {
   const big = [
     {
       cat: "sup",
-      path: "sup-on-lake-bavaria",
+      path: "sup-at-lake",
       href: "https://shop.eisbach-riders.com/product-category/sup/",
     },
     {
