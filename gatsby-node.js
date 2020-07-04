@@ -7,6 +7,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const pageTemplate = path.resolve("src/templates/page.js")
   const productTemplate = path.resolve("src/templates/productTemplate.js")
+  const productCategoryTemplate = path.resolve(
+    "src/templates/productCategoryTemplate.js"
+  )
 
   const result = await graphql(`
     query {
@@ -243,6 +246,34 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   })
 
+  // Create product category pages
+  createPage({
+    path: "/product/surfboard-fins",
+    component: productCategoryTemplate,
+    context: { products: fins, category: "surfboard fins" },
+  })
+  createPage({
+    path: "/product/sup-longboard-fins",
+    component: productCategoryTemplate,
+    context: { products: sup, category: "sup and longboard fins" },
+  })
+  createPage({
+    path: "/product/leashes",
+    component: productCategoryTemplate,
+    context: { products: leashes, category: "leashes" },
+  })
+  createPage({
+    path: "/product/accessories",
+    component: productCategoryTemplate,
+    context: { products: accessories, category: "accessories" },
+  })
+  createPage({
+    path: "/product/apparel",
+    component: productCategoryTemplate,
+    context: { products: apparel, category: "apparel" },
+  })
+
+  // Create individual product pages
   fins.forEach(({ node }) => {
     createPage({
       path: `product/${node.slug}`,

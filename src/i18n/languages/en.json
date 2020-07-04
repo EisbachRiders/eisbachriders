@@ -118,6 +118,7 @@
   "about": {
     "about": "about us",
     "tagline": "sustainability, community, surf equipment",
+    "the_team": "The Team",
     "content": "Eisbach Riders is a surf brand from Munich, Germany that specializes in surf equipment and accessories. We are passionate surfers with a mission to protect our playgrounds - the ocean and rivers that provide us so much enjoyment - by supporting local communities and efforts to preserve our water sources. Our focus is to provide sustainably packaged and affordable products so you can feel good about jumping back into the water.",
     "founders1": "We are Robin and Michael. We met during our studies at Technical University of Munich and have been friends ever since. We are not professional surfers and if we are being honest, we will likely never be haha, but we love being out on the waves! And we want everyone to be able to enjoy their local water sources without breaking the bank or having to feel guilty for buying something double wrapped in plastic.",
     "founders2": "When we decided to follow our passion and start this brand we wanted to focus on sustainable packaging and supporting local communities. Eisbach Riders was founded in September 2018 in Munich and while we are still a young start up, we are overflowing with ideas on how to making purchasing surf gear more sustainable.",
@@ -174,7 +175,7 @@
   },
   "eisbach": {
     "title": "Urban Surfing in Munich",
-    "localConditions": "Check out the local conditions!",
+    "localConditions": "Check out the Local Conditions!",
     "about": "The Eisbach is the famous river surfing spot in Munich which can be surfed year around. The German name Eisbach (which can be translated to ice creek) acts as a synonym for the water temperature that is often ice cold. The water originates in the Bavarian Alps and slowly heats up during the summer months on its way to Munich.",
     "advanced": "skill level advanced",
     "intermediate": "skill level intermediate",
@@ -201,6 +202,11 @@
     "Green": "Green",
     "Green Glass": "Green Glass",
     "Yellow": "Yellow",
-    "buy": "shop now"
+    "buy": "shop now",
+    "surfboard-fins": "Surfboard Fins",
+    "leashes": "Leashes",
+    "accessories": "Accessories",
+    "apparel": "Apparel",
+    "sup-longboard-fins": "SUP & Longboard Fins"
   }
 }

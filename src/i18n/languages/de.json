@@ -84,19 +84,19 @@
     "freeShippingText": "Kostenloser Versand für Bestellungen über 15€ innerhalb Deutschlands"
   },
   "shop": {
-      "viewCollection": "Mehr Anzeigen",
-      "leashes": "Leashes",
-      "fins": "Finnen",
-      "accessories": "Accessories",
-      "apparel": "Kleidung",
-      "sup": "SUP",
-      "rapidSurfing": "Rapid Surfing",
-      "leashesTagline": "Beste Passform",
-      "finsTagline": "Für jedes Board",
-      "accessoriesTagline": "Funktional & stilvoll",
-      "apparelTagline": "Alles was du brauchst",
-      "supTagline": "Ausrüstung zum Paddeln",
-      "rapidSurfingTagline": "Für Flüsse oder Wave Pools"
+    "viewCollection": "Mehr Anzeigen",
+    "leashes": "Leashes",
+    "fins": "Finnen",
+    "accessories": "Accessories",
+    "apparel": "Kleidung",
+    "sup": "SUP",
+    "rapidSurfing": "Rapid Surfing",
+    "leashesTagline": "Beste Passform",
+    "finsTagline": "Für jedes Board",
+    "accessoriesTagline": "Funktional & stilvoll",
+    "apparelTagline": "Alles was du brauchst",
+    "supTagline": "Ausrüstung zum Paddeln",
+    "rapidSurfingTagline": "Für Flüsse oder Wave Pools"
   },
   "common": {
     "about": "Über",
@@ -132,6 +132,7 @@
   },
   "faq": {
     "learnMore": "Erfahren Sie mehr",
+    "the_team": "Das Team",
     "singleFin_question": "Ich habe eine meiner Finnen gebrochen oder verloren. Gibt es die Mittel- oder Seitenflossen auch separat?",
     "singleFin_answer": "Aktuell haben wir Finnen nicht einzeln verfügbard, außer natürlich bei den US-Box Single Fins. Manchmal haben wir jedoch einzele Finnen aus Retouren oder Promo-Stes in unserem Lager. Schreib uns einfach kurz und wir prüfen, was wir zur Verfügung haben.",
     "finSize_question": "Welche Finnengröße ist die beste für mich - klein, mittel oder groß?",
@@ -178,6 +179,11 @@
     "Green": "Grün",
     "Green Glass": "Glasgrün",
     "Yellow": "Gelb",
-    "buy": "shop now"
+    "buy": "shop now",
+    "surfboard-fins": "Surfboard Fins",
+    "leashes": "Leashes",
+    "accessories": "Accessories",
+    "apparel": "Apparel",
+    "sup-longboard-fins": "SUP & Longboard Fins"
   }
 }

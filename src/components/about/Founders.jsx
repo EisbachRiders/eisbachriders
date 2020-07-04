@@ -8,9 +8,19 @@ import Container from "../ui/Container"
 
 const useStyles = makeStyles((theme) => ({
   container: {
+    display: "flex",
+    justifyContent: "space-between",
     [theme.breakpoints.up("md")]: {
       flexWrap: "nowrap",
     },
+  },
+  header: {
+    textTransform: "capitalize",
+    width: "100%",
+    fontFamily: "secondary",
+    fontSize: 32,
+    textAlign: "center",
+    marginBottom: 0,
   },
   flexItem: {
     textAlign: "center",
@@ -53,37 +63,40 @@ function Founders() {
   `)
 
   return (
-    <Container justifyContent="spaceBetween" className={classes.container}>
-      <Img
-        fluid={images.robin.childImageSharp.fluid}
-        alt="wave"
-        placeholderStyle={{ backgroundColor: `blue` }}
-        className={classes.img}
-        imgStyle={{ objectPosition: "center center" }}
-      />
-      <Hidden mdUp>
+    <Container>
+      <p className={classes.header}>{t("about.the_team")}</p>
+      <div className={classes.container}>
         <Img
-          fluid={images.michi.childImageSharp.fluid}
+          fluid={images.robin.childImageSharp.fluid}
           alt="wave"
           placeholderStyle={{ backgroundColor: `blue` }}
           className={classes.img}
           imgStyle={{ objectPosition: "center center" }}
         />
-      </Hidden>
-      <div className={classes.flexItem}>
-        <p>{t("about.founders1")}</p>
-        <p>{t("about.founders2")}</p>
-        <p>{t("about.founders3")}</p>
+        <Hidden mdUp>
+          <Img
+            fluid={images.michi.childImageSharp.fluid}
+            alt="wave"
+            placeholderStyle={{ backgroundColor: `blue` }}
+            className={classes.img}
+            imgStyle={{ objectPosition: "center center" }}
+          />
+        </Hidden>
+        <div className={classes.flexItem}>
+          <p>{t("about.founders1")}</p>
+          <p>{t("about.founders2")}</p>
+          <p>{t("about.founders3")}</p>
+        </div>
+        <Hidden smDown>
+          <Img
+            fluid={images.michi.childImageSharp.fluid}
+            alt="wave"
+            placeholderStyle={{ backgroundColor: `blue` }}
+            className={classes.img}
+            imgStyle={{ objectPosition: "center center" }}
+          />
+        </Hidden>
       </div>
-      <Hidden smDown>
-        <Img
-          fluid={images.michi.childImageSharp.fluid}
-          alt="wave"
-          placeholderStyle={{ backgroundColor: `blue` }}
-          className={classes.img}
-          imgStyle={{ objectPosition: "center center" }}
-        />
-      </Hidden>
     </Container>
   )
 }
