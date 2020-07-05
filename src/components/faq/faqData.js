@@ -30,7 +30,10 @@ const faqData = {
   },
   other: {
     title: "miscellaneous",
-    nav: [{ key: "other1" }, { key: "other2" }],
+    nav: [
+      { key: "other1", button: true },
+      { key: "other2", button: true },
+    ],
   },
   // shipping: {
   //   title: "shipping",

@@ -36,6 +36,7 @@
     "google-map-react": "^1.1.7",
     "i18next": "^19.5.4",
     "i18next-browser-languagedetector": "^5.0.0",
+    "i18next-http-backend": "^1.0.16",
     "react": "^16.13.1",
     "react-cookie-consent": "^5.1.2",
     "react-dom": "^16.13.1",

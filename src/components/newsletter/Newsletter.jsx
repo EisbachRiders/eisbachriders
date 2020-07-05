@@ -35,8 +35,15 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: 2,
     fontSize: 24,
     margin: 0,
+    textAlign: "center",
+    [theme.breakpoints.up("sm")]: {
+      textAlign: "left",
+    },
     [theme.breakpoints.up("md")]: {
-      width: 500,
+      fontSize: 28,
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: 700,
       fontSize: 32,
     },
   },

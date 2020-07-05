@@ -197,36 +197,9 @@ function Footer() {
     },
   ]
   const customerService = ["faq", "contact", "shipping", "returns"]
-  const features = [
-    {
-      title: "emailSupport",
-      icon: <QuestionAnswerIcon className={classes.icon} />,
-    },
-    {
-      title: "30dayReturns",
-      icon: <ReplyIcon className={classes.icon} />,
-    },
-    {
-      title: "freeShipping",
-      icon: <LocalShippingIcon className={classes.icon} />,
-    },
-  ]
+
   return (
     <footer className={classes.footer}>
-      {/* <Container justifyContent="spaceAround">
-        {features.map((elem, idx) => (
-          <div className={classes.iconContainer} key={`feature${idx}`}>
-            {elem.icon}
-            <div>
-              <p className={classes.feature}>{t(`footer.${elem.title}`)}</p>
-              <p className={classes.featureText}>
-                {t(`footer.${elem.title}Text`)}
-              </p>
-            </div>
-          </div>
-        ))}
-      </Container> */}
-
       <Newsletter />
 
       <Container
@@ -275,7 +248,7 @@ function Footer() {
                   key={`shop${idx}`}
                   href={elem.link}
                   className={clsx(classes.text, classes.link)}
-                  rel="noopener"
+                  rel="noopener noreferrer"
                   target="_blank"
                 >
                   {t(`links.${elem.name}`)}
