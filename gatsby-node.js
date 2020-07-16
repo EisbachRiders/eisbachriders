@@ -43,6 +43,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                   }
                 }
               }
+              shortDescription(format: RENDERED)
               paColors {
                 edges {
                   node {
@@ -50,8 +51,21 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                   }
                 }
               }
-              shortDescription(format: RENDERED)
+              paFinPlugs {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
               paSizes {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
+              productTags {
                 edges {
                   node {
                     name
@@ -81,6 +95,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                   }
                 }
               }
+              shortDescription(format: RENDERED)
               paColors {
                 edges {
                   node {
@@ -88,8 +103,21 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                   }
                 }
               }
-              shortDescription(format: RENDERED)
+              paFinPlugs {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
               paSizes {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
+              productTags {
                 edges {
                   node {
                     name
@@ -122,6 +150,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                   }
                 }
               }
+              shortDescription(format: RENDERED)
               paColors {
                 edges {
                   node {
@@ -129,8 +158,21 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                   }
                 }
               }
-              shortDescription(format: RENDERED)
+              paFinPlugs {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
               paSizes {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
+              productTags {
                 edges {
                   node {
                     name
@@ -163,6 +205,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                   }
                 }
               }
+              shortDescription(format: RENDERED)
               paColors {
                 edges {
                   node {
@@ -170,8 +213,21 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                   }
                 }
               }
-              shortDescription(format: RENDERED)
+              paFinPlugs {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
               paSizes {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
+              productTags {
                 edges {
                   node {
                     name
@@ -201,6 +257,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                   }
                 }
               }
+              shortDescription(format: RENDERED)
               paColors {
                 edges {
                   node {
@@ -208,8 +265,21 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                   }
                 }
               }
-              shortDescription(format: RENDERED)
+              paFinPlugs {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
               paSizes {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
+              productTags {
                 edges {
                   node {
                     name
@@ -250,12 +320,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   createPage({
     path: "/product/surfboard-fins",
     component: productCategoryTemplate,
-    context: { products: fins, category: "surfboard fins" },
+    context: { products: fins, category: "surfboard-fins" },
   })
   createPage({
     path: "/product/sup-longboard-fins",
     component: productCategoryTemplate,
-    context: { products: sup, category: "sup and longboard fins" },
+    context: { products: sup, category: "sup-longboard-fins" },
   })
   createPage({
     path: "/product/leashes",

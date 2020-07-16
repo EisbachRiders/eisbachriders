@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Fragment } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { useTranslation } from "react-i18next"
@@ -61,6 +61,31 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "space-between",
+    marginBottom: 60,
+  },
+  subcat: {
+    position: "relative",
+  },
+  divider1: {
+    position: "absolute",
+    background: theme.palette.primary.main,
+    right: 0,
+    top: 0,
+    width: "90%",
+    height: 2,
+  },
+  divider2: {
+    position: "absolute",
+    background: theme.palette.primary.main,
+    left: 0,
+    top: 61,
+    width: "40%",
+    height: 2,
+  },
+  subcatText: {
+    textTransform: "uppercase",
+    marginLeft: "20%",
+    fontSize: 18,
   },
 }))
 
@@ -91,6 +116,13 @@ function ProductsOverview({ products, category }) {
           }
         }
       }
+      img: file(relativePath: { eq: "test2.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2000) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
@@ -99,6 +131,23 @@ function ProductsOverview({ products, category }) {
     return section.map((elem, idx) => (
       <ShopItem product={elem.node} key={`fins${idx}`} />
     ))
+  }
+
+  let subcat = []
+  switch (category) {
+    case "surfboard-fins":
+      subcat = [
+        "essential line",
+        "fiberglass",
+        "fiberglass honeycomb",
+        "rapid surfing",
+      ]
+      break
+    case "sup-longboard-fins":
+      subcat = ["essential line", "fiberglass", "fiberglass honeycomb"]
+      break
+    default:
+      subcat = []
   }
 
   return (
@@ -112,11 +161,53 @@ function ProductsOverview({ products, category }) {
           imgStyle={{ objectPosition: "center center" }}
         />
         <div className={classes.backgroundContainer}>
-          <h1 className={classes.h1}>{category}</h1>
+          <h1 className={classes.h1}>{t(`product.${category}`)}</h1>
         </div>
       </div>
       <Container variant="center" className={classes.container}>
-        <div className={classes.section}>{shopItems(products)}</div>
+        {subcat.length === 0 ? (
+          <div className={classes.section}>
+            {shopItems(
+              products.sort((a, b) =>
+                a.node
+                  ? a.node.name.localeCompare(b.node ? b.node.name : null)
+                  : null
+              )
+            )}
+          </div>
+        ) : (
+          <>
+            {subcat.map((elem) => (
+              <Fragment key={`subcategory_${elem}`}>
+                {/* <Img
+                  fluid={data.img.childImageSharp.fluid}
+                  alt="street art"
+                  placeholderStyle={{ backgroundColor: `blue` }}
+                  className={classes.backgroundImg}
+                  // imgStyle={{ objectPosition: "center center" }}
+                /> */}
+                <div className={classes.subcat}>
+                  <div className={classes.divider1} />
+                  <p className={classes.subcatText}>{elem}</p>
+                  <div className={classes.divider2} />
+                </div>
+                {
+                  <div className={classes.section}>
+                    {shopItems(
+                      products
+                        .filter((item) =>
+                          item.node.productTags.edges
+                            .map((el) => el.node.name)
+                            .includes(elem)
+                        )
+                        .sort((a, b) => a.node.name.localeCompare(b.node.name))
+                    )}
+                  </div>
+                }
+              </Fragment>
+            ))}
+          </>
+        )}
       </Container>
     </>
   )

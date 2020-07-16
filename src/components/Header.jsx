@@ -52,11 +52,13 @@ const useStyles = makeStyles((theme) => ({
     minWidth: 50,
   },
   linkContainer: {
+    flexBasis: "80%",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     [theme.breakpoints.up("md")]: {
       flexDirection: "row",
+      justifyContent: "flex-end",
     },
   },
   link: {
@@ -71,6 +73,10 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 24,
       fontWeight: 700,
     },
+  },
+  linkActive: {
+    textDecoration: "none",
+    borderBottom: `2px solid ${theme.palette.primary.main}`,
   },
   icon: {
     color: theme.color.white,
@@ -94,6 +100,9 @@ const useStyles = makeStyles((theme) => ({
       margin: "0 30px 0 0",
     },
   },
+  listItemRoot: {
+    width: "auto",
+  },
   listItemLast: {
     margin: 15,
     [theme.breakpoints.up("md")]: {
@@ -110,6 +119,7 @@ const useStyles = makeStyles((theme) => ({
       textDecoration: "none",
     },
   },
+
   buttonOverride: {
     padding: 0,
     margin: 0,
@@ -119,14 +129,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-function Header() {
+function Header({ location }) {
   const [drawer, setDrawer] = useState(false)
   const [openProducts, setOpenProducts] = useState(false)
   const classes = useStyles()
   const anchorRef = useRef(null)
   const { i18n, t } = useTranslation()
-
-  console.log(i18n)
 
   const handleSetLang = () => {
     let newLng = i18n.language === "en" ? "de" : "en"
@@ -145,7 +153,6 @@ function Header() {
   }
 
   const handleToggleProducts = () => {
-    console.log("here")
     setOpenProducts((prevOpen) => !prevOpen)
   }
 
@@ -179,7 +186,10 @@ function Header() {
     threshold: 0,
   })
 
-  const links = ["eisbach", "products", "blog", "shop", "about"]
+  const links =
+    process.env.NODE_ENV === "development"
+      ? ["urban", "products", "about"]
+      : ["urban", "products", "shop", "about"]
   const mobileLinks = ["contact", "customerService"]
   const products = [
     "surfboard-fins",
@@ -256,6 +266,7 @@ function Header() {
                 <ListItem
                   button
                   key={`navItem${elem}`}
+                  classes={{ root: classes.listItemRoot }}
                   className={
                     idx === links.length - 1
                       ? classes.listItemLast
@@ -266,7 +277,9 @@ function Header() {
                     <a
                       href="https://shop.eisbach-riders.com/"
                       alt="shop"
-                      className={classes.link}
+                      className={clsx(classes.link, {
+                        [classes.linkActive]: elem === location,
+                      })}
                     >
                       {t(`links.${elem}`)}
                     </a>
@@ -274,7 +287,9 @@ function Header() {
                     <a
                       href="https://secondwavesurfing.com/blog"
                       alt="blog"
-                      className={classes.link}
+                      className={clsx(classes.link, {
+                        [classes.linkActive]: elem === location,
+                      })}
                     >
                       {t(`links.${elem}`)}
                     </a>
@@ -340,7 +355,12 @@ function Header() {
                       </Popper>
                     </>
                   ) : (
-                    <Link to={`/${elem}`} className={classes.link}>
+                    <Link
+                      to={`/${elem}`}
+                      className={clsx(classes.link, {
+                        [classes.linkActive]: elem === location,
+                      })}
+                    >
                       {t(`links.${elem}`)}
                     </Link>
                   )}

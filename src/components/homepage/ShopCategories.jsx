@@ -176,8 +176,8 @@ function ShopCategories() {
                   variant="contained"
                   className={classes.button}
                   href={elem.href}
-                  rel="noopener"
-                  target="_blank"
+                  // rel="noopener"
+                  // target="_blank"
                 >
                   {t("shop.viewCollection")}
                 </Button>

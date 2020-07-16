@@ -5,7 +5,7 @@ import FrequentlyAskedQuestions from "../components/faq/FrequentlyAskedQuestions
 
 const FaqPage = () => {
   return (
-    <Layout>
+    <Layout location="faq">
       <SEO />
       <FrequentlyAskedQuestions />
     </Layout>

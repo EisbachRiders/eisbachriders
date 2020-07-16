@@ -5,7 +5,7 @@
     "data": "Datenschutz",
     "credit": "Credit",
     "explore": "explore",
-    "eisbach": "eisbach",
+    "urban": "Urban Surfing",
     "brands": "Brands",
     "about": "About",
     "blog": "Blog",
@@ -151,8 +151,11 @@
     "other2_answer": "Seit ihr ein Surfclub, ein Geschäft / Einzelhändler oder eine Gruppe von Freunden, die eine größere Bestellung aufgeben möchte? Schreibt uns für weitere Informationen zu Rabatten oder Angeboten!"
   },
   "eisbach": {
-    "title": "Urban Surfing in München",
-    "localConditions": "Schau Dir die aktuellen Surfbedingungen an",
+    "title": "Urban Surfing",
+    "noresults": "I'm sorry, we couldn't find any results in this area!",
+    "adventure": "Where is your next adventure?",
+    "localConditions": "Schau Dir die lokalen Surfbedingungen an",
+    "weather": "Munich Weather Conditions",
     "about": "Der Eisbach, auch Bach oder E1 genannt, ist der berühmte Flusssurfspot in München, der das ganze Jahr über gesurft werden kann. Der Name Eisbach ist ein Synonym für die Wassertemperatur, die oft eiskalt ist. Das Wasser kommt aus den bayerischen Alpen und erwärmt sich in den Sommermonaten auf dem Weg nach München langsam. Hier bekommst Du einen schnellen Überblick über die aktuellen Surfbedingungen damit Du den richtigen Neoprenanzug einpackst und die nächste Surf-Session in vollen Zügen genißene kannst!",
     "advanced": "Advanced",
     "intermediate": "Intermediate",
@@ -166,6 +169,7 @@
     "features": "Features",
     "colors": "Farben",
     "sizes": "Größen",
+    "plugs": "Fin Plugs",
     "Blue": "Blau",
     "Grey": "Grau",
     "Sea Glass": "Schwarzglas",
@@ -180,10 +184,10 @@
     "Green Glass": "Glasgrün",
     "Yellow": "Gelb",
     "buy": "shop now",
-    "surfboard-fins": "Surfboard Fins",
+    "surfboard-fins": "Surfboard Finnen",
     "leashes": "Leashes",
     "accessories": "Accessories",
-    "apparel": "Apparel",
-    "sup-longboard-fins": "SUP & Longboard Fins"
+    "apparel": "Kleidung",
+    "sup-longboard-fins": "SUP & Longboard Finnen"
   }
 }

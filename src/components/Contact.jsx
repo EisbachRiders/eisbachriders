@@ -31,19 +31,19 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 30,
   },
   link: {
-    textTransform: "capitalize",
-    padding: 0,
     color: theme.color.white,
-    letterSpacing: 2,
-    marginBottom: 15,
     fontSize: 12,
-    justifyContent: "flex-start",
-    fontWeight: "normal",
-    [theme.breakpoints.up("md")]: {
-      fontSize: 16,
+    textTransform: "capitalize",
+    letterSpacing: 2,
+    fontWeight: 500,
+    padding: "0 10px",
+    width: "49%",
+    textAlign: "center",
+    [theme.breakpoints.up("sm")]: {
+      width: "fit-content",
     },
     "&:hover": {
-      background: "transparent",
+      textDecoration: "none",
       color: theme.palette.primary.main,
     },
   },
