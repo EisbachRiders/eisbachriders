@@ -1,105 +1,96 @@
-import React, { useState } from "react"
+import React from "react"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 import { useTranslation } from "react-i18next"
 import { Link } from "gatsby-theme-material-ui"
-import { makeStyles, withStyles } from "@material-ui/core/styles"
-import MuiExpansionPanel from "@material-ui/core/ExpansionPanel"
-import MuiExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary"
-import MuiExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails"
+import { makeStyles } from "@material-ui/core/styles"
 import Typography from "@material-ui/core/Typography"
 import Container from "../ui/Container"
 import Contact from "../Contact"
 import faqData from "./faqData"
+import HelpIcon from "@material-ui/icons/Help"
 
 const useStyles = makeStyles((theme) => ({
-  banner: {
-    height: 300,
+  headerContainer: {
     position: "relative",
+    height: 150,
+    [theme.breakpoints.up("md")]: {
+      height: 200,
+    },
+    [theme.breakpoints.up("lg")]: {
+      height: 300,
+    },
   },
-  bannerImg: {
-    width: "100%",
-    height: "100%",
-  },
-  header: {
+  backgroundContainer: {
     position: "absolute",
+    width: "100%",
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    background: "rgba(255,255,255,.8)",
-    padding: "30px 60px",
   },
-  flexItem: {
+  backgroundImg: {
+    width: "100%",
+    height: 150,
+    [theme.breakpoints.up("md")]: {
+      height: 200,
+    },
+    [theme.breakpoints.up("lg")]: {
+      height: 300,
+    },
+  },
+  h1: {
+    textAlign: "center",
+    fontFamily: "secondary",
+    textTransform: "capitalize",
+    fontSize: 32,
+    fontWeight: 500,
+    letterSpacing: 3,
+    color: "white",
+    [theme.breakpoints.up("md")]: {
+      fontSize: 50,
+    },
+  },
+  h2: {
+    fontFamily: "secondary",
+    textAlign: "center",
+    textTransform: "capitalize",
+    fontSize: 32,
+    fontWeight: 500,
+    letterSpacing: 3,
+    marginBottom: 15,
+    [theme.breakpoints.up("md")]: {
+      fontSize: 50,
+    },
+  },
+  fullWidth: {
+    width: "100%",
+  },
+  container: {
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
+    marginBottom: 60,
+  },
+  card: {
     flexBasis: "100%",
-    height: 700,
+    display: "flex",
     marginBottom: 30,
     [theme.breakpoints.up("md")]: {
       flexBasis: "48%",
     },
   },
-  sectionTitle: {
-    fontFamily: "secondary",
-    marginBottom: 30,
+  icon: {
+    color: theme.palette.primary.main,
+    margin: "20px 15px 0 0",
   },
-  title: {
+  question: {
     fontWeight: "bold",
-  },
-  img: {
-    width: "100%",
   },
 }))
 
-const ExpansionPanel = withStyles({
-  root: {
-    border: "1px solid rgba(0, 0, 0, .125)",
-    boxShadow: "none",
-    "&:not(:last-child)": {
-      borderBottom: 0,
-    },
-    "&:before": {
-      display: "none",
-    },
-    "&$expanded": {
-      margin: "auto",
-    },
-  },
-  expanded: {},
-})(MuiExpansionPanel)
-
-const ExpansionPanelSummary = withStyles((theme) => ({
-  root: {
-    borderBottom: "1px solid rgba(0, 0, 0, .125)",
-    marginBottom: -1,
-    minHeight: 56,
-    "&$expanded": {
-      minHeight: 56,
-    },
-  },
-  content: {
-    "&$expanded": {
-      margin: "12px 0",
-    },
-  },
-  expanded: {},
-}))(MuiExpansionPanelSummary)
-
-const ExpansionPanelDetails = withStyles((theme) => ({
-  root: {
-    padding: 30,
-    paddingLeft: 60,
-    display: "flex",
-    flexDirection: "column",
-  },
-}))(MuiExpansionPanelDetails)
-
 function FrequentlyAskedQuestions() {
-  const [expanded, setExpanded] = useState(null)
   const classes = useStyles()
   const { t, i18n } = useTranslation()
-
-  const handleChange = (panel) => (event, newExpanded) => {
-    setExpanded(newExpanded ? panel : false)
-  }
 
   const data = useStaticQuery(graphql`
     query {
@@ -117,70 +108,59 @@ function FrequentlyAskedQuestions() {
 
   return (
     <>
-      <div className={classes.banner}>
+      <div className={classes.headerContainer}>
         <Img
-          alt={`surfers sitting in water`}
           fluid={data.fileName.childImageSharp.fluid}
+          alt="surfer putting on leash"
           placeholderStyle={{ backgroundColor: `blue` }}
-          className={classes.bannerImg}
+          className={classes.backgroundImg}
           imgStyle={{ objectPosition: "center center" }}
         />
-        <h1 className={classes.header}>FAQ</h1>
+        <div className={classes.backgroundContainer}>
+          <h1 className={classes.h1}>{t("links.faq")}</h1>
+        </div>
       </div>
 
       <Container
-        justifyContent="spaceBetween"
+        justifyContent="center"
+        flexDirection="column"
         alignItems="center"
         background="grayLt"
       >
-        {Object.keys(faqData).map((elem) => (
-          <div key={`section${elem}`} className={classes.flexItem}>
-            <Typography
-              variant="h5"
-              component="h2"
-              className={classes.sectionTitle}
-            >
+        {Object.keys(faqData).map((elem, idx) => (
+          <div key={`section${elem}`} className={classes.fullWidth}>
+            <Typography variant="h5" component="h2" className={classes.h2}>
               {elem}
             </Typography>
-            <div className={classes.expansionPanelContainer}>
+            <div className={classes.container}>
               {faqData[elem].nav.map((item, idx) => (
-                <ExpansionPanel
-                  key={`faq_${elem}${idx}`}
-                  square
-                  expanded={expanded === `panel${elem}${idx}`}
-                  onChange={handleChange(`panel${elem}${idx}`)}
-                  href={`#${elem}/${item.key}`}
-                >
-                  <ExpansionPanelSummary
-                    aria-controls={`panel${elem}${idx}d-content`}
-                    id={`panel${elem}${idx}d-header`}
-                  >
-                    <Typography className={classes.title}>
+                <div key={`faq_${elem}${idx}`} className={classes.card}>
+                  <HelpIcon alt="help" className={classes.icon} />
+                  <div>
+                    <p className={classes.question}>
                       {t(`faq.${item.key}_question`)}
-                    </Typography>
-                  </ExpansionPanelSummary>
-                  <ExpansionPanelDetails>
-                    <>
-                      <p>{t(`faq.${item.key}_answer`)}</p>
-                      {item.img_en && (
-                        <img
-                          src={item[`img_${i18n.language}`]}
-                          alt={item.key}
-                          className={classes.img}
-                        />
-                      )}
-                      {item.button && <Contact />}
-                      {item.blog && (
-                        <Link to={`/blog/${item.key}`}>
-                          {t("faq.learnMore")}
-                        </Link>
-                      )}
-                      {item.link && (
-                        <Link to={`/${item.key}`}>{t("faq.learnMore")}</Link>
-                      )}
-                    </>
-                  </ExpansionPanelDetails>
-                </ExpansionPanel>
+                    </p>
+                    <p className={classes.answer}>
+                      {t(`faq.${item.key}_answer`)}
+                    </p>
+                    {item.img_en && (
+                      <img
+                        src={item[`img_${i18n.language}`]}
+                        alt={item.key}
+                        className={classes.fullWidth}
+                      />
+                    )}
+                    {item.button && (
+                      <Contact variant="outlined" align="right" />
+                    )}
+                    {item.blog && (
+                      <Link to={`/blog/${item.key}`}>{t("faq.learnMore")}</Link>
+                    )}
+                    {item.link && (
+                      <Link to={`/${item.key}`}>{t("faq.learnMore")}</Link>
+                    )}
+                  </div>
+                </div>
               ))}
             </div>
           </div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { useTranslation } from "react-i18next"
+import clsx from "clsx"
 import { makeStyles } from "@material-ui/core/styles"
 import Dialog from "@material-ui/core/Dialog"
 import DialogTitle from "@material-ui/core/DialogTitle"
@@ -47,9 +48,12 @@ const useStyles = makeStyles((theme) => ({
       color: theme.palette.primary.main,
     },
   },
+  right: {
+    float: "right",
+  },
 }))
 
-function Contact({ variant }) {
+function Contact({ variant, align }) {
   const classes = useStyles()
   const { t } = useTranslation()
   const [open, setOpen] = useState(false)
@@ -168,9 +172,11 @@ function Contact({ variant }) {
         </Button>
       ) : (
         <Button
-          className={classes.button}
+          className={clsx(classes.button, {
+            [classes.right]: align === "right",
+          })}
           color="primary"
-          variant="contained"
+          variant={variant === "outlined" ? "outlined" : "contained"}
           onClick={() => setOpen(true)}
         >
           {t("common.contactUs")}

@@ -118,6 +118,7 @@ function FeaturedProduct() {
           <Button
             color="primary"
             variant="outlined"
+            alt="more information"
             className={classes.button}
             href="https://shop.eisbach-riders.com/shop/single-tab-fiberglass-honeycomb-fins/"
           >
