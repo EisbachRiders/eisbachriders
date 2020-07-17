@@ -132,7 +132,7 @@ function ShopCategories() {
     },
     {
       cat: "accessories",
-      path: "surfboards-hanging-on-wall",
+      path: "wax-comb-peeling-wax-off-surfboard",
       href: "https://shop.eisbach-riders.com/product-category/accessories/",
     },
   ]

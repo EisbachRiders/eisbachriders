@@ -180,33 +180,6 @@ const useStyles = makeStyles((theme) => ({
 function Footer() {
   const classes = useStyles()
   const { t } = useTranslation()
-  const shop = [
-    {
-      name: "rapid",
-      link: "https://shop.eisbach-riders.com/product-category/rapid-surfing/",
-    },
-    {
-      name: "fins",
-      link: "https://shop.eisbach-riders.com/product-category/fins/",
-    },
-    {
-      name: "sup",
-      link: "https://shop.eisbach-riders.com/product-category/sup/",
-    },
-    {
-      name: "leashes",
-      link: "https://shop.eisbach-riders.com/product-category/leashes/",
-    },
-    {
-      name: "accessories",
-      link: "https://shop.eisbach-riders.com/product-category/accessories/",
-    },
-    {
-      name: "apparel",
-      link: "https://shop.eisbach-riders.com/product-category/apparel/",
-    },
-  ]
-  const customerService = ["faq", "contact", "shipping", "returns"]
 
   return (
     <footer className={classes.footer}>
@@ -251,6 +224,10 @@ function Footer() {
           |
           <Link to="/credit" className={clsx(classes.textSmall, classes.link)}>
             {t("links.credit")}
+          </Link>
+          |
+          <Link to="/faq" className={clsx(classes.textSmall, classes.link)}>
+            {t("links.faq")}
           </Link>
           |
           <Contact variant="link" />
