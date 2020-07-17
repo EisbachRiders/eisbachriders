@@ -78,6 +78,11 @@ function Product({ product }) {
       ? []
       : product.paSizes.edges.map((elem) => elem.node.name)
 
+  let plugs =
+    product === undefined
+      ? []
+      : product.paFinPlugs.edges.map((elem) => elem.node.name)
+
   return (
     <Container justifyContent="spaceBetween" className={classes.container}>
       <div className={clsx(classes.flexContainer, classes.imgContainer)}>
@@ -128,6 +133,16 @@ function Product({ product }) {
           <div className={classes.attributeContainer}>
             <p className={classes.subheader}>{t("product.sizes")}:</p>
             {sizes.map((elem) => (
+              <p className={classes.subheader} key={`size_${elem}`}>
+                {elem}
+              </p>
+            ))}
+          </div>
+        )}
+        {plugs.length > 0 && (
+          <div className={classes.attributeContainer}>
+            <p className={classes.subheader}>{t("product.plugs")}:</p>
+            {plugs.map((elem) => (
               <p className={classes.subheader} key={`size_${elem}`}>
                 {elem}
               </p>

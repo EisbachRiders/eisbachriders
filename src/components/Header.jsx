@@ -9,7 +9,6 @@ import ClickAwayListener from "@material-ui/core/ClickAwayListener"
 import Grow from "@material-ui/core/Grow"
 import Paper from "@material-ui/core/Paper"
 import Popper from "@material-ui/core/Popper"
-import Menu from "@material-ui/core/Menu"
 import MenuItem from "@material-ui/core/MenuItem"
 import MenuList from "@material-ui/core/MenuList"
 import List from "@material-ui/core/List"
@@ -18,7 +17,6 @@ import AppBar from "@material-ui/core/AppBar"
 import Toolbar from "@material-ui/core/Toolbar"
 import Hidden from "@material-ui/core/Hidden"
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer"
-import LanguageIcon from "@material-ui/icons/Language"
 import useScrollTrigger from "@material-ui/core/useScrollTrigger"
 import MenuIcon from "@material-ui/icons/Menu"
 import FacebookIcon from "@material-ui/icons/Facebook"
@@ -49,12 +47,18 @@ const useStyles = makeStyles((theme) => ({
       width: 50,
     },
   },
+  languageButton: {
+    color: theme.color.white,
+    minWidth: 50,
+  },
   linkContainer: {
+    flexBasis: "80%",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     [theme.breakpoints.up("md")]: {
       flexDirection: "row",
+      justifyContent: "flex-end",
     },
   },
   link: {
@@ -69,6 +73,10 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 24,
       fontWeight: 700,
     },
+  },
+  linkActive: {
+    textDecoration: "none",
+    borderBottom: `2px solid ${theme.palette.primary.main}`,
   },
   icon: {
     color: theme.color.white,
@@ -92,6 +100,9 @@ const useStyles = makeStyles((theme) => ({
       margin: "0 30px 0 0",
     },
   },
+  listItemRoot: {
+    width: "auto",
+  },
   listItemLast: {
     margin: 15,
     [theme.breakpoints.up("md")]: {
@@ -108,6 +119,7 @@ const useStyles = makeStyles((theme) => ({
       textDecoration: "none",
     },
   },
+
   buttonOverride: {
     padding: 0,
     margin: 0,
@@ -117,21 +129,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-function Header({ handleSetLang }) {
-  const [anchorEl, setAnchorEl] = useState(null)
-  const [open, setOpen] = useState(false)
+function Header({ location }) {
   const [drawer, setDrawer] = useState(false)
+  const [openProducts, setOpenProducts] = useState(false)
   const classes = useStyles()
   const anchorRef = useRef(null)
-  const { t } = useTranslation()
+  const { i18n, t } = useTranslation()
 
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget)
-  }
-
-  const handleClose = (lang) => {
-    setAnchorEl(null)
-    handleSetLang(lang)
+  const handleSetLang = () => {
+    let newLng = i18n.language === "en" ? "de" : "en"
+    i18n.changeLanguage(newLng)
   }
 
   const toggleDrawer = (open) => (event) => {
@@ -145,41 +152,44 @@ function Header({ handleSetLang }) {
     setDrawer(open)
   }
 
-  const handleToggle = () => {
-    setOpen((prevOpen) => !prevOpen)
+  const handleToggleProducts = () => {
+    setOpenProducts((prevOpen) => !prevOpen)
   }
 
-  const handleCloseMenu = (event) => {
+  const handleCloseProducts = (event) => {
     if (anchorRef.current && anchorRef.current.contains(event.target)) {
       return
     }
 
-    setOpen(false)
+    setOpenProducts(false)
   }
 
   function handleListKeyDown(event) {
     if (event.key === "Tab") {
       event.preventDefault()
-      setOpen(false)
+      setOpenProducts(false)
     }
   }
 
   // return focus to the button when we transitioned from !open -> open
-  const prevOpen = useRef(open)
+  const prevOpen = useRef(openProducts)
   useEffect(() => {
-    if (prevOpen.current === true && open === false) {
+    if (prevOpen.current === true && openProducts === false) {
       anchorRef.current.focus()
     }
 
-    prevOpen.current = open
-  }, [open])
+    prevOpen.current = openProducts
+  }, [openProducts])
 
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 0,
   })
 
-  const links = ["eisbach", "products", "blog", "shop", "about"]
+  const links =
+    process.env.NODE_ENV === "development"
+      ? ["urban", "products", "about"]
+      : ["urban", "products", "shop", "about"]
   const mobileLinks = ["contact", "customerService"]
   const products = [
     "surfboard-fins",
@@ -230,25 +240,12 @@ function Header({ handleSetLang }) {
         >
           <PinterestIcon className={classes.icon} />
         </IconButton>
-        <IconButton
-          aria-controls="simple-menu"
-          aria-label="language"
-          aria-haspopup="true"
-          onClick={handleClick}
-          size="small"
+        <Button
+          onClick={() => handleSetLang()}
+          className={classes.languageButton}
         >
-          <LanguageIcon className={classes.icon} alt="language" />
-        </IconButton>
-        <Menu
-          id="simple-menu"
-          anchorEl={anchorEl}
-          keepMounted
-          open={Boolean(anchorEl)}
-          onClose={handleClose}
-        >
-          <MenuItem onClick={() => handleClose("en")}>EN</MenuItem>
-          <MenuItem onClick={() => handleClose("de")}>DE</MenuItem>
-        </Menu>
+          {i18n.language}
+        </Button>
       </Container>
       <Container padding="none">
         <Toolbar className={classes.toolbar} disableGutters>
@@ -268,7 +265,8 @@ function Header({ handleSetLang }) {
               {links.map((elem, idx) => (
                 <ListItem
                   button
-                  key={`navItem${idx}`}
+                  key={`navItem${elem}`}
+                  classes={{ root: classes.listItemRoot }}
                   className={
                     idx === links.length - 1
                       ? classes.listItemLast
@@ -279,7 +277,9 @@ function Header({ handleSetLang }) {
                     <a
                       href="https://shop.eisbach-riders.com/"
                       alt="shop"
-                      className={classes.link}
+                      className={clsx(classes.link, {
+                        [classes.linkActive]: elem === location,
+                      })}
                     >
                       {t(`links.${elem}`)}
                     </a>
@@ -287,7 +287,9 @@ function Header({ handleSetLang }) {
                     <a
                       href="https://secondwavesurfing.com/blog"
                       alt="blog"
-                      className={classes.link}
+                      className={clsx(classes.link, {
+                        [classes.linkActive]: elem === location,
+                      })}
                     >
                       {t(`links.${elem}`)}
                     </a>
@@ -295,16 +297,18 @@ function Header({ handleSetLang }) {
                     <>
                       <Button
                         ref={anchorRef}
-                        aria-controls={open ? "menu-list-grow" : undefined}
+                        aria-controls={
+                          openProducts ? "menu-list-grow" : undefined
+                        }
                         aria-haspopup="true"
-                        onClick={handleToggle}
+                        onMouseOver={handleToggleProducts}
                         classes={{ root: classes.link }}
                         className={classes.buttonOverride}
                       >
                         {elem}
                       </Button>
                       <Popper
-                        open={open}
+                        open={openProducts}
                         anchorEl={anchorRef.current}
                         role={undefined}
                         transition
@@ -321,19 +325,22 @@ function Header({ handleSetLang }) {
                             }}
                           >
                             <Paper>
-                              <ClickAwayListener onClickAway={handleCloseMenu}>
+                              <ClickAwayListener
+                                onClickAway={handleCloseProducts}
+                              >
                                 <MenuList
-                                  autoFocusItem={open}
+                                  autoFocusItem={openProducts}
                                   id="menu-list-grow"
                                   onKeyDown={handleListKeyDown}
                                 >
                                   {products.map((elem) => (
                                     <Link
+                                      key={`product_link_${elem}`}
                                       to={`/product/${elem}`}
                                       className={classes.productsLink}
                                     >
                                       <MenuItem
-                                        onClick={handleCloseMenu}
+                                        onClick={handleCloseProducts}
                                         key={`product_link_${elem}`}
                                       >
                                         {t(`product.${elem}`)}
@@ -348,7 +355,12 @@ function Header({ handleSetLang }) {
                       </Popper>
                     </>
                   ) : (
-                    <Link to={`/${elem}`} className={classes.link}>
+                    <Link
+                      to={`/${elem}`}
+                      className={clsx(classes.link, {
+                        [classes.linkActive]: elem === location,
+                      })}
+                    >
                       {t(`links.${elem}`)}
                     </Link>
                   )}

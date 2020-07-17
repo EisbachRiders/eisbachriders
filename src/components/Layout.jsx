@@ -19,13 +19,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const Layout = ({ children }) => {
+const Layout = ({ location, children }) => {
   const classes = useStyles()
-  const { i18n, t } = useTranslation()
-
-  const handleSetLang = (language) => {
-    i18n.changeLanguage(language)
-  }
+  const { t } = useTranslation()
 
   const handleOptOut = () => {
     var disableStr = "ga-disable-" + process.env.GA_KEY
@@ -36,7 +32,7 @@ const Layout = ({ children }) => {
 
   return (
     <div className={classes.root}>
-      <Header handleSetLang={handleSetLang} />
+      <Header location={location} />
       <main className={classes.main}>{children}</main>
       <CookieConsent
         location="bottom"

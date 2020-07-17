@@ -12,10 +12,11 @@ import DialogTitle from "@material-ui/core/DialogTitle"
 import TextField from "@material-ui/core/TextField"
 import useMediaQuery from "@material-ui/core/useMediaQuery"
 import NewsletterSnackbar from "./Snackbar"
+// import fullLogo from "../../assets/logos/ER_full_white.svg"
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    background: theme.palette.primary.main,
+    background: theme.color.gray,
     display: "flex",
     justifyContent: "center",
     flexWrap: "wrap",
@@ -35,8 +36,15 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: 2,
     fontSize: 24,
     margin: 0,
+    textAlign: "center",
+    [theme.breakpoints.up("sm")]: {
+      textAlign: "left",
+    },
     [theme.breakpoints.up("md")]: {
-      width: 500,
+      fontSize: 28,
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: 700,
       fontSize: 32,
     },
   },
@@ -47,7 +55,6 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     fontSize: 16,
-    background: theme.color.white,
     [theme.breakpoints.up("md")]: {
       padding: "15px 45px",
     },
@@ -160,6 +167,7 @@ function Newsletter() {
         <Button
           variant="contained"
           size="large"
+          color="primary"
           className={classes.button}
           onClick={() => setDialog(true)}
         >

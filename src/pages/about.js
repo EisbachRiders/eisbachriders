@@ -5,7 +5,7 @@ import About from "../components/about/About"
 
 const AboutPage = () => {
   return (
-    <Layout>
+    <Layout location="about">
       <SEO />
       <About />
     </Layout>

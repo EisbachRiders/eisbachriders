@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React from "react"
 import { useTranslation } from "react-i18next"
 import { Link } from "gatsby-theme-material-ui"
 import clsx from "clsx"
@@ -8,20 +8,15 @@ import Hidden from "@material-ui/core/Hidden"
 import FacebookIcon from "@material-ui/icons/Facebook"
 import InstagramIcon from "@material-ui/icons/Instagram"
 import PinterestIcon from "@material-ui/icons/Pinterest"
-import QuestionAnswerIcon from "@material-ui/icons/QuestionAnswer"
-import ReplyIcon from "@material-ui/icons/Reply"
-import LocalShippingIcon from "@material-ui/icons/LocalShipping"
 import Newsletter from "./newsletter/Newsletter"
 import Container from "./ui/Container"
 import Contact from "./Contact"
-import fullLogo from "../assets/logos/ER_full_white.svg"
+
+import logo from "../assets/logos/logo_white.svg"
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    justifyContent: "center",
-    [theme.breakpoints.up("sm")]: {
-      justifyContent: "space-between",
-    },
+    flexDirection: "column",
   },
   title: {
     textTransform: "capitalize",
@@ -48,6 +43,7 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
     alignItems: "center",
     color: theme.color.white,
+    paddingBottom: 10,
     paddingTop: 10,
     [theme.breakpoints.up("sm")]: {
       paddingTop: 0,
@@ -73,8 +69,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   img: {
-    width: 150,
-    marginBottom: 30,
+    width: 75,
+    color: theme.color.white,
   },
   linksContainer: {
     display: "flex",
@@ -165,6 +161,20 @@ const useStyles = makeStyles((theme) => ({
       width: "fit-content",
     },
   },
+  logoContainer: {
+    display: "flex",
+    alignItems: "center",
+    marginBottom: 15,
+    marginTop: 15,
+  },
+  logo: {
+    fontFamily: "secondary",
+    color: theme.color.white,
+    margin: 0,
+    fontSize: 62,
+    paddingLeft: 30,
+    paddingRight: 30,
+  },
 }))
 
 function Footer() {
@@ -197,118 +207,29 @@ function Footer() {
     },
   ]
   const customerService = ["faq", "contact", "shipping", "returns"]
-  const features = [
-    {
-      title: "emailSupport",
-      icon: <QuestionAnswerIcon className={classes.icon} />,
-    },
-    {
-      title: "30dayReturns",
-      icon: <ReplyIcon className={classes.icon} />,
-    },
-    {
-      title: "freeShipping",
-      icon: <LocalShippingIcon className={classes.icon} />,
-    },
-  ]
+
   return (
     <footer className={classes.footer}>
-      {/* <Container justifyContent="spaceAround">
-        {features.map((elem, idx) => (
-          <div className={classes.iconContainer} key={`feature${idx}`}>
-            {elem.icon}
-            <div>
-              <p className={classes.feature}>{t(`footer.${elem.title}`)}</p>
-              <p className={classes.featureText}>
-                {t(`footer.${elem.title}Text`)}
-              </p>
-            </div>
-          </div>
-        ))}
-      </Container> */}
-
       <Newsletter />
 
-      <Container
-        alignItems="flexStart"
-        className={classes.container}
-        background="blackLt"
-      >
+      {/* <Container alignItems="center" background="blackLt">
         <div className={classes.imgContainer}>
           <img src={fullLogo} alt="logo" className={classes.img} />
-          <div className={classes.socialContainer}>
-            <IconButton
-              href="https://www.facebook.com/EisbachRiders/"
-              aria-label="facebook"
-              size="small"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <FacebookIcon className={classes.iconSocial} />
-            </IconButton>
-            <IconButton
-              href="https://www.instagram.com/eisbachriders/"
-              aria-label="instagram"
-              size="small"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <InstagramIcon className={classes.iconSocial} />
-            </IconButton>
-            <IconButton
-              href="https://www.pinterest.com/eisbachriders/"
-              aria-label="pinterest"
-              size="small"
-              rel="noreferrer"
-              target="_blank"
-            >
-              <PinterestIcon className={classes.iconSocial} />
-            </IconButton>
-          </div>
         </div>
-        <Hidden xsDown>
-          <div className={classes.linksContainer}>
-            <div className={classes.list}>
-              <p className={classes.title}>{t("links.shop")}</p>
-              {shop.map((elem, idx) => (
-                <a
-                  key={`shop${idx}`}
-                  href={elem.link}
-                  className={clsx(classes.text, classes.link)}
-                  rel="noopener"
-                  target="_blank"
-                >
-                  {t(`links.${elem.name}`)}
-                </a>
-              ))}
-            </div>
-            <div className={classes.list}>
-              <p className={classes.title}>{t("links.customerService")}</p>
-              {customerService.map((elem, idx) => (
-                <Fragment key={`customerService${idx}`}>
-                  {elem === "contact" ? (
-                    <Contact variant="link" />
-                  ) : (
-                    <Link
-                      to={`/${elem}`}
-                      className={clsx(classes.text, classes.link)}
-                    >
-                      {t(`links.${elem}`)}
-                    </Link>
-                  )}
-                </Fragment>
-              ))}
-            </div>
-          </div>
-        </Hidden>
-      </Container>
+      </Container> */}
 
       <Container
-        justifyContent="spaceBetween"
+        justifyContent="center"
         background="black"
         alignItems="center"
         padding="none"
+        className={classes.container}
       >
+        <div className={classes.logoContainer}>
+          <p className={classes.logo}>Eisbach</p>
+          <img src={logo} alt="logo" className={classes.img} />
+          <p className={classes.logo}>Riders</p>
+        </div>
         <div className={classes.copyrightContainer}>
           <Link
             to="/dataProtection"
@@ -331,6 +252,37 @@ function Footer() {
           <Link to="/credit" className={clsx(classes.textSmall, classes.link)}>
             {t("links.credit")}
           </Link>
+          |
+          <Contact variant="link" />
+        </div>
+        <div className={classes.socialContainer}>
+          <IconButton
+            href="https://www.facebook.com/EisbachRiders/"
+            aria-label="facebook"
+            size="small"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <FacebookIcon className={classes.iconSocial} />
+          </IconButton>
+          <IconButton
+            href="https://www.instagram.com/eisbachriders/"
+            aria-label="instagram"
+            size="small"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <InstagramIcon className={classes.iconSocial} />
+          </IconButton>
+          <IconButton
+            href="https://www.pinterest.com/eisbachriders/"
+            aria-label="pinterest"
+            size="small"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <PinterestIcon className={classes.iconSocial} />
+          </IconButton>
         </div>
         <p className={clsx(classes.textSmall, classes.copyright)}>
           &copy; Eisbach Riders

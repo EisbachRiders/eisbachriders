@@ -5,7 +5,7 @@
     "data": "Datenschutz",
     "credit": "Credit",
     "explore": "explore",
-    "eisbach": "eisbach",
+    "urban": "Urban Surfing",
     "brands": "Brands",
     "about": "About",
     "blog": "Blog",
@@ -56,8 +56,8 @@
     "highlight": "Hochleistung"
   },
   "newsletter": {
-    "stayintouch1": "Bekomm die neusten Produktupdates ",
-    "stayintouch2": " in den Postfach!",
+    "stayintouch1": "Bekomm die neusten",
+    "stayintouch2": "Produktupdates in den Postfach!",
     "signup": "Anmelden",
     "consent": "Ja, ich möchte E-Mails von Eisbach Riders erhalten!",
     "subscribe": "Trag dich ein",
@@ -134,13 +134,13 @@
     "learnMore": "Erfahren Sie mehr",
     "the_team": "Das Team",
     "singleFin_question": "Ich habe eine meiner Finnen gebrochen oder verloren. Gibt es die Mittel- oder Seitenflossen auch separat?",
-    "singleFin_answer": "Aktuell haben wir Finnen nicht einzeln verfügbard, außer natürlich bei den US-Box Single Fins. Manchmal haben wir jedoch einzele Finnen aus Retouren oder Promo-Stes in unserem Lager. Schreib uns einfach kurz und wir prüfen, was wir zur Verfügung haben.",
+    "singleFin_answer": "Aktuell haben wir Finnen nicht einzeln verfügbard, außer natürlich bei den US-Box Single Fins. Manchmal haben wir jedoch einzele Finnen aus Retouren oder Promo-Sets in unserem Lager. Schreib uns einfach kurz und wir prüfen, was wir zur Verfügung haben.",
     "finSize_question": "Welche Finnengröße ist die beste für mich - klein, mittel oder groß?",
     "finSize_answer": "Surfbrettfinnen gibt es in verschiedenen Größen und Formen um Deinem persönlichen Surfstil zu entsprechen. Für das gängigste Thruster-Finnen-Setup mit drei Finnen kannst Du zwischen kleinen, mittleren und großen Finnen wählen. Größere Flossen bedeuten mehr Halt und verhindern das das Tail über das Wasser rutscht, da mehr Oberfläche mit dem Wasser in Kontakt kommt. Kleinere sorgen dagegen für ein „lockereres“ Gefühl. Generell richtet sich die Finnengröße nach dem Gewicht des Surfers. Wenn Du zwischen zwei Größen liegen solltest, empfehlen wir für Beginner und Intermediate Surfer die größere Variante zu wählen.",
     "incorrectFit_question": "Die Finnen passen nicht in mein Surfbrett",
     "incorrectFit_answer": "Der Bau eines Surfbretts ist ein wahres Handwerk und manchmal gibt es kleinere Toleranzen zwischen den verschiedenen Finnen-Setups und Surfbrettformen. Dies kann besonders bei Boards mit separaten FCS I-Plugs für jede Finnen auftreten, da diese mithilfe einer einer Template-Finne im Surfbrett positioniert werden. Bei FCS I Sana-, Future- oder FCS II-Steckern sollte dieses Problem nicht auftreten. Wenn Du feststellst, dass die Finnen nicht passen, kannst Du sie natürlich zurückgeben. Wir würden uns freuen, Dir bei der Suche nach etwas Passenden für Dein Board behilflich zu sein!",
     "finTypes_question": "Was ist der Unterschied zwischen Kunststoff-, Glasfaser- und Finnen mit Honigwabenkern?",
-    "finTypes_answer": "Der Hauptunterschied zwischen den üblicherweise verwendeten Materialien Kunststoff und Glasfaser ist die resultierende Flexibilität oder Steifigkeit der Finnen. Kunststofffinnen sind die meist verbreitesten Finnen und eine erschwingliche Option für Anfänger oder Flusssurfer. Sie sind moderate in der Steifikkeit und geben Deinen Turns mehr Direktheit als vergleichbare Finnen anderer Hersteller. Während steifere Finnen im Allgemeinen eher brechen, sind unsere Finnen so konstruiert, dass sie bevorzugt kurz über den Plug brechen, um diesen nicht zu zerstören. Glasfaserflossen bestehen aus mit Harz gefülltem Glasfasergewebe. Sie sind steifer als die Nylonflossen und bieten die Möglichkeit für scharfe Kürzungen und Geschwindigkeitsgenerierung. Die Glasfaserflossen sind etwas schwerer als Nylonflossen. Wabenglasfaserflossen sind eine leichte Version der Glasfaserflossen mit einem Wabenkern.",
+    "finTypes_answer": "Der Hauptunterschied zwischen den üblicherweise verwendeten Materialien Kunststoff und Glasfaser ist die resultierende Flexibilität oder Steifigkeit der Finnen. Kunststofffinnen sind die meist verbreitesten Finnen und eine erschwingliche Option für Anfänger oder Flusssurfer. Sie sind moderate in der Steifikkeit und geben Deinen Turns mehr Direktheit als vergleichbare Finnen anderer Hersteller. Während steifere Finnen im Allgemeinen eher brechen, sind unsere Finnen so konstruiert, dass sie bevorzugt kurz über den Plug brechen, um diesen nicht zu zerstören. Glasfaserfinnen bestehen aus mit Harz gefülltem Glasfasergewebe. Sie sind steifer als die Kunststofffinnen und bieten die Möglichkeit für direkte Turns und Speed. Die Glasfaserfinnen sind etwas schwerer als Kunststofffinnen. Durch den Honigwabenkern kann das Gewicht der Finnen reduziert und die Flexibilität erhöht werden.",
     "finSystem_question": "Welche unterschiedlichen Finnen-Setups gibt es?",
     "finSystem_answer": "Man kann zwischen Single Fin, Twin Fin, Thruster und Quad unterscheiden.",
     "wax_question": "Wann sollte ich Surfwachs verwenden?",
@@ -151,8 +151,11 @@
     "other2_answer": "Seit ihr ein Surfclub, ein Geschäft / Einzelhändler oder eine Gruppe von Freunden, die eine größere Bestellung aufgeben möchte? Schreibt uns für weitere Informationen zu Rabatten oder Angeboten!"
   },
   "eisbach": {
-    "title": "Urban Surfing in München",
-    "localConditions": "Schau Dir die aktuellen Surfbedingungen an",
+    "title": "Urban Surfing",
+    "noresults": "I'm sorry, we couldn't find any results in this area!",
+    "adventure": "Where is your next adventure?",
+    "localConditions": "Schau Dir die lokalen Surfbedingungen an",
+    "weather": "Munich Weather Conditions",
     "about": "Der Eisbach, auch Bach oder E1 genannt, ist der berühmte Flusssurfspot in München, der das ganze Jahr über gesurft werden kann. Der Name Eisbach ist ein Synonym für die Wassertemperatur, die oft eiskalt ist. Das Wasser kommt aus den bayerischen Alpen und erwärmt sich in den Sommermonaten auf dem Weg nach München langsam. Hier bekommst Du einen schnellen Überblick über die aktuellen Surfbedingungen damit Du den richtigen Neoprenanzug einpackst und die nächste Surf-Session in vollen Zügen genißene kannst!",
     "advanced": "Advanced",
     "intermediate": "Intermediate",
@@ -166,6 +169,7 @@
     "features": "Features",
     "colors": "Farben",
     "sizes": "Größen",
+    "plugs": "Fin Plugs",
     "Blue": "Blau",
     "Grey": "Grau",
     "Sea Glass": "Schwarzglas",
@@ -180,10 +184,10 @@
     "Green Glass": "Glasgrün",
     "Yellow": "Gelb",
     "buy": "shop now",
-    "surfboard-fins": "Surfboard Fins",
+    "surfboard-fins": "Surfboard Finnen",
     "leashes": "Leashes",
     "accessories": "Accessories",
-    "apparel": "Apparel",
-    "sup-longboard-fins": "SUP & Longboard Fins"
+    "apparel": "Kleidung",
+    "sup-longboard-fins": "SUP & Longboard Finnen"
   }
 }
