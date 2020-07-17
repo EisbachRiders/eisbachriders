@@ -98,10 +98,11 @@ const Marker = ({ children }) => children
 
 function EisbachMap() {
   const [locations, setLocations] = useState(allLocations)
+  const [value, setValue] = useState(null)
   const [address, setAddress] = useState("")
   const mapRef = useRef()
   const [bounds, setBounds] = useState(null)
-  const [zoom, setZoom] = useState(8)
+  const [zoom, setZoom] = useState(5)
   const [mapFilter, setMapFilter] = useState(false)
   const [center, setCenter] = useState({ lat: 48.12, lng: 11.59 })
   const classes = useStyles()
@@ -166,13 +167,15 @@ function EisbachMap() {
                 ref={anchorRef}
                 variant="outlined"
                 fullWidth
-                endAdornment={
-                  <InputAdornment position="end">
-                    <IconButton aria-label="clear" onClick={handleIconButton}>
-                      <ClearIcon />
-                    </IconButton>
-                  </InputAdornment>
-                }
+                InputProps={{
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <IconButton aria-label="clear" onClick={handleIconButton}>
+                        <ClearIcon />
+                      </IconButton>
+                    </InputAdornment>
+                  ),
+                }}
                 {...getInputProps({
                   placeholder: "Where is your next adventure!",
                 })}
@@ -236,7 +239,7 @@ function EisbachMap() {
               key: process.env.GOOGLEMAPS,
             }}
             defaultCenter={{ lat: 48.134234, lng: 11.588486 }}
-            defaultZoom={12}
+            defaultZoom={5}
             yesIWantToUseGoogleMapApiInternals
             onGoogleApiLoaded={({ map }) => {
               mapRef.current = map
@@ -282,6 +285,7 @@ function EisbachMap() {
                       primary={elem.name}
                       secondary={t(`eisbach.${elem.skill}`)}
                     />
+                    <p>{elem.technology}</p>
                   </ListItem>
                 </Fragment>
               ))}
