@@ -170,6 +170,8 @@
     "features": "Features",
     "colors": "Farben",
     "sizes": "Größen",
+    "amounts": "Anzahl",
+    "waterTemps": "Wasser Temperatur",
     "plugs": "Fin Plugs",
     "Blue": "Blau",
     "Grey": "Grau",
@@ -190,5 +192,10 @@
     "accessories": "Accessories",
     "apparel": "Kleidung",
     "sup-longboard-fins": "SUP & Longboard Finnen"
+  },
+  "404": {
+    "notFound": "Seite wurde nicht gefunden",
+    "pageText": "Hmm... wir konnten die Seite leider nicht finden. Versuchen wir es noch einmal,",
+    "homepage": "Bring mich zur Startseite!"
   }
 }

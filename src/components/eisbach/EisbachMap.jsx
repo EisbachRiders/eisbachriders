@@ -1,4 +1,3 @@
-/* global google */
 import React, { useState, useRef, Fragment, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
@@ -14,7 +13,6 @@ import Grow from "@material-ui/core/Grow"
 import Popper from "@material-ui/core/Popper"
 import MenuItem from "@material-ui/core/MenuItem"
 import MenuList from "@material-ui/core/MenuList"
-import ClickAwayListener from "@material-ui/core/ClickAwayListener"
 import List from "@material-ui/core/List"
 import ListItem from "@material-ui/core/ListItem"
 import ListItemText from "@material-ui/core/ListItemText"
@@ -28,6 +26,7 @@ import Divider from "@material-ui/core/Divider"
 import ClearIcon from "@material-ui/icons/Clear"
 import mapStyles from "./mapStyles.json"
 import waveIcon from "../../assets/icons/surf.svg"
+import waveIconSelected from "../../assets/icons/surfSelected.svg"
 import allLocations from "./locations"
 
 const useStyles = makeStyles((theme) => ({
@@ -59,6 +58,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   mapListContainer: {
+    height: "80vh",
+    overflow: "scroll",
     flexBasis: "100%",
     [theme.breakpoints.up("md")]: {
       flexBasis: "50%",
@@ -73,8 +74,13 @@ const useStyles = makeStyles((theme) => ({
     height: 32,
     width: 32,
   },
+
   listItem: {
     padding: 30,
+  },
+  listItemSelected: {
+    padding: 30,
+    backgroundColor: "rgba(0, 215, 162, .3)",
   },
   autocomplete: { flexBasis: "50%" },
   img: {
@@ -92,21 +98,26 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     width: "100%",
   },
+  markerButton: {
+    border: "none",
+    background: "transparent",
+    outline: "none",
+    cursor: "pointer",
+  },
 }))
 
 const Marker = ({ children }) => children
 
 function EisbachMap() {
   const [locations, setLocations] = useState(allLocations)
-  const [value, setValue] = useState(null)
   const [address, setAddress] = useState("")
   const mapRef = useRef()
   const [bounds, setBounds] = useState(null)
+  const [selected, setSelected] = useState(null)
   const [zoom, setZoom] = useState(5)
-  const [mapFilter, setMapFilter] = useState(false)
   const [center, setCenter] = useState({ lat: 48.12, lng: 11.59 })
   const classes = useStyles()
-  const { i18n, t } = useTranslation()
+  const { t } = useTranslation()
   const anchorRef = useRef(null)
 
   const img = useStaticQuery(graphql`
@@ -198,7 +209,6 @@ function EisbachMap() {
                   >
                     <Paper className={classes.paper}>
                       {loading ? <div>...loading</div> : null}
-
                       <MenuList
                         // autoFocusItem={open}
                         id="menu-list-grow"
@@ -240,6 +250,7 @@ function EisbachMap() {
             }}
             defaultCenter={{ lat: 48.134234, lng: 11.588486 }}
             defaultZoom={5}
+            zoom={zoom}
             yesIWantToUseGoogleMapApiInternals
             onGoogleApiLoaded={({ map }) => {
               mapRef.current = map
@@ -264,7 +275,20 @@ function EisbachMap() {
           >
             {locations.map((elem, idx) => (
               <Marker key={`marker${idx}`} lat={elem.lat} lng={elem.lng}>
-                <img src={waveIcon} alt="marker" className={classes.icon} />
+                <button
+                  className={classes.markerButton}
+                  onClick={() => setSelected(selected ? null : elem)}
+                >
+                  <img
+                    src={
+                      selected && selected.name === elem.name
+                        ? waveIconSelected
+                        : waveIcon
+                    }
+                    alt="marker"
+                    className={classes.icon}
+                  />
+                </button>
               </Marker>
             ))}
           </GoogleMapReact>
@@ -275,7 +299,23 @@ function EisbachMap() {
               {locations.map((elem, idx) => (
                 <Fragment key={`listItem${idx}`}>
                   {idx !== 0 && <Divider />}
-                  <ListItem className={classes.listItem}>
+                  <ListItem
+                    className={
+                      selected && selected.name === elem.name
+                        ? classes.listItemSelected
+                        : classes.listItem
+                    }
+                    button
+                    onClick={() => {
+                      if (selected && selected.name === elem.name) {
+                        setSelected(null)
+                      } else {
+                        setCenter({ lat: elem.lat, lng: elem.lng })
+                        setZoom(9)
+                        setSelected(elem)
+                      }
+                    }}
+                  >
                     <ListItemAvatar>
                       <Avatar>
                         <RoomIcon />

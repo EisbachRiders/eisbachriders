@@ -72,16 +72,22 @@ function Product({ product }) {
     product === undefined
       ? []
       : product.paColors.edges.map((elem) => elem.node.name)
-
   let sizes =
     product === undefined
       ? []
       : product.paSizes.edges.map((elem) => elem.node.name)
-
   let plugs =
     product === undefined
       ? []
       : product.paFinPlugs.edges.map((elem) => elem.node.name)
+  let waterTemps =
+    product === undefined
+      ? []
+      : product.paWaterTemps.edges.map((elem) => elem.node.name)
+  let amounts =
+    product === undefined
+      ? []
+      : product.paAmounts.edges.map((elem) => elem.node.name)
 
   return (
     <Container justifyContent="spaceBetween" className={classes.container}>
@@ -143,7 +149,27 @@ function Product({ product }) {
           <div className={classes.attributeContainer}>
             <p className={classes.subheader}>{t("product.plugs")}:</p>
             {plugs.map((elem) => (
-              <p className={classes.subheader} key={`size_${elem}`}>
+              <p className={classes.subheader} key={`plug_${elem}`}>
+                {elem}
+              </p>
+            ))}
+          </div>
+        )}
+        {amounts.length > 0 && (
+          <div className={classes.attributeContainer}>
+            <p className={classes.subheader}>{t("product.amounts")}:</p>
+            {amounts.map((elem) => (
+              <p className={classes.subheader} key={`amounts_${elem}`}>
+                {elem}
+              </p>
+            ))}
+          </div>
+        )}
+        {waterTemps.length > 0 && (
+          <div className={classes.attributeContainer}>
+            <p className={classes.subheader}>{t("product.waterTemps")}:</p>
+            {waterTemps.map((elem) => (
+              <p className={classes.subheader} key={`temps_${elem}`}>
                 {elem}
               </p>
             ))}

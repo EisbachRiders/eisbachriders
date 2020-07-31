@@ -194,9 +194,11 @@
     "faq1_answer": "Temperatures of the water heats up over the day so the warmest time to go surfing is late afternoon."
   },
   "product": {
-    "features": "features",
-    "colors": "colors",
-    "sizes": "sizes",
+    "features": "Features",
+    "colors": "Colors",
+    "sizes": "Sizes",
+    "amounts": "Amounts",
+    "waterTemps": "Water Temperature",
     "plugs": "Fin Plugs",
     "Blue": "Blue",
     "Grey": "Grey",
@@ -217,5 +219,10 @@
     "accessories": "Accessories",
     "apparel": "Apparel",
     "sup-longboard-fins": "SUP & Longboard Fins"
+  },
+  "404": {
+    "notFound": "Page Not Found",
+    "pageText": "Hmm... we can't find that page. Lets try again,",
+    "homepage": "Take me to the homepage!"
   }
 }

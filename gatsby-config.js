@@ -132,7 +132,7 @@ module.exports = {
       options: {
         typeName: "WPGraphQL",
         fieldName: "wpgraphql",
-        url: "https://shop.eisbach-riders.com/graphql",
+        url: "https://secondwavesurfing.com/shop/graphql",
       },
     },
     {

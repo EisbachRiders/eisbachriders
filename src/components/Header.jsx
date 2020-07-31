@@ -185,10 +185,7 @@ function Header({ location }) {
     threshold: 0,
   })
 
-  const links =
-    process.env.NODE_ENV === "development"
-      ? ["urban", "products", "about"]
-      : ["urban", "products", "shop", "about"]
+  const links = ["urban", "products", "about"]
   const mobileLinks = ["contact", "customerService"]
   const products = [
     "surfboard-fins",
@@ -272,17 +269,7 @@ function Header({ location }) {
                       : classes.listItem
                   }
                 >
-                  {elem === "shop" ? (
-                    <a
-                      href="https://shop.eisbach-riders.com/"
-                      alt="shop"
-                      className={clsx(classes.link, {
-                        [classes.linkActive]: elem === location,
-                      })}
-                    >
-                      {t(`links.${elem}`)}
-                    </a>
-                  ) : elem === "blog" ? (
+                  {elem === "blog" ? (
                     <a
                       href="https://secondwavesurfing.com/blog"
                       alt="blog"
@@ -294,7 +281,8 @@ function Header({ location }) {
                     </a>
                   ) : elem === "products" ? (
                     <>
-                      <Button
+                      <Link
+                        to="/products"
                         ref={anchorRef}
                         aria-controls={
                           openProducts ? "menu-list-grow" : undefined
@@ -305,7 +293,7 @@ function Header({ location }) {
                         className={classes.buttonOverride}
                       >
                         {elem}
-                      </Button>
+                      </Link>
                       <Popper
                         open={openProducts}
                         anchorEl={anchorRef.current}
@@ -335,7 +323,7 @@ function Header({ location }) {
                                   {products.map((elem) => (
                                     <Link
                                       key={`product_link_${elem}`}
-                                      to={`/product/${elem}`}
+                                      to={`/products/${elem}`}
                                       className={classes.productsLink}
                                     >
                                       <MenuItem

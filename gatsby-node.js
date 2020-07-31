@@ -23,6 +23,72 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
       }
+      products: wpgraphql {
+        products(first: 50, where: { tagIn: "Eisbach Riders" }) {
+          edges {
+            node {
+              name
+              image {
+                sourceUrl
+                slug
+              }
+              galleryImages {
+                edges {
+                  node {
+                    sourceUrl
+                    slug
+                  }
+                }
+              }
+              shortDescription(format: RENDERED)
+              paAmounts {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
+              paWaterTemps {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
+              paColors {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
+              paFinPlugs {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
+              paSizes {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
+              productTags {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
+              slug
+              link
+            }
+          }
+        }
+      }
       fins: wpgraphql {
         products(
           first: 30
@@ -44,6 +110,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                 }
               }
               shortDescription(format: RENDERED)
+              paAmounts {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
+              paWaterTemps {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
               paColors {
                 edges {
                   node {
@@ -96,6 +176,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                 }
               }
               shortDescription(format: RENDERED)
+              paAmounts {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
+              paWaterTemps {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
               paColors {
                 edges {
                   node {
@@ -151,6 +245,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                 }
               }
               shortDescription(format: RENDERED)
+              paAmounts {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
+              paWaterTemps {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
               paColors {
                 edges {
                   node {
@@ -206,6 +314,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                 }
               }
               shortDescription(format: RENDERED)
+              paAmounts {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
+              paWaterTemps {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
               paColors {
                 edges {
                   node {
@@ -258,6 +380,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                 }
               }
               shortDescription(format: RENDERED)
+              paAmounts {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
+              paWaterTemps {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
               paColors {
                 edges {
                   node {
@@ -301,6 +437,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   const pages = result.data.pagesRemark.edges
+  const products = result.data.products.products.edges
   const fins = result.data.fins.products.edges
   const leashes = result.data.leashes.products.edges
   const sup = result.data.sup.products.edges
@@ -318,27 +455,32 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Create product category pages
   createPage({
-    path: "/product/surfboard-fins",
+    path: "/products",
+    component: productCategoryTemplate,
+    context: { products: products, category: "products" },
+  })
+  createPage({
+    path: "/products/surfboard-fins",
     component: productCategoryTemplate,
     context: { products: fins, category: "surfboard-fins" },
   })
   createPage({
-    path: "/product/sup-longboard-fins",
+    path: "/products/sup-longboard-fins",
     component: productCategoryTemplate,
     context: { products: sup, category: "sup-longboard-fins" },
   })
   createPage({
-    path: "/product/leashes",
+    path: "/products/leashes",
     component: productCategoryTemplate,
     context: { products: leashes, category: "leashes" },
   })
   createPage({
-    path: "/product/accessories",
+    path: "/products/accessories",
     component: productCategoryTemplate,
     context: { products: accessories, category: "accessories" },
   })
   createPage({
-    path: "/product/apparel",
+    path: "/products/apparel",
     component: productCategoryTemplate,
     context: { products: apparel, category: "apparel" },
   })
@@ -346,7 +488,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Create individual product pages
   fins.forEach(({ node }) => {
     createPage({
-      path: `product/${node.slug}`,
+      path: `products/${node.slug}`,
       component: productTemplate,
       context: { product: node },
     })
@@ -354,7 +496,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   leashes.forEach(({ node }) => {
     createPage({
-      path: `product/${node.slug}`,
+      path: `products/${node.slug}`,
       component: productTemplate,
       context: { product: node },
     })
@@ -362,7 +504,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   sup.forEach(({ node }) => {
     createPage({
-      path: `product/${node.slug}`,
+      path: `products/${node.slug}`,
       component: productTemplate,
       context: { product: node },
     })
@@ -370,7 +512,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   accessories.forEach(({ node }) => {
     createPage({
-      path: `product/${node.slug}`,
+      path: `products/${node.slug}`,
       component: productTemplate,
       context: { product: node },
     })
@@ -378,7 +520,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   apparel.forEach(({ node }) => {
     createPage({
-      path: `product/${node.slug}`,
+      path: `products/${node.slug}`,
       component: productTemplate,
       context: { product: node },
     })
