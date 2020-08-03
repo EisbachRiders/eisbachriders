@@ -61,7 +61,7 @@ function ShopItem({ product }) {
     <div className={classes.root}>
       {product && (
         <>
-          <Link to={`/product/${product.slug}`}>
+          <Link to={`/products/${product.slug}`}>
             <img
               src={product.image.sourceUrl}
               className={classes.img}

@@ -1,13 +1,17 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import { Link } from "gatsby-theme-material-ui"
+import { makeStyles } from "@material-ui/styles"
 import { useTranslation } from "react-i18next"
 import clsx from "clsx"
-import { makeStyles } from "@material-ui/core/styles"
-import Button from "@material-ui/core/Button"
 import Container from "../ui/Container"
 
 const useStyles = makeStyles((theme) => ({
+  header: {
+    marginBottom: 30,
+    textTransform: "capitalize",
+  },
   container: {
     display: "flex",
     flexWrap: "wrap",
@@ -71,15 +75,23 @@ const useStyles = makeStyles((theme) => ({
   title: {
     textTransform: "capitalize",
     fontSize: 18,
-    fontWeight: 600,
+    fontWeight: 700,
   },
   subtitle: {
+    fontWeight: 700,
     textTransform: "uppercase",
     letterSpacing: 3,
     marginBottom: 25,
   },
   button: {
-    borderColor: theme.color.white,
+    border: `1px solid ${theme.color.white}`,
+    color: theme.color.white,
+    fontWeight: 700,
+    padding: `15px 30px`,
+    "&:hover": {
+      textDecoration: "none",
+      background: "rgba(255,255,255,.3)",
+    },
   },
 }))
 
@@ -102,45 +114,40 @@ function ShopCategories() {
       }
     }
   `)
-  const big = [
-    {
-      cat: "sup",
-      path: "sup-at-lake",
-      href: "https://shop.eisbach-riders.com/product-category/sup/",
-    },
-    {
-      cat: "rapidSurfing",
-      path: "surfer-at-eisbach",
-      href: "https://shop.eisbach-riders.com/product-category/rapid-surfing/",
-    },
-  ]
+
   const small = [
-    {
-      cat: "fins",
-      path: "fiberglass-single-tab-on-rocks-at-beach",
-      href: "https://shop.eisbach-riders.com/product-category/fins/",
-    },
-    {
-      cat: "leashes",
-      path: "surfer-putting-on-blue-leash-at-beach",
-      href: "https://shop.eisbach-riders.com/product-category/leashes/",
-    },
-    {
-      cat: "apparel",
-      path: "girl-sitting-at-lake",
-      href: "https://shop.eisbach-riders.com/product-category/apparel/",
-    },
-    {
-      cat: "accessories",
-      path: "wax-comb-peeling-wax-off-surfboard",
-      href: "https://shop.eisbach-riders.com/product-category/accessories/",
-    },
+    [
+      {
+        cat: "fins",
+        path: "fiberglass-single-tab-on-rocks-at-beach",
+        href: "https://shop.eisbach-riders.com/product-category/fins/",
+        link: "/products/surfboard-fins",
+      },
+      {
+        cat: "leashes",
+        path: "surfer-putting-on-blue-leash-at-beach",
+        href: "https://shop.eisbach-riders.com/product-category/leashes/",
+        link: "/products/leashes",
+      },
+      {
+        cat: "apparel",
+        path: "girl-sitting-at-lake",
+        href: "https://shop.eisbach-riders.com/product-category/apparel/",
+        link: "/products/apparel",
+      },
+      {
+        cat: "accessories",
+        path: "wax-comb-peeling-wax-off-surfboard",
+        href: "https://shop.eisbach-riders.com/product-category/accessories/",
+        link: "/products/accessories",
+      },
+    ],
   ]
-  const boxes = [big, small]
 
   return (
     <Container>
-      {boxes.map((box, idx) => (
+      <h2 className={classes.header}>{t("homepage.category")}</h2>
+      {small.map((box, idx) => (
         <div className={classes.container} key={`box${idx}`}>
           {box.map((elem) => (
             <div
@@ -172,15 +179,9 @@ function ShopCategories() {
                 <p className={clsx(classes.text, classes.subtitle)}>
                   {t(`shop.${elem.cat}Tagline`)}
                 </p>
-                <Button
-                  variant="contained"
-                  className={classes.button}
-                  href={elem.href}
-                  // rel="noopener"
-                  // target="_blank"
-                >
+                <Link to={elem.link} className={classes.button}>
                   {t("shop.viewCollection")}
-                </Button>
+                </Link>
               </div>
             </div>
           ))}

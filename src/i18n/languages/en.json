@@ -42,7 +42,9 @@
     "surf": "surf equipment",
     "ourStory": "Our Story",
     "mission": "Our mission is to protect our playgrounds - the ocean and rivers that provide us so much enjoyment - by supporting local communities and efforts to preserve our water sources.",
-    "featured": "The Eisbach Riders Single Tab Future fiberglass in with a honeycomb core is extra lightweight and provides an immediate response during your turns. With a moderate flex it is ideal for making fast changes of direction. The fin design is suited for any waves as well as for river surfing."
+    "featured": "The Eisbach Riders Single Tab Future fiberglass in with a honeycomb core is extra lightweight and provides an immediate response during your turns. With a moderate flex it is ideal for making fast changes of direction. The fin design is suited for any waves as well as for river surfing.",
+    "sport": "explore by sport",
+    "category": "explore by category"
   },
   "feature": {
     "featuredProduct": "featured",
