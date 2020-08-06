@@ -24,10 +24,13 @@ const Layout = ({ location, children }) => {
   const { t } = useTranslation()
 
   const handleOptOut = () => {
-    var disableStr = "ga-disable-" + process.env.GA_KEY
-    document.cookie =
-      disableStr + "=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/"
+    var disableStr = `ga-disable-${process.env.GA_KEY}`
+    document.cookie = `${disableStr}=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/`
     window[disableStr] = true
+  }
+
+  const handleAccept = () => {
+    window.location.reload(false)
   }
 
   return (
@@ -47,6 +50,7 @@ const Layout = ({ location, children }) => {
           background: "transparent",
           letterSpacing: 1.5,
         }}
+        onAccept={() => handleAccept()}
         buttonText={t("tracking.accept")}
         cookieName="gatsby-gdpr-google-analytics"
         style={{ background: "#00d7a2", color: "#00130e" }}
@@ -72,6 +76,7 @@ const Layout = ({ location, children }) => {
           {t("tracking.dataPrivacy")}.
         </Link>
       </CookieConsent>
+
       <Footer />
     </div>
   )
