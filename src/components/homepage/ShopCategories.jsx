@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { Link } from "gatsby-theme-material-ui"
+import Button from "@material-ui/core/Button"
 import { makeStyles } from "@material-ui/styles"
 import { useTranslation } from "react-i18next"
 import clsx from "clsx"
@@ -83,14 +84,22 @@ const useStyles = makeStyles((theme) => ({
     letterSpacing: 3,
     marginBottom: 25,
   },
-  button: {
-    border: `1px solid ${theme.color.white}`,
+  textContainer: {
+    position: "absolute",
+    bottom: "0%",
+    left: "0%",
+    padding: 30,
+    textAlign: "left",
+  },
+  text: {
     color: theme.color.white,
-    fontWeight: 700,
-    padding: `15px 30px`,
+    fontSize: 20,
+    fontWeight: "bold",
+  },
+  link: {
+    textDecoration: "none",
     "&:hover": {
       textDecoration: "none",
-      background: "rgba(255,255,255,.3)",
     },
   },
 }))
@@ -172,7 +181,20 @@ function ShopCategories() {
                 )}
                 imgStyle={{ objectPosition: "center center" }}
               />
-              <div className={classes.textbox}>
+              <div className={classes.textContainer}>
+                <p className={classes.text}>{t(`shop.${elem.cat}Tagline`)}</p>
+                <Link to={elem.link} className={classes.link}>
+                  <Button
+                    className={classes.button}
+                    alt="shop van der waal surf grip"
+                    variant="contained"
+                    color="primary"
+                  >
+                    {t(`shop.${elem.cat}`)}
+                  </Button>
+                </Link>
+              </div>
+              {/* <div className={classes.textbox}>
                 <p className={clsx(classes.text, classes.title)}>
                   {t(`shop.${elem.cat}`)}
                 </p>
@@ -182,7 +204,7 @@ function ShopCategories() {
                 <Link to={elem.link} className={classes.button}>
                   {t("shop.viewCollection")}
                 </Link>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>

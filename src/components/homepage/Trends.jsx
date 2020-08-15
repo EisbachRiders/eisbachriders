@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
   },
   img: {
     width: "100%",
+    maxHeight: 600,
   },
   header: {
     marginBottom: 30,
