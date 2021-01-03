@@ -1,6 +1,5 @@
 import { createMuiTheme } from "@material-ui/core/styles"
-import "../app.css"
-import "../../static/fonts/fonts.css"
+import "./css/app.css"
 
 // fin: "#00d7a2",
 // finDk: "#00be8f",
@@ -51,45 +50,7 @@ const theme = createMuiTheme({
   },
   color,
   typography: {
-    fontFamily: "'Raleway', sans-serif",
-    h1: {
-      letterSpacing: 2,
-    },
-    h2: {
-      letterSpacing: 2,
-    },
-    h3: {
-      letterSpacing: 2,
-    },
-    h4: {
-      letterSpacing: 2,
-    },
-    h5: {
-      letterSpacing: 2,
-    },
-    body1: {
-      letterSpacing: 1.5,
-      fontSize: 14,
-    },
-    body2: {
-      letterSpacing: 1.5,
-      fontSize: 12,
-    },
-    button: {
-      fontFamily: "'Raleway', sans-serif",
-      letterSpacing: 3,
-    },
-  },
-  overrides: {
-    MuiButton: {
-      root: {
-        padding: "9px 27px",
-        borderRadius: 0,
-      },
-      contained: {
-        boxShadow: "none",
-      },
-    },
+    fontFamily: ["Raleway", "sans-serif"].join(","),
   },
 })
 

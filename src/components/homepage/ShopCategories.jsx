@@ -67,12 +67,6 @@ const useStyles = makeStyles((theme) => ({
     left: "50%",
     transform: "translate(-50%, -50%)",
   },
-  text: {
-    color: theme.color.white,
-    fontSize: 16,
-    marginTop: 0,
-    marginBottom: 5,
-  },
   title: {
     textTransform: "capitalize",
     fontSize: 18,

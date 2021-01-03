@@ -6,7 +6,7 @@ import { makeStyles } from "@material-ui/core/styles"
 import Button from "@material-ui/core/Button"
 import Container from "../ui/Container"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   container: {
     flexDirection: "column",
     flexWrap: "nowrap",
@@ -89,11 +89,11 @@ function Trends() {
 
       <div className={classes.innerContainer}>
         {categories.map((elem, idx) => (
-          <div className={classes.flexItem}>
+          <div className={classes.flexItem} key={`trend${idx}`}>
             <Img
               fluid={
                 data.allFile.edges.find(
-                  (img) =>
+                  img =>
                     img.node.childImageSharp.fluid.originalName ===
                     `${elem.path}.jpg`
                 ).node.childImageSharp.fluid

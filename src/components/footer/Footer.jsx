@@ -8,13 +8,12 @@ import Hidden from "@material-ui/core/Hidden"
 import FacebookIcon from "@material-ui/icons/Facebook"
 import InstagramIcon from "@material-ui/icons/Instagram"
 import PinterestIcon from "@material-ui/icons/Pinterest"
-import Newsletter from "./newsletter/Newsletter"
-import Container from "./ui/Container"
-import Contact from "./Contact"
+import Newsletter from "../newsletter/Newsletter"
+import Container from "../ui/Container"
+import Contact from "../Contact"
+import logo from "../../assets/logos/logo_white.svg"
 
-import logo from "../assets/logos/logo_white.svg"
-
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   container: {
     flexDirection: "column",
   },
@@ -228,6 +227,13 @@ function Footer() {
           |
           <Link to="/faq" className={clsx(classes.textSmall, classes.link)}>
             {t("links.faq")}
+          </Link>
+          |
+          <Link
+            to="/stockist"
+            className={clsx(classes.textSmall, classes.link)}
+          >
+            Stockist
           </Link>
           |
           <Contact variant="link" />

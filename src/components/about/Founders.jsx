@@ -6,7 +6,7 @@ import { makeStyles } from "@material-ui/core/styles"
 import Hidden from "@material-ui/core/Hidden"
 import Container from "../ui/Container"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   container: {
     display: "flex",
     justifyContent: "space-between",
@@ -66,16 +66,9 @@ function Founders() {
     <Container>
       <p className={classes.header}>{t("about.the_team")}</p>
       <div className={classes.container}>
-        <Img
-          fluid={images.robin.childImageSharp.fluid}
-          alt="wave"
-          placeholderStyle={{ backgroundColor: `blue` }}
-          className={classes.img}
-          imgStyle={{ objectPosition: "center center" }}
-        />
-        <Hidden mdUp>
+        <Hidden smDown>
           <Img
-            fluid={images.michi.childImageSharp.fluid}
+            fluid={images.robin.childImageSharp.fluid}
             alt="wave"
             placeholderStyle={{ backgroundColor: `blue` }}
             className={classes.img}
