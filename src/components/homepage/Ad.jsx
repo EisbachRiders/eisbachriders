@@ -42,7 +42,7 @@ function Ad() {
 
   return (
     <Container>
-      <Link to="/recycledFins" className={classes.link}>
+      <Link to="/recycled-fins" className={classes.link}>
         <Hidden mdDown>
           <Img
             fluid={data.fileName.childImageSharp.fluid}

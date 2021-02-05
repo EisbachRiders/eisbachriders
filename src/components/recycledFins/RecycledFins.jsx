@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import clsx from "clsx"
 import { useTranslation } from "react-i18next"
 import { makeStyles } from "@material-ui/core/styles"
+import Hidden from "@material-ui/core/Hidden"
 import Button from "@material-ui/core/Button"
 import Container from "../ui/Container"
 import BeerIcon from "../../assets/websiteImages/beer.svg"
@@ -13,6 +14,9 @@ import Paper from "@material-ui/core/Paper"
 import Timeline from "./Timeline"
 
 const useStyles = makeStyles(theme => ({
+  banner: {
+    width: "100%",
+  },
   container: {
     marginBottom: 100,
   },
@@ -122,11 +126,43 @@ function RecycledFins() {
           }
         }
       }
+      fileName: file(relativePath: { eq: "quickLockAD.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      mobile: file(relativePath: { eq: "quickLockAD-mobile.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
   return (
     <Container>
+      <Hidden mdDown>
+        <Img
+          fluid={images.fileName.childImageSharp.fluid}
+          alt="quick lock ad"
+          placeholderStyle={{ backgroundColor: `white` }}
+          className={classes.banner}
+          imgStyle={{ objectPosition: "center center" }}
+        />
+      </Hidden>
+      <Hidden mdUp>
+        <Img
+          fluid={images.mobile.childImageSharp.fluid}
+          alt="quick lock ad"
+          placeholderStyle={{ backgroundColor: `white` }}
+          className={classes.banner}
+          imgStyle={{ objectPosition: "center center" }}
+        />
+      </Hidden>
       <div className={clsx(classes.flex, classes.flexCenter, classes.reverse)}>
         <Img
           fluid={images.shape.childImageSharp.fluid}
