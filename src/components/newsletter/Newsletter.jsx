@@ -152,7 +152,7 @@ function Newsletter() {
       }
     }
   }
-  console.log(isNameValid)
+
   return (
     <>
       <NewsletterSnackbar

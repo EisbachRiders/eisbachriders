@@ -3,14 +3,11 @@ import { useTranslation } from "react-i18next"
 import { Link } from "gatsby-theme-material-ui"
 import clsx from "clsx"
 import { makeStyles } from "@material-ui/styles"
-import IconButton from "@material-ui/core/IconButton"
 import Hidden from "@material-ui/core/Hidden"
-import FacebookIcon from "@material-ui/icons/Facebook"
-import InstagramIcon from "@material-ui/icons/Instagram"
-import PinterestIcon from "@material-ui/icons/Pinterest"
 import Newsletter from "./newsletter/Newsletter"
 import Container from "./ui/Container"
 import Contact from "./Contact"
+import { StaticImage } from "gatsby-plugin-image"
 
 import logo from "../assets/logos/logo_white.svg"
 
@@ -43,7 +40,6 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
     alignItems: "center",
     color: theme.color.white,
-    paddingBottom: 10,
     paddingTop: 10,
     [theme.breakpoints.up("sm")]: {
       paddingTop: 0,
@@ -91,47 +87,6 @@ const useStyles = makeStyles((theme) => ({
       height: "100%",
     },
   },
-  socialContainer: {
-    display: "flex",
-    justifyContent: "space-around",
-  },
-  iconSocial: {
-    color: theme.color.white,
-    width: 22,
-    height: 22,
-    "&:hover": {
-      color: theme.palette.primary.main,
-    },
-  },
-  iconContainer: {
-    display: "flex",
-    flexBasis: "100%",
-    [theme.breakpoints.up("sm")]: {
-      flexBasis: "30%",
-    },
-    [theme.breakpoints.up("sm")]: {
-      flexBasis: "25%",
-      justifyContent: "space-around",
-    },
-  },
-  icon: {
-    width: 32,
-    height: 32,
-    marginRight: 30,
-    [theme.breakpoints.up("sm")]: {
-      width: 24,
-      height: 24,
-    },
-    [theme.breakpoints.up("md")]: {
-      width: 32,
-      height: 32,
-    },
-    [theme.breakpoints.up("lg")]: {
-      marginRight: 30,
-      width: 42,
-      height: 42,
-    },
-  },
   feature: {
     fontSize: 16,
     letterSpacing: 3,
@@ -157,6 +112,7 @@ const useStyles = makeStyles((theme) => ({
   },
   copyright: {
     width: "100%",
+    marginTop: 0,
     [theme.breakpoints.up("sm")]: {
       width: "fit-content",
     },
@@ -164,8 +120,8 @@ const useStyles = makeStyles((theme) => ({
   logoContainer: {
     display: "flex",
     alignItems: "center",
-    marginBottom: 15,
-    marginTop: 15,
+    marginBottom: 30,
+    marginTop: 30,
   },
   logo: {
     fontFamily: "secondary",
@@ -174,6 +130,9 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 62,
     paddingLeft: 30,
     paddingRight: 30,
+  },
+  image: {
+    marginBottom: 30,
   },
 }))
 
@@ -203,6 +162,16 @@ function Footer() {
           <img src={logo} alt="logo" className={classes.img} />
           <p className={classes.logo}>Riders</p>
         </div>
+
+        <StaticImage
+          src="../assets/websiteImages/1ftp_BusinessMember_Horizontal_White.png"
+          alt="1% for the planet"
+          placeholder="blurred"
+          layout="fixed"
+          width={150}
+          className={classes.image}
+        />
+
         <div className={classes.copyrightContainer}>
           <Link
             to="/dataProtection"
@@ -232,35 +201,7 @@ function Footer() {
           |
           <Contact variant="link" />
         </div>
-        <div className={classes.socialContainer}>
-          <IconButton
-            href="https://www.facebook.com/EisbachRiders/"
-            aria-label="facebook"
-            // size="small"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <FacebookIcon className={classes.iconSocial} />
-          </IconButton>
-          <IconButton
-            href="https://www.instagram.com/eisbachriders/"
-            aria-label="instagram"
-            // size="small"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <InstagramIcon className={classes.iconSocial} />
-          </IconButton>
-          <IconButton
-            href="https://www.pinterest.com/eisbachriders/"
-            aria-label="pinterest"
-            // size="small"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <PinterestIcon className={classes.iconSocial} />
-          </IconButton>
-        </div>
+
         <p className={clsx(classes.textSmall, classes.copyright)}>
           &copy; Eisbach Riders
         </p>
