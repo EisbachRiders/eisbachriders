@@ -244,7 +244,6 @@ function Contact({ variant, align }) {
                 onClick={handleSubmit}
                 variant="contained"
                 color="primary"
-                autoFocus
               >
                 {t("form.send")}
               </Button>

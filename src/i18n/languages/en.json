@@ -65,16 +65,13 @@
     "subscribe": "subscribe",
     "cancel": "cancel",
     "legal1": "You can unsubscribe at any time.",
-    "legal2": "privacy policy"
-  },
-  "form": {
+    "legal2": "privacy policy",
+    "success": "Your email has been sent successfully",
     "contactTitle": "Send us a message!",
     "email": "email",
     "name": "name",
     "message": "message",
     "send": "send",
-    "cancel": "cancel",
-    "success": "Your email has been sent successfully",
     "error": "An error has occurred! Please try again later."
   },
   "footer": {

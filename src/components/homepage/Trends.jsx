@@ -89,7 +89,7 @@ function Trends() {
 
       <div className={classes.innerContainer}>
         {categories.map((elem, idx) => (
-          <div className={classes.flexItem}>
+          <div className={classes.flexItem} key={`trend${idx}`}>
             <Img
               fluid={
                 data.allFile.edges.find(

@@ -65,18 +65,16 @@
     "subscribe": "Trag dich ein",
     "cancel": "Abbrechen",
     "legal1": "Du kannst Dich jederzeit wieder austragen indem Du den Link am Ende der eMails klickst. Wir nutzen Mailchimp als Marketing Plattform. Mit dem Klick auf Eintragen, akzeptierst Du, dass Deine Daten an Mailchimp weitergeleitet werden.",
-    "legal2": "Mehr Infos über den Mailchimp Datenschutz."
-  },
-  "form": {
+    "legal2": "Mehr Infos über den Mailchimp Datenschutz.",
     "contactTitle": "Schick uns eine Nachricht!",
     "email": "eMail",
     "name": "Name",
     "message": "Nachricht",
     "send": "Senden",
-    "cancel": "Abbrechen",
     "success": "Deine E-Mail wurde erfolgreich gesendet",
     "error": "Ein Fehler ist aufgetreten, sorry! Bitte versuch es es später noch einmal."
   },
+
   "footer": {
     "emailSupport": "email Unterstützung",
     "emailSupportText": "kontaktieren Sie uns unter support@eisbach-riders.com",

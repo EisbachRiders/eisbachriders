@@ -69,9 +69,10 @@ const useStyles = makeStyles((theme) => ({
   },
   text: {
     color: theme.color.white,
-    fontSize: 16,
     marginTop: 0,
     marginBottom: 5,
+    fontSize: 20,
+    fontWeight: "bold",
   },
   title: {
     textTransform: "capitalize",
@@ -91,11 +92,7 @@ const useStyles = makeStyles((theme) => ({
     padding: 30,
     textAlign: "left",
   },
-  text: {
-    color: theme.color.white,
-    fontSize: 20,
-    fontWeight: "bold",
-  },
+
   link: {
     textDecoration: "none",
     "&:hover": {

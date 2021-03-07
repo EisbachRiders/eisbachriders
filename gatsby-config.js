@@ -90,6 +90,14 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint:
+          "https://secondwavesurfing.us19.list-manage.com/subscribe/post?u=37a2f35f3b8bc53ace7af50eb&amp;id=7bdc6b47ed",
+        timeout: 3500,
+      },
+    },
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         gatsbyRemarkPlugins: [
@@ -172,10 +180,22 @@ module.exports = {
         icon: `${__dirname}/src/assets/logos/logo.png`,
       },
     },
-    "gatsby-theme-material-ui",
     `gatsby-plugin-react-helmet`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
+    `gatsby-plugin-feed-mdx`,
+    `gatsby-plugin-sitemap`,
+    "gatsby-plugin-top-layout",
+    {
+      resolve: "gatsby-plugin-material-ui",
+      // If you want to use styled components you should change the injection order.
+      options: {
+        // stylesProvider: {
+        //   injectFirst: true,
+        // },
+      },
+    },
+    "gatsby-plugin-emotion",
   ],
 }
