@@ -1,6 +1,5 @@
 import { createMuiTheme } from "@material-ui/core/styles"
-import "./app.css"
-import "../static/fonts/fonts.css"
+import "./css/app.css"
 
 // fin: "#00d7a2",
 // finDk: "#00be8f",
@@ -52,6 +51,7 @@ const theme = createMuiTheme({
   color,
   typography: {
     fontFamily: ["Raleway", "sans-serif"].join(","),
+<<<<<<< HEAD:src/theme.js
     h1: {
       letterSpacing: 2,
     },
@@ -92,6 +92,8 @@ const theme = createMuiTheme({
         },
       },
     },
+=======
+>>>>>>> new-wordpress:src/gatsby-theme-material-ui-top-layout/theme.js
   },
 })
 

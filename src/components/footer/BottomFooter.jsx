@@ -10,8 +10,12 @@ import InstagramIcon from "@material-ui/icons/Instagram"
 import PinterestIcon from "@material-ui/icons/Pinterest"
 import Container from "../ui/Container"
 import Contact from "../Contact"
+import Newsletter from "../newsletter/Newsletter"
+import Container from "../ui/Container"
+import Contact from "../Contact"
+import logo from "../../assets/logos/logo_white.svg"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   container: {
     flexDirection: "column",
   },

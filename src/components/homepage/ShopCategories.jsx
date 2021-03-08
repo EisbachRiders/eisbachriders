@@ -67,6 +67,7 @@ const useStyles = makeStyles((theme) => ({
     left: "50%",
     transform: "translate(-50%, -50%)",
   },
+<<<<<<< HEAD
   text: {
     color: theme.color.white,
     marginTop: 0,
@@ -74,6 +75,8 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 20,
     fontWeight: "bold",
   },
+=======
+>>>>>>> new-wordpress
   title: {
     textTransform: "capitalize",
     fontSize: 18,

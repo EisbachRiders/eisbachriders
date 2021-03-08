@@ -6,12 +6,13 @@ import Dialog from "@material-ui/core/Dialog"
 import DialogTitle from "@material-ui/core/DialogTitle"
 import DialogActions from "@material-ui/core/DialogActions"
 import TextField from "@material-ui/core/TextField"
+import ListItem from "@material-ui/core/ListItem"
 import CircularProgress from "@material-ui/core/CircularProgress"
 import Button from "@material-ui/core/Button"
 import Snackbar from "@material-ui/core/Snackbar"
 import Alert from "@material-ui/lab/Alert"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   form: {
     padding: 30,
   },
@@ -48,6 +49,11 @@ const useStyles = makeStyles((theme) => ({
       color: theme.palette.primary.main,
     },
   },
+  listItemMobile: {
+    borderBottom: `1px solid ${theme.color.gray}`,
+    textAlign: "center",
+    textTransform: "uppercase",
+  },
   right: {
     float: "right",
   },
@@ -75,7 +81,7 @@ function Contact({ variant, align }) {
     setSnackbar(false)
   }
 
-  const handleChange = (name) => (event) => {
+  const handleChange = name => event => {
     if (!isTouched) {
       setTouched(true)
     }
@@ -139,7 +145,7 @@ function Contact({ variant, align }) {
           name: name,
         }),
       })
-        .then((response) => {
+        .then(response => {
           if (response.status === 200) {
             setSnackbar(true)
             setAlert("success")
@@ -154,7 +160,7 @@ function Contact({ variant, align }) {
             setLoading(false)
           }
         })
-        .catch((err) => {
+        .catch(err => {
           setAlert("error")
           setSnackbar(true)
           setLoading(false)
@@ -166,11 +172,21 @@ function Contact({ variant, align }) {
 
   return (
     <>
-      {variant === "link" ? (
+      {variant === "link" && (
         <Button className={classes.link} onClick={() => setOpen(true)}>
           {t("common.contactUs")}
         </Button>
-      ) : (
+      )}
+      {variant === "header" && (
+        <ListItem
+          button
+          onClick={() => setOpen(true)}
+          className={classes.listItemMobile}
+        >
+          {t("common.contactUs")}
+        </ListItem>
+      )}
+      {variant === "button" && (
         <Button
           className={clsx(classes.button, {
             [classes.right]: align === "right",

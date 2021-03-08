@@ -17,14 +17,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         edges {
           node {
             id
-            fields {
-              slug
-            }
+            slug
           }
         }
       }
       products: wpgraphql {
-        products(first: 50, where: { tagIn: "Eisbach Riders" }) {
+        products(
+          first: 50
+          where: { tagIn: "Eisbach Riders", categoryIdNotIn: 144 }
+        ) {
           edges {
             node {
               name
@@ -92,7 +93,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       fins: wpgraphql {
         products(
           first: 30
-          where: { category: "Fins", tagIn: "Eisbach Riders", tagNotIn: "sup" }
+          where: {
+            category: "Fins"
+            tagIn: "Eisbach Riders"
+            tagNotIn: "sup"
+            categoryIdNotIn: 144
+          }
         ) {
           edges {
             node {
@@ -159,7 +165,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         }
       }
       leashes: wpgraphql {
-        products(where: { category: "Leashes", tagIn: "Eisbach Riders" }) {
+        products(
+          where: {
+            category: "Leashes"
+            tagIn: "Eisbach Riders"
+            categoryIdNotIn: 144
+          }
+        ) {
           edges {
             node {
               name
@@ -227,7 +239,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       sup: wpgraphql {
         products(
           first: 30
-          where: { category: "SUP", tagIn: "Eisbach Riders", tagNotIn: "leash" }
+          where: {
+            category: "SUP"
+            tagIn: "Eisbach Riders"
+            tagNotIn: "leash"
+            categoryIdNotIn: 144
+          }
         ) {
           edges {
             node {
@@ -296,7 +313,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       accessories: wpgraphql {
         products(
           first: 30
-          where: { category: "Accessories", tagIn: "Eisbach Riders" }
+          where: {
+            category: "Accessories"
+            tagIn: "Eisbach Riders"
+            categoryIdNotIn: 144
+          }
         ) {
           edges {
             node {
@@ -363,7 +384,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         }
       }
       apparel: wpgraphql {
-        products(where: { category: "Apparel", tagIn: "Eisbach Riders" }) {
+        products(
+          where: {
+            category: "Apparel"
+            tagIn: "Eisbach Riders"
+            categoryIdNotIn: 144
+          }
+        ) {
           edges {
             node {
               name
@@ -447,7 +474,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Create pages
   pages.forEach(({ node }) => {
     createPage({
-      path: node.fields.slug,
+      path: node.slug,
       component: pageTemplate,
       context: { id: node.id },
     })
@@ -530,6 +557,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
   if (node.internal.type === "Mdx") {
+    console.log(node.fileAbsolutePath)
     const value = createFilePath({ node, getNode })
     createNodeField({
       name: "slug",

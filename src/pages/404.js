@@ -7,7 +7,7 @@ import Container from "../components/ui/Container"
 import SEO from "../components/seo"
 import FinnImg from "../assets/websiteImages/finsLost.png"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   container: {
     flexDirection: "column",
     alignItems: "center",

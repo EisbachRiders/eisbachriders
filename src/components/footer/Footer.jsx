@@ -10,7 +10,7 @@ import Contact from "../Contact"
 import { StaticImage } from "gatsby-plugin-image"
 import logo from "../../assets/logos/logo_white.svg"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   container: {
     flexDirection: "column",
   },

@@ -13,7 +13,7 @@ import OnePercentIcon from "../../assets/websiteImages/1ftp_BusinessMember_Verti
 import Paper from "@material-ui/core/Paper"
 import Timeline from "./Timeline"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   banner: {
     width: "100%",
   },
@@ -193,7 +193,7 @@ function RecycledFins() {
       </div>
 
       <div className={classes.flex}>
-        <Paper classes={{ root: classes.paper }}>
+        <Paper className={classes.paper}>
           <img src={BeerIcon} className={classes.icon} alt="germany icon" />
           <p className={classes.cardTitle}>{t("recycled.madeInGermany")}</p>
           <p className={classes.cardText}>{t("recycled.madeInGermanyInfo")}</p>

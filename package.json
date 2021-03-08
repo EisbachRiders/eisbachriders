@@ -56,9 +56,6 @@
     "react-places-autocomplete": "^7.3.0",
     "recharts": "^2.0.8"
   },
-  "devDependencies": {
-    "prettier": "^2.0.5"
-  },
   "homepage": "https://eisbach-riders.com/",
   "keywords": [
     "ecommerce",

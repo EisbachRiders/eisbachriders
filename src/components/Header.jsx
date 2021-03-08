@@ -26,7 +26,7 @@ import Container from "./ui/Container"
 import Contact from "./Contact"
 import logo from "../assets/logos/logo.svg"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   appbar: {
     zIndex: 200,
     background: "transparent",
@@ -149,7 +149,7 @@ function Header({ location }) {
     i18n.changeLanguage(newLng)
   }
 
-  const toggleDrawer = (open) => (event) => {
+  const toggleDrawer = open => event => {
     if (
       event &&
       event.type === "keydown" &&
@@ -161,10 +161,10 @@ function Header({ location }) {
   }
 
   const handleToggleProducts = () => {
-    setOpenProducts((prevOpen) => !prevOpen)
+    setOpenProducts(prevOpen => !prevOpen)
   }
 
-  const handleCloseProducts = (event) => {
+  const handleCloseProducts = event => {
     if (anchorRef.current && anchorRef.current.contains(event.target)) {
       return
     }
@@ -326,7 +326,7 @@ function Header({ location }) {
                                   id="menu-list-grow"
                                   onKeyDown={handleListKeyDown}
                                 >
-                                  {products.map((elem) => (
+                                  {products.map(elem => (
                                     <Link
                                       key={`product_link_${elem}`}
                                       to={`/products/${elem}`}
