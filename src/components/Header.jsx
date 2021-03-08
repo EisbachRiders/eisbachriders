@@ -222,7 +222,7 @@ function Header({ location }) {
           href="https://www.instagram.com/eisbachriders/"
           aria-label="instagram"
           size="small"
-          rel="noopener"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <InstagramIcon className={classes.icon} />
@@ -231,7 +231,7 @@ function Header({ location }) {
           href="https://www.pinterest.com/eisbachriders/"
           aria-label="pinterest"
           size="small"
-          rel="noopener"
+          rel="noopener noreferrer"
           target="_blank"
         >
           <PinterestIcon className={classes.icon} />
@@ -273,7 +273,7 @@ function Header({ location }) {
                     <a
                       href="https://secondwavesurfing.com/shop/"
                       alt="shop"
-                      rel="noopener"
+                      rel="noopener noreferrer"
                       target="_blank"
                       className={clsx(classes.link, {
                         [classes.linkActive]: elem === location,
@@ -383,7 +383,7 @@ function Header({ location }) {
                         className={classes.link}
                         href="https://secondwavesurfing.com/shop/"
                         alt="shop"
-                        rel="noopener"
+                        rel="noopener noreferrer"
                         target="_blank"
                       >
                         {t(`links.${elem}`)}
