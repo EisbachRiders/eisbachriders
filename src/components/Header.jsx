@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react"
 import { useTranslation } from "react-i18next"
 import clsx from "clsx"
-import { Link } from "gatsby-theme-material-ui"
+import Link from "./ui/Link"
 import { makeStyles } from "@material-ui/styles"
 import IconButton from "@material-ui/core/IconButton"
 import Button from "@material-ui/core/Button"
@@ -23,6 +23,7 @@ import FacebookIcon from "@material-ui/icons/Facebook"
 import InstagramIcon from "@material-ui/icons/Instagram"
 import PinterestIcon from "@material-ui/icons/Pinterest"
 import Container from "./ui/Container"
+import Contact from "./Contact"
 import logo from "../assets/logos/logo.svg"
 
 const useStyles = makeStyles((theme) => ({
@@ -69,6 +70,11 @@ const useStyles = makeStyles((theme) => ({
       textDecoration: "none",
     },
     [theme.breakpoints.up("md")]: {
+      letterSpacing: 2,
+      fontSize: 12,
+      fontWeight: 700,
+    },
+    [theme.breakpoints.up("lg")]: {
       letterSpacing: 2,
       fontSize: 24,
       fontWeight: 700,
@@ -125,6 +131,9 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       background: "transparent",
     },
+  },
+  sub: {
+    paddingLeft: 45,
   },
 }))
 
@@ -185,8 +194,7 @@ function Header({ location }) {
     threshold: 0,
   })
 
-  const links = ["urban", "products", "shop", "about"]
-  const mobileLinks = ["contact", "customerService"]
+  const links = ["urban", "products", "recycled-fins", "shop", "about"]
   const products = [
     "surfboard-fins",
     "sup-longboard-fins",
@@ -222,7 +230,7 @@ function Header({ location }) {
           href="https://www.instagram.com/eisbachriders/"
           aria-label="instagram"
           size="small"
-          rel="noopener noreferrer"
+          rel="noopener"
           target="_blank"
         >
           <InstagramIcon className={classes.icon} />
@@ -231,7 +239,7 @@ function Header({ location }) {
           href="https://www.pinterest.com/eisbachriders/"
           aria-label="pinterest"
           size="small"
-          rel="noopener noreferrer"
+          rel="noopener"
           target="_blank"
         >
           <PinterestIcon className={classes.icon} />
@@ -252,7 +260,7 @@ function Header({ location }) {
               alt="eisbach riders logo"
             />
           </Link>
-          <Hidden smDown>
+          <Hidden mdDown>
             <List
               component="nav"
               aria-label="website navigation"
@@ -271,10 +279,7 @@ function Header({ location }) {
                 >
                   {elem === "shop" ? (
                     <a
-                      href="https://secondwavesurfing.com/shop/"
-                      alt="shop"
-                      rel="noopener noreferrer"
-                      target="_blank"
+                      href="https://secondwavesurfing.com/shop"
                       className={clsx(classes.link, {
                         [classes.linkActive]: elem === location,
                       })}
@@ -291,8 +296,7 @@ function Header({ location }) {
                         }
                         aria-haspopup="true"
                         onMouseOver={handleToggleProducts}
-                        classes={{ root: classes.link }}
-                        className={classes.buttonOverride}
+                        className={clsx(classes.link, classes.buttonOverride)}
                       >
                         {elem}
                       </Link>
@@ -372,48 +376,70 @@ function Header({ location }) {
                 aria-label="website navigation"
                 className={classes.linkContainer}
               >
-                {links.map((elem, idx) => (
-                  <ListItem
-                    button
-                    key={`navItem${idx}`}
-                    className={classes.listItemMobile}
+                <ListItem button className={classes.listItemMobile}>
+                  <Link to="/urban" className={classes.link}>
+                    {t("links.urban")}
+                  </Link>
+                </ListItem>
+                <ListItem button className={classes.listItemMobile}>
+                  <Link to="/products" className={classes.link}>
+                    {t("links.products")}
+                  </Link>
+                </ListItem>
+                <ListItem
+                  button
+                  className={clsx(classes.sub, classes.listItemMobile)}
+                >
+                  <Link to="/products/surfboard-fins" className={classes.link}>
+                    {t("product.surfboard-fins")}
+                  </Link>
+                </ListItem>
+                <ListItem
+                  button
+                  className={clsx(classes.sub, classes.listItemMobile)}
+                >
+                  <Link
+                    to="/products/sup-longboard-fins"
+                    className={classes.link}
                   >
-                    {elem === "shop" ? (
-                      <a
-                        className={classes.link}
-                        href="https://secondwavesurfing.com/shop/"
-                        alt="shop"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
-                        {t(`links.${elem}`)}
-                      </a>
-                    ) : elem === "blog" ? (
-                      <a
-                        href="https://secondwavesurfing.com/blog"
-                        alt="blog"
-                        className={classes.link}
-                      >
-                        {t(`links.${elem}`)}
-                      </a>
-                    ) : (
-                      <Link to={`/${elem}`} className={classes.link}>
-                        {t(`links.${elem}`)}
-                      </Link>
-                    )}
-                  </ListItem>
-                ))}
-                {mobileLinks.map((elem, idx) => (
-                  <ListItem
-                    button
-                    key={`navItem${idx}`}
-                    className={classes.listItemMobile}
-                  >
-                    <Link to={`/${elem}`} className={classes.link}>
-                      {t(`links.${elem}`)}
-                    </Link>
-                  </ListItem>
-                ))}
+                    {t("product.sup-longboard-fins")}
+                  </Link>
+                </ListItem>
+                <ListItem
+                  button
+                  className={clsx(classes.sub, classes.listItemMobile)}
+                >
+                  <Link to="/products/leashes" className={classes.link}>
+                    {t("product.leashes")}
+                  </Link>
+                </ListItem>
+                <ListItem
+                  button
+                  className={clsx(classes.sub, classes.listItemMobile)}
+                >
+                  <Link to="/products/accessories" className={classes.link}>
+                    {t("product.accessories")}
+                  </Link>
+                </ListItem>
+                <ListItem
+                  button
+                  className={clsx(classes.sub, classes.listItemMobile)}
+                >
+                  <Link to="/products/apparel" className={classes.link}>
+                    {t("product.apparel")}
+                  </Link>
+                </ListItem>
+                <ListItem button className={classes.listItemMobile}>
+                  <Link to="/recycled-fins" className={classes.link}>
+                    {t("links.recycled-fins")}
+                  </Link>
+                </ListItem>
+                <ListItem button className={classes.listItemMobile}>
+                  <Link to="/about" className={classes.link}>
+                    {t("links.about")}
+                  </Link>
+                </ListItem>
+                <Contact variant="header" />
               </List>
             </SwipeableDrawer>
           </Hidden>
