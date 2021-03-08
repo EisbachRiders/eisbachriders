@@ -4,11 +4,11 @@ import Link from "../ui/Link"
 import clsx from "clsx"
 import { makeStyles } from "@material-ui/styles"
 import Hidden from "@material-ui/core/Hidden"
-import Newsletter from "./newsletter/Newsletter"
-import Container from "./ui/Container"
-import Contact from "./Contact"
+import Newsletter from "../newsletter/Newsletter"
+import Container from "../ui/Container"
+import Contact from "../Contact"
 import { StaticImage } from "gatsby-plugin-image"
-import logo from "../assets/logos/logo_white.svg"
+import logo from "../../assets/logos/logo_white.svg"
 
 const useStyles = makeStyles((theme) => ({
   container: {
