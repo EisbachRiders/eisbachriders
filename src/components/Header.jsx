@@ -185,7 +185,7 @@ function Header({ location }) {
     threshold: 0,
   })
 
-  const links = ["urban", "products", "about"]
+  const links = ["urban", "products", "shop", "about"]
   const mobileLinks = ["contact", "customerService"]
   const products = [
     "surfboard-fins",
@@ -269,10 +269,12 @@ function Header({ location }) {
                       : classes.listItem
                   }
                 >
-                  {elem === "blog" ? (
+                  {elem === "shop" ? (
                     <a
-                      href="https://secondwavesurfing.com/blog"
-                      alt="blog"
+                      href="https://secondwavesurfing.com/shop/"
+                      alt="shop"
+                      rel="noopener"
+                      target="_blank"
                       className={clsx(classes.link, {
                         [classes.linkActive]: elem === location,
                       })}
@@ -378,9 +380,11 @@ function Header({ location }) {
                   >
                     {elem === "shop" ? (
                       <a
-                        href="https://shop.eisbach-riders.com/"
-                        alt="shop"
                         className={classes.link}
+                        href="https://secondwavesurfing.com/shop/"
+                        alt="shop"
+                        rel="noopener"
+                        target="_blank"
                       >
                         {t(`links.${elem}`)}
                       </a>
