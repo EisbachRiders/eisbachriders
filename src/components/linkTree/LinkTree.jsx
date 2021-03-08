@@ -136,7 +136,7 @@ function LinkTree() {
       <div className={classes.container}>
         {links.map((elem, idx) => (
           <div className={classes.item} key={`link${idx}`}>
-            <a href={elem.link} target="_blank" rel="noopener">
+            <a href={elem.link} target="_blank" rel="noopener noreferrer">
               <Img
                 fluid={data[elem.img].childImageSharp.fluid}
                 alt={elem.title}

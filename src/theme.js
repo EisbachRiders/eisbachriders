@@ -51,37 +51,9 @@ const theme = createMuiTheme({
   color,
   typography: {
     fontFamily: ["Raleway", "sans-serif"].join(","),
-<<<<<<< HEAD:src/theme.js
-    h1: {
-      letterSpacing: 2,
-    },
-    h2: {
-      letterSpacing: 2,
-    },
-    h3: {
-      letterSpacing: 2,
-    },
-    h4: {
-      letterSpacing: 2,
-    },
-    h5: {
-      letterSpacing: 2,
-    },
-    body1: {
-      letterSpacing: 1.5,
-      fontSize: 14,
-    },
-    body2: {
-      letterSpacing: 1.5,
-      fontSize: 12,
-    },
-    button: {
-      fontFamily: "'Raleway', sans-serif",
-      letterSpacing: 3,
-    },
   },
-  components: {
-    MuiButton: {
+  components:{
+    MuiButton:{
       styleOverrides: {
         root: {
           padding: "9px 27px",
@@ -90,11 +62,9 @@ const theme = createMuiTheme({
         contained: {
           boxShadow: "none",
         },
-      },
-    },
-=======
->>>>>>> new-wordpress:src/gatsby-theme-material-ui-top-layout/theme.js
-  },
+      }
+    }
+  }
 })
 
 export default theme

@@ -37,6 +37,11 @@ const useStyles = makeStyles((theme) => ({
       flexBasis: "48%",
     },
   },
+  text:{
+    color: "#fff",
+    fontWeight: "700",
+    fontSize: 20
+  },
   boxSmall: {
     flexBasis: "100%",
     marginBottom: 30,
@@ -67,16 +72,6 @@ const useStyles = makeStyles((theme) => ({
     left: "50%",
     transform: "translate(-50%, -50%)",
   },
-<<<<<<< HEAD
-  text: {
-    color: theme.color.white,
-    marginTop: 0,
-    marginBottom: 5,
-    fontSize: 20,
-    fontWeight: "bold",
-  },
-=======
->>>>>>> new-wordpress
   title: {
     textTransform: "capitalize",
     fontSize: 18,
@@ -95,7 +90,6 @@ const useStyles = makeStyles((theme) => ({
     padding: 30,
     textAlign: "left",
   },
-
   link: {
     textDecoration: "none",
     "&:hover": {
