@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby-theme-material-ui"
-import Img from "gatsby-image"
-import { useStaticQuery, graphql } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 import { makeStyles } from "@material-ui/core/styles"
 import Hidden from "@material-ui/core/Hidden"
 import Container from "../ui/Container"
@@ -11,54 +10,31 @@ const useStyles = makeStyles(theme => ({
     width: "100%",
   },
   img: {
-    margin: "0 auto",
     width: "100%",
-    // [theme.breakpoints.up("sm")]: {
-    //   width: "100%",
-    // },
+    margin: "0 auto",
   },
 }))
 
 function Ad() {
   const classes = useStyles()
-  const data = useStaticQuery(graphql`
-    query {
-      fileName: file(relativePath: { eq: "quickLockAD.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      mobile: file(relativePath: { eq: "quickLockAD-mobile.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
 
   return (
     <Container>
       <Link to="/recycled-fins" className={classes.link}>
         <Hidden mdDown>
-          <Img
-            fluid={data.fileName.childImageSharp.fluid}
+          <StaticImage
+            src="../../assets/websiteImages/quickLockAD.png"
             alt="quick lock ad"
-            placeholderStyle={{ backgroundColor: `white` }}
+            placeholder="blurred"
             className={classes.img}
-            imgStyle={{ objectPosition: "center center" }}
           />
         </Hidden>
         <Hidden mdUp>
-          <Img
-            fluid={data.mobile.childImageSharp.fluid}
+          <StaticImage
+            src="../../assets/websiteImages/quickLockAD-mobile.png"
             alt="quick lock ad"
-            placeholderStyle={{ backgroundColor: `white` }}
+            placeholder="blurred"
             className={classes.img}
-            imgStyle={{ objectPosition: "center center" }}
           />
         </Hidden>
       </Link>

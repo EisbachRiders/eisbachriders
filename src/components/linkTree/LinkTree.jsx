@@ -1,6 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 import { makeStyles } from "@material-ui/styles"
 import Container from "../ui/Container"
 import logo from "../../assets/logos/logo.png"
@@ -60,65 +59,28 @@ const useStyles = makeStyles(theme => ({
 function LinkTree() {
   const classes = useStyles()
 
-  const data = useStaticQuery(graphql`
-    query {
-      website: file(relativePath: { eq: "website.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
-        }
-      }
-      shop: file(
-        relativePath: { eq: "sustainable-surf-solutions-mobile-en.png" }
-      ) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
-        }
-      }
-      recycledFins: file(relativePath: { eq: "quickLockAD-mobile.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
-        }
-      }
-      onePercent: file(
-        relativePath: {
-          eq: "eisbach-riders-joins-1-percent-for-the-planet.png"
-        }
-      ) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid_tracedSVG
-          }
-        }
-      }
-    }
-  `)
-
   const links = [
     {
       title: "Eisbach Riders",
-      img: "website",
+      img: "../../assets/websiteImages/website.png",
       link: "https://eisbach-riders.com/",
     },
     {
       title: "SWS Shop",
-      img: "shop",
+      img:
+        "../../assets/websiteImages/sustainable-surf-solutions-mobile-en.png",
       link: "https://secondwavesurfing.com/shop/",
     },
     {
       title: "Recycled Quick-Lock Touring Fin",
-      img: "recycledFins",
+      img: "../../assets/websiteImages/quickLockAD-mobile.png",
       link:
         "https://secondwavesurfing.com/blog/eisbach-riders-a-touring-fin-made-of-recycled-waste-material-for-stand-up-paddling-with-the-quick-lock-system/",
     },
     {
       title: "1% for the Planet",
-      img: "onePercent",
+      img:
+        "../../assets/websiteImages/eisbach-riders-joins-1-percent-for-the-planet.png",
       link:
         "https://secondwavesurfing.com/blog/eisbach-riders-joins-1-percent-for-the-planet/",
     },
@@ -137,12 +99,11 @@ function LinkTree() {
         {links.map((elem, idx) => (
           <div className={classes.item} key={`link${idx}`}>
             <a href={elem.link} target="_blank" rel="noopener noreferrer">
-              <Img
-                fluid={data[elem.img].childImageSharp.fluid}
+              <StaticImage
+                src={elem.img}
                 alt={elem.title}
-                placeholderStyle={{ backgroundColor: `white` }}
+                placeholder="blurred"
                 className={classes.img}
-                imgStyle={{ objectPosition: "center center" }}
               />
               <p className={classes.text}>{elem.title}</p>
             </a>

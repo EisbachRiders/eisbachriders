@@ -1,6 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 import clsx from "clsx"
 import { useTranslation } from "react-i18next"
 import { makeStyles } from "@material-ui/core/styles"
@@ -106,70 +105,31 @@ const useStyles = makeStyles(theme => ({
 function RecycledFins() {
   const classes = useStyles()
   const { t } = useTranslation()
-  const images = useStaticQuery(graphql`
-    query {
-      shape: file(
-        relativePath: {
-          eq: "eisbach-riders-quick-lock-touring-fin-paddling-on-the-bodensee.jpg"
-        }
-      ) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      unsplash: file(relativePath: { eq: "kyle-hinkson-unsplash.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      fileName: file(relativePath: { eq: "quickLockAD.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      mobile: file(relativePath: { eq: "quickLockAD-mobile.png" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
 
   return (
     <Container>
       <Hidden mdDown>
-        <Img
-          fluid={images.fileName.childImageSharp.fluid}
+        <StaticImage
+          src="../../assets/websiteImages/quickLockAD.png"
           alt="quick lock ad"
-          placeholderStyle={{ backgroundColor: `white` }}
+          placeholder="blurred"
           className={classes.banner}
-          imgStyle={{ objectPosition: "center center" }}
         />
       </Hidden>
       <Hidden mdUp>
-        <Img
-          fluid={images.mobile.childImageSharp.fluid}
+        <StaticImage
+          src="../../assets/websiteImages/quickLockAD-mobile.png"
           alt="quick lock ad"
-          placeholderStyle={{ backgroundColor: `white` }}
+          placeholder="blurred"
           className={classes.banner}
-          imgStyle={{ objectPosition: "center center" }}
         />
       </Hidden>
       <div className={clsx(classes.flex, classes.flexCenter, classes.reverse)}>
-        <Img
-          fluid={images.shape.childImageSharp.fluid}
+        <StaticImage
+          src="../../assets/websiteImages/eisbach-riders-quick-lock-touring-fin-paddling-on-the-bodensee.jpg"
           alt="sup fin"
-          placeholderStyle={{ backgroundColor: `white` }}
+          placeholder="blurred"
           className={classes.img}
-          imgStyle={{ objectPosition: "center center" }}
         />
         <div className={classes.text}>
           <div>
@@ -223,12 +183,11 @@ function RecycledFins() {
           <p>{t("recycled.projectHistoryInfo2")}</p>
           <p>{t("recycled.projectHistoryInfo3")}</p>
         </div>
-        <Img
-          fluid={images.unsplash.childImageSharp.fluid}
-          alt="wave"
-          placeholderStyle={{ backgroundColor: `blue` }}
+        <StaticImage
+          src="../../assets/websiteImages/kyle-hinkson-unsplash.jpg"
+          alt="sup paddler"
+          placeholder="blurred"
           className={classes.img}
-          imgStyle={{ objectPosition: "center center" }}
         />
       </div>
 

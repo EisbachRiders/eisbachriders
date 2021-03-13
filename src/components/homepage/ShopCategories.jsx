@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next"
 import clsx from "clsx"
 import Container from "../ui/Container"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   header: {
     marginBottom: 30,
     textTransform: "capitalize",
@@ -37,10 +37,10 @@ const useStyles = makeStyles((theme) => ({
       flexBasis: "48%",
     },
   },
-  text:{
+  text: {
     color: "#fff",
     fontWeight: "700",
-    fontSize: 20
+    fontSize: 20,
   },
   boxSmall: {
     flexBasis: "100%",
@@ -152,7 +152,7 @@ function ShopCategories() {
       <h2 className={classes.header}>{t("homepage.category")}</h2>
       {small.map((box, idx) => (
         <div className={classes.container} key={`box${idx}`}>
-          {box.map((elem) => (
+          {box.map(elem => (
             <div
               className={clsx(
                 classes.box,
@@ -163,7 +163,7 @@ function ShopCategories() {
               <Img
                 fluid={
                   data.allFile.edges.find(
-                    (img) =>
+                    img =>
                       img.node.childImageSharp.fluid.originalName ===
                       `${elem.path}.jpg`
                   ).node.childImageSharp.fluid

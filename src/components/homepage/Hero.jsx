@@ -1,6 +1,5 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 import { useTranslation } from "react-i18next"
 import { makeStyles } from "@material-ui/core/styles"
 
@@ -95,26 +94,14 @@ const useStyles = makeStyles(theme => ({
 function Hero() {
   const classes = useStyles()
   const { t } = useTranslation()
-  const data = useStaticQuery(graphql`
-    query {
-      fileName: file(relativePath: { eq: "hero.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
 
   return (
     <div className={classes.root}>
-      <Img
-        fluid={data.fileName.childImageSharp.fluid}
-        alt="wave"
-        placeholderStyle={{ backgroundColor: `blue` }}
+      <StaticImage
+        src="../../assets/websiteImages/hero.jpg"
+        alt="surfer"
+        placeholder="blurred"
         className={classes.img}
-        imgStyle={{ objectPosition: "center center" }}
       />
       <div className={classes.container}>
         <h1 className={classes.title}>

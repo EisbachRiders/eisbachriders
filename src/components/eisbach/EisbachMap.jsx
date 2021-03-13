@@ -1,6 +1,5 @@
 import React, { useState, useRef, Fragment, useEffect } from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 import GoogleMapReact from "google-map-react"
 import PlacesAutocomplete, {
   geocodeByAddress,
@@ -8,11 +7,6 @@ import PlacesAutocomplete, {
 } from "react-places-autocomplete"
 import { useTranslation } from "react-i18next"
 import { makeStyles } from "@material-ui/core/styles"
-import Paper from "@material-ui/core/Paper"
-import Grow from "@material-ui/core/Grow"
-import Popper from "@material-ui/core/Popper"
-import MenuItem from "@material-ui/core/MenuItem"
-import MenuList from "@material-ui/core/MenuList"
 import List from "@material-ui/core/List"
 import ListItem from "@material-ui/core/ListItem"
 import ListItemText from "@material-ui/core/ListItemText"
@@ -28,8 +22,14 @@ import mapStyles from "./mapStyles.json"
 import waveIcon from "../../assets/icons/surf.svg"
 import waveIconSelected from "../../assets/icons/surfSelected.svg"
 import allLocations from "./locations"
+import Autocomplete from "@material-ui/core/Autocomplete"
+import LocationOnIcon from "@material-ui/icons/LocationOn"
+import Grid from "@material-ui/core/Grid"
+import Typography from "@material-ui/core/Typography"
+import parse from "autosuggest-highlight/parse"
+import throttle from "lodash/throttle"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   header: {
     textAlign: "center",
     width: "100%",
@@ -74,7 +74,6 @@ const useStyles = makeStyles((theme) => ({
     height: 32,
     width: 32,
   },
-
   listItem: {
     padding: 30,
   },
@@ -91,13 +90,6 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     textAlign: "center",
   },
-  popper: {
-    zIndex: 300,
-    width: "50%",
-  },
-  paper: {
-    width: "100%",
-  },
   markerButton: {
     border: "none",
     background: "transparent",
@@ -106,11 +98,29 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
+function loadScript(src, position, id) {
+  if (!position) {
+    return
+  }
+
+  const script = document.createElement("script")
+  script.setAttribute("async", "")
+  script.setAttribute("id", id)
+  script.src = src
+  position.appendChild(script)
+}
+
+const autocompleteService = { current: null }
+
 const Marker = ({ children }) => children
 
 function EisbachMap() {
   const [locations, setLocations] = useState(allLocations)
   const [address, setAddress] = useState("")
+  const [value, setValue] = useState(null)
+  const [inputValue, setInputValue] = useState("")
+  const [options, setOptions] = useState([])
+  const loaded = useRef(false)
   const mapRef = useRef()
   const [bounds, setBounds] = useState(null)
   const [selected, setSelected] = useState(null)
@@ -120,21 +130,65 @@ function EisbachMap() {
   const { t } = useTranslation()
   const anchorRef = useRef(null)
 
-  const img = useStaticQuery(graphql`
-    query {
-      fileName: file(relativePath: { eq: "finsLost.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 2000) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
+  if (typeof window !== "undefined" && !loaded.current) {
+    if (!document.querySelector("#google-maps")) {
+      loadScript(
+        `https://maps.googleapis.com/maps/api/js?key=AIzaSyCn3R1uz12niMl3IERD9wwr1BId_ztMYwI&libraries=places`,
+        document.querySelector("head"),
+        "google-maps"
+      )
     }
-  `)
+
+    loaded.current = true
+  }
+
+  const fetch = React.useMemo(
+    () =>
+      throttle((request, callback) => {
+        autocompleteService.current.getPlacePredictions(request, callback)
+      }, 200),
+    []
+  )
+
+  useEffect(() => {
+    let active = true
+
+    if (!autocompleteService.current && window.google) {
+      autocompleteService.current = new window.google.maps.places.AutocompleteService()
+    }
+    if (!autocompleteService.current) {
+      return undefined
+    }
+
+    if (inputValue === "") {
+      setOptions(value ? [value] : [])
+      return undefined
+    }
+
+    fetch({ input: inputValue }, results => {
+      if (active) {
+        let newOptions = []
+
+        if (value) {
+          newOptions = [value]
+        }
+
+        if (results) {
+          newOptions = [...newOptions, ...results]
+        }
+
+        setOptions(newOptions)
+      }
+    })
+
+    return () => {
+      active = false
+    }
+  }, [value, inputValue, fetch])
 
   useEffect(() => {
     if (bounds) {
-      let filteredList = allLocations.filter((elem) => {
+      let filteredList = allLocations.filter(elem => {
         return (
           elem.lng >= bounds[0] &&
           elem.lng <= bounds[2] &&
@@ -151,7 +205,7 @@ function EisbachMap() {
     setCenter({ lat: 48.12, lng: 11.59 })
   }
 
-  const handleSelect = async (value) => {
+  const handleSelect = async value => {
     const results = await geocodeByAddress(value)
     const latLng = await getLatLng(results[0])
     setAddress(value)
@@ -161,86 +215,64 @@ function EisbachMap() {
   return (
     <>
       <div className={classes.searchContainer}>
-        <PlacesAutocomplete
-          value={address}
-          onChange={setAddress}
-          onSelect={handleSelect}
-        >
-          {({
-            getInputProps,
-            suggestions,
-            getSuggestionItemProps,
-            loading,
-          }) => (
-            <div className={classes.autocomplete}>
-              <TextField
-                className={classes.autocomplete}
-                ref={anchorRef}
-                variant="outlined"
-                fullWidth
-                InputProps={{
-                  endAdornment: (
-                    <InputAdornment position="end">
-                      <IconButton aria-label="clear" onClick={handleIconButton}>
-                        <ClearIcon />
-                      </IconButton>
-                    </InputAdornment>
-                  ),
-                }}
-                {...getInputProps({
-                  placeholder: "Where is your next adventure!",
-                })}
-              />
-              <Popper
-                open={suggestions ? true : false}
-                anchorEl={anchorRef.current}
-                role={undefined}
-                transition
-                disablePortal
-                className={classes.popper}
-              >
-                {({ TransitionProps, placement }) => (
-                  <Grow
-                    {...TransitionProps}
-                    style={{
-                      transformOrigin:
-                        placement === "bottom" ? "center top" : "center bottom",
-                    }}
-                  >
-                    <Paper className={classes.paper}>
-                      {loading ? <div>...loading</div> : null}
-                      <MenuList
-                        // autoFocusItem={open}
-                        id="menu-list-grow"
+        {/* <Autocomplete
+          id="google-map-demo"
+          style={{ width: 300 }}
+          getOptionLabel={option =>
+            typeof option === "string" ? option : option.description
+          }
+          filterOptions={x => x}
+          options={options}
+          autoComplete
+          includeInputInList
+          filterSelectedOptions
+          className={classes.autocomplete}
+          value={value}
+          onChange={(event, newValue) => {
+            setOptions(newValue ? [newValue, ...options] : options)
+            setValue(newValue)
+          }}
+          onInputChange={(event, newInputValue) => {
+            setInputValue(newInputValue)
+          }}
+          renderInput={params => (
+            <TextField {...params} label={t("eisbach.adventure")} fullWidth />
+          )}
+          renderOption={(props, option) => {
+            const matches =
+              option.structured_formatting.main_text_matched_substrings
+            const parts = parse(
+              option.structured_formatting.main_text,
+              matches.map(match => [match.offset, match.offset + match.length])
+            )
+
+            return (
+              <li {...props}>
+                <Grid container alignItems="center">
+                  <Grid item>
+                    <LocationOnIcon className={classes.icon} />
+                  </Grid>
+                  <Grid item xs>
+                    {parts.map((part, index) => (
+                      <span
+                        key={index}
                         style={{
-                          display: suggestions.length === 0 ? "none" : "block",
+                          fontWeight: part.highlight ? 700 : 400,
                         }}
                       >
-                        {suggestions.map((suggestion) => {
-                          const style = {
-                            backgroundColor: suggestion.active
-                              ? "#f3f8fc"
-                              : "#fff",
-                            padding: 15,
-                          }
-                          return (
-                            <MenuItem
-                              {...getSuggestionItemProps(suggestion, {
-                                style,
-                              })}
-                            >
-                              {suggestion.description}
-                            </MenuItem>
-                          )
-                        })}
-                      </MenuList>
-                    </Paper>
-                  </Grow>
-                )}
-              </Popper>
-            </div>
-          )}
-        </PlacesAutocomplete>
+                        {part.text}
+                      </span>
+                    ))}
+
+                    <Typography variant="body2" color="textSecondary">
+                      {option.structured_formatting.secondary_text}
+                    </Typography>
+                  </Grid>
+                </Grid>
+              </li>
+            )
+          }}
+        /> */}
       </div>
       <div className={classes.container}>
         <div className={classes.mapContainer}>
@@ -333,12 +365,10 @@ function EisbachMap() {
           )}
           {locations.length === 0 && (
             <div>
-              <Img
-                fluid={img.fileName.childImageSharp.fluid}
+              <StaticImage
+                src="../../assets/websiteImages/lostFins.png"
                 alt="lost fins"
-                placeholderStyle={{ backgroundColor: `blue` }}
-                className={classes.img}
-                imgStyle={{ objectPosition: "center center" }}
+                placeholder="blurred"
               />
               <p className={classes.noResults}>{t("eisbach.noresults")}</p>
             </div>

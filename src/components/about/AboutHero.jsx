@@ -1,10 +1,9 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 import { useTranslation } from "react-i18next"
 import { makeStyles } from "@material-ui/core/styles"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     [theme.breakpoints.up("sm")]: {
       position: "relative",
@@ -60,26 +59,14 @@ const useStyles = makeStyles((theme) => ({
 function AboutHero() {
   const classes = useStyles()
   const { t } = useTranslation()
-  const data = useStaticQuery(graphql`
-    query {
-      fileName: file(relativePath: { eq: "aboutHero.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 2000) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
 
   return (
     <div className={classes.root}>
-      <Img
-        fluid={data.fileName.childImageSharp.fluid}
+      <StaticImage
+        src="../../assets/websiteImages/aboutHero.jpg"
         alt="wave"
-        placeholderStyle={{ backgroundColor: `blue` }}
+        placeholder="blurred"
         className={classes.img}
-        imgStyle={{ objectPosition: "center center" }}
       />
       <div className={classes.container}>
         <p className={classes.title}>{t("about.about")}</p>
