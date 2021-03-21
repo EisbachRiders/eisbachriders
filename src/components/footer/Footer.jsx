@@ -137,7 +137,9 @@ const useStyles = makeStyles(theme => ({
 
 function Footer() {
   const classes = useStyles()
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+
+  console.log(i18n.language)
 
   return (
     <footer className={classes.footer}>
@@ -173,14 +175,18 @@ function Footer() {
 
         <div className={classes.copyrightContainer}>
           <Link
-            to="/dataProtection"
+            to={
+              i18n.language === "de"
+                ? "/datenschutzerklarung"
+                : "/dataProtection"
+            }
             className={clsx(classes.textSmall, classes.link)}
           >
             {t("links.data")}
           </Link>
           |
           <Link
-            to="/termsAndConditions"
+            to={i18n.language === "de" ? "/agbs" : "/termasAndConditions"}
             className={clsx(classes.textSmall, classes.link)}
           >
             {t("links.terms")}
