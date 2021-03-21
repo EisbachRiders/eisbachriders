@@ -206,37 +206,37 @@ function Contact({ variant, align }) {
         fullWidth={true}
       >
         <DialogTitle id="contact-form-title">
-          {t("form.contactTitle")}
+          {t("newsletter.contactTitle")}
         </DialogTitle>
         <form noValidate autoComplete="off" className={classes.form}>
           <div className={classes.inputContainer}>
             <TextField
               id="name"
-              label={t("form.name")}
+              label={t("newsletter.name")}
               type="text"
               className={classes.input}
               value={name}
               variant="outlined"
-              placeholder={t("form.name")}
+              placeholder={t("newsletter.name")}
               onChange={handleChange("name")}
               required
               error={!isNameValid}
             />
             <TextField
               id="email"
-              label={t("form.email")}
+              label={t("newsletter.email")}
               type="email"
               variant="outlined"
               className={classes.input}
               value={email}
-              placeholder={t("form.email")}
+              placeholder={t("newsletter.email")}
               onChange={handleChange("email")}
               required
               error={!isEmailValid}
             />
           </div>
           <TextField
-            label={t("form.message")}
+            label={t("newsletter.message")}
             id="message"
             type="text"
             variant="outlined"
@@ -244,14 +244,14 @@ function Contact({ variant, align }) {
             rows={4}
             className={classes.inputMessage}
             value={message}
-            placeholder={t("form.message")}
+            placeholder={t("newsletter.message")}
             onChange={handleChange("message")}
             required
             error={!isMessageValid}
           />
           <DialogActions>
             <Button onClick={() => setOpen(false)} color="primary">
-              {t("form.cancel")}
+              {t("newsletter.cancel")}
             </Button>
             {isLoading ? (
               <CircularProgress size={24} className={classes.progress} />
@@ -261,7 +261,7 @@ function Contact({ variant, align }) {
                 variant="contained"
                 color="primary"
               >
-                {t("form.send")}
+                {t("newsletter.send")}
               </Button>
             )}
           </DialogActions>
@@ -277,7 +277,7 @@ function Contact({ variant, align }) {
         }}
       >
         <Alert onClose={handleSnackbarClose} variant="filled" severity={alert}>
-          {isSnackbarOpen ? t("form.success") : t("form.error")}
+          {isSnackbarOpen ? t("newsletter.success") : t("newsletter.error")}
         </Alert>
       </Snackbar>
     </>
