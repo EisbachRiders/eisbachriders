@@ -73,6 +73,7 @@
     "name": "name",
     "message": "message",
     "send": "send",
+
     "error": "An error has occurred! Please try again later."
   },
   "footer": {
