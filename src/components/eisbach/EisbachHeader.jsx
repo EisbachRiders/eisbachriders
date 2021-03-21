@@ -1,10 +1,9 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 import { useTranslation } from "react-i18next"
 import { makeStyles } from "@material-ui/core/styles"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     position: "relative",
     height: 150,
@@ -50,26 +49,13 @@ function EisbachHeader() {
   const classes = useStyles()
   const { t } = useTranslation()
 
-  const img = useStaticQuery(graphql`
-    query {
-      fileName: file(relativePath: { eq: "street-art.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 2000) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <div className={classes.root}>
-      <Img
-        fluid={img.fileName.childImageSharp.fluid}
+      <StaticImage
+        src="../../assets/websiteImages/street-art.jpg"
         alt="street art"
-        placeholderStyle={{ backgroundColor: `blue` }}
+        placeholder="blurred"
         className={classes.backgroundImg}
-        imgStyle={{ objectPosition: "center center" }}
       />
       <div className={classes.backgroundContainer}>
         <h1 className={classes.h1}>{t("eisbach.localConditions")}</h1>

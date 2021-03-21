@@ -1,5 +1,4 @@
 import React from "react"
-import { graphql } from "gatsby"
 import { Link } from "gatsby-theme-material-ui"
 import { makeStyles } from "@material-ui/core/styles"
 import { useTranslation } from "react-i18next"
@@ -8,7 +7,7 @@ import Container from "../components/ui/Container"
 import SEO from "../components/seo"
 import FinnImg from "../assets/websiteImages/finsLost.png"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   container: {
     flexDirection: "column",
     alignItems: "center",
@@ -21,13 +20,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const NotFoundPage = ({ data, location }) => {
+const NotFoundPage = () => {
   const classes = useStyles()
   const { t } = useTranslation()
-  const siteTitle = data.site.siteMetadata.title
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout>
       <SEO title="404: Not Found" />
       <Container className={classes.container}>
         <h1>{t("404.notFound")}</h1>
@@ -42,13 +40,3 @@ const NotFoundPage = ({ data, location }) => {
 }
 
 export default NotFoundPage
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

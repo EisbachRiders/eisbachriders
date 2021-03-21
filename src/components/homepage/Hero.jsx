@@ -1,12 +1,9 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 import { useTranslation } from "react-i18next"
-import clsx from "clsx"
 import { makeStyles } from "@material-ui/core/styles"
-import Typography from "@material-ui/core/Typography"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     position: "relative",
     height: "100vh - 98px",
@@ -36,10 +33,6 @@ const useStyles = makeStyles((theme) => ({
     height: "100vh",
     marginTop: -98,
   },
-  text: {
-    color: theme.color.black,
-    fontFamily: "secondary",
-  },
   textBig: {
     [theme.breakpoints.up("sm")]: {
       fontSize: 72,
@@ -60,6 +53,11 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   title: {
+    fontFamily: "secondary",
+    fontWeight: 300,
+    margin: 0,
+    lineHeight: "1.167",
+    letterSpacing: 2,
     textTransform: "capitalize",
     fontSize: 52,
     marginBottom: 0,
@@ -75,9 +73,12 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   subtitle: {
+    fontFamily: "secondary",
     textTransform: "lowercase",
     textAlign: "center",
+    letterSpacing: 2,
     fontSize: 18,
+    margin: 0,
     [theme.breakpoints.up("md")]: {
       fontSize: 20,
     },
@@ -93,51 +94,22 @@ const useStyles = makeStyles((theme) => ({
 function Hero() {
   const classes = useStyles()
   const { t } = useTranslation()
-  const data = useStaticQuery(graphql`
-    query {
-      fileName: file(relativePath: { eq: "hero.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
 
   return (
     <div className={classes.root}>
-      <Img
-        fluid={data.fileName.childImageSharp.fluid}
-        alt="wave"
-        placeholderStyle={{ backgroundColor: `blue` }}
+      <StaticImage
+        src="../../assets/websiteImages/hero.jpg"
+        alt="surfer"
+        placeholder="blurred"
         className={classes.img}
-        imgStyle={{ objectPosition: "center center" }}
       />
       <div className={classes.container}>
-        <Typography
-          variant="h1"
-          gutterBottom
-          className={clsx(classes.text, classes.title)}
-        >
-          {/* <span className={classes.textBig}>E</span> */}
+        <h1 className={classes.title}>
           Eisbach
-        </Typography>
-        <Typography
-          variant="h1"
-          gutterBottom
-          className={clsx(classes.text, classes.title, classes.indent)}
-        >
-          {/* <span className={classes.textBig}>R</span> */}
-          Riders
-        </Typography>
-
-        <Typography
-          component="h2"
-          className={clsx(classes.text, classes.subtitle)}
-        >
-          {t("homepage.heroSubtitle")}
-        </Typography>
+          <br />
+          <span className={classes.indent}>Riders</span>
+        </h1>
+        <p className={classes.subtitle}>{t("homepage.heroSubtitle")}</p>
       </div>
     </div>
   )

@@ -1,14 +1,12 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby-theme-material-ui"
 import Button from "@material-ui/core/Button"
 import { makeStyles } from "@material-ui/styles"
 import { useTranslation } from "react-i18next"
-import clsx from "clsx"
 import Container from "../ui/Container"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   header: {
     marginBottom: 30,
     textTransform: "capitalize",
@@ -23,78 +21,29 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   box: {
-    position: "relative",
-    textAlign: "center",
-    background: theme.color.black,
-  },
-  boxBig: {
+    display: "grid",
     flexBasis: "100%",
-    marginBottom: 30,
-    [theme.breakpoints.up("sm")]: {
-      flexBasis: "48%",
-    },
-    [theme.breakpoints.up("md")]: {
-      flexBasis: "48%",
-    },
-  },
-  boxSmall: {
-    flexBasis: "100%",
-    marginBottom: 30,
-    [theme.breakpoints.up("sm")]: {
-      flexBasis: "48%",
-    },
-    [theme.breakpoints.up("lg")]: {
-      flexBasis: "22%",
-    },
-  },
-  img: {
-    width: "100%",
-    opacity: 0.8,
-  },
-  imgBig: {
     height: 200,
+    marginBottom: 30,
     [theme.breakpoints.up("lg")]: {
-      height: 300,
+      flexBasis: "48%",
+      marginBottom: 60,
+      height: 350,
     },
-  },
-  imgSmall: {
-    height: 200,
-  },
-  textbox: {
-    position: "absolute",
-    width: "100%",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
   },
   text: {
-    color: theme.color.white,
-    fontSize: 16,
-    marginTop: 0,
-    marginBottom: 5,
-  },
-  title: {
-    textTransform: "capitalize",
-    fontSize: 18,
-    fontWeight: 700,
-  },
-  subtitle: {
-    fontWeight: 700,
-    textTransform: "uppercase",
-    letterSpacing: 3,
-    marginBottom: 25,
+    color: "#fff",
+    fontWeight: "700",
+    fontSize: 20,
   },
   textContainer: {
-    position: "absolute",
-    bottom: "0%",
-    left: "0%",
+    gridArea: "1/1",
+    position: "relative",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "flex-start",
+    justifyContent: "flex-end",
     padding: 30,
-    textAlign: "left",
-  },
-  text: {
-    color: theme.color.white,
-    fontSize: 20,
-    fontWeight: "bold",
   },
   link: {
     textDecoration: "none",
@@ -107,46 +56,62 @@ const useStyles = makeStyles((theme) => ({
 function ShopCategories() {
   const classes = useStyles()
   const { t } = useTranslation()
-  const data = useStaticQuery(graphql`
-    query {
-      allFile(filter: { sourceInstanceName: { eq: "shopCategory" } }) {
-        edges {
-          node {
-            childImageSharp {
-              fluid {
-                originalName
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
 
   const small = [
     [
       {
         cat: "fins",
-        path: "fiberglass-single-tab-on-rocks-at-beach",
+        img: (
+          <StaticImage
+            src="../../assets/shopCategory/fiberglass-single-tab-on-rocks-at-beach.jpg"
+            alt="fin on rocky beach"
+            style={{
+              gridArea: "1/1",
+            }}
+          />
+        ),
         href: "https://shop.eisbach-riders.com/product-category/fins/",
         link: "/products/surfboard-fins",
       },
       {
         cat: "leashes",
-        path: "surfer-putting-on-blue-leash-at-beach",
+        img: (
+          <StaticImage
+            src="../../assets/shopCategory/surfer-putting-on-blue-leash-at-beach.jpg"
+            alt="surfer putting on leash"
+            style={{
+              gridArea: "1/1",
+            }}
+          />
+        ),
         href: "https://shop.eisbach-riders.com/product-category/leashes/",
         link: "/products/leashes",
       },
       {
         cat: "apparel",
-        path: "girl-sitting-at-lake",
+        img: (
+          <StaticImage
+            src="../../assets/shopCategory/girl-sitting-at-lake.jpg"
+            alt="girl sitting at lake"
+            style={{
+              gridArea: "1/1",
+            }}
+          />
+        ),
         href: "https://shop.eisbach-riders.com/product-category/apparel/",
         link: "/products/apparel",
       },
       {
         cat: "accessories",
-        path: "wax-comb-peeling-wax-off-surfboard",
+        img: (
+          <StaticImage
+            src="../../assets/shopCategory/wax-comb-peeling-wax-off-surfboard.jpg"
+            alt="wax comb peeling wax off surfboard"
+            style={{
+              gridArea: "1/1",
+            }}
+          />
+        ),
         href: "https://shop.eisbach-riders.com/product-category/accessories/",
         link: "/products/accessories",
       },
@@ -158,29 +123,9 @@ function ShopCategories() {
       <h2 className={classes.header}>{t("homepage.category")}</h2>
       {small.map((box, idx) => (
         <div className={classes.container} key={`box${idx}`}>
-          {box.map((elem) => (
-            <div
-              className={clsx(
-                classes.box,
-                idx === 0 ? classes.boxBig : classes.boxSmall
-              )}
-              key={`category${elem.cat}`}
-            >
-              <Img
-                fluid={
-                  data.allFile.edges.find(
-                    (img) =>
-                      img.node.childImageSharp.fluid.originalName ===
-                      `${elem.path}.jpg`
-                  ).node.childImageSharp.fluid
-                }
-                alt={elem.path}
-                className={clsx(
-                  classes.img,
-                  idx === 0 ? classes.imgBig : classes.imgSmall
-                )}
-                imgStyle={{ objectPosition: "center center" }}
-              />
+          {box.map(elem => (
+            <div className={classes.box} key={`category${elem.cat}`}>
+              {elem.img}
               <div className={classes.textContainer}>
                 <p className={classes.text}>{t(`shop.${elem.cat}Tagline`)}</p>
                 <Link to={elem.link} className={classes.link}>
@@ -194,17 +139,6 @@ function ShopCategories() {
                   </Button>
                 </Link>
               </div>
-              {/* <div className={classes.textbox}>
-                <p className={clsx(classes.text, classes.title)}>
-                  {t(`shop.${elem.cat}`)}
-                </p>
-                <p className={clsx(classes.text, classes.subtitle)}>
-                  {t(`shop.${elem.cat}Tagline`)}
-                </p>
-                <Link to={elem.link} className={classes.button}>
-                  {t("shop.viewCollection")}
-                </Link>
-              </div> */}
             </div>
           ))}
         </div>

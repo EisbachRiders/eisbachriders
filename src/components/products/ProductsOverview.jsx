@@ -1,12 +1,11 @@
 import React, { Fragment } from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 import { useTranslation } from "react-i18next"
 import { makeStyles } from "@material-ui/core/styles"
 import Container from "../ui/Container"
 import ShopItem from "./ShopItem"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   h1: {
     textAlign: "center",
     fontFamily: "secondary",
@@ -89,7 +88,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-const multipleOfFour = (array) => {
+const multipleOfFour = array => {
   array.sort((a, b) => a.menu_order - b.menu_order)
   const len = array.length
   const remainder = len % 4
@@ -107,26 +106,7 @@ function ProductsOverview({ products, category }) {
   const classes = useStyles()
   const { t } = useTranslation()
 
-  const data = useStaticQuery(graphql`
-    query {
-      fileName: file(relativePath: { eq: "street-art.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 2000) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      img: file(relativePath: { eq: "test2.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 2000) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
-
-  const shopItems = (value) => {
+  const shopItems = value => {
     const section = multipleOfFour(value)
     return section.map((elem, idx) => (
       <ShopItem product={elem.node} key={`fins${idx}`} />
@@ -153,12 +133,11 @@ function ProductsOverview({ products, category }) {
   return (
     <>
       <div className={classes.background}>
-        <Img
-          fluid={data.fileName.childImageSharp.fluid}
+        <StaticImage
+          src="../../assets/websiteImages/street-art.jpg"
           alt="street art"
-          placeholderStyle={{ backgroundColor: `blue` }}
+          placeholder="blurred"
           className={classes.backgroundImg}
-          imgStyle={{ objectPosition: "center center" }}
         />
         <div className={classes.backgroundContainer}>
           <h1 className={classes.h1}>{t(`product.${category}`)}</h1>
@@ -177,15 +156,8 @@ function ProductsOverview({ products, category }) {
           </div>
         ) : (
           <>
-            {subcat.map((elem) => (
+            {subcat.map(elem => (
               <Fragment key={`subcategory_${elem}`}>
-                {/* <Img
-                  fluid={data.img.childImageSharp.fluid}
-                  alt="street art"
-                  placeholderStyle={{ backgroundColor: `blue` }}
-                  className={classes.backgroundImg}
-                  // imgStyle={{ objectPosition: "center center" }}
-                /> */}
                 <div className={classes.subcat}>
                   <div className={classes.divider1} />
                   <p className={classes.subcatText}>{elem}</p>
@@ -195,9 +167,9 @@ function ProductsOverview({ products, category }) {
                   <div className={classes.section}>
                     {shopItems(
                       products
-                        .filter((item) =>
+                        .filter(item =>
                           item.node.productTags.edges
-                            .map((el) => el.node.name)
+                            .map(el => el.node.name)
                             .includes(elem)
                         )
                         .sort((a, b) => a.node.name.localeCompare(b.node.name))

@@ -1,6 +1,6 @@
 import React from "react"
 import { useTranslation } from "react-i18next"
-import { Link } from "gatsby-theme-material-ui"
+import Link from "../ui/Link"
 import clsx from "clsx"
 import { makeStyles } from "@material-ui/styles"
 import IconButton from "@material-ui/core/IconButton"
@@ -8,13 +8,10 @@ import Hidden from "@material-ui/core/Hidden"
 import FacebookIcon from "@material-ui/icons/Facebook"
 import InstagramIcon from "@material-ui/icons/Instagram"
 import PinterestIcon from "@material-ui/icons/Pinterest"
-import Newsletter from "./newsletter/Newsletter"
-import Container from "./ui/Container"
-import Contact from "./Contact"
+import Container from "../ui/Container"
+import Contact from "../Contact"
 
-import logo from "../assets/logos/logo_white.svg"
-
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   container: {
     flexDirection: "column",
   },
@@ -177,20 +174,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-function Footer() {
+function BottomFooter() {
   const classes = useStyles()
   const { t } = useTranslation()
 
   return (
     <footer className={classes.footer}>
-      <Newsletter />
-
-      {/* <Container alignItems="center" background="blackLt">
-        <div className={classes.imgContainer}>
-          <img src={fullLogo} alt="logo" className={classes.img} />
-        </div>
-      </Container> */}
-
       <Container
         justifyContent="center"
         background="black"
@@ -198,11 +187,6 @@ function Footer() {
         padding="none"
         className={classes.container}
       >
-        <div className={classes.logoContainer}>
-          <p className={classes.logo}>Eisbach</p>
-          <img src={logo} alt="logo" className={classes.img} />
-          <p className={classes.logo}>Riders</p>
-        </div>
         <div className={classes.copyrightContainer}>
           <Link
             to="/dataProtection"
@@ -228,6 +212,13 @@ function Footer() {
           |
           <Link to="/faq" className={clsx(classes.textSmall, classes.link)}>
             {t("links.faq")}
+          </Link>
+          |
+          <Link
+            to="/stockist"
+            className={clsx(classes.textSmall, classes.link)}
+          >
+            Stockist
           </Link>
           |
           <Contact variant="link" />
@@ -269,4 +260,4 @@ function Footer() {
   )
 }
 
-export default Footer
+export default BottomFooter

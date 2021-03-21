@@ -1,6 +1,5 @@
 import React from "react"
-import Img from "gatsby-image"
-import { useStaticQuery, graphql } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 import { useTranslation } from "react-i18next"
 import { makeStyles } from "@material-ui/core/styles"
 import Hidden from "@material-ui/core/Hidden"
@@ -9,7 +8,7 @@ import Typography from "@material-ui/core/Typography"
 import Container from "../ui/Container"
 import FeatureDetail from "./FeatureDetail"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   container: {
     display: "flex",
     flexDirection: "column",
@@ -79,19 +78,6 @@ const useStyles = makeStyles((theme) => ({
 function FeaturedProduct() {
   const classes = useStyles()
   const { t } = useTranslation()
-  const data = useStaticQuery(graphql`
-    query {
-      fileName: file(
-        relativePath: { eq: "single-tab-honeycomb-fin-green.png" }
-      ) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
 
   return (
     <Container background="grayLt">
@@ -101,12 +87,11 @@ function FeaturedProduct() {
         </Hidden>
         <Hidden only={["sm"]}>
           <div className={classes.containerImg}>
-            <Img
-              fluid={data.fileName.childImageSharp.fluid}
+            <StaticImage
+              src="../../assets/websiteImages/single-tab-honeycomb-fin-green.png"
               alt="featured product"
-              placeholderStyle={{ backgroundColor: `blue` }}
+              placeholder="blurred"
               className={classes.img}
-              imgStyle={{ objectPosition: "center center" }}
             />
           </div>
         </Hidden>

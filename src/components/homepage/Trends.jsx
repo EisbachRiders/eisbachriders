@@ -1,19 +1,14 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 import { useTranslation } from "react-i18next"
 import { makeStyles } from "@material-ui/core/styles"
 import Button from "@material-ui/core/Button"
 import Container from "../ui/Container"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   container: {
     flexDirection: "column",
     flexWrap: "nowrap",
-  },
-  img: {
-    width: "100%",
-    maxHeight: 600,
   },
   header: {
     marginBottom: 30,
@@ -28,7 +23,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   flexItem: {
+    display: "grid",
     flexBasis: "100%",
+    maxHeight: 600,
     position: "relative",
     marginBottom: 30,
     [theme.breakpoints.up("md")]: {
@@ -53,33 +50,34 @@ function Trends() {
   const classes = useStyles()
   const { t } = useTranslation()
 
-  const data = useStaticQuery(graphql`
-    query {
-      allFile(filter: { sourceInstanceName: { eq: "shopCategory" } }) {
-        edges {
-          node {
-            childImageSharp {
-              fluid {
-                originalName
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
-
   const categories = [
     {
       cat: "sup",
       path: "sup-at-lake",
       href: "https://shop.eisbach-riders.com/product-category/sup/",
+      img: (
+        <StaticImage
+          src="../../assets/shopCategory/sup-at-lake.jpg"
+          alt="sup at like"
+          style={{
+            gridArea: "1/1",
+          }}
+        />
+      ),
     },
     {
       cat: "rapidSurfing",
       path: "surfer-at-eisbach",
       href: "https://shop.eisbach-riders.com/product-category/rapid-surfing/",
+      img: (
+        <StaticImage
+          src="../../assets/shopCategory/surfer-at-eisbach.jpg"
+          alt="surfer at eisbach"
+          style={{
+            gridArea: "1/1",
+          }}
+        />
+      ),
     },
   ]
 
@@ -89,20 +87,8 @@ function Trends() {
 
       <div className={classes.innerContainer}>
         {categories.map((elem, idx) => (
-          <div className={classes.flexItem}>
-            <Img
-              fluid={
-                data.allFile.edges.find(
-                  (img) =>
-                    img.node.childImageSharp.fluid.originalName ===
-                    `${elem.path}.jpg`
-                ).node.childImageSharp.fluid
-              }
-              alt="brands"
-              placeholderStyle={{ backgroundColor: `white` }}
-              className={classes.img}
-              imgStyle={{ objectPosition: "center center" }}
-            />
+          <div className={classes.flexItem} key={`trend${idx}`}>
+            {elem.img}
             <div className={classes.textContainer}>
               <p className={classes.text}>{t(`shop.${elem.cat}Tagline`)}</p>
               <Button

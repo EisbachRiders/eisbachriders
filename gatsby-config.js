@@ -10,62 +10,81 @@ module.exports = {
     twitterUsername: "@EisbachRiders",
   },
   plugins: [
+    // {
+    //   resolve: `gatsby-source-wordpress-experimental`,
+    //   options: {
+    //     url: `https://secondwavesurfing.com/shop/graphql`,
+    //     schema: {
+    //       //Prefixes all WP Types with "Wp" so "Post and allPost" become "WpPost and allWpPost".
+    //       // typePrefix: `Wp`,
+
+    //       requestConcurrency: 2, // currently set to undefined
+    //       previewRequestConcurrency: 2, // currently set to undefined
+    //       timeout: 60000,
+    //     },
+    //     develop: {
+    //       //caches media files outside of Gatsby's default cache an thus allows them to persist through a cache reset.
+    //       hardCacheMediaFiles: true,
+    //     },
+    //   },
+    // },
+    // {
+    //   resolve: "gatsby-plugin-htaccess",
+    //   options: {
+    //     redirect: [
+    //       "RewriteRule ^not-existing-url/?$ /existing-url [R=301,L,NE]",
+    //       {
+    //         from: "/blog",
+    //         to: "secondwavesurfing.com/blog",
+    //       },
+    //       {
+    //         from: "/shop",
+    //         to: "secondwavesurfing.com/shop",
+    //       },
+    //       {
+    //         from:
+    //           "/blog/product-insights-gnarwall-surfboard-hangers-from-sheppsolutions",
+    //         to:
+    //           "secondwavesurfing.com/blog/product-insights-gnarwall-surfboard-hangers-from-SHEPPSolutions",
+    //       },
+    //       {
+    //         from:
+    //           "/blog/provide-the-slide-collecting-and-donating-surfboards-to-spread-the-joy-of-surfing",
+    //         to:
+    //           "secondwavesurfing.com/blog/provide-the-slide-collecting-and-donating-surfboards-for-liberia",
+    //       },
+    //       {
+    //         from: "/blog/8-things-you-can-do-as-landlocked-surfer",
+    //         to:
+    //           "secondwavesurfing.com/blog/8-things-you-can-do-as-landlocked-surfer",
+    //       },
+    //       {
+    //         from: "/blog/fuerteventura-the-european-winter-surf-destination",
+    //         to:
+    //           "secondwavesurfing.com/blog/fuerteventura-the-european-winter-surf-destination",
+    //       },
+    //       {
+    //         from: "/blog/big-city-surf-escape-in-hong-kong",
+    //         to: "secondwavesurfing.com/blog/big-city-surf-escape-in-hong-kong",
+    //       },
+    //       {
+    //         from: "/blog/product-insights-organic-surf-wax-by-bee-swell",
+    //         to:
+    //           "secondwavesurfing.com/blog/product-insights-organic-surf-wax-by-bee-swell",
+    //       },
+    //       {
+    //         from: "/blog/where-to-find-used-surfboards",
+    //         to: "secondwavesurfing.com/blog/where-to-find-used-surfboards",
+    //       },
+    //     ],
+    //   },
+    // },
     {
-      resolve: "gatsby-plugin-htaccess",
+      resolve: `gatsby-source-graphql`,
       options: {
-        redirect: [
-          "RewriteRule ^not-existing-url/?$ /existing-url [R=301,L,NE]",
-          {
-            from: "/blog",
-            to: "secondwavesurfing.com/blog",
-          },
-          {
-            from: "/shop",
-            to: "secondwavesurfing.com/shop",
-          },
-          {
-            from:
-              "/blog/product-insights-gnarwall-surfboard-hangers-from-sheppsolutions",
-            to:
-              "secondwavesurfing.com/blog/product-insights-gnarwall-surfboard-hangers-from-SHEPPSolutions",
-          },
-          {
-            from:
-              "/blog/provide-the-slide-collecting-and-donating-surfboards-to-spread-the-joy-of-surfing",
-            to:
-              "secondwavesurfing.com/blog/provide-the-slide-collecting-and-donating-surfboards-for-liberia",
-          },
-          {
-            from: "/blog/8-things-you-can-do-as-landlocked-surfer",
-            to:
-              "secondwavesurfing.com/blog/8-things-you-can-do-as-landlocked-surfer",
-          },
-          {
-            from: "/blog/fuerteventura-the-european-winter-surf-destination",
-            to:
-              "secondwavesurfing.com/blog/fuerteventura-the-european-winter-surf-destination",
-          },
-          {
-            from: "/blog/big-city-surf-escape-in-hong-kong",
-            to: "secondwavesurfing.com/blog/big-city-surf-escape-in-hong-kong",
-          },
-          {
-            from: "/blog/product-insights-organic-surf-wax-by-bee-swell",
-            to:
-              "secondwavesurfing.com/blog/product-insights-organic-surf-wax-by-bee-swell",
-          },
-          {
-            from: "/blog/where-to-find-used-surfboards",
-            to: "secondwavesurfing.com/blog/where-to-find-used-surfboards",
-          },
-        ],
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `content`,
-        path: `${__dirname}/src/content`,
+        typeName: "WPGraphQL",
+        fieldName: "wpgraphql",
+        url: "https://secondwavesurfing.com/shop/graphql",
       },
     },
     {
@@ -90,22 +109,24 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-mdx`,
+      resolve: "gatsby-plugin-mailchimp",
       options: {
-        gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 1200,
-              sizeByPixelDensity: true,
-            },
-          },
-        ],
+        endpoint:
+          "https://secondwavesurfing.us19.list-manage.com/subscribe/post?u=37a2f35f3b8bc53ace7af50eb&amp;id=7bdc6b47ed",
+        timeout: 3500,
       },
     },
-    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/content`,
+        name: `content`,
+      },
+    },
+    `gatsby-plugin-mdx`,
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
-    `gatsby-remark-images`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -125,14 +146,6 @@ module.exports = {
 
           `gatsby-remark-copy-linked-files`,
         ],
-      },
-    },
-    {
-      resolve: `gatsby-source-graphql`,
-      options: {
-        typeName: "WPGraphQL",
-        fieldName: "wpgraphql",
-        url: "https://secondwavesurfing.com/shop/graphql",
       },
     },
     {
@@ -168,14 +181,27 @@ module.exports = {
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#00d7a2`,
-        display: `minimal-ui`,
+        display: "standalone",
         icon: `${__dirname}/src/assets/logos/logo.png`,
+        crossOrigin: `use-credentials`,
       },
     },
-    "gatsby-theme-material-ui",
     `gatsby-plugin-react-helmet`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
+    // `gatsby-plugin-feed-mdx`,
+    `gatsby-plugin-sitemap`,
+    "gatsby-plugin-top-layout",
+    {
+      resolve: "gatsby-plugin-material-ui",
+      // If you want to use styled components you should change the injection order.
+      options: {
+        // stylesProvider: {
+        //   injectFirst: true,
+        // },
+      },
+    },
+    "gatsby-plugin-emotion",
   ],
 }

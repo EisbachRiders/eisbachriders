@@ -1,6 +1,5 @@
 import React, { Fragment } from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 import clsx from "clsx"
 import { useTranslation } from "react-i18next"
 import { makeStyles } from "@material-ui/core/styles"
@@ -9,7 +8,7 @@ import Hidden from "@material-ui/core/Hidden"
 import SurfIcon from "../../assets/icons/Surf"
 import FeatherIcon from "../../assets/icons/Feather"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     flexBasis: "100%",
     display: "flex",
@@ -79,20 +78,6 @@ function FeatureDetail() {
 
   const details = ["response", "img", "experience"]
 
-  const data = useStaticQuery(graphql`
-    query {
-      fileName: file(
-        relativePath: { eq: "single-tab-honeycomb-fin-green.png" }
-      ) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <div className={classes.root}>
       {details.map((elem, idx) => (
@@ -100,12 +85,11 @@ function FeatureDetail() {
           {elem === "img" && (
             <Hidden mdUp>
               <div className={classes.containerDetail}>
-                <Img
-                  fluid={data.fileName.childImageSharp.fluid}
+                <StaticImage
+                  src="../../assets/websiteImages/single-tab-honeycomb-fin-green.png"
                   alt="featured product"
-                  placeholderStyle={{ backgroundColor: `blue` }}
+                  placeholder="blurred"
                   className={classes.img}
-                  imgStyle={{ objectPosition: "center center" }}
                 />
               </div>
             </Hidden>

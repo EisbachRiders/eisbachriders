@@ -1,6 +1,5 @@
 import React from "react"
-import Img from "gatsby-image"
-import { useStaticQuery, graphql } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 import { useTranslation } from "react-i18next"
 import { Link } from "gatsby-theme-material-ui"
 import { makeStyles } from "@material-ui/core/styles"
@@ -10,7 +9,7 @@ import Contact from "../Contact"
 import faqData from "./faqData"
 import HelpIcon from "@material-ui/icons/Help"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   headerContainer: {
     position: "relative",
     height: 150,
@@ -92,29 +91,14 @@ function FrequentlyAskedQuestions() {
   const classes = useStyles()
   const { t, i18n } = useTranslation()
 
-  const data = useStaticQuery(graphql`
-    query {
-      fileName: file(
-        relativePath: { eq: "person-putting-on-surfboard-leash.jpg" }
-      ) {
-        childImageSharp {
-          fluid(maxWidth: 2000) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <>
       <div className={classes.headerContainer}>
-        <Img
-          fluid={data.fileName.childImageSharp.fluid}
+        <StaticImage
+          src="../../assets/websiteImages/person-putting-on-surfboard-leash.jpg"
           alt="surfer putting on leash"
-          placeholderStyle={{ backgroundColor: `blue` }}
+          placeholder="blurred"
           className={classes.backgroundImg}
-          imgStyle={{ objectPosition: "center center" }}
         />
         <div className={classes.backgroundContainer}>
           <h1 className={classes.h1}>{t("links.faq")}</h1>

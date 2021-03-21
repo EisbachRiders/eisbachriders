@@ -112,22 +112,25 @@ function Newsletter() {
         FNAME: name,
         gdpr_26529: true,
       })
+      console.log(result)
       if (result.result === "error") {
         setSnackbar(true)
         setSnackbarMessage(
           result.msg.includes("<a") ? result.msg.split("<a")[0] : result.msg
         )
+        setDialog(false)
       } else {
         setSnackbar(true)
         setEmailValid(true)
         setNameValid(true)
         setSnackbarMessage("success")
+        setDialog(false)
       }
     }
     if (!pattern.test(email)) {
       setEmailValid(false)
     }
-    if (name.length <= 500) {
+    if (name.length >= 500) {
       setNameValid(false)
     }
   }
