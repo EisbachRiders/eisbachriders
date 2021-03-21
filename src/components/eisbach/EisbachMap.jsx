@@ -366,7 +366,7 @@ function EisbachMap() {
           {locations.length === 0 && (
             <div>
               <StaticImage
-                src="../../assets/websiteImages/lostFins.png"
+                src="../../assets/websiteImages/finsLost.png"
                 alt="lost fins"
                 placeholder="blurred"
               />

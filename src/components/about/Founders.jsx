@@ -62,7 +62,7 @@ function Founders() {
         </div>
         <Hidden smDown>
           <StaticImage
-            src="../../assets/websiteImages/michi.jpg"
+            src="../../assets/websiteImages/michi.png"
             alt="michi"
             placeholder="blurred"
             className={classes.img}

@@ -19,7 +19,6 @@
     "autosuggest-highlight": "^3.1.1",
     "clsx": "^1.1.1",
     "gatsby": "^3.0.3",
-    "gatsby-image": "^3.0.0",
     "gatsby-plugin-emotion": "^6.0.0",
     "gatsby-plugin-feed-mdx": "^1.1.0",
     "gatsby-plugin-gdpr-cookies": "^1.0.14",

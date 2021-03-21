@@ -62,25 +62,47 @@ function LinkTree() {
   const links = [
     {
       title: "Eisbach Riders",
-      img: "../../assets/websiteImages/website.png",
+      img: (
+        <StaticImage
+          src="../../assets/websiteImages/website.png"
+          alt="Eisbach Riders"
+          className={classes.img}
+        />
+      ),
       link: "https://eisbach-riders.com/",
     },
     {
       title: "SWS Shop",
-      img:
-        "../../assets/websiteImages/sustainable-surf-solutions-mobile-en.png",
+      img: (
+        <StaticImage
+          src="../../assets/websiteImages/sustainable-surf-solutions-mobile-en.png"
+          alt="SWS Shop"
+          className={classes.img}
+        />
+      ),
       link: "https://secondwavesurfing.com/shop/",
     },
     {
       title: "Recycled Quick-Lock Touring Fin",
-      img: "../../assets/websiteImages/quickLockAD-mobile.png",
+      img: (
+        <StaticImage
+          src="../../assets/websiteImages/quickLockAD-mobile.png"
+          alt="Recycled Quick-Lock Touring Fin"
+          className={classes.img}
+        />
+      ),
       link:
         "https://secondwavesurfing.com/blog/eisbach-riders-a-touring-fin-made-of-recycled-waste-material-for-stand-up-paddling-with-the-quick-lock-system/",
     },
     {
       title: "1% for the Planet",
-      img:
-        "../../assets/websiteImages/eisbach-riders-joins-1-percent-for-the-planet.png",
+      img: (
+        <StaticImage
+          src="../../assets/websiteImages/eisbach-riders-joins-1-percent-for-the-planet.png"
+          alt="1% for the Planet"
+          className={classes.img}
+        />
+      ),
       link:
         "https://secondwavesurfing.com/blog/eisbach-riders-joins-1-percent-for-the-planet/",
     },
@@ -99,12 +121,7 @@ function LinkTree() {
         {links.map((elem, idx) => (
           <div className={classes.item} key={`link${idx}`}>
             <a href={elem.link} target="_blank" rel="noopener noreferrer">
-              <StaticImage
-                src={elem.img}
-                alt={elem.title}
-                placeholder="blurred"
-                className={classes.img}
-              />
+              {elem.img}
               <p className={classes.text}>{elem.title}</p>
             </a>
           </div>

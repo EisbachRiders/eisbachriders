@@ -123,20 +123,7 @@ module.exports = {
         name: `content`,
       },
     },
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 1200,
-              sizeByPixelDensity: true,
-            },
-          },
-        ],
-      },
-    },
+    `gatsby-plugin-mdx`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
@@ -203,7 +190,7 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
-    `gatsby-plugin-feed-mdx`,
+    // `gatsby-plugin-feed-mdx`,
     `gatsby-plugin-sitemap`,
     "gatsby-plugin-top-layout",
     {
