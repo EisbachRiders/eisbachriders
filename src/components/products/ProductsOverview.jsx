@@ -124,7 +124,7 @@ function ProductsOverview({ products, category }) {
       ]
       break
     case "sup-longboard-fins":
-      subcat = ["essential line", "fiberglass", "fiberglass honeycomb"]
+      subcat = ["essential line", "fiberglass", "sustainable"]
       break
     default:
       subcat = []
