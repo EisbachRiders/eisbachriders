@@ -1,10 +1,10 @@
 import React from "react"
-import { Link } from "gatsby-theme-material-ui"
+import Link from "../ui/Link"
 import { makeStyles } from "@material-ui/core/styles"
 import Typography from "@material-ui/core/Typography"
 import Colors from "./Colors"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     flexBasis: "100%",
     alignItems: "center",
@@ -55,7 +55,7 @@ function ShopItem({ product }) {
   let colors =
     product === undefined
       ? []
-      : product.paColors.edges.map((elem) => elem.node.name)
+      : product.paColors.edges.map(elem => elem.node.name)
 
   return (
     <div className={classes.root}>

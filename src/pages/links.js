@@ -1,12 +1,12 @@
 import React from "react"
-import SEO from "../components/seo"
+import Seo from "../components/Seo"
 import BottomFooter from "../components/footer/BottomFooter"
 import LinkTree from "../components/linkTree/LinkTree"
 
 const Links = () => {
   return (
     <>
-      <SEO />
+      <Seo />
       <LinkTree />
       <BottomFooter />
     </>

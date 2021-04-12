@@ -64,8 +64,11 @@ const useStyles = makeStyles(theme => ({
     },
   },
   img: {
-    width: 75,
+    width: 50,
     color: theme.color.white,
+    [theme.breakpoints.up("md")]: {
+      width: 75,
+    },
   },
   linksContainer: {
     display: "flex",
@@ -118,6 +121,7 @@ const useStyles = makeStyles(theme => ({
   },
   logoContainer: {
     display: "flex",
+    flexWrap: "wrap",
     alignItems: "center",
     marginBottom: 30,
     marginTop: 30,
@@ -126,9 +130,12 @@ const useStyles = makeStyles(theme => ({
     fontFamily: "secondary",
     color: theme.color.white,
     margin: 0,
-    fontSize: 62,
+    fontSize: 24,
     paddingLeft: 30,
     paddingRight: 30,
+    [theme.breakpoints.up("md")]: {
+      fontSize: 62,
+    },
   },
   image: {
     marginBottom: 30,

@@ -1,7 +1,7 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { useTranslation } from "react-i18next"
-import { Link } from "gatsby-theme-material-ui"
+import Link from "../ui/Link"
 import { makeStyles } from "@material-ui/core/styles"
 import Typography from "@material-ui/core/Typography"
 import Container from "../ui/Container"
