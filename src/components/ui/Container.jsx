@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { makeStyles } from "@material-ui/styles"
 import clsx from "clsx"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     display: "flex",
     justifyContent: "center",
@@ -33,6 +33,21 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("xl")]: {
       width: 1440,
       padding: 0,
+    },
+  },
+  containerXS: {
+    display: "flex",
+    width: "100%",
+    padding: 0,
+    [theme.breakpoints.up("sm")]: {
+      padding: `30px 45px`,
+    },
+    [theme.breakpoints.up("lg")]: {
+      padding: `30px 60px`,
+    },
+    [theme.breakpoints.up("xl")]: {
+      width: 1440,
+      padding: `30px 0`,
     },
   },
   secondary: {
@@ -93,6 +108,7 @@ function Container({
   flexWrap,
   background,
   padding,
+  hidden,
   className: classNameProp,
 }) {
   const classes = useStyles()
@@ -111,6 +127,7 @@ function Container({
             [classes.container]: padding !== "none",
             [classes.containerSlim]: padding === "none",
             [classes.flexColumn]: flexDirection === "column",
+            [classes.containerXS]: hidden === "xs",
           },
           classNameProp
         )}

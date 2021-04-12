@@ -7,42 +7,67 @@ import Container from "../ui/Container"
 const useStyles = makeStyles(theme => ({
   root: {
     display: "grid",
-    height: 600,
   },
   container: {
-    width: "50%",
-    padding: "200px 0 0 60px",
+    padding: "75px 30px 30px 30px",
+    [theme.breakpoints.up("md")]: {
+      width: "70%",
+      padding: "200px 0 60px 60px",
+    },
+    [theme.breakpoints.up("lg")]: {
+      width: "50%",
+    },
   },
   imageContainer: {
     display: "flex",
     alignItems: "center",
   },
   x: {
-    fontSize: 48,
+    fontSize: 24,
     fontWeight: 700,
     color: theme.color.white,
     paddingLeft: 30,
     paddingRight: 30,
     margin: 0,
+    [theme.breakpoints.up("sm")]: {
+      fontSize: 36,
+    },
   },
   title: {
     textTransform: "capitalize",
-    fontSize: 48,
+    fontSize: 24,
     fontWeight: 700,
     color: theme.color.white,
     marginBottom: 15,
+    [theme.breakpoints.up("sm")]: {
+      fontSize: 36,
+    },
+    [theme.breakpoints.up("md")]: {
+      fontSize: 48,
+    },
   },
   text: {
-    fontSize: 24,
+    fontSize: 16,
     color: theme.color.white,
+    [theme.breakpoints.up("md")]: {
+      fontSize: 18,
+    },
   },
   img1: {
-    height: 75,
-    width: 105,
+    height: 30,
+    width: 55,
+    [theme.breakpoints.up("sm")]: {
+      height: 45,
+      width: 75,
+    },
   },
   img2: {
-    height: 75,
-    width: 170,
+    height: 30,
+    width: 90,
+    [theme.breakpoints.up("md")]: {
+      height: 45,
+      width: 110,
+    },
   },
 }))
 
@@ -56,7 +81,6 @@ function Sustainability() {
         <StaticImage
           style={{
             gridArea: "1/1",
-            maxHeight: 600,
           }}
           layout="fullWidth"
           aspectRatio={3 / 1}

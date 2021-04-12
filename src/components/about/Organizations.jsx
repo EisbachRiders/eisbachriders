@@ -15,34 +15,52 @@ import nabuLogo from "../../assets/logos/nabu.png"
 
 const useStyles = makeStyles(theme => ({
   root: {
-    marginTop: 100,
-    marginBottom: 100,
+    marginTop: 30,
+    marginBottom: 30,
+    [theme.breakpoints.up("md")]: {
+      marginTop: 50,
+      marginBottom: 50,
+    },
   },
   flexItem: {
     flexBasis: "100%",
+    padding: 30,
     [theme.breakpoints.up("md")]: {
       flexBasis: "50%",
+      height: 600,
+    },
+    [theme.breakpoints.up("lg")]: {
       padding: 60,
     },
   },
   background: {
     background: theme.color.cream,
-    height: "100%",
   },
   background2: {
     background: theme.color.grayLt,
-    height: "100%",
   },
   title: {
     textTransform: "capitalize",
-    fontSize: 42,
+    fontSize: 24,
     fontWeight: 700,
     marginTop: 150,
     marginBottom: 30,
+    [theme.breakpoints.up("md")]: {
+      fontSize: 36,
+    },
+    [theme.breakpoints.up("lg")]: {
+      fontSize: 42,
+    },
   },
   text: {
     textTransform: "capitalize",
-    fontSize: 24,
+    fontSize: 16,
+    [theme.breakpoints.up("md")]: {
+      fontSize: 18,
+    },
+    [theme.breakpoints.up("lg")]: {
+      fontSize: 24,
+    },
   },
   avatar: {
     width: 50,
@@ -54,7 +72,6 @@ const useStyles = makeStyles(theme => ({
       marginRight: 30,
     },
   },
-
   img: {
     width: "100%",
     height: "100%",
@@ -66,7 +83,10 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.common.black,
   },
   listTextPrimary: {
-    fontSize: 24,
+    fontSize: 16,
+    [theme.breakpoints.up("lg")]: {
+      fontSize: 18,
+    },
   },
 }))
 
@@ -102,6 +122,7 @@ function Organizations() {
       flexWrap="wrap"
       justifyContent="spaceBetween"
       alignItems="center"
+      hidden="xs"
       className={classes.root}
     >
       <div className={clsx(classes.flexItem, classes.background)}>
