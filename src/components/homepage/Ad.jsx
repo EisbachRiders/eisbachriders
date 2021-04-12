@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby-theme-material-ui"
+import Link from "../ui/Link"
 import { StaticImage } from "gatsby-plugin-image"
 import { makeStyles } from "@material-ui/core/styles"
 import Hidden from "@material-ui/core/Hidden"

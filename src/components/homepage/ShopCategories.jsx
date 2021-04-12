@@ -1,6 +1,6 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
-import { Link } from "gatsby-theme-material-ui"
+import Link from "../ui/Link"
 import Button from "@material-ui/core/Button"
 import { makeStyles } from "@material-ui/styles"
 import { useTranslation } from "react-i18next"
@@ -63,7 +63,7 @@ function ShopCategories() {
         cat: "fins",
         img: (
           <StaticImage
-            src="../../assets/shopCategory/fiberglass-single-tab-on-rocks-at-beach.jpg"
+            src="../../assets/websiteImages/fiberglass-single-tab-on-rocks-at-beach.jpg"
             alt="fin on rocky beach"
             style={{
               gridArea: "1/1",
@@ -77,7 +77,7 @@ function ShopCategories() {
         cat: "leashes",
         img: (
           <StaticImage
-            src="../../assets/shopCategory/surfer-putting-on-blue-leash-at-beach.jpg"
+            src="../../assets/websiteImages/surfer-putting-on-blue-leash-at-beach.jpg"
             alt="surfer putting on leash"
             style={{
               gridArea: "1/1",
@@ -91,7 +91,7 @@ function ShopCategories() {
         cat: "apparel",
         img: (
           <StaticImage
-            src="../../assets/shopCategory/girl-sitting-at-lake.jpg"
+            src="../../assets/websiteImages/girl-sitting-at-lake.jpg"
             alt="girl sitting at lake"
             style={{
               gridArea: "1/1",
@@ -105,7 +105,7 @@ function ShopCategories() {
         cat: "accessories",
         img: (
           <StaticImage
-            src="../../assets/shopCategory/wax-comb-peeling-wax-off-surfboard.jpg"
+            src="../../assets/websiteImages/wax-comb-peeling-wax-off-surfboard.jpg"
             alt="wax comb peeling wax off surfboard"
             style={{
               gridArea: "1/1",

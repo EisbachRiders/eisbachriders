@@ -68,11 +68,6 @@ function AboutHero() {
         placeholder="blurred"
         className={classes.img}
       />
-      <div className={classes.container}>
-        <p className={classes.title}>{t("about.about")}</p>
-        <p className={classes.title2}>{t("about.tagline")}</p>
-        <p>{t("about.content")}</p>
-      </div>
     </div>
   )
 }

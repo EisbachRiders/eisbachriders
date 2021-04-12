@@ -1,5 +1,5 @@
 import React from "react"
-import SEO from "../components/seo"
+import Seo from "../components/Seo"
 import Layout from "../components/Layout"
 import EisbachHeader from "../components/eisbach/EisbachHeader"
 import EisbachMap from "../components/eisbach/EisbachMap"
@@ -9,7 +9,7 @@ import EisbachMap from "../components/eisbach/EisbachMap"
 const EisbachPage = () => {
   return (
     <Layout location="urban">
-      <SEO />
+      <Seo />
       <EisbachHeader />
       <EisbachMap />
       {/* <EisbachForecast /> */}

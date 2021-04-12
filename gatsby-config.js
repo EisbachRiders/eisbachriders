@@ -11,24 +11,6 @@ module.exports = {
   },
   plugins: [
     // {
-    //   resolve: `gatsby-source-wordpress-experimental`,
-    //   options: {
-    //     url: `https://secondwavesurfing.com/shop/graphql`,
-    //     schema: {
-    //       //Prefixes all WP Types with "Wp" so "Post and allPost" become "WpPost and allWpPost".
-    //       // typePrefix: `Wp`,
-
-    //       requestConcurrency: 2, // currently set to undefined
-    //       previewRequestConcurrency: 2, // currently set to undefined
-    //       timeout: 60000,
-    //     },
-    //     develop: {
-    //       //caches media files outside of Gatsby's default cache an thus allows them to persist through a cache reset.
-    //       hardCacheMediaFiles: true,
-    //     },
-    //   },
-    // },
-    // {
     //   resolve: "gatsby-plugin-htaccess",
     //   options: {
     //     redirect: [
@@ -90,22 +72,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/assets/logos`,
-        name: `logos`,
+        path: `${__dirname}/src/assets/`,
+        name: `images`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/assets/websiteImages`,
-        name: `websiteImages`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `shopCategory`,
-        path: `${__dirname}/src/assets/shopCategory`,
+        path: `${__dirname}/src/content`,
+        name: `content`,
       },
     },
     {
@@ -114,13 +89,6 @@ module.exports = {
         endpoint:
           "https://secondwavesurfing.us19.list-manage.com/subscribe/post?u=37a2f35f3b8bc53ace7af50eb&amp;id=7bdc6b47ed",
         timeout: 3500,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/content`,
-        name: `content`,
       },
     },
     `gatsby-plugin-mdx`,
@@ -182,8 +150,11 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#00d7a2`,
         display: "standalone",
-        icon: `${__dirname}/src/assets/logos/logo.png`,
+        icon: `src/assets/logos/logo.png`,
         crossOrigin: `use-credentials`,
+        icon_options: {
+          purpose: `any maskable`,
+        },
       },
     },
     `gatsby-plugin-react-helmet`,
@@ -193,15 +164,7 @@ module.exports = {
     // `gatsby-plugin-feed-mdx`,
     `gatsby-plugin-sitemap`,
     "gatsby-plugin-top-layout",
-    {
-      resolve: "gatsby-plugin-material-ui",
-      // If you want to use styled components you should change the injection order.
-      options: {
-        // stylesProvider: {
-        //   injectFirst: true,
-        // },
-      },
-    },
+    "gatsby-plugin-material-ui",
     "gatsby-plugin-emotion",
   ],
 }

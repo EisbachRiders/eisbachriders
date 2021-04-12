@@ -1,41 +1,32 @@
 import React from "react"
+import clsx from "clsx"
 import { StaticImage } from "gatsby-plugin-image"
 import { useTranslation } from "react-i18next"
 import { makeStyles } from "@material-ui/core/styles"
-import Hidden from "@material-ui/core/Hidden"
 import Container from "../ui/Container"
 
 const useStyles = makeStyles(theme => ({
   container: {
-    display: "flex",
-    justifyContent: "space-between",
-    [theme.breakpoints.up("md")]: {
-      flexWrap: "nowrap",
-    },
+    marginTop: 100,
+    marginBottom: 100,
   },
-  header: {
-    textTransform: "capitalize",
-    width: "100%",
-    fontFamily: "secondary",
-    fontSize: 32,
-    textAlign: "center",
-    marginBottom: 0,
+  textContainer: {
+    paddingTop: 30,
   },
   flexItem: {
-    textAlign: "center",
+    flexBasis: "100%",
     [theme.breakpoints.up("md")]: {
-      flexBasis: "60%",
-      padding: 30,
-    },
-    [theme.breakpoints.up("lg")]: {
-      padding: 60,
+      flexBasis: "48%",
     },
   },
-  img: {
-    width: "50%",
-    [theme.breakpoints.up("md")]: {
-      width: "20%",
-    },
+  title: {
+    fontSize: 52,
+    fontWeight: 700,
+    marginTop: 15,
+    marginBottom: 30,
+  },
+  logo: {
+    width: 85,
   },
 }))
 
@@ -44,31 +35,28 @@ function Founders() {
   const { t } = useTranslation()
 
   return (
-    <Container>
-      <p className={classes.header}>{t("about.the_team")}</p>
-      <div className={classes.container}>
-        <Hidden smDown>
-          <StaticImage
-            src="../../assets/websiteImages/robin.jpg"
-            alt="robin"
-            placeholder="blurred"
-            className={classes.img}
-          />
-        </Hidden>
-        <div className={classes.flexItem}>
-          <p>{t("about.founders1")}</p>
-          <p>{t("about.founders2")}</p>
-          <p>{t("about.founders3")}</p>
-        </div>
-        <Hidden smDown>
-          <StaticImage
-            src="../../assets/websiteImages/michi.png"
-            alt="michi"
-            placeholder="blurred"
-            className={classes.img}
-          />
-        </Hidden>
+    <Container
+      flexWrap="wrap"
+      justifyContent="spaceBetween"
+      className={classes.container}
+    >
+      <div className={clsx(classes.flexItem, classes.textContainer)}>
+        <StaticImage
+          src="../../assets/logos/logo.png"
+          alt="logo"
+          placeholder="blurred"
+          className={classes.logo}
+        />
+        <p className={classes.title}>Eisbach Riders</p>
+        <p className={classes.text}>{t("about.founders1")}</p>
+        <p className={classes.text}>{t("about.founders2")}</p>
       </div>
+      <StaticImage
+        src="../../assets/websiteImages/founders.jpg"
+        alt="founders"
+        placeholder="blurred"
+        className={classes.flexItem}
+      />
     </Container>
   )
 }

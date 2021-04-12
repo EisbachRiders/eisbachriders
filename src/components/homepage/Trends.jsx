@@ -57,7 +57,7 @@ function Trends() {
       href: "https://shop.eisbach-riders.com/product-category/sup/",
       img: (
         <StaticImage
-          src="../../assets/shopCategory/sup-at-lake.jpg"
+          src="../../assets/websiteImages/sup-at-lake.jpg"
           alt="sup at like"
           style={{
             gridArea: "1/1",
@@ -71,7 +71,7 @@ function Trends() {
       href: "https://shop.eisbach-riders.com/product-category/rapid-surfing/",
       img: (
         <StaticImage
-          src="../../assets/shopCategory/surfer-at-eisbach.jpg"
+          src="../../assets/websiteImages/surfer-at-eisbach.jpg"
           alt="surfer at eisbach"
           style={{
             gridArea: "1/1",

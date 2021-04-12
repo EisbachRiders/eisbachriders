@@ -1,59 +1,72 @@
 import React from "react"
 import { useTranslation } from "react-i18next"
+import clsx from "clsx"
 import { makeStyles } from "@material-ui/core/styles"
 import List from "@material-ui/core/List"
 import ListItem from "@material-ui/core/ListItem"
-import ListSubheader from "@material-ui/core/ListSubheader"
 import ListItemAvatar from "@material-ui/core/ListItemAvatar"
 import Avatar from "@material-ui/core/Avatar"
 import ListItemText from "@material-ui/core/ListItemText"
 import Container from "../ui/Container"
-import oceana from "../../assets/logos/oceana.png"
 import provideTheSlide from "../../assets/logos/provideTheSlide.png"
-import oceanconservancy from "../../assets/logos/oceanconservancy.png"
-import oceancleanup from "../../assets/logos/oceancleanup.png"
 import igsmLogo from "../../assets/logos/igsmLogo.png"
-import srfLogo from "../../assets/logos/surfriderLogo.png"
-import wirmachenwelleLogo from "../../assets/logos/wirmachenwelle.png"
+import srfLogo from "../../assets/logos/surfriderCircle.png"
+import nabuLogo from "../../assets/logos/nabu.png"
 
-const useStyles = makeStyles((theme) => ({
-  header: {
+const useStyles = makeStyles(theme => ({
+  root: {
+    marginTop: 100,
+    marginBottom: 100,
+  },
+  flexItem: {
+    flexBasis: "100%",
+    [theme.breakpoints.up("md")]: {
+      flexBasis: "50%",
+      padding: 60,
+    },
+  },
+  background: {
+    background: theme.color.cream,
+    height: "100%",
+  },
+  background2: {
+    background: theme.color.grayLt,
+    height: "100%",
+  },
+  title: {
     textTransform: "capitalize",
-    width: "100%",
-    fontFamily: "secondary",
-    fontSize: 32,
-    textAlign: "center",
+    fontSize: 42,
+    fontWeight: 700,
+    marginTop: 150,
     marginBottom: 30,
   },
-  subheader: {
-    textTransform: "uppercase",
-    fontSize: 18,
+  text: {
+    textTransform: "capitalize",
+    fontSize: 24,
   },
   avatar: {
     width: 50,
     height: 50,
     marginRight: 15,
     [theme.breakpoints.up("md")]: {
-      width: 100,
-      height: 100,
+      width: 75,
+      height: 75,
       marginRight: 30,
     },
   },
+
   img: {
     width: "100%",
     height: "100%",
   },
   listItem: {
-    alignItems: "flex-start",
-    [theme.breakpoints.up("md")]: {
-      alignItems: "center",
-    },
+    marginBottom: 30,
   },
   listText: {
     color: theme.palette.common.black,
   },
   listTextPrimary: {
-    fontWeight: "bold",
+    fontSize: 24,
   },
 }))
 
@@ -73,9 +86,9 @@ function Organizations() {
       href: "https://www.igsm.info/",
     },
     {
-      name: "Wirmachenwelle",
-      img: wirmachenwelleLogo,
-      href: "https://wirmachenwelle.org/",
+      name: "NABU",
+      img: nabuLogo,
+      href: "https://www.nabu.de/",
     },
     {
       name: "Surfrider Foundation",
@@ -83,41 +96,25 @@ function Organizations() {
       href: "https://www.surfrider.org/",
     },
   ]
-  const global = [
-    {
-      name: "Ocean Conservancy",
-      img: oceanconservancy,
-      href: "https://oceanconservancy.org/",
-    },
-    {
-      name: "The Ocean Cleanup",
-      img: oceancleanup,
-      href: "https://theoceancleanup.com/",
-    },
-    {
-      name: "Oceana",
-      img: oceana,
-      href: "https://oceana.org/",
-    },
-  ]
 
   return (
-    <Container>
-      <p className={classes.header}>{t("about.getInvolved")}</p>
+    <Container
+      flexWrap="wrap"
+      justifyContent="spaceBetween"
+      alignItems="center"
+      className={classes.root}
+    >
+      <div className={clsx(classes.flexItem, classes.background)}>
+        <p className={classes.title}>{t("about.getInvolved")}</p>
+        <p className={classes.text}>{t("about.tagline")}</p>
+      </div>
+
       <List
         component="nav"
         aria-label={t("about.local")}
-        subheader={
-          <ListSubheader
-            component="div"
-            id="nested-list-subheader"
-            className={classes.subheader}
-          >
-            {t("about.local")}
-          </ListSubheader>
-        }
+        className={clsx(classes.flexItem, classes.background2)}
       >
-        {local.map((elem) => (
+        {local.map(elem => (
           <ListItem
             key={elem.name}
             button
@@ -126,44 +123,6 @@ function Organizations() {
             target="_blank"
             rel="noopener"
             className={classes.listItem}
-          >
-            <ListItemAvatar>
-              <Avatar className={classes.avatar}>
-                <img src={elem.img} className={classes.img} alt={elem.name} />
-              </Avatar>
-            </ListItemAvatar>
-            <ListItemText
-              classes={{
-                primary: classes.listTextPrimary,
-                secondary: classes.listText,
-              }}
-              primary={elem.name}
-              secondary={t(`about.${elem.name}`)}
-            />
-          </ListItem>
-        ))}
-      </List>
-      <List
-        component="nav"
-        aria-label={t("about.global")}
-        subheader={
-          <ListSubheader
-            component="div"
-            id="nested-list-subheader"
-            className={classes.subheader}
-          >
-            {t("about.global")}
-          </ListSubheader>
-        }
-      >
-        {global.map((elem) => (
-          <ListItem
-            key={elem.name}
-            button
-            href={elem.href}
-            component="a"
-            target="_blank"
-            rel="noopener"
           >
             <ListItemAvatar>
               <Avatar className={classes.avatar}>

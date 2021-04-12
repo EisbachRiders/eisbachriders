@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
-import SEO from "../components/seo"
+import Seo from "../components/Seo"
 import Product from "../components/products/Product"
 
 export default function ProductTemplate({ pageContext }) {
@@ -8,7 +8,7 @@ export default function ProductTemplate({ pageContext }) {
 
   return (
     <Layout>
-      <SEO title={product.name} />
+      <Seo title={product.name} />
       <Product product={product} />
     </Layout>
   )

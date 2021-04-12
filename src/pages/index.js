@@ -1,5 +1,5 @@
 import React from "react"
-import SEO from "../components/seo"
+import Seo from "../components/Seo"
 import Layout from "../components/Layout"
 import Hero from "../components/homepage/Hero"
 import MissionStatement from "../components/homepage/MissionStatement"
@@ -11,7 +11,7 @@ const Homepage = () => {
   return (
     <StyledEngineProvider injectFirst>
       <Layout>
-        <SEO />
+        <Seo />
         <Hero />
         <MissionStatement />
         <Trends />
