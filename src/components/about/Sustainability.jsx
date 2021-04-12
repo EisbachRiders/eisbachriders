@@ -7,6 +7,7 @@ import Container from "../ui/Container"
 const useStyles = makeStyles(theme => ({
   root: {
     display: "grid",
+    width: "100%",
   },
   container: {
     padding: "75px 30px 30px 30px",
