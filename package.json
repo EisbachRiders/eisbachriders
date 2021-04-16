@@ -37,6 +37,7 @@
     "gatsby-remark-responsive-iframe": "^3.2.0",
     "gatsby-source-filesystem": "^3.2.0",
     "gatsby-source-graphql": "^3.2.0",
+    "gatsby-source-instagram": "^0.9.0",
     "gatsby-transformer-remark": "^3.2.0",
     "gatsby-transformer-sharp": "^3.2.0",
     "google-map-react": "^2.1.9",

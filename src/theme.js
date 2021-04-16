@@ -33,6 +33,7 @@ const color = {
   test: "#F7F680",
   cream: "#F1F0EB",
   grayLt: "#f7f7f9",
+  blueGray: "#cbd3cf",
 }
 
 const theme = createMuiTheme({

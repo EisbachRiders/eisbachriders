@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout"
 import Seo from "../components/Seo"
-import ProductsOverview from "../components/products/ProductsOverview"
+import CategoryOverview from "../components/products/CategoryOverview"
 
 export default function ProductTemplate({ pageContext }) {
   const { products, category } = pageContext
@@ -9,7 +9,7 @@ export default function ProductTemplate({ pageContext }) {
   return (
     <Layout>
       <Seo title={category} />
-      <ProductsOverview products={products} category={category} />
+      <CategoryOverview products={products} category={category} />
     </Layout>
   )
 }

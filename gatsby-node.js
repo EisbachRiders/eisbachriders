@@ -383,13 +383,79 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
       }
-      apparel: wpgraphql {
+      0: wpgraphql {
         products(
-          where: {
-            category: "Apparel"
-            tagIn: "Eisbach Riders"
-            categoryIdNotIn: 144
+          first: 30
+          where: { tagIn: "essential-line", categoryIdNotIn: 144 }
+        ) {
+          edges {
+            node {
+              name
+              image {
+                sourceUrl
+                slug
+              }
+              galleryImages {
+                edges {
+                  node {
+                    sourceUrl
+                    slug
+                  }
+                }
+              }
+              shortDescription(format: RENDERED)
+              paAmounts {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
+              paWaterTemps {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
+              paColors {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
+              paFinPlugs {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
+              paSizes {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
+              productTags {
+                edges {
+                  node {
+                    name
+                  }
+                }
+              }
+              slug
+              link
+            }
           }
+        }
+      }
+      sustainable: wpgraphql {
+        products(
+          first: 30
+          where: { tagIn: "sustainable", categoryIdNotIn: 144 }
         ) {
           edges {
             node {
@@ -464,12 +530,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   const pages = result.data.pagesRemark.edges
-  const products = result.data.products.products.edges
+  // const products = result.data.products.products.edges
   const fins = result.data.fins.products.edges
   const leashes = result.data.leashes.products.edges
   const sup = result.data.sup.products.edges
   const accessories = result.data.accessories.products.edges
-  const apparel = result.data.apparel.products.edges
+  const essentialLine = result.data.essential.products.edges
+  const sustainableLine = result.data.sustainable.products.edges
+  // const apparel = result.data.apparel.products.edges
 
   // Create pages
   pages.forEach(({ node }) => {
@@ -481,10 +549,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })
 
   // Create product category pages
+  // createPage({
+  //   path: "/products",
+  //   component: productCategoryTemplate,
+  //   context: { products: products, category: "products" },
+  // })
   createPage({
-    path: "/products",
+    path: "/products/essential-line",
     component: productCategoryTemplate,
-    context: { products: products, category: "products" },
+    context: { products: essentialLine, category: "essential" },
+  })
+  createPage({
+    path: "/products/sustainable-line",
+    component: productCategoryTemplate,
+    context: { products: sustainableLine, category: "sustainable" },
   })
   createPage({
     path: "/products/surfboard-fins",
@@ -504,12 +582,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   createPage({
     path: "/products/accessories",
     component: productCategoryTemplate,
-    context: { products: accessories, category: "accessories" },
-  })
-  createPage({
-    path: "/products/apparel",
-    component: productCategoryTemplate,
-    context: { products: apparel, category: "apparel" },
+    context: {
+      products: accessories,
+      category: "accessories",
+    },
   })
 
   // Create individual product pages
@@ -544,20 +620,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       context: { product: node },
     })
   })
-
-  apparel.forEach(({ node }) => {
-    createPage({
-      path: `products/${node.slug}`,
-      component: productTemplate,
-      context: { product: node },
-    })
-  })
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
   if (node.internal.type === "Mdx") {
-    console.log(node.fileAbsolutePath)
     const value = createFilePath({ node, getNode })
     createNodeField({
       name: "slug",

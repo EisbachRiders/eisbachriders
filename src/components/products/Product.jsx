@@ -7,7 +7,7 @@ import Button from "@material-ui/core/Button"
 import Container from "../ui/Container"
 import Colors from "./Colors"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   container: {
     marginBottom: 150,
   },
@@ -71,23 +71,23 @@ function Product({ product }) {
   let colors =
     product === undefined
       ? []
-      : product.paColors.edges.map((elem) => elem.node.name)
+      : product.paColors.edges.map(elem => elem.node.name)
   let sizes =
     product === undefined
       ? []
-      : product.paSizes.edges.map((elem) => elem.node.name)
+      : product.paSizes.edges.map(elem => elem.node.name)
   let plugs =
     product === undefined
       ? []
-      : product.paFinPlugs.edges.map((elem) => elem.node.name)
+      : product.paFinPlugs.edges.map(elem => elem.node.name)
   let waterTemps =
     product === undefined
       ? []
-      : product.paWaterTemps.edges.map((elem) => elem.node.name)
+      : product.paWaterTemps.edges.map(elem => elem.node.name)
   let amounts =
     product === undefined
       ? []
-      : product.paAmounts.edges.map((elem) => elem.node.name)
+      : product.paAmounts.edges.map(elem => elem.node.name)
 
   return (
     <Container justifyContent="spaceBetween" className={classes.container}>
@@ -138,7 +138,7 @@ function Product({ product }) {
         {sizes.length > 0 && (
           <div className={classes.attributeContainer}>
             <p className={classes.subheader}>{t("product.sizes")}:</p>
-            {sizes.map((elem) => (
+            {sizes.map(elem => (
               <p className={classes.subheader} key={`size_${elem}`}>
                 {elem}
               </p>
@@ -148,7 +148,7 @@ function Product({ product }) {
         {plugs.length > 0 && (
           <div className={classes.attributeContainer}>
             <p className={classes.subheader}>{t("product.plugs")}:</p>
-            {plugs.map((elem) => (
+            {plugs.map(elem => (
               <p className={classes.subheader} key={`plug_${elem}`}>
                 {elem}
               </p>
@@ -158,7 +158,7 @@ function Product({ product }) {
         {amounts.length > 0 && (
           <div className={classes.attributeContainer}>
             <p className={classes.subheader}>{t("product.amounts")}:</p>
-            {amounts.map((elem) => (
+            {amounts.map(elem => (
               <p className={classes.subheader} key={`amounts_${elem}`}>
                 {elem}
               </p>
@@ -168,7 +168,7 @@ function Product({ product }) {
         {waterTemps.length > 0 && (
           <div className={classes.attributeContainer}>
             <p className={classes.subheader}>{t("product.waterTemps")}:</p>
-            {waterTemps.map((elem) => (
+            {waterTemps.map(elem => (
               <p className={classes.subheader} key={`temps_${elem}`}>
                 {elem}
               </p>

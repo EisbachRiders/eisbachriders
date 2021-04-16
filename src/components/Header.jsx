@@ -200,7 +200,6 @@ function Header({ location }) {
     "sup-longboard-fins",
     "leashes",
     "accessories",
-    "apparel",
   ]
 
   return (
