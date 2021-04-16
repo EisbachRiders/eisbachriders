@@ -383,7 +383,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
       }
-      0: wpgraphql {
+      essential: wpgraphql {
         products(
           first: 30
           where: { tagIn: "essential-line", categoryIdNotIn: 144 }
