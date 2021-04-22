@@ -76,6 +76,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `q0830daxi8kf`,
+        accessToken: "9nleZOsFjwfkITaaUQuEeaFAUpA6AEo6c7D3Xy3rKls",
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/assets/`,
