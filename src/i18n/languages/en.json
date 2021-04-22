@@ -222,7 +222,16 @@
     "accessories": "Accessories",
     "apparel": "Apparel",
     "sup-longboard-fins": "SUP & Longboard Fins",
-    "products": "products"
+    "products": "products",
+    "line-essential-fcs": "Optimal performance for every surf level, no matter if beginner or intermediate.",
+    "line-essential-future": "Optimal performance for every surf level, no matter if beginner or intermediate.",
+    "line-essential-single": "Optimal performance for every surfboard or stand-up paddle board.",
+    "line-touring-single": "Best performance and stability on extended SUP tours.",
+    "line-sustainable-touring": "Best performance and stability on extended SUP tours. Quality - Made in Germany.",
+    "line-sustainable-single": "Best performance for longboards or SUP. Quality - Made in Germany.",
+    "line-race-single": "Best performance and stability on extended SUP tours.",
+    "line-honeycomb-fcs": "Best performance for all rising surfers, no matter if intermediate or pro.",
+    "line-honeycomb-future": "Best performance for all rising surfers, no matter if intermediate or pro."
   },
   "404": {
     "notFound": "Page Not Found",

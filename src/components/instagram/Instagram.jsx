@@ -56,23 +56,24 @@ const useStyles = makeStyles(theme => ({
 
 const InstagramWidget = () => {
   const classes = useStyles()
-  const data = useStaticQuery(graphql`
-    query {
-      allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 3) {
-        edges {
-          node {
-            likes
-            id
-            localFile {
-              childImageSharp {
-                gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP])
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 3) {
+  //       edges {
+  //         node {
+  //           likes
+  //           id
+  //           localFile {
+  //             childImageSharp {
+  //               gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP])
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
+  const data = []
 
   return (
     <div className={classes.root}>

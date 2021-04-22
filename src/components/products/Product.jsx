@@ -2,43 +2,34 @@ import React from "react"
 import { useTranslation } from "react-i18next"
 import clsx from "clsx"
 import { makeStyles } from "@material-ui/core/styles"
-import Typography from "@material-ui/core/Typography"
 import Button from "@material-ui/core/Button"
+import Typography from "@material-ui/core/Typography"
 import Container from "../ui/Container"
 import Colors from "./Colors"
+import ProductDetails from "./ProductDetails"
+import ProductImages from "./ProductImages"
 
 const useStyles = makeStyles(theme => ({
   container: {
-    marginBottom: 150,
+    marginTop: 30,
   },
   flexContainer: {
     flexBasis: "100%",
     [theme.breakpoints.up("md")]: {
-      flexBasis: "60%",
-    },
-  },
-  flexContainer2: {
-    flexBasis: "100%",
-    [theme.breakpoints.up("md")]: {
-      flexBasis: "38%",
+      flexBasis: "48%",
     },
   },
   imgContainer: {
-    display: "flex",
-    flexWrap: "wrap",
-    alignItems: "flex-start",
+    width: "70%",
+    margin: "0 auto",
   },
-  img: {
-    width: "50%",
-  },
-  imgFull: {
-    width: "100%",
-  },
-  img3: {
-    width: "33%",
+  padding: {
+    padding: 30,
+    [theme.breakpoints.up("md")]: {
+      padding: 60,
+    },
   },
   header: {
-    fontFamily: "secondary",
     fontSize: 32,
     marginBottom: 30,
   },
@@ -64,9 +55,14 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-function Product({ product }) {
+function Product({ product, variant }) {
   const { t } = useTranslation()
   const classes = useStyles()
+
+  const images = [{ source: product.image.sourceUrl, alt: product.image.slug }]
+  product.galleryImages.edges.forEach(elem =>
+    images.push({ source: elem.node.sourceUrl, alt: elem.node.slug })
+  )
 
   let colors =
     product === undefined
@@ -89,42 +85,32 @@ function Product({ product }) {
       ? []
       : product.paAmounts.edges.map(elem => elem.node.name)
 
+  let productVariant = product.name.toLowerCase().includes("honeycomb")
+    ? "Honeycomb"
+    : product.name.toLowerCase().includes("essential")
+    ? "Essential"
+    : product.name.toLowerCase().includes("sustainable")
+    ? "Sustainable"
+    : product.name.toLowerCase().includes("touring")
+    ? "Touring"
+    : product.name.toLowerCase().includes("race")
+    ? "Race"
+    : null
+  let finType = product.name.toLowerCase().includes("double tab")
+    ? "FCS"
+    : product.name.toLowerCase().includes("single tab")
+    ? "Future"
+    : product.name.toLowerCase().includes("single")
+    ? "Single"
+    : "Touring"
+
   return (
     <Container justifyContent="spaceBetween" className={classes.container}>
-      <div className={clsx(classes.flexContainer, classes.imgContainer)}>
-        <img
-          src={product.image.sourceUrl}
-          alt={product.image.slug}
-          className={
-            product.galleryImages.edges.length === 0
-              ? classes.imgFull
-              : classes.img
-          }
-        />
-        {product.galleryImages.edges.length > 0 && (
-          <>
-            <img
-              src={product.galleryImages.edges[0].node.sourceUrl}
-              alt={product.galleryImages.edges[0].node.slug}
-              className={classes.img}
-            />
-            {product.galleryImages.edges.map((elem, idx) => {
-              if (idx !== 0) {
-                return (
-                  <img
-                    key={`img${idx}`}
-                    src={elem.node.sourceUrl}
-                    alt={elem.node.slug}
-                    className={classes.img3}
-                  />
-                )
-              }
-            })}
-          </>
-        )}
+      <div className={classes.flexContainer}>
+        <ProductImages images={images} />
       </div>
 
-      <div className={classes.flexContainer2}>
+      <div className={clsx(classes.flexContainer, classes.padding)}>
         <Typography variant="h6" component="h1" className={classes.header}>
           {product.name}
         </Typography>
@@ -185,11 +171,23 @@ function Product({ product }) {
         />
 
         <div className={classes.buttonContainer}>
-          <Button variant="contained" color="primary" href={product.link}>
+          <Button
+            variant="contained"
+            color="primary"
+            href={product.link}
+            fullWidth
+          >
             {t("product.buy")}
           </Button>
         </div>
       </div>
+      {variant === "fins" && productVariant && (
+        <ProductDetails
+          variant={productVariant}
+          fin={finType}
+          images={images}
+        />
+      )}
     </Container>
   )
 }

@@ -557,12 +557,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   createPage({
     path: "/products/essential-line",
     component: productCategoryTemplate,
-    context: { products: essentialLine, category: "essential" },
+    context: {
+      products: essentialLine,
+      category: "essential",
+    },
   })
   createPage({
     path: "/products/sustainable-line",
     component: productCategoryTemplate,
-    context: { products: sustainableLine, category: "sustainable" },
+    context: {
+      products: sustainableLine,
+      category: "sustainable",
+    },
   })
   createPage({
     path: "/products/surfboard-fins",
@@ -593,7 +599,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     createPage({
       path: `products/${node.slug}`,
       component: productTemplate,
-      context: { product: node },
+      context: { product: node, variant: "fins" },
     })
   })
 
@@ -609,7 +615,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     createPage({
       path: `products/${node.slug}`,
       component: productTemplate,
-      context: { product: node },
+      context: { product: node, variant: "fins" },
     })
   })
 
