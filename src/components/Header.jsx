@@ -194,7 +194,7 @@ function Header({ location }) {
     threshold: 0,
   })
 
-  const links = ["urban", "products", "recycled-fins", "shop", "about"]
+  const links = ["urban", "products", "sustainable", "shop", "about"]
   const products = [
     "surfboard-fins",
     "sup-longboard-fins",

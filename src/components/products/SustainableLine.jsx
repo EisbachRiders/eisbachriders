@@ -4,15 +4,71 @@ import { useTranslation } from "react-i18next"
 import { makeStyles } from "@material-ui/core/styles"
 import Typography from "@material-ui/core/Typography"
 import Container from "../ui/Container"
+import Link from "../ui/Link"
+import SwipeableViews from "react-swipeable-views"
+import { autoPlay } from "react-swipeable-views-utils"
+
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews)
+
+const finSteps = [
+  {
+    label: "single tab fin sustainable",
+    img: (
+      <StaticImage
+        src="../../assets/websiteImages/single-tab-fin-black-sustainable.png"
+        alt="single tab fin sustainable"
+        placeholder="blurred"
+      />
+    ),
+  },
+  {
+    label: "double tab fin sustainable",
+    img: (
+      <StaticImage
+        src="../../assets/websiteImages/double-tab-fin-black-sustainable.png"
+        alt="double tab fin sustainable"
+        placeholder="blurred"
+      />
+    ),
+  },
+  {
+    label: "quick lock fin",
+    img: (
+      <StaticImage
+        src="../../assets/websiteImages/quick-lock-touring-transparent.png"
+        alt="quick lock fin"
+        placeholder="blurred"
+      />
+    ),
+  },
+  {
+    label: "9inch us box",
+    img: (
+      <StaticImage
+        src="../../assets/websiteImages/9-inch-us-box.png"
+        alt="9inch us box"
+        placeholder="blurred"
+      />
+    ),
+  },
+]
 
 const useStyles = makeStyles(theme => ({
   root: {
-    background: theme.color.blueGray,
-    marginBottom: 60,
+    background: theme.color.cream,
+    marginBottom: 30,
+    [theme.breakpoints.up("xl")]: {
+      width: 1440,
+      padding: `30px 60px`,
+      marginBottom: 60,
+    },
+  },
+  link: {
+    "&:hover": {
+      textDecoration: "none",
+    },
   },
   title: {
-    writingMode: "vertical-lr",
-    textOrientation: "mixed",
     fontSize: 32,
     marginBottom: 10,
     [theme.breakpoints.up("md")]: {
@@ -30,14 +86,8 @@ const useStyles = makeStyles(theme => ({
       fontSize: 24,
     },
   },
-  flexbox1: {
-    flexBasis: "30%",
-  },
-  flexbox2: {
-    flexBasis: "60%",
-  },
-  flexbox3: {
-    flexBasis: "10%",
+  flexbox: {
+    flexBasis: "50%",
   },
   image: {
     width: "100%",
@@ -54,35 +104,44 @@ const useStyles = makeStyles(theme => ({
 function SustainableLine() {
   const classes = useStyles()
   const { t } = useTranslation()
+  const [activeStep, setActiveStep] = React.useState(0)
+
+  const handleStepChange = step => {
+    setActiveStep(step)
+  }
 
   return (
-    <div className={classes.root}>
+    <Link to="/products/sustainable-line" className={classes.link}>
       <Container
         alignItems="center"
         justifyContent="spaceBetween"
-        flexWrap="nowrap"
+        className={classes.root}
       >
-        <div className={classes.flexbox1}>
-          <StaticImage
-            src="../../assets/websiteImages/quick-lock-touring-transparent.png"
-            alt="sustainable quick lock fin"
-            placeholder="blurred"
-          />
+        <div className={classes.flexbox}>
+          <Typography className={classes.title}>
+            Sustainable <br /> Line
+          </Typography>
+          <Typography className={classes.text}>
+            {t("product.sustainable-line")}
+          </Typography>
         </div>
-        <div className={classes.flexbox2}>
+        <div className={classes.flexbox}>
           <div className={classes.image}>
-            <StaticImage
-              src="../../assets/websiteImages/sup-paddler-looking-over-lake.jpg"
-              alt="sup paddler looking at lake"
-              placeholder="blurred"
-            />
+            <AutoPlaySwipeableViews
+              index={activeStep}
+              onChangeIndex={handleStepChange}
+              enableMouseEvents
+            >
+              {finSteps.map((step, index) => (
+                <div key={step.label}>
+                  {Math.abs(activeStep - index) <= 2 ? step.img : null}
+                </div>
+              ))}
+            </AutoPlaySwipeableViews>
           </div>
         </div>
-        <div className={classes.flexbox3}>
-          <Typography className={classes.title}>Sustainable</Typography>
-        </div>
       </Container>
-    </div>
+    </Link>
   )
 }
 
