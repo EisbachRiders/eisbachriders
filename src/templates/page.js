@@ -9,28 +9,18 @@ import Container from "../components/ui/Container"
 
 const shortcodes = Link // Provide common components here
 
-export default function PageTemplate({ data: { mdx } }) {
+export default function PageTemplate({ pageContext }) {
+  const { title, body } = pageContext
+  console.log(pageContext)
   return (
     <Layout>
-      <Seo title={mdx.frontmatter.title} />
+      <Seo title={title} />
       <Container flexDirection="column">
-        <h1>{mdx.frontmatter.title}</h1>
+        <h1>{title}</h1>
         <MDXProvider components={shortcodes}>
-          <MDXRenderer>{mdx.body}</MDXRenderer>
+          <MDXRenderer>{body}</MDXRenderer>
         </MDXProvider>
       </Container>
     </Layout>
   )
 }
-
-export const pageQuery = graphql`
-  query PageQuery($id: String) {
-    mdx(id: { eq: $id }) {
-      id
-      body
-      frontmatter {
-        title
-      }
-    }
-  }
-`

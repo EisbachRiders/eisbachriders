@@ -18,6 +18,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           node {
             id
             slug
+            body
+            frontmatter {
+              title
+            }
           }
         }
       }
@@ -221,7 +225,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     createPage({
       path: node.slug,
       component: pageTemplate,
-      context: { id: node.slug },
+      context: {
+        title: node.title, // "Using a Theme"
+        body: node.body,
+      },
     })
   })
 
