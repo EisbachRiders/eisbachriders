@@ -6,7 +6,7 @@ import Box from "@material-ui/core/Box"
 import FavoriteIcon from "@material-ui/icons/Favorite"
 
 const InstagramWidget = () => {
-  const data = []
+  const data = null
   // const data = useStaticQuery(graphql`
   //   query {
   //     allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 3) {
