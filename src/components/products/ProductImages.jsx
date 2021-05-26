@@ -1,7 +1,7 @@
 import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
 import Button from "@material-ui/core/Button"
-import Hidden from "@material-ui/core/Hidden"
+import Box from "@material-ui/core/Box"
 import MobileStepper from "@material-ui/core/MobileStepper"
 import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft"
 import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight"
@@ -39,7 +39,7 @@ function ProductImages({ images }) {
 
   return (
     <div className={classes.root}>
-      <Hidden smUp>
+      <Box sx={{ display: { xs: "none", sm: "block" } }}>
         <>
           <SwipeableViews
             index={activeStep}
@@ -82,8 +82,8 @@ function ProductImages({ images }) {
             }
           />
         </>
-      </Hidden>
-      <Hidden smDown>
+      </Box>
+      <Box sx={{ display: { xs: "block", sm: "none" } }}>
         <img
           src={images[0].source}
           alt={images[0].alt}
@@ -106,7 +106,7 @@ function ProductImages({ images }) {
             </React.Fragment>
           ))}
         </ImageList> */}
-      </Hidden>
+      </Box>
     </div>
   )
 }

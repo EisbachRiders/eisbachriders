@@ -61,14 +61,14 @@ module.exports = {
     //     ],
     //   },
     // },
-    {
-      resolve: `gatsby-source-graphql`,
-      options: {
-        typeName: "WPGraphQL",
-        fieldName: "wpgraphql",
-        url: "https://secondwavesurfing.com/shop/graphql",
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-graphql`,
+    //   options: {
+    //     typeName: "WPGraphQL",
+    //     fieldName: "wpgraphql",
+    //     url: "https://secondwavesurfing.com/shop/graphql",
+    //   },
+    // },
     {
       resolve: `gatsby-source-instagram`,
       options: {

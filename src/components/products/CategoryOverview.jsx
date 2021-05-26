@@ -110,7 +110,7 @@ function ProductsOverview({ products, category }) {
   const shopItems = value => {
     const section = multipleOfFour(value)
     return section.map((elem, idx) => (
-      <ShopItem product={elem.node} key={`fins${idx}`} />
+      <ShopItem product={elem.node} key={`shopItem${idx}`} />
     ))
   }
 
@@ -130,7 +130,7 @@ function ProductsOverview({ products, category }) {
     default:
       subcat = []
   }
-
+  console.log(products)
   return (
     <>
       <div className={classes.background}>

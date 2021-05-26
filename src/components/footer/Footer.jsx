@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next"
 import Link from "../ui/Link"
 import clsx from "clsx"
 import { makeStyles } from "@material-ui/styles"
-import Hidden from "@material-ui/core/Hidden"
+import Box from "@material-ui/core/Box"
 import Newsletter from "../newsletter/Newsletter"
 import Container from "../ui/Container"
 import Contact from "../Contact"
@@ -192,7 +192,7 @@ function Footer() {
           >
             {t("links.terms")}
           </Link>
-          <Hidden smDown>|</Hidden>
+          <Box sx={{ display: { xs: "none", sm: "block" } }}>|</Box>
           <Link to="/imprint" className={clsx(classes.textSmall, classes.link)}>
             {t("links.imprint")}
           </Link>

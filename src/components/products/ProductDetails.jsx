@@ -1,15 +1,10 @@
 import React from "react"
-import { makeStyles } from "@material-ui/core/styles"
-import ProductType from "./ProductType"
+import ProductIntro from "./productDetails/ProductIntro"
 
-const useStyles = makeStyles(theme => ({}))
-
-function ProductDetails({ variant, fin, images }) {
-  const classes = useStyles()
-
+function ProductDetails({ product }) {
   return (
     <>
-      <ProductType variant={variant} fin={fin} image={images[0]} />
+      <ProductIntro data={product} />
     </>
   )
 }

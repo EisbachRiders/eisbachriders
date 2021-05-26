@@ -4,11 +4,11 @@ import Seo from "../components/Seo"
 import Product from "../components/products/Product"
 
 export default function ProductTemplate({ pageContext }) {
-  const { product, variant } = pageContext
+  const { product } = pageContext
   return (
     <Layout>
       <Seo title={product.name} />
-      <Product product={product} variant={variant} />
+      <Product product={product} />
     </Layout>
   )
 }

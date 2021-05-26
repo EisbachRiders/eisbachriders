@@ -2,7 +2,7 @@ import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { useTranslation } from "react-i18next"
 import { makeStyles } from "@material-ui/core/styles"
-import Hidden from "@material-ui/core/Hidden"
+import Box from "@material-ui/core/Box"
 import Button from "@material-ui/core/Button"
 import Typography from "@material-ui/core/Typography"
 import Container from "../ui/Container"
@@ -82,10 +82,10 @@ function FeaturedProduct() {
   return (
     <Container background="grayLt">
       <div className={classes.container}>
-        <Hidden xsDown>
+        <Box sx={{ display: { xs: "none", sm: "block" } }}>
           <FeatureDetail />
-        </Hidden>
-        <Hidden only={["sm"]}>
+        </Box>
+        <Box sx={{ display: { xs: "none", sm: "block", md: "none" } }}>
           <div className={classes.containerImg}>
             <StaticImage
               src="../../assets/websiteImages/single-tab-honeycomb-fin-green.png"
@@ -94,7 +94,7 @@ function FeaturedProduct() {
               className={classes.img}
             />
           </div>
-        </Hidden>
+        </Box>
         <div className={classes.containerInfo}>
           <Typography className={classes.detailTitle}>Honeycomb Fin</Typography>
           <Typography className={classes.detailText}>

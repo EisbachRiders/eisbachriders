@@ -1,9 +1,9 @@
 import React from "react"
-import { useTranslation } from "react-i18next"
 import { makeStyles } from "@material-ui/core/styles"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Typography from "@material-ui/core/Typography"
-import Container from "../ui/Container"
-import Link from "../ui/Link"
+import Container from "@material-ui/core/Container"
+import Link from "../../ui/Link"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -56,9 +56,11 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-function ProductType({ variant, fin, image }) {
+function ProductType({ data }) {
   const classes = useStyles()
-  const { t } = useTranslation()
+  const image = data.productDetailIntroImage
+    ? getImage(data.productDetailIntroImage)
+    : null
 
   return (
     <Link to="/products/essential-line" className={classes.link}>
@@ -69,16 +71,16 @@ function ProductType({ variant, fin, image }) {
         className={classes.root}
       >
         <div className={classes.flexbox}>
-          <Typography className={classes.title}>
-            {variant} <br /> {fin} Fin
-          </Typography>
+          <div
+            dangerouslySetInnerHTML={{ __html: data.productDetailIntroTitle }}
+          />
           <Typography className={classes.text}>
-            {t(`product.line-${variant.toLowerCase()}-${fin.toLowerCase()}`)}
+            {data.productDetailSubtitle}
           </Typography>
         </div>
         <div className={classes.flexbox}>
           <div className={classes.image}>
-            <img src={image?.source} alt={image?.alt} className={classes.img} />
+            <GatsbyImage image={image} alt={data.name} />
           </div>
         </div>
       </Container>

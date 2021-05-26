@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from "react"
 import { useTranslation } from "react-i18next"
+import { StaticImage } from "gatsby-plugin-image"
 import clsx from "clsx"
 import Link from "./ui/Link"
 import { makeStyles } from "@material-ui/styles"
+import Box from "@material-ui/core/Box"
 import IconButton from "@material-ui/core/IconButton"
 import Button from "@material-ui/core/Button"
 import ClickAwayListener from "@material-ui/core/ClickAwayListener"
@@ -15,16 +17,12 @@ import List from "@material-ui/core/List"
 import ListItem from "@material-ui/core/ListItem"
 import AppBar from "@material-ui/core/AppBar"
 import Toolbar from "@material-ui/core/Toolbar"
-import Hidden from "@material-ui/core/Hidden"
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer"
 import useScrollTrigger from "@material-ui/core/useScrollTrigger"
 import MenuIcon from "@material-ui/icons/Menu"
-import FacebookIcon from "@material-ui/icons/Facebook"
-import InstagramIcon from "@material-ui/icons/Instagram"
-import PinterestIcon from "@material-ui/icons/Pinterest"
-import Container from "./ui/Container"
+import Container from "@material-ui/core/Container"
 import Contact from "./Contact"
-import logo from "../assets/logos/logo.svg"
+import Topbar from "./header/Topbar"
 
 const useStyles = makeStyles(theme => ({
   appbar: {
@@ -142,12 +140,7 @@ function Header({ location }) {
   const [openProducts, setOpenProducts] = useState(false)
   const classes = useStyles()
   const anchorRef = useRef(null)
-  const { i18n, t } = useTranslation()
-
-  const handleSetLang = () => {
-    let newLng = i18n.language === "en" ? "de" : "en"
-    i18n.changeLanguage(newLng)
-  }
+  const { t } = useTranslation()
 
   const toggleDrawer = open => event => {
     if (
@@ -196,70 +189,39 @@ function Header({ location }) {
 
   const links = ["urban", "products", "sustainable", "shop", "about"]
   const products = [
-    "surfboard-fins",
-    "sup-longboard-fins",
+    "fins",
     "leashes",
     "accessories",
+    "essential-line",
+    "sustainable-line",
+    "performance-line",
   ]
 
   return (
     <AppBar
       position="sticky"
-      className={clsx(
-        classes.appbar,
-        trigger ? classes.colorBackground : classes.transparentBackground
-      )}
+      sx={{
+        background: trigger ? "transparent" : theme => theme.color.white,
+        boxShadow: "none",
+        zIndex: 200,
+      }}
     >
-      <Container
-        alignItems="center"
-        justifyContent="flexEnd"
-        background="black"
-        padding="none"
-      >
-        <IconButton
-          href="https://www.facebook.com/EisbachRiders/"
-          aria-label="facebook"
-          size="small"
-          rel="noopener"
-          target="_blank"
+      <Topbar />
+      <Container>
+        <Toolbar
+          sx={{ width: "100%", justifyContent: "space-between" }}
+          disableGutters
         >
-          <FacebookIcon className={classes.icon} />
-        </IconButton>
-        <IconButton
-          href="https://www.instagram.com/eisbachriders/"
-          aria-label="instagram"
-          size="small"
-          rel="noopener"
-          target="_blank"
-        >
-          <InstagramIcon className={classes.icon} />
-        </IconButton>
-        <IconButton
-          href="https://www.pinterest.com/eisbachriders/"
-          aria-label="pinterest"
-          size="small"
-          rel="noopener"
-          target="_blank"
-        >
-          <PinterestIcon className={classes.icon} />
-        </IconButton>
-        <Button
-          onClick={() => handleSetLang()}
-          className={classes.languageButton}
-        >
-          {i18n.language}
-        </Button>
-      </Container>
-      <Container padding="none">
-        <Toolbar className={classes.toolbar} disableGutters>
           <Link to="/">
-            <img
-              src={logo}
-              className={classes.logo}
-              alt="eisbach riders logo"
-            />
+            <Box sx={{ width: { xs: 50, md: 100 } }}>
+              <StaticImage
+                src="../assets/logos/logo.svg"
+                alt="eisbach riders"
+                placeholder="blurred"
+              />
+            </Box>
           </Link>
-          <Hidden mdDown>
+          <Box sx={{ display: { xs: "none", md: "block" } }}>
             <List
               component="nav"
               aria-label="website navigation"
@@ -359,8 +321,8 @@ function Header({ location }) {
                 </ListItem>
               ))}
             </List>
-          </Hidden>
-          <Hidden mdUp>
+          </Box>
+          <Box sx={{ display: { xs: "block", md: "none" } }}>
             <IconButton aria-label="menu" onClick={toggleDrawer(true)}>
               <MenuIcon className={classes.menuIcon} />
             </IconButton>
@@ -441,7 +403,7 @@ function Header({ location }) {
                 <Contact variant="header" />
               </List>
             </SwipeableDrawer>
-          </Hidden>
+          </Box>
         </Toolbar>
       </Container>
     </AppBar>

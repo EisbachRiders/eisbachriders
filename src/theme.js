@@ -1,4 +1,4 @@
-import { createMuiTheme } from "@material-ui/core/styles"
+import { createTheme } from "@material-ui/core/styles"
 import "./css/app.css"
 
 // fin: "#00d7a2",
@@ -36,7 +36,7 @@ const color = {
   blueGray: "#cbd3cf",
 }
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     type: "light",
     primary: {

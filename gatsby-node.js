@@ -21,502 +21,179 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
       }
-      products: wpgraphql {
-        products(
-          first: 50
-          where: { tagIn: "Eisbach Riders", categoryIdNotIn: 144 }
-        ) {
-          edges {
-            node {
+      products: allContentfulProduct(filter: { node_locale: { eq: "en-US" } }) {
+        edges {
+          node {
+            name
+            slug
+            mainImage {
+              gatsbyImageData
+            }
+            color {
               name
-              image {
-                sourceUrl
-                slug
-              }
-              galleryImages {
-                edges {
-                  node {
-                    sourceUrl
-                    slug
-                  }
-                }
-              }
-              shortDescription(format: RENDERED)
-              paAmounts {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              paWaterTemps {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              paColors {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              paFinPlugs {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              paSizes {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              productTags {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              slug
-              link
+            }
+            productDetailIntroTitle {
+              raw
+            }
+            productDetailIntroSubtitle
+            productDetailIntroImage {
+              gatsbyImageData
             }
           }
         }
       }
-      fins: wpgraphql {
-        products(
-          first: 30
-          where: {
-            category: "Fins"
-            tagIn: "Eisbach Riders"
-            tagNotIn: "sup"
-            categoryIdNotIn: 144
-          }
-        ) {
-          edges {
-            node {
+      fins: allContentfulProduct(
+        filter: {
+          category: { name: { eq: "Fin" } }
+          node_locale: { eq: "en-US" }
+        }
+      ) {
+        edges {
+          node {
+            name
+            slug
+            mainImage {
+              gatsbyImageData
+            }
+            color {
               name
-              image {
-                sourceUrl
-                slug
-              }
-              galleryImages {
-                edges {
-                  node {
-                    sourceUrl
-                    slug
-                  }
-                }
-              }
-              shortDescription(format: RENDERED)
-              paAmounts {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              paWaterTemps {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              paColors {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              paFinPlugs {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              paSizes {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              productTags {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              slug
-              link
+            }
+            productDetailIntroTitle {
+              raw
+            }
+            productDetailIntroSubtitle
+            productDetailIntroImage {
+              gatsbyImageData
             }
           }
         }
       }
-      leashes: wpgraphql {
-        products(
-          where: {
-            category: "Leashes"
-            tagIn: "Eisbach Riders"
-            categoryIdNotIn: 144
-          }
-        ) {
-          edges {
-            node {
+      accessories: allContentfulProduct(
+        filter: {
+          category: { name: { eq: "Accessories" } }
+          node_locale: { eq: "en-US" }
+        }
+      ) {
+        edges {
+          node {
+            name
+            slug
+            mainImage {
+              gatsbyImageData
+            }
+            color {
               name
-              image {
-                sourceUrl
-                slug
-              }
-              galleryImages {
-                edges {
-                  node {
-                    sourceUrl
-                    slug
-                  }
-                }
-              }
-              shortDescription(format: RENDERED)
-              paAmounts {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              paWaterTemps {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              paColors {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              paFinPlugs {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              paSizes {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              productTags {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              slug
-              link
+            }
+            productDetailIntroTitle {
+              raw
+            }
+            productDetailIntroSubtitle
+            productDetailIntroImage {
+              gatsbyImageData
             }
           }
         }
       }
-      sup: wpgraphql {
-        products(
-          first: 30
-          where: {
-            category: "SUP"
-            tagIn: "Eisbach Riders"
-            tagNotIn: "leash"
-            categoryIdNotIn: 144
-          }
-        ) {
-          edges {
-            node {
+      leashes: allContentfulProduct(
+        filter: {
+          category: { name: { eq: "Leash" } }
+          node_locale: { eq: "en-US" }
+        }
+      ) {
+        edges {
+          node {
+            name
+            slug
+            mainImage {
+              gatsbyImageData
+            }
+            color {
               name
-              image {
-                sourceUrl
-                slug
-              }
-              galleryImages {
-                edges {
-                  node {
-                    sourceUrl
-                    slug
-                  }
-                }
-              }
-              shortDescription(format: RENDERED)
-              paAmounts {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              paWaterTemps {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              paColors {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              paFinPlugs {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              paSizes {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              productTags {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              slug
-              link
+            }
+            productDetailIntroTitle {
+              raw
+            }
+            productDetailIntroSubtitle
+            productDetailIntroImage {
+              gatsbyImageData
             }
           }
         }
       }
-      accessories: wpgraphql {
-        products(
-          first: 30
-          where: {
-            category: "Accessories"
-            tagIn: "Eisbach Riders"
-            categoryIdNotIn: 144
-          }
-        ) {
-          edges {
-            node {
+      essential: allContentfulProduct(
+        filter: {
+          line: { name: { eq: "essential" } }
+          node_locale: { eq: "en-US" }
+        }
+      ) {
+        edges {
+          node {
+            name
+            slug
+            mainImage {
+              gatsbyImageData
+            }
+            color {
               name
-              image {
-                sourceUrl
-                slug
-              }
-              galleryImages {
-                edges {
-                  node {
-                    sourceUrl
-                    slug
-                  }
-                }
-              }
-              shortDescription(format: RENDERED)
-              paAmounts {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              paWaterTemps {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              paColors {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              paFinPlugs {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              paSizes {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              productTags {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              slug
-              link
+            }
+            productDetailIntroTitle {
+              raw
+            }
+            productDetailIntroSubtitle
+            productDetailIntroImage {
+              gatsbyImageData
             }
           }
         }
       }
-      essential: wpgraphql {
-        products(
-          first: 30
-          where: { tagIn: "essential-line", categoryIdNotIn: 144 }
-        ) {
-          edges {
-            node {
+      sustainable: allContentfulProduct(
+        filter: {
+          category: { name: { eq: "sustainable" } }
+          node_locale: { eq: "en-US" }
+        }
+      ) {
+        edges {
+          node {
+            name
+            slug
+            mainImage {
+              gatsbyImageData
+            }
+            color {
               name
-              image {
-                sourceUrl
-                slug
-              }
-              galleryImages {
-                edges {
-                  node {
-                    sourceUrl
-                    slug
-                  }
-                }
-              }
-              shortDescription(format: RENDERED)
-              paAmounts {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              paWaterTemps {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              paColors {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              paFinPlugs {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              paSizes {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              productTags {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              slug
-              link
+            }
+            productDetailIntroTitle {
+              raw
+            }
+            productDetailIntroSubtitle
+            productDetailIntroImage {
+              gatsbyImageData
             }
           }
         }
       }
-      sustainable: wpgraphql {
-        products(
-          first: 30
-          where: { tagIn: "sustainable", categoryIdNotIn: 144 }
-        ) {
-          edges {
-            node {
+      performance: allContentfulProduct(
+        filter: {
+          category: { name: { eq: "performance" } }
+          node_locale: { eq: "en-US" }
+        }
+      ) {
+        edges {
+          node {
+            name
+            slug
+            mainImage {
+              gatsbyImageData
+            }
+            color {
               name
-              image {
-                sourceUrl
-                slug
-              }
-              galleryImages {
-                edges {
-                  node {
-                    sourceUrl
-                    slug
-                  }
-                }
-              }
-              shortDescription(format: RENDERED)
-              paAmounts {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              paWaterTemps {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              paColors {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              paFinPlugs {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              paSizes {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              productTags {
-                edges {
-                  node {
-                    name
-                  }
-                }
-              }
-              slug
-              link
+            }
+            productDetailIntroTitle {
+              raw
+            }
+            productDetailIntroSubtitle
+            productDetailIntroImage {
+              gatsbyImageData
             }
           }
         }
@@ -530,13 +207,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   const pages = result.data.pagesRemark.edges
-  // const products = result.data.products.products.edges
-  const fins = result.data.fins.products.edges
-  const leashes = result.data.leashes.products.edges
-  const sup = result.data.sup.products.edges
-  const accessories = result.data.accessories.products.edges
-  const essentialLine = result.data.essential.products.edges
-  const sustainableLine = result.data.sustainable.products.edges
+  const products = result.data.products.edges
+  const fins = result.data.fins.edges
+  const leashes = result.data.leashes.edges
+  const accessories = result.data.accessories.edges
+  const essentialLine = result.data.essential.edges
+  const sustainableLine = result.data.sustainable.edges
+  const performanceLine = result.data.performance.edges
   // const apparel = result.data.apparel.products.edges
 
   // Create pages
@@ -544,7 +221,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     createPage({
       path: node.slug,
       component: pageTemplate,
-      context: { id: node.id },
+      context: { id: node.slug },
     })
   })
 
@@ -571,14 +248,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     },
   })
   createPage({
-    path: "/products/surfboard-fins",
+    path: "/products/performance-line",
     component: productCategoryTemplate,
-    context: { products: fins, category: "surfboard-fins" },
+    context: {
+      products: performanceLine,
+      category: "performance",
+    },
   })
   createPage({
-    path: "/products/sup-longboard-fins",
+    path: "/products/fins",
     component: productCategoryTemplate,
-    context: { products: sup, category: "sup-longboard-fins" },
+    context: { products: fins, category: "fins" },
   })
   createPage({
     path: "/products/leashes",
@@ -595,15 +275,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })
 
   // Create individual product pages
-  fins.forEach(({ node }) => {
-    createPage({
-      path: `products/${node.slug}`,
-      component: productTemplate,
-      context: { product: node, variant: "fins" },
-    })
-  })
-
-  leashes.forEach(({ node }) => {
+  products.forEach(({ node }) => {
     createPage({
       path: `products/${node.slug}`,
       component: productTemplate,
@@ -611,34 +283,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   })
 
-  sup.forEach(({ node }) => {
-    createPage({
-      path: `products/${node.slug}`,
-      component: productTemplate,
-      context: { product: node, variant: "fins" },
-    })
-  })
-
-  accessories.forEach(({ node }) => {
-    createPage({
-      path: `products/${node.slug}`,
-      component: productTemplate,
-      context: { product: node },
-    })
-  })
-}
-
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
-  if (node.internal.type === "Mdx") {
-    const value = createFilePath({ node, getNode })
-    createNodeField({
-      name: "slug",
-      node,
-      // Generated value based on filepath with "blog" prefix. you
-      // don't need a separating "/" before the value because
-      // createFilePath returns a path with the leading "/".
-      value: value,
-    })
+  exports.onCreateNode = ({ node, actions, getNode }) => {
+    const { createNodeField } = actions
+    if (node.internal.type === "Mdx") {
+      const value = createFilePath({ node, getNode })
+      createNodeField({
+        name: "slug",
+        node,
+        // Generated value based on filepath with "blog" prefix. you
+        // don't need a separating "/" before the value because
+        // createFilePath returns a path with the leading "/".
+        value: value,
+      })
+    }
   }
 }

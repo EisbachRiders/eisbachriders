@@ -4,7 +4,7 @@ import clsx from "clsx"
 import { useTranslation } from "react-i18next"
 import { makeStyles } from "@material-ui/core/styles"
 import Typography from "@material-ui/core/Typography"
-import Hidden from "@material-ui/core/Hidden"
+import Box from "@material-ui/core/Box"
 import SurfIcon from "../../assets/icons/Surf"
 import FeatherIcon from "../../assets/icons/Feather"
 
@@ -83,7 +83,7 @@ function FeatureDetail() {
       {details.map((elem, idx) => (
         <Fragment key={`detail${idx}`}>
           {elem === "img" && (
-            <Hidden mdUp>
+            <Box sx={{ display: { xs: "none", md: "block" } }}>
               <div className={classes.containerDetail}>
                 <StaticImage
                   src="../../assets/websiteImages/single-tab-honeycomb-fin-green.png"
@@ -92,7 +92,7 @@ function FeatureDetail() {
                   className={classes.img}
                 />
               </div>
-            </Hidden>
+            </Box>
           )}
           {elem === "response" && (
             <div className={clsx(classes.containerDetail, classes.bottom1)}>

@@ -6,7 +6,7 @@ import { makeStyles } from "@material-ui/core/styles"
 import Popover from "@material-ui/core/Popover"
 import Typography from "@material-ui/core/Typography"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   containerSpace: {
     display: "flex",
     justifyContent: "space-between",
@@ -84,29 +84,30 @@ function Colors({ colors, variant }) {
   }
 
   const circle = (color, idx) => (
-    <Fragment key={color}>
+    <Fragment key={color.name}>
       <p
         aria-owns={
           Boolean(anchorEl[idx]) ? `mouse-over-popover${idx}` : undefined
         }
         aria-haspopup="true"
-        onMouseEnter={(e) => handlePopoverOpen(e, idx)}
+        onMouseEnter={e => handlePopoverOpen(e, idx)}
         onMouseLeave={handlePopoverClose}
-        key={color}
+        key={color.name}
         className={clsx(
           variant === "large" ? classes.circleBig : classes.circle,
           {
-            [classes.blue]: color === "Blue",
-            [classes.gray]: color === "Grey",
-            [classes.seaGlass]: color === "Sea Glass",
-            [classes.white]: color === "White",
-            [classes.black]: color === "Black",
-            [classes.pink]: color === "Pink",
-            [classes.orange]: color === "Orange",
-            [classes.red]: color === "Red",
-            [classes.teal]: color === "Teal" || color === "Turquoise",
-            [classes.green]: color === "Green" || color === "Green Glass",
-            [classes.yellow]: color === "Yellow",
+            [classes.blue]: color.name === "blue",
+            [classes.gray]: color.name === "grey",
+            [classes.seaGlass]: color.name === "sea glass",
+            [classes.white]: color.name === "white",
+            [classes.black]: color.name === "black",
+            [classes.pink]: color.name === "pink",
+            [classes.orange]: color.name === "orange",
+            [classes.red]: color.name === "red",
+            [classes.teal]: color.name === "teal" || color.name === "turquoise",
+            [classes.green]:
+              color.name === "green" || color.name === "green glass",
+            [classes.yellow]: color.name === "yellow",
           }
         )}
       />
@@ -129,7 +130,7 @@ function Colors({ colors, variant }) {
         onClose={handlePopoverClose}
         disableRestoreFocus
       >
-        <Typography>{t(`product.${color}`)}</Typography>
+        <Typography>{t(`product.${color.name}`)}</Typography>
       </Popover>
     </Fragment>
   )

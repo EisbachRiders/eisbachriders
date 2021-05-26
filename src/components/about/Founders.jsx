@@ -3,7 +3,7 @@ import clsx from "clsx"
 import { StaticImage } from "gatsby-plugin-image"
 import { useTranslation } from "react-i18next"
 import { makeStyles } from "@material-ui/core/styles"
-import Hidden from "@material-ui/core/Hidden"
+import Box from "@material-ui/core/Box"
 import Container from "../ui/Container"
 
 const useStyles = makeStyles(theme => ({
@@ -42,14 +42,14 @@ function Founders() {
       className={classes.container}
     >
       <div className={clsx(classes.flexItem, classes.textContainer)}>
-        <Hidden mdDown>
+        <Box sx={{ display: { xs: "none", md: "block" } }}>
           <StaticImage
             src="../../assets/logos/logo.png"
             alt="logo"
             placeholder="blurred"
             className={classes.logo}
           />
-        </Hidden>
+        </Box>
         <p className={classes.title}>Eisbach Riders</p>
         <p className={classes.text}>{t("about.founders1")}</p>
         <p className={classes.text}>{t("about.founders2")}</p>

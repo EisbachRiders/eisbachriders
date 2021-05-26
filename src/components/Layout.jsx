@@ -1,26 +1,13 @@
 import React from "react"
 import { useTranslation } from "react-i18next"
 import CookieConsent from "react-cookie-consent"
-import { makeStyles} from "@material-ui/core/styles"
+import Box from "@material-ui/core/Box"
 import Header from "./Header"
 import Footer from "./footer/Footer"
 import Link from "./ui/Link"
 import "../i18n/i18n"
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    display: "flex",
-    flexDirection: "column",
-    background: theme.color.white,
-    minHeight: "100%",
-  },
-  main: {
-    flexGrow: 1,
-  },
-}))
-
 const Layout = ({ location, children }) => {
-  const classes = useStyles()
   const { t } = useTranslation()
 
   const handleOptOut = () => {
@@ -34,9 +21,18 @@ const Layout = ({ location, children }) => {
   }
 
   return (
-    <div className={classes.root}>
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        background: theme => theme.color.white,
+        minHeight: "100%",
+      }}
+    >
       <Header location={location} />
-      <main className={classes.main}>{children}</main>
+      <Box component="main" sx={{ flexGrow: 1 }}>
+        {children}
+      </Box>
       <CookieConsent
         location="bottom"
         enableDeclineButton
@@ -73,12 +69,12 @@ const Layout = ({ location, children }) => {
           to="/dataProtection/"
           style={{ color: "#00130e", textDecoration: "underline" }}
         >
-          {t("tracking.dataPrivacy")}.
+          {t("tracking.dataPrivacy")}
         </Link>
       </CookieConsent>
 
       <Footer />
-    </div>
+    </Box>
   )
 }
 

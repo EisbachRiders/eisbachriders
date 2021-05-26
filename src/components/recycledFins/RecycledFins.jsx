@@ -3,7 +3,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import clsx from "clsx"
 import { useTranslation } from "react-i18next"
 import { makeStyles } from "@material-ui/core/styles"
-import Hidden from "@material-ui/core/Hidden"
+import Box from "@material-ui/core/Box"
 import Button from "@material-ui/core/Button"
 import Container from "../ui/Container"
 import BeerIcon from "../../assets/websiteImages/beer.svg"
@@ -108,22 +108,22 @@ function RecycledFins() {
 
   return (
     <Container>
-      <Hidden mdDown>
+      <Box sx={{ display: { xs: "none", md: "block" } }}>
         <StaticImage
           src="../../assets/websiteImages/quickLockAD.png"
           alt="quick lock ad"
           placeholder="blurred"
           className={classes.banner}
         />
-      </Hidden>
-      <Hidden mdUp>
+      </Box>
+      <Box sx={{ display: { xs: "block", md: "none" } }}>
         <StaticImage
           src="../../assets/websiteImages/quickLockAD-mobile.png"
           alt="quick lock ad"
           placeholder="blurred"
           className={classes.banner}
         />
-      </Hidden>
+      </Box>
       <div className={clsx(classes.flex, classes.flexCenter, classes.reverse)}>
         <StaticImage
           src="../../assets/websiteImages/eisbach-riders-quick-lock-touring-fin-paddling-on-the-bodensee.jpg"
