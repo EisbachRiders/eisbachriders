@@ -11,7 +11,7 @@ const shortcodes = Link // Provide common components here
 
 export default function PageTemplate({ pageContext }) {
   const { title, body } = pageContext
-  a
+
   return (
     <Layout>
       <Seo title={title} />
