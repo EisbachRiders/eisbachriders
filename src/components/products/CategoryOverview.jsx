@@ -130,7 +130,7 @@ function ProductsOverview({ products, category }) {
     default:
       subcat = []
   }
-  console.log(products)
+
   return (
     <>
       <div className={classes.background}>
