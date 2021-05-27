@@ -7100,6 +7100,13 @@ gatsby-plugin-utils@^1.5.0:
   dependencies:
     joi "^17.2.1"
 
+gatsby-plugin-utils@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-1.6.0.tgz#4cb050009caf0b0add15ecc81d473c438e7115e9"
+  integrity sha512-RDHaPBvVE8v9EQvPAUyXZzoDFKo0t0j7qJHDvFQc0PfcX0EmQWXNkFd7PN+DVz8nPfuhLIV6GKS3WQXYbiCLIA==
+  dependencies:
+    joi "^17.2.1"
+
 gatsby-react-router-scroll@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/gatsby-react-router-scroll/-/gatsby-react-router-scroll-4.5.0.tgz#f888f9abe6531bee44edbec4c970308455e9ae73"
@@ -7213,10 +7220,10 @@ gatsby-remark-responsive-iframe@^4.2.1:
     lodash "^4.17.21"
     unist-util-visit "^2.0.3"
 
-gatsby-source-contentful@^5.5.0:
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-5.5.0.tgz#3bf5a0e696b0ccc92a6ba47b02d1003cc41e160d"
-  integrity sha512-9G4LS98COOQ1lmfzWvVFJyAB8DEON4tmJdLrxSmOrrCnrE59+KnoiIUfkTfYVXbml5lapmYYXjSG/eL11YcPKw==
+gatsby-source-contentful@^5.6.0:
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-5.6.0.tgz#3ac15d44286ef68d9d22439e7b4bd559895213d4"
+  integrity sha512-uZSw2TuTCEypnMvNQrGmrfGoVtgt5pl0SouZ9yevmRr+K/h3+uh8JEPaCjXkb2W/ZDcrgWzWhwo/TFD96iNo+w==
   dependencies:
     "@babel/runtime" "^7.12.5"
     "@contentful/rich-text-react-renderer" "^14.1.2"
@@ -7228,9 +7235,9 @@ gatsby-source-contentful@^5.5.0:
     common-tags "^1.8.0"
     contentful "^8.1.7"
     fs-extra "^9.1.0"
-    gatsby-core-utils "^2.5.0"
-    gatsby-plugin-utils "^1.5.0"
-    gatsby-source-filesystem "^3.5.0"
+    gatsby-core-utils "^2.6.0"
+    gatsby-plugin-utils "^1.6.0"
+    gatsby-source-filesystem "^3.6.0"
     is-online "^8.5.1"
     json-stringify-safe "^5.0.1"
     lodash "^4.17.21"
@@ -7250,6 +7257,25 @@ gatsby-source-filesystem@^3.5.0:
     file-type "^16.0.0"
     fs-extra "^8.1.0"
     gatsby-core-utils "^2.5.0"
+    got "^9.6.0"
+    md5-file "^5.0.0"
+    mime "^2.4.6"
+    pretty-bytes "^5.4.1"
+    progress "^2.0.3"
+    valid-url "^1.0.9"
+    xstate "^4.14.0"
+
+gatsby-source-filesystem@^3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-3.6.0.tgz#369eaef6fe8ae07739594176aedc36606a328849"
+  integrity sha512-kTWcW9LwCLOF3TMC9lBR6KbMi6A0SHNQeGNLBw8THRpDVVe5nXZG33oI1Ns23ocNDVrajIMKXPPzsrl2zjG6BQ==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+    better-queue "^3.8.10"
+    chokidar "^3.4.3"
+    file-type "^16.0.0"
+    fs-extra "^8.1.0"
+    gatsby-core-utils "^2.6.0"
     got "^9.6.0"
     md5-file "^5.0.0"
     mime "^2.4.6"
@@ -15977,11 +16003,6 @@ yargs@^16.1.0:
     string-width "^4.2.0"
     y18n "^5.0.5"
     yargs-parser "^20.2.2"
-
-yarn@^1.22.10:
-  version "1.22.10"
-  resolved "https://registry.yarnpkg.com/yarn/-/yarn-1.22.10.tgz#c99daa06257c80f8fa2c3f1490724e394c26b18c"
-  integrity sha512-IanQGI9RRPAN87VGTF7zs2uxkSyQSrSPsju0COgbsKQOOXr5LtcVPeyXWgwVa0ywG3d8dg6kSYKGBuYK021qeA==
 
 yauzl@^2.4.2:
   version "2.10.0"

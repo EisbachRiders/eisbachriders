@@ -22,7 +22,7 @@ function ProductType({ data }) {
         <Box sx={{ p: 10, flexBasis: "50%" }}>
           <div
             dangerouslySetInnerHTML={{
-              __html: data.productDetailIntroTitle.raw.value,
+              __html: data.productDetailIntroTitle,
             }}
           />
           <Typography sx={{ fontSize: 32, marginBottom: 10 }}>
