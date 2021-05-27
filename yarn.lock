@@ -1938,7 +1938,7 @@
     jss-plugin-vendor-prefixer "^10.0.3"
     prop-types "^15.7.2"
 
-"@material-ui/system@5.0.0-alpha.34":
+"@material-ui/system@5.0.0-alpha.34", "@material-ui/system@^5.0.0-alpha.34":
   version "5.0.0-alpha.34"
   resolved "https://registry.yarnpkg.com/@material-ui/system/-/system-5.0.0-alpha.34.tgz#3d34680cd7e6309b961ae8e27db0a5813f5352af"
   integrity sha512-HgaOfsn3nz/DJl8RLpD8whmC2L6EzjpVrYsG93vs1tDdDJF7e+x7SghnFvhQaltuIYqL7S5/tCNDwDEGcLxSLw==
@@ -2776,6 +2776,11 @@ acorn@^8.2.1:
   version "8.2.4"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.2.4.tgz#caba24b08185c3b56e3168e97d15ed17f4d31fd0"
   integrity sha512-Ibt84YwBDDA890eDiDCEqcbwvHlBvzzDkU2cGBBDDI1QWT12jTiXIOn2CIw5KK4i6N5Z2HUxwYjzriDyqaqqZg==
+
+add@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/add/-/add-2.0.6.tgz#248f0a9f6e5a528ef2295dbeec30532130ae2235"
+  integrity sha1-JI8Kn25aUo7yKV2+7DBTITCuIjU=
 
 address@1.1.2, address@^1.0.1:
   version "1.1.2"
@@ -15918,6 +15923,11 @@ yargs@^16.1.0:
     string-width "^4.2.0"
     y18n "^5.0.5"
     yargs-parser "^20.2.2"
+
+yarn@^1.22.10:
+  version "1.22.10"
+  resolved "https://registry.yarnpkg.com/yarn/-/yarn-1.22.10.tgz#c99daa06257c80f8fa2c3f1490724e394c26b18c"
+  integrity sha512-IanQGI9RRPAN87VGTF7zs2uxkSyQSrSPsju0COgbsKQOOXr5LtcVPeyXWgwVa0ywG3d8dg6kSYKGBuYK021qeA==
 
 yauzl@^2.4.2:
   version "2.10.0"

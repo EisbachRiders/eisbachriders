@@ -5,7 +5,7 @@ import ProductsOverview from "../components/products/ProductsOverview"
 
 const ProductsPage = () => {
   return (
-    <Layout location="about">
+    <Layout location="products">
       <Seo />
       <ProductsOverview />
     </Layout>

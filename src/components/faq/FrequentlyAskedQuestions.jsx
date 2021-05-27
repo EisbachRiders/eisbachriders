@@ -5,7 +5,7 @@ import Link from "../ui/Link"
 import { makeStyles } from "@material-ui/core/styles"
 import Typography from "@material-ui/core/Typography"
 import Container from "../ui/Container"
-import Contact from "../Contact"
+import Contact from "../contact/Contact"
 import faqData from "./faqData"
 import HelpIcon from "@material-ui/icons/Help"
 

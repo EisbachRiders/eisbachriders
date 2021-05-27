@@ -5,7 +5,7 @@ import RecycledFins from "../components/recycledFins/RecycledFins"
 
 const RecycledFinPage = () => {
   return (
-    <Layout location="faq">
+    <Layout location="sustainable">
       <Seo />
       <RecycledFins />
     </Layout>

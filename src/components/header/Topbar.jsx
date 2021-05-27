@@ -1,12 +1,13 @@
 import React from "react"
 import { useTranslation } from "react-i18next"
 import Button from "@material-ui/core/Button"
+import Box from "@material-ui/core/Box"
 import FacebookIcon from "@material-ui/icons/Facebook"
 import InstagramIcon from "@material-ui/icons/Instagram"
 import PinterestIcon from "@material-ui/icons/Pinterest"
 import Container from "@material-ui/core/Container"
 
-function Topbar() {
+export default function Topbar() {
   const { i18n } = useTranslation()
 
   const handleSetLang = () => {
@@ -18,43 +19,66 @@ function Topbar() {
     {
       href: "https://www.facebook.com/EisbachRiders/",
       label: "facebook",
-      icon: <FacebookIcon />,
+      icon: <FacebookIcon sx={{ fill: theme => theme.color.white }} />,
     },
     {
       href: "https://www.instagram.com/eisbachriders/",
       label: "instagram",
-      icon: <InstagramIcon />,
+      icon: <InstagramIcon sx={{ fill: theme => theme.color.white }} />,
     },
     {
       href: "https://www.pinterest.com/eisbachriders/",
       label: "pinterest",
-      icon: <PinterestIcon />,
+      icon: <PinterestIcon sx={{ fill: theme => theme.color.white }} />,
     },
   ]
 
   return (
-    <Container
+    <Box
       sx={{
-        display: "flex",
-        justifyContent: "flex-end",
         background: "#000",
       }}
     >
-      {icons.map(elem => (
+      <Container
+        sx={{
+          display: "flex",
+          justifyContent: "flex-end",
+        }}
+      >
+        {icons.map(elem => (
+          <Button
+            href={elem.href}
+            aria-label={elem.label}
+            size="small"
+            rel="noopener"
+            target="_blank"
+            key={`socialIcon${elem.label}`}
+            sx={{
+              width: 36,
+              height: 36,
+              "&:hover svg": {
+                fill: theme => theme.palette.primary.main,
+              },
+            }}
+          >
+            {elem.icon}
+          </Button>
+        ))}
         <Button
-          href={elem.href}
-          aria-label={elem.label}
-          size="small"
-          rel="noopener"
-          target="_blank"
+          onClick={() => handleSetLang()}
+          sx={{
+            color: theme => theme.color.white,
+            width: 36,
+            height: 36,
+            fontSize: 18,
+            "&:hover": {
+              color: theme => theme.palette.primary.main,
+            },
+          }}
         >
-          {elem.icon}
+          {i18n.language}
         </Button>
-      ))}
-
-      <Button onClick={() => handleSetLang()}>{i18n.language}</Button>
-    </Container>
+      </Container>
+    </Box>
   )
 }
-
-export default Topbar

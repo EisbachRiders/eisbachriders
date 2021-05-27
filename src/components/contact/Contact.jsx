@@ -50,9 +50,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   listItemMobile: {
-    borderBottom: `1px solid ${theme.color.gray}`,
-    textAlign: "center",
-    textTransform: "uppercase",
+    textTransform: "capitalize",
   },
   right: {
     float: "right",

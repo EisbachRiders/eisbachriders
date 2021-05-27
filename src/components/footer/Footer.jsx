@@ -6,7 +6,7 @@ import { makeStyles } from "@material-ui/styles"
 import Box from "@material-ui/core/Box"
 import Newsletter from "../newsletter/Newsletter"
 import Container from "../ui/Container"
-import Contact from "../Contact"
+import Contact from "../contact/Contact"
 import { StaticImage } from "gatsby-plugin-image"
 import logo from "../../assets/logos/logo_white.svg"
 

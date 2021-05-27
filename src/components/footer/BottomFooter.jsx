@@ -9,7 +9,7 @@ import FacebookIcon from "@material-ui/icons/Facebook"
 import InstagramIcon from "@material-ui/icons/Instagram"
 import PinterestIcon from "@material-ui/icons/Pinterest"
 import Container from "../ui/Container"
-import Contact from "../Contact"
+import Contact from "../contact/Contact"
 
 const useStyles = makeStyles(theme => ({
   container: {
