@@ -4,6 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import clsx from "clsx"
 import { makeStyles } from "@material-ui/core/styles"
 import Button from "@material-ui/core/Button"
+import Box from "@material-ui/core/Box"
 import Typography from "@material-ui/core/Typography"
 import Container from "@material-ui/core/Container"
 import Colors from "./Colors"
@@ -63,23 +64,24 @@ function Product({ product }) {
 
   return (
     <Container>
-      <div className={classes.flexContainer}>
-        {/* <ProductImages images={images} /> */}
-        {image && <GatsbyImage image={image} alt={product.name} />}
-      </div>
+      <Box sx={{ display: "flex" }}>
+        <Box sx={{ width: "40%" }}>
+          {image && <GatsbyImage image={image} alt={product.name} />}
+        </Box>
 
-      <div className={clsx(classes.flexContainer, classes.padding)}>
-        <Typography variant="h6" component="h1" className={classes.header}>
-          {product.name}
-        </Typography>
+        <div className={clsx(classes.flexContainer, classes.padding)}>
+          <Typography variant="h6" component="h1" className={classes.header}>
+            {product.name}
+          </Typography>
 
-        {product.color?.length > 0 && (
-          <div className={classes.attributeContainer}>
-            <p className={classes.subheader}>{t("product.colors")}:</p>
-            <Colors colors={product.color} variant="large" />
-          </div>
-        )}
-        {/* {sizes.length > 0 && (
+          {product.color?.length > 0 && (
+            <div className={classes.attributeContainer}>
+              <p className={classes.subheader}>{t("product.colors")}:</p>
+              <Colors colors={product.color} variant="large" />
+            </div>
+          )}
+
+          {/* {sizes.length > 0 && (
           <div className={classes.attributeContainer}>
             <p className={classes.subheader}>{t("product.sizes")}:</p>
             {sizes.map(elem => (
@@ -120,26 +122,26 @@ function Product({ product }) {
           </div>
         )} */}
 
-        <div className={classes.divider}></div>
+          <div className={classes.divider}></div>
 
-        <p className={classes.subheader}>{t("product.features")}</p>
-        {/* <div
+          <p className={classes.subheader}>{t("product.features")}</p>
+          {/* <div
           dangerouslySetInnerHTML={{ __html: product.shortDescription }}
           className={classes.text}
         /> */}
 
-        <div className={classes.buttonContainer}>
-          <Button
-            variant="contained"
-            color="primary"
-            // href={product.link}
-            fullWidth
-          >
-            {t("product.buy")}
-          </Button>
+          <div className={classes.buttonContainer}>
+            <Button
+              variant="contained"
+              color="primary"
+              // href={product.link}
+              fullWidth
+            >
+              {t("product.buy")}
+            </Button>
+          </div>
         </div>
-      </div>
-
+      </Box>
       <ProductDetails product={product} />
     </Container>
   )

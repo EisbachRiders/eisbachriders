@@ -23,6 +23,7 @@
     "gatsby": "^3.5.1",
     "gatsby-plugin-emotion": "^6.5.0",
     "gatsby-plugin-feed-mdx": "^1.1.0",
+    "gatsby-plugin-gatsby-cloud": "^2.6.0",
     "gatsby-plugin-gdpr-cookies": "^2.0.0",
     "gatsby-plugin-htaccess": "^1.4.0",
     "gatsby-plugin-i18n": "^1.0.1",

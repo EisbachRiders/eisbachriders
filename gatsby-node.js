@@ -36,6 +36,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             color {
               name
             }
+            featuresSubtitle
+            features {
+              icon {
+                gatsbyImageData
+              }
+              subtitle
+              title
+            }
             productDetailIntroTitle {
               raw
             }
@@ -61,6 +69,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             }
             color {
               name
+            }
+            featuresSubtitle
+            features {
+              icon {
+                gatsbyImageData
+              }
+              subtitle
+              title
             }
             productDetailIntroTitle {
               raw
@@ -88,6 +104,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             color {
               name
             }
+            featuresSubtitle
+            features {
+              icon {
+                gatsbyImageData
+              }
+              subtitle
+              title
+            }
             productDetailIntroTitle {
               raw
             }
@@ -113,6 +137,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             }
             color {
               name
+            }
+            featuresSubtitle
+            features {
+              icon {
+                gatsbyImageData
+              }
+              subtitle
+              title
             }
             productDetailIntroTitle {
               raw
@@ -140,6 +172,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             color {
               name
             }
+            featuresSubtitle
+            features {
+              icon {
+                gatsbyImageData
+              }
+              subtitle
+              title
+            }
             productDetailIntroTitle {
               raw
             }
@@ -166,6 +206,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             color {
               name
             }
+            featuresSubtitle
+            features {
+              icon {
+                gatsbyImageData
+              }
+              subtitle
+              title
+            }
             productDetailIntroTitle {
               raw
             }
@@ -191,6 +239,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             }
             color {
               name
+            }
+            featuresSubtitle
+            features {
+              icon {
+                gatsbyImageData
+              }
+              subtitle
+              title
             }
             productDetailIntroTitle {
               raw
