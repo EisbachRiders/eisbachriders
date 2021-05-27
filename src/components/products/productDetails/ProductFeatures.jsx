@@ -33,7 +33,7 @@ export default function ProductFeatures({ data }) {
         </Box>
         <Box
           sx={{
-            background: theme => theme.color.blueGray,
+            background: theme => theme.color.grayLt,
             flexBasis: "50%",
             p: 10,
           }}

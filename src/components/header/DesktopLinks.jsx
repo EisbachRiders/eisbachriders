@@ -12,6 +12,19 @@ function ListItemLink(props) {
   return <ListItem button component="a" {...props} />
 }
 
+function SpecialCategory(props) {
+  return (
+    <Typography
+      sx={{ textTransform: "capitalize", fontStyle: "italic", mb: 1 }}
+      {...props}
+    />
+  )
+}
+
+function Category(props) {
+  return <Typography sx={{ textTransform: "capitalize", mb: 1 }} {...props} />
+}
+
 function StyledListItemText(props) {
   return (
     <ListItemText
@@ -63,25 +76,19 @@ export default function DesktopLinks({ links, products, location }) {
               </ListItemLink>
             ) : elem === "products" ? (
               <>
-                <Link
-                  to={`/${elem}`}
-                  key={`link${elem}`}
-                  sx={{ "&:hover": { textDecoration: "none" } }}
+                <ListItem
+                  button
+                  id="desktop-products-menu"
+                  aria-controls="desktop-products-menu"
+                  aria-haspopup="true"
+                  aria-expanded={open ? "true" : undefined}
+                  onClick={handleClick}
                 >
-                  <ListItem
-                    button
-                    id="desktop-products-menu"
-                    aria-controls="desktop-products-menu"
-                    aria-haspopup="true"
-                    aria-expanded={open ? "true" : undefined}
-                    onClick={handleClick}
-                  >
-                    <StyledListItemText
-                      primary={t(`links.${elem}`)}
-                      selected={location === elem}
-                    />
-                  </ListItem>
-                </Link>
+                  <StyledListItemText
+                    primary={t(`links.${elem}`)}
+                    selected={!location}
+                  />
+                </ListItem>
                 <Popover
                   id={id}
                   open={open}
@@ -92,15 +99,47 @@ export default function DesktopLinks({ links, products, location }) {
                     horizontal: "left",
                   }}
                 >
-                  <Box sx={{ display: "flex" }}>
-                    <div>
-                      {products.slice(3).map(item => (
-                        <Typography>{item}</Typography>
+                  <Box sx={{ display: "flex", pt: 3, pb: 3, pr: 6, pl: 6 }}>
+                    <Box sx={{ pr: 6, pt: 4 }}>
+                      {products.slice(3).map((item, idx) => (
+                        <Box sx={{ display: "flex" }} key={`link${item}`}>
+                          <Link
+                            to={`/products/${item}`}
+                            sx={{ "&:hover": { textDecoration: "none" } }}
+                          >
+                            <SpecialCategory>
+                              {t(`links.${item}`)}
+                            </SpecialCategory>
+                          </Link>
+                          {idx === 1 && (
+                            <Typography
+                              sx={{ fontSize: 10, fontWeight: 700, pl: 1 }}
+                            >
+                              NEW!
+                            </Typography>
+                          )}
+                        </Box>
                       ))}
-                    </div>
+                    </Box>
                     <div>
+                      <Typography
+                        sx={{
+                          mb: 2,
+                          fontSize: 12,
+                          fontWeight: 700,
+                          letterSpacing: 1,
+                        }}
+                      >
+                        ITEMS
+                      </Typography>
                       {products.slice(0, 3).map(item => (
-                        <Typography>{item}</Typography>
+                        <Link
+                          to={`/products/${item}`}
+                          key={`link${item}`}
+                          sx={{ "&:hover": { textDecoration: "none" } }}
+                        >
+                          <Category>{t(`links.${item}`)}</Category>
+                        </Link>
                       ))}
                     </div>
                   </Box>

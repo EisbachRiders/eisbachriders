@@ -52,9 +52,6 @@ const useStyles = makeStyles(theme => ({
     marginTop: 30,
     marginBottom: 30,
   },
-  buttonContainer: {
-    textAlign: "center",
-  },
 }))
 
 function Product({ product }) {
@@ -64,83 +61,58 @@ function Product({ product }) {
 
   return (
     <Container>
-      <Box sx={{ display: "flex" }}>
-        <Box sx={{ width: "40%" }}>
-          {image && <GatsbyImage image={image} alt={product.name} />}
+      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Box sx={{ flexBasis: "40%" }}>
+          {image && (
+            <GatsbyImage
+              image={image}
+              alt={product.name}
+              placeholder="blurred"
+            />
+          )}
         </Box>
 
-        <div className={clsx(classes.flexContainer, classes.padding)}>
-          <Typography variant="h6" component="h1" className={classes.header}>
-            {product.name}
-          </Typography>
+        <Box
+          sx={{
+            flexBasis: { xs: "100%", md: "50%" },
+            pt: 4,
+            pb: 10,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+          }}
+        >
+          <div>
+            <Typography sx={{ fontSize: 32, marginBottom: 10 }}>
+              {product.name}
+            </Typography>
 
-          {product.color?.length > 0 && (
-            <div className={classes.attributeContainer}>
-              <p className={classes.subheader}>{t("product.colors")}:</p>
-              <Colors colors={product.color} variant="large" />
-            </div>
-          )}
-
-          {/* {sizes.length > 0 && (
-          <div className={classes.attributeContainer}>
-            <p className={classes.subheader}>{t("product.sizes")}:</p>
-            {sizes.map(elem => (
-              <p className={classes.subheader} key={`size_${elem}`}>
-                {elem}
-              </p>
-            ))}
+            {product.color?.length > 0 && (
+              <Box sx={{ display: "flex", alignItems: "center" }}>
+                <Typography
+                  sx={{
+                    textTransform: "capitalize",
+                    fontSize: 18,
+                    pr: 4,
+                  }}
+                >
+                  {t("product.colors")}:
+                </Typography>
+                <Colors colors={product.color} variant="large" />
+              </Box>
+            )}
           </div>
-        )}
-        {plugs.length > 0 && (
-          <div className={classes.attributeContainer}>
-            <p className={classes.subheader}>{t("product.plugs")}:</p>
-            {plugs.map(elem => (
-              <p className={classes.subheader} key={`plug_${elem}`}>
-                {elem}
-              </p>
-            ))}
-          </div>
-        )}
-        {amounts.length > 0 && (
-          <div className={classes.attributeContainer}>
-            <p className={classes.subheader}>{t("product.amounts")}:</p>
-            {amounts.map(elem => (
-              <p className={classes.subheader} key={`amounts_${elem}`}>
-                {elem}
-              </p>
-            ))}
-          </div>
-        )}
-        {waterTemps.length > 0 && (
-          <div className={classes.attributeContainer}>
-            <p className={classes.subheader}>{t("product.waterTemps")}:</p>
-            {waterTemps.map(elem => (
-              <p className={classes.subheader} key={`temps_${elem}`}>
-                {elem}
-              </p>
-            ))}
-          </div>
-        )} */}
-          {/* 
-          <div className={classes.divider}></div>
-
-          <p className={classes.subheader}>{t("product.features")}</p> */}
-          {/* <div
-          dangerouslySetInnerHTML={{ __html: product.shortDescription }}
-          className={classes.text}
-        /> */}
-
-          <div className={classes.buttonContainer}>
+          <div>
             <Button
               variant="contained"
               color="primary"
-              // href={product.link}
+              href={product.shopLink}
               fullWidth
             >
               {t("product.buy")}
             </Button>
           </div>
-        </div>
+        </Box>
       </Box>
       <ProductDetails product={product} />
     </Container>

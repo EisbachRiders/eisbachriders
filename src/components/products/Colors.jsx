@@ -103,6 +103,7 @@ function Colors({ colors, variant }) {
             [classes.black]: color.name === "black",
             [classes.pink]: color.name === "pink",
             [classes.orange]: color.name === "orange",
+            [classes.gray]: color.name === "gray",
             [classes.red]: color.name === "red",
             [classes.teal]: color.name === "teal" || color.name === "turquoise",
             [classes.green]:

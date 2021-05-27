@@ -34,6 +34,7 @@ const color = {
   cream: "#F1F0EB",
   grayLt: "#f7f7f9",
   blueGray: "#cbd3cf",
+  steel: "#505D72",
 }
 
 const theme = createTheme({

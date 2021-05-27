@@ -8,14 +8,22 @@ export default function Feature({ data }) {
 
   return (
     <Box sx={{ display: "flex" }}>
-      <Box sx={{ width: 50, mr: 4 }}>
-        <GatsbyImage image={image} alt={data.title} />
+      <Box sx={{ width: 90, mr: 4 }}>
+        <GatsbyImage image={image} alt={data.title} quality="100" />
       </Box>
       <div>
-        <Typography sx={{ textTransform: "capitalize", fontSize: 32 }}>
+        <Typography
+          sx={{
+            textTransform: "capitalize",
+            fontSize: 32,
+            color: theme => theme.color.steel,
+          }}
+        >
           {data.title}
         </Typography>
-        <Typography>{data.subtitle}</Typography>
+        <Typography sx={{ color: theme => theme.color.steel }}>
+          {data.subtitle}
+        </Typography>
       </div>
     </Box>
   )

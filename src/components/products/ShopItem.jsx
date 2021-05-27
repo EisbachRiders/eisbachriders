@@ -11,7 +11,7 @@ function ShopItem({ product }) {
   return (
     <Box
       sx={{
-        flexBasis: { xs: "100%", sm: "50%", md: "22%" },
+        width: { xs: "100%", sm: "50%", md: "22%" },
         alignItems: "center",
         display: "flex",
         flexDirection: "column",
