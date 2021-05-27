@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import Seo from "../components/Seo"
 import Layout from "../components/Layout"
 import ProductsOverview from "../components/products/ProductsOverview"

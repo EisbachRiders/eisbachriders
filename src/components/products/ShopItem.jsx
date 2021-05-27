@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import Link from "../ui/Link"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Typography from "@material-ui/core/Typography"

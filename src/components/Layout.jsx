@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import { useTranslation } from "react-i18next"
 import CookieConsent from "react-cookie-consent"
 import Box from "@material-ui/core/Box"

@@ -1,8 +1,8 @@
-import React from "react"
+import * as React from "react"
 import { makeStyles } from "@material-ui/core/styles"
 import Sun from "../../assets/icons/sun-4.svg"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   img: {
     width: 42,
     height: 42,
