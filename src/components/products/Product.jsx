@@ -121,10 +121,10 @@ function Product({ product }) {
             ))}
           </div>
         )} */}
-
+          {/* 
           <div className={classes.divider}></div>
 
-          <p className={classes.subheader}>{t("product.features")}</p>
+          <p className={classes.subheader}>{t("product.features")}</p> */}
           {/* <div
           dangerouslySetInnerHTML={{ __html: product.shortDescription }}
           className={classes.text}
