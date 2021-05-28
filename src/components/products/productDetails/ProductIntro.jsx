@@ -28,22 +28,24 @@ function ProductType({ data }) {
         },
       }}
     >
-      <Box sx={{ display: "flex", background: theme => theme.color.cream }}>
-        <Box sx={{ flexBasis: "50%", pt: 20, pb: 15, pl: 10 }}>
-          <Box sx={{ mb: 3 }}>
-            {renderRichText(data.productDetailIntroTitle, options)}
+      {data.productDetailIntroTitle && (
+        <Box sx={{ display: "flex", background: theme => theme.color.cream }}>
+          <Box sx={{ flexBasis: "50%", pt: 20, pb: 15, pl: 10 }}>
+            <Box sx={{ mb: 3 }}>
+              {renderRichText(data.productDetailIntroTitle, options)}
+            </Box>
+            <Typography sx={{ fontSize: 24, mb: 3 }}>
+              {data.productDetailIntroSubtitle}
+            </Typography>
           </Box>
-          <Typography sx={{ fontSize: 24, mb: 3 }}>
-            {data.productDetailIntroSubtitle}
-          </Typography>
-        </Box>
 
-        <Box sx={{ p: 10, flexBasis: "50%" }}>
-          <Box sx={{ width: "100%", margin: "0 auto" }}>
-            <GatsbyImage image={image} alt={data.name} />
+          <Box sx={{ p: 10, flexBasis: "50%" }}>
+            <Box sx={{ width: "100%", margin: "0 auto" }}>
+              <GatsbyImage image={image} alt={data.name} />
+            </Box>
           </Box>
         </Box>
-      </Box>
+      )}
     </Link>
   )
 }
