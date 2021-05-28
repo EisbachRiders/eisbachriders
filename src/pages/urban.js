@@ -1,5 +1,5 @@
 import * as React from "react"
-import Seo from "../components/Seo"
+import Seo from "../components/SearchEngOpt"
 import Layout from "../components/Layout"
 import EisbachHeader from "../components/eisbach/EisbachHeader"
 import EisbachMap from "../components/eisbach/EisbachMap"

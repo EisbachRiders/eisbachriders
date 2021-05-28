@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles"
 import { useTranslation } from "react-i18next"
 import Layout from "../components/Layout"
 import Container from "../components/ui/Container"
-import Seo from "../components/Seo"
+import Seo from "../components/SearchEngOpt"
 import FinnImg from "../assets/websiteImages/finsLost.png"
 
 const useStyles = makeStyles(theme => ({

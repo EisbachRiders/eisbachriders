@@ -3,7 +3,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
 import Link from "../components/ui/Link"
 import Layout from "../components/Layout"
-import Seo from "../components/Seo"
+import Seo from "../components/SearchEngOpt"
 import Container from "../components/ui/Container"
 
 const shortcodes = Link // Provide common components here
