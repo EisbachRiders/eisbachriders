@@ -10,7 +10,7 @@ export default function ProductFeatures({ data }) {
         sx={{
           background: theme => theme.color.cream,
           flexBasis: { xs: "100%", sm: "40%", md: "50%" },
-          p: { xs: 2, md: 10 },
+          p: { xs: 4, md: 5, lg: 10 },
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -28,7 +28,7 @@ export default function ProductFeatures({ data }) {
         </Typography>
         <Typography
           sx={{
-            fontSize: { xs: 16, md: 24 },
+            fontSize: { xs: 16, md: 18, lg: 24 },
             textAlign: { xs: "center", sm: "left" },
           }}
         >
@@ -39,7 +39,7 @@ export default function ProductFeatures({ data }) {
         sx={{
           background: theme => theme.color.grayLt,
           flexBasis: { xs: "100%", sm: "60%", md: "50%" },
-          p: { xs: 2, md: 10 },
+          p: { xs: 4, md: 5, lg: 10 },
         }}
       >
         {data.features?.map((elem, idx) => (

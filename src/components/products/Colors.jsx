@@ -24,7 +24,8 @@ export default function Colors({ colors, variant }) {
     <Box
       key={color.name}
       sx={{
-        flexBasis: variant === "large" ? { xs: "40%", lg: "30%" } : null,
+        flexBasis:
+          variant === "large" ? { xs: 100 / colors.length, sm: "50%" } : null,
         mb: variant === "large" ? 2 : 0,
         textAlign: "center",
       }}
@@ -39,8 +40,8 @@ export default function Colors({ colors, variant }) {
         onMouseLeave={handlePopoverClose}
         key={color.name}
         sx={{
-          height: variant === "large" ? 60 : 15,
-          width: variant === "large" ? 60 : 15,
+          height: variant === "large" ? { xs: 25, sm: 45, md: 45, lg: 60 } : 15,
+          width: variant === "large" ? { xs: 25, sm: 45, md: 45, lg: 60 } : 15,
           borderRadius: "50%",
           margin: variant === "large" ? "0 auto" : "0 5px",
           backgroundColor: theme =>

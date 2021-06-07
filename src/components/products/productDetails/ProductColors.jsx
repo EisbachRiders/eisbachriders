@@ -10,34 +10,53 @@ export default function ProductColors({ data }) {
     <Box
       sx={{
         display: "flex",
-        flexWrap: { xs: "wrap", md: "nowrap" },
+        flexWrap: { xs: "wrap", sm: "nowrap" },
         background: theme => theme.color.cream,
       }}
     >
       <Box
         sx={{
-          flexBasis: { xs: "100%", md: "40%" },
-          p: { xs: 2, md: 10 },
+          flexBasis: { xs: "100%", sm: "50%" },
+          p: { xs: 4, md: 6, lg: 10 },
+          pl: { xs: 4, md: 6, lg: 10 },
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-around",
         }}
       >
-        <Colors colors={data.color} variant="large" />
+        <Box sx={{ pl: { xs: 3, md: 8 }, pr: { xs: 3, md: 8 }, pt: 2 }}>
+          <Colors colors={data.color} variant="large" />
+        </Box>
         <div>
           <Typography
             sx={{
               fontWeight: 700,
-              fontSize: { xs: 36, lg: 48 },
-              mb: 4,
+              fontSize: { xs: 42, sm: 36, lg: 56 },
+              mt: { xs: 0, md: 2 },
+              textAlign: { xs: "center", sm: "left" },
             }}
           >
             Color Choice
           </Typography>
-          <Typography sx={{ fontSize: 24 }}>{data.colorSubtitle}</Typography>
+          <Typography
+            sx={{
+              fontSize: { xs: 16, md: 18, lg: 24 },
+              textAlign: { xs: "center", sm: "left" },
+            }}
+          >
+            {data.colorSubtitle}
+          </Typography>
         </div>
       </Box>
-      <Box sx={{ flexBasis: { xs: "100%", md: "60%" }, p: { xs: 2, md: 10 } }}>
+      <Box
+        sx={{
+          flexBasis: { xs: "100%", sm: "50%" },
+          pr: 0,
+          pl: 0,
+          pt: { xs: 0, sm: 4, md: 0 },
+          pb: { xs: 0, sm: 4, md: 0 },
+        }}
+      >
         <Box sx={{ width: "100%", margin: "0 auto" }}>
           <GatsbyImage image={image} alt="colors" />
         </Box>
