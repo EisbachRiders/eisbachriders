@@ -8,14 +8,20 @@ export default function Feature({ data }) {
 
   return (
     <Box sx={{ display: "flex" }}>
-      <Box sx={{ width: 90, mr: 4 }}>
+      <Box
+        sx={{
+          width: { xs: 60, md: 90 },
+          // maxWidth: { xs: 60, md: 90 },
+          mr: { xs: 2, md: 4 },
+        }}
+      >
         <GatsbyImage image={image} alt={data.title} quality="100" />
       </Box>
       <div>
         <Typography
           sx={{
             textTransform: "capitalize",
-            fontSize: 32,
+            fontSize: { xs: 24, md: 32 },
             color: theme => theme.color.steel,
           }}
         >

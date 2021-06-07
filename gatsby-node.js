@@ -30,11 +30,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           node {
             name
             slug
-            mainImage {
-              gatsbyImageData
-            }
+            shopLink
             color {
               name
+            }
+            title {
+              raw
+            }
+            subtitle
+            mainImage {
+              gatsbyImageData
             }
             featuresSubtitle
             features {
@@ -44,11 +49,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               subtitle
               title
             }
-            productDetailIntroTitle {
+            bundleImage {
+              gatsbyImageData
+            }
+            bundleDescription {
               raw
             }
-            productDetailIntroSubtitle
-            productDetailIntroImage {
+            lifestyleImageBig {
+              gatsbyImageData
+            }
+            lifestyleImageSmall {
+              gatsbyImageData
+            }
+            colorSubtitle
+            colorImage {
               gatsbyImageData
             }
           }
@@ -64,11 +78,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           node {
             name
             slug
-            mainImage {
-              gatsbyImageData
-            }
+            shopLink
             color {
               name
+            }
+            title {
+              raw
+            }
+            subtitle
+            mainImage {
+              gatsbyImageData
             }
             featuresSubtitle
             features {
@@ -78,11 +97,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               subtitle
               title
             }
-            productDetailIntroTitle {
+            bundleImage {
+              gatsbyImageData
+            }
+            bundleDescription {
               raw
             }
-            productDetailIntroSubtitle
-            productDetailIntroImage {
+            lifestyleImageBig {
+              gatsbyImageData
+            }
+            lifestyleImageSmall {
+              gatsbyImageData
+            }
+            colorSubtitle
+            colorImage {
               gatsbyImageData
             }
           }
@@ -98,11 +126,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           node {
             name
             slug
-            mainImage {
-              gatsbyImageData
-            }
+            shopLink
             color {
               name
+            }
+            title {
+              raw
+            }
+            subtitle
+            mainImage {
+              gatsbyImageData
             }
             featuresSubtitle
             features {
@@ -112,11 +145,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               subtitle
               title
             }
-            productDetailIntroTitle {
+            bundleImage {
+              gatsbyImageData
+            }
+            bundleDescription {
               raw
             }
-            productDetailIntroSubtitle
-            productDetailIntroImage {
+            lifestyleImageBig {
+              gatsbyImageData
+            }
+            lifestyleImageSmall {
+              gatsbyImageData
+            }
+            colorSubtitle
+            colorImage {
               gatsbyImageData
             }
           }
@@ -132,11 +174,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           node {
             name
             slug
-            mainImage {
-              gatsbyImageData
-            }
+            shopLink
             color {
               name
+            }
+            title {
+              raw
+            }
+            subtitle
+            mainImage {
+              gatsbyImageData
             }
             featuresSubtitle
             features {
@@ -146,11 +193,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               subtitle
               title
             }
-            productDetailIntroTitle {
+            bundleImage {
+              gatsbyImageData
+            }
+            bundleDescription {
               raw
             }
-            productDetailIntroSubtitle
-            productDetailIntroImage {
+            lifestyleImageBig {
+              gatsbyImageData
+            }
+            lifestyleImageSmall {
+              gatsbyImageData
+            }
+            colorSubtitle
+            colorImage {
               gatsbyImageData
             }
           }
@@ -166,11 +222,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           node {
             name
             slug
-            mainImage {
-              gatsbyImageData
-            }
+            shopLink
             color {
               name
+            }
+            title {
+              raw
+            }
+            subtitle
+            mainImage {
+              gatsbyImageData
             }
             featuresSubtitle
             features {
@@ -180,11 +241,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               subtitle
               title
             }
-            productDetailIntroTitle {
+            bundleImage {
+              gatsbyImageData
+            }
+            bundleDescription {
               raw
             }
-            productDetailIntroSubtitle
-            productDetailIntroImage {
+            lifestyleImageBig {
+              gatsbyImageData
+            }
+            lifestyleImageSmall {
+              gatsbyImageData
+            }
+            colorSubtitle
+            colorImage {
               gatsbyImageData
             }
           }
@@ -192,7 +262,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       }
       sustainable: allContentfulProduct(
         filter: {
-          category: { name: { eq: "sustainable" } }
+          line: { name: { eq: "sustainable" } }
           node_locale: { eq: "en-US" }
         }
       ) {
@@ -200,11 +270,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           node {
             name
             slug
-            mainImage {
-              gatsbyImageData
-            }
+            shopLink
             color {
               name
+            }
+            title {
+              raw
+            }
+            subtitle
+            mainImage {
+              gatsbyImageData
             }
             featuresSubtitle
             features {
@@ -214,11 +289,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               subtitle
               title
             }
-            productDetailIntroTitle {
+            bundleImage {
+              gatsbyImageData
+            }
+            bundleDescription {
               raw
             }
-            productDetailIntroSubtitle
-            productDetailIntroImage {
+            lifestyleImageBig {
+              gatsbyImageData
+            }
+            lifestyleImageSmall {
+              gatsbyImageData
+            }
+            colorSubtitle
+            colorImage {
               gatsbyImageData
             }
           }
@@ -226,7 +310,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       }
       performance: allContentfulProduct(
         filter: {
-          category: { name: { eq: "performance" } }
+          line: { name: { eq: "performance" } }
           node_locale: { eq: "en-US" }
         }
       ) {
@@ -234,11 +318,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           node {
             name
             slug
-            mainImage {
-              gatsbyImageData
-            }
+            shopLink
             color {
               name
+            }
+            title {
+              raw
+            }
+            subtitle
+            mainImage {
+              gatsbyImageData
             }
             featuresSubtitle
             features {
@@ -248,11 +337,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               subtitle
               title
             }
-            productDetailIntroTitle {
+            bundleImage {
+              gatsbyImageData
+            }
+            bundleDescription {
               raw
             }
-            productDetailIntroSubtitle
-            productDetailIntroImage {
+            lifestyleImageBig {
+              gatsbyImageData
+            }
+            lifestyleImageSmall {
+              gatsbyImageData
+            }
+            colorSubtitle
+            colorImage {
               gatsbyImageData
             }
           }
@@ -278,14 +376,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Create pages
   pages.forEach(({ node }) => {
-    createPage({
-      path: node.slug,
-      component: pageTemplate,
-      context: {
-        title: node.title, // "Using a Theme"
-        body: node.body,
-      },
-    })
+    if (node.slug) {
+      createPage({
+        path: node.slug,
+        component: pageTemplate,
+        context: {
+          title: node.title, // "Using a Theme"
+          body: node.body,
+        },
+      })
+    }
   })
 
   // Create product category pages
@@ -299,7 +399,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     component: productCategoryTemplate,
     context: {
       products: essentialLine,
-      category: "essential",
+      category: "essential-line",
     },
   })
   createPage({
@@ -307,7 +407,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     component: productCategoryTemplate,
     context: {
       products: sustainableLine,
-      category: "sustainable",
+      category: "sustainable-line",
     },
   })
   createPage({
@@ -315,7 +415,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     component: productCategoryTemplate,
     context: {
       products: performanceLine,
-      category: "performance",
+      category: "performance-line",
     },
   })
   createPage({

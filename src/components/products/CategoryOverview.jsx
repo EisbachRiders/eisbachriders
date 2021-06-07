@@ -125,7 +125,7 @@ function ProductsOverview({ products, category }) {
           className={classes.backgroundImg}
         />
         <div className={classes.backgroundContainer}>
-          <h1 className={classes.h1}>{t(`product.${category}`)}</h1>
+          <h1 className={classes.h1}>{t(`links.${category}`)}</h1>
         </div>
       </div>
       <Container variant="center" className={classes.container}>
