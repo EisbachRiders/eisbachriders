@@ -57,7 +57,7 @@ export default function DesktopLinks({ links, products, location }) {
 
   const open = Boolean(anchorEl)
   const id = open ? "product-popover" : undefined
-  console.log(location)
+
   return (
     <Box sx={{ display: { xs: "none", md: "block" } }}>
       <List
