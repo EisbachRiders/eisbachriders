@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
     title: "Eisbach Riders: Surf Equipment from Munich",
-    titleTemplate: "",
+    titleTemplate: `%s | ER Fins`,
     description:
-      "Local brand from Munich that offers sustainably packaged surf accessories and equipment for SUP, River Surfing, Ocean Surfing, Kite Surfing and more!",
+      "Eisbach Riders, ER, is a local brand from Munich that offers sustainably packaged surf accessories and equipment for SUP, River Surfing, Ocean Surfing, Kite Surfing and more!",
     url: "https://www.eisbach-riders.com", // No trailing slash allowed!
     siteUrl: "https://www.eisbach-riders.com",
-    image: "/src/assets/logos/logo.png", // Path to your image you placed in the 'static' folder
+    image: "/assets/logos/logo.png", // Path to your image you placed in the 'static' folder
     twitterUsername: "@EisbachRiders",
   },
   plugins: [
