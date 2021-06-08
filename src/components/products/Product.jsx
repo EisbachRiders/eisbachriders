@@ -9,6 +9,7 @@ import ProductBundle from "./productDetails/ProductBundle"
 
 function Product({ product }) {
   const isMobile = useMediaQuery(theme => theme.breakpoints.down("sm"))
+
   return (
     <Container disableGutters={isMobile}>
       {product.title && (
@@ -16,7 +17,7 @@ function Product({ product }) {
           <ProductIntro data={product} />
         </Box>
       )}
-      {product.featuresSubtitle && (
+      {product.features && (
         <Box sx={{ mb: { xs: 4, md: 10 } }}>
           <ProductFeatures data={product} />
         </Box>

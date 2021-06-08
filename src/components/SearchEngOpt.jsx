@@ -39,6 +39,11 @@ const Seo = ({ description, lang, meta }) => {
           content: metaDescription,
         },
         {
+          name: "keywords",
+          content:
+            "ER, Eisbach Riders,fins,surf fins,surfboard fins,ER fins,ER surfboard fins,ER fin,Eisbach Riders Fin,Eisbach Riders Surfboard Fin",
+        },
+        {
           property: `og:title`,
           content: title,
         },
