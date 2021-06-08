@@ -57,7 +57,7 @@ export default function DesktopLinks({ links, products, location }) {
 
   const open = Boolean(anchorEl)
   const id = open ? "product-popover" : undefined
-
+  console.log(location)
   return (
     <Box sx={{ display: { xs: "none", md: "block" } }}>
       <List
@@ -86,7 +86,7 @@ export default function DesktopLinks({ links, products, location }) {
                 >
                   <StyledListItemText
                     primary={t(`links.${elem}`)}
-                    selected={!location}
+                    selected={location === elem}
                   />
                 </ListItem>
                 <Popover

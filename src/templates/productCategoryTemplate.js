@@ -7,7 +7,7 @@ export default function ProductTemplate({ pageContext }) {
   const { products, category } = pageContext
 
   return (
-    <Layout>
+    <Layout location="products">
       <Seo title={category} />
       <CategoryOverview products={products} category={category} />
     </Layout>

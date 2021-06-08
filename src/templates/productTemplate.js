@@ -6,7 +6,7 @@ import Product from "../components/products/Product"
 export default function ProductTemplate({ pageContext }) {
   const { product } = pageContext
   return (
-    <Layout>
+    <Layout location="products">
       <Seo title={product.name} />
       <Product product={product} />
     </Layout>

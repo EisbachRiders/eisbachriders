@@ -43,7 +43,10 @@ export default function ProductFeatures({ data }) {
         }}
       >
         {data.features?.map((elem, idx) => (
-          <Box sx={{ mb: idx === data.features.length - 1 ? 0 : 2 }}>
+          <Box
+            sx={{ mb: idx === data.features.length - 1 ? 0 : 2 }}
+            key={`feature${idx}`}
+          >
             <Feature data={elem} />
           </Box>
         ))}
