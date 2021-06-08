@@ -1,4 +1,4 @@
-import { createMuiTheme } from "@material-ui/core/styles"
+import { createTheme } from "@material-ui/core/styles"
 import "./css/app.css"
 
 // fin: "#00d7a2",
@@ -31,9 +31,13 @@ const color = {
   teal: "#00d7a2",
   tealDk: "#45A29E",
   test: "#F7F680",
+  cream: "#F1F0EB",
+  grayLt: "#f7f7f9",
+  blueGray: "#cbd3cf",
+  steel: "#505D72",
 }
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     type: "light",
     primary: {
@@ -52,8 +56,8 @@ const theme = createMuiTheme({
   typography: {
     fontFamily: ["Raleway", "sans-serif"].join(","),
   },
-  components:{
-    MuiButton:{
+  components: {
+    MuiButton: {
       styleOverrides: {
         root: {
           padding: "9px 27px",
@@ -62,9 +66,9 @@ const theme = createMuiTheme({
         contained: {
           boxShadow: "none",
         },
-      }
-    }
-  }
+      },
+    },
+  },
 })
 
 export default theme

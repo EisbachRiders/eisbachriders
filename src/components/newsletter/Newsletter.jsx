@@ -14,7 +14,7 @@ import useMediaQuery from "@material-ui/core/useMediaQuery"
 import NewsletterSnackbar from "./Snackbar"
 // import fullLogo from "../../assets/logos/ER_full_white.svg"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     background: theme.color.gray,
     display: "flex",
@@ -106,13 +106,12 @@ function Newsletter() {
   const [snackbarMessage, setSnackbarMessage] = useState(false)
   const pattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async e => {
     if (isEmailValid && isNameValid) {
       const result = await addToMailchimp(email, {
         FNAME: name,
         gdpr_26529: true,
       })
-      console.log(result)
       if (result.result === "error") {
         setSnackbar(true)
         setSnackbarMessage(
@@ -135,7 +134,7 @@ function Newsletter() {
     }
   }
 
-  const handleChange = (name) => (event) => {
+  const handleChange = name => event => {
     if (name === "email") {
       setEmail(event.target.value)
       if (!pattern.test(event.target.value)) {

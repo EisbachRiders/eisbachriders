@@ -1,8 +1,8 @@
-import React from "react"
-import { Link } from "gatsby-theme-material-ui"
+import * as React from "react"
+import Link from "../ui/Link"
 import { StaticImage } from "gatsby-plugin-image"
 import { makeStyles } from "@material-ui/core/styles"
-import Hidden from "@material-ui/core/Hidden"
+import Box from "@material-ui/core/Box"
 import Container from "../ui/Container"
 
 const useStyles = makeStyles(theme => ({
@@ -21,22 +21,22 @@ function Ad() {
   return (
     <Container>
       <Link to="/recycled-fins" className={classes.link}>
-        <Hidden mdDown>
+        <Box sx={{ display: { xs: "none", md: "block" } }}>
           <StaticImage
             src="../../assets/websiteImages/quickLockAD.png"
             alt="quick lock ad"
             placeholder="blurred"
             className={classes.img}
           />
-        </Hidden>
-        <Hidden mdUp>
+        </Box>
+        <Box sx={{ display: { xs: "block", md: "none" } }}>
           <StaticImage
             src="../../assets/websiteImages/quickLockAD-mobile.png"
             alt="quick lock ad"
             placeholder="blurred"
             className={classes.img}
           />
-        </Hidden>
+        </Box>
       </Link>
     </Container>
   )

@@ -1,77 +1,14 @@
-import React, { useState, Fragment } from "react"
+import * as React from "react"
 import { useTranslation } from "react-i18next"
-
-import clsx from "clsx"
-import { makeStyles } from "@material-ui/core/styles"
 import Popover from "@material-ui/core/Popover"
 import Typography from "@material-ui/core/Typography"
+import Box from "@material-ui/core/Box"
 
-const useStyles = makeStyles((theme) => ({
-  containerSpace: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
-  containerCenter: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  circle: {
-    height: 15,
-    width: 15,
-    borderRadius: "50%",
-    margin: "0 5px",
-  },
-  circleBig: {
-    height: 30,
-    width: 30,
-    borderRadius: "50%",
-    margin: "0 5px",
-  },
-  blue: {
-    background: theme.color.blue,
-  },
-  gray: {
-    background: theme.color.gray,
-  },
-  white: {
-    border: `1px solid ${theme.palette.common.black}`,
-    background: theme.color.white,
-  },
-  black: {
-    background: theme.color.black,
-  },
-  pink: {
-    background: theme.color.pink,
-  },
-  yellow: {
-    background: theme.color.yellow,
-  },
-  orange: {
-    background: theme.color.orange,
-  },
-  green: {
-    background: theme.color.green,
-  },
-  teal: {
-    background: theme.color.tealDk,
-  },
-  seaGlass: {
-    background: theme.color.seaGlass,
-  },
-  popover: {
-    pointerEvents: "none",
-  },
-  paper: {
-    padding: 5,
-  },
-}))
-
-function Colors({ colors, variant }) {
-  const classes = useStyles()
+export default function Colors({ colors, variant }) {
   const { t } = useTranslation()
-  const [anchorEl, setAnchorEl] = useState(new Array(colors.length).fill(null))
+  const [anchorEl, setAnchorEl] = React.useState(
+    new Array(colors.length).fill(null)
+  )
 
   const handlePopoverOpen = (event, idx) => {
     let newArr = [...anchorEl]
@@ -84,39 +21,49 @@ function Colors({ colors, variant }) {
   }
 
   const circle = (color, idx) => (
-    <Fragment key={color}>
-      <p
+    <Box
+      key={color.name}
+      sx={{
+        flexBasis:
+          variant === "large" ? { xs: 100 / colors.length, sm: "50%" } : null,
+        mb: variant === "large" ? 2 : 0,
+        textAlign: "center",
+      }}
+    >
+      <Typography
+        component="p"
         aria-owns={
           Boolean(anchorEl[idx]) ? `mouse-over-popover${idx}` : undefined
         }
         aria-haspopup="true"
-        onMouseEnter={(e) => handlePopoverOpen(e, idx)}
+        onMouseEnter={e => handlePopoverOpen(e, idx)}
         onMouseLeave={handlePopoverClose}
-        key={color}
-        className={clsx(
-          variant === "large" ? classes.circleBig : classes.circle,
-          {
-            [classes.blue]: color === "Blue",
-            [classes.gray]: color === "Grey",
-            [classes.seaGlass]: color === "Sea Glass",
-            [classes.white]: color === "White",
-            [classes.black]: color === "Black",
-            [classes.pink]: color === "Pink",
-            [classes.orange]: color === "Orange",
-            [classes.red]: color === "Red",
-            [classes.teal]: color === "Teal" || color === "Turquoise",
-            [classes.green]: color === "Green" || color === "Green Glass",
-            [classes.yellow]: color === "Yellow",
-          }
-        )}
+        key={color.name}
+        sx={{
+          height: variant === "large" ? { xs: 25, sm: 45, md: 45, lg: 60 } : 15,
+          width: variant === "large" ? { xs: 25, sm: 45, md: 45, lg: 60 } : 15,
+          borderRadius: "50%",
+          margin: variant === "large" ? "0 auto" : "0 5px",
+          backgroundColor: theme =>
+            theme.color[
+              color.name
+                .replace(/\s(.)/g, function ($1) {
+                  return $1.toUpperCase()
+                })
+                .replace(/\s/g, "")
+                .replace(/^(.)/, function ($1) {
+                  return $1.toLowerCase()
+                })
+            ],
+          border: theme =>
+            color.name === "white"
+              ? `1px solid ${theme.color.black}`
+              : "transparent",
+        }}
       />
       <Popover
         id={`mouse-over-popover${idx}`}
-        className={classes.popover}
         open={Boolean(anchorEl[idx])}
-        classes={{
-          paper: classes.paper,
-        }}
         anchorEl={anchorEl[idx]}
         anchorOrigin={{
           vertical: "bottom",
@@ -128,19 +75,23 @@ function Colors({ colors, variant }) {
         }}
         onClose={handlePopoverClose}
         disableRestoreFocus
+        sx={{ pointerEvents: "none", p: 1 }}
       >
-        <Typography>{t(`product.${color}`)}</Typography>
+        <Typography>{t(`product.${color.name}`)}</Typography>
       </Popover>
-    </Fragment>
+    </Box>
   )
 
   return (
-    <div className={classes.containerCenter}>
-      <div className={classes.containerCenter}>
-        {colors.map((color, idx) => circle(color, idx))}
-      </div>
-    </div>
+    <Box
+      sx={{
+        display: "flex",
+        flexWrap: variant === "large" ? "wrap" : "nowrap",
+        justifyContent: variant === "large" ? "space-between" : "center",
+        alignItems: "center",
+      }}
+    >
+      {colors.map((color, idx) => circle(color, idx))}
+    </Box>
   )
 }
-
-export default Colors

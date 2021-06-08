@@ -1,12 +1,12 @@
-import React from "react"
+import * as React from "react"
 import clsx from "clsx"
 import { useTranslation } from "react-i18next"
 import { makeStyles } from "@material-ui/core/styles"
 import Typography from "@material-ui/core/Typography"
 import Container from "../ui/Container"
-import { Link } from "gatsby-theme-material-ui"
+import Link from "../ui/Link"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   container: {
     display: "flex",
     justifyContent: "space-around",

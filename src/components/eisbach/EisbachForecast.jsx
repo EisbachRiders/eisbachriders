@@ -23,7 +23,7 @@ import WbSunnyIcon from "@material-ui/icons/WbSunny"
 import WaterIcon from "./Water.js"
 import WeatherCode from "./WeatherCode"
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   h1: {
     textAlign: "center",
     fontFamily: "secondary",
@@ -206,8 +206,8 @@ function EisbachForecast() {
     let targetUrl = "http://temperature.eisbach-riders.com/forecast.json"
     const fetchData = () => {
       fetch(proxyUrl + targetUrl)
-        .then((response) => response.json())
-        .then((response) => {
+        .then(response => response.json())
+        .then(response => {
           if (response) {
             setData(response)
             setLoadError(false)
@@ -215,8 +215,7 @@ function EisbachForecast() {
             setLoadError(true)
           }
         })
-        .catch((error) => {
-          console.log(error)
+        .catch(error => {
           setLoadError(true)
         })
       setLoading(false)
@@ -225,7 +224,7 @@ function EisbachForecast() {
   }, [])
 
   const time = [0, 1, 3, 5, 7, 9, 11, 13, 15]
-    .map((e) => new Date(new Date().getTime() - e * 60 * 60 * 1000).getHours())
+    .map(e => new Date(new Date().getTime() - e * 60 * 60 * 1000).getHours())
     .reverse()
 
   let recommendation = null
@@ -334,7 +333,7 @@ function EisbachForecast() {
                 <div className={classes.chartContainer}>
                   <ResponsiveContainer width="95%" height={75}>
                     <LineChart
-                      data={data.current.temp.map((elem) => {
+                      data={data.current.temp.map(elem => {
                         return { value: elem }
                       })}
                       margin={{ top: 0, right: 15, left: 10, bottom: 0 }}
@@ -379,7 +378,7 @@ function EisbachForecast() {
                         dataKey="value"
                         stroke="#68AAD7"
                         fill="#B9F4F2"
-                        label={(elem) => (
+                        label={elem => (
                           <text
                             x={elem.x - elem.offset}
                             y={elem.y - elem.offset}

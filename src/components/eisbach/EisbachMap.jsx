@@ -130,17 +130,17 @@ function EisbachMap() {
   const { t } = useTranslation()
   const anchorRef = useRef(null)
 
-  if (typeof window !== "undefined" && !loaded.current) {
-    if (!document.querySelector("#google-maps")) {
-      loadScript(
-        `https://maps.googleapis.com/maps/api/js?key=AIzaSyCn3R1uz12niMl3IERD9wwr1BId_ztMYwI&libraries=places`,
-        document.querySelector("head"),
-        "google-maps"
-      )
-    }
+  // if (typeof window !== "undefined" && !loaded.current) {
+  //   if (!document.querySelector("#google-maps")) {
+  //     loadScript(
+  //       `https://maps.googleapis.com/maps/api/js?key=AIzaSyCn3R1uz12niMl3IERD9wwr1BId_ztMYwI&libraries=places`,
+  //       document.querySelector("head"),
+  //       "google-maps"
+  //     )
+  //   }
 
-    loaded.current = true
-  }
+  //   loaded.current = true
+  // }
 
   const fetch = React.useMemo(
     () =>
@@ -154,7 +154,8 @@ function EisbachMap() {
     let active = true
 
     if (!autocompleteService.current && window.google) {
-      autocompleteService.current = new window.google.maps.places.AutocompleteService()
+      autocompleteService.current =
+        new window.google.maps.places.AutocompleteService()
     }
     if (!autocompleteService.current) {
       return undefined

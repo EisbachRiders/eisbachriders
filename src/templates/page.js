@@ -1,36 +1,25 @@
-import React from "react"
-import { graphql } from "gatsby"
+import * as React from "react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
-import { Link } from "gatsby-theme-material-ui"
+import Link from "../components/ui/Link"
 import Layout from "../components/Layout"
-import SEO from "../components/seo"
+import Seo from "../components/SearchEngOpt"
 import Container from "../components/ui/Container"
 
-const shortcodes = { Link } // Provide common components here
+const shortcodes = Link // Provide common components here
 
-export default function PageTemplate({ data: { mdx } }) {
+export default function PageTemplate({ pageContext }) {
+  const { title, body } = pageContext
+
   return (
     <Layout>
-      <SEO title={mdx.frontmatter.title} />
+      <Seo title={title} />
       <Container flexDirection="column">
-        <h1>{mdx.frontmatter.title}</h1>
+        <h1>{title}</h1>
         <MDXProvider components={shortcodes}>
-          <MDXRenderer>{mdx.body}</MDXRenderer>
+          <MDXRenderer>{body}</MDXRenderer>
         </MDXProvider>
       </Container>
     </Layout>
   )
 }
-
-export const pageQuery = graphql`
-  query PageQuery($id: String) {
-    mdx(id: { eq: $id }) {
-      id
-      body
-      frontmatter {
-        title
-      }
-    }
-  }
-`

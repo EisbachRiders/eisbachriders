@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { useTranslation } from "react-i18next"
 import { makeStyles } from "@material-ui/core/styles"
@@ -68,11 +68,6 @@ function AboutHero() {
         placeholder="blurred"
         className={classes.img}
       />
-      <div className={classes.container}>
-        <p className={classes.title}>{t("about.about")}</p>
-        <p className={classes.title2}>{t("about.tagline")}</p>
-        <p>{t("about.content")}</p>
-      </div>
     </div>
   )
 }

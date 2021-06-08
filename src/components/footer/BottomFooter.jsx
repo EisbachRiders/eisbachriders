@@ -1,15 +1,15 @@
-import React from "react"
+import * as React from "react"
 import { useTranslation } from "react-i18next"
 import Link from "../ui/Link"
 import clsx from "clsx"
 import { makeStyles } from "@material-ui/styles"
 import IconButton from "@material-ui/core/IconButton"
-import Hidden from "@material-ui/core/Hidden"
+import Box from "@material-ui/core/Box"
 import FacebookIcon from "@material-ui/icons/Facebook"
 import InstagramIcon from "@material-ui/icons/Instagram"
 import PinterestIcon from "@material-ui/icons/Pinterest"
 import Container from "../ui/Container"
-import Contact from "../Contact"
+import Contact from "../contact/Contact"
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -201,7 +201,7 @@ function BottomFooter() {
           >
             {t("links.terms")}
           </Link>
-          <Hidden smDown>|</Hidden>
+          <Box sx={{ display: { xs: "none", sm: "block" } }}>|</Box>
           <Link to="/imprint" className={clsx(classes.textSmall, classes.link)}>
             {t("links.imprint")}
           </Link>

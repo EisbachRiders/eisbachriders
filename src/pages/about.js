@@ -1,12 +1,12 @@
-import React from "react"
-import SEO from "../components/seo"
+import * as React from "react"
+import Seo from "../components/SearchEngOpt"
 import Layout from "../components/Layout"
 import About from "../components/about/About"
 
 const AboutPage = () => {
   return (
     <Layout location="about">
-      <SEO />
+      <Seo />
       <About />
     </Layout>
   )

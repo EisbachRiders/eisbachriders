@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { useTranslation } from "react-i18next"
 import { makeStyles } from "@material-ui/core/styles"
@@ -6,7 +6,7 @@ import { makeStyles } from "@material-ui/core/styles"
 const useStyles = makeStyles(theme => ({
   root: {
     position: "relative",
-    height: "100vh - 98px",
+    marginBottom: 60,
   },
   container: {
     position: "absolute",
@@ -101,6 +101,7 @@ function Hero() {
         src="../../assets/websiteImages/hero.jpg"
         alt="surfer"
         placeholder="blurred"
+        objectPosition="top center"
         className={classes.img}
       />
       <div className={classes.container}>

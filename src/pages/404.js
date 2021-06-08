@@ -1,10 +1,10 @@
-import React from "react"
-import { Link } from "gatsby-theme-material-ui"
+import * as React from "react"
+import Link from "../components/ui/Link"
 import { makeStyles } from "@material-ui/core/styles"
 import { useTranslation } from "react-i18next"
 import Layout from "../components/Layout"
 import Container from "../components/ui/Container"
-import SEO from "../components/seo"
+import Seo from "../components/SearchEngOpt"
 import FinnImg from "../assets/websiteImages/finsLost.png"
 
 const useStyles = makeStyles(theme => ({
@@ -26,7 +26,7 @@ const NotFoundPage = () => {
 
   return (
     <Layout>
-      <SEO title="404: Not Found" />
+      <Seo title="404: Not Found" />
       <Container className={classes.container}>
         <h1>{t("404.notFound")}</h1>
         <p className={classes.text}>{t("404.pageText")}</p>

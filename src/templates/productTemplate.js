@@ -1,14 +1,13 @@
-import React from "react"
+import * as React from "react"
 import Layout from "../components/Layout"
-import SEO from "../components/seo"
+import Seo from "../components/SearchEngOpt"
 import Product from "../components/products/Product"
 
 export default function ProductTemplate({ pageContext }) {
   const { product } = pageContext
-
   return (
     <Layout>
-      <SEO title={product.name} />
+      <Seo title={product.name} />
       <Product product={product} />
     </Layout>
   )
