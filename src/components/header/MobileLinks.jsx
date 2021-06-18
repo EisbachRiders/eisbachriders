@@ -69,7 +69,7 @@ export default function MobileLinks({ links, products }) {
                     </ListItem>
                   </Link>
                   {products.map(item => (
-                    <Link to={`/${item}`} key={`sublink${idx}`}>
+                    <Link to={`/products/${item}`} key={`sublink${idx}`}>
                       <ListItem button sx={{ ml: 4 }}>
                         <StyledListItemText primary={t(`links.${item}`)} />
                       </ListItem>
