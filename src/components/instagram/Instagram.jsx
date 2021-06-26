@@ -1,29 +1,27 @@
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import Link from "../ui/Link"
-import Box from "@material-ui/core/Box"
+import { useStaticQuery, graphql } from "gatsby"
 import FavoriteIcon from "@material-ui/icons/Favorite"
+import Box from "@material-ui/core/Box"
 
 const InstagramWidget = () => {
-  const data = null
-  // const data = useStaticQuery(graphql`
-  //   query {
-  //     allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 3) {
-  //       edges {
-  //         node {
-  //           likes
-  //           id
-  //           localFile {
-  //             childImageSharp {
-  //               gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP])
-  //             }
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
+  const data = useStaticQuery(graphql`
+    query {
+      allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 3) {
+        edges {
+          node {
+            likes
+            id
+            localFile {
+              childImageSharp {
+                gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP])
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
 
   return (
     <Box
@@ -32,12 +30,11 @@ const InstagramWidget = () => {
         display: "grid",
         gridTemplateColumns: "1fr 1fr 1fr",
         gridGap: 5,
-        mb: { xs: 0, sm: 20 },
       }}
     >
       {data &&
         data.allInstaNode.edges.map((elem, idx) => (
-          <Link
+          <a
             key={`instagram_photo_${idx}`}
             href={`https://www.instagram.com/p/${elem.node.id}/`}
             target="_blank"
@@ -91,7 +88,7 @@ const InstagramWidget = () => {
                 </Box>
               </Box>
             </Box>
-          </Link>
+          </a>
         ))}
     </Box>
   )

@@ -1,7 +1,7 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { useTranslation } from "react-i18next"
-import { makeStyles } from "@material-ui/core/styles"
+import { makeStyles } from "@material-ui/styles"
 import Typography from "@material-ui/core/Typography"
 import Container from "../ui/Container"
 import Link from "../ui/Link"
@@ -63,14 +63,11 @@ const useStyles = makeStyles(theme => ({
       marginBottom: 60,
     },
   },
-  link: {
-    "&:hover": {
-      textDecoration: "none",
-    },
-  },
+
   title: {
     fontSize: 32,
     marginBottom: 10,
+
     [theme.breakpoints.up("md")]: {
       fontSize: 52,
       marginBottom: 30,
@@ -82,6 +79,7 @@ const useStyles = makeStyles(theme => ({
   },
   text: {
     fontSize: 12,
+
     [theme.breakpoints.up("md")]: {
       fontSize: 24,
     },
@@ -111,7 +109,7 @@ function SustainableLine() {
   }
 
   return (
-    <Link to="/products/sustainable-line" className={classes.link}>
+    <Link to="/products/sustainable-line">
       <Container
         alignItems="center"
         justifyContent="spaceBetween"

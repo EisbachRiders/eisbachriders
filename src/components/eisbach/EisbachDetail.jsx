@@ -1,6 +1,6 @@
 import * as React from "react"
 import { useTranslation } from "react-i18next"
-import { makeStyles } from "@material-ui/core/styles"
+import { makeStyles } from "@material-ui/styles"
 
 const useStyles = makeStyles(theme => ({
   root: {},

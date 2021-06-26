@@ -1,7 +1,7 @@
 import * as React from "react"
 import Link from "../ui/Link"
 import { StaticImage } from "gatsby-plugin-image"
-import { makeStyles } from "@material-ui/core/styles"
+import { makeStyles } from "@material-ui/styles"
 import Box from "@material-ui/core/Box"
 import Container from "../ui/Container"
 

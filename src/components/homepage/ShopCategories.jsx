@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up("lg")]: {
       flexBasis: "48%",
       marginBottom: 60,
-      height: 350,
+      height: 450,
     },
   },
   text: {
@@ -63,7 +63,7 @@ function ShopCategories() {
         cat: "fins",
         img: (
           <StaticImage
-            src="../../assets/websiteImages/fiberglass-single-tab-on-rocks-at-beach.jpg"
+            src="../../assets/websiteImages/recycled-plastic-single-tab-surf-fin.png"
             alt="fin on rocky beach"
             style={{
               gridArea: "1/1",
@@ -77,7 +77,7 @@ function ShopCategories() {
         cat: "leashes",
         img: (
           <StaticImage
-            src="../../assets/websiteImages/surfer-putting-on-blue-leash-at-beach.jpg"
+            src="../../assets/websiteImages/sup-leash.png"
             alt="surfer putting on leash"
             style={{
               gridArea: "1/1",

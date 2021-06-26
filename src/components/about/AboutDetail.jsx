@@ -2,7 +2,7 @@ import * as React from "react"
 import clsx from "clsx"
 import { StaticImage } from "gatsby-plugin-image"
 import { useTranslation } from "react-i18next"
-import { makeStyles } from "@material-ui/core/styles"
+import { makeStyles } from "@material-ui/styles"
 import Container from "../ui/Container"
 
 const useStyles = makeStyles(theme => ({

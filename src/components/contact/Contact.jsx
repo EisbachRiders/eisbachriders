@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { useTranslation } from "react-i18next"
 import clsx from "clsx"
-import { makeStyles } from "@material-ui/core/styles"
+import { makeStyles } from "@material-ui/styles"
 import Dialog from "@material-ui/core/Dialog"
 import DialogTitle from "@material-ui/core/DialogTitle"
 import DialogActions from "@material-ui/core/DialogActions"
@@ -10,7 +10,7 @@ import ListItem from "@material-ui/core/ListItem"
 import CircularProgress from "@material-ui/core/CircularProgress"
 import Button from "@material-ui/core/Button"
 import Snackbar from "@material-ui/core/Snackbar"
-import Alert from "@material-ui/lab/Alert"
+import Alert from "@material-ui/core/Alert"
 
 const useStyles = makeStyles(theme => ({
   form: {
@@ -84,7 +84,8 @@ function Contact({ variant, align }) {
       setTouched(true)
     }
     if (name === "email") {
-      const pattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
+      const pattern =
+        /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
       if (!pattern.test(event.target.value)) {
         setEmailValid(false)
         setEmail(event.target.value)

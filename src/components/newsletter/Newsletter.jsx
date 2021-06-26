@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { useTranslation } from "react-i18next"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 import clsx from "clsx"
-import { makeStyles, useTheme } from "@material-ui/core/styles"
+import { makeStyles, useTheme } from "@material-ui/styles"
 import Typography from "@material-ui/core/Typography"
 import Button from "@material-ui/core/Button"
 import Dialog from "@material-ui/core/Dialog"
@@ -104,7 +104,8 @@ function Newsletter() {
   const [isDialogOpen, setDialog] = useState(false)
   const [isSnackbarOpen, setSnackbar] = useState(false)
   const [snackbarMessage, setSnackbarMessage] = useState(false)
-  const pattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
+  const pattern =
+    /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/
 
   const handleSubmit = async e => {
     if (isEmailValid && isNameValid) {

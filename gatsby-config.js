@@ -73,6 +73,10 @@ module.exports = {
       resolve: `gatsby-source-instagram`,
       options: {
         username: `8544844204`,
+        access_token:
+          "IGQVJWUnF1VVRYcnZA0R0ctVlJwWDFTZAVBTdUdYc2NxMVVCR0pLMG1YRm9jel91ZAHN1SFh1VjlfRnJ1TEZA3N2k1NF9XcElfWG9OMU1PU3lnVDRqOTVIU0RzWGpRcmYxdmVEY0lHYjVkWk9IRTZA0Xy1HcwZDZD",
+        instagram_id: "eisbachRidersWebpage",
+        maxPosts: 6,
       },
     },
     {
@@ -170,14 +174,14 @@ module.exports = {
         },
       },
     },
+    "gatsby-plugin-gatsby-cloud",
+    "gatsby-plugin-sitemap",
     `gatsby-plugin-react-helmet`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
     // `gatsby-plugin-feed-mdx`,
-    `gatsby-plugin-sitemap`,
     "gatsby-plugin-top-layout",
-    "gatsby-plugin-material-ui",
     "gatsby-plugin-emotion",
   ],
 }

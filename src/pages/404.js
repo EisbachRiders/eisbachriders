@@ -1,6 +1,6 @@
 import * as React from "react"
 import Link from "../components/ui/Link"
-import { makeStyles } from "@material-ui/core/styles"
+import { makeStyles } from "@material-ui/styles"
 import { useTranslation } from "react-i18next"
 import Layout from "../components/Layout"
 import Container from "../components/ui/Container"

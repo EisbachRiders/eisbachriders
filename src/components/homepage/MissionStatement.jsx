@@ -1,7 +1,7 @@
 import * as React from "react"
 import clsx from "clsx"
 import { useTranslation } from "react-i18next"
-import { makeStyles } from "@material-ui/core/styles"
+import { makeStyles } from "@material-ui/styles"
 import Typography from "@material-ui/core/Typography"
 import Container from "../ui/Container"
 import Link from "../ui/Link"

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import clsx from "clsx"
 import { useTranslation } from "react-i18next"
-import { makeStyles } from "@material-ui/core/styles"
+import { makeStyles } from "@material-ui/styles"
 import CircularProgress from "@material-ui/core/CircularProgress"
 import Container from "../ui/Container"
 import {
