@@ -7574,7 +7574,7 @@ gatsby-core-utils@^2.6.0:
     tmp "^0.2.1"
     xdg-basedir "^4.0.0"
 
-gatsby-core-utils@^2.8.0:
+gatsby-core-utils@^2.8.0, gatsby-core-utils@^2.8.0-next.1:
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-2.8.0.tgz#e6d2e6e56609c4fcef5ba6fbf29ad863dc7bb8d2"
   integrity sha512-CadvILN4ZyYMYQAp+haxSgE/0k5zIu6y2WcqVSJaQLmmWq0o49Gv4CftVKOEXOtXaN0DEr9e4wWFVBRAYaRHGA==
@@ -7861,7 +7861,7 @@ gatsby-plugin-utils@^1.0.0-next.0:
   dependencies:
     joi "^17.2.1"
 
-gatsby-plugin-utils@^1.8.0:
+gatsby-plugin-utils@^1.8.0, gatsby-plugin-utils@^1.8.0-next.1:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-utils/-/gatsby-plugin-utils-1.8.0.tgz#1e16c0df3cc96a67005a803b11abb887a3f1fad9"
   integrity sha512-K/EiYx2kKd5BOuwWg86mrvrMh8u9hW40abFLZYH4zRAkthL+vYp/WeckVL/TibZ3jPUhhay9JGjXKR+Ot6BYDQ==
@@ -7981,10 +7981,10 @@ gatsby-remark-responsive-iframe@^4.5.0:
     lodash "^4.17.21"
     unist-util-visit "^2.0.3"
 
-gatsby-source-contentful@^5.8.0:
-  version "5.8.0"
-  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-5.8.0.tgz#9233b95a21c81414d8e38a10f946ac8891ae1b30"
-  integrity sha512-S4xqePFa0dCj8bVh5neDxoNP2PwekQiYiLQozEmV4nsGU9s7qX0wGxK9HISIov7BoT7ISDsYrIB0ZYtRRqHhOw==
+gatsby-source-contentful@^5.8.0-next.2:
+  version "5.8.0-next.2"
+  resolved "https://registry.yarnpkg.com/gatsby-source-contentful/-/gatsby-source-contentful-5.8.0-next.2.tgz#439ecea96211b27c0d75d048135a3f04cac0131e"
+  integrity sha512-ll7o6Ne3eGTLuFwj3ZgbP/ffwm2TH0hl/SrPfZzRNfvPmMO9JrA8RxJKpd89LKQXUakfVXhtKYvMzYjhfJwWEw==
   dependencies:
     "@babel/runtime" "^7.14.0"
     "@contentful/rich-text-react-renderer" "^14.1.2"
@@ -7996,9 +7996,9 @@ gatsby-source-contentful@^5.8.0:
     common-tags "^1.8.0"
     contentful "^8.1.7"
     fs-extra "^9.1.0"
-    gatsby-core-utils "^2.8.0"
-    gatsby-plugin-utils "^1.8.0"
-    gatsby-source-filesystem "^3.8.0"
+    gatsby-core-utils "^2.8.0-next.1"
+    gatsby-plugin-utils "^1.8.0-next.1"
+    gatsby-source-filesystem "^3.8.0-next.1"
     is-online "^8.5.1"
     json-stringify-safe "^5.0.1"
     lodash "^4.17.21"
@@ -8007,7 +8007,7 @@ gatsby-source-contentful@^5.8.0:
     qs "^6.9.6"
     retry-axios "^2.4.0"
 
-gatsby-source-filesystem@^3.8.0:
+gatsby-source-filesystem@^3.8.0, gatsby-source-filesystem@^3.8.0-next.1:
   version "3.8.0"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-3.8.0.tgz#d434e3dc4c297851313d56135e1208d00aa3feac"
   integrity sha512-EyyqiIOhDeZ2EzykLRy3lR9WlpDrBCeHwn5wohvvjGBmWDnA54LloScIf1r/0PxSHSn/vFtXkBuh2Slzln5eag==
