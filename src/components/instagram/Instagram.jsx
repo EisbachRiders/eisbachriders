@@ -3,30 +3,33 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
 import FavoriteIcon from "@material-ui/icons/Favorite"
 import Box from "@material-ui/core/Box"
+import InstagramFeed from "react-ig-feed"
+import "react-ig-feed/dist/index.css"
 
 const InstagramWidget = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 3) {
-        edges {
-          node {
-            likes
-            id
-            localFile {
-              childImageSharp {
-                gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP])
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
-  let results = data || []
+  // const data = useStaticQuery(graphql`
+  //   query {
+  //     allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 3) {
+  //       edges {
+  //         node {
+  //           likes
+  //           id
+  //           localFile {
+  //             childImageSharp {
+  //               gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP])
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
+  // let results = []
 
   return (
     <>
-      <Box
+      <InstagramFeed token={process.env.GATBSY_INSTA} counter="6" />
+      {/* <Box
         sx={{
           width: "100%",
           display: "grid",
@@ -92,7 +95,7 @@ const InstagramWidget = () => {
               </Box>
             </a>
           ))}
-      </Box>
+      </Box> */}
     </>
   )
 }
