@@ -22,6 +22,7 @@ const InstagramWidget = () => {
       }
     }
   `)
+  let results = data || []
 
   return (
     <>
@@ -33,7 +34,7 @@ const InstagramWidget = () => {
           gridGap: 5,
         }}
       >
-        {data &&
+        {results.length > 0 &&
           data.allInstaNode.edges.map((elem, idx) => (
             <a
               key={`instagram_photo_${idx}`}
