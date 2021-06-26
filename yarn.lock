@@ -8028,7 +8028,7 @@ gatsby-source-contentful@^5.9.0-next.0:
     qs "^6.9.6"
     retry-axios "^2.4.0"
 
-gatsby-source-filesystem@^3.0.0, gatsby-source-filesystem@^3.8.0:
+gatsby-source-filesystem@^3.8.0:
   version "3.8.0"
   resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-3.8.0.tgz#d434e3dc4c297851313d56135e1208d00aa3feac"
   integrity sha512-EyyqiIOhDeZ2EzykLRy3lR9WlpDrBCeHwn5wohvvjGBmWDnA54LloScIf1r/0PxSHSn/vFtXkBuh2Slzln5eag==
@@ -8081,15 +8081,6 @@ gatsby-source-graphql@^3.8.0:
     invariant "^2.2.4"
     node-fetch "^2.6.1"
     uuid "3.4.0"
-
-gatsby-source-instagram-all@^4.2.0:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-source-instagram-all/-/gatsby-source-instagram-all-4.2.0.tgz#f06b47dbe75676c4f61de99d8b16dd4ca22cf00b"
-  integrity sha512-GiId9JxewRD1GeQxPP8ez5hGVSj30MKDFR+6Q8Xw3x3l21zzKWFbkGv2wbhKmqboNoEaUVXthmPTdqOnaIyHnQ==
-  dependencies:
-    gatsby-source-filesystem "^3.0.0"
-    node-fetch "^2.6.1"
-    query-string "^7.0.0"
 
 gatsby-source-instagram@^0.9.0:
   version "0.9.0"
@@ -13247,16 +13238,6 @@ query-string@^6.13.1, query-string@^6.13.3, query-string@^6.13.8:
   version "6.14.1"
   resolved "https://registry.yarnpkg.com/query-string/-/query-string-6.14.1.tgz#7ac2dca46da7f309449ba0f86b1fd28255b0c86a"
   integrity sha512-XDxAeVmpfu1/6IjyT/gXHOl+S0vQ9owggJ30hhWKdHAsNPOcasn5o9BW0eejZqL2e4vMjhAxoW3jVHcD6mbcYw==
-  dependencies:
-    decode-uri-component "^0.2.0"
-    filter-obj "^1.1.0"
-    split-on-first "^1.0.0"
-    strict-uri-encode "^2.0.0"
-
-query-string@^7.0.0:
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/query-string/-/query-string-7.0.1.tgz#45bd149cf586aaa582dffc7ec7a8ad97dd02f75d"
-  integrity sha512-uIw3iRvHnk9to1blJCG3BTc+Ro56CBowJXKmNNAm3RulvPBzWLRqKSiiDk+IplJhsydwtuNMHi8UGQFcCLVfkA==
   dependencies:
     decode-uri-component "^0.2.0"
     filter-obj "^1.1.0"
