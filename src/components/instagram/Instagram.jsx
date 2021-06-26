@@ -35,7 +35,7 @@ const InstagramWidget = () => {
         }}
       >
         {results.length > 0 &&
-          data.allInstaNode.edges.map((elem, idx) => (
+          data?.allInstaNode?.edges.map((elem, idx) => (
             <a
               key={`instagram_photo_${idx}`}
               href={`https://www.instagram.com/p/${elem.node.id}/`}

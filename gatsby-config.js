@@ -69,16 +69,16 @@ module.exports = {
     //     url: "https://secondwavesurfing.com/shop/graphql",
     //   },
     // },
-    // {
-    //   resolve: `gatsby-source-instagram`,
-    //   options: {
-    //     username: `8544844204`,
-    //     access_token:
-    //       "IGQVJWNlJVaXlrQ1RrM20tcHp1NjNhVXIwQWp5WE5UUEFtdFM1NzIyWFYyQlpHNWRGZA193WlZAPRzAwUS1KRnc0cGZAxNGVDczdUa0h4WmJzRmNOcEpOM19ucV94RjBMa0tRR3RHMXZADbHdYTHBaVkVtcwZDZD",
-    //     instagram_id: "eisbachRidersWebpage",
-    //     maxPosts: 6,
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `8544844204`,
+        access_token:
+          "IGQVJWNlJVaXlrQ1RrM20tcHp1NjNhVXIwQWp5WE5UUEFtdFM1NzIyWFYyQlpHNWRGZA193WlZAPRzAwUS1KRnc0cGZAxNGVDczdUa0h4WmJzRmNOcEpOM19ucV94RjBMa0tRR3RHMXZADbHdYTHBaVkVtcwZDZD",
+        instagram_id: "eisbachRidersWebpage",
+        maxPosts: 6,
+      },
+    },
     {
       resolve: `gatsby-source-contentful`,
       options: {
