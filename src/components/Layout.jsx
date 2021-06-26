@@ -11,7 +11,7 @@ const Layout = ({ location, children }) => {
   const { t } = useTranslation()
 
   const handleOptOut = () => {
-    var disableStr = `ga-disable-${process.env.GA_KEY}`
+    var disableStr = `ga-disable-${process.env.GATSBY_GA_KEY}`
     document.cookie = `${disableStr}=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/`
     window[disableStr] = true
   }

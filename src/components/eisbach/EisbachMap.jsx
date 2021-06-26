@@ -213,7 +213,7 @@ function EisbachMap() {
     setAddress(value)
     setCenter(latLng)
   }
-
+  console.log(value)
   return (
     <>
       <div className={classes.searchContainer}>
