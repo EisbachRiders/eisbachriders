@@ -3,8 +3,12 @@ import { StaticImage } from "gatsby-plugin-image"
 import GoogleMapReact from "google-map-react"
 import PlacesAutocomplete, {
   geocodeByAddress,
+  geocodeByPlaceId,
   getLatLng,
 } from "react-places-autocomplete"
+import { Marker as MapMarker } from "react-map-gl"
+import ReactMapGL from "react-map-gl"
+import mapboxgl from "mapbox-gl"
 import { useTranslation } from "react-i18next"
 import { makeStyles } from "@material-ui/styles"
 import List from "@material-ui/core/List"
@@ -99,6 +103,10 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass =
+  require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default
+
 function loadScript(src, position, id) {
   if (!position) {
     return
@@ -118,13 +126,15 @@ const Marker = ({ children }) => children
 function EisbachMap() {
   const [locations, setLocations] = useState(allLocations)
   const [address, setAddress] = useState("")
-  const mapRef = useRef()
   const [bounds, setBounds] = useState(null)
   const [selected, setSelected] = useState(null)
-  const [zoom, setZoom] = useState(5)
-  const [center, setCenter] = useState({ lat: 48.12, lng: 11.59 })
   const classes = useStyles()
   const { t } = useTranslation()
+  const [viewport, setViewport] = React.useState({
+    latitude: 48.13805351968541,
+    longitude: 11.576341410155946,
+    zoom: 10,
+  })
 
   const [value, setValue] = React.useState(null)
   const [inputValue, setInputValue] = React.useState("")
@@ -154,9 +164,15 @@ function EisbachMap() {
   React.useEffect(() => {
     let active = true
 
+    var options = {
+      types: ["(cities)"],
+    }
+
+    var input = document.getElementById("searchTextField")
+
     if (!autocompleteService.current && window.google) {
       autocompleteService.current =
-        new window.google.maps.places.AutocompleteService()
+        new window.google.maps.places.AutocompleteService(input, options)
     }
     if (!autocompleteService.current) {
       return undefined
@@ -188,129 +204,72 @@ function EisbachMap() {
     }
   }, [value, inputValue, fetch])
 
-  useEffect(() => {
-    if (bounds) {
-      let filteredList = allLocations.filter(elem => {
-        return (
-          elem.lng >= bounds[0] &&
-          elem.lng <= bounds[2] &&
-          elem.lat >= bounds[1] &&
-          elem.lat <= bounds[3]
-        )
-      })
-      setLocations(filteredList)
-    }
-  }, [bounds])
+  // useEffect(() => {
+  //   if (bounds) {
+  //     let filteredList = allLocations.filter(elem => {
+  //       return (
+  //         elem.lng >= bounds[0] &&
+  //         elem.lng <= bounds[2] &&
+  //         elem.lat >= bounds[1] &&
+  //         elem.lat <= bounds[3]
+  //       )
+  //     })
+  //     setLocations(filteredList)
+  //   }
+  // }, [bounds])
 
   const handleIconButton = () => {
     setAddress("")
-    setCenter({ lat: 48.12, lng: 11.59 })
+    setViewport({
+      latitude: 48.12,
+      longitude: 11.59,
+      zoom: 10,
+    })
+    setLocations(allLocations)
   }
 
   const handleSelect = async value => {
-    const results = await geocodeByAddress(value)
-    const latLng = await getLatLng(results[0])
-    setAddress(value)
-    setCenter(latLng)
+    if (value) {
+      const results = await geocodeByPlaceId(value.place_id)
+      const latLng = await getLatLng(results[0])
+
+      setViewport({
+        latitude: latLng.lat,
+        longitude: latLng.lng,
+        zoom: 7,
+      })
+
+      let filteredLocations = allLocations.filter(
+        elem =>
+          elem.lat < latLng.lat + 1 &&
+          elem.lat > latLng.lat - 1 &&
+          elem.lng < latLng.lng + 1 &&
+          elem.lng > latLng.lng - 1
+      )
+
+      setLocations(filteredLocations)
+    } else {
+      handleIconButton()
+    }
   }
-  console.log(value)
+
   return (
     <>
-      <div className={classes.searchContainer}>
-        <Autocomplete
-          id="google-map-demo"
-          sx={{ width: 300 }}
-          getOptionLabel={option =>
-            typeof option === "string" ? option : option.description
-          }
-          filterOptions={x => x}
-          options={options}
-          autoComplete
-          includeInputInList
-          filterSelectedOptions
-          value={value}
-          onChange={(event, newValue) => {
-            setOptions(newValue ? [newValue, ...options] : options)
-            setValue(newValue)
-          }}
-          onInputChange={(event, newInputValue) => {
-            setInputValue(newInputValue)
-          }}
-          renderInput={params => (
-            <TextField {...params} label="Add a location" fullWidth />
-          )}
-          renderOption={(props, option) => {
-            const matches =
-              option.structured_formatting.main_text_matched_substrings
-            const parts = parse(
-              option.structured_formatting.main_text,
-              matches.map(match => [match.offset, match.offset + match.length])
-            )
-
-            return (
-              <li {...props}>
-                <Grid container alignItems="center">
-                  <Grid item>
-                    <Box
-                      component={LocationOnIcon}
-                      sx={{ color: "text.secondary", mr: 2 }}
-                    />
-                  </Grid>
-                  <Grid item xs>
-                    {parts.map((part, index) => (
-                      <span
-                        key={index}
-                        style={{
-                          fontWeight: part.highlight ? 700 : 400,
-                        }}
-                      >
-                        {part.text}
-                      </span>
-                    ))}
-
-                    <Typography variant="body2" color="text.secondary">
-                      {option.structured_formatting.secondary_text}
-                    </Typography>
-                  </Grid>
-                </Grid>
-              </li>
-            )
-          }}
-        />
-      </div>
       <div className={classes.container}>
         <div className={classes.mapContainer}>
-          <GoogleMapReact
-            bootstrapURLKeys={{
-              key: process.env.GOOGLEMAPS,
-            }}
-            defaultCenter={{ lat: 48.134234, lng: 11.588486 }}
-            defaultZoom={5}
-            zoom={zoom}
-            yesIWantToUseGoogleMapApiInternals
-            onGoogleApiLoaded={({ map }) => {
-              mapRef.current = map
-            }}
-            language="de"
-            region="DE"
-            options={{
-              styles: mapStyles,
-              mapTypeControl: false,
-              streetViewControl: false,
-            }}
-            center={center}
-            onChange={({ zoom, bounds }) => {
-              setZoom(zoom)
-              setBounds([
-                bounds.nw.lng,
-                bounds.se.lat,
-                bounds.se.lng,
-                bounds.nw.lat,
-              ])
-            }}
+          <ReactMapGL
+            {...viewport}
+            width="100%"
+            height="100%"
+            mapboxApiAccessToken={process.env.GATSBY_MAPBOX}
+            onViewportChange={viewport => setViewport(viewport)}
           >
             {locations.map((elem, idx) => (
-              <Marker key={`marker${idx}`} lat={elem.lat} lng={elem.lng}>
+              <MapMarker
+                key={`marker${idx}`}
+                latitude={parseFloat(elem.lat)}
+                longitude={parseFloat(elem.lng)}
+              >
                 <button
                   className={classes.markerButton}
                   onClick={() => setSelected(selected ? null : elem)}
@@ -325,11 +284,75 @@ function EisbachMap() {
                     className={classes.icon}
                   />
                 </button>
-              </Marker>
+              </MapMarker>
             ))}
-          </GoogleMapReact>
+          </ReactMapGL>
         </div>
         <div className={classes.mapListContainer}>
+          <Autocomplete
+            id="google-map-demo"
+            sx={{ width: "100%" }}
+            getOptionLabel={option =>
+              typeof option === "string" ? option : option.description
+            }
+            filterOptions={x => x}
+            options={options}
+            autoComplete
+            includeInputInList
+            filterSelectedOptions
+            value={value}
+            onChange={(event, newValue) => {
+              setOptions(newValue ? [newValue, ...options] : options)
+              setValue(newValue)
+              handleSelect(newValue)
+            }}
+            onInputChange={(event, newInputValue) => {
+              setInputValue(newInputValue)
+            }}
+            renderInput={params => (
+              <TextField {...params} label="Find a Wave!" fullWidth />
+            )}
+            renderOption={(props, option) => {
+              const matches =
+                option.structured_formatting.main_text_matched_substrings
+              const parts = parse(
+                option.structured_formatting.main_text,
+                matches.map(match => [
+                  match.offset,
+                  match.offset + match.length,
+                ])
+              )
+
+              return (
+                <li {...props}>
+                  <Grid container alignItems="center">
+                    <Grid item>
+                      <Box
+                        component={LocationOnIcon}
+                        sx={{ color: "text.secondary", mr: 2 }}
+                      />
+                    </Grid>
+                    <Grid item xs>
+                      {parts.map((part, index) => (
+                        <span
+                          key={index}
+                          style={{
+                            fontWeight: part.highlight ? 700 : 400,
+                          }}
+                        >
+                          {part.text}
+                        </span>
+                      ))}
+
+                      <Typography variant="body2" color="text.secondary">
+                        {option.structured_formatting.secondary_text}
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                </li>
+              )
+            }}
+          />
           {locations.length > 0 && (
             <List className={classes.list}>
               {locations.map((elem, idx) => (
@@ -341,25 +364,70 @@ function EisbachMap() {
                         ? classes.listItemSelected
                         : classes.listItem
                     }
-                    button
-                    onClick={() => {
-                      if (selected && selected.name === elem.name) {
-                        setSelected(null)
-                      } else {
-                        setCenter({ lat: elem.lat, lng: elem.lng })
-                        setZoom(9)
-                        setSelected(elem)
-                      }
-                    }}
                   >
-                    <ListItemAvatar>
+                    <ListItemAvatar
+                      onClick={() => {
+                        if (selected && selected.name === elem.name) {
+                          setSelected(null)
+                        } else {
+                          setViewport({
+                            lat: elem.lat,
+                            lng: elem.lng,
+                            zoom: 10,
+                          })
+                          setSelected(elem)
+                        }
+                      }}
+                      sx={{ cursor: "pointer" }}
+                    >
                       <Avatar>
                         <RoomIcon />
                       </Avatar>
                     </ListItemAvatar>
                     <ListItemText
                       primary={elem.name}
-                      secondary={t(`eisbach.${elem.skill}`)}
+                      secondary={
+                        <Box sx={{ display: "flex", flexDirection: "column" }}>
+                          <Typography
+                            sx={{ display: "inline" }}
+                            component="span"
+                            variant="body2"
+                            color="text.primary"
+                          >
+                            {`${elem.city}, ${elem.country}`}
+                          </Typography>
+                          <Typography
+                            sx={{ display: "inline" }}
+                            component="span"
+                            variant="body2"
+                            color="text.primary"
+                          >
+                            {t(`eisbach.${elem.skill}`)}
+                          </Typography>
+                          <Typography
+                            sx={{ display: "inline" }}
+                            component="span"
+                            variant="body2"
+                            color="text.primary"
+                          >
+                            {`Open: ${elem.open}`}
+                          </Typography>
+                          {elem.website !== "" && (
+                            <Typography
+                              href={elem.website}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              component="a"
+                              variant="body2"
+                              sx={{
+                                color: theme => theme.palette.primary.main,
+                              }}
+                            >
+                              website
+                            </Typography>
+                          )}
+                        </Box>
+                      }
                     />
                     <p>{elem.technology}</p>
                   </ListItem>
