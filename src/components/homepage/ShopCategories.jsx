@@ -23,12 +23,12 @@ const useStyles = makeStyles(theme => ({
   box: {
     display: "grid",
     flexBasis: "100%",
-    height: 200,
+    height: 400,
     marginBottom: 30,
     [theme.breakpoints.up("lg")]: {
       flexBasis: "48%",
       marginBottom: 60,
-      height: 450,
+      height: 550,
     },
   },
   text: {
@@ -131,7 +131,7 @@ function ShopCategories() {
                 <Link to={elem.link} className={classes.link}>
                   <Button
                     className={classes.button}
-                    alt="shop van der waal surf grip"
+                    alt="shop"
                     variant="contained"
                     color="primary"
                   >

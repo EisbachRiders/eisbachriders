@@ -22,6 +22,7 @@ import mapStyles from "./mapStyles.json"
 import waveIcon from "../../assets/icons/surf.svg"
 import waveIconSelected from "../../assets/icons/surfSelected.svg"
 import allLocations from "./locations"
+import Box from "@material-ui/core/Box"
 import Autocomplete from "@material-ui/core/Autocomplete"
 import LocationOnIcon from "@material-ui/icons/LocationOn"
 import Grid from "@material-ui/core/Grid"
@@ -117,10 +118,6 @@ const Marker = ({ children }) => children
 function EisbachMap() {
   const [locations, setLocations] = useState(allLocations)
   const [address, setAddress] = useState("")
-  const [value, setValue] = useState(null)
-  const [inputValue, setInputValue] = useState("")
-  const [options, setOptions] = useState([])
-  const loaded = useRef(false)
   const mapRef = useRef()
   const [bounds, setBounds] = useState(null)
   const [selected, setSelected] = useState(null)
@@ -128,19 +125,23 @@ function EisbachMap() {
   const [center, setCenter] = useState({ lat: 48.12, lng: 11.59 })
   const classes = useStyles()
   const { t } = useTranslation()
-  const anchorRef = useRef(null)
 
-  // if (typeof window !== "undefined" && !loaded.current) {
-  //   if (!document.querySelector("#google-maps")) {
-  //     loadScript(
-  //       `https://maps.googleapis.com/maps/api/js?key=AIzaSyCn3R1uz12niMl3IERD9wwr1BId_ztMYwI&libraries=places`,
-  //       document.querySelector("head"),
-  //       "google-maps"
-  //     )
-  //   }
+  const [value, setValue] = React.useState(null)
+  const [inputValue, setInputValue] = React.useState("")
+  const [options, setOptions] = React.useState([])
+  const loaded = React.useRef(false)
 
-  //   loaded.current = true
-  // }
+  if (typeof window !== "undefined" && !loaded.current) {
+    if (!document.querySelector("#google-maps")) {
+      loadScript(
+        `https://maps.googleapis.com/maps/api/js?key=${process.env.GATSBY_GOOGLEMAPS}&libraries=places`,
+        document.querySelector("head"),
+        "google-maps"
+      )
+    }
+
+    loaded.current = true
+  }
 
   const fetch = React.useMemo(
     () =>
@@ -150,7 +151,7 @@ function EisbachMap() {
     []
   )
 
-  useEffect(() => {
+  React.useEffect(() => {
     let active = true
 
     if (!autocompleteService.current && window.google) {
@@ -216,9 +217,9 @@ function EisbachMap() {
   return (
     <>
       <div className={classes.searchContainer}>
-        {/* <Autocomplete
+        <Autocomplete
           id="google-map-demo"
-          style={{ width: 300 }}
+          sx={{ width: 300 }}
           getOptionLabel={option =>
             typeof option === "string" ? option : option.description
           }
@@ -227,7 +228,6 @@ function EisbachMap() {
           autoComplete
           includeInputInList
           filterSelectedOptions
-          className={classes.autocomplete}
           value={value}
           onChange={(event, newValue) => {
             setOptions(newValue ? [newValue, ...options] : options)
@@ -237,7 +237,7 @@ function EisbachMap() {
             setInputValue(newInputValue)
           }}
           renderInput={params => (
-            <TextField {...params} label={t("eisbach.adventure")} fullWidth />
+            <TextField {...params} label="Add a location" fullWidth />
           )}
           renderOption={(props, option) => {
             const matches =
@@ -251,7 +251,10 @@ function EisbachMap() {
               <li {...props}>
                 <Grid container alignItems="center">
                   <Grid item>
-                    <LocationOnIcon className={classes.icon} />
+                    <Box
+                      component={LocationOnIcon}
+                      sx={{ color: "text.secondary", mr: 2 }}
+                    />
                   </Grid>
                   <Grid item xs>
                     {parts.map((part, index) => (
@@ -265,7 +268,7 @@ function EisbachMap() {
                       </span>
                     ))}
 
-                    <Typography variant="body2" color="textSecondary">
+                    <Typography variant="body2" color="text.secondary">
                       {option.structured_formatting.secondary_text}
                     </Typography>
                   </Grid>
@@ -273,7 +276,7 @@ function EisbachMap() {
               </li>
             )
           }}
-        /> */}
+        />
       </div>
       <div className={classes.container}>
         <div className={classes.mapContainer}>
