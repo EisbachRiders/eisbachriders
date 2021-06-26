@@ -28,7 +28,10 @@ const InstagramWidget = () => {
 
   return (
     <>
-      <InstagramFeed token={process.env.GATBSY_INSTA} counter="6" />
+      <InstagramFeed
+        token="IGQVJWNlJVaXlrQ1RrM20tcHp1NjNhVXIwQWp5WE5UUEFtdFM1NzIyWFYyQlpHNWRGZA193WlZAPRzAwUS1KRnc0cGZAxNGVDczdUa0h4WmJzRmNOcEpOM19ucV94RjBMa0tRR3RHMXZADbHdYTHBaVkVtcwZDZD"
+        counter="6"
+      />
       {/* <Box
         sx={{
           width: "100%",
