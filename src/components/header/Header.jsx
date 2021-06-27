@@ -30,7 +30,7 @@ function Header({ location }) {
     threshold: 0,
   })
 
-  const links = ["urban", "products", "sustainable", "shop", "about"]
+  const links = ["urban", "products", "sustainable", "about"]
   const products = [
     "fins",
     "leashes",

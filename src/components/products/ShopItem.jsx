@@ -46,7 +46,7 @@ function ShopItem({ product }) {
             >
               {product.name}
             </Typography>
-            {product.color && <Colors colors={product.color} />}
+            {/* {product.color && <Colors colors={product.color} />} */}
           </Box>
         </>
       )}

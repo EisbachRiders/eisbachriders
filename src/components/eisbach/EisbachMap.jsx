@@ -131,9 +131,9 @@ function EisbachMap() {
   const classes = useStyles()
   const { t } = useTranslation()
   const [viewport, setViewport] = React.useState({
-    latitude: 48.13805351968541,
-    longitude: 11.576341410155946,
-    zoom: 10,
+    latitude: 44.363942,
+    longitude: -116.643542,
+    zoom: 5,
   })
 
   const [value, setValue] = React.useState(null)
@@ -221,9 +221,9 @@ function EisbachMap() {
   const handleIconButton = () => {
     setAddress("")
     setViewport({
-      latitude: 48.12,
-      longitude: 11.59,
-      zoom: 10,
+      latitude: 44.363942,
+      longitude: -116.643542,
+      zoom: 5,
     })
     setLocations(allLocations)
   }

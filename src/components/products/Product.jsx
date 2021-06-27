@@ -10,7 +10,7 @@ import ProductLifestyle from "./productDetails/ProductLifestyle"
 
 function Product({ product }) {
   const isMobile = useMediaQuery(theme => theme.breakpoints.down("sm"))
-  console.log(product)
+
   return (
     <Container disableGutters={isMobile}>
       {product.title && (

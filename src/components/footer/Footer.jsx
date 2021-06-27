@@ -179,7 +179,7 @@ function Footer() {
         />
 
         <div className={classes.copyrightContainer}>
-          <Link
+          {/* <Link
             to="/dataProtection"
             className={clsx(classes.textSmall, classes.link)}
           >
@@ -195,8 +195,8 @@ function Footer() {
           <Box sx={{ display: { xs: "none", sm: "block" } }}>|</Box>
           <Link to="/imprint" className={clsx(classes.textSmall, classes.link)}>
             {t("links.imprint")}
-          </Link>
-          |
+          </Link> 
+          |*/}
           <Link to="/credit" className={clsx(classes.textSmall, classes.link)}>
             {t("links.credit")}
           </Link>

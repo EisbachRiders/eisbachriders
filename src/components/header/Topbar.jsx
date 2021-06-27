@@ -64,20 +64,6 @@ export default function Topbar() {
             {elem.icon}
           </Button>
         ))}
-        <Button
-          onClick={() => handleSetLang()}
-          sx={{
-            color: theme => theme.color.white,
-            width: 36,
-            height: 36,
-            fontSize: 18,
-            "&:hover": {
-              color: theme => theme.palette.primary.main,
-            },
-          }}
-        >
-          {i18n.language}
-        </Button>
       </Container>
     </Box>
   )

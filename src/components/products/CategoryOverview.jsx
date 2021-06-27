@@ -104,7 +104,7 @@ const multipleOfFour = array => {
   return array
 }
 
-function ProductsOverview({ products, category }) {
+function ProductCategoryOverview({ products, category }) {
   const classes = useStyles()
   const { t } = useTranslation()
 
@@ -150,4 +150,4 @@ function ProductsOverview({ products, category }) {
   )
 }
 
-export default ProductsOverview
+export default ProductCategoryOverview

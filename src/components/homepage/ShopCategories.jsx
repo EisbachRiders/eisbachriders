@@ -60,7 +60,7 @@ function ShopCategories() {
   const small = [
     [
       {
-        cat: "fins",
+        cat: "Surf Fins",
         img: (
           <StaticImage
             src="../../assets/websiteImages/recycled-plastic-single-tab-surf-fin.png"
@@ -71,49 +71,21 @@ function ShopCategories() {
           />
         ),
         href: "https://shop.eisbach-riders.com/product-category/fins/",
-        link: "/products/surfboard-fins",
+        link: "/products",
       },
       {
-        cat: "leashes",
+        cat: "SUP Fins",
         img: (
           <StaticImage
-            src="../../assets/websiteImages/sup-leash.png"
-            alt="surfer putting on leash"
+            src="../../assets/websiteImages/sup-paddler-looking-over-lake.jpg"
+            alt="sup at lake"
             style={{
               gridArea: "1/1",
             }}
           />
         ),
-        href: "https://shop.eisbach-riders.com/product-category/leashes/",
-        link: "/products/leashes",
-      },
-      {
-        cat: "apparel",
-        img: (
-          <StaticImage
-            src="../../assets/websiteImages/girl-sitting-at-lake.jpg"
-            alt="girl sitting at lake"
-            style={{
-              gridArea: "1/1",
-            }}
-          />
-        ),
-        href: "https://shop.eisbach-riders.com/product-category/apparel/",
-        link: "/products/apparel",
-      },
-      {
-        cat: "accessories",
-        img: (
-          <StaticImage
-            src="../../assets/websiteImages/wax-comb-peeling-wax-off-surfboard.jpg"
-            alt="wax comb peeling wax off surfboard"
-            style={{
-              gridArea: "1/1",
-            }}
-          />
-        ),
-        href: "https://shop.eisbach-riders.com/product-category/accessories/",
-        link: "/products/accessories",
+        href: "https://shop.eisbach-riders.com/product-category/fins/",
+        link: "/products",
       },
     ],
   ]
@@ -127,7 +99,7 @@ function ShopCategories() {
             <div className={classes.box} key={`category${elem.cat}`}>
               {elem.img}
               <div className={classes.textContainer}>
-                <p className={classes.text}>{t(`shop.${elem.cat}Tagline`)}</p>
+                {/* <p className={classes.text}>{t(`shop.${elem.cat}Tagline`)}</p> */}
                 <Link to={elem.link} className={classes.link}>
                   <Button
                     className={classes.button}
@@ -135,7 +107,7 @@ function ShopCategories() {
                     variant="contained"
                     color="primary"
                   >
-                    {t(`shop.${elem.cat}`)}
+                    {elem.cat}
                   </Button>
                 </Link>
               </div>

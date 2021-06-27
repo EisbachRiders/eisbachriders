@@ -12,7 +12,7 @@ export default function ProductLifestyle({ data }) {
   const imageLg = data.lifestyleImageBig
     ? getImage(data.lifestyleImageBig)
     : null
-  console.log(data)
+
   return (
     <Box
       sx={{

@@ -56,34 +56,11 @@ export default function MobileLinks({ links, products }) {
           sx={{ minWidth: 300 }}
         >
           {links.map((elem, idx) => (
-            <React.Fragment key={elem}>
-              {elem === "shop" ? (
-                <ListItemLink href="https://secondwavesurfing.com/shop">
-                  <StyledListItemText primary={t(`links.${elem}`)} />
-                </ListItemLink>
-              ) : elem === "products" ? (
-                <>
-                  <Link to={`/${elem}`} key={`link${idx}`}>
-                    <ListItem button>
-                      <StyledListItemText primary={t(`links.${elem}`)} />
-                    </ListItem>
-                  </Link>
-                  {products.map(item => (
-                    <Link to={`/products/${item}`} key={`sublink${idx}`}>
-                      <ListItem button sx={{ ml: 4 }}>
-                        <StyledListItemText primary={t(`links.${item}`)} />
-                      </ListItem>
-                    </Link>
-                  ))}
-                </>
-              ) : (
-                <Link to={`/${elem}`} key={`link${idx}`}>
-                  <ListItem button>
-                    <StyledListItemText primary={t(`links.${elem}`)} />
-                  </ListItem>
-                </Link>
-              )}
-            </React.Fragment>
+            <Link to={`/${elem}`} key={`link${idx}`}>
+              <ListItem button>
+                <StyledListItemText primary={t(`links.${elem}`)} />
+              </ListItem>
+            </Link>
           ))}
           <Contact variant="header" />
         </List>
