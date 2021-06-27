@@ -371,8 +371,8 @@ function EisbachMap() {
                           setSelected(null)
                         } else {
                           setViewport({
-                            lat: elem.lat,
-                            lng: elem.lng,
+                            latitude: elem.lat,
+                            longitude: elem.lng,
                             zoom: 10,
                           })
                           setSelected(elem)

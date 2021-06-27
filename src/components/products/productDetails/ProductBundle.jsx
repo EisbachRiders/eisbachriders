@@ -11,7 +11,7 @@ const options = {
       <Typography
         sx={{
           fontSize: { xs: 16, lg: 24 },
-          height: 24,
+          lineHeight: { xs: 1.1, lg: 1.1 },
         }}
       >
         {children}

@@ -74,8 +74,8 @@ module.exports = {
     //   options: {
     //     username: `8544844204`,
     //     access_token:
-    //       "IGQVJWNlJVaXlrQ1RrM20tcHp1NjNhVXIwQWp5WE5UUEFtdFM1NzIyWFYyQlpHNWRGZA193WlZAPRzAwUS1KRnc0cGZAxNGVDczdUa0h4WmJzRmNOcEpOM19ucV94RjBMa0tRR3RHMXZADbHdYTHBaVkVtcwZDZD",
-
+    //       "EAAFwmZBViBHMBAK9yPNyAVB8PH9iAZAkdD5KxHgIvu0mMtAc74hi27kQBMjfpgjE5aAGNb4hRxEKhZC6InwjlrRyj2PiZAJ7f1ESGARZCWHIPYw1za5OCc60mZAeKrIon6dTIrp76juNZCMnnHZBaPYZAlxZBYEDUBFATeqIxjxvZBZCdMC0lJK4W5Amf78mY8ZChay9fLZCCVX5K4qXzsfZBX6CHKZBQRclaiGT5L5kIyyMX3Wlu2lVygB9v8eT",
+    //     instagram_id: "405289847358579",
     //     maxPosts: 6,
     //   },
     // },

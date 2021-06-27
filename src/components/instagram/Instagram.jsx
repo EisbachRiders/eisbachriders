@@ -24,7 +24,6 @@ const InstagramWidget = () => {
   //     }
   //   }
   // `)
-  // let results = []
 
   return (
     <>
@@ -40,64 +39,63 @@ const InstagramWidget = () => {
           gridGap: 5,
         }}
       >
-        {results.length > 0 &&
-          data?.allInstaNode?.edges.map((elem, idx) => (
-            <a
-              key={`instagram_photo_${idx}`}
-              href={`https://www.instagram.com/p/${elem.node.id}/`}
-              target="_blank"
-              rel="noopener noreferrer"
+        {data?.allInstaNode?.edges.map((elem, idx) => (
+          <a
+            key={`instagram_photo_${idx}`}
+            href={`https://www.instagram.com/p/${elem.node.id}/`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Box
+              sx={{
+                aspectRatio: 1,
+                color: "#FFF",
+                position: "relative",
+                textAlign: "center",
+                background: "#000",
+                border: theme => `1px solid ${theme.color.blueGray}`,
+                ":hover div": {
+                  opacity: 1,
+                },
+              }}
             >
+              <Box sx={{ width: "100%", opacity: 1 }} id="instaBox">
+                <GatsbyImage
+                  image={getImage(
+                    elem.node.localFile.childImageSharp.gatsbyImageData
+                  )}
+                  alt={`instagram ${idx}`}
+                  objectFit="contain"
+                  style={{ display: "block" }}
+                />
+              </Box>
               <Box
                 sx={{
-                  aspectRatio: 1,
-                  color: "#FFF",
-                  position: "relative",
-                  textAlign: "center",
-                  background: "#000",
-                  border: theme => `1px solid ${theme.color.blueGray}`,
-                  ":hover div": {
-                    opacity: 1,
-                  },
+                  position: "absolute",
+                  width: "100%",
+                  top: "50%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                  opacity: 0,
                 }}
               >
-                <Box sx={{ width: "100%", opacity: 1 }} id="instaBox">
-                  <GatsbyImage
-                    image={getImage(
-                      elem.node.localFile.childImageSharp.gatsbyImageData
-                    )}
-                    alt={`instagram ${idx}`}
-                    objectFit="contain"
-                    style={{ display: "block" }}
-                  />
-                </Box>
                 <Box
                   sx={{
-                    position: "absolute",
-                    width: "100%",
-                    top: "50%",
-                    left: "50%",
-                    transform: "translate(-50%, -50%)",
-                    opacity: 0,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    color: "#FFF",
                   }}
                 >
-                  <Box
-                    sx={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      color: "#FFF",
-                    }}
-                  >
-                    <FavoriteIcon />
-                    <Box sx={{ color: "#FFF", fontWeight: 700 }}>
-                      {elem.node.likes}
-                    </Box>
+                  <FavoriteIcon />
+                  <Box sx={{ color: "#FFF", fontWeight: 700 }}>
+                    {elem.node.likes}
                   </Box>
                 </Box>
               </Box>
-            </a>
-          ))}
+            </Box>
+          </a>
+        ))}
       </Box> */}
     </>
   )
