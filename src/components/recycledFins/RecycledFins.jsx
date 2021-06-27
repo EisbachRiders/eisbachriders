@@ -67,7 +67,7 @@ const useStyles = makeStyles(theme => ({
     marginBottom: 45,
   },
   paper: {
-    backgroundColor: theme.palette.primary.dark,
+    backgroundColor: theme.color.blueGray,
     flexBasis: "100%",
     padding: 15,
     marginBottom: 30,
